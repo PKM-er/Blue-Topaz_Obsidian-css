@@ -658,7 +658,7 @@ h1, h2, h3, h4, h5, h6, strong, b, .view-header-title {
 
 .popover mark {
   background-color: var(--text-highlight-bg);     
-  color:var(--text-normal)     
+  color:var(--text-normal);     
 }
 
 .workspace-leaf.mod-active .view-header {
