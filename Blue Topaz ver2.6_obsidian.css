@@ -932,6 +932,13 @@ pre.line-numbers > code {
   text-align: right !important;
 }
 
+/*unfold code*/
+pre> code>span {
+  word-wrap:break-word;
+  word-break:break-all;
+  white-space: initial;
+}
+
 /* ==== fold icons ==== */
 .CodeMirror-guttermarker-subtle {
   color: var(--text-normal);
