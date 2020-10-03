@@ -8,10 +8,10 @@ A blue theme for **Obsidian**. Blue Topaz is not a precious gem, like obsidian�
 ![](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/preview_Blue%20Topaz.png?raw=true)
 
 # Installation
-1. 下载css文件，改名为obsidian.css
+1. 下载css文件。
 2. 在Obsidian种开启自定义主题。
 3. 把obsidian.css放到vault文件夹中（如果已经存在obsidian.css，覆盖原文件）。
 ---
-1. Download css file, then change the name to obsidian.css.
+1. Download css file.
 2. Enable custom css in Obsidian.
 3. Copy the obsidian.css to your vault directory (or replace, if there is an existing file).
