@@ -438,6 +438,11 @@ span.search-result-count.list-item-ending-flair{
   font-size: 14px;
 }
 
+/*code box unfold icon*/
+.CodeMirror-foldgutter-open.CodeMirror-guttermarker-subtle::after {
+  color: var(--text-accent);
+}
+
 /* task lists*/
 .markdown-preview-view .task-list-item-checkbox {
   -webkit-appearance: none;
