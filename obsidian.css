@@ -21,6 +21,7 @@
   --text-normal: #eeeeeee8; 
   --text-muted: #8b8b8b;  
   --text-faint: rgb(121, 121, 121);
+  --accent-strong: #ffffff;
   --text-error: #e16d76;
   --text-error-hover: #c9626a;
   --text-highlight-bg: #bb7900;
@@ -112,6 +113,7 @@
   --text-normal: #000000;
   --text-muted: #666666;
   --text-faint: #7a7a7a;
+  --accent-strong: #000000;
   --text-error: #e75545;
   --text-error-hover: #f86959;
   --text-highlight-bg: #ffaa00e0;
@@ -629,6 +631,10 @@ list-style-type: disc;
 
 h1, h2, h3, h4, h5, h6, strong, b, .view-header-title {
   font-weight: 600;
+}
+
+strong{
+  color: var(--accent-strong);
 }
 
 /*vertical lines*/
