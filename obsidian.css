@@ -17,7 +17,7 @@
   --background-modifier-error-hover: #470000;
   --background-modifier-cover: rgba(0, 0, 0, 0.6);
   --text-accent: #53aaf5;
-  --text-accent-hover: #cadcfb; 
+  --text-accent-hover: #3e8de7; 
   --text-normal: #eeeeeee8; 
   --text-muted: #8b8b8b;  
   --text-faint: rgb(121, 121, 121);
@@ -108,7 +108,7 @@
   --background-modifier-error-hover: #FF9494;
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
   --text-accent: #3995ff;
-  --text-accent-hover: #095385;
+  --text-accent-hover: #b1d6ff;
   --text-normal: #000000;
   --text-muted: #666666;
   --text-faint: #7a7a7a;
@@ -1422,4 +1422,764 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
 .graph-view.color-arrow {
   color: var(--graph-arrow);
   opacity: 1;
+}
+
+/*===============================================*/
+/*                                    .__    .___*/
+/*  _____   ___________  _____ _____  |__| __| _/*/
+/* /     \_/ __ \_  __ \/     \\__  \ |  |/ __ | */
+/*|  Y Y  \  ___/|  | \/  Y Y  \/ __ \|  / /_/ | */
+/*|__|_|  /\___  >__|  |__|_|  (____  /__\____ | */
+/*      \/     \/            \/     \/        \/ */
+/*======== optionnal mermaid style below ========*/
+
+.label {
+  font-family: Segoe UI, "trebuchet ms", verdana, arial, Fira Code, consolas,
+    monospace !important;
+  color: var(--text-normal) !important;
+}
+
+.label text {
+  fill: var(--background-primary-alt) !important;
+}
+
+.node rect,
+.node circle,
+.node ellipse,
+.node polygon,
+.node path {
+  fill: var(--background-modifier-border) !important;
+  stroke: var(--text-normal) !important;
+  stroke-width: 0.5px !important;
+}
+
+.node .label {
+  text-align: center !important;
+}
+
+.node.clickable {
+  cursor: pointer !important;
+}
+
+.arrowheadPath {
+  fill: var(--text-faint) !important;
+}
+
+.edgePath .path {
+  stroke: var(--text-faint) !important;
+  stroke-width: 1.5px !important;
+}
+
+.flowchart-link {
+  stroke: var(--text-faint) !important;
+  fill: none !important;
+}
+
+.edgeLabel {
+  background-color: var(--background-primary) !important;
+  text-align: center !important;
+}
+
+.edgeLabel rect {
+  opacity: 0 !important;
+}
+
+.cluster rect {
+  fill: var(--background-primary-alt) !important;
+  stroke: var(--text-faint) !important;
+  stroke-width: 1px !important;
+}
+
+.cluster text {
+  fill: var(--background-primary) !important;
+}
+
+div.mermaidTooltip {
+  text-align: center !important;
+  max-width: 200px !important;
+  padding: 2px !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  font-size: 10px !important;
+  background: var(--background-secondary) !important;
+  border: 1px solid var(--text-faint) !important;
+  border-radius: 2px !important;
+  pointer-events: none !important;
+  z-index: 100 !important;
+}
+
+/* Sequence Diagram variables */
+
+.actor {
+  stroke: var(--text-accent) !important;
+  fill: var(--background-secondary-alt) !important;
+}
+
+text.actor > tspan {
+  fill: var(--text-normal) !important;
+  stroke: none !important;
+}
+
+.actor-line {
+  stroke: var(--text-muted) !important;
+}
+
+.messageLine0 {
+  stroke-width: 1.5 !important;
+  stroke-dasharray: none !important;
+  stroke: var(--text-muted) !important;
+}
+
+.messageLine1 {
+  stroke-width: 1.5 !important;
+  stroke-dasharray: 2, 2 !important;
+  stroke: var(--text-muted) !important;
+}
+
+#arrowhead path {
+  fill: var(--text-muted) !important;
+  stroke: var(--text-muted) !important;
+}
+
+.sequenceNumber {
+  fill: var(--background-primary) !important;
+}
+
+#sequencenumber {
+  fill: var(--text-muted) !important;
+}
+
+#crosshead path {
+  fill: var(--text-muted) !important;
+  stroke: var(--text-muted) !important;
+}
+
+.messageText {
+  fill: var(--text-normal) !important;
+  stroke: var(--text-muted) !important;
+}
+
+.labelBox {
+  stroke: var(--text-accent) !important;
+  fill: var(--background-secondary-alt) !important;
+}
+
+.labelText,
+.labelText > tspan {
+  fill: var(--text-muted) !important;
+  stroke: none !important;
+}
+
+.loopText,
+.loopText > tspan {
+  fill: var(--text-muted) !important;
+  stroke: none !important;
+}
+
+.loopLine {
+  stroke-width: 2px !important;
+  stroke-dasharray: 2, 2 !important;
+  stroke: var(--text-accent) !important;
+  fill: var(--text-accent) !important;
+}
+
+.note {
+  stroke: var(--text-normal) !important;
+  fill: var(--text-accent-hover) !important;
+}
+
+.noteText,
+.noteText > tspan {
+  fill: var(--text-normal) !important;
+  stroke: none !important;
+}
+
+/* Gantt chart variables */
+
+.activation0 {
+  fill: var(--background-secondary) !important;
+  stroke: var(--text-accent) !important;
+}
+
+.activation1 {
+  fill: var(--background-secondary) !important;
+  stroke: var(--text-accent) !important;
+}
+
+.activation2 {
+  fill: var(--background-secondary) !important;
+  stroke: var(--text-accent) !important;
+}
+
+/** Section styling */
+
+.mermaid-main-font {
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+}
+
+.section {
+  stroke: none !important;
+  opacity: 0.2 !important;
+}
+
+.section0 {
+  fill: var(--text-faint) !important;
+}
+
+.section2 {
+  fill: var(--text-accent) !important;
+}
+
+.section1,
+.section3 {
+  fill: var(--text-normal) !important;
+  opacity: 0.2 !important;
+}
+
+.sectionTitle0 {
+  fill: var(--text-normal) !important;
+}
+
+.sectionTitle1 {
+  fill: var(--text-normal) !important;
+}
+
+.sectionTitle2 {
+  fill: var(--text-normal) !important;
+}
+
+.sectionTitle3 {
+  fill: var(--text-normal) !important;
+}
+
+.sectionTitle {
+  text-anchor: start !important;
+  font-size: 15px !important;
+  font-weight: bold;
+  line-height: 14px !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+}
+
+/* Grid and axis */
+
+.grid .tick {
+  stroke: var(--text-muted) !important;
+  opacity: 1 !important;
+  shape-rendering: crispEdges !important;
+}
+
+.grid .tick text {
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  font-size: 13px;
+}
+
+.grid path {
+  stroke-width: 0 !important;
+}
+
+/* Today line */
+
+.today {
+  fill: none !important;
+  stroke: var(--background-modifier-error) !important;
+  stroke-width: 2px !important;
+}
+
+/* Task styling */
+
+/* Default task */
+
+.task {
+  stroke-width: 0.5px !important;
+}
+
+/*.taskText {
+  text-anchor: middle !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+}*/
+
+.taskText:not([font-size]) {
+  font-size: 9px !important;
+}
+
+.taskTextOutsideRight {
+  fill: var(--text-normal) !important;
+  text-anchor: start !important;
+  font-size: 9px !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+}
+
+.taskTextOutsideLeft {
+  fill: var(--text-normal) !important;
+  text-anchor: end !important;
+  font-size: 9px !important;
+}
+
+/* Special case clickable */
+
+.task.clickable {
+  cursor: pointer !important;
+}
+
+.taskText.clickable {
+  cursor: pointer !important;
+  fill: var(--interactive-accent_hover) !important;
+  font-weight: bold !important;
+}
+
+.taskTextOutsideLeft.clickable {
+  cursor: pointer !important;
+  fill: var(--interactive-accent_hover) !important;
+  font-weight: bold !important;
+}
+
+.taskTextOutsideRight.clickable {
+  cursor: pointer !important;
+  fill: var(--interactive-accent_hover) !important;
+  font-weight: bold !important;
+}
+
+/* Specific task settings for the sections*/
+.taskText0,
+.taskText1,
+.taskText2,
+.taskText3 {
+  fill: var(--text-normal) !important;
+  font-size: 13px;
+}
+
+.task0,
+.task1,
+.task2,
+.task3 {
+  fill: var(--ztysop) !important;
+  stroke: var(--text-muted) !important;
+}
+
+.taskTextOutside0,
+.taskTextOutside2 {
+  fill: var(--text-muted) !important;
+}
+
+.taskTextOutside1,
+.taskTextOutside3 {
+  fill: var(--text-muted) !important;
+}
+
+/* Active task */
+.active0,
+.active1,
+.active2,
+.active3 {
+  fill: var(--text-accent-hover) !important;
+  stroke: var(--text-muted) !important;
+}
+
+.activeText0,
+.activeText1,
+.activeText2,
+.activeText3 {
+  fill: var(--text-normal) !important;
+}
+
+/* Completed task */
+.done0,
+.done1,
+.done2,
+.done3 {
+  stroke: var(--text-muted) !important;
+  fill: var(--background-secondary) !important;
+  stroke-width: 1 !important;
+}
+
+.doneText0,
+.doneText1,
+.doneText2,
+.doneText3 {
+  fill: var(--text-normal) !important;
+}
+
+/* Tasks on the critical line */
+.crit0,
+.crit1,
+.crit2,
+.crit3 {
+  stroke: var(--accent-strong) !important;
+  fill: var(--accent-strong) !important;
+  stroke-width: 1 !important;
+}
+
+.activeCrit0,
+.activeCrit1,
+.activeCrit2,
+.activeCrit3 {
+  stroke: var(--accent-strong) !important;
+  fill: var(--text-accent) !important;
+  stroke-width: 1 !important;
+}
+
+.doneCrit0,
+.doneCrit1,
+.doneCrit2,
+.doneCrit3 {
+  stroke: var(--accent-strong) !important;
+  fill: var(--text-muted) !important;
+  stroke-width: 0.5 !important;
+  cursor: pointer !important;
+  shape-rendering: crispEdges !important;
+}
+
+.milestone {
+  transform: rotate(45deg) scale(0.8, 0.8) !important;
+}
+
+.milestoneText {
+  font-style: italic !important;
+}
+
+.doneCritText0,
+.doneCritText1,
+.doneCritText2,
+.doneCritText3 {
+  fill: var(--text-normal) !important;
+}
+
+.activeCritText0,
+.activeCritText1,
+.activeCritText2,
+.activeCritText3 {
+  fill: var(--text-normal) !important;
+}
+
+.titleText {
+  text-anchor: middle !important;
+  font-size: 20px !important;
+  fill: var(--text-normal) !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+}
+
+g.classGroup text {
+  fill: var(--text-normal) !important;
+  stroke: none !important;
+  font-size: 8px !important;
+}
+
+g.classGroup text .title {
+  font-weight: bolder !important;
+}
+
+g.clickable {
+  cursor: pointer !important;
+}
+
+g.classGroup rect {
+  fill: var(--background-secondary-alt) !important;
+  stroke: var(--ztys) !important;
+}
+
+g.classGroup line {
+  stroke: var(--ztys) !important;
+  stroke-width: 1 !important;
+}
+
+.classLabel .box {
+  stroke: none !important;
+  stroke-width: 0 !important;
+  fill: var(--background-secondary-alt) !important;
+  opacity: 0.2 !important;
+}
+
+.classLabel .label {
+  fill: var(--text-accent) !important;
+  font-size: 10px !important;
+}
+
+.relation {
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+  fill: none !important;
+}
+
+.dashed-line {
+  stroke-dasharray: 3 !important;
+}
+
+#compositionStart {
+  fill: var(--text-accent) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+}
+
+#compositionEnd {
+  fill: var(--text-accent) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+}
+
+#aggregationStart {
+  fill: var(--background-secondary-alt) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+}
+
+#aggregationEnd {
+  fill: var(--background-secondary-alt) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+}
+
+#dependencyStart {
+  fill: var(--text-accent) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+}
+
+#dependencyEnd {
+  fill: var(--text-accent) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+}
+
+#extensionStart {
+  fill: var(--text-accent) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+}
+
+#extensionEnd {
+  fill: var(--text-accent) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+}
+
+.commit-id,
+.commit-msg,
+.branch-label {
+  fill: var(--text-muted) !important;
+  color: var(--text-muted) !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+}
+
+.pieTitleText {
+  text-anchor: middle !important;
+  font-size: 18px !important;
+  fill: var(--text-normal) !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+}
+
+.slice {
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+}
+
+g.stateGroup text {
+  fill: var(--text-accent) !important;
+  stroke: none !important;
+  font-size: 10px !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+}
+
+g.stateGroup text {
+  fill: var(--text-accent) !important;
+  stroke: none !important;
+  font-size: 10px !important;
+}
+
+g.stateGroup .state-title {
+  font-weight: bolder !important;
+  fill: var(--background-secondary-alt) !important;
+}
+
+g.stateGroup rect {
+  fill: var(--background-secondary-alt) !important;
+  stroke: var(--text-accent) !important;
+}
+
+g.stateGroup line {
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+}
+
+.transition {
+  stroke: var(--text-accent) !important;
+  stroke-width: 1 !important;
+  fill: none !important;
+}
+
+.stateGroup .composit {
+  fill: var(--text-normal) !important;
+  border-bottom: 1px !important;
+}
+
+.stateGroup .alt-composit {
+  fill: #e0e0e0 !important;
+  border-bottom: 1px !important;
+}
+
+.state-note {
+  stroke: var(--text-faint) !important;
+  fill: var(--text-accent) !important;
+}
+
+.state-note text {
+  fill: black !important;
+  stroke: none !important;
+  font-size: 10px !important;
+}
+
+.stateLabel .box {
+  stroke: none !important;
+  stroke-width: 0 !important;
+  fill: var(--background-secondary-alt) !important;
+  opacity: 0.5 !important;
+}
+
+.stateLabel text {
+  fill: black !important;
+  font-size: 10px !important;
+  font-weight: bold !important;
+  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+}
+
+.node circle.state-start {
+  fill: black !important;
+  stroke: black !important;
+}
+
+.node circle.state-end {
+  fill: black !important;
+  stroke: var(--text-normal) !important;
+  stroke-width: 1.5 !important;
+}
+
+#statediagram-barbEnd {
+  fill: var(--text-accent) !important;
+}
+
+.statediagram-cluster rect {
+  fill: var(--background-secondary-alt) !important;
+  stroke: var(--text-accent) !important;
+  stroke-width: 1px !important;
+}
+
+.statediagram-cluster rect.outer {
+  rx: 5px !important;
+  ry: 5px !important;
+}
+
+.statediagram-state .divider {
+  stroke: var(--text-accent) !important;
+}
+
+.statediagram-state .title-state {
+  rx: 5px !important;
+  ry: 5px !important;
+}
+
+.statediagram-cluster.statediagram-cluster .inner {
+  fill: var(--text-normal) !important;
+}
+
+.statediagram-cluster.statediagram-cluster-alt .inner {
+  fill: #e0e0e0 !important;
+}
+
+.statediagram-cluster .inner {
+  rx: 0 !important;
+  ry: 0 !important;
+}
+
+.statediagram-state rect.basic {
+  rx: 5px !important;
+  ry: 5px !important;
+}
+
+.statediagram-state rect.divider {
+  stroke-dasharray: 10, 10 !important;
+  fill: #efefef !important;
+}
+
+.note-edge {
+  stroke-dasharray: 5 !important;
+}
+
+.statediagram-note rect {
+  fill: var(--text-accent) !important;
+  stroke: var(--text-muted) !important;
+  stroke-width: 1px !important;
+  rx: 0 !important;
+  ry: 0 !important;
+}
+
+:root {
+  --mermaid-font-family: '"trebuchet ms", verdana, arial' !important;
+  --mermaid-font-family: "Comic Sans MS", "Comic Sans", cursive !important;
+}
+
+/* Classes common for multiple diagrams */
+
+.error-icon {
+  fill: var(--text-error) !important;
+}
+
+.error-text {
+  fill: var(--text-muted) !important;
+  stroke: var(--text-muted) !important;
+}
+
+.edge-thickness-normal {
+  stroke-width: 1px !important;
+}
+
+.edge-thickness-thick {
+  stroke-width: 3px !important;
+}
+
+.edge-pattern-solid {
+  stroke-dasharray: 0 !important;
+}
+
+.edge-pattern-dashed {
+  stroke-dasharray: 3 !important;
+}
+
+.edge-pattern-dotted {
+  stroke-dasharray: 2 !important;
+}
+
+.marker {
+  fill: var(--text-muted) !important;
+}
+
+.marker.cross {
+  stroke: var(--text-muted) !important;
+}
+
+/*rect.task {
+  fill: var(--text-accent-hover);
+  fill-opacity: 1;
+  stroke: var(--text-normal);
+}
+
+g rect{
+  fill: var(--text-highlight-bg);
+}*/
+
+g text{
+  fill:var(--text-muted) !important;
+}
+
+#arrowhead,  #sequencenumber,  .cluster text,  .label text,  text,  text.actor {
+  fill:var(--text-muted) !important;
+}
+
+/*emoji🙂*/
+g>g>circle, g>g>path {
+  stroke: #000000 !important;
+}
+
+line.task-line{
+  stroke: #6e6e6e !important;
+}
+
+g>circle{
+  stroke: #000000 !important;
 }
