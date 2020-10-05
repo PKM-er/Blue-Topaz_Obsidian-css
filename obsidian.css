@@ -1108,49 +1108,47 @@ pre> code>span {
 }
 
 /* show H1-H6 prefix in preview*/
-/*
-h1::before
+.theme-light h1::before
 {
   content: 'H1 ';
-  font-size: 12px;
+  font-size: 14px;
   color: var(--h1ys)
 }
 
-h2::before
+.theme-light h2::before
 {
   content: 'H2 ';
-  font-size: 12px;
+  font-size: 13px;
   color: var(--h2ys)
 }
 
-h3::before
+.theme-light h3::before
 {
   content: 'H3 ';
   font-size: 12px;
   color: var(--h3ys)
 }
 
-h4::before
+.theme-light h4::before
 {
   content: 'H4 ';
-  font-size: 12px;
+  font-size: 11px;
   color: var(--h4ys)
 }
 
-h5::before
+.theme-light h5::before
 {
   content: 'H5 ';
-  font-size: 12px;
+  font-size: 10px;
   color: var(--h5ys)
 }
 
-h6::before
+.theme-light h6::before
 {
   content: 'H6 ';
-  font-size: 12px;
+  font-size: 9px;
   color: var(--h6ys)
 }
-*/
 
 /*=============== FOCUS MODE by death_au + transparency mod ================*/
 /*
