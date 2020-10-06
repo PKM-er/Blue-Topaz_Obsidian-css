@@ -655,7 +655,7 @@ strong{
 /*============bigger link popup preview  ================*/
 .popover.hover-popover {
   position: absolute;
-  z-index: var(--layer-popover);
+  /*z-index: var(--layer-popover);*/
   max-height: 800px; /* was 300 */
   min-height: 100px;
   width: 550px;
