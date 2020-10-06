@@ -414,30 +414,15 @@ li {
 }
 
 /*tag pane*/
-.pane-clickable-item{
-  cursor: pointer;
-  user-select: none;
-  color: var(--text-muted);
-  padding: 2px 15px 5px;
+.pane-list-item-ending-flair{
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-size: 12px;
+  background-color: var(--background-secondary-alt);
+  line-height: 12px;
   border-radius: 3px;
-  font-size: 14px;
-  position: relative;
-}
-
-.tag-pane-tag-count.list-item-ending-flair{
-  margin-top: -5px;
-  font-weight: bold;
-}
-
-/*search pane*/
-.search-result-file-title.list-item{
-  margin-top: -2px;
-}
-
-span.search-result-count.list-item-ending-flair{
-  margin-top: -5px;
-  font-weight: bold;
-  font-size: 14px;
+  padding: 2px 4px;
 }
 
 /*code box unfold icon*/
