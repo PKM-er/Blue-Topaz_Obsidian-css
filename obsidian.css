@@ -191,8 +191,8 @@ display: none;
 }
 
 .workspace-leaf.mod-active .view-header-title::selection {
-  background-color: var(--text-highlight-bg);
-  color: var(--interactive-accent);
+  background-color: var(--ztysop);
+  color: var(--text-normal);
 }
 
 .view-action > svg.link {
@@ -495,8 +495,8 @@ li {
 .markdown-preview-view h5 {color: var(--h5ys);}
 .markdown-preview-view h6 {color: var(--h6ys);}
 
-.cm-header-1 {font-size: 25px; font-weight:550;}
-.cm-header-2 {font-size: 23px; font-weight:550;}
+.cm-header-1 {font-size: 25px; font-weight:550; position: relative;}
+.cm-header-2 {font-size: 23px; font-weight:550; position: relative;}
 .cm-header-3 {font-size: 21px; font-weight:550;}
 .cm-header-4 {font-size: 19px; font-weight:550;}
 .cm-header-5 {font-size: 17px; font-weight:550;}
@@ -606,7 +606,7 @@ list-style-type: disc;
 .markdown-preview-section:not(:first-child) h3,
 .markdown-preview-section:not(:first-child) h4,
 .markdown-preview-section:not(:first-child) h5 {
-  margin-top: 40px !important;
+  margin-top: 20px !important;
 }
 
 .markdown-preview-section:not(:first-child) h6 {
@@ -642,7 +642,6 @@ strong{
   overflow: auto;
   padding: 0px 0px 0px 0px;
   white-space: nowrap;
-  line-height: 0px;
   top: -1px;
   border-top: 3px transparent;
   border-bottom: 3px transparent;
@@ -992,18 +991,6 @@ pre> code>span {
   padding: 0 5px;
 }
 
-/*-- header color --*/
-.cm-header.cm-header-1{
-  color: var(--h1ys);
-  left:0px;
-  position: relative;
-}
-.cm-header.cm-header-2{
-  color: var(--h2ys);
-  left:0px;
-  position: relative;
-}
-
 /*-- hide # markup--*/
 .cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1,
 .cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2,
@@ -1074,27 +1061,27 @@ pre> code>span {
 
 /*-- is active line, display # markup --*/
 .CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1{
-  font-size:24px;
+  font-size:25px;
   display:inline;
 }
 .CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2{
-  font-size:22px;
+  font-size:23px;
   display:inline;
 }
 .CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3{
-  font-size:20px;
+  font-size:21px;
   display:inline;
 }
 .CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4{
-  font-size:18px;
+  font-size:19px;
   display:inline;
 }
 .CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5{
-  font-size:16px;
+  font-size:17px;
   display:inline;
 }
 .CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6{
-  font-size:16px;
+  font-size:15px;
   display:inline;
 }
 
