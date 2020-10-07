@@ -1402,6 +1402,34 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
   opacity: 1;
 }
 
+/*Horizontal line in edit mode. Changes --- to full-width line*/
+/*thanks to Piotr from obsidian forum*/
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr {
+  color: transparent;
+}
+
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: var(--text-muted);
+  left: 0;
+  top: 50%;
+}
+
+/*Quote (> lorem ipsum ...) in edit mode with left border rendered instead of >*/
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-quote {
+  color: transparent;
+}
+
+div:not(.CodeMirror-activeline)>.HyperMD-quote {
+  border-left: 7px solid var(--ztys);
+  padding-left: 8.5px !important;
+  margin-left: 5px;
+}
+
+
 /*===============================================*/
 /*                                    .__    .___*/
 /*  _____   ___________  _____ _____  |__| __| _/*/
