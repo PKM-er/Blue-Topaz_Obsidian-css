@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.9.2。flying fly flies修改，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢*/
-/*Blue Topaz for Obsidian v0.9.2, modified by flying fly flies, feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot*/
+/*蓝色托帕石，适合Obsidian v0.9.2。[20201007] flying fly flies修改，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢*/
+/*Blue Topaz for Obsidian v0.9.2, [20201007] modified by flying fly flies, feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot*/
 
 .theme-dark {
   --background-primary: #3f3f3f; 
@@ -327,8 +327,12 @@ body {
   color: var(--btblj);
 }
 
-.search-result-file-matched-text {
+/*reduce search result margin*/
+.search-result-file-match{
+  padding: 0px 0px;
+}
 
+.search-result-file-matched-text {
   color: var(--text-muted); /*标题被链接 提示黑字减淡 */
 }
 
