@@ -19,6 +19,12 @@ If you want a theme with Andy mode, please try [this theme](https://github.com/w
 2. Enable custom css in Obsidian.
 3. Copy the obsidian.css to your vault directory (or replace, if there is an existing file).
 
+# Asymmetric Blue Topaz
+又有新想法了~ [click here](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/tree/master/Asymmetric%20Blue%20Topaz)
+
+![](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/Asymmetric%20Blue%20Topaz/ABT.png?raw=true)
+
+
 ## BTY
 /* Blockquote header */
 .markdown-preview-view blockquote {
