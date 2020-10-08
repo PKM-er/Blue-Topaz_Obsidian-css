@@ -359,15 +359,15 @@ li {
 }
 
 /*colorful tags*/
-.tag:nth-child(9n+1){background-color: var(--bqys1);} /*1*/
-.tag:nth-child(9n+2){background-color: var(--bqys6);} /*6*/
-.tag:nth-child(9n+3){background-color: var(--bqys2);} /*2*/
-.tag:nth-child(9n+4){background-color: var(--bqys7);} /*7*/
-.tag:nth-child(9n+5){background-color: var(--bqys3);} /*3*/
-.tag:nth-child(9n+6){background-color: var(--bqys8);} /*8*/
-.tag:nth-child(9n+7){background-color: var(--bqys4);} /*4*/
-.tag:nth-child(9n+8){background-color: var(--bqys9);} /*9*/
-.tag:nth-child(9n){background-color: var(--bqys5);}   /*5*/
+.tag:not(.token).tag:nth-child(9n+1){background-color: var(--bqys1);} /*1*/
+.tag:not(.token).tag:nth-child(9n+2){background-color: var(--bqys6);} /*6*/
+.tag:not(.token).tag:nth-child(9n+3){background-color: var(--bqys2);} /*2*/
+.tag:not(.token).tag:nth-child(9n+4){background-color: var(--bqys7);} /*7*/
+.tag:not(.token).tag:nth-child(9n+5){background-color: var(--bqys3);} /*3*/
+.tag:not(.token).tag:nth-child(9n+6){background-color: var(--bqys8);} /*8*/
+.tag:not(.token).tag:nth-child(9n+7){background-color: var(--bqys4);} /*4*/
+.tag:not(.token).tag:nth-child(9n+8){background-color: var(--bqys9);} /*9*/
+.tag:not(.token).tag:nth-child(9n){background-color: var(--bqys5);}   /*5*/
 
 /* ====== Tag Pills ======== */
 .tag:not(.token) {
