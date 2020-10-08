@@ -387,32 +387,32 @@ li {
 
 /*special tags*/
 .tag[href^="#important"] {
-  background-color: var(--tag1);
+  background-color: var(--tag1) !important;
   font-weight: 600;
   font-family: Lucida Handwriting;
 }
 .tag[href^="#重要"] {
-  background-color: var(--tag1);
+  background-color: var(--tag1) !important;
   font-weight: 600;
   font-family: Webdings, Microsoft YaHei;
 }
 .tag[href^="#complete"] {
-  background-color: var(--tag3);
+  background-color: var(--tag3) !important;
   font-weight: 600;
   font-family:  Lucida Handwriting;
 }
 .tag[href^="#完成"] {
-  background-color: var(--tag3);
+  background-color: var(--tag3) !important;
   font-family: Origin, Microsoft YaHei;
   font-weight: 600;
 }
 .tag[href^="#inprogress"] {
-  background-color: var(--tag2);
+  background-color: var(--tag2) !important;
   font-weight: 600;
   font-family: Lucida Handwriting;
 }
 .tag[href^="#进行中"] {
-  background-color: var(--tag2);
+  background-color: var(--tag2) !important;
   font-weight: 600;
   font-family: Wingdings, Microsoft YaHei;
 }
