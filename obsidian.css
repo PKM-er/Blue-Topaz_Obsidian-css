@@ -572,11 +572,16 @@ mjx-container[jax='CHTML'] {
   color: #e48900;
 }
 
-.cm-s-obsidian span.cm-inline-code,
-.cm-s-obsidian span.cm-math,
-.cm-s-obsidian span.hmd-fold-math-placeholder {
+/*bold code text except code language*/
+code:not([class*='language-']){
+  font-weight: 600;
+  font-family: Lucida Fax;
+}
+
+.cm-s-obsidian span.cm-inline-code {
   font-weight: 600;
   font-style: normal;
+  font-family: Lucida Bright;
 }
 
 .cm-hmd-list-indent .cm-tab, ul ul { 
