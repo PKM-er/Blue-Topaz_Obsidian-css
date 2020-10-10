@@ -417,7 +417,7 @@ li {
   font-family: Wingdings, Microsoft YaHei;
 }
 
-/*tag pane*/
+/*tag pane*//*
 .pane-list-item-ending-flair{
   position: absolute;
   top: 6px;
@@ -427,7 +427,7 @@ li {
   line-height: 12px;
   border-radius: 3px;
   padding: 2px 4px;
-}
+}*/
 
 /*code box unfold icon*/
 .CodeMirror-foldgutter-open.CodeMirror-guttermarker-subtle::after {
