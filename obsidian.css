@@ -221,6 +221,31 @@ display: none;
 .titlebar-button.mod-back, .titlebar-button.mod-forward {
   line-height: 28px;
 }
+
+/*change color when hover*/
+.titlebar-button.mod-back:hover, .titlebar-button.mod-forward:hover{
+  color: var(--ztys);
+  transform: scale(1.2);
+}
+
+.titlebar-button.mod-maximize:hover, 
+.titlebar-button.mod-minimize:hover,
+.workspace-ribbon-collapse-btn:hover,
+.workspace-tab-header.is-active:hover{
+  color: var(--ztys);
+}
+
+.workspace-tab-header:hover {
+  color: var(--ztys);
+  text-align: center;
+  stroke-width: 2px;
+  cursor: pointer;
+}
+
+.workspace-tab-header.is-active{
+  color: var(--ztys);
+}
+
 .titlebar-button {
   -webkit-app-region: no-drag;
   padding: 0 8px;
@@ -303,12 +328,6 @@ display: none;
   position: sticky;
   z-index: 900;
   background-color: var(--background-secondary-alt);
-}
-
-.workspace-tab-header:hover {
-  color: var(--ztys);
-  text-align: center;
-  stroke-width: 2px;
 }
 
 /*==== separators =====*/
