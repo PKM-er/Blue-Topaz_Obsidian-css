@@ -1,5 +1,5 @@
-/*不对称蓝色托帕石，适合Obsidian v0.9.2。[20201010] flying fly flies修改，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢*/
-/*Asymmetric Blue Topaz for Obsidian v0.9.2, [20201010] modified by flying fly flies, feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot*/
+/*不对称蓝色托帕石，适合Obsidian v0.9.2。[20201012] flying fly flies修改，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢*/
+/*Asymmetric Blue Topaz for Obsidian v0.9.2, [20201012] modified by flying fly flies, feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot*/
 
 .theme-dark {
   --background-primary: #3f3f3f; 
@@ -531,6 +531,7 @@ li {
 .cm-header-4 {font-size: 19px; font-weight:550; position: relative;}
 .cm-header-5 {font-size: 17px; font-weight:550; position: relative;}
 .cm-header-6 {font-size: 15px; font-weight:550; position: relative;}
+
 .cm-s-obsidian .cm-header, .cm-s-obsidian .cm-strong {font-weight:550;}
 
 .theme-dark .cm-header-1 {color: var(--h1ys);}
@@ -589,9 +590,10 @@ li {
   line-height: 26px;
 }
 
+/*
 blockquote {
   margin: 20px 0;
-}
+}*/
 
 mjx-container[jax='CHTML'] {
   text-align: left;
@@ -649,7 +651,7 @@ list-style-type: disc;
 .markdown-preview-section:not(:first-child) h3,
 .markdown-preview-section:not(:first-child) h4,
 .markdown-preview-section:not(:first-child) h5 {
-  margin-top: 20px !important;
+  margin-top: 13px !important;
 }
 
 .markdown-preview-section:not(:first-child) h6 {
@@ -811,14 +813,12 @@ cursor: pointer !important;
 
 .markdown-preview-view .markdown-embed,
 .markdown-preview-view .file-embed {
-
   background-color: var(--yykys); 
   border: 0px sold var(--yykys);  
-  margin: 0;
   border-radius: 4px;
   border: 0;
   border-left: 1px solid var(--background-accent);
-  margin: 0px -10px;
+  /*margin: 0px -10px;*/
 }
 
 .markdown-embed {
@@ -831,18 +831,18 @@ cursor: pointer !important;
   display: inline;
   max-height: 100%;
   max-width: 100%;
-  margin: 0px 0px -15px -10px;
-  padding: 20px 0px 0px 0px;
+  /*margin: 0px 0px -15px -10px;
+  padding: 20px 0px 0px 0px;*/
   overflow: hidden; 
 }
 
 .markdown-preview-view .markdown-embed,
 .markdown-view .file-embed {
-  padding: 10px 10px 10px 10px; 
+  padding: 1px 10px 5px 10px; 
 }
 
 .markdown-embed-title, .file-embed-title {
-  font-weight: 400; 
+  font-weight: 600; 
   text-align: left; 
   font-size: 20px;  
   height: 35px; 
