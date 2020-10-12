@@ -22,6 +22,12 @@ If you want a theme with Andy mode, please try [this theme](https://github.com/w
 # Asymmetric Blue Topaz
 又有新想法了~ [click here](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/tree/master/Asymmetric%20Blue%20Topaz)
 
+区别是Light mode标题不再隐藏"#"
+
+The difference is that header titles no longer hide the "#" under Light mode. 
+
+![](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/Asymmetric%20Blue%20Topaz_1.png?raw=true)
+
 ![](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/Asymmetric%20Blue%20Topaz/ABT.png?raw=true)
 
 
