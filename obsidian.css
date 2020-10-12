@@ -1459,6 +1459,17 @@ div:not(.CodeMirror-activeline)>.HyperMD-quote {
   margin-left: 5px;
 }
 
+/***************************************/
+/* Hide right side bar */
+/***************************************/
+.workspace-ribbon.mod-right:not(:hover) {
+  width: 0px;
+  transition: all 300ms ease-in-out;
+}
+  
+.workspace-split.mod-right-split {
+  margin-right: 0px;
+}
 
 /*===============================================*/
 /*                                    .__    .___*/
