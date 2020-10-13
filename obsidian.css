@@ -1134,6 +1134,7 @@ pre> code>span {
 }
 
 /* show H1-H6 prefix in preview*/
+/*
 .theme-light h1::before
 {
   content: 'H1 ';
@@ -1175,6 +1176,7 @@ pre> code>span {
   font-size: 9px;
   padding: 0 6px 0 0;
 }
+*/
 
 /*=============== FOCUS MODE by death_au + transparency mod ================*/
 /*
