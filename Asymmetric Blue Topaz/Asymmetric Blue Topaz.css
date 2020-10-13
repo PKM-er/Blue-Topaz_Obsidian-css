@@ -1146,6 +1146,7 @@ pre> code>span {
 }
 
 /* show H1-H6 prefix in preview*/
+/*
 .theme-light h1::before
 {
   content: 'H1 ';
@@ -1186,7 +1187,7 @@ pre> code>span {
   content: 'H6 ';
   font-size: 9px;
   padding: 0 6px 0 0;
-}
+}*/
 
 /*light mode show #*/
 .theme-light .cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1{
