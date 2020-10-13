@@ -834,7 +834,6 @@ cursor: pointer !important;
   border: 0px sold var(--yykys);  
   border-radius: 4px;
   border: 0;
-  border-left: 1px solid var(--background-accent);
   /*margin: 0px -10px;*/
 }
 
