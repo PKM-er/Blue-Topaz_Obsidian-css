@@ -700,14 +700,17 @@ strong{
 /*============bigger link popup preview  ================*/
 .popover.hover-popover {
   position: absolute;
-  /*z-index: var(--layer-popover);*/
-  max-height: 800px; /* was 300 */
+  transform: scale(0.85); /* makes the content smaller */
+  max-height: 800px;    /* was 300 */
   min-height: 100px;
-  width: 570px !important;
-  overflow: hidden;
+  width: 500px; /* was 400 */
+  overflow: overlay;      
   padding: 0;
   border-bottom: none;
-  transform: scale(1);
+}
+
+.popover.hover-popover .markdown-embed  {
+  height: 100%;
 }
 /*
 .popover {
