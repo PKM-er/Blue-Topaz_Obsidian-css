@@ -636,27 +636,32 @@ code:not([class*='language-']){
   font-family: Lucida Bright;
 }
 
-.cm-hmd-list-indent .cm-tab, ul ul { 
-	position: relative; 
-	padding-right: 20px;
-	}
-.cm-hmd-list-indent .cm-tab::before, ul ul::before {
- content:'';
- border-left: 1px solid ;/*粗/rgba(114, 165, 223, 0.9);*/
- color: var(--dgxs);
- position: absolute;
+/*Adding vertical lines of embedded lists*/
+/*thanks to loikein from forum*/
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  position: relative;
 }
 
-.cm-hmd-list-indent .cm-tab::before 
-{ left: 0; 
-	top: -10px; 
-	bottom: -4px; 
+ul ul::before,
+ol ul::before,
+ul ol::before,
+ol ol::before {
+  content:'';
+  border-left: 1px solid var(--background-modifier-border);
+  position: absolute;
 }
-ul ul::before { left: -11px; top: 0; bottom: 0; 
+
+ul ul::before,
+ol ul::before,
+ul ol::before,
+ol ol::before {
+  left: -11px;
+  top: 0;
+  bottom: 0;
 } 
-ul{
-list-style-type: disc;
-}
 
 .markdown-preview-view code {
   vertical-align: auto;
