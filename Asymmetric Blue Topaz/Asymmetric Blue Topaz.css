@@ -578,12 +578,6 @@ li {
 .theme-light .cm-header-5 {color: var(--h5ys); opacity: 0.64;}
 .theme-light .cm-header-6 {color: var(--h6ys); opacity: 0.55;}
 
-.nav-file-title, .nav-folder-title {
-  display: flex;
-  align-items: baseline;
-  flex-direction: row;
-}
-
 .nav-files-container {
   flex-grow: 1;
   overflow-y: auto;
@@ -1365,7 +1359,14 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
   border-image: initial;
   border-radius: 0px;
   padding: 1px 5px 0px 20px;
-  color: var(--text-muted)
+  color: var(--text-muted);
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+}
+
+.nav-file-title{
+  padding: 1px 5px 0px 4px;
 }
 
 .nav-folder-title {
