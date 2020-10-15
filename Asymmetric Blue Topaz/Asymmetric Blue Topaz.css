@@ -632,6 +632,13 @@ mjx-container[jax='CHTML'] {
   color: #e48900;
 }
 
+.theme-light .cm-s-obsidian pre.HyperMD-codeblock,
+.theme-light .cm-s-obsidian span.cm-inline-code,
+.theme-light .cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end),
+.theme-light .markdown-preview-view code:not([class*='language-']) {
+  color: #ee5f00;
+}
+
 /*bold code text except code language*/
 code:not([class*='language-']){
   font-weight: 600;
