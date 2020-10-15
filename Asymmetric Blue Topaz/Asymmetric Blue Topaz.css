@@ -194,7 +194,7 @@
 /* outliner for the outline */
 /*thanks to wonton from forum*/
 .nav-folder-children .nav-folder-children {
-  margin-left: 14.9px;
+  margin-left: 15px;
   padding-left: 0;
   border-left: 1.5px solid var(--background-modifier-border);
   border-radius: 0px;
