@@ -109,7 +109,7 @@
   --background-modifier-error-hover: #FF9494;
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
   --text-accent: #3995ff;
-  --text-accent-hover: #b1d6ff;
+  --text-accent-hover: #10bbff;
   --text-normal: #000000;
   --text-muted: #666666;
   --text-faint: #7a7a7a;
@@ -401,12 +401,6 @@ li {
   height: 17px;
 }
 
-.tag, .tag:hover {
-  color: var(--bqys); 
-  padding: 2px 4px;
-  border-radius: 4px;
-}
-
 /*colorful tags*/
 .tag:not(.token).tag:nth-child(9n+1){background-color: var(--bqys1);} /*1*/
 .tag:not(.token).tag:nth-child(9n+2){background-color: var(--bqys6);} /*6*/
@@ -431,7 +425,7 @@ li {
 }
 .tag:not(.token):hover {
 	color: white;
-	background-color: var(--text-accent-hover);
+	background-color: var(--ztys) !important;
 }
 
 /*special tags*/
