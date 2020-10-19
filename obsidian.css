@@ -251,11 +251,6 @@ code{
   border-left-color:var(--ztys);
 }
 
-/*embed size*/
-.markdown-preview-view .markdown-embed, .markdown-view .file-embed {
-  padding: 0px 8px 0px 8px !important;
-}
-
 span.search-result-file-matched-text{
 color: var(--search-text);
 background-color: var(--text-highlight-bg);
@@ -890,7 +885,8 @@ cursor: pointer !important;
   border: 0px sold var(--yykys);  
   border-radius: 4px;
   border: 0;
-  /*margin: 0px -10px;*/
+  padding: 0px 8px 0px 8px;
+  margin-bottom: -5px;
 }
 
 .markdown-embed {
@@ -906,11 +902,6 @@ cursor: pointer !important;
   /*margin: 0px 0px -15px -10px;
   padding: 20px 0px 0px 0px;*/
   overflow: hidden; 
-}
-
-.markdown-preview-view .markdown-embed,
-.markdown-view .file-embed {
-  padding: 1px 10px 5px 10px; 
 }
 
 .markdown-embed-title, .file-embed-title {
