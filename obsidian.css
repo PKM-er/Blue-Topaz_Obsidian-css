@@ -789,7 +789,7 @@ strong{
 /*============bigger link popup preview  ================*/
 .popover.hover-popover {
   position: absolute;
-  transform: scale(0.85); /* makes the content smaller */
+  transform: scale(0.9); /* makes the content smaller */
   max-height: 800px;    /* was 300 */
   min-height: 100px;
   width: 500px; /* was 400 */
@@ -798,9 +798,11 @@ strong{
   border-bottom: none;
 }
 
+/*
 .popover.hover-popover .markdown-embed  {
   height: 100%;
 }
+*/
 
 /*
 .popover {
