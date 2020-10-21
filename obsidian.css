@@ -563,7 +563,7 @@ li {
 /*thanks to Piotr and ishgunacar from forum*/
 span.cm-formatting-task { display: inline !important; font-family: "Andale Mono";}
 
-span.cm-formatting-task.cm-property {color: var(--ztys);} 
+span.cm-formatting-task.cm-property {color: var(--text-accent);} 
 
 div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-meta,
 div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-property {
@@ -583,7 +583,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
 
 div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-property:after {
     content: "☑";
-    color: var(--ztys) !important;
+    color: var(--text-accent) !important;
 }
 
 .markdown-preview-view h1 {
