@@ -558,6 +558,33 @@ li {
   color: var(--text-muted);
 }
 
+/*checkbox in edit mode*/
+/*thanks to Piotr and ishgunacar from forum*/
+span.cm-formatting-task { display: inline !important; font-family: "Andale Mono";}
+
+span.cm-formatting-task.cm-property {color: var(--ztys);} 
+
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-meta,
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-property {
+    color: transparent;
+    position: relative;
+}
+
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-meta:after,
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-property:after {
+    content: "☐";
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    color: var(--text-normal);
+    font-size: 23px;
+}
+
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-property:after {
+    content: "☑";
+    color: var(--ztys) !important;
+}
+
 .markdown-preview-view h1 {
   font-size: var(--font-size-h1); 
   font-weight:550;
