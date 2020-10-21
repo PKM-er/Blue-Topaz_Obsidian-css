@@ -110,7 +110,7 @@
   --graph-attach: #b2cfe0bb;
   --graph-circle: #55a2d6bb;
   --graph-line: #646464;
-  --graph-unresolved: #db4e4ebb;
+  --graph-unresolved: #f08080de;
   --graph-arrow: #c23917;
 }
 
@@ -865,6 +865,16 @@ a,
 a:hover,
 .markdown-preview-view .internal-link:hover {
   text-decoration: underline;
+}
+
+.markdown-preview-view .internal-link.is-unresolved {
+  opacity: 0.7;
+  text-decoration: underline;
+  color: var(--graph-unresolved);
+}
+
+.markdown-preview-view .internal-link.is-unresolved:hover {
+  opacity: 1;
 }
 
 .theme-dark :not(pre) > code[class*='language-'],
