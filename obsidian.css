@@ -696,13 +696,12 @@ mjx-container[jax='CHTML'] {
 /*bold code text except code language*/
 code:not([class*='language-']){
   font-weight: 600;
-  font-family: Lucida Fax;
+  font-family: Consolas;
 }
 
 .cm-s-obsidian span.cm-inline-code {
   font-weight: 600;
-  font-style: normal;
-  font-family: Lucida Bright;
+  font-family: Consolas;
 }
 
 /*Add vertical lines of embedded lists*/
