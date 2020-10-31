@@ -788,7 +788,7 @@ strong{
   font-size: var(--font-size-file-header-title);
   font-weight: 600;
   overflow: auto;
-  padding: 0px 5px 0px 0px; /*"5px" for Andy mode plugin*/
+  padding: 0px 5px 0px 0px; /*"5px" for Andy mode plugin v3.0.1*/
   white-space: nowrap;
   top: -1px;
   border-top: 3px transparent;
@@ -798,6 +798,18 @@ strong{
   display:inline;
   position: relative;
 }
+
+/*=============*/
+/*for Andy mode plugin v3.0.1*/
+.view-actions{
+  margin-left: -2px;
+}
+
+.view-header-icon{
+  margin-left: -2px !important;
+}
+/*for Andy mode plugin v3.0.1*/
+/*=============*/
 
 /*============bigger link popup preview  ================*/
 .popover.hover-popover {
