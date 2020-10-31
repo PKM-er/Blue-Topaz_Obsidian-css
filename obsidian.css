@@ -424,7 +424,7 @@ body {
 }
 
 .search-result-file-matched-text {
-  color: var(--text-muted); /*标题被链接 提示黑字减淡 */
+  color: var(--text-muted); 
 }
 
 li {
@@ -467,7 +467,7 @@ li {
 }
 .tag:not(.token):hover {
 	color: white;
-	background-color: var(--zzys) !important;
+	background-color: var(--ztys) !important;
 }
 
 /*special tags*/
@@ -605,14 +605,21 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
 .markdown-preview-view h4 {font-size: var(--font-size-h4); font-weight:550;}
 .markdown-preview-view h5 {font-size: var(--font-size-h5); font-weight:550;}
 .markdown-preview-view h6 {font-size: var(--font-size-h6); font-weight:550;}
-	
-.markdown-preview-view h1 {color: var(--h1ys);}
-.markdown-preview-view h2 {color: var(--h2ys);}
-.markdown-preview-view h3 {color: var(--h3ys);}
-.markdown-preview-view h4 {color: var(--h4ys);}
-.markdown-preview-view h5 {color: var(--h5ys);}
-.markdown-preview-view h6 {color: var(--h6ys);}
 
+.theme-dark .markdown-preview-view h1 {color: var(--h1ys);}
+.theme-dark .markdown-preview-view h2 {color: var(--h2ys);}
+.theme-dark .markdown-preview-view h3 {color: var(--h3ys);}
+.theme-dark .markdown-preview-view h4 {color: var(--h4ys);}
+.theme-dark .markdown-preview-view h5 {color: var(--h5ys);}
+.theme-dark .markdown-preview-view h6 {color: var(--h6ys);}
+
+.theme-light .markdown-preview-view h1 {color: var(--h1ys); opacity: 1;}
+.theme-light .markdown-preview-view h2 {color: var(--h2ys); opacity: 0.91;}
+.theme-light .markdown-preview-view h3 {color: var(--h3ys); opacity: 0.82;}
+.theme-light .markdown-preview-view h4 {color: var(--h4ys); opacity: 0.73;}
+.theme-light .markdown-preview-view h5 {color: var(--h5ys); opacity: 0.64;}
+.theme-light .markdown-preview-view h6 {color: var(--h6ys); opacity: 0.55;}
+	
 .cm-header-1 {font-size: var(--font-size-h1); font-weight:550; position: relative;}
 .cm-header-2 {font-size: var(--font-size-h2); font-weight:550; position: relative;}
 .cm-header-3 {font-size: var(--font-size-h3); font-weight:550; position: relative;}
@@ -622,12 +629,19 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
 
 .cm-s-obsidian .cm-header, .cm-s-obsidian .cm-strong {font-weight:550;}
 
-.cm-header-1 {color: var(--h1ys);}
-.cm-header-2 {color: var(--h2ys);}
-.cm-header-3 {color: var(--h3ys);}
-.cm-header-4 {color: var(--h4ys);}
-.cm-header-5 {color: var(--h5ys);}
-.cm-header-6 {color: var(--h6ys);}
+.theme-dark .cm-header-1 {color: var(--h1ys);}
+.theme-dark .cm-header-2 {color: var(--h2ys);}
+.theme-dark .cm-header-3 {color: var(--h3ys);}
+.theme-dark .cm-header-4 {color: var(--h4ys);}
+.theme-dark .cm-header-5 {color: var(--h5ys);}
+.theme-dark .cm-header-6 {color: var(--h6ys);}
+
+.theme-light .cm-header-1 {color: var(--h1ys); opacity: 1;}
+.theme-light .cm-header-2 {color: var(--h2ys); opacity: 0.91;}
+.theme-light .cm-header-3 {color: var(--h3ys); opacity: 0.82;}
+.theme-light .cm-header-4 {color: var(--h4ys); opacity: 0.73;}
+.theme-light .cm-header-5 {color: var(--h5ys); opacity: 0.64;}
+.theme-light .cm-header-6 {color: var(--h6ys); opacity: 0.55;}
 
 .nav-files-container {
   flex-grow: 1;
@@ -774,7 +788,7 @@ strong{
   font-size: var(--font-size-file-header-title);
   font-weight: 600;
   overflow: auto;
-  padding: 0px 0px 0px 0px;
+  padding: 0px 5px 0px 0px; /*"5px" for Andy mode plugin*/
   white-space: nowrap;
   top: -1px;
   border-top: 3px transparent;
@@ -788,7 +802,7 @@ strong{
 /*============bigger link popup preview  ================*/
 .popover.hover-popover {
   position: absolute;
-  transform: scale(0.9); /* makes the content smaller */
+  transform: scale(0.85); /* makes the content smaller */
   max-height: 800px;    /* was 300 */
   min-height: 100px;
   width: 500px; /* was 400 */
@@ -1111,10 +1125,10 @@ pre> code>span {
   color: var(--text-normal);
 }
 
-/*-- wider folding zone--*/
+/*-- wider folding zone--*//*
 .CodeMirror-foldgutter {
   width: 1em;
-}
+}*/
 
 
 /*=============== DIRTY WYSIWYM HEADERS by _ph =====================*/
@@ -1137,7 +1151,7 @@ pre> code>span {
   padding: 0 5px;
 }
 
-/*-- hide # markup--*/
+/*-- hide # markup--*//*
 .cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1,
 .cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2,
 .cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3,
@@ -1146,7 +1160,7 @@ pre> code>span {
 .cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6
 {font-size:0px;}
 
-/*-- display H1-h6 in gutter--*/
+/*-- display H1-h6 in gutter--
 .cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1:before{
   content:"H1";
   font-size:14px;
@@ -1196,7 +1210,7 @@ pre> code>span {
   position:absolute;
 }
 
-/*-- is active line, hide H[1-6] in gutter --*/
+/*-- is active line, hide H[1-6] in gutter --
 .CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1:before,
 .CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2:before,
 .CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3:before,
@@ -1205,7 +1219,7 @@ pre> code>span {
 .CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6:before
 {font-size:0px;}
 
-/*-- is active line, display # markup --*/
+/*-- is active line, display # markup --
 .CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1{
   font-size: var(--font-size-h1);
   display:inline;
@@ -1229,7 +1243,7 @@ pre> code>span {
 .CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6{
   font-size: var(--font-size-h6);
   display:inline;
-}
+}*/
 
 /* show H1-H6 prefix in preview*/
 /*
@@ -1433,6 +1447,7 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
   left: 1px;
   top: -1px;
   font-size: 12px;
+  font-weight: bold;
   color: var(--text-accent);
   transition: transform 10ms linear 0s;
 }
