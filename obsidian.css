@@ -2401,7 +2401,7 @@ g>circle{
 
   --color-background-day: transparent;
   --color-background-day-empty: var(--background-secondary);
-  --color-background-day-active: var(--interactive-accent);
+  --color-background-day-active: var(--ztysop);
   --color-background-day-hover: var(--interactive-hover);
 
   --color-dot: var(--text-accent);
