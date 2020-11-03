@@ -4,7 +4,7 @@
 :root{
   --font-size-obsidian-titlebar:   15px;
   --font-size-vault-name:          14px;
-  --font-size-file-header-title:   12px;
+  --font-size-file-header-title:   13px;
   --font-size-embed-title-size:    18px;
   --font-size-folder-and-file:     13px;
   --font-size-edit-normal:         16px;
@@ -240,7 +240,7 @@ code{
 /* outliner for the outline */
 /*thanks to wonton from forum*/
 .nav-folder-children .nav-folder-children {
-  margin-left: 15px;
+  margin-left: 12px;
   padding-left: 0;
   border-left: 1.5px solid var(--background-modifier-border);
   border-radius: 0px;
@@ -788,7 +788,7 @@ strong{
   font-size: var(--font-size-file-header-title);
   font-weight: 600;
   overflow: auto;
-  padding: 0px 5px 0px 0px; /*"5px" for Andy mode plugin v3.0.1*/
+  padding: 0px 6px 0px 0px; /*"6px" for Andy mode plugin v3.0.1*/
   white-space: nowrap;
   top: -1px;
   border-top: 3px transparent;
@@ -806,7 +806,7 @@ strong{
 }
 
 .view-header-icon{
-  margin-left: -2px !important;
+  margin-left: -3px !important;
 }
 /*for Andy mode plugin v3.0.1*/
 /*=============*/
@@ -1428,7 +1428,7 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
   border-color: transparent;
   border-image: initial;
   border-radius: 0px;
-  padding: 1px 5px 0px 20px;
+  padding: 1px 5px 0px 16px;
   color: var(--text-muted);
   display: flex;
   align-items: baseline;
@@ -1448,7 +1448,7 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
 /*---- nav arrows adjust location ----*/
 .nav-folder-collapse-indicator {
   position: absolute;
-  left: 8px;
+  left: 4px;
   top: 4px;
   transition: transform 20ms linear 0s;
 }
