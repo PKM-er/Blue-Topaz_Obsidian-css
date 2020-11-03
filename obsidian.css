@@ -1456,9 +1456,9 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
 .nav-folder-collapse-indicator::after {
   position: absolute;
   content : "↓";
-  left: 1px;
-  top: -1px;
-  font-size: 12px;
+  left: 0px;
+  top: 0px;
+  font-size: 15px;
   font-weight: bold;
   color: var(--text-accent);
   transition: transform 10ms linear 0s;
@@ -1472,7 +1472,8 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
 }
 
 .nav-folder.is-collapsed .nav-folder-collapse-indicator {
-  transform: translateX(1px) translateY(4px) rotate(-90deg);
+  transform: translateX(1px) translateY(5px) rotate(-90deg);
+  opacity: 0.4;
 }
 
 /*search icon 1*/
