@@ -766,7 +766,7 @@ h1, h2, h3, h4, h5, h6, strong, b, .view-header-title {
   font-weight: 600;
 }
 
-strong{
+span.cm-strong, strong{
   color: var(--accent-strong);
 }
 
