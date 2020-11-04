@@ -327,6 +327,26 @@ display: none;
   opacity: 1;
 }
 
+/*reduce space of header buttons*/
+div.nav-header{
+  padding: 0px 5px 5px 5px;
+  margin-bottom: 0px;
+  margin-top: 5px;
+  line-height: 0px;
+}
+div.nav-buttons-container{
+  margin: 0px 0px 0px 0px;
+}
+input.search-input{
+  margin: 0px 10px -5px 10px;
+}
+.nav-action-button{
+  margin: 0px 2px 0px 2px !important;
+}
+.workspace-leaf-content[data-type='search'] .nav-action-button, .workspace-leaf-content[data-type='backlink'] .nav-action-button{
+  padding: 3px 3px 3px 3px;
+}
+
 /*后退前进符号*/
 /*
 .titlebar-button.mod-back svg {
