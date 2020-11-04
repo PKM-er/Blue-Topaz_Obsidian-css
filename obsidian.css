@@ -2432,4 +2432,12 @@ g>circle{
   --color-text-heading: var(--text-normal);
   --color-text-day: var(--text-normal);
   --color-text-today: var(--text-accent);
+  padding: 0px 0px 0px 8px;
+  margin: -5px -6px 0px 0px;
+  line-height: 5px;
+}
+
+td.svelte-pa4hh5{
+  padding: 2px 0px 5px 0px !important;
+  line-height: 20px;
 }
