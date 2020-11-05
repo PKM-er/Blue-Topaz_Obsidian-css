@@ -2423,6 +2423,15 @@ g>circle{
   background-color: var(--ztys);
 }
 
+body.plugin-sliding-panes .workspace-split.mod-vertical > .workspace-leaf {
+  box-shadow: none !important;
+}
+
+body.plugin-sliding-panes .mod-root .workspace-leaf.mod-active .view-header{
+  background-color: var(--background-primary);
+  border-right: 3px solid var(--interactive-accent) !important;
+}
+
 /* obsidian-calendar-plugin */
 /* https://github.com/liamcain/obsidian-calendar-plugin */
 #calendar-container {
