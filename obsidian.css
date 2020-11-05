@@ -2445,12 +2445,24 @@ g>circle{
   --color-text-heading: var(--text-normal);
   --color-text-day: var(--text-normal);
   --color-text-today: var(--text-accent);
-  padding: 0px 0px 0px 8px;
-  margin: -5px -6px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  margin: -6px -6px 0px -6px;
   line-height: 5px;
 }
 
-td.svelte-pa4hh5{
+td.svelte-15nltuc{
   padding: 2px 0px 5px 0px !important;
-  line-height: 20px;
+  line-height: 25px;
+}
+
+h2.svelte-15nltuc{
+  margin: 3px 0px 15px 0px;
+}
+
+.dot.svelte-15nltuc.svelte-15nltuc{
+  stroke: transparent;
+}
+
+div.view-content::-webkit-scrollbar{
+  display: none !important;
 }
