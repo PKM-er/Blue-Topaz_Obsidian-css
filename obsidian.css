@@ -1811,7 +1811,7 @@ text.actor > tspan {
 
 .note {
   stroke: var(--text-normal) !important;
-  fill: var(--text-accent-hover) !important;
+  fill: var(--mermaid-seq-dia-color) !important;
 }
 
 .noteText,
@@ -1997,7 +1997,7 @@ text.actor > tspan {
 .active1,
 .active2,
 .active3 {
-  fill: var(--text-accent-hover) !important;
+  fill: var(--mermaid-active-task-color) !important;
   stroke: var(--text-muted) !important;
 }
 
