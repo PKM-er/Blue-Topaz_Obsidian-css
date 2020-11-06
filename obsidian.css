@@ -2435,7 +2435,7 @@ body.plugin-sliding-panes .mod-root .workspace-leaf.mod-active .view-header{
 body.plugin-sliding-panes .view-header-title{
   font-size: 15px;
   letter-spacing: 0.7px;
-  padding: 0px 5px 0px 0px;
+  padding: 0px 4.5px 0px 0px;
   color: var(--text-muted);
 }
 
