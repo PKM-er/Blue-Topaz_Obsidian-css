@@ -1651,6 +1651,12 @@ div:not(.CodeMirror-activeline)>.HyperMD-quote {
   margin-right: 0px;
 }
 
+/*setting buttons*/
+.modal.mod-settings button:not(.mod-cta):hover{
+  background-color: var(--interactive-accent-hover);
+  color: #fdfdfd;
+}
+
 /*===============================================*/
 /*                                    .__    .___*/
 /*  _____   ___________  _____ _____  |__| __| _/*/
