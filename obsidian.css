@@ -866,7 +866,7 @@ span.cm-strong, strong{
 }
 
 .workspace-leaf.mod-active .view-header {
-
+  background-color: var(--background-primary);
   border-bottom: 3px solid var(--zzsyck); 
 }
 
