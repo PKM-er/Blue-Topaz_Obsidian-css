@@ -814,18 +814,6 @@ span.cm-strong, strong{
   position: relative;
 }
 
-/*=============*/
-/*for Andy mode plugin v3.0.1*/
-.view-actions{
-  margin-left: -2px;
-}
-
-.view-header-icon{
-  margin-left: -3px !important;
-}
-/*for Andy mode plugin v3.0.1*/
-/*=============*/
-
 /*============bigger link popup preview  ================*/
 .popover.hover-popover {
   position: absolute;
@@ -2439,14 +2427,23 @@ body.plugin-sliding-panes .mod-root .workspace-leaf.mod-active .view-header{
 }
 
 body.plugin-sliding-panes .view-header-title{
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0.7px;
-  padding: 0px 4.5px 0px 0px;
+  padding: 0px 4px 0px 0px !important;
   color: var(--text-muted);
+}
+
+body.plugin-sliding-panes .view-header-icon{
+  margin-left: 0px!important;
+  padding-left: 1.5px !important;
 }
 
 body.plugin-sliding-panes .mod-root .workspace-leaf.mod-active .view-header-title{
   color: var(--h4ys);
+}
+
+body.plugin-sliding-panes .view-actions{
+  margin-left: -2.5px;
 }
 
 /* obsidian-calendar-plugin */
