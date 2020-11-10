@@ -4,7 +4,7 @@
 :root{
   --font-size-obsidian-titlebar:   15px;
   --font-size-vault-name:          14px;
-  --font-size-file-header-title:   13px;
+  --font-size-file-header-title:   14px;
   --font-size-embed-title-size:    18px;
   --font-size-folder-and-file:     13px;
   --font-size-edit-normal:         16px;
@@ -811,6 +811,7 @@ span.cm-strong, strong{
   color: var(--text-muted);
   background-color: transparent;
   position: relative;
+  line-height: 36px;
 }
 
 /*============bigger link popup preview  ================*/
@@ -2428,7 +2429,7 @@ body.plugin-sliding-panes .mod-root .workspace-leaf.mod-active .view-header{
 body.plugin-sliding-panes .view-header-title{
   font-size: 16px;
   letter-spacing: 0.7px;
-  padding: 0px 4px 0px 0px !important;
+  line-height: 28px;
   color: var(--text-muted);
 }
 
