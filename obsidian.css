@@ -818,7 +818,7 @@ span.cm-strong, strong{
 /*============bigger link popup preview  ================*/
 .popover.hover-popover {
   position: absolute;
-  transform: scale(0.95); /* makes the content smaller */
+  transform: scale(1); /* makes the content smaller */
   max-height: 800px;    /* was 300 */
   min-height: 100px;
   width: 500px; /* was 400 */
