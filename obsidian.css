@@ -2455,7 +2455,7 @@ body.plugin-sliding-panes .view-actions{
   --color-background-day: transparent;
   --color-background-day-empty: var(--background-secondary);
   --color-background-day-active: var(--ztysop);
-  --color-background-day-hover: var(--interactive-hover);
+  --color-background-day-hover: var(--ztysop);
 
   --color-dot: var(--text-accent);
   --color-arrow: currentColor;
@@ -2464,18 +2464,14 @@ body.plugin-sliding-panes .view-actions{
   --color-text-heading: var(--text-normal);
   --color-text-day: var(--text-normal);
   --color-text-today: var(--text-accent);
-  padding: 0px 0px 0px 0px;
+  padding:0 5px 0px 8px;
   margin: -6px -6px 0px -6px;
-  line-height: 5px;
+  line-height: 10px;
 }
 
 td.svelte-15nltuc{
   padding: 2px 0px 5px 0px !important;
   line-height: 25px;
-}
-
-h2.svelte-15nltuc{
-  margin: 3px 0px 15px 0px;
 }
 
 .dot.svelte-15nltuc.svelte-15nltuc{
@@ -2484,4 +2480,32 @@ h2.svelte-15nltuc{
 
 div.view-content::-webkit-scrollbar{
   display: none !important;
+}
+
+#calendar-container h2 {
+  font-size:20px;
+  margin: 3px 0px 15px 0px;
+}
+
+#calendar-container h2 .arrow {
+  cursor: pointer;
+}
+
+#calendar-container h2 .arrow:hover,
+#calendar-container h2 .arrow:hover .arrow {
+  color:var(--text-accent);
+}
+
+#calendar-container tr th {
+  padding:6px 0;
+  background-color: var(--background-secondary-alt);
+}
+
+#calendar-container tr td {
+  width:14.28%;
+  border-right:2px solid var(--background-secondary-alt);
+}
+
+#calendar-container tr {
+  border:2px solid var(--background-secondary-alt);
 }
