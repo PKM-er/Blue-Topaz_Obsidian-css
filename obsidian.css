@@ -468,11 +468,6 @@ body {
   color: var(--text-muted); 
 }
 
-li {
-  padding-top: 0.5px;
-  padding-bottom: 0.5px;
-}
-
 .search-input {
   display: block;
   margin: 0 auto 10px auto;
