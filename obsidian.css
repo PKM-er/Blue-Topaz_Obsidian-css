@@ -1158,7 +1158,7 @@ pre.line-numbers > code {
 pre> code>span {
   word-wrap:break-word;
   word-break:break-all;
-  white-space: initial;
+  white-space: pre-wrap;
 }
 
 /* ==== fold icons ==== */
