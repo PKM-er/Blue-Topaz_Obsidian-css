@@ -793,9 +793,9 @@ span.cm-strong, strong{
   color: var(--accent-strong);
 }
 
-/*vertical lines*/
+/*vertical lines in outline page*/
 .outline .collapsible-item-children {
-  margin-left: 20px;
+  margin-left: 8px;
   border-left: 2px solid rgba(148, 148, 148, 0.2);
   border-radius: 0px;
   transition:all 300ms ease-in-out;
