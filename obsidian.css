@@ -1256,7 +1256,6 @@ pre[class~='language-txt']:before{
   content: "TXT";
 }
 
-
 /* ==== fold icons ==== */
 .CodeMirror-guttermarker-subtle {
   color: var(--text-normal);
@@ -1721,6 +1720,11 @@ div.heading-collapse-indicator.collapse-indicator.collapse-icon:hover{
 .graph-view.color-arrow {
   color: var(--graph-arrow);
   opacity: 1;
+}
+
+/*horizontal line in preview mode*/
+.markdown-preview-view hr{
+  border-top: 2px solid var(--ztys);
 }
 
 /*Horizontal line in edit mode. Changes --- to full-width line*/
