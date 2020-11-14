@@ -1150,11 +1150,13 @@ pre.line-numbers > code {
 }
 
 /*unfold code*/
+/*
 pre> code>span {
   word-wrap:break-word;
   word-break:break-all;
   white-space: pre-wrap;
 }
+*/
 
 /*show language type in preview mode*/ 
 /*Thanks to elutao from https://snippets.cacher.io/snippet/018387c872dc39277996 */
