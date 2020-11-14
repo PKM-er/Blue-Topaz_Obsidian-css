@@ -621,10 +621,9 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
     content: "☑";
     color: var(--text-accent) !important;
 }
-
 .markdown-preview-view h1 {
   font-size: var(--font-size-h1); 
-  font-weight:550;
+  font-weight:600;
   line-height: 28px;
   padding-bottom:1px;
   border-bottom: 2px solid var(--h1ys);
@@ -632,16 +631,16 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
 
 .markdown-preview-view h2 {
   font-size: var(--font-size-h2); 
-  font-weight:550;
+  font-weight:600;
   line-height: 28px;
   padding-bottom: 1px;
   border-bottom: 1px solid var(--h2ys);
 }
 
-.markdown-preview-view h3 {font-size: var(--font-size-h3); font-weight:550;}
-.markdown-preview-view h4 {font-size: var(--font-size-h4); font-weight:550;}
-.markdown-preview-view h5 {font-size: var(--font-size-h5); font-weight:550;}
-.markdown-preview-view h6 {font-size: var(--font-size-h6); font-weight:550;}
+.markdown-preview-view h3 {font-size: var(--font-size-h3); font-weight:600;}
+.markdown-preview-view h4 {font-size: var(--font-size-h4); font-weight:600;}
+.markdown-preview-view h5 {font-size: var(--font-size-h5); font-weight:600;}
+.markdown-preview-view h6 {font-size: var(--font-size-h6); font-weight:600;}
 
 .markdown-preview-view h1 {color: var(--h1ys);}
 .markdown-preview-view h2 {color: var(--h2ys);}
@@ -650,14 +649,14 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
 .markdown-preview-view h5 {color: var(--h5ys);}
 .markdown-preview-view h6 {color: var(--h6ys);}
 	
-.cm-header-1 {font-size: var(--font-size-h1); font-weight:550; position: relative;}
-.cm-header-2 {font-size: var(--font-size-h2); font-weight:550; position: relative;}
-.cm-header-3 {font-size: var(--font-size-h3); font-weight:550; position: relative;}
-.cm-header-4 {font-size: var(--font-size-h4); font-weight:550; position: relative;}
-.cm-header-5 {font-size: var(--font-size-h5); font-weight:550; position: relative;}
-.cm-header-6 {font-size: var(--font-size-h6); font-weight:550; position: relative;}
+.cm-header-1 {font-size: var(--font-size-h1); font-weight:600; position: relative;}
+.cm-header-2 {font-size: var(--font-size-h2); font-weight:600; position: relative;}
+.cm-header-3 {font-size: var(--font-size-h3); font-weight:600; position: relative;}
+.cm-header-4 {font-size: var(--font-size-h4); font-weight:600; position: relative;}
+.cm-header-5 {font-size: var(--font-size-h5); font-weight:600; position: relative;}
+.cm-header-6 {font-size: var(--font-size-h6); font-weight:600; position: relative;}
 
-.cm-s-obsidian .cm-header, .cm-s-obsidian .cm-strong {font-weight:550;}
+.cm-s-obsidian .cm-header, .cm-s-obsidian .cm-strong {font-weight:600;}
 
 .cm-header-1 {color: var(--h1ys);}
 .cm-header-2 {color: var(--h2ys);}
@@ -1527,7 +1526,7 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
 .cm-fat-cursor .CodeMirror-cursor, .cm-animate-fat-cursor {
   width: 0.6em;
   background: #db9a1f;
-  opacity: 60% !important;
+  opacity: 0.6 !important;
 }
 
 /*an active line highlight in vim normal mode */
@@ -1605,7 +1604,7 @@ div.heading-collapse-indicator.collapse-indicator.collapse-icon:hover{
   display: none;
   color:var(--accent-strong);
   height:7px;
-  width:87x;
+  width:7px;
 }
 
 .nav-folder.is-collapsed .nav-folder-collapse-indicator {
@@ -1669,7 +1668,7 @@ div.heading-collapse-indicator.collapse-indicator.collapse-icon:hover{
   display: none;
   color:var(--accent-strong);
   height:7px;
-  width:87x;
+  width:7px;
 }
 
 .side-dock-collapsible-section-header.is-collapsed .side-dock-collapsible-section-header-indicator {
