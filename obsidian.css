@@ -948,13 +948,13 @@ a:hover,
 
 .theme-dark :not(pre) > code[class*='language-'],
 .theme-dark pre[class*='language-'] {
-  background: var(--background-primary-alt);
+  background: var(--background-secondary);
   border-radius: 15px;
 }
 
 .theme-light :not(pre) > code[class*='language-'],
 .theme-light pre[class*='language-'] {
-  background: var(--background-primary);
+  background: var(--background-primary-alt);
   box-shadow: inset 0 0 0 2px var(--background-primary-alt);
   border-radius: 15px;
 }
