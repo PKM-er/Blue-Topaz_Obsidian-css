@@ -1760,18 +1760,21 @@ div:not(.CodeMirror-activeline)>.HyperMD-quote {
 /* Hide right side bar */
 /***************************************/
 .workspace-ribbon.mod-right:not(:hover) {
-  width: 0px;
+  width: 5px;
   transition: all 300ms ease-in-out;
 }
   
 .workspace-split.mod-right-split {
-  margin-right: 0px;
+  margin-right: 5px;
 }
 
-/*setting buttons*/
-.modal.mod-settings button:not(.mod-cta):hover{
-  background-color: var(--interactive-accent-hover);
-  color: #fdfdfd;
+/*change collapse icon position in left side*/
+.workspace-ribbon.mod-left .workspace-ribbon-collapse-btn{
+  margin-top: -10px;
+}
+
+.workspace-ribbon.is-collapsed .workspace-ribbon-collapse-btn:not(:hover){
+  margin-left: 15px;
 }
 
 /*===============================================*/
