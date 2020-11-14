@@ -2,25 +2,41 @@
 /*Blue Topaz for Obsidian v0.9.14, [20201114] modified by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot*/
 
 :root{
-  --font-size-obsidian-titlebar:   15px;
-  --font-size-vault-name:          14px;
-  --font-size-file-header-title:   14px;
-  --font-size-embed-title-size:    18px;
-  --font-size-folder-and-file:     13px;
-  --font-size-edit-normal:         16px;
-  --font-size-preview-normal:      16px;
-  --font-size-h1:                  25px;
-  --font-size-h2:                  23px;
-  --font-size-h3:                  21px;
-  --font-size-h4:                  19px;
-  --font-size-h5:                  17px;
-  --font-size-h6:                  15px;
-  --font-size-tag:                 16px;
-  --font-size-preview-blockquote:  16px;
-  --font-size-edit-blockquote:     16px;
-  --font-size-code:                14px;
-  --font-size-edit-code:           14px;
-  --font-size-latex:               20px;
+  --font-size-obsidian-titlebar:             15px;
+  --font-size-vault-name:                    14px;/*左侧库名字体大小*/
+  --font-size-file-header-title:             14px;/*文件抬头标题，只在非Andy mode plugin时生效*/
+  --font-size-file-header-title-andy-plugin: 16px;/*文件抬头标题for Andy mode plugin*/
+  --font-size-embed-title-size:              18px;
+  --font-size-folder-and-file:               13px;/*左侧边栏文件字体大小*/
+  --font-size-edit-normal:                   16px;/*编辑正文字体大小*/
+  --font-size-preview-normal:                16px;/*预览正文字体大小*/
+  --font-size-h1:                            25px;
+  --font-size-h2:                            23px;
+  --font-size-h3:                            21px;
+  --font-size-h4:                            19px;
+  --font-size-h5:                            17px;
+  --font-size-h6:                            15px;
+  --font-size-tag:                           16px;
+  --font-size-preview-blockquote:            16px;
+  --font-size-edit-blockquote:               16px;
+  --font-size-code:                          14px;
+  --font-size-edit-code:                     14px;
+  --font-size-latex:                         20px;
+
+  /*font family*/
+  --font-family-list:                  ;/*列表字体*/
+  --font-family-major:                 ;/*主体（包括列表）字体，除代码框等少数部分*/
+  --font-family-h1:                    ;
+  --font-family-h2:                    ;
+  --font-family-h3:                    ;
+  --font-family-h4:                    ;
+  --font-family-h5:                    ;
+  --font-family-h6:                    ;
+  --font-family-title:                 ;/*文件抬头标题*/
+  --font-family-folder-file-title:     ;/*左侧边栏文件、文件夹字体*/
+  --font-family-preview-code:          ;
+  --font-family-tag:                   ;
+  --font-family-vault:                 ;/*左侧库名字体*/
 } 
 
 .theme-dark {
@@ -243,9 +259,10 @@ p{
   font-size: var(--font-size-preview-normal);
 }
 
-/*tag font size*/
+/*tag font size and font family*/
 a.tag{
   font-size: var(--font-size-tag);
+  font-family: var(--font-family-tag);
 }
 
 /*edit mode blockquote font size*/
@@ -435,6 +452,7 @@ input.search-input{
 .nav-folder.mod-root > .nav-folder-title {
   padding-left: 0px;
   font-size: var(--font-size-vault-name);
+  font-family: var(--font-family-vault);
   font-weight: bolder;
   top: 0px; 
   cursor: default;
@@ -627,6 +645,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
   line-height: 28px;
   padding-bottom:1px;
   border-bottom: 2px solid var(--h1ys);
+  font-family: var(--font-family-h1);
 }
 
 .markdown-preview-view h2 {
@@ -635,12 +654,13 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
   line-height: 28px;
   padding-bottom: 1px;
   border-bottom: 1px solid var(--h2ys);
+  font-family: var(--font-family-h2);
 }
 
-.markdown-preview-view h3 {font-size: var(--font-size-h3); font-weight:600;}
-.markdown-preview-view h4 {font-size: var(--font-size-h4); font-weight:600;}
-.markdown-preview-view h5 {font-size: var(--font-size-h5); font-weight:600;}
-.markdown-preview-view h6 {font-size: var(--font-size-h6); font-weight:600;}
+.markdown-preview-view h3 {font-size: var(--font-size-h3); font-weight:600; font-family: var(--font-family-h3);}
+.markdown-preview-view h4 {font-size: var(--font-size-h4); font-weight:600; font-family: var(--font-family-h4);}
+.markdown-preview-view h5 {font-size: var(--font-size-h5); font-weight:600; font-family: var(--font-family-h5);}
+.markdown-preview-view h6 {font-size: var(--font-size-h6); font-weight:600; font-family: var(--font-family-h6);}
 
 .markdown-preview-view h1 {color: var(--h1ys);}
 .markdown-preview-view h2 {color: var(--h2ys);}
@@ -649,12 +669,12 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
 .markdown-preview-view h5 {color: var(--h5ys);}
 .markdown-preview-view h6 {color: var(--h6ys);}
 	
-.cm-header-1 {font-size: var(--font-size-h1); font-weight:600; position: relative;}
-.cm-header-2 {font-size: var(--font-size-h2); font-weight:600; position: relative;}
-.cm-header-3 {font-size: var(--font-size-h3); font-weight:600; position: relative;}
-.cm-header-4 {font-size: var(--font-size-h4); font-weight:600; position: relative;}
-.cm-header-5 {font-size: var(--font-size-h5); font-weight:600; position: relative;}
-.cm-header-6 {font-size: var(--font-size-h6); font-weight:600; position: relative;}
+.cm-header-1 {font-size: var(--font-size-h1); font-weight:600; position: relative; font-family: var(--font-family-h1);}
+.cm-header-2 {font-size: var(--font-size-h2); font-weight:600; position: relative; font-family: var(--font-family-h2);}
+.cm-header-3 {font-size: var(--font-size-h3); font-weight:600; position: relative; font-family: var(--font-family-h3);}
+.cm-header-4 {font-size: var(--font-size-h4); font-weight:600; position: relative; font-family: var(--font-family-h4);}
+.cm-header-5 {font-size: var(--font-size-h5); font-weight:600; position: relative; font-family: var(--font-family-h5);}
+.cm-header-6 {font-size: var(--font-size-h6); font-weight:600; position: relative; font-family: var(--font-family-h6);}
 
 .cm-s-obsidian .cm-header, .cm-s-obsidian .cm-strong {font-weight:600;}
 
@@ -699,7 +719,14 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
 .markdown-source-view.is-readable-line-width .CodeMirror,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   max-width: 850px !important;
-  line-height: 26px;
+  line-height: 27px;
+  font-family: var(--font-family-major);
+}
+
+/*list*/
+li{
+  line-height: 28px;
+  font-family: var(--font-family-list);
 }
 
 /*
@@ -719,6 +746,7 @@ mjx-container[jax='CHTML'] {
 .theme-dark .markdown-preview-view code {
   color: #e48900;
   font-size: var(--font-size-edit-code) !important;
+  font-family: var(--font-family-preview-code);
 }
 
 .theme-light .cm-s-obsidian pre.HyperMD-codeblock,
@@ -727,6 +755,7 @@ mjx-container[jax='CHTML'] {
 .theme-light .markdown-preview-view code:not([class*='language-']) {
   color: #ee5f00;
   font-size: var(--font-size-edit-code) !important;
+  font-family: var(--font-family-preview-code);
 }
 
 /*bold code text except code language*/
@@ -1545,6 +1574,7 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
 .nav-file-title,
 .nav-folder-title {
   font-size: var(--font-size-folder-and-file);
+  font-family: var(--font-family-folder-file-title);
   line-height: 14px;
   cursor: pointer;
   position: relative;
@@ -2559,7 +2589,7 @@ body.plugin-sliding-panes .mod-root .workspace-leaf.mod-active .view-header{
 }
 
 body.plugin-sliding-panes .view-header-title{
-  font-size: 16px;
+  font-size: var(--font-size-file-header-title-andy-plugin);
   letter-spacing: 0.7px;
   line-height: 28px;
   color: var(--text-muted);
@@ -2572,6 +2602,7 @@ body.plugin-sliding-panes .view-header-icon{
 
 body.plugin-sliding-panes .mod-root .workspace-leaf.mod-active .view-header-title{
   color: var(--h4ys);
+  font-family: var(--font-family-title);
 }
 
 body.plugin-sliding-panes .view-actions{
