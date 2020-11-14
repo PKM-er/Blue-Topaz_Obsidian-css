@@ -1722,10 +1722,12 @@ div.heading-collapse-indicator.collapse-indicator.collapse-icon:hover{
   opacity: 1;
 }
 
-/*horizontal line in preview mode*/
+/*
+/*horizontal line in preview mode
 .markdown-preview-view hr{
   border-top: 2px solid var(--ztys);
 }
+*/
 
 /*Horizontal line in edit mode. Changes --- to full-width line*/
 /*thanks to Piotr from obsidian forum*/
