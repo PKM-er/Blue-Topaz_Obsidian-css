@@ -2653,6 +2653,11 @@ td.svelte-15nltuc{
   stroke: transparent;
 }
 
+.dot-container.svelte-15nltuc{
+  margin-top: -6px;
+  margin-bottom: -2px;
+}
+
 div.view-content::-webkit-scrollbar{
   display: none !important;
 }
