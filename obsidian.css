@@ -573,7 +573,7 @@ body {
   color: var(--text-accent);
 }
 
-/* task lists*/
+/*checkbox*/
 .markdown-preview-view .task-list-item-checkbox {
   -webkit-appearance: none;
   box-sizing: border-box;
@@ -581,7 +581,6 @@ body {
   position: relative;
   width: 15px;
   height: 15px;
-  margin: 0;
   margin-right: 5px;
   margin-bottom: 1px;
   filter: hue-rotate(var(--ztys));
