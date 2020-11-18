@@ -1615,6 +1615,11 @@ div.heading-collapse-indicator.collapse-indicator.collapse-icon:hover{
   color: var(--text-accent);
 }
 
+/*outline collapse indicator*/
+div.collapsible-item-collapse.collapse-icon{
+  color: var(--text-accent);
+}
+
 /*---- nav arrows adjust location ----*/
 .nav-folder-collapse-indicator {
   position: absolute;
