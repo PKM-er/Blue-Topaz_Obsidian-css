@@ -822,7 +822,7 @@ span.cm-strong, strong{
 
 /*vertical lines in outline page*/
 .outline .collapsible-item-children {
-  margin-left: 8px;
+  margin-left: 9px;
   border-left: 2px solid rgba(148, 148, 148, 0.2);
   border-radius: 0px;
   transition:all 300ms ease-in-out;
