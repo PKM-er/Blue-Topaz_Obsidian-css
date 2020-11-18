@@ -1708,6 +1708,12 @@ div.heading-collapse-indicator.collapse-indicator.collapse-icon:hover{
   background-color: transparent;
 }
 
+/*setting buttons*/
+.modal.mod-settings button:not(.mod-cta):hover{
+  background-color: var(--interactive-accent-hover);
+  color: #fdfdfd;
+}
+
 /* ======= graph view ==============*/
 .graph-view.color-fill {
   color: var(--graph-circle);
