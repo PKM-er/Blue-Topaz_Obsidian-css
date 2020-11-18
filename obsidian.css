@@ -885,6 +885,11 @@ tbody>tr {
   background-color: var(--table-thead-background-color);
 }
 
+/*table hover*/
+.markdown-preview-view td:hover{
+  background-color: var(--ztysop);
+}
+
 /*
 .popover {
   background-color: var(--background-primary);
