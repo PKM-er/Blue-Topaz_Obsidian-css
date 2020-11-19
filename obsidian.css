@@ -139,6 +139,8 @@
   --table-background-color-odd: #3f3f3f;
   --table-border-color: #c0c0c0;
   --table-thead-background-color: #4e6a85;
+  --table-hover-raw-color: #3187d33d;
+  --table-hover-color: #3187d388;
 }
 
 .theme-light {
@@ -236,6 +238,8 @@
   --table-background-color-odd: #ffffff;
   --table-border-color: #555555;
   --table-thead-background-color: #bfddf5;
+  --table-hover-raw-color: #2f93e42f;
+  --table-hover-color: #2f93e47c;
 }
 
 .markdown-preview-view {
@@ -887,7 +891,12 @@ tbody>tr {
 
 /*table hover*/
 .markdown-preview-view td:hover{
-  background-color: var(--ztysop);
+  background-color: var(--table-hover-color);
+}
+
+/*table raw hover*/
+.markdown-preview-view tr:hover{
+  background-color: var(--table-hover-raw-color);
 }
 
 /*
