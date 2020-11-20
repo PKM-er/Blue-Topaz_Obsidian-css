@@ -572,6 +572,15 @@ body {
   padding: 2px 4px;
 }*/
 
+/*===*/
+/*frontmatter specification 同义词等声明*/
+pre.frontmatter.language-yaml:before{
+  content: "Specification";
+  font-family: Lucida Handwriting;
+  top: 1px;
+  color: #3cc57a;
+}
+
 /*code box unfold icon*/
 .CodeMirror-foldgutter-open.CodeMirror-guttermarker-subtle::after {
   color: var(--text-accent);
