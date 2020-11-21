@@ -2649,22 +2649,55 @@ body.plugin-sliding-panes .view-actions{
   --color-text-day: var(--text-normal);
   --color-text-today: var(--text-accent);
   padding:0 5px 0px 8px;
-  margin: -6px -6px 0px -6px;
+  margin: -15px -6px 0px -6px;
   line-height: 10px;
 }
 
-td.svelte-15nltuc{
+th.svelte-1ocurao{
+  border-radius: 0px !important;
+  background-color: var(--table-thead-background-color) !important;
+}
+
+td.svelte-1lgyrog{
   padding: 2px 0px 5px 0px !important;
   line-height: 25px;
 }
 
-.dot.svelte-15nltuc.svelte-15nltuc{
+/*“Today”*/
+.reset-button.svelte-1ocurao.svelte-1ocurao{
+  font-size: 14px !important;
+  margin: 0px 0px 0px 0px;
+  padding: 3px 3px 3px 3px;
+  cursor: pointer;
+}
+
+/*悬停Today*/
+.reset-button.svelte-1ocurao.svelte-1ocurao:hover{
+  color:var(--h4ys);
+  background-color: var(--table-hover-raw-color);
+}
+
+.arrow.svelte-1ocurao.svelte-1ocurao:hover{
+  color: var(--ztys);
+}
+
+.dot.svelte-1lgyrog.svelte-1lgyrog{
   stroke: transparent;
 }
 
-.dot-container.svelte-15nltuc{
-  margin-top: -6px;
+.dot-container.svelte-1lgyrog{
+  margin-top: -4px;
   margin-bottom: -2px;
+}
+
+.month.svelte-1ocurao.svelte-1ocurao{
+  font-size: 20px;
+  line-height: 20px !important;
+}
+
+.year.svelte-1ocurao.svelte-1ocurao{
+  font-size: 20px;
+  line-height: 20px !important;
 }
 
 /*隐藏scrollbar*/
@@ -2672,19 +2705,6 @@ td.svelte-15nltuc{
   display: none !important;
 }*/
 
-#calendar-container h2 {
-  font-size:20px;
-  margin: 3px 0px 15px 0px;
-}
-
-#calendar-container h2 .arrow {
-  cursor: pointer;
-}
-
-#calendar-container h2 .arrow:hover,
-#calendar-container h2 .arrow:hover .arrow {
-  color:var(--text-accent);
-}
 
 #calendar-container tr th {
   padding:6px 0;
