@@ -572,15 +572,6 @@ body {
   padding: 2px 4px;
 }*/
 
-/*===*/
-/*frontmatter specification 同义词等声明*/
-pre.frontmatter.language-yaml:before{
-  content: "Specification";
-  font-family: Lucida Handwriting;
-  top: 1px;
-  color: #3cc57a;
-}
-
 /*code box unfold icon*/
 .CodeMirror-foldgutter-open.CodeMirror-guttermarker-subtle::after {
   color: var(--text-accent);
@@ -2708,3 +2699,41 @@ td.svelte-15nltuc{
 #calendar-container tr {
   border:2px solid var(--background-secondary-alt);
 }
+
+/*=====*/
+/*copy button for code blocks*/
+.copy-code-button {
+  color: var(--background-primary) !important;
+  background-color: var(--text-faint);
+  border-radius: 0px 1px 1px 0px !important;
+  font-weight: 900 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 0px 1px !important;
+  font-size: 0.5em !important;
+  position: absolute;
+  top: 0 !important;
+  bottom: 0px !important;
+}
+
+code.language-yaml.is-loaded{
+  word-wrap:break-word !important;
+  word-break:break-all !important;
+  white-space: pre-wrap !important;
+}
+  
+pre.frontmatter.language-yaml{
+  padding-right: 35px;
+}
+
+/*========*/
+/*frontmatter specification 同义词等声明*/
+pre.frontmatter.language-yaml:before{
+  content: "Specification";
+  font-family: Lucida Handwriting;
+  top: 1px;
+  right: 32px;
+  color: #3cc57a;
+}
+
