@@ -2780,14 +2780,9 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
   bottom: 0px !important;
 }
 
-code.language-yaml.is-loaded{
-  word-wrap:break-word !important;
-  word-break:break-all !important;
-  white-space: pre-wrap !important;
-}
-  
-pre.frontmatter.language-yaml{
-  padding-right: 35px;
+.copy-code-button:hover{
+  background-color: var(--table-hover-color) !important;
+  color: var(--accent-strong) !important;
 }
 
 /*========*/
