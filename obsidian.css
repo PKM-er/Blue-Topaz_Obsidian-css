@@ -1219,7 +1219,7 @@ code.language-yaml.is-loaded{
 code.language-md.is-loaded{
   word-wrap:break-word !important;
   word-break:break-word !important;
-  white-space: pre-wrap !important;
+  white-space: break-spaces !important;
 }
 
 /*show language type in preview mode*/ 
