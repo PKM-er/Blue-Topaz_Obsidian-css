@@ -2637,6 +2637,11 @@ body.plugin-sliding-panes .view-actions{
   margin-left: -2.5px;
 }
 
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
+  border-right: 1px solid var(--background-secondary-alt);
+  border-left: 1px solid var(--background-secondary-alt);
+}
+
 /* obsidian-calendar-plugin */
 /* https://github.com/liamcain/obsidian-calendar-plugin */
 #calendar-container {
