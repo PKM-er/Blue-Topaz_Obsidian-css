@@ -542,6 +542,11 @@ body {
   font-weight: 600;
   font-family: Lucida Handwriting;
 }
+.cm-s-obsidian .CodeMirror-line span.cm-tag-important:not(.cm-formatting-hashtag) {
+  color:var(--tag1);
+  font-family: Lucida Handwriting;
+  font-weight: 600;
+}
 .tag[href^="#重要"] {
   background-color: var(--tag1) !important;
   font-weight: 600;
@@ -552,6 +557,11 @@ body {
   font-weight: 600;
   font-family:  Lucida Handwriting;
 }
+.cm-s-obsidian .CodeMirror-line span.cm-tag-complete:not(.cm-formatting-hashtag) {
+  color:var(--tag3);
+  font-family: Lucida Handwriting;
+  font-weight: 600;
+}
 .tag[href^="#完成"] {
   background-color: var(--tag3) !important;
   font-family: Origin, Microsoft YaHei;
@@ -561,6 +571,11 @@ body {
   background-color: var(--tag2) !important;
   font-weight: 600;
   font-family: Lucida Handwriting;
+}
+.cm-s-obsidian .CodeMirror-line span.cm-tag-inprogress:not(.cm-formatting-hashtag) {
+  color:var(--tag2);
+  font-family: Lucida Handwriting;
+  font-weight: 600;
 }
 .tag[href^="#进行中"] {
   background-color: var(--tag2) !important;
