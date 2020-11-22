@@ -141,6 +141,9 @@
   --table-thead-background-color: #4e6a85;
   --table-hover-raw-color: #3187d33d;
   --table-hover-color: #3187d388;
+
+  /*calendar*/
+  --calendar-week-hover: #41c72631;
 }
 
 .theme-light {
@@ -240,6 +243,9 @@
   --table-thead-background-color: #bfddf5;
   --table-hover-raw-color: #2f93e42f;
   --table-hover-color: #2f93e47c;
+
+  /*calendar*/
+  --calendar-week-hover: #57b8444f;
 }
 
 .markdown-preview-view {
@@ -2635,90 +2641,117 @@ body.plugin-sliding-panes .view-actions{
 /* https://github.com/liamcain/obsidian-calendar-plugin */
 #calendar-container {
   --color-background-heading: transparent;
-
+  --color-background-weeknum: transparent;
   --color-background-day: transparent;
-  --color-background-day-empty: var(--background-secondary);
-  --color-background-day-active: var(--ztysop);
-  --color-background-day-hover: var(--ztysop);
-
+  
   --color-dot: var(--text-accent);
   --color-arrow: currentColor;
-
+  --color-button: var(--text-muted);
+  --color-text-weeknum: var(--green);
+  
   --color-text-title: var(--text-normal);
   --color-text-heading: var(--text-normal);
   --color-text-day: var(--text-normal);
   --color-text-today: var(--text-accent);
-  padding:0 5px 0px 8px;
-  margin: -15px -6px 0px -6px;
-  line-height: 10px;
+  
+  /*===*/
+  padding: 0px 5px 0px 8px;
+  margin: -21px -8px 0px -8px;
+  line-height: 5px;
 }
-
-th.svelte-1ocurao{
+  
+/*表格调整*/
+/*星期*/
+#calendar-container tr th {
+  padding: 6px 0;
   border-radius: 0px !important;
   background-color: var(--table-thead-background-color) !important;
 }
 
-td.svelte-1lgyrog{
-  padding: 2px 0px 5px 0px !important;
+/*天*/
+#calendar-container tr td {
+  width:12.5%;
+  border-right:2px solid var(--background-secondary-alt);
+  padding: 0px 0px 4px 0px !important;
   line-height: 25px;
+  border-radius: 0px !important;
+}
+
+#calendar-container tr {
+  border:2px solid var(--background-secondary-alt);
+}
+
+#calendar-container td:not(:empty):hover{
+  background-color: var(--table-hover-color);
+}
+
+#calendar-container table{
+  margin: -8px 0;
 }
 
 /*“Today”*/
-.reset-button.svelte-1ocurao.svelte-1ocurao{
+#calendar-container .reset-button{
   font-size: 14px !important;
   margin: 0px 0px 0px 0px;
-  padding: 3px 3px 3px 3px;
+  padding: 6px 0px 0px 0px;
   cursor: pointer;
 }
-
+  
 /*悬停Today*/
-.reset-button.svelte-1ocurao.svelte-1ocurao:hover{
+#calendar-container .reset-button:hover{
   color:var(--h4ys);
   background-color: var(--table-hover-raw-color);
 }
-
-.arrow.svelte-1ocurao.svelte-1ocurao:hover{
+  
+/*悬停arrow*/
+#calendar-container .arrow:hover{
   color: var(--ztys);
 }
-
-.dot.svelte-1lgyrog.svelte-1lgyrog{
+  
+/*今日笔记时红点去除*/
+#calendar-container .dot{
   stroke: transparent;
 }
-
-.dot-container.svelte-1lgyrog{
-  margin-top: -4px;
+  
+/*点调整*/
+#calendar-container .dot-container{
+  margin-top: -3px;
   margin-bottom: -2px;
 }
-
-.month.svelte-1ocurao.svelte-1ocurao{
+  
+/*月份调整*/
+#calendar-container .month{
   font-size: 20px;
   line-height: 20px !important;
 }
-
-.year.svelte-1ocurao.svelte-1ocurao{
+  
+/*年份调整*/
+#calendar-container .year{
   font-size: 20px;
   line-height: 20px !important;
 }
+  
+/*星期数*/
+#calendar-container .week-num{
+  border-right: 1.5px solid var(--green) !important;
+}
+
+/*星期数悬停*/
+#calendar-container .week-num:hover{
+  background-color: var(--calendar-week-hover) !important;
+}
+
+/*星期数表头*//*不完善，等插件更新*//*
+#calendar-container th:not(.svelte-1lgyrog):first-child{
+  background-color: var(--green) !important;
+}
+*/
 
 /*隐藏scrollbar*/
 /*div.view-content::-webkit-scrollbar{
   display: none !important;
 }*/
 
-
-#calendar-container tr th {
-  padding:6px 0;
-  background-color: var(--background-secondary-alt);
-}
-
-#calendar-container tr td {
-  width:14.28%;
-  border-right:2px solid var(--background-secondary-alt);
-}
-
-#calendar-container tr {
-  border:2px solid var(--background-secondary-alt);
-}
 
 /*=====*/
 /*copy button for code blocks*/
