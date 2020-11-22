@@ -2811,3 +2811,9 @@ pre.frontmatter.language-yaml:before{
 pre.frontmatter.language-yaml{
   padding-right: 35px;
 }
+
+pre.frontmatter.language-yaml .token.string {
+  border: 1px solid;
+  padding: 1px 8px;
+  border-radius: 15px;
+}
