@@ -509,6 +509,9 @@ body {
   height: 17px;
 }
 
+/*=========================*/
+/*==========tags===========*/
+/*=========================*/
 /*colorful tags*/
 .tag:not(.token).tag:nth-child(9n+1){background-color: var(--bqys1);} /*1*/
 .tag:not(.token).tag:nth-child(9n+2){background-color: var(--bqys6);} /*6*/
@@ -594,6 +597,7 @@ body {
   border-radius: 3px;
   padding: 2px 4px;
 }*/
+/*=========================*/
 
 /*code box unfold icon*/
 .CodeMirror-foldgutter-open.CodeMirror-guttermarker-subtle::after {
