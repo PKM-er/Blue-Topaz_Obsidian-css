@@ -1078,6 +1078,7 @@ pre[class*='language-'] {
   -moz-hyphens: none !important;
   -ms-hyphens: none !important;
   hyphens: none !important;
+  padding-right: 30px !important;
 }
 
 /* Inline code */
@@ -1207,6 +1208,18 @@ pre> code>span {
   word-wrap:break-word;
   word-break:break-all;
   white-space: pre-wrap;
+}
+
+code.language-yaml.is-loaded{
+  word-wrap:break-word !important;
+  word-break:break-word !important;
+  white-space: pre-wrap !important;
+}
+
+code.language-md.is-loaded{
+  word-wrap:break-word !important;
+  word-break:break-word !important;
+  white-space: pre-wrap !important;
 }
 
 /*show language type in preview mode*/ 
@@ -2793,12 +2806,6 @@ pre.frontmatter.language-yaml:before{
   top: 1px;
   right: 32px;
   color: var(--color-specification);
-}
-
-code.language-yaml.is-loaded{
-  word-wrap:break-word !important;
-  word-break:break-all !important;
-  white-space: pre-wrap !important;
 }
 
 pre.frontmatter.language-yaml{
