@@ -5,14 +5,7 @@
 A blue theme for **Obsidian**. Blue Topaz is not a precious gem, like obsidian😜. Generally, Blue Topaz is obtained by artificially treating colourless topaz. Likewise，I did not make this theme from scratch, but modified it after borrowing others' themes. It is like Blue Topaz, which is a modified product. Thus, thanks for the all shared themes, which inspired me indeed! BTY, For the word "colourless topaz", there is no offence and no comparison. And it is not a metaphor. I will be glad if you enjoy the theme, *Blue Topaz*.
 
 # Preview
-![](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/preview_Blue%20Topaz.png?raw=true)
-
-## With Andy mode
-Blue Topaz也有Andy mode版本，关于Andy mode，见[https://notes.andymatuschak.org/Evergreen_notes](https://notes.andymatuschak.org/Evergreen_notes), 简单来说，是一种侧边栏主题可以按住Shift + 鼠标左键进行左右滚动。
-
-If you want a theme with Andy mode, please try [this theme](https://github.com/whyt-byte/Blue-Topaz-with-Andy-mode_Obsidian_css). [About Andy mode](https://notes.andymatuschak.org/Evergreen_notes)
-
-![](https://github.com/whyt-byte/Blue-Topaz-with-Andy-mode_Obsidian_css/blob/main/Preview_Blue%20Topaz%20with%20Andy%20mode.png?raw=true)
+![](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/blue%20topaz%20for%200.9.17.png)
 
 # Installation
 1. 下载css文件。
@@ -22,18 +15,6 @@ If you want a theme with Andy mode, please try [this theme](https://github.com/w
 1. Download css file.
 2. Enable custom css in Obsidian.
 3. Copy the obsidian.css to your vault directory (or replace, if there is an existing file).
-
-# Asymmetric Blue Topaz
-又有新想法了~ [click here](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/tree/master/Asymmetric%20Blue%20Topaz)
-
-区别是Light mode标题不再隐藏"#"
-
-The difference is that header titles no longer hide the "#" under Light mode. 
-
-![](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/Asymmetric%20Blue%20Topaz_1.png?raw=true)
-
-![](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/Asymmetric%20Blue%20Topaz/ABT.png?raw=true)
-
 
 ## BTY
 /* Blockquote header */
