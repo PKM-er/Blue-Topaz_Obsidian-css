@@ -1864,12 +1864,12 @@ div:not(.CodeMirror-activeline)>.HyperMD-quote {
 /* Hide right side bar */
 /***************************************/
 .workspace-ribbon.mod-right:not(:hover) {
-  width: 5px;
+  width: 9px;
   transition: all 300ms ease-in-out;
 }
   
 .workspace-split.mod-right-split {
-  margin-right: 5px;
+  margin-right: 9px;
 }
 
 /*change collapse icon position in left side*/
