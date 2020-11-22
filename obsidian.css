@@ -1002,8 +1002,11 @@ a:hover,
 .theme-light :not(pre) > code[class*='language-'],
 .theme-light pre[class*='language-'] {
   background: var(--background-primary-alt);
-  box-shadow: inset 0 0 0 2px var(--background-primary-alt);
   border-radius: 7px;
+}
+
+.theme-light code[class*="language-"], .theme-light pre[class*="language-"]{
+  text-shadow: none;
 }
 
 .theme-dark code[class*="language-"], .theme-dark pre[class*="language-"] {
