@@ -301,12 +301,6 @@ code{
   border-left-color:var(--ztys);
 }
 
-span.search-result-file-matched-text{
-color: var(--search-text);
-background-color: var(--text-highlight-bg);
-opacity: 0.8;
-}
-
 .view-header-title-container:after {
 display: none;
 }
@@ -485,17 +479,32 @@ body {
   -webkit-font-smoothing: auto;
 }
 
+/*==================*/
+/*=======搜索=======*/
+/*==================*/
 .search-result-file-title {
   color: var(--btblj);
 }
 
 /*reduce search result margin*/
 .search-result-file-match{
-  padding: 0px 0px;
+  padding: 0 3px;
 }
 
 .search-result-file-matched-text {
   color: var(--text-muted); 
+}
+
+span.search-result-file-matched-text{
+  color: var(--search-text);
+  background-color: var(--text-highlight-bg);
+  opacity: 0.8;
+  }
+
+/* background of search result */
+.search-result {
+  background-color: var(--background-primary);
+  border-radius: 5px;
 }
 
 .search-input {
