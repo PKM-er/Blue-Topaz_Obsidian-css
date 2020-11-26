@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.9.17。[20201122] flying fly flies修改，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢*/
-/*Blue Topaz for Obsidian v0.9.17, [20201122] modified by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot*/
+/*蓝色托帕石，适合Obsidian v0.9.18。[20201126] flying fly flies修改，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.9.18, [20201126] modified by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 :root{
   --font-size-obsidian-titlebar:             15px;
@@ -40,9 +40,9 @@
 } 
 
 .theme-dark {
-  --background-primary: #3f3f3f; 
-  --background-primary-alt: #383838;
-  --background-secondary: #303030;
+  --background-primary: #333333; 
+  --background-primary-alt: #3d3d3d;
+  --background-secondary: #252525;
   --background-secondary-alt: #000000; 
   --background-accent: #000;
   --background-modifier-border: #565656;
@@ -56,7 +56,7 @@
   --background-modifier-cover: rgba(0, 0, 0, 0.6);
   --text-accent: #53aaf5;
   --text-accent-hover: #3e8de7; 
-  --text-normal: #eeeeeee8; 
+  --text-normal: #d8d8d8; 
   --text-muted: #8b8b8b;  
   --text-faint: rgb(121, 121, 121);
   --accent-strong: #ffffff;
@@ -136,22 +136,40 @@
   --mermaid-seq-dia-color: #1371be;
 
   /*table*/
-  --table-background-color: #535353;
-  --table-background-color-odd: #3f3f3f;
+  --table-background-color: #4d4d4d;
+  --table-background-color-odd: #333333;
   --table-border-color: #c0c0c0;
   --table-thead-background-color: #4e6a85;
   --table-hover-raw-color: #3187d33d;
   --table-hover-color: #3187d388;
+  --table-hover-thead-color: #6fa084;
 
   /*calendar*/
   --calendar-week-hover: #41c72631;
+
+  /*day planner*/
+  --day-planner-pie: #f19c1c;
+  --day-planner-timeline: #000000;
+  --day-planner-line: #dfcf77;
+  --day-planner-dot: #dfcf77;
+  --day-planner-item-hover: #053c85;
+  --event-item-color1: #283493bb;
+  --event-item-color2: #1565c0bb;
+  --event-item-color3: #00838fbb;
+  --event-item-color4: #2e7d32bb;
+  --event-item-color5: #9e9d24bb;
+  --event-item-color6: #ff8f00bb;
+  --event-item-color7: #d84315bb;
+  --event-item-color8: #c62828bb;
+  --event-item-color9: #ad1457bb;
+  --event-item-color10:#6a1b9abb;
 }
 
 .theme-light {
   --background-primary: #ffffff;
-  --background-primary-alt: #f3f3f3;
-  --background-secondary: #f0f0f0;
-  --background-secondary-alt: #dbdbdb;
+  --background-primary-alt: #f8f8f8;
+  --background-secondary: #ececec;
+  --background-secondary-alt: #dadada;
   --background-accent: #fff;
   --background-modifier-border: #e1dfdf;
   --background-modifier-form-field: #fff;
@@ -245,10 +263,175 @@
   --table-thead-background-color: #bfddf5;
   --table-hover-raw-color: #2f93e42f;
   --table-hover-color: #2f93e47c;
+  --table-hover-thead-color: #cde8ff;
 
   /*calendar*/
   --calendar-week-hover: #57b8444f;
+
+  /*day planner*/
+  --day-planner-pie: #eca95c;
+  --day-planner-timeline: #d62f2f;
+  --day-planner-line: #ffd900;
+  --day-planner-dot: #ffd900;
+  --day-planner-item-hover: #c29810;
+  --event-item-color1: #072f6b;
+  --event-item-color2: #0a3c86;
+  --event-item-color3: #0c469c;
+  --event-item-color4: #1652ac;
+  --event-item-color5: #2664c0;
+  --event-item-color6: #1275cc;
+  --event-item-color7: #2786da;
+  --event-item-color8: #2e96eb;
+  --event-item-color9: #52a4e7;
+  --event-item-color10:#65ace6;
 }
+
+/*=========================*/
+/*==========tags===========*/
+/*=========================*/
+/*special tags*/
+.tag[href^="#important"] {
+  background-color: var(--tag1) !important;
+  font-weight: 600;
+  font-family: Lucida Handwriting;
+}
+.cm-s-obsidian .CodeMirror-line span.cm-tag-important:not(.cm-formatting-hashtag) {
+  color:var(--tag1);
+  font-family: Lucida Handwriting;
+  font-weight: 600;
+}
+.tag[href^="#重要"] {
+  background-color: var(--tag1) !important;
+  font-weight: 600;
+  font-family: Webdings, Microsoft YaHei;
+}
+.tag[href^="#complete"] {
+  background-color: var(--tag3) !important;
+  font-weight: 600;
+  font-family:  Lucida Handwriting;
+}
+.cm-s-obsidian .CodeMirror-line span.cm-tag-complete:not(.cm-formatting-hashtag) {
+  color:var(--tag3);
+  font-family: Lucida Handwriting;
+  font-weight: 600;
+}
+.tag[href^="#完成"] {
+  background-color: var(--tag3) !important;
+  font-family: Origin, Microsoft YaHei;
+  font-weight: 600;
+}
+.tag[href^="#inprogress"] {
+  background-color: var(--tag2) !important;
+  font-weight: 600;
+  font-family: Lucida Handwriting;
+}
+.cm-s-obsidian .CodeMirror-line span.cm-tag-inprogress:not(.cm-formatting-hashtag) {
+  color:var(--tag2);
+  font-family: Lucida Handwriting;
+  font-weight: 600;
+}
+.tag[href^="#进行中"] {
+  background-color: var(--tag2) !important;
+  font-weight: 600;
+  font-family: Wingdings, Microsoft YaHei;
+}
+.tag[href^="#dailynote"] {
+  background-color: #277cdd !important;
+  font-weight: 600;
+  font-family: Lucida Handwriting;
+}
+.tag[href^="#dailynote"]::after {
+  content:' 🐈';
+  font-size: 25px;
+}
+.cm-s-obsidian .CodeMirror-line span.cm-tag-dailynote:not(.cm-formatting-hashtag) {
+  color: #277cdd;
+  font-family: Lucida Handwriting;
+  font-weight: 600;
+}
+.tag[href^="#weeklynote"] {
+  background-color: #419aff !important;
+  font-weight: 600;
+  font-family: Lucida Handwriting;
+}
+.tag[href^="#weeklynote"]::after {
+  content:' 🥑';
+  font-size: 25px;
+}
+.cm-s-obsidian .CodeMirror-line span.cm-tag-weeklynote:not(.cm-formatting-hashtag) {
+  color: #419aff;
+  font-family: Lucida Handwriting;
+  font-weight: 600;
+}
+.tag[href^="#questions"] {
+  background-color: #8555df !important;
+  font-weight: 600;
+  font-family: Lucida Handwriting;
+}
+.tag[href^="#questions"]::after {
+  content:' ❓';
+  font-size: 25px;
+}
+.cm-s-obsidian .CodeMirror-line span.cm-tag-questions:not(.cm-formatting-hashtag) {
+  color: #8555df;
+  font-family: Lucida Handwriting;
+  font-weight: 600;
+}
+.tag[href^="#ideas"] {
+  background-color: #4ec929 !important;
+  font-weight: 600;
+  font-family: Lucida Handwriting;
+}
+.tag[href^="#ideas"]::after {
+  content:' 💡';
+  font-size: 25px;
+}
+.cm-s-obsidian .CodeMirror-line span.cm-tag-ideas:not(.cm-formatting-hashtag) {
+  color: #4ec929;
+  font-family: Lucida Handwriting;
+  font-weight: 600;
+}
+
+/*colorful tags*/
+.tag:not(.token).tag:nth-child(9n+1){background-color: var(--bqys1);} /*1*/
+.tag:not(.token).tag:nth-child(9n+2){background-color: var(--bqys6);} /*6*/
+.tag:not(.token).tag:nth-child(9n+3){background-color: var(--bqys2);} /*2*/
+.tag:not(.token).tag:nth-child(9n+4){background-color: var(--bqys7);} /*7*/
+.tag:not(.token).tag:nth-child(9n+5){background-color: var(--bqys3);} /*3*/
+.tag:not(.token).tag:nth-child(9n+6){background-color: var(--bqys8);} /*8*/
+.tag:not(.token).tag:nth-child(9n+7){background-color: var(--bqys4);} /*4*/
+.tag:not(.token).tag:nth-child(9n+8){background-color: var(--bqys9);} /*9*/
+.tag:not(.token).tag:nth-child(9n){background-color: var(--bqys5);}   /*5*/
+
+/* ====== Tag Pills ======== */
+.tag:not(.token) {
+	border: none;
+	color: white;
+	padding: 1px 8px;
+	text-align: center;
+	text-decoration: none;
+	margin: 0px 0px;
+	cursor: pointer;
+	border-radius: 15px;
+}
+.tag:not(.token):hover {
+	color: white;
+	background-color: var(--ztys) !important;
+}
+
+/*tag pane*//*
+.pane-list-item-ending-flair{
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-size: 12px;
+  background-color: var(--background-secondary-alt);
+  line-height: 12px;
+  border-radius: 3px;
+  padding: 2px 4px;
+}*/
+/*=========================*/
+
 
 .markdown-preview-view {
   padding: 4px 20px 10px 28px;
@@ -301,8 +484,13 @@ code{
   border-left-color:var(--ztys);
 }
 
+/*标题后阴影*/
 .view-header-title-container:after {
 display: none;
+}
+/*标题前阴影*/
+.view-header-title-container::before {
+  display: none;
 }
 
 .workspace-leaf.mod-active .view-header-title::selection {
@@ -503,7 +691,7 @@ span.search-result-file-matched-text{
 
 /* background of search result */
 .search-result {
-  background-color: var(--background-primary);
+  background-color: var(--background-primary-alt);
   border-radius: 5px;
 }
 
@@ -517,96 +705,6 @@ span.search-result-file-matched-text{
   width: 17px;
   height: 17px;
 }
-
-/*=========================*/
-/*==========tags===========*/
-/*=========================*/
-/*colorful tags*/
-.tag:not(.token).tag:nth-child(9n+1){background-color: var(--bqys1);} /*1*/
-.tag:not(.token).tag:nth-child(9n+2){background-color: var(--bqys6);} /*6*/
-.tag:not(.token).tag:nth-child(9n+3){background-color: var(--bqys2);} /*2*/
-.tag:not(.token).tag:nth-child(9n+4){background-color: var(--bqys7);} /*7*/
-.tag:not(.token).tag:nth-child(9n+5){background-color: var(--bqys3);} /*3*/
-.tag:not(.token).tag:nth-child(9n+6){background-color: var(--bqys8);} /*8*/
-.tag:not(.token).tag:nth-child(9n+7){background-color: var(--bqys4);} /*4*/
-.tag:not(.token).tag:nth-child(9n+8){background-color: var(--bqys9);} /*9*/
-.tag:not(.token).tag:nth-child(9n){background-color: var(--bqys5);}   /*5*/
-
-/* ====== Tag Pills ======== */
-.tag:not(.token) {
-	border: none;
-	color: white;
-	padding: 1px 8px;
-	text-align: center;
-	text-decoration: none;
-	margin: 0px 0px;
-	cursor: pointer;
-	border-radius: 15px;
-}
-.tag:not(.token):hover {
-	color: white;
-	background-color: var(--ztys) !important;
-}
-
-/*special tags*/
-.tag[href^="#important"] {
-  background-color: var(--tag1) !important;
-  font-weight: 600;
-  font-family: Lucida Handwriting;
-}
-.cm-s-obsidian .CodeMirror-line span.cm-tag-important:not(.cm-formatting-hashtag) {
-  color:var(--tag1);
-  font-family: Lucida Handwriting;
-  font-weight: 600;
-}
-.tag[href^="#重要"] {
-  background-color: var(--tag1) !important;
-  font-weight: 600;
-  font-family: Webdings, Microsoft YaHei;
-}
-.tag[href^="#complete"] {
-  background-color: var(--tag3) !important;
-  font-weight: 600;
-  font-family:  Lucida Handwriting;
-}
-.cm-s-obsidian .CodeMirror-line span.cm-tag-complete:not(.cm-formatting-hashtag) {
-  color:var(--tag3);
-  font-family: Lucida Handwriting;
-  font-weight: 600;
-}
-.tag[href^="#完成"] {
-  background-color: var(--tag3) !important;
-  font-family: Origin, Microsoft YaHei;
-  font-weight: 600;
-}
-.tag[href^="#inprogress"] {
-  background-color: var(--tag2) !important;
-  font-weight: 600;
-  font-family: Lucida Handwriting;
-}
-.cm-s-obsidian .CodeMirror-line span.cm-tag-inprogress:not(.cm-formatting-hashtag) {
-  color:var(--tag2);
-  font-family: Lucida Handwriting;
-  font-weight: 600;
-}
-.tag[href^="#进行中"] {
-  background-color: var(--tag2) !important;
-  font-weight: 600;
-  font-family: Wingdings, Microsoft YaHei;
-}
-
-/*tag pane*//*
-.pane-list-item-ending-flair{
-  position: absolute;
-  top: 6px;
-  right: 10px;
-  font-size: 12px;
-  background-color: var(--background-secondary-alt);
-  line-height: 12px;
-  border-radius: 3px;
-  padding: 2px 4px;
-}*/
-/*=========================*/
 
 /*code box unfold icon*/
 .CodeMirror-foldgutter-open.CodeMirror-guttermarker-subtle::after {
@@ -660,23 +758,23 @@ span.cm-formatting-task.cm-property {color: var(--text-accent);}
 
 div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-meta,
 div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-property {
-    color: transparent;
-    position: relative;
+  color: transparent;
+  position: relative;
 }
 
 div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-meta:after,
 div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-property:after {
-    content: "☐";
-    position: absolute;
-    top: 2px;
-    left: 0px;
-    color: var(--text-normal);
-    font-size: 23px;
+  content: "☐";
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  color: var(--text-normal);
+  font-size: 23px;
 }
 
 div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-property:after {
-    content: "☑";
-    color: var(--text-accent) !important;
+  content: "☑";
+  color: var(--text-accent) !important;
 }
 .markdown-preview-view h1 {
   font-size: var(--font-size-h1); 
@@ -808,8 +906,10 @@ code:not([class*='language-']){
   font-family: Consolas;
 }
 
+/*====================================*/
 /*Add vertical lines of embedded lists*/
-/*thanks to loikein from forum*/
+/*thanks to loikein and death_au from forum and icr1001 from GitHub*/
+.cm-hmd-list-indent .cm-tab,
 ul ul,
 ol ul,
 ul ol,
@@ -817,12 +917,13 @@ ol ol {
   position: relative;
 }
 
+.cm-hmd-list-indent .cm-tab::before,
 ul ul::before,
 ol ul::before,
 ul ol::before,
 ol ol::before {
   content:'';
-  border-left: 1px solid var(--background-modifier-border);
+  border-left: 2px solid var(--background-modifier-border);
   position: absolute;
 }
 
@@ -834,6 +935,14 @@ ol ol::before {
   top: 0;
   bottom: 0;
 } 
+
+.cm-hmd-list-indent .cm-tab::before {
+  left: 3px;
+  top: -5px;
+  bottom: -4px;
+}
+/*====================================*/
+
 
 .markdown-preview-view code {
   vertical-align: auto;
@@ -933,6 +1042,10 @@ tbody>tr {
 /*table raw hover*/
 .markdown-preview-view tr:hover{
   background-color: var(--table-hover-raw-color);
+}
+
+.markdown-preview-view th:hover{
+  background-color: var(--table-hover-thead-color);
 }
 
 /*
@@ -1577,20 +1690,31 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
 
 /* images : reduce displayed size of embedded files, zoom on hover */
 .markdown-preview-view img, .markdown-preview-view video {
-  width: auto;
-  height: auto;
   object-fit: contain;
-  max-height: 300px;
-  max-width: 550px;
+  max-height: 400px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
   outline: 0px solid var(--text-accent);
 }
+
 .markdown-preview-view img:hover , .markdown-preview-view video:hover {
   width: 100%;
   height:100%;
   max-width: min(100%, 80vw);
   max-height: min(100%, 80vh);
-  outline: none;
   cursor: zoom-in;
+}
+
+/* Image zoom  */
+.view-content img {
+  cursor:zoom-in;
+}
+.view-content img:active {
+  cursor:zoom-out;
+  transform: scale(1.5);
+  transition: transform 0.3s ease-in-out 0s;
 }
 
 /*file explorer columns view : slightly buggy ----*/
@@ -1625,12 +1749,16 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
 
 /*an active line highlight in vim normal mode */
 .cm-fat-cursor .CodeMirror-activeline .CodeMirror-linebackground{
-  background-color: rgba(70, 142, 235, 0.20) !important;
+  background-color: #468eeb33 !important;
 }
 
 /*if you want the highlight to present in both normal and insert mode of vim*/
-.CodeMirror-activeline .CodeMirror-linebackground{
-  background-color: rgba(70, 142, 235, 0.20) !important;
+.theme-light .CodeMirror-activeline .CodeMirror-linebackground{
+  background-color: #468eeb33 !important;
+}
+
+.theme-dark .CodeMirror-activeline .CodeMirror-linebackground{
+  background-color: #468eeb4b !important;
 }
 
 /*----file explorer smaller fonts & line height----*/
@@ -1775,12 +1903,8 @@ div.collapsible-item-collapse.collapse-icon{
   transform: translateX(-5px) translateY(8.5px) rotate(-90deg);
 }
 
-::-webkit-scrollbar{
-  background-color: transparent;
-}
-
 /*setting buttons*/
-.modal.mod-settings button:not(.mod-cta):hover{
+.modal button:not(.mod-cta):not(.mod-warning):hover{
   background-color: var(--interactive-accent-hover);
   color: #fdfdfd;
 }
@@ -2641,16 +2765,29 @@ g>circle{
   stroke: #000000 !important;
 }
 
-/*==============*/
+/*===========*/
 /*for plugins*/
+/*===========*/
+
+/*======================================*/
 /*better appearance for Andy mode plugin*/
+/*======================================*/
 /* scrollbar*/
+::-webkit-scrollbar:vertical{
+  background-color: transparent;
+  width: 8px;
+}
+
 .workspace-split::-webkit-scrollbar:vertical {
   display: none;
 }
   
 ::-webkit-scrollbar-thumb:horizontal {
   background-color: var(--ztys);
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 8px;
 }
 
 body.plugin-sliding-panes .workspace-split.mod-vertical > .workspace-leaf {
@@ -2670,46 +2807,46 @@ body.plugin-sliding-panes .view-header-title{
 }
 
 body.plugin-sliding-panes .view-header-icon{
-  margin-left: 0px!important;
-  padding-left: 1.5px !important;
+  margin-left: -1px!important;
 }
 
 body.plugin-sliding-panes .mod-root .workspace-leaf.mod-active .view-header-title{
   color: var(--h4ys);
   font-family: var(--font-family-title);
+  padding-top: 4px;
 }
 
 body.plugin-sliding-panes .view-actions{
-  margin-left: -2.5px;
+  margin-left: -2px;
 }
 
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
-  border-right: 1px solid var(--background-secondary-alt);
-  border-left: 1px solid var(--background-secondary-alt);
+  border-right: 1px solid var(--background-secondary-alt) !important;
+  border-left: 1px solid var(--background-secondary-alt) !important;
 }
 
-/*====*/
+/*==========================*/
 /* obsidian-calendar-plugin */
-/* https://github.com/liamcain/obsidian-calendar-plugin */
+/*==========================*/
 #calendar-container {
-  --color-background-heading: transparent;
-  --color-background-weeknum: transparent;
-  --color-background-day: transparent;
+--color-background-heading: transparent;
+--color-background-weeknum: transparent;
+--color-background-day: transparent;
   
-  --color-dot: var(--text-accent);
-  --color-arrow: currentColor;
-  --color-button: var(--text-muted);
-  --color-text-weeknum: var(--green);
+--color-dot: var(--text-accent);
+--color-arrow: currentColor;
+--color-button: var(--text-muted);
+ --color-text-weeknum: var(--green);
   
-  --color-text-title: var(--text-normal);
-  --color-text-heading: var(--text-normal);
-  --color-text-day: var(--text-normal);
-  --color-text-today: var(--text-accent);
+--color-text-title: var(--text-normal);
+--color-text-heading: var(--text-normal);
+--color-text-day: var(--text-normal);
+--color-text-today: var(--text-accent);
   
-  /*===*/
-  padding: 0px 5px 0px 8px;
-  margin: -21px -8px 0px -8px;
-  line-height: 5px;
+/*===*/
+padding: 0px 5px 0px 8px;
+margin: -21px -8px 0px -8px;
+line-height: 5px;
 }
   
 /*表格调整*/
@@ -2760,35 +2897,35 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
   color: var(--ztys);
 }
   
-/*今日笔记时红点去除*/
+/*今日笔记时红点去除 today's dot*/
 #calendar-container .dot{
   stroke: transparent;
 }
   
-/*点调整*/
+/*点调整 dot*/
 #calendar-container .dot-container{
   margin-top: -3px;
   margin-bottom: -2px;
 }
   
-/*月份调整*/
+/*月份调整 month*/
 #calendar-container .month{
   font-size: 20px;
   line-height: 20px !important;
 }
   
-/*年份调整*/
+/*年份调整 year*/
 #calendar-container .year{
   font-size: 20px;
   line-height: 20px !important;
 }
   
-/*星期数*/
+/*星期数 week*/
 #calendar-container .week-num{
   border-right: 1.5px solid var(--green) !important;
 }
 
-/*星期数悬停*/
+/*星期数悬停 week hover*/
 #calendar-container .week-num:hover{
   background-color: var(--calendar-week-hover) !important;
 }
@@ -2804,12 +2941,13 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
   display: none !important;
 }*/
 
-/*=====*/
+/*===========================*/
 /*copy button for code blocks*/
+/*===========================*/
 .copy-code-button {
   color: var(--background-primary) !important;
   background-color: var(--text-faint);
-  border-radius: 0px 1px 1px 0px !important;
+  border-radius: 0px 5px 5px 0px !important;
   font-weight: 900 !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
@@ -2826,8 +2964,9 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
   color: var(--accent-strong) !important;
 }
 
-/*========*/
+/*=====================================*/
 /*frontmatter specification 同义词等声明*/
+/*=====================================*/
 pre.frontmatter.language-yaml:before{
   content: "Specification";
   font-family: Lucida Handwriting;
@@ -2836,12 +2975,91 @@ pre.frontmatter.language-yaml:before{
   color: var(--color-specification);
 }
 
-pre.frontmatter.language-yaml{
-  padding-right: 35px;
+.frontmatter-container{
+  margin: 0;
 }
 
-pre.frontmatter.language-yaml .token.string {
-  border: 1px solid;
-  padding: 1px 8px;
-  border-radius: 15px;
+/*适配copy code插件*/
+.markdown-preview-view pre{
+  padding: 6px 22px;
 }
+
+/*====================*/
+/*daily planner plugin*/
+/*====================*/
+.day-planner-status-bar-text{
+  color: var(--text-accent);
+  font-weight: 600;
+}
+
+.status-bar-item > * {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.progress-pie.day-planner {
+  background-color: var(--day-planner-pie);
+  float: left;
+  height: 20px;
+  margin: 0.3px 10px 0.3px 0;
+  width: 20px;
+  display: none;
+}
+
+.aside__line{
+  background: var(--day-planner-dot) !important;
+}
+
+.ei_Dot {
+  background-color: var(--day-planner-line) !important;
+}
+
+#now-line, .timeline-time {
+  background-color: var(--day-planner-timeline) !important;
+}
+
+.event_item:hover{
+  background-color: var(--day-planner-item-hover) !important;
+  box-shadow:0px 0px 52px -18px rgba(0, 0, 0, 0.75)
+}
+
+.event_item_color1 {
+  background-color: var(--event-item-color1) !important;
+}
+
+.event_item_color2 {
+  background-color: var(--event-item-color2) !important;
+}
+
+.event_item_color3 {
+  background-color: var(--event-item-color3) !important;
+}
+
+.event_item_color4 {
+  background-color: var(--event-item-color4) !important;
+}
+
+.event_item_color5 {
+  background-color: var(--event-item-color5) !important;
+}
+
+.event_item_color6 {
+  background-color: var(--event-item-color6) !important;
+}
+
+.event_item_color7 {
+  background-color: var(--event-item-color7) !important;
+}
+
+.event_item_color8 {
+  background-color: var(--event-item-color8) !important;
+}
+
+.event_item_color9 {
+  background-color: var(--event-item-color9) !important;
+}
+
+.event_item_color10 {
+  background-color: var(--event-item-color10)!important;
+}
+
