@@ -2824,7 +2824,7 @@ body.plugin-sliding-panes .mod-root .workspace-leaf.mod-active .view-header-titl
 }
 
 body.plugin-sliding-panes .view-actions{
-  margin-left: -2px;
+  margin-left: 0px;
 }
 
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
