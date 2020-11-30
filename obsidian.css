@@ -189,7 +189,7 @@
   --accent-strong: #000000;
   --text-error: #e75545;
   --text-error-hover: #f86959;
-  --text-highlight-bg: #ffaa00e0;
+  --text-highlight-bg: #ffaa0081;
   --text-selection: #ffe23d48;
   --text-on-accent: #f2f2f2;
   --interactive-normal: #eaeaeb;
@@ -200,7 +200,7 @@
   --panel-border-color: #dbdbdc;
   --search-text: #000000;
   --folder-title: #000000;
-  --mark-highlight: #e6c2755e;  
+  --mark-highlight: #ffaa0081;  
 
   --gray-1: #383a42;
   --gray-2: #383a42;
