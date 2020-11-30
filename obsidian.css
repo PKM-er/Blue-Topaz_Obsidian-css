@@ -2,7 +2,7 @@
 /*Blue Topaz for Obsidian v0.9.19, [20201130] modified by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 :root{
-  --font-size-obsidian-titlebar:             15px;
+  --font-size-obsidian-titlebar:             12px;
   --font-size-vault-name:                    14px;/*左侧库名字体大小*/
   --font-size-file-header-title:             14px;/*文件抬头标题，只在非Andy mode plugin时生效*/
   --font-size-file-header-title-andy-plugin: 16px;/*文件抬头标题for Andy mode plugin*/
@@ -615,7 +615,6 @@ input.search-input{
   font-size: var( --font-size-obsidian-titlebar);
   text-align: center;
   letter-spacing: 0.05em;
-  line-height: 20px;
   opacity: 1;
   color: var(--text-accent);
   position: relative;
