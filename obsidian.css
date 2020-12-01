@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.9.19。[20201130] flying fly flies修改，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.9.19, [20201130] modified by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.9.19。[20201201] flying fly flies修改，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.9.19, [20201201] modified by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 :root{
   --font-size-obsidian-titlebar:             12px;
@@ -146,7 +146,9 @@
   --table-hover-thead-color: #6fa084;
 
   /*calendar*/
-  --calendar-week-hover: #41c72631;
+  --calendar-week-color: #a2df94;
+  --calendar-week-hover: #61815c;
+  --calendar-week-background-color: #4a5842;
 
   /*day planner*/
   --day-planner-pie: #f19c1c;
@@ -268,7 +270,9 @@
   --table-hover-thead-color: #cde8ff;
 
   /*calendar*/
-  --calendar-week-hover: #57b8444f;
+  --calendar-week-color: #48b432;
+  --calendar-week-hover: #e9ffe3;
+  --calendar-week-background-color: #d6e6bf;
 
   /*day planner*/
   --day-planner-pie: #eca95c;
@@ -2832,6 +2836,7 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
   border-left: 1px solid var(--background-secondary-alt) !important;
 }
 
+
 /*==========================*/
 /* obsidian-calendar-plugin */
 /*==========================*/
@@ -2839,11 +2844,13 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
 --color-background-heading: transparent;
 --color-background-weeknum: transparent;
 --color-background-day: transparent;
+--color-background-weekend: transparent;
+
   
 --color-dot: var(--text-accent);
 --color-arrow: currentColor;
 --color-button: var(--text-muted);
- --color-text-weeknum: var(--green);
+ --color-text-weeknum: var(--calendar-week-color);
   
 --color-text-title: var(--text-normal);
 --color-text-heading: var(--text-normal);
@@ -2858,18 +2865,22 @@ line-height: 5px;
   
 /*表格调整*/
 /*星期*/
-#calendar-container tr th {
+#calendar-container th {
   padding: 6px 0;
   border-radius: 0px !important;
   background-color: var(--table-thead-background-color) !important;
 }
 
+#calendar-container .week-num, #calendar-container .day {
+  border-radius: 0px !important;
+}
+
 /*天*/
-#calendar-container tr td {
+#calendar-container td {
   width:12.5%;
   border-right:2px solid var(--background-secondary-alt);
-  padding: 0px 0px 4px 0px !important;
-  line-height: 25px;
+  padding: 0px 0px 0px 0px !important;
+  line-height: 22px;
   border-radius: 0px !important;
 }
 
@@ -2877,11 +2888,11 @@ line-height: 5px;
   border:2px solid var(--background-secondary-alt);
 }
 
-#calendar-container td:not(:empty):hover{
+#calendar-container .day:not(:empty):hover{
   background-color: var(--table-hover-color);
 }
 
-#calendar-container table{
+#calendar-container .calendar{
   margin: -8px 0;
 }
 
@@ -2911,8 +2922,8 @@ line-height: 5px;
   
 /*点调整 dot*/
 #calendar-container .dot-container{
-  margin-top: -3px;
-  margin-bottom: -2px;
+  margin-top: -2px;
+  margin-bottom: -1px;
 }
   
 /*月份调整 month*/
@@ -2929,7 +2940,9 @@ line-height: 5px;
   
 /*星期数 week*/
 #calendar-container .week-num{
-  border-right: 1.5px solid var(--green) !important;
+  /*border-right: 2px solid var(--green) !important;*/
+  background-color: var(--calendar-week-background-color);
+  font-weight: 600;
 }
 
 /*星期数悬停 week hover*/
@@ -3069,4 +3082,3 @@ pre.frontmatter.language-yaml:before{
 .event_item_color10 {
   background-color: var(--event-item-color10)!important;
 }
-
