@@ -2021,7 +2021,8 @@ div:not(.CodeMirror-activeline)>.HyperMD-quote {
 
 /*change collapse icon position in left side*/
 .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn{
-  margin-top: -10px;
+  margin-top: 0px;
+  padding: 7px 6px 2px 6px;
 }
 
 .workspace-ribbon.is-collapsed .workspace-ribbon-collapse-btn:not(:hover){
