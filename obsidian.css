@@ -650,10 +650,16 @@ input.search-input{
 }
 */
 
+/*左侧边栏按钮 icon buttons in left side*/
+.side-dock-ribbon-action{
+  padding: 6px 0 2px 0;
+}
+
 .side-dock-ribbon-tab:hover, .side-dock-ribbon-action:hover {
   color: var(--ztys);
 }
 
+/*目录 folders*/
 .nav-folder.mod-root > .nav-folder-title {
   padding-left: 0px;
   font-size: var(--font-size-vault-name);
@@ -722,7 +728,9 @@ span.search-result-file-matched-text{
   color: var(--text-accent);
 }
 
-/*checkbox*/
+/*==========================*/
+/*=========checkbox=========*/
+/*==========================*/
 .markdown-preview-view .task-list-item-checkbox {
   -webkit-appearance: none;
   box-sizing: border-box;
@@ -787,6 +795,10 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
   content: "☑";
   color: var(--text-accent) !important;
 }
+
+/*===============================*/
+/*=========header titles=========*/
+/*===============================*/
 .markdown-preview-view h1 {
   font-size: var(--font-size-h1); 
   font-weight:600;
