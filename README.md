@@ -17,6 +17,7 @@ A blue theme for **Obsidian**. Blue Topaz is not a precious gem, like obsidianðŸ
 3. Copy the obsidian.css to your vault directory (or replace, if there is an existing file).
 
 ## BTY
+```css
 /* Blockquote header */
 .markdown-preview-view blockquote {
    position: relative; /* for pseudos */
@@ -63,7 +64,7 @@ A blue theme for **Obsidian**. Blue Topaz is not a precious gem, like obsidianðŸ
 .markdown-preview-view blockquote :first-letter {
  margin-left:2em;
 }
-
+```
 ![](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/blockquote.jpg?raw=true)
 
 ---
