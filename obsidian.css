@@ -3242,7 +3242,7 @@ pre.frontmatter.language-yaml:before{
 }
 
 /*====================*/
-/*daily planner plugin*/
+/*day planner plugin*/
 /*====================*/
 .day-planner-status-bar-text{
   color: var(--text-accent);
@@ -3265,10 +3265,26 @@ pre.frontmatter.language-yaml:before{
 
 .aside__line{
   background: var(--day-planner-dot) !important;
+  left: 35px !important;
 }
 
 .ei_Dot {
   background-color: var(--day-planner-line) !important;
+  left: 28px !important;
+}
+
+.ei_Title {
+  font-size: 15px !important;
+  margin-left: -10px !important;
+}
+
+.ei_Copy {
+  font-size: 15px !important;
+  margin-left: 5px !important;
+}
+
+.event_item {
+  overflow: hidden !important;
 }
 
 #now-line, .timeline-time {
@@ -3277,7 +3293,7 @@ pre.frontmatter.language-yaml:before{
 
 .event_item:hover{
   background-color: var(--day-planner-item-hover) !important;
-  box-shadow:0px 0px 52px -18px rgba(0, 0, 0, 0.75)
+  box-shadow:0px 0px 52px -18px rgba(0, 0, 0, 0.75);
 }
 
 .event_item_color1 {
