@@ -3134,9 +3134,11 @@ line-height: 5px;
 /*“Today”*/
 #calendar-container .reset-button{
   font-size: 14px !important;
-  margin: 0px 0px 0px 0px;
-  padding: 6px 0px 0px 0px;
+  margin: 0;
+  padding: 0px 0px 0px 0px;
   cursor: pointer;
+  line-height: 17px;
+  text-align: center;
 }
   
 /*悬停Today*/
