@@ -98,11 +98,9 @@
   --ztysop: #3187d388;
   --color-specification: #3ce252;
   --list-ul-block-color: #86561f;
-  --list-ul-block-color-shadow: #86561f;
   --list-ul-disc-color: #db6019;
   --list-ul-hover: #8a5e25;
   --list-ol-block-color: #0d5c8a;
-  --list-ol-block-color-shadow: #0d5c8a;
   --list-ol-number-color: #95afc4;
   --list-ol-hover: #2c66a8;
 
@@ -258,13 +256,11 @@
   --ztys:  #2f92e4;
   --ztysop:#2f92e4a2;
   --color-specification: #0084ff;
-  --list-ul-block-color: #929292;
-  --list-ul-block-color-shadow: #929292;
+  --list-ul-block-color: #b9751b;
   --list-ul-disc-color: #ff7300;
   --list-ul-hover: #dd922f;
-  --list-ol-block-color: #929292;
-  --list-ol-block-color-shadow: #929292;
-  --list-ol-number-color: #adadad;
+  --list-ol-block-color: #3573a5;
+  --list-ol-number-color: #a3bee0;
   --list-ol-hover: #5c95e0;
  
   /*tags*/
@@ -1044,38 +1040,28 @@ ol ol ul {
   list-style:none;
 }
 
-.theme-dark ul > li:not(.task-list-item) {
+ul > li:not(.task-list-item) {
   margin-left: -10px;
   position: relative;
   padding-left: 6px;
   list-style-position: inside;
-  border-left: 2px solid var(--list-ul-block-color);
-  box-shadow: 0 0 0 1px var(--list-ul-block-color-shadow);
   border-radius: 10px;
   width: fit-content;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   padding-right: 6px;
   word-wrap:break-word;
   word-break:break-word;
-  white-space: pre-wrap;
   transition:all 300ms ease-in-out;
 }
 
+.theme-dark ul > li:not(.task-list-item) {
+  border-left: 2px solid var(--list-ul-block-color);
+  box-shadow: 0 0 0 1px var(--list-ul-block-color);
+}
+
 .theme-light ul > li:not(.task-list-item) {
-  margin-left: -10px;
-  position: relative;
-  padding-left: 6px;
-  list-style-position: inside;
   border-left: 1px solid var(--list-ul-block-color);
-  box-shadow: 0 0 0 0.5px var(--list-ul-block-color-shadow);
-  border-radius: 10px;
-  width: fit-content;
-  margin-bottom: 8px;
-  padding-right: 6px;
-  word-wrap:break-word;
-  word-break:break-word;
-  white-space: pre-wrap;
-  transition:all 300ms ease-in-out;
+  box-shadow: 0 0 0 0.5px var(--list-ul-block-color);
 }
 
 ul > li:not(.task-list-item):hover {
@@ -1100,40 +1086,29 @@ ol {
   counter-reset: cupcake;
 }
 
-.theme-dark ol > li {
+ol > li {
   position: relative;
   margin-left: -10px;
   padding-left: 6px;
   list-style-position: inside;
-  border-left: 2px solid var(--list-ol-block-color);
-  box-shadow: 0 0 0 1px var(--list-ol-block-color-shadow);
   border-radius: 10px;
   width: fit-content;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   padding-right: 6px;
   counter-increment: cupcake;
   word-wrap:break-word;
   word-break:break-word;
-  white-space: pre-wrap;
   transition:all 300ms ease-in-out;
 } 
 
+.theme-dark ol > li {
+  border-left: 2px solid var(--list-ol-block-color);
+  box-shadow: 0 0 0 1px var(--list-ol-block-color);
+} 
+
 .theme-light ol > li {
-  position: relative;
-  margin-left: -10px;
-  padding-left: 6px;
-  list-style-position: inside;
   border-left: 1px solid var(--list-ol-block-color);
-  box-shadow: 0 0 0 0.5px var(--list-ol-block-color-shadow);
-  border-radius: 10px;
-  width: fit-content;
-  margin-bottom: 8px;
-  padding-right: 6px;
-  counter-increment: cupcake;
-  word-wrap:break-word;
-  word-break:break-word;
-  white-space: pre-wrap;
-  transition:all 300ms ease-in-out;
+  box-shadow: 0 0 0 0.5px var(--list-ol-block-color);
 } 
 
 ol > li:hover {
