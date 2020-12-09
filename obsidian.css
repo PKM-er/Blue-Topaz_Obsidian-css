@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.9.21。[20201208] flying fly flies修改，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.9.21, [20201208] modified by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.9.22。[20201209] flying fly flies修改，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.9.22, [20201209] modified by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 :root{
   --font-size-obsidian-titlebar:             12px;
@@ -62,6 +62,7 @@
   --text-muted: #8b8b8b;  
   --text-faint: rgb(121, 121, 121);
   --accent-strong: #ffffff;
+  /*--text-em-color: #ff9b9b;*/
   --text-error: #e16d76;
   --text-error-hover: #c9626a;
   --text-highlight-bg: #bb7900d2;
@@ -96,6 +97,12 @@
   --ztys:  #3187d3;
   --ztysop: #3187d388;
   --color-specification: #3ce252;
+  --list-ul-block-color: #86561f;
+  --list-ul-block-color-shadow: #8b5b28;
+  --list-ul-disc-color: #db6019;
+  --list-ol-block-color: #0d5c8a;
+  --list-ol-block-color-shadow: #285786;
+  --list-ol-number-color: #95afc4;
 
   /*tags*/
   --tag1: #cf0000;
@@ -249,6 +256,12 @@
   --ztys:  #2f92e4;
   --ztysop:#2f92e4a2;
   --color-specification: #0084ff;
+  --list-ul-block-color: #c7c7c7;
+  --list-ul-block-color-shadow: #cecece;
+  --list-ul-disc-color: #ff7300;
+  --list-ol-block-color: #929292;
+  --list-ol-block-color-shadow: #818181;
+  --list-ol-number-color: #adadad;
  
   /*tags*/
   --tag1: #ff0000;
@@ -981,16 +994,17 @@ ol ol {
   position: relative;
 }
 
-.cm-hmd-list-indent .cm-tab::before,
+.cm-hmd-list-indent .cm-tab::before/*,
 ul ul::before,
 ol ul::before,
 ul ol::before,
-ol ol::before {
+ol ol::before*/ {
   content:'';
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;
 }
 
+/*
 ul ul::before,
 ol ul::before,
 ul ol::before,
@@ -998,13 +1012,85 @@ ol ol::before {
   left: -13px;
   top: 0;
   bottom: 0;
-} 
+} */
 
 .cm-hmd-list-indent .cm-tab::before {
   left: 3px;
   top: -5px;
   bottom: -4px;
 }
+
+
+/* adapted from 2.15 Lista ul*/
+/* thanks to Gabroel from Obsidian discord group */
+/* https://discord.com/channels/686053708261228577/702656734631821413/784922140465692712 */
+li > p:not(.task-list-item) {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ul ul, 
+ol ul, 
+ul ul ul,
+ul ol ul,
+ol ul ul, 
+ol ol ul {
+  list-style:none;
+}
+
+ul > li:not(.task-list-item) {
+  margin-left: 0px;
+  position: relative;
+  padding-left: 10px;
+  list-style-position: inside;
+  border-left: 2px solid var(--list-ul-block-color);
+  box-shadow: 0 0 0 1px var(--list-ul-block-color-shadow);
+  border-radius: 10px;
+  width: fit-content;
+  margin-bottom: 8px;
+  padding-right: 5px;
+}
+
+ul > li:not(.task-list-item)::before {
+  content: '•';
+  color: var(--list-ul-disc-color);
+  display: inline-block;
+  width: 13px;
+  position: relative;
+  text-shadow: 0 0 0.2em var(--list-ul-disc-color);
+}
+
+ol {
+  position: relative;
+  padding-inline-start: 1em;
+  margin-left: 25px;
+  list-style: none;  
+  counter-reset: cupcake;
+}
+
+ol > li {
+  position: relative;
+  padding-left: 10px;
+  list-style-position: inside;
+  border-left: 2px solid var(--list-ol-block-color);
+  box-shadow: 0 0 0 1px var(--list-ol-block-color-shadow);
+  border-radius: 10px;
+  width: fit-content;
+  margin-bottom: 8px;
+  padding-right: 5px;
+  counter-increment: cupcake;
+} 
+
+ol > li::before {
+  content: counters(cupcake, '.') '. ';
+  font-weight: bold;
+  color: var(--list-ol-number-color);
+  display: inline-block;
+  white-space: pre;
+}
+
 /*====================================*/
 
 
