@@ -2040,10 +2040,11 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
 }
 
 /*file explorer columns view : slightly buggy ----*/
-.nav-folder-children {
+/*.nav-folder-children {
   column-width:150px;
-  /*column-rule: 1px solid var(--text-accent);*/
+  column-rule: 1px solid var(--text-accent);
 }
+*/
 
 /* file explorer :Wrap long nav text and some paddings */
 .nav-file-title,
