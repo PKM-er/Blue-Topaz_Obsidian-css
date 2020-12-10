@@ -7,14 +7,107 @@ A blue theme for **Obsidian**. Blue Topaz is not a precious gem, like obsidian�
 # Preview
 ![](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/preview_Blue%20Topaz.png)
 
-# Installation
-1. 下载css文件。
-2. 在Obsidian中开启自定义主题。
-3. 把obsidian.css放到vault文件夹中（如果已经存在obsidian.css，覆盖原文件）。
----
-1. Download css file.
-2. Enable custom css in Obsidian.
-3. Copy the obsidian.css to your vault directory (or replace, if there is an existing file).
+```
+===========================    TIPS   ===============================
+====================================================================
+===========主题中的一些特别样式 Special parts in this theme===========
+=====================================================================
+```
+```
+==========================
+=====标签 Special tags=====
+==========================
+#dailynote
+#weeklynote
+#important
+#重要
+#inprogress
+#进行中
+#complete
+#完成
+#questions
+#ideas
+```
+```
+===========================
+=====笔记框 Note blocks=====
+===========================
+
+----------------------------------------------------------------------
+---------------不同颜色背景 Colourful note backgrounds-----------------
+----------------------------------------------------------------------
+语法：```note-xxx-bg 或```note-xxx-background
+---------------------------------------------
+
+```note-orange-bg
+
+```note-yellow-bg
+
+```note-green-bg
+
+```note-blue-bg
+
+```note-purple-bg
+
+```note-pink-bg
+
+```note-red-bg
+
+```note-gray-bg
+
+```note-brown-bg
+
+-----------------------------------------------------
+----------不同笔记颜色 Colourful note texts------------
+-----------------------------------------------------
+
+```note-orange
+
+```note-yellow
+
+```note-green
+
+```note-blue
+
+```note-purple
+
+```note-pink
+
+```note-red
+
+```note-gray
+
+```note-brown
+
+-----------------------------------------------------------
+------------记忆笔记框 Recall/cloze note blocks-------------
+-----------------------------------------------------------
+可鼠标点击显示笔记内容 To show text by clicking
+-----------------------------------------------------------
+
+```note-cloze
+
+--------------------------------------------------------
+------------重要笔记框 important note blocks-------------
+--------------------------------------------------------
+有笔记外框 Different block style
+--------------------------------------------------------
+
+```note-imp
+
+```
+
+```
+==========================
+========图片 Images=======
+==========================
+
+图片有两段放大：悬停(100%)，点击(110%)
+Image can be zoomed in by hovering (100%) and clicking (110%).
+```
+
+
+
 
 ## BTY
 ```css
