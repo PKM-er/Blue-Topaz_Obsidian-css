@@ -1425,7 +1425,7 @@ tbody>tr {
   padding-bottom: var(--bar-vertical-padding) !important;
 }
 
-.nav-file.is-active {
+.nav-file-title.is-active {
   --background-secondary-alt: var(--interactive-accent);
   --text-normal: #ffffff;
 }
