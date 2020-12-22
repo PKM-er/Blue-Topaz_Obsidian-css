@@ -1071,7 +1071,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
 .markdown-source-view.is-readable-line-width .CodeMirror,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   max-width: 850px !important;
-  line-height: 1.6;
+  line-height: 30px;
   font-family: var(--font-family-major);
 }
 
