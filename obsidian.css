@@ -1348,10 +1348,17 @@ ol ol::before {
 
 .cm-hmd-list-indent .cm-tab::before {
   left: 3px;
-  top: -5px;
-  bottom: -4px;
+  top: -15px;
+  height: 250%;
 }
 
+pre.HyperMD-list-line::before {
+  content:'';
+  border-left: 2px solid var(--background-modifier-border);
+  left: 7px;
+  top: 28px;
+  height: 58%;
+}
 
 /* adapted from 2.15 Lista ul*/
 /* thanks to Gabroel from Obsidian discord group */
