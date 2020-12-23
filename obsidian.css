@@ -829,6 +829,11 @@ ol > li::before {
 }*/
 /*=========================*/
 
+/*thanks to Klass from Obsidian Members Group on discord*/
+/* Selection highlight */
+.suggestion-item.is-selected {
+  background-color: var(--text-accent);
+}
 
 .markdown-preview-view {
   padding: 4px 20px 10px 28px;
