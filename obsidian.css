@@ -285,10 +285,10 @@ Image can be zoomed in by hovering (100%) and clicking (110%).
   --mermaid-seq-dia-color: #1371be;
 
   /*table*/
-  --table-background-color: #4d4d4d;
+  --table-background-color: #646464;
   --table-background-color-odd: transparent;
   --table-border-color: #c0c0c0;
-  --table-thead-background-color: #4e6a85;
+  --table-thead-background-color: #4d7ca8;
   --table-hover-raw-color: #3187d33d;
   --table-hover-color: #3187d388;
   --table-hover-thead-color: #6fa084;
