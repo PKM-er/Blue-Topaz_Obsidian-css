@@ -2563,10 +2563,6 @@ div:not(.CodeMirror-activeline)>.HyperMD-quote {
 /* from Notation by death_au  https://github.com/deathau/Notation-for-Obsidian */
 /* Original idea from: https://gist.github.com/mklepaczewski/54e451f09994b9d450de81c8baaf8aa4 */
 /* but also with simpler classes so you can use `<span class='colour'>` as well */
-.app-container .markdown-preview-view pre[class*="language-note-"] {
-
-}
-
 .app-container .markdown-preview-view pre[class*="language-note-"] code[class*="language-note-"] {
   white-space: pre-wrap;
 }
