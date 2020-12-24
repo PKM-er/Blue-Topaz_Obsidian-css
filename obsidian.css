@@ -3823,3 +3823,256 @@ pre.frontmatter.language-yaml:before{
 .event_item_color10 {
   background-color: var(--event-item-color10)!important;
 }
+
+
+/* =========================================*/
+/* =========tapes pins and stickies=========*/
+/* =========================================*/
+/* thanks to death_au, Gabroel and Lithou from Obsidian Members Group on Discord */
+div[src$="#tape"]::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 30px;
+  position: relative;
+  top: 10px;
+  margin: auto;
+  background-color: var(--tape-color); /*here you can chosse the scotch tape background*/
+  -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+  z-index: 10;
+  clip-path: polygon(50% 0%, 100% 0%, 
+  98% 10%, 100% 20%, 98% 30%, 100% 40%, 98% 50%, 100% 60%, 98% 70%, 100% 80%, 98% 90%,100% 100%,
+  0% 100%, 2% 90%, 0% 80%, 2% 70%, 0% 60%, 2% 50%, 0% 40%, 2% 30%, 0% 20%, 2% 10%, 0% 0%);
+}
+
+div[src$="#tape"] {
+  float: right; /*here you can choose if image will float to the right or left*/
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(2deg);
+  width: 400px; /*you can change the image max width here*/
+}
+
+div[src$="#tape"]:active {
+  transform: scale(2);
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  float: none;
+  z-index: 100;
+  padding: 30px;
+}
+
+/* Push Pin */
+div[src$="#pin"] {
+  position: relative;
+  float: right;
+  width: 400px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  margin: auto;
+  z-index: 100;
+}
+
+div[src$="#pin"]::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #4588cc;
+  top: -3%;
+  left: 50%;
+  border: solid #336699 8px;
+  border-radius: 50%;
+  box-shadow: #274d74 -3px 3px 1px;
+}
+
+div[src$="#pin"]:active {
+  transform: scale(2);
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  float: none;
+  z-index: 100;
+  padding: 20px;
+}
+
+.stickies {
+  text-align: center;
+  transition: width 2s;
+  padding: 5px;
+  margin: 18px;
+  position: relative;
+  float: right;
+  right: -30px;
+  width: 30%;
+  background-color: var(--stickies-color-1);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(2deg);
+  transition: all 2s ease;
+  z-index: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 0px;
+  color: black;
+}
+
+.stickies::after {
+  content: "";
+  left: -1%;
+  top: -10px;
+  height: 40px;
+  width: 15px;
+  border-radius: 10px;
+  border: 3px solid #979797;
+  display: inline-block;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(-11deg);
+  z-index: 11;
+}
+
+.stickies::before {
+  width: 11px;
+  height: 20px;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: -1.3%;
+  top: -2px;
+  border-radius: 10px;
+  border: 3px solid #979797;
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  z-index: 10;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(-11deg);
+}
+
+.stickies2 {
+  position: relative;
+  float: left;
+  box-shadow: 0 10px 10px 2px #9191912d;
+  width: 30%;
+  background-color: var(--stickies-color-2);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(-2deg);
+  transition: all 2s ease;
+  z-index: 1;
+  padding: 20px;
+  margin: 10px;
+  color: black;
+}
+
+.stickies2::after {
+  content: "";
+  display: block;
+  height: 32px;
+  width: 2px;
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  z-index: 1;
+  border-radius: 50%;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border: 1px;
+  box-shadow: inset -10px -10px 10px #f0b7a4, inset 3px 3px 5px;
+}
+
+div[alt="-sbq"] {
+  position: relative;
+  right: -5px;
+  float: right;
+  box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
+  width: 30%;
+  background: #edec92;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(2deg);
+  transition: all 1s ease;
+  z-index: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+div[alt="-sbq"]::after {
+  content: "";
+  display: block;
+  height: 32px;
+  width: 2px;
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  z-index: 1;
+  border-radius: 50%;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border: 1px;
+  box-shadow: inset -10px -10px 10px #f0b7a4, inset 3px 3px 5px;
+}
+
+
+div[alt="-sbq"]:hover {
+  border-bottom-left-radius: 225px 15px;
+  border-bottom-right-radius: 15px 255px;
+  border-top-left-radius: 15px 225px;
+  border-top-right-radius: 255px 15px;
+  box-shadow: 5px 5px rgba(0,0,0,.25);
+  }
+
+div[alt="-sbq"]:active {
+  transform: scale(1.5);
+  z-index: 100;
+}
+
+div[alt="-sbq"] div.markdown-embed-link {
+  visibility: hidden;
+}
+
+div[alt="-sbq"] div.markdown-embed {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+div[alt="-sbq"] .markdown-preview-view {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  overflow: hidden;
+}
+
+div[alt="-sbq"] .markdown-preview-view p {
+  letter-spacing: -1px;
+  word-wrap: break-word;
+  font-size: 18px;
+  font-family: Input Sans;
+  text-align: left;
+  line-height: 1;
+  color: black;
+}
