@@ -107,9 +107,206 @@ Image can be zoomed in by hovering (100%) and clicking (110%).
 ```
 
 
+=========================
+=======列表 list=========
+=========================
+1. If you just don’t want the box
+You should copy the following code to a new .txt file with any name you like, 
+then rename the .txt to .css and put the .css file to “vault/.obsidian/snippets” folder, 
+and activate the css snippet in Obsidian Setting–> Appearance --> CSS snippets.
+
+```css
+ul > li:not(.task-list-item), 
+ol > li {
+  box-shadow: none !important;
+} 
+```
+
+------------------------------------------------------------
+2. If you can live with the box appearing when the mouse hovers
+You should copy this:
+
+```css
+ul > li:not(.task-list-item):not(:hover), 
+ol > li:not(:hover) {
+  box-shadow: none;
+} 
+```
+
+------------------------------------------------------------
+3. If you just want the previous style (without automatic counting like “1.1.2”)
+You should copy the following:
+
+```css
+ul ul::before,
+ol ul::before,
+ul ol::before,
+ol ol::before {
+  content:'';
+  border-left: 2px solid var(--background-modifier-border);
+  position: absolute;
+}
+
+ul ul::before,
+ol ul::before,
+ul ol::before,
+ol ol::before {
+  left: -13px;
+  top: 28px;
+  bottom: 0;
+} 
+
+li > p:not(.task-list-item) {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+  
+ul,
+ul ul, 
+ol ul, 
+ul ul ul,
+ul ol ul,
+ol ul ul, 
+ol ol ul {
+  list-style: disc;
+}
+  
+ul > li:not(.task-list-item) {
+  padding-left: 0px;
+  list-style-position: outside;
+  margin-bottom: 8px;
+  padding-right: 0px;
+  margin-block-start: 0.5em;
+}
+  
+  
+ul > li:not(.task-list-item) {
+  border-left: none !important;
+  box-shadow: none !important;
+}
+  
+ul > li:not(.task-list-item)::before {
+  display: none !important;
+}
+  
+ol {
+  display: block;
+  list-style-type: decimal;
+  margin-block-start: 0.5em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  padding-inline-start: 2.5em;
+  margin-left: 0px;
+}
+  
+ol > li {
+  padding-left: 0px;
+  list-style-position: outside;
+  margin-bottom: 8px;
+  padding-right: 0px;
+} 
+  
+ol > li {
+  border-left: none !important;
+  box-shadow: none !important;
+} 
+
+ol > li::before {
+  display: none;
+}
+```
+------------------------------------------------------------
+4. The last one, if you want the previous style with the automatic counting
+Use this:
+
+```css
+ul ul::before,
+ol ul::before,
+ul ol::before,
+ol ol::before {
+  content:'';
+  border-left: 2px solid var(--background-modifier-border);
+  position: absolute;
+}
+
+ul ul::before,
+ol ul::before,
+ul ol::before,
+ol ol::before {
+  left: -13px;
+  top: 28px;
+  bottom: 0;
+} 
+
+li > p:not(.task-list-item) {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+  
+ul,
+ul ul, 
+ol ul, 
+ul ul ul,
+ul ol ul,
+ol ul ul, 
+ol ol ul {
+  list-style: disc;
+}
+  
+ul > li:not(.task-list-item) {
+  padding-left: 0px;
+  list-style-position: outside;
+  margin-bottom: 8px;
+  padding-right: 0px;
+  margin-block-start: 0.3em;
+}
+  
+  
+ul > li:not(.task-list-item) {
+  border-left: none !important;
+  box-shadow: none !important;
+}
+  
+ul > li:not(.task-list-item)::before {
+  display: none !important;
+}
+  
+ol {
+  display: block;
+  margin-block-start: 0.5em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  padding-inline-start: 2.5em;
+  margin-left: 0px;
+}
+  
+ol > li {
+  padding-left: 0px;
+  list-style-position: inside;
+  margin-bottom: 8px;
+  padding-right: 0px;
+} 
+  
+ol > li {
+  border-left: none !important;
+  box-shadow: none !important;
+} 
+
+ol > li::before {
+  margin-left: -17px;
+}
+```
+
+---
 
 
-## BTY
+## BTW
 ```css
 /* Blockquote header */
 .markdown-preview-view blockquote {
