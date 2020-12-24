@@ -4072,3 +4072,57 @@ div[alt="-sbq"] .markdown-preview-view p {
   color: black;
 }
 
+.to-recall {
+  position: relative;
+  float: left;
+  width: 30%;
+  background-color: var(--text-normal);
+  border-radius: 2%;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  z-index: 1;
+  padding: 10px 8px;
+  margin-right: 8px;
+  font-weight: bold;
+  font-family: Cooper;
+  color: var(--text-normal);
+}
+
+.to-recall:hover {
+  cursor: pointer;
+} 
+
+.to-recall:active {
+  position: relative;
+  max-width: 30%;
+  background-color: transparent;
+  border-radius: 5%;
+  transition: all 300ms ease;
+  color: var(--text-normal);
+}
+
+.to-recall::after {
+  content: "Click";
+  position: absolute;
+  font-size: 12px;
+  top: 1px;
+  right: 5px;
+  font-weight: 600;
+  font-family: Arial;
+  color: var(--background-primary);
+}
+
+.to-recall::before {
+  content: " To Recall";
+  display: inline-block;
+  position: absolute;
+  top: -20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: OCR A;
+  color: #858585;
+}
