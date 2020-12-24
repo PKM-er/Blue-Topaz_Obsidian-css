@@ -827,6 +827,31 @@ ol > li::before {
   border-radius: 3px;
   padding: 2px 4px;
 }*/
+
+/* Tag pills in edit mode 
+.CodeMirror-line span.cm-hashtag-begin {
+  background-color: var(--text-accent);
+  color: white;
+  border-top-left-radius:15px;
+  border-bottom-left-radius:15px;
+  padding-left:8px;
+  border-right:none;
+  display: inline-block;
+  text-decoration: none !important;
+}
+
+.CodeMirror-line span.cm-hashtag-end {
+  background-color: var(--text-accent);
+  color: white;
+  border-top-right-radius:15px;
+  border-bottom-right-radius:15px;
+  padding-right:8px;
+  border-left:none;
+  display: inline-block;
+  text-decoration: none !important;
+}
+*/
+
 /*=========================*/
 
 /*thanks to Klass from Obsidian Members Group on discord*/
