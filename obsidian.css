@@ -2286,6 +2286,7 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
 .nav-file-title-content {
   margin-left: 0px;
   text-indent: 0px;
+  word-break: break-all;
 }
 .nav-file-title-content.is-being-renamed {
   margin-left: 0px;
