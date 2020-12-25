@@ -4164,4 +4164,5 @@ div[alt="-sbq"] .markdown-preview-view p {
   font-weight: bold;
   font-family: OCR A;
   color: #858585;
+  white-space: pre;
 }
