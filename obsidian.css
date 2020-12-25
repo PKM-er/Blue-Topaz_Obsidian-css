@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.10.2。[20201224] flying fly flies修改，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.10.2, [20201224] modified by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.10.2。[20201225] flying fly flies修改，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.10.2, [20201225] modified by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 
 /* 
@@ -326,6 +326,37 @@ ol > li {
 ol > li::before {
   margin-left: -17px;
 }
+
+=========================================
+=========tapes pins and stickies=========
+=========================================
+thanks to death_au, Gabroel and Lithou from Obsidian Members Group on Discord 
+
+用法
+
+在图片后加上 #tape 或者 #pin
+形如
+![[Pasted image.png#pin]]
+可以获得特别的效果
+
+用以下格式，可以得到不同的样式
+<p class="stickies"\> 你自己的文字 </p>
+<p class="stickies2"\> 你自己的文字 </p>
+<p class="to-recall"\> 你自己的文字 </p>
+
+
+USAGE
+add #tape or #pin at the end of an image,
+like
+![[Pasted image.png#pin]]
+Then you can get a pin-like style for the image
+
+Use the following formats, you can obtain some special styles.
+<p class="stickies"\> Your words </p>
+<p class="stickies2"\> Your words </p>
+<p class="to-recall"\> Your words </p>
+
+
 */
 
 
