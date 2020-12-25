@@ -107,9 +107,11 @@ Image can be zoomed in by hovering (100%) and clicking (110%).
 ```
 
 
+```
 =========================
 =======列表 list=========
 =========================
+``
 1. If you just don’t want the box
 You should copy the following code to a new .txt file with any name you like, 
 then rename the .txt to .css and put the .css file to “vault/.obsidian/snippets” folder, 
@@ -304,7 +306,45 @@ ol > li::before {
 ```
 
 ---
+```
+=========================================
+=========tapes pins and stickies=========
+=========================================
+```
+thanks to death_au, Gabroel and Lithou from Obsidian Members Group on Discord 
 
+用法
+
+在图片后加上 #tape 或者 #pin
+形如
+```
+![[Pasted image.png#pin]]
+```
+可以获得特别的效果
+
+用以下格式，可以得到不同的样式
+```
+<p class="stickies"\> 你自己的文字 </p>
+<p class="stickies2"\> 你自己的文字 </p>
+<p class="to-recall"\> 你自己的文字 </p>
+```
+
+USAGE
+add #tape or #pin at the end of an image,
+like
+```
+![[Pasted image.png#pin]]
+```
+Then you can get a pin-like style for the image
+
+Use the following formats, you can obtain some special styles.
+```
+<p class="stickies"\> Your words </p>
+<p class="stickies2"\> Your words </p>
+<p class="to-recall"\> Your words </p>
+```
+
+---
 
 ## BTW
 ```css
