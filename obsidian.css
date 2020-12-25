@@ -893,7 +893,7 @@ Use the following formats, you can obtain some special styles.
 
 /*=========================*/
 
-/*thanks to Klass from Obsidian Members Group on discord*/
+/*thanks to Klaas from Obsidian Members Group on discord*/
 /* Selection highlight */
 .suggestion-item.is-selected {
   background-color: var(--text-accent);
@@ -2568,12 +2568,21 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 
 /*Quote (> lorem ipsum ...) in edit mode with left border rendered instead of >*/
 div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-quote {
-  color: transparent;
+  color: transparent !important;
 }
 
 div:not(.CodeMirror-activeline)>.HyperMD-quote {
   border-left: 7px solid var(--ztys);
   margin-left: 5px;
+}
+
+/* thanks to Klaas from Discord */
+div:not(.CodeMirror-activeline)>.HyperMD-quote {
+  background-color: var(--background-primary-alt);
+}
+
+.cm-quote {
+  color: var(--text-normal) !important;
 }
 
 /***************************************/
@@ -4159,6 +4168,7 @@ div[alt="-sbq"] .markdown-preview-view p {
   display: inline-block;
   position: absolute;
   top: -20px;
+  left: -8px;
   border-radius: 10px;
   font-size: 14px;
   font-weight: bold;
@@ -4166,3 +4176,4 @@ div[alt="-sbq"] .markdown-preview-view p {
   color: #858585;
   white-space: pre;
 }
+
