@@ -558,6 +558,10 @@ Use the following formats, you can obtain some special styles.
 
   --note-important: #fd4141;
   --note-cloze: #ffffff;
+	
+  /* stickies */
+  --stickies-color-1: #84c584;
+  --stickies-color-2: #c7a3cf;
 }
 
 .theme-light {
@@ -712,6 +716,10 @@ Use the following formats, you can obtain some special styles.
 
   --note-important: #fd4141;
   --note-cloze: #000000;
+	
+  /* stickies */
+  --stickies-color-1: #b3e2b3;
+  --stickies-color-2: #e9c6f1;
 }
 
 /*=========================*/
