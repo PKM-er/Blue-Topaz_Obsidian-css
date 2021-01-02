@@ -357,6 +357,16 @@ Use the following formats, you can obtain some special styles.
 <p class="to-recall"\> Your words </p>
 
 
+=============================
+==== <aside> </aside> =======
+=============================
+
+Use 
+<aside><h1> Your words </h1></aside>
+<aside><h2> Your words </h2></aside>
+
+to get a right-side note block
+
 */
 
 
