@@ -3961,12 +3961,12 @@ div[src$="#pin"]::before {
   position: absolute;
   width: 5px;
   height: 5px;
-  background-color: #4588cc;
+  background-color: #49aa66;
   top: -3%;
   left: 50%;
-  border: solid #336699 8px;
+  border: solid #0e5a3696 8px;
   border-radius: 50%;
-  box-shadow: #274d74 -3px 3px 1px;
+  box-shadow: #265c2d -3px 3px 1px;
 }
 
 div[src$="#pin"]:active {
