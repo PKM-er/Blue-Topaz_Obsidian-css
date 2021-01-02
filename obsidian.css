@@ -4177,3 +4177,34 @@ div[alt="-sbq"] .markdown-preview-view p {
   white-space: pre;
 }
 
+/* thanks to dcoales from obsidian member group on discord */
+/* https://discord.com/channels/686053708261228577/702656734631821413/794236352857374764 */
+aside {
+  float: right;
+  position: relative;
+  color: brown;
+  left: 5px;
+}
+
+aside > h1, aside > h2{
+  font-weight:normal !important;
+  font-size:16px !important;
+  border: 1px solid;
+  border-bottom: 1px solid !important;
+  border-radius: 3%;
+  background-color: transparent;
+  padding: 0px 5px 0px 5px;
+  max-width: 130px;
+  color: #467cf0 !important;
+  position: absolute;
+  left: 1px;
+}
+
+aside > h2 {
+  left: 140px;
+  color: #dd9207 !important;
+}
+
+.is-readable-line-width.sidecomments .markdown-preview-sizer {
+  margin-left: 20px !important;
+}
