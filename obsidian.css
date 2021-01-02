@@ -572,6 +572,7 @@ to get a right-side note block
   /* stickies */
   --stickies-color-1: #84c584;
   --stickies-color-2: #c7a3cf;
+  --tape-color: #99999967;
 }
 
 .theme-light {
@@ -730,6 +731,7 @@ to get a right-side note block
   /* stickies */
   --stickies-color-1: #b3e2b3;
   --stickies-color-2: #e9c6f1;
+  --tape-color: #acacac65;
 }
 
 /*=========================*/
