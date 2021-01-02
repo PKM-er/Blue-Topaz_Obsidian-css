@@ -2601,10 +2601,14 @@ div:not(.CodeMirror-activeline)>.HyperMD-quote {
   margin-left: 5px;
 }
 
-/* thanks to Klaas from Discord */
-div:not(.CodeMirror-activeline)>.HyperMD-quote {
+/* thanks to Klaas from Discord *//*
+div:not(.CodeMirror-activeline) > .HyperMD-quote {
   background-color: var(--background-primary-alt);
 }
+
+div > .HyperMD-quote:active {
+  background-color: transparent;
+}*/
 
 .cm-quote {
   color: var(--text-normal) !important;
