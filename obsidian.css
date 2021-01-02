@@ -1338,7 +1338,6 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
 .markdown-preview-view.is-readable-line-width .markdown-preview-section,
 .markdown-source-view.is-readable-line-width .CodeMirror,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
-  max-width: 850px !important;
   line-height: 30px;
   font-family: var(--font-family-major);
 }
@@ -4212,14 +4211,14 @@ aside > h1, aside > h2{
   border-radius: 3%;
   background-color: transparent;
   padding: 0px 5px 0px 5px;
-  max-width: 130px;
+  width: 130px;
   color: #467cf0 !important;
   position: absolute;
-  left: 1px;
+  left: -2px;
 }
 
 aside > h2 {
-  left: 140px;
+  left: 135px;
   color: #dd9207 !important;
 }
 
