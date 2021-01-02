@@ -1439,6 +1439,14 @@ pre.HyperMD-list-line::before {
   height: 58%;
 }
 
+.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
+  color: var(--text-accent);
+}
+
+.cm-formatting.cm-formatting-list.cm-formatting-list-ul {
+  color: #da8507;
+}
+
 /* adapted from 2.15 Lista ul*/
 /* thanks to Gabroel from Obsidian discord group */
 /* https://discord.com/channels/686053708261228577/702656734631821413/784922140465692712 */
