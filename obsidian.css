@@ -2470,67 +2470,66 @@ div.collapsible-item-collapse.collapse-icon{
   opacity: 0.4;
 }
 
+
 /*search icon 1*/
-.search-result-collapse-indicator{
-  position: absolute;
-  left: 8px;
-  top: 4px;
+div.collapse-icon:not(.nav-folder-collapse-indicator) {
+  left: 0px;
+  top: 7px;
+  margin-top: 0px;
   transition: transform 20ms linear 0s;
 }
 
-.search-result-collapse-indicator::after {
-  position: absolute;
+div.collapse-icon:not(.nav-folder-collapse-indicator)::before {
   content : "↓";
-  right: 4px;
-  top: -1px;
-  font-size: 12px;
+  font-size: 14px;
+  margin-left: -2px;
+  font-weight: bold;
   color: var(--text-accent);
   transition: transform 10ms linear 0s;
 }
 
-.search-result-collapse-indicator svg {
-  display: none;
-}
-
-.search-result.is-collapsed .search-result-collapse-indicator {
-  transform: translateX(-11px) translateY(1px) rotate(-90deg);
-}
-
-/*search icon 2*/
-.side-dock-collapsible-section-header-indicator{
-  position: absolute;
-  left: 8px;
-  top: 4px;
-  transition: transform 20ms linear 0s;
-}
-
-.side-dock-collapsible-section-header-indicator {
-  position: absolute;
-  left: 8px;
-  top: 4px;
-  transition: transform 20ms linear 0s;
-}
-
-.side-dock-collapsible-section-header-indicator::after {
-  position: absolute;
-  content : "↓";
-  left: 0px;
-  top: -1px;
-  font-size: 12px;
-  font-weight: bold;
-  color: var(--text-highlight-bg);
-  transition: transform 10ms linear 0s;
-}
-
-.side-dock-collapsible-section-header-indicator svg {
+div.collapse-icon svg {
   display: none;
   color:var(--accent-strong);
   height:7px;
   width:7px;
 }
 
-.side-dock-collapsible-section-header.is-collapsed .side-dock-collapsible-section-header-indicator {
-  transform: translateX(-5px) translateY(8.5px) rotate(-90deg);
+div.tree-item-self.is-clickable.is-collapsed div.collapse-icon,
+div.tree-item.search-result.is-collapsed div.collapse-icon {
+  transform: translateX(1px) translateY(1px) rotate(-90deg);
+  opacity: 0.5;
+}
+
+/*search icon 2*/
+span.collapse-icon {
+  left: 25px;
+  top: 4px;
+  margin-top: 2px;
+  transition: transform 20ms linear 0s;
+}
+
+span.collapse-icon::before {
+  content : "↓";
+  left: 3px;
+  top: 1px;
+  margin-left: -3px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-highlight-bg);
+  transition: transform 10ms linear 0s;
+}
+
+span.collapse-icon svg {
+  display: none;
+  color:var(--accent-strong);
+  height:7px;
+  width:7px;
+}
+
+div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
+  transform: translateX(0px) translateY(0px) rotate(-90deg);
+  opacity: 0.5;
 }
 
 /*setting buttons*/
