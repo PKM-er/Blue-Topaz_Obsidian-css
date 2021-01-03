@@ -111,7 +111,7 @@ Image can be zoomed in by hovering (100%) and clicking (110%).
 =========================
 =======列表 list=========
 =========================
-``
+```
 1. If you just don’t want the box
 You should copy the following code to a new .txt file with any name you like, 
 then rename the .txt to .css and put the .css file to “vault/.obsidian/snippets” folder, 
@@ -123,6 +123,7 @@ ol > li {
   box-shadow: none !important;
 } 
 ```
+
 
 ------------------------------------------------------------
 2. If you can live with the box appearing when the mouse hovers
@@ -343,6 +344,28 @@ Use the following formats, you can obtain some special styles.
 <p class="stickies2"\> Your words </p>
 <p class="to-recall"\> Your words </p>
 ```
+
+add Image Flags Snippet by Lithou
+http://github.com/lithou/sandbox
+
+Usage:
+Please see https://publish.obsidian.md/lithousandbox/Image+Flags+(Core+Documentation)
+
+```
+=============================
+==== <aside> </aside> =======
+=============================
+```
+thanks to dcoales from obsidian member group on discord  
+https://discord.com/channels/686053708261228577/702656734631821413/794236352857374764
+
+Use 
+```
+<aside><h1> Your words </h1></aside>
+<aside><h2> Your words </h2></aside>
+```
+to get a right-side note block
+
 
 ---
 
