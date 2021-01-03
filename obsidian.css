@@ -2316,6 +2316,7 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
   outline: 0px solid var(--text-accent);
 }
 
+/*
 .markdown-preview-view img:hover , .markdown-preview-view video:hover {
   width: 100%;
   height:100%;
@@ -2323,15 +2324,24 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
   max-height: min(100%, 80vh);
   cursor: zoom-in;
 }
+*/
 
 /* Image zoom  */
 .view-content img {
   cursor:zoom-in;
 }
 .view-content img:active {
-  cursor:zoom-out;
-  transform: scale(1.1);
-  transition: transform 0.3s ease-in-out 0s;
+  cursor:zoom-out;  
+  position: fixed;  
+  object-fit: contain;
+  transition: transform 300ms ease 80ms;
+  max-height: 95%;
+  width: 90%;
+  top: 52%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  z-index: 200;
 }
 
 /*file explorer columns view : slightly buggy ----*/
