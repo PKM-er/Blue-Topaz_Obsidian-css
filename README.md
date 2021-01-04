@@ -421,3 +421,17 @@ to get a right-side note block
 ![](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/blockquote.jpg?raw=true)
 
 ---
+
+By Klaas from Discord group
+```css
+div:not(.CodeMirror-activeline)>.HyperMD-quote>span:first-of-type::before {
+  content: '“' !important;
+  font: 14px/20px italic Times, serif;
+  font-weight: 700;
+  font-size: 3em; /* PB changed from 18px */
+  color: var(--text-accent);
+  left: 3px;
+  top: 15px;
+  position: relative;
+}
+```
