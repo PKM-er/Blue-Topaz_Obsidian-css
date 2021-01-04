@@ -2423,19 +2423,6 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
   opacity: 0.8;
 }
 
-/*heading collapse indicator*/
-.markdown-preview-view .heading-collapse-indicator {
-  margin-left: -15px;
-  padding: 0 10px;
-}
-
-div.heading-collapse-indicator.collapse-indicator.collapse-icon:hover{
-  color: var(--text-accent);
-}
-.markdown-preview-section:not(.is-collapsed) svg.right-triangle{
-  color: var(--text-accent);
-}
-
 /*outline collapse indicator*/
 div.collapsible-item-collapse.collapse-icon{
   color: var(--text-accent);
@@ -2444,15 +2431,15 @@ div.collapsible-item-collapse.collapse-icon{
 /*---- nav arrows adjust location ----*/
 .nav-folder-collapse-indicator {
   position: absolute;
-  left: 18px;
-  top: 4px;
+  left: 21px;
+  top: 3px;
   transition: transform 20ms linear 0s;
 }
 
 .nav-folder-collapse-indicator::after {
   position: absolute;
   content : "↓";
-  left: 0px;
+  left: -3px;
   top: 0px;
   font-size: 15px;
   font-weight: bold;
@@ -2468,20 +2455,19 @@ div.collapsible-item-collapse.collapse-icon{
 }
 
 .nav-folder.is-collapsed .nav-folder-collapse-indicator {
-  transform: translateX(-8px) translateY(8px) rotate(-90deg);
+  transform: translateX(-11px) translateY(6px) rotate(-90deg);
   opacity: 0.4;
 }
 
-
 /*search icon 1*/
-div.collapse-icon:not(.nav-folder-collapse-indicator) {
+div.collapse-icon:not(.nav-folder-collapse-indicator):not(div.heading-collapse-indicator.collapse-indicator) {
   left: 0px;
   top: 7px;
   margin-top: 0px;
   transition: transform 20ms linear 0s;
 }
 
-div.collapse-icon:not(.nav-folder-collapse-indicator)::before {
+div.collapse-icon:not(.nav-folder-collapse-indicator):not(div.heading-collapse-indicator.collapse-indicator)::before {
   content : "↓";
   font-size: 14px;
   margin-left: -2px;
@@ -2490,7 +2476,7 @@ div.collapse-icon:not(.nav-folder-collapse-indicator)::before {
   transition: transform 10ms linear 0s;
 }
 
-div.collapse-icon svg {
+div.collapse-icon:not(.nav-folder-collapse-indicator) svg {
   display: none;
   color:var(--accent-strong);
   height:7px;
@@ -2501,6 +2487,87 @@ div.tree-item-self.is-clickable.is-collapsed div.collapse-icon,
 div.tree-item.search-result.is-collapsed div.collapse-icon {
   transform: translateX(1px) translateY(1px) rotate(-90deg);
   opacity: 0.5;
+}
+
+/* headering collaspe indicators */
+div.heading-collapse-indicator.collapse-indicator {
+  position: absolute;
+  padding-left: 14px;
+  transition: transform 20ms linear 0s;
+}
+
+h1 div.heading-collapse-indicator.collapse-indicator,
+h2 div.heading-collapse-indicator.collapse-indicator {
+  position: absolute;
+  padding-left: 14px;
+  margin-top: 13px;
+  transition: transform 20ms linear 0s;
+}
+
+h1 div.heading-collapse-indicator.collapse-indicator::before,
+h2 div.heading-collapse-indicator.collapse-indicator::before {
+  content : "↓";
+  position: absolute;
+  font-size: 17px;
+  font-weight: bold;
+  margin-left: -4px;
+  margin-top: -6px;
+  color: var(--text-accent);
+  transition: transform 10ms linear 0s;
+}
+
+div.heading-collapse-indicator.collapse-indicator::before {
+  content : "↓";
+  position: absolute;
+  font-size: 17px;
+  font-weight: bold;
+  margin-left: -4px;
+  color: var(--text-accent);
+  transition: transform 10ms linear 0s;
+}
+
+div.is-collapsed h1 div.heading-collapse-indicator.collapse-indicator,
+div.is-collapsed h2 div.heading-collapse-indicator.collapse-indicator {
+  transform: translateX(1px) translateY(10px) rotate(-90deg);
+  opacity: 0.5;
+}
+
+div.is-collapsed div.heading-collapse-indicator.collapse-indicator {
+  transform: translateX(-8px) translateY(21px) rotate(-90deg);
+  opacity: 0.5;
+}
+
+/* headering collaspe indicators in edit */
+div.CodeMirror-foldgutter-open.CodeMirror-guttermarker-subtle {
+  left: 5px;
+  position: absolute;
+  transition: transform 20ms linear 0s;
+}
+
+div.CodeMirror-foldgutter-open.CodeMirror-guttermarker-subtle::after {
+  content : "↓";
+  position: absolute;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: -4px;
+  color: var(--text-accent);
+  transition: transform 10ms linear 0s;
+}
+
+div.CodeMirror-foldgutter-folded.CodeMirror-guttermarker-subtle {
+  position: absolute;
+  transition: transform 20ms linear 0s;
+}
+
+div.CodeMirror-foldgutter-folded.CodeMirror-guttermarker-subtle::after {
+  content : "→";
+  position: absolute;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 1px;
+  color: var(--text-accent);
+  opacity: 0.5;
+  transition: transform 10ms linear 0s;
 }
 
 /*search icon 2*/
