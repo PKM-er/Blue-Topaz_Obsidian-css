@@ -2677,6 +2677,10 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-quote {
   color: transparent !important;
 }
 
+.CodeMirror-line span.cm-formatting-quote {
+  color: var(--text-accent) !important;
+}
+
 div:not(.CodeMirror-activeline)>.HyperMD-quote {
   border-left: 7px solid var(--ztys);
   margin-left: 5px;
