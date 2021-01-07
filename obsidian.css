@@ -2460,14 +2460,14 @@ div.collapsible-item-collapse.collapse-icon{
 }
 
 /*search icon 1*/
-div.collapse-icon:not(.nav-folder-collapse-indicator):not(div.heading-collapse-indicator.collapse-indicator) {
+div.collapse-icon:not(.nav-folder-collapse-indicator) {
   left: 0px;
   top: 7px;
   margin-top: 0px;
   transition: transform 20ms linear 0s;
 }
 
-div.collapse-icon:not(.nav-folder-collapse-indicator):not(div.heading-collapse-indicator.collapse-indicator)::before {
+div.collapse-icon:not(.nav-folder-collapse-indicator)::before {
   content : "↓";
   font-size: 14px;
   margin-left: -2px;
