@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.10.6。[20210105] flying fly flies修改，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.10.6, [20210105] modified by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.10.8。[20210115] flying fly flies修改，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.10.8, [20210115] modified by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 
 /* 
@@ -396,8 +396,8 @@ to get a right-side note block
   --font-size-tag:                           16px;
   --font-size-preview-blockquote:            16px;
   --font-size-edit-blockquote:               16px;
-  --font-size-code:                          14px;
-  --font-size-edit-code:                     14px;
+  --font-size-code:                          15px;
+  --font-size-edit-code:                     16px;
   --font-size-latex:                         20px;
   --text-size-cloze:                         15px;
 
