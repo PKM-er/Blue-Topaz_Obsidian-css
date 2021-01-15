@@ -1381,7 +1381,6 @@ mjx-container[jax='CHTML'] {
 .theme-dark .cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end),
 .theme-dark .markdown-preview-view code {
   color: #e48900;
-  background-color: #43474e;
   font-size: var(--font-size-edit-code) !important;
   font-family: var(--font-family-preview-edit-code);
 }
@@ -1391,7 +1390,6 @@ mjx-container[jax='CHTML'] {
 .theme-light .cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end),
 .theme-light .markdown-preview-view code:not([class*='language-']) {
   color: #ee5f00;
-  background-color: #e9ebee;
   font-size: var(--font-size-edit-code) !important;
   font-family: var(--font-family-preview-edit-code);
 }
