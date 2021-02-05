@@ -376,29 +376,6 @@ Use
 to get a right-side note block
 
 
-
-==========================================
-=======显示空格、换行符 show whitespace=====
-===========================================
-复制粘贴以下代码做成css片段，并在软件种启用片段即可
-Copy&paste the following code and create a css snippet. Then activate the snippet in Obsidian. 
-
-代码来自shaosen
-Thanks to shaosen
-
-.cm-trailing-space-a::before, .cm-trailing-space-b::before, .cm-trailing-space-new-line::before, .cm-tab::before{
-  content:'·';
-  color:var(--text-faint);
-  font-size: initial;
-}
-.cm-trailing-space-new-line::before {
-  content:'↵';  
-}
-.cm-tab::before {
-  content:'⟶'
-}
-
-
 */
 
 .cm-trailing-space-a::before, .cm-trailing-space-b::before, .cm-trailing-space-new-line::before, .cm-tab::before{
