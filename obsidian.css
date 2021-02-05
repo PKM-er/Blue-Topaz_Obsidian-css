@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.10.8。[20210115] flying fly flies修改，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.10.8, [20210115] modified by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.10.12。[20210204] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.10.12, [20210204] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 
 /* 
@@ -375,15 +375,44 @@ Use
 
 to get a right-side note block
 
+
+
+==========================================
+=======显示空格、换行符 show whitespace=====
+===========================================
+复制粘贴以下代码做成css片段，并在软件种启用片段即可
+Copy&paste the following code and create a css snippet. Then activate the snippet in Obsidian. 
+
+代码来自shaosen
+Thanks to shaosen
+
+.cm-trailing-space-a::before, .cm-trailing-space-b::before, .cm-trailing-space-new-line::before, .cm-tab::before{
+  content:'·';
+  color:var(--text-faint);
+  font-size: initial;
+}
+.cm-trailing-space-new-line::before {
+  content:'↵';  
+}
+.cm-tab::before {
+  content:'⟶'
+}
+
+
 */
 
-
+.cm-trailing-space-a::before, .cm-trailing-space-b::before, .cm-trailing-space-new-line::before, .cm-tab::before{
+  content:'·';
+  color:var(--text-faint);
+  font-size: initial;
+}
 :root{
   --font-size-obsidian-titlebar:             12px;
   --font-size-vault-name:                    14px;/*左侧库名字体大小*/
   --font-size-file-header-title:             14px;/*文件抬头标题，只在非Andy mode plugin时生效*/
   --font-size-file-header-title-andy-plugin: 16px;/*文件抬头标题for Andy mode plugin*/
   --font-size-embed-title-size:              18px;
+  --font-size-embed-file:                    20px;
   --font-size-folder-and-file:               13px;/*左侧边栏文件字体大小*/
   --font-size-edit-normal:                   16px;/*编辑正文字体大小*/
   --font-size-preview-normal:                16px;/*预览正文字体大小*/
@@ -435,15 +464,15 @@ to get a right-side note block
   --background-modifier-cover: rgba(0, 0, 0, 0.6);
   --text-accent: #53aaf5;
   --text-accent-hover: #3e8de7; 
-  --text-normal: #d8d8d8; 
-  --text-muted: #8b8b8b;  
+  --text-normal: #d1d1d1; 
+  --text-muted: #8a8a8a;  
   --text-faint: rgb(121, 121, 121);
-  --accent-strong: #ffffff;
+  --accent-strong: #eeeeee;
   /*--text-em-color: #ff9b9b;*/
   --text-error: #e16d76;
   --text-error-hover: #c9626a;
-  --text-highlight-bg: #bb6400d2;
-  --text-selection: #e6c2755e;
+  --text-highlight-bg: #e481007c;
+  --text-selection: #47a5914d;
   --text-on-accent: #dcddde;
   --interactive-normal: #20242b;
   --interactive-hover: #353b47;
@@ -453,17 +482,21 @@ to get a right-side note block
   --panel-border-color: #18191e;
   --search-text: #e0e0e0;
   --folder-title: #ffffff;
-  --mark-highlight: #bb6400d2;
+  --mark-highlight: #e481007c;
 
   --gray-1: #5C6370;
   --gray-2: #abb2bf;
   --red: #e06c75;
   --orange: #d19a66;
-  --green: #98c379;
+  --green: #b6e296;
+  --darkgreen: #399a58;
   --aqua: #56b6c2;
   --purple: #c678dd;
-  --blue: #61afef;
-  --yellow: #e5c07b;
+  --blue: #9dcffc;
+  --darkblue: #186ddc;
+  --yellow: #e4ba6c;
+  --light-yellow: #dfda91;
+  
   --yykys: #5c67996c;   
   --btys: #7292B1;
   --bqys: #ffffff;
@@ -473,13 +506,19 @@ to get a right-side note block
   --dgxs: #515953; 
   --ztys:  #3187d3;
   --ztysop: #3187d388;
+  --ztysop-1: #1982dd2c;
   --color-specification: #3ce252;
-  --list-ul-block-color: #86561f;
+
+  --allow-1: #d18828;
+  --background-blockquote-dark: #d3d3d31c;
+
+  /*list*/
+  --list-ul-block-color: #e19742a9;
   --list-ul-disc-color: #db6019;
-  --list-ul-hover: #996725;
-  --list-ol-block-color: #0d5c8a;
+  --list-ul-hover: #e28915de;
+  --list-ol-block-color: #2685bbb4;
   --list-ol-number-color: #95afc4;
-  --list-ol-hover: #2c66a8;
+  --list-ol-hover: #2c7bd6;
 
   /*tags*/
   --tag1: #cf0000;
@@ -496,12 +535,12 @@ to get a right-side note block
   --bqys9: #b3b3b3bb;
 
   /*titles*/
-  --h1ys: #7aaed8;
-  --h2ys: #77cf7b;
-  --h3ys: #cecf70;
-  --h4ys: #d4a55e;
-  --h5ys: #cc5353;
-  --h6ys: #c262df;
+  --h1ys: #4ea0e2;
+  --h2ys: #35d13dab;
+  --h3ys: #d1c300e1;
+  --h4ys: #f1a634d0;
+  --h5ys: #f15959d0;
+  --h6ys: #d06af0d0;
 
   /*graph*/
   --tpsh: #3187d3; 
@@ -523,10 +562,10 @@ to get a right-side note block
   --mermaid-seq-dia-color: #1371be;
 
   /*table*/
-  --table-background-color: #646464;
+  --table-background-color: #8a8a8a3b;
   --table-background-color-odd: transparent;
   --table-border-color: #c0c0c0;
-  --table-thead-background-color: #4d7ca8;
+  --table-thead-background-color: #74aef07a;
   --table-hover-raw-color: #3187d33d;
   --table-hover-color: #3187d388;
   --table-hover-thead-color: #6fa084;
@@ -574,7 +613,7 @@ to get a right-side note block
   --background-pink: #533b4a;
   --background-red: #683c3c;
 
-  --note-important: #fd4141;
+  --note-important: #d64545;
   --note-cloze: #ffffff;
 	
   /* stickies */
@@ -585,9 +624,9 @@ to get a right-side note block
 
 .theme-light {
   --background-primary: #ffffff;
-  --background-primary-alt: #f8f8f8;
-  --background-secondary: #ececec;
-  --background-secondary-alt: #dadada;
+  --background-primary-alt: #f5f5f5;
+  --background-secondary: #f0f0f0;
+  --background-secondary-alt: #dddddd;
   --background-accent: #fff;
   --background-modifier-border: #e1dfdf;
   --background-modifier-form-field: #fff;
@@ -606,8 +645,8 @@ to get a right-side note block
   --accent-strong: #000000;
   --text-error: #e75545;
   --text-error-hover: #f86959;
-  --text-highlight-bg: #ffaa00a4;
-  --text-selection: #ffe23d48;
+  --text-highlight-bg: #ffc16fd8;
+  --text-selection: #66bbaa59;
   --text-on-accent: #f2f2f2;
   --interactive-normal: #eaeaeb;
   --interactive-hover: #dbdbdc;
@@ -617,17 +656,21 @@ to get a right-side note block
   --panel-border-color: #dbdbdc;
   --search-text: #000000;
   --folder-title: #000000;
-  --mark-highlight: #ffaa00a4;  
+  --mark-highlight: #ffd298d8;  
 
   --gray-1: #383a42;
   --gray-2: #383a42;
-  --red: #e75545;
-  --green: #4ea24c;
-  --blue: #3d74f6;
+  --red: #eb1b94;
+  --green: #2dd063;
+  --darkgreen: #acb5b2;
+  --blue: #2f90eb;
+  --darkblue: #287eee;
   --purple: #a625a4;
   --aqua: #0084bc;
-  --yellow: #e5c07b;
+  --yellow: #e48100;
+  --light-yellow: #ab9a02;
   --orange: #db9600;
+
   --yykys: #468eeb27;
   --btys: #b6bdc0;
   --bqys: #ffffff;
@@ -637,7 +680,11 @@ to get a right-side note block
   --dgxs: #d0d3d5;
   --ztys:  #2f92e4;
   --ztysop:#2f92e4a2;
+  --ztysop-1: #2f93e426;
   --color-specification: #0084ff;
+  --allow-1: #ec9a3c;
+
+  /*list*/
   --list-ul-block-color: #b9751b;
   --list-ul-disc-color: #ff7300;
   --list-ul-hover: #dd922f;
@@ -862,7 +909,7 @@ to get a right-side note block
 /* ====== Tag Pills ======== */
 .tag:not(.token) {
 	border: none;
-	color: white;
+	color: #f1f1f1;
 	padding: 1px 8px;
 	text-align: center;
 	text-decoration: none;
@@ -916,7 +963,7 @@ to get a right-side note block
 /*thanks to Klaas from Obsidian Members Group on discord*/
 /* Selection highlight */
 .suggestion-item.is-selected {
-  background-color: var(--text-accent);
+  background-color: var(--ztysop-1);
 }
 
 .markdown-preview-view {
@@ -936,23 +983,23 @@ pre.CodeMirror-line{
 }
 
 /*preview mode font size*/
-p{
+p {
   font-size: var(--font-size-preview-normal);
 }
 
 /*tag font size and font family*/
-a.tag{
+a.tag {
   font-size: var(--font-size-tag);
   font-family: var(--font-family-tag);
 }
 
 /*edit mode blockquote font size*/
-.cm-s-obsidian span.cm-quote{
+.cm-s-obsidian span.cm-quote {
   font-size: var(--font-size-edit-blockquote);
 }
 
 /*code font size*/
-code{
+code {
   font-size: var(--font-size-code) !important;
 }
 
@@ -960,7 +1007,7 @@ code{
 /* mark highlighting */
 mark { 
   background-color:  var(--mark-highlight)!important;
-  padding: 1px 0; 
+  padding: 1px 3px; 
   border-radius: 3px;
 }
 
@@ -969,9 +1016,9 @@ mark {
 .nav-folder-children .nav-folder-children {
   margin-left: 12px;
   padding-left: 0;
-  border-left: 1.5px solid var(--background-modifier-border);
+  border-left: 2px solid var(--background-modifier-border);
   border-radius: 0px;
-  transition:all 500ms ease-in-out;
+  transition:all 400ms ease-in;
 }
 
 .nav-folder-children .nav-folder-children:hover {
@@ -1093,6 +1140,12 @@ input.search-input{
   position:relative;
 }
 */
+
+/*tag page button*/
+.nav-buttons-container > .nav-action-button, .nav-buttons-container >.nav-action-button.is-active {
+  padding: 5px;
+  margin: 0 5px !important;
+}
 
 .titlebar-text {
   flex-grow: 1;
@@ -1262,7 +1315,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
   content: "☐";
   position: absolute;
   top: 2px;
-  left: 0px;
+  left: -1px;
   color: var(--text-normal);
   font-size: 23px;
 }
@@ -1271,6 +1324,12 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
   content: "☑";
   color: var(--text-accent) !important;
 }
+
+/*aligning checkbox icons*/
+.cm-formatting.cm-formatting-task.cm-meta {
+  padding-left: 3px;
+}
+
 .markdown-preview-view h1 {
   font-size: var(--font-size-h1); 
   font-weight:600;
@@ -1340,6 +1399,10 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
   background-color: var(--background-primary-alt);
   border-radius: 0%;
 }
+.theme-dark .markdown-preview-view blockquote {
+  background-color: var(--background-blockquote-dark) !important;
+}
+
 
 .markdown-preview-view blockquote p {
   margin-left: 1px;
@@ -1352,11 +1415,13 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   line-height: 30px;
   font-family: var(--font-family-major);
+  text-align: justify;
 }
 
 /*preview line height*/
 p {
   line-height: 1.7;
+  text-align: justify;
 }
 
 /*list*/
@@ -1585,20 +1650,10 @@ h1, h2, h3, h4, h5, h6, strong, b, .view-header-title {
   font-weight: 600;
 }
 
-span.cm-strong, strong{
+span.cm-strong, strong {
   color: var(--accent-strong);
 }
 
-/*vertical lines in outline page*/
-.outline .collapsible-item-children {
-  margin-left: 9px;
-  border-left: 2px solid rgba(148, 148, 148, 0.2);
-  border-radius: 0px;
-  transition:all 300ms ease-in-out;
-}
-.outline .collapsible-item-children:hover {
-  border-left-color: rgba(45, 135, 211, 0.5);
-}
 
 .workspace > .workspace-split > .workspace-leaf:first-of-type:last-of-type .view-header {  border: none;} 
 
@@ -1772,7 +1827,7 @@ a:hover,
 }
 
 .theme-dark code[class*="language-"], .theme-dark pre[class*="language-"] {
-  color: #f8f8f2;
+  color: #e7e7e7;
 }
 
 /*绑定页面
@@ -1781,16 +1836,28 @@ cursor: pointer !important;
 }
 */
 
-.markdown-preview-view .markdown-embed,
-.markdown-preview-view .file-embed {
+.markdown-preview-view .markdown-embed {
   background-color: var(--yykys); 
-  border: 0px sold var(--yykys);  
+  border: 1px solid var(--yykys);  
   border-radius: 4px;
-  border: 0;
   padding: 0px 8px 0px 8px;
   margin-bottom: -3px;
   margin-top: -3px;
 }
+
+.markdown-preview-view .file-embed {
+  border: 2px solid var(--yykys);  
+  border-radius: 10px;
+  padding: 0px 8px 0px 8px;
+}
+
+.markdown-preview-view .file-embed:hover {
+  border: 2px solid var(--ztysop);  
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 0px 8px 0px 8px;
+}
+
 
 .markdown-embed {
   display: block;
@@ -1807,11 +1874,25 @@ cursor: pointer !important;
   overflow: hidden; 
 }
 
-.markdown-embed-title, .file-embed-title {
+.file-embed-icon {
+  color: var(--ztys);
+  vertical-align: middle;  
+}
+
+.markdown-embed-title {
   font-weight: 600; 
   text-align: left; 
   font-size: var(--font-size-embed-title-size);  
   height: 35px; 
+  margin: 10px 0;
+}
+
+.file-embed-title {
+  font-weight: 600; 
+  text-align: left; 
+  font-size: var(--font-size-embed-file);  
+  margin: 5px 0;
+  padding: 0 10px;
 }
 
 .theme-light .token.operator,
@@ -1826,10 +1907,9 @@ cursor: pointer !important;
 code[class*='language-'],
 pre[class*='language-'] {
   text-align: left !important;
-  white-space: pre !important;
   word-spacing: normal !important;
   word-break: normal !important;
-  word-wrap: normal !important;
+  word-wrap: pre-wrap !important;
   line-height: 1.5 !important;
   -moz-tab-size: 4 !important;
   -o-tab-size: 4 !important;
@@ -1848,11 +1928,15 @@ pre[class*='language-'] {
   white-space: normal !important;
 }
 
-.token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
   color: var(--gray-1) !important;
+}
+
+
+.token.comment {
+  color: var(--darkgreen) !important;
 }
 
 .token.punctuation {
@@ -1861,17 +1945,20 @@ pre[class*='language-'] {
 
 .token.selector,
 .token.tag {
-  color: var(--red) !important;
+  color: var(--yellow) !important;
 }
 
 .token.property,
 .token.boolean,
-.token.number,
 .token.constant,
 .token.symbol,
 .token.attr-name,
 .token.deleted {
-  color: var(--orange) !important;
+  color: var(--blue) !important;
+}
+
+.token.number {
+  color: var(--green) !important;
 }
 
 .token.string,
@@ -1895,7 +1982,10 @@ pre[class*='language-'] {
   color: var(--purple) !important;
 }
 
-.token.function,
+.token.function {
+  color: var(--light-yellow) !important;
+}
+
 .token.macro.property {
   color: var(--blue) !important;
 }
@@ -1905,9 +1995,12 @@ pre[class*='language-'] {
 }
 
 .token.regex,
-.token.important,
 .token.variable {
-  color: var(--purple) !important;
+  color: var(--red) !important;
+}
+
+.token.important {
+  color: var(--darkblue) !important;
 }
 
 .token.important,
@@ -2423,10 +2516,6 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
   opacity: 0.8;
 }
 
-/*outline collapse indicator*/
-div.collapsible-item-collapse.collapse-icon{
-  color: var(--text-accent);
-}
 
 /*---- nav arrows adjust location ----*/
 .nav-folder-collapse-indicator {
@@ -2460,14 +2549,14 @@ div.collapsible-item-collapse.collapse-icon{
 }
 
 /*search icon 1*/
-div.collapse-icon:not(.nav-folder-collapse-indicator) {
+.backlink-pane .search-result-container .collapse-icon {
   left: 0px;
   top: 7px;
   margin-top: 0px;
   transition: transform 20ms linear 0s;
 }
 
-div.collapse-icon:not(.nav-folder-collapse-indicator)::before {
+.backlink-pane .search-result-container .collapse-icon::before {
   content : "↓";
   font-size: 14px;
   margin-left: -2px;
@@ -2476,15 +2565,43 @@ div.collapse-icon:not(.nav-folder-collapse-indicator)::before {
   transition: transform 10ms linear 0s;
 }
 
-div.collapse-icon:not(.nav-folder-collapse-indicator) svg {
+.backlink-pane .search-result-container .collapse-icon svg {
   display: none;
   color:var(--accent-strong);
   height:7px;
   width:7px;
 }
 
-div.tree-item-self.is-clickable.is-collapsed div.collapse-icon,
-div.tree-item.search-result.is-collapsed div.collapse-icon {
+.backlink-pane .search-result-container .tree-item.search-result.is-collapsed .collapse-icon {
+  transform: translateX(1px) translateY(1px) rotate(-90deg);
+  opacity: 0.5;
+}
+
+/* search panel icons */
+.workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon {
+  left: 0px;
+  top: 7px;
+  margin-top: 0px;
+  transition: transform 20ms linear 0s;
+}
+
+.workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon::before {
+  content : "↓";
+  font-size: 14px;
+  margin-left: -2px;
+  font-weight: bold;
+  color: var(--text-accent);
+  transition: transform 10ms linear 0s;
+}
+
+.workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon svg {
+  display: none;
+  color:var(--accent-strong);
+  height:7px;
+  width:7px;
+}
+
+.workspace-leaf .search-result-container.mod-global-search .tree-item.search-result.is-collapsed .collapse-icon {
   transform: translateX(1px) translateY(1px) rotate(-90deg);
   opacity: 0.5;
 }
@@ -2514,6 +2631,10 @@ h2 div.heading-collapse-indicator.collapse-indicator::before {
   margin-top: -6px;
   color: var(--text-accent);
   transition: transform 10ms linear 0s;
+}
+
+.heading-collapse-indicator.collapse-indicator.collapse-icon svg {
+  display: none;
 }
 
 div.heading-collapse-indicator.collapse-indicator::before {
@@ -2572,20 +2693,16 @@ div.CodeMirror-foldgutter-folded.CodeMirror-guttermarker-subtle::after {
 
 /*search icon 2*/
 span.collapse-icon {
-  left: 25px;
-  top: 4px;
-  margin-top: 2px;
+  margin-top: 0px;
   transition: transform 20ms linear 0s;
 }
 
 span.collapse-icon::before {
   content : "↓";
-  left: 3px;
-  top: 1px;
   margin-left: -3px;
   font-size: 16px;
   font-weight: bold;
-  color: var(--text-highlight-bg);
+  color: var(--allow-1);
   transition: transform 10ms linear 0s;
 }
 
@@ -2598,6 +2715,76 @@ span.collapse-icon svg {
 
 div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
   transform: translateX(0px) translateY(0px) rotate(-90deg);
+  opacity: 0.5;
+}
+
+/* outline page*/
+.outline .tree-item-self.is-clickable {
+  padding-left: 27px !important;
+}
+
+.outline .tree-item .collapse-icon {
+  padding: 0 9px;
+  transition: transform 20ms linear 0s;
+}
+
+.outline .tree-item .collapse-icon::before {
+  content : "↓";
+  margin-left: -7px;
+  margin-top: 1px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-accent);
+  transition: transform 10ms linear 0s;
+}
+
+.outline .tree-item .collapse-icon svg {
+  display: none;
+  color:var(--accent-strong);
+  height:7px;
+  width:7px;
+}
+
+.outline .tree-item.is-collapsed .collapse-icon {
+  transform: translateX(1px) translateY(0px) rotate(-90deg);
+  opacity: 0.5;
+}
+
+/*vertical lines in outline page*/
+.outline .tree-item-children {
+  margin-left: 16px;
+  border-left: 2px solid rgba(148, 148, 148, 0.2);
+  border-radius: 0px;
+  transition:all 300ms ease-in-out;
+}
+.outline .tree-item-children:hover {
+  border-left-color: rgba(45, 135, 211, 0.5);
+}
+
+/* list collaspe icon */
+.markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon {
+  margin-top: 0px;
+  transition: transform 20ms linear 0s;
+}
+
+.markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+  content : "↓";
+  font-size: 14px;
+  margin-left: 0px;
+  font-weight: bold;
+  color: var(--text-accent);
+  transition: transform 10ms linear 0s;
+}
+
+.markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon svg {
+  display: none;
+  color:var(--accent-strong);
+  height:7px;
+  width:7px;
+}
+
+.markdown-preview-view li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon {
+  transform: translateX(10px) translateY(1px) rotate(-90deg);
   opacity: 0.5;
 }
 
@@ -2727,7 +2914,7 @@ div > .HyperMD-quote:active {
 /* Original idea from: https://gist.github.com/mklepaczewski/54e451f09994b9d450de81c8baaf8aa4 */
 /* but also with simpler classes so you can use `<span class='colour'>` as well */
 .app-container .markdown-preview-view pre[class*="language-note-"] code[class*="language-note-"] {
-  white-space: pre-wrap;
+  white-space: pre-wrap !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-notice,
@@ -2803,6 +2990,7 @@ pre.language-note-important:before, pre.language-note-imp::before{
   content: "Important";
   color: var(--note-important);
   font-weight: 800;
+  top: -1px;
 }
 
 /*colourful text*/
@@ -3983,7 +4171,6 @@ pre.frontmatter.language-yaml:before{
   background-color: var(--event-item-color10)!important;
 }
 
-
 /* =========================================*/
 /* =========tapes pins and stickies=========*/
 /* =========================================*/
@@ -4534,4 +4721,10 @@ aside > h2 {
 
 .is-readable-line-width.sidecomments .markdown-preview-sizer {
   margin-left: 20px !important;
+}
+
+/* for pdf */
+.theme-dark .print .markdown-preview-view strong {
+  -webkit-print-color-adjust: exact;
+  color: black;
 }
