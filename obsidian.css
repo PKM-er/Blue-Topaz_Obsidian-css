@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.10.12。[20210204] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.10.12, [20210204] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.10.12。[20210205] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.10.12, [20210205] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 
 /* 
@@ -1041,6 +1041,11 @@ display: none;
 
 .view-action > svg.link {
   color: var(--red);
+}
+
+/* view action buttons */
+.view-actions {
+  padding: 5px 0;
 }
 
 .workspace-leaf.mod-active .view-header-icon {
