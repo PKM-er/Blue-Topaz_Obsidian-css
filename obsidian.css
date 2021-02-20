@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.10.12。[20210205] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.10.12, [20210205] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.11.2。[20210220] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.11.2, [20210220] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 
 /* 
@@ -140,192 +140,9 @@ Image can be zoomed in by hovering (100%) and clicking (110%).
 =========================
 =======列表 list=========
 =========================
-1. If you just don’t want the box
-You should copy the following code to a new .txt file with any name you like, 
-then rename the .txt to .css and put the .css file to “vault/.obsidian/snippets” folder, 
-and activate the css snippet in Obsidian Setting–> Appearance --> CSS snippets.
 
 
-ul > li:not(.task-list-item), 
-ol > li {
-  box-shadow: none !important;
-} 
 
-------------------------------------------------------------
-2. If you can live with the box appearing when the mouse hovers
-You should copy this:
-
-ul > li:not(.task-list-item):not(:hover), 
-ol > li:not(:hover) {
-  box-shadow: none;
-} 
-
-------------------------------------------------------------
-3. If you just want the previous style (without automatic counting like “1.1.2”)
-You should copy the following:
-
-ul ul::before,
-ol ul::before,
-ul ol::before,
-ol ol::before {
-  content:'';
-  border-left: 2px solid var(--background-modifier-border);
-  position: absolute;
-}
-
-ul ul::before,
-ol ul::before,
-ul ol::before,
-ol ol::before {
-  left: -13px;
-  top: 28px;
-  bottom: 0;
-} 
-
-li > p:not(.task-list-item) {
-  display: inline;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-  
-ul,
-ul ul, 
-ol ul, 
-ul ul ul,
-ul ol ul,
-ol ul ul, 
-ol ol ul {
-  list-style: disc;
-}
-  
-ul > li:not(.task-list-item) {
-  padding-left: 0px;
-  list-style-position: outside;
-  margin-bottom: 8px;
-  padding-right: 0px;
-  margin-block-start: 0.5em;
-}
-  
-  
-ul > li:not(.task-list-item) {
-  border-left: none !important;
-  box-shadow: none !important;
-}
-  
-ul > li:not(.task-list-item)::before {
-  display: none !important;
-}
-  
-ol {
-  display: block;
-  list-style-type: decimal;
-  margin-block-start: 0.5em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
-  padding-inline-start: 2.5em;
-  margin-left: 0px;
-}
-  
-ol > li {
-  padding-left: 0px;
-  list-style-position: outside;
-  margin-bottom: 8px;
-  padding-right: 0px;
-} 
-  
-ol > li {
-  border-left: none !important;
-  box-shadow: none !important;
-} 
-
-ol > li::before {
-  display: none;
-}
-
-------------------------------------------------------------
-4. The last one, if you want the previous style with the automatic counting
-Use this:
-
-ul ul::before,
-ol ul::before,
-ul ol::before,
-ol ol::before {
-  content:'';
-  border-left: 2px solid var(--background-modifier-border);
-  position: absolute;
-}
-
-ul ul::before,
-ol ul::before,
-ul ol::before,
-ol ol::before {
-  left: -13px;
-  top: 28px;
-  bottom: 0;
-} 
-
-li > p:not(.task-list-item) {
-  display: inline;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-  
-ul,
-ul ul, 
-ol ul, 
-ul ul ul,
-ul ol ul,
-ol ul ul, 
-ol ol ul {
-  list-style: disc;
-}
-  
-ul > li:not(.task-list-item) {
-  padding-left: 0px;
-  list-style-position: outside;
-  margin-bottom: 8px;
-  padding-right: 0px;
-  margin-block-start: 0.3em;
-}
-  
-  
-ul > li:not(.task-list-item) {
-  border-left: none !important;
-  box-shadow: none !important;
-}
-  
-ul > li:not(.task-list-item)::before {
-  display: none !important;
-}
-  
-ol {
-  display: block;
-  margin-block-start: 0.5em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
-  padding-inline-start: 2.5em;
-  margin-left: 0px;
-}
-  
-ol > li {
-  padding-left: 0px;
-  list-style-position: inside;
-  margin-bottom: 8px;
-  padding-right: 0px;
-} 
-  
-ol > li {
-  border-left: none !important;
-  box-shadow: none !important;
-} 
-
-ol > li::before {
-  margin-left: -17px;
-}
 
 =========================================
 =========tapes pins and stickies=========
@@ -470,7 +287,7 @@ to get a right-side note block
   --aqua: #56b6c2;
   --purple: #c678dd;
   --blue: #9dcffc;
-  --darkblue: #186ddc;
+  --darkblue: #4889df;
   --yellow: #e4ba6c;
   --light-yellow: #dfda91;
   
@@ -641,7 +458,7 @@ to get a right-side note block
   --green: #2dd063;
   --darkgreen: #acb5b2;
   --blue: #2f90eb;
-  --darkblue: #287eee;
+  --darkblue: #3b84e4;
   --purple: #a625a4;
   --aqua: #0084bc;
   --yellow: #e48100;
@@ -1509,27 +1326,33 @@ pre.HyperMD-list-line::before {
 /* thanks to Gabroel from Obsidian discord group */
 /* https://discord.com/channels/686053708261228577/702656734631821413/784922140465692712 */
 li > p:not(.task-list-item) {
-  display: inline;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-ul,
-ul ul, 
-ol ul, 
+ul {
+  list-style: disc;
+}
+
+ul ul {
+  list-style: circle;
+}
+
 ul ul ul,
-ul ol ul,
-ol ul ul, 
-ol ol ul {
-  list-style:none;
+ul ol ul {
+  list-style: square;
+}
+
+ul ul ul ul,
+ul ul ol ul,
+ul ol ul ul {
+  list-style: circle;
 }
 
 ul > li:not(.task-list-item) {
-  margin-left: -10px;
-  position: relative;
+  margin-left: -5px;
   padding-left: 6px;
-  list-style-position: inside;
-  border-radius: 10px;
+  border-radius: 5px;
   width: fit-content;
   margin-bottom: 10px;
   padding-right: 6px;
@@ -1540,46 +1363,45 @@ ul > li:not(.task-list-item) {
 
 .theme-dark ul > li:not(.task-list-item) {
   border-left: 2px solid var(--list-ul-block-color);
-  box-shadow: 0 0 0 1px var(--list-ul-block-color);
+
 }
 
 .theme-light ul > li:not(.task-list-item) {
-  border-left: 1px solid var(--list-ul-block-color);
-  box-shadow: 0 0 0 0.5px var(--list-ul-block-color);
+  border-left: 2px solid var(--list-ul-block-color);
 }
 
 ul > li:not(.task-list-item):hover {
   border-color: var(--list-ul-hover);
-  box-shadow: 0 0 0 2px var(--list-ul-hover);
-}
-
-ul > li:not(.task-list-item)::before {
-  content: '•';
-  color: var(--list-ul-disc-color);
-  display: inline-block;
-  width: 13px;
-  position: relative;
-  text-shadow: 0 0 0.2em var(--list-ul-disc-color);
 }
 
 ol {
-  position: relative;
   padding-inline-start: 1em;
   margin-left: 25px;
-  list-style: none;  
-  counter-reset: cupcake;
+  list-style: decimal;
+}
+
+ol ol {
+  list-style: lower-latin;
+}
+
+ol ol ol,
+ol ul ol {
+  list-style: lower-roman;
+}
+
+ol ol ol ol,
+ol ol ul ol,
+ol ul ol ol {
+  list-style: decimal;
 }
 
 ol > li {
-  position: relative;
-  margin-left: -10px;
+  margin-left: -5px;
   padding-left: 6px;
-  list-style-position: inside;
-  border-radius: 10px;
+  border-radius: 5px;
   width: fit-content;
   margin-bottom: 10px;
   padding-right: 6px;
-  counter-increment: cupcake;
   word-wrap:break-word;
   word-break:break-word;
   transition:all 300ms ease-in-out;
@@ -1587,24 +1409,19 @@ ol > li {
 
 .theme-dark ol > li {
   border-left: 2px solid var(--list-ol-block-color);
-  box-shadow: 0 0 0 1px var(--list-ol-block-color);
 } 
 
 .theme-light ol > li {
-  border-left: 1px solid var(--list-ol-block-color);
-  box-shadow: 0 0 0 0.5px var(--list-ol-block-color);
+  border-left: 2px solid var(--list-ol-block-color);
 } 
 
 ol > li:hover {
   border-color: var(--list-ol-hover);
-  box-shadow: 0 0 0 2px var(--list-ol-hover);
 }
 
-ol > li::before {
-  content: counters(cupcake, '.') '. ';
+ol > li::marker {
   font-weight: bold;
   color: var(--list-ol-number-color);
-  display: inline-block;
   white-space: pre;
 }
 
@@ -1635,7 +1452,6 @@ h1, h2, h3, h4, h5, h6, strong, b, .view-header-title {
 span.cm-strong, strong {
   color: var(--accent-strong);
 }
-
 
 .workspace > .workspace-split > .workspace-leaf:first-of-type:last-of-type .view-header {  border: none;} 
 
@@ -2650,14 +2466,15 @@ div.CodeMirror-foldgutter-open.CodeMirror-guttermarker-subtle {
 div.CodeMirror-foldgutter-open.CodeMirror-guttermarker-subtle::after {
   content : "↓";
   position: absolute;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
   margin-left: -4px;
+  top: 5px;
   color: var(--text-accent);
   transition: transform 10ms linear 0s;
 }
 
-div.CodeMirror-foldgutter-folded.CodeMirror-guttermarker-subtle {
+div.CodeMirror-foldgutter-folded.CodeMirror-guttermarker-subtle { 
   position: absolute;
   transition: transform 20ms linear 0s;
 }
@@ -2665,9 +2482,10 @@ div.CodeMirror-foldgutter-folded.CodeMirror-guttermarker-subtle {
 div.CodeMirror-foldgutter-folded.CodeMirror-guttermarker-subtle::after {
   content : "→";
   position: absolute;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
   margin-left: 1px;
+  top: 5px;
   color: var(--text-accent);
   opacity: 0.5;
   transition: transform 10ms linear 0s;
@@ -2752,7 +2570,7 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
 .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   content : "↓";
   font-size: 14px;
-  margin-left: 0px;
+  margin-left: -11px;
   font-weight: bold;
   color: var(--text-accent);
   transition: transform 10ms linear 0s;
@@ -2766,7 +2584,7 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
 }
 
 .markdown-preview-view li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon {
-  transform: translateX(10px) translateY(1px) rotate(-90deg);
+  transform: translateX(0px) translateY(-2px) rotate(-90deg);
   opacity: 0.5;
 }
 
@@ -4709,4 +4527,11 @@ aside > h2 {
 .theme-dark .print .markdown-preview-view strong {
   -webkit-print-color-adjust: exact;
   color: black;
+}
+
+/* ================================== */
+/* =======markdown assitance ======== */
+/* ================================== */
+.command-list-view-row-selected {
+  background-color: gray !important;
 }
