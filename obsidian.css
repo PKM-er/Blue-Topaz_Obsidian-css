@@ -2194,9 +2194,7 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
 
 /* images : reduce displayed size of embedded files, zoom on hover */
 .markdown-preview-view img, .markdown-preview-view video {
-  object-fit: contain;
-  max-height: 400px;
-  max-width: 500px;
+  max-width: min(100%,800px) !important;
   margin-left: auto;
   margin-right: auto;
   outline: 0px solid var(--text-accent);
