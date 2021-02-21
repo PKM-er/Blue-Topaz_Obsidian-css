@@ -320,8 +320,8 @@ to get a right-side note block
 
   /*titles*/
   --h1-color: #4ea0e2;
-  --h2-color: #35d13dab;
-  --h3-color: #d1c300e1;
+  --h2-color: #35d13dd3;
+  --h3-color: #dfd111e1;
   --h4-color: #f1a634d0;
   --h5-color: #f15959d0;
   --h6-color: #d06af0d0;
@@ -658,7 +658,7 @@ to get a right-side note block
   font-weight: 600;
 }
 .tag[href^="#ideas"] {
-  background-color: #4ec929 !important;
+  background-color: #28ac00 !important;
   font-weight: 600;
   font-family: Lucida Handwriting;
 }
@@ -667,7 +667,7 @@ to get a right-side note block
   font-size: 25px;
 }
 .cm-s-obsidian .CodeMirror-line span.cm-tag-ideas:not(.cm-formatting-hashtag) {
-  color: #4ec929;
+  color: #28ac00;
   font-family: Lucida Handwriting;
   font-weight: 600;
 }
@@ -2219,7 +2219,7 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
   object-fit: contain;
   transition: transform 300ms ease 80ms;
   max-height: 95%;
-  width: 90%;
+  width: 110%;
   top: 52%;
   transform: translateY(-50%);
   left: 0;
