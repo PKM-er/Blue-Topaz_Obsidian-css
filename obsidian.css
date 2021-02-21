@@ -936,7 +936,7 @@ input.search-input{
   letter-spacing: 0.05em;
   opacity: 1;
   color: var(--text-accent);
-  margin-top: -3px;
+  margin-top: -1px;
 }
 
 /*添加其他文字*/
