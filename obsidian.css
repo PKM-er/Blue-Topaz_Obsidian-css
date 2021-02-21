@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.11.2。[20210220] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.11.2, [20210220] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.11.3。[20210220] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.11.3, [20210220] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 
 /* 
@@ -195,11 +195,6 @@ to get a right-side note block
 
 */
 
-.cm-trailing-space-a::before, .cm-trailing-space-b::before, .cm-trailing-space-new-line::before, .cm-tab::before{
-  content:'·';
-  color:var(--text-faint);
-  font-size: initial;
-}
 :root{
   --font-size-obsidian-titlebar:             12px;
   --font-size-vault-name:                    14px;/*左侧库名字体大小*/
@@ -291,16 +286,12 @@ to get a right-side note block
   --yellow: #e4ba6c;
   --light-yellow: #dfda91;
   
-  --yykys: #5c67996c;   
-  --btys: #7292B1;
-  --bqys: #ffffff;
-  --bqds: #404b5ef5;  
+  --embed-color: #5c67996c;   
   --zzsyck: #3187d3; 
   --btblj: #96b7e4; 
-  --dgxs: #515953; 
-  --ztys:  #3187d3;
-  --ztysop: #3187d388;
-  --ztysop-1: #1982dd2c;
+  --theme-color: #3187d3;
+  --theme-color-translucent: #3187d388;
+  --theme-color-translucent-1: #1982dd2c;
   --color-specification: #3ce252;
 
   --allow-1: #d18828;
@@ -315,30 +306,29 @@ to get a right-side note block
   --list-ol-hover: #2c7bd6;
 
   /*tags*/
-  --tag1: #cf0000;
-  --tag2: #cf7c00;
-  --tag3: #00a71c;
-  --bqys1: #f37575bb;
-  --bqys2: #d39461bb;
-  --bqys3: #c7cc37bb;
-  --bqys4: #8fd389bb;
-  --bqys5: #5ccbcfbb;
-  --bqys6: #5b94d6bb;
-  --bqys7: #9859e0bb;
-  --bqys8: #cd64d6bb;
-  --bqys9: #b3b3b3bb;
+  --stag1: #cf0000;
+  --stag2: #cf7c00;
+  --stag3: #00a71c;
+  --tag1: #f37575bb;
+  --tag2: #d39461bb;
+  --tag3: #c7cc37bb;
+  --tag4: #8fd389bb;
+  --tag5: #5ccbcfbb;
+  --tag6: #5b94d6bb;
+  --tag7: #9859e0bb;
+  --tag8: #cd64d6bb;
+  --tag9: #b3b3b3bb;
 
   /*titles*/
-  --h1ys: #4ea0e2;
-  --h2ys: #35d13dab;
-  --h3ys: #d1c300e1;
-  --h4ys: #f1a634d0;
-  --h5ys: #f15959d0;
-  --h6ys: #d06af0d0;
+  --h1-color: #4ea0e2;
+  --h2-color: #35d13dab;
+  --h3-color: #d1c300e1;
+  --h4-color: #f1a634d0;
+  --h5-color: #f15959d0;
+  --h6-color: #d06af0d0;
 
   /*graph*/
-  --tpsh: #3187d3; 
-  --tpwzys: #B5B5B5; 
+  --graph-text-color: #B5B5B5; 
   /*--graphtag: #d1d43eb2;
   --graph-attach: #4ad43eb2;
   --graph-circle: #99b4d8b2;
@@ -434,8 +424,8 @@ to get a right-side note block
   --text-accent: #007de4;
   --text-accent-hover: #4ba8ff;
   --text-normal: #000000;
-  --text-muted: #666666;
-  --text-faint: #7a7a7a;
+  --text-muted: #7f7f7f;
+  --text-faint: #7f7f7f;
   --accent-strong: #000000;
   --text-error: #e75545;
   --text-error-hover: #f86959;
@@ -454,7 +444,7 @@ to get a right-side note block
 
   --gray-1: #383a42;
   --gray-2: #383a42;
-  --red: #eb1b94;
+  --red: #f13d64;
   --green: #2dd063;
   --darkgreen: #acb5b2;
   --blue: #2f90eb;
@@ -465,16 +455,12 @@ to get a right-side note block
   --light-yellow: #ab9a02;
   --orange: #db9600;
 
-  --yykys: #468eeb27;
-  --btys: #b6bdc0;
-  --bqys: #ffffff;
-  --bqds: #eaeaea;
+  --embed-color: #468eeb27;
   --zzsyck: #2f92e4;
   --btblj: #2f92e4;
-  --dgxs: #d0d3d5;
-  --ztys:  #2f92e4;
-  --ztysop:#2f92e4a2;
-  --ztysop-1: #2f93e426;
+  --theme-color: #2f92e4;
+  --theme-color-translucent: #2f92e4a2;
+  --theme-color-translucent-1: #2f93e426;
   --color-specification: #0084ff;
   --allow-1: #ec9a3c;
 
@@ -487,30 +473,29 @@ to get a right-side note block
   --list-ol-hover: #5c95e0;
  
   /*tags*/
-  --tag1: #ff0000;
-  --tag2: #ff9900;
-  --tag3: #00a030;
-  --bqys1: #e77e7e;
-  --bqys2: #dbb671;
-  --bqys3: #cacc41;
-  --bqys4: #5dcf53;
-  --bqys5: #49c9ce;
-  --bqys6: #6da1dd;
-  --bqys7: #9270db;
-  --bqys8: #e277d9;
-  --bqys9: #6b6b6b;
+  --stag1: #ff0000;
+  --stag2: #ff9900;
+  --stag3: #00a030;
+  --tag1: #e77e7e;
+  --tag2: #dbb671;
+  --tag3: #cacc41;
+  --tag4: #5dcf53;
+  --tag5: #49c9ce;
+  --tag6: #6da1dd;
+  --tag7: #9270db;
+  --tag8: #e277d9;
+  --tag9: #6b6b6b;
 
   /*Titles*/
-  --h1ys: #08367c;
-  --h2ys: #004faa;
-  --h3ys: #0e64bb;
-  --h4ys: #3481c5;
-  --h5ys: #59a0e2;
-  --h6ys: #88b8e6;
+  --h1-color: #08367c;
+  --h2-color: #004faa;
+  --h3-color: #0e64bb;
+  --h4-color: #3481c5;
+  --h5-color: #59a0e2;
+  --h6-color: #88b8e6;
 
   /*graph*/
-  --tpsh: #2f92e4; 
-  --tpwzys: #696969;
+  --graph-text-color: #696969;
   --graphtag: #77d425cc;
   --graph-attach: #afcfe0cc;
   --graph-circle: #1f78b4cc;
@@ -588,47 +573,47 @@ to get a right-side note block
 /*=========================*/
 /*special tags*/
 .tag[href^="#important"] {
-  background-color: var(--tag1) !important;
+  background-color: var(--stag1) !important;
   font-weight: 600;
   font-family: Lucida Handwriting;
 }
 .cm-s-obsidian .CodeMirror-line span.cm-tag-important:not(.cm-formatting-hashtag) {
-  color:var(--tag1);
+  color:var(--stag1);
   font-family: Lucida Handwriting;
   font-weight: 600;
 }
 .tag[href^="#重要"] {
-  background-color: var(--tag1) !important;
+  background-color: var(--stag1) !important;
   font-weight: 600;
   font-family: Webdings, Microsoft YaHei;
 }
 .tag[href^="#complete"] {
-  background-color: var(--tag3) !important;
+  background-color: var(--stag3) !important;
   font-weight: 600;
   font-family:  Lucida Handwriting;
 }
 .cm-s-obsidian .CodeMirror-line span.cm-tag-complete:not(.cm-formatting-hashtag) {
-  color:var(--tag3);
+  color:var(--stag3);
   font-family: Lucida Handwriting;
   font-weight: 600;
 }
 .tag[href^="#完成"] {
-  background-color: var(--tag3) !important;
+  background-color: var(--stag3) !important;
   font-family: Origin, Microsoft YaHei;
   font-weight: 600;
 }
 .tag[href^="#inprogress"] {
-  background-color: var(--tag2) !important;
+  background-color: var(--stag2) !important;
   font-weight: 600;
   font-family: Lucida Handwriting;
 }
 .cm-s-obsidian .CodeMirror-line span.cm-tag-inprogress:not(.cm-formatting-hashtag) {
-  color:var(--tag2);
+  color:var(--stag2);
   font-family: Lucida Handwriting;
   font-weight: 600;
 }
 .tag[href^="#进行中"] {
-  background-color: var(--tag2) !important;
+  background-color: var(--stag2) !important;
   font-weight: 600;
   font-family: Wingdings, Microsoft YaHei;
 }
@@ -690,15 +675,15 @@ to get a right-side note block
 }
 
 /*colorful tags*/
-.tag:not(.token).tag:nth-child(9n+1){background-color: var(--bqys1);} /*1*/
-.tag:not(.token).tag:nth-child(9n+2){background-color: var(--bqys6);} /*6*/
-.tag:not(.token).tag:nth-child(9n+3){background-color: var(--bqys2);} /*2*/
-.tag:not(.token).tag:nth-child(9n+4){background-color: var(--bqys7);} /*7*/
-.tag:not(.token).tag:nth-child(9n+5){background-color: var(--bqys3);} /*3*/
-.tag:not(.token).tag:nth-child(9n+6){background-color: var(--bqys8);} /*8*/
-.tag:not(.token).tag:nth-child(9n+7){background-color: var(--bqys4);} /*4*/
-.tag:not(.token).tag:nth-child(9n+8){background-color: var(--bqys9);} /*9*/
-.tag:not(.token).tag:nth-child(9n){background-color: var(--bqys5);}   /*5*/
+.tag:not(.token).tag:nth-child(9n+1){background-color: var(--tag1);} /*1*/
+.tag:not(.token).tag:nth-child(9n+2){background-color: var(--tag6);} /*6*/
+.tag:not(.token).tag:nth-child(9n+3){background-color: var(--tag2);} /*2*/
+.tag:not(.token).tag:nth-child(9n+4){background-color: var(--tag7);} /*7*/
+.tag:not(.token).tag:nth-child(9n+5){background-color: var(--tag3);} /*3*/
+.tag:not(.token).tag:nth-child(9n+6){background-color: var(--tag8);} /*8*/
+.tag:not(.token).tag:nth-child(9n+7){background-color: var(--tag4);} /*4*/
+.tag:not(.token).tag:nth-child(9n+8){background-color: var(--tag9);} /*9*/
+.tag:not(.token).tag:nth-child(9n){background-color: var(--tag5);}   /*5*/
 
 /* ====== Tag Pills ======== */
 .tag:not(.token) {
@@ -713,7 +698,7 @@ to get a right-side note block
 }
 .tag:not(.token):hover {
 	color: white;
-	background-color: var(--ztys) !important;
+	background-color: var(--theme-color) !important;
 }
 
 /*tag pane*//*
@@ -757,7 +742,7 @@ to get a right-side note block
 /*thanks to Klaas from Obsidian Members Group on discord*/
 /* Selection highlight */
 .suggestion-item.is-selected {
-  background-color: var(--ztysop-1);
+  background-color: var(--theme-color-translucent-1);
 }
 
 .markdown-preview-view {
@@ -816,7 +801,7 @@ mark {
 }
 
 .nav-folder-children .nav-folder-children:hover {
-  border-left-color:var(--ztys);
+  border-left-color:var(--theme-color);
 }
 
 /*标题后阴影*/
@@ -829,7 +814,7 @@ display: none;
 }
 
 .workspace-leaf.mod-active .view-header-title::selection {
-  background-color: var(--ztysop);
+  background-color: var(--theme-color-translucent);
   color: var(--text-normal);
 }
 
@@ -865,7 +850,7 @@ display: none;
 
 /*change color when hover*/
 .titlebar-button.mod-back:hover, .titlebar-button.mod-forward:hover{
-  color: var(--ztys);
+  color: var(--theme-color);
   transform: scale(1.2);
 }
 
@@ -873,18 +858,18 @@ display: none;
 .titlebar-button.mod-minimize:hover,
 .workspace-ribbon-collapse-btn:hover,
 .workspace-tab-header.is-active:hover{
-  color: var(--ztys);
+  color: var(--theme-color);
 }
 
 .workspace-tab-header:hover {
-  color: var(--ztys);
+  color: var(--theme-color);
   text-align: center;
   stroke-width: 2px;
   cursor: pointer;
 }
 
 .workspace-tab-header.is-active{
-  color: var(--ztys);
+  color: var(--theme-color);
 }
 
 .titlebar-button {
@@ -987,7 +972,7 @@ input.search-input{
 }
 
 .side-dock-ribbon-tab:hover, .side-dock-ribbon-action:hover {
-  color: var(--ztys);
+  color: var(--theme-color);
 }
 
 .nav-folder.mod-root > .nav-folder-title {
@@ -1068,7 +1053,7 @@ span.search-result-file-matched-text{
   height: 15px;
   margin-right: 5px;
   margin-bottom: 1px;
-  filter: hue-rotate(var(--ztys));
+  filter: hue-rotate(var(--theme-color));
   transition: background-color 200ms ease-out 0s;
   cursor: pointer;
 }
@@ -1134,7 +1119,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
   font-weight:600;
   line-height: 1.3;
   padding-bottom:1px;
-  border-bottom: 2px solid var(--h1ys);
+  border-bottom: 2px solid var(--h1-color);
   font-family: var(--font-family-h1);
 }
 
@@ -1143,7 +1128,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
   font-weight:600;
   line-height: 1.3;
   padding-bottom: 1px;
-  border-bottom: 1px solid var(--h2ys);
+  border-bottom: 1px solid var(--h2-color);
   font-family: var(--font-family-h2);
 }
 
@@ -1152,12 +1137,12 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
 .markdown-preview-view h5 {font-size: var(--font-size-h5); font-weight:600; font-family: var(--font-family-h5);}
 .markdown-preview-view h6 {font-size: var(--font-size-h6); font-weight:600; font-family: var(--font-family-h6);}
 
-.markdown-preview-view h1 {color: var(--h1ys);}
-.markdown-preview-view h2 {color: var(--h2ys);}
-.markdown-preview-view h3 {color: var(--h3ys);}
-.markdown-preview-view h4 {color: var(--h4ys);}
-.markdown-preview-view h5 {color: var(--h5ys);}
-.markdown-preview-view h6 {color: var(--h6ys);}
+.markdown-preview-view h1 {color: var(--h1-color);}
+.markdown-preview-view h2 {color: var(--h2-color);}
+.markdown-preview-view h3 {color: var(--h3-color);}
+.markdown-preview-view h4 {color: var(--h4-color);}
+.markdown-preview-view h5 {color: var(--h5-color);}
+.markdown-preview-view h6 {color: var(--h6-color);}
 	
 .cm-header-1 {font-size: var(--font-size-h1); font-weight:600; position: relative; font-family: var(--font-family-h1);}
 .cm-header-2 {font-size: var(--font-size-h2); font-weight:600; position: relative; font-family: var(--font-family-h2);}
@@ -1168,12 +1153,12 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
 
 .cm-s-obsidian .cm-header, .cm-s-obsidian .cm-strong {font-weight:600;}
 
-.cm-header-1 {color: var(--h1ys);}
-.cm-header-2 {color: var(--h2ys);}
-.cm-header-3 {color: var(--h3ys);}
-.cm-header-4 {color: var(--h4ys);}
-.cm-header-5 {color: var(--h5ys);}
-.cm-header-6 {color: var(--h6ys);}
+.cm-header-1 {color: var(--h1-color);}
+.cm-header-2 {color: var(--h2-color);}
+.cm-header-3 {color: var(--h3-color);}
+.cm-header-4 {color: var(--h4-color);}
+.cm-header-5 {color: var(--h5-color);}
+.cm-header-6 {color: var(--h6-color);}
 
 .nav-files-container {
   flex-grow: 1;
@@ -1194,7 +1179,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
   border-top-width: 0px;
   border-bottom-width: 0px;
   border-left-width: 7px;
-  border-color: var(--ztys);
+  border-color: var(--theme-color);
   background-color: var(--background-primary-alt);
   border-radius: 0%;
 }
@@ -1579,7 +1564,7 @@ tbody>tr {
 
 .nav-file:not(.is-active):hover .nav-file-title,
 .nav-folder:hover .nav-folder-content {
-  background-color: var(--ztysop);
+  background-color: var(--theme-color-translucent);
   color: #ffffff;
   font-weight: 500;
 }
@@ -1635,8 +1620,8 @@ cursor: pointer !important;
 */
 
 .markdown-preview-view .markdown-embed {
-  background-color: var(--yykys); 
-  border: 1px solid var(--yykys);  
+  background-color: var(--embed-color); 
+  border: 1px solid var(--embed-color);  
   border-radius: 4px;
   padding: 0px 8px 0px 8px;
   margin-bottom: -3px;
@@ -1644,13 +1629,13 @@ cursor: pointer !important;
 }
 
 .markdown-preview-view .file-embed {
-  border: 2px solid var(--yykys);  
+  border: 2px solid var(--embed-color);  
   border-radius: 10px;
   padding: 0px 8px 0px 8px;
 }
 
 .markdown-preview-view .file-embed:hover {
-  border: 2px solid var(--ztysop);  
+  border: 2px solid var(--theme-color-translucent);  
   background-color: transparent;
   border-radius: 10px;
   padding: 0px 8px 0px 8px;
@@ -1673,7 +1658,7 @@ cursor: pointer !important;
 }
 
 .file-embed-icon {
-  color: var(--ztys);
+  color: var(--theme-color);
   vertical-align: middle;  
 }
 
@@ -2016,7 +2001,7 @@ pre[class~='language-txt']:before{
 .cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1:before{
   content:"H1";
   font-size:14px;
-  color: var(--h1ys);
+  color: var(--h1-color);
   left:-27px;
   top:-13px;
   position:absolute;
@@ -2024,7 +2009,7 @@ pre[class~='language-txt']:before{
 .cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2:before{
   content:"H2";
   font-size:13px;
-  color: var(--h2ys);
+  color: var(--h2-color);
   left:-27px;
   top:-11px;
   position:absolute;
@@ -2032,7 +2017,7 @@ pre[class~='language-txt']:before{
 .cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3:before{
   content:"H3";
   font-size:12px;
-  color: var(--h3ys);
+  color: var(--h3-color);
   left:-26px;
   top: -10px;
   position:absolute;
@@ -2040,7 +2025,7 @@ pre[class~='language-txt']:before{
 .cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4:before{
   content:"H4";
   font-size:11px;
-  color: var(--h4ys);
+  color: var(--h4-color);
   left:-25px;
   top: -9px;
   position:absolute;
@@ -2048,7 +2033,7 @@ pre[class~='language-txt']:before{
 .cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5:before{
   content:"H5";
   font-size:10px;
-  color: var(--h5ys);
+  color: var(--h5-color);
   left:-24px;
   top: -7px;
   position:absolute;
@@ -2056,7 +2041,7 @@ pre[class~='language-txt']:before{
 .cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6:before{
   content:"H6";
   font-size:9px;
-  color: var(--h6ys);
+  color: var(--h6-color);
   left:-23px;
   top: -6px;
   position:absolute;
@@ -2182,7 +2167,7 @@ pre[class~='language-txt']:before{
 /* inline formatting, link targets and [[ ]] disappears if not active line
 div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting,
 div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-string.cm-url,
-div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-link
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-link:not(.cm-hmd-footnote):not(.cm-footref)
 { display: none; }
 
 /* hide all html tags -- IT IS COMMENTED OUT BY DEFAULT 
@@ -2600,7 +2585,7 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
 }
 
 .graph-view.color-circle {
-  color: var(--tpsh);
+  color: transparent;
 }
 
 .graph-view.color-line {
@@ -2608,7 +2593,7 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
 }
 
 .graph-view.color-text {
-  color: var(--tpwzys); 
+  color: var(--graph-text-color); 
 }
 
 .graph-view.color-fill-highlight {
@@ -2639,7 +2624,7 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
 /*
 /*horizontal line in preview mode
 .markdown-preview-view hr{
-  border-top: 2px solid var(--ztys);
+  border-top: 2px solid var(--theme-color);
 }
 */
 
@@ -2669,7 +2654,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-quote {
 }
 
 div:not(.CodeMirror-activeline)>.HyperMD-quote {
-  border-left: 7px solid var(--ztys);
+  border-left: 7px solid var(--theme-color);
   margin-left: 5px;
 }
 
@@ -3213,7 +3198,7 @@ text.actor > tspan {
 .task1,
 .task2,
 .task3 {
-  fill: var(--ztysop) !important;
+  fill: var(--theme-color-translucent) !important;
   stroke: var(--text-muted) !important;
 }
 
@@ -3335,11 +3320,11 @@ g.clickable {
 
 g.classGroup rect {
   fill: var(--background-secondary-alt) !important;
-  stroke: var(--ztys) !important;
+  stroke: var(--theme-color) !important;
 }
 
 g.classGroup line {
-  stroke: var(--ztys) !important;
+  stroke: var(--theme-color) !important;
   stroke-width: 1 !important;
 }
 
@@ -3664,7 +3649,7 @@ g>circle{
 }
   
 ::-webkit-scrollbar-thumb:horizontal {
-  background-color: var(--ztys);
+  background-color: var(--theme-color);
 }
 
 ::-webkit-scrollbar:horizontal {
@@ -3692,7 +3677,7 @@ body.plugin-sliding-panes .view-header-icon{
 }
 
 body.plugin-sliding-panes .mod-root .workspace-leaf.mod-active .view-header-title{
-  color: var(--h4ys);
+  color: var(--h4-color);
   font-family: var(--font-family-title);
   padding-top: 4px;
 }
@@ -3778,13 +3763,13 @@ line-height: 0.6;
   
 /*悬停Today*/
 #calendar-container .reset-button:hover{
-  color:var(--h4ys);
+  color:var(--h4-color);
   background-color: var(--table-hover-raw-color);
 }
   
 /*悬停arrow*/
 #calendar-container .arrow:hover{
-  color: var(--ztys);
+  color: var(--theme-color);
 }
   
 /*今日笔记时红点去除 today's dot*/
