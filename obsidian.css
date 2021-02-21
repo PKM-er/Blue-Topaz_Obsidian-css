@@ -287,8 +287,7 @@ to get a right-side note block
   --light-yellow: #dfda91;
   
   --embed-color: #5c67996c;   
-  --zzsyck: #3187d3; 
-  --btblj: #96b7e4; 
+  --search-result-file-title-color: #96b7e4; 
   --theme-color: #3187d3;
   --theme-color-translucent: #3187d388;
   --theme-color-translucent-1: #1982dd2c;
@@ -456,8 +455,7 @@ to get a right-side note block
   --orange: #db9600;
 
   --embed-color: #468eeb27;
-  --zzsyck: #2f92e4;
-  --btblj: #2f92e4;
+  --search-result-file-title-color: #2f92e4;
   --theme-color: #2f92e4;
   --theme-color-translucent: #2f92e4a2;
   --theme-color-translucent-1: #2f93e426;
@@ -1003,7 +1001,7 @@ body {
 /*=======搜索=======*/
 /*==================*/
 .search-result-file-title {
-  color: var(--btblj);
+  color: var(--search-result-file-title-color);
 }
 
 /*reduce search result margin*/
@@ -1539,7 +1537,7 @@ tbody>tr {
 
 .workspace-leaf.mod-active .view-header {
   background-color: var(--background-primary);
-  border-bottom: 3px solid var(--zzsyck); 
+  border-bottom: 3px solid var(--theme-color); 
 }
 
 .status-bar, .side-dock.mod-right, .side-dock.mod-left {
