@@ -926,7 +926,6 @@ input.search-input{
 /*tag page button*/
 .nav-buttons-container > .nav-action-button, .nav-buttons-container >.nav-action-button.is-active {
   padding: 5px;
-  margin: 0 5px !important;
 }
 
 .titlebar-text {
