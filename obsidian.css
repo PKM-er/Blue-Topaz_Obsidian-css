@@ -2201,7 +2201,6 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
-  display: block;
   outline: 0px solid var(--text-accent);
 }
 
