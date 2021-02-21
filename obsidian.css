@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.11.3。[20210220] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.11.3, [20210220] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.11.3。[20210221] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.11.3, [20210221] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 
 /* 
@@ -1202,6 +1202,10 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-task.cm-prop
   text-align: justify;
 }
 
+pre.HyperMD-list-line.HyperMD-list-line {
+  text-align: start;
+}
+
 /*preview line height*/
 p {
   line-height: 1.7;
@@ -1315,22 +1319,32 @@ li > p:not(.task-list-item) {
   margin-bottom: 5px;
 }
 
-ul {
+ul,
+ol ul,
+ol ol ul,
+ol ol ol ul {
   list-style: disc;
 }
 
-ul ul {
+ul ul,
+ol ul ul,
+ul ol ul,
+ol ol ul ul {
   list-style: circle;
 }
 
 ul ul ul,
-ul ol ul {
+ol ul ul ul,
+ul ol ul ul,
+ul ul ol ul {
   list-style: square;
 }
 
 ul ul ul ul,
-ul ul ol ul,
-ul ol ul ul {
+ol ul ul ul ul,
+ul ol ul ul ul,
+ul ul ol ul ul,
+ul ul ul ol ul {
   list-style: circle;
 }
 
@@ -1384,11 +1398,8 @@ ol > li {
   margin-left: -5px;
   padding-left: 6px;
   border-radius: 5px;
-  width: fit-content;
   margin-bottom: 10px;
   padding-right: 6px;
-  word-wrap:break-word;
-  word-break:break-word;
   transition:all 300ms ease-in-out;
 } 
 
