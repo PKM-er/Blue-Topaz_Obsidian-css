@@ -1280,7 +1280,7 @@ ol ol::before {
 } */
 
 .cm-hmd-list-indent .cm-tab::before {
-  left: 3px;
+  left: 3.5px;
   top: -15px;
   height: 250%;
 }
@@ -1288,9 +1288,9 @@ ol ol::before {
 pre.HyperMD-list-line::before {
   content:'';
   border-left: 2px solid var(--background-modifier-border);
-  left: 7px;
+  left: 7.5px;
   top: 28px;
-  height: 58%;
+  height: 55%;
 }
 
 .cm-formatting.cm-formatting-list.cm-formatting-list-ol {
