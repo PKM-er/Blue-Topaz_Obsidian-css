@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.11.3。[20210224] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.11.3, [20210224] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.11.3。[20210222] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.11.3, [20210222] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 
 /* 
@@ -213,20 +213,22 @@ to get a right-side note block
   --text-size-cloze:                         15px;
 
   /*font family*/
-  --font-family-list:                      ;/*列表字体*/
-  --font-family-major:                     ;/*主体（包括列表）字体，除代码框等少数部分*/
-  --font-family-h1:                        ;
-  --font-family-h2:                        ;
-  --font-family-h3:                        ;
-  --font-family-h4:                        ;
-  --font-family-h5:                        ;
-  --font-family-h6:                        ;
-  --font-family-title:                     ;/*文件抬头标题*/
-  --font-family-folder-file-title:         ;/*左侧边栏文件、文件夹字体*/
-  --font-family-preview-edit-code: Consolas, Monaco, monospace;
-  --text-family-inline-code:       Consolas, Monaco, monospace;
-  --font-family-tag:                       ;
-  --font-family-vault:                     ;/*左侧库名字体*/
+  --font-family-list:                                                    ;/*列表字体*/
+  --font-family-major:                                                   ;/*主体（包括列表）字体，除代码框等少数部分*/
+  --font-family-h1:                                                      ;
+  --font-family-h2:                                                      ;
+  --font-family-h3:                                                      ;
+  --font-family-h4:                                                      ;
+  --font-family-h5:                                                      ;
+  --font-family-h6:                                                      ;
+  --font-family-title:                                                   ;/*文件抬头标题*/
+  --font-family-folder-file-title:                                       ;/*左侧边栏文件、文件夹字体*/
+  --font-family-preview-edit-code:        "Consolas", "Monaco", monospace;
+  --text-family-inline-code:              "Consolas", "Monaco", monospace;
+  --font-family-tag:                                                     ;
+  --font-family-vault:                                                   ;/*左侧库名字体*/
+  --font-family-special-tag:       "Lucida Handwriting", "Dancing Script", "Hand of Sean", "Angelina", cursive;
+  --font-family-YAML:              "Lucida Handwriting", "Dancing Script", "Hand of Sean", "Angelina", cursive;
 } 
 
 .theme-dark {
@@ -566,11 +568,11 @@ to get a right-side note block
 .tag[href^="#important"] {
   background-color: var(--stag1) !important;
   font-weight: 600;
-  font-family: Lucida Handwriting;
+  font-family: var(--font-family-special-tag);
 }
 .cm-s-obsidian .CodeMirror-line span.cm-tag-important:not(.cm-formatting-hashtag) {
   color:var(--stag1);
-  font-family: Lucida Handwriting;
+  font-family: var(--font-family-special-tag);
   font-weight: 600;
 }
 .tag[href^="#重要"] {
@@ -581,11 +583,11 @@ to get a right-side note block
 .tag[href^="#complete"] {
   background-color: var(--stag3) !important;
   font-weight: 600;
-  font-family:  Lucida Handwriting;
+  font-family:  var(--font-family-special-tag);
 }
 .cm-s-obsidian .CodeMirror-line span.cm-tag-complete:not(.cm-formatting-hashtag) {
   color:var(--stag3);
-  font-family: Lucida Handwriting;
+  font-family: var(--font-family-special-tag);
   font-weight: 600;
 }
 .tag[href^="#完成"] {
@@ -596,11 +598,11 @@ to get a right-side note block
 .tag[href^="#inprogress"] {
   background-color: var(--stag2) !important;
   font-weight: 600;
-  font-family: Lucida Handwriting;
+  font-family: var(--font-family-special-tag);
 }
 .cm-s-obsidian .CodeMirror-line span.cm-tag-inprogress:not(.cm-formatting-hashtag) {
   color:var(--stag2);
-  font-family: Lucida Handwriting;
+  font-family: var(--font-family-special-tag);
   font-weight: 600;
 }
 .tag[href^="#进行中"] {
@@ -611,7 +613,7 @@ to get a right-side note block
 .tag[href^="#dailynote"] {
   background-color: #277cdd !important;
   font-weight: 600;
-  font-family: Lucida Handwriting;
+  font-family: var(--font-family-special-tag);
 }
 .tag[href^="#dailynote"]::after {
   content:' 🐈';
@@ -619,13 +621,13 @@ to get a right-side note block
 }
 .cm-s-obsidian .CodeMirror-line span.cm-tag-dailynote:not(.cm-formatting-hashtag) {
   color: #277cdd;
-  font-family: Lucida Handwriting;
+  font-family: var(--font-family-special-tag);
   font-weight: 600;
 }
 .tag[href^="#weeklynote"] {
   background-color: #419aff !important;
   font-weight: 600;
-  font-family: Lucida Handwriting;
+  font-family: var(--font-family-special-tag);
 }
 .tag[href^="#weeklynote"]::after {
   content:' 🥑';
@@ -633,13 +635,13 @@ to get a right-side note block
 }
 .cm-s-obsidian .CodeMirror-line span.cm-tag-weeklynote:not(.cm-formatting-hashtag) {
   color: #419aff;
-  font-family: Lucida Handwriting;
+  font-family: var(--font-family-special-tag);
   font-weight: 600;
 }
 .tag[href^="#questions"] {
   background-color: #8555df !important;
   font-weight: 600;
-  font-family: Lucida Handwriting;
+  font-family: var(--font-family-special-tag);
 }
 .tag[href^="#questions"]::after {
   content:' ❓';
@@ -647,13 +649,13 @@ to get a right-side note block
 }
 .cm-s-obsidian .CodeMirror-line span.cm-tag-questions:not(.cm-formatting-hashtag) {
   color: #8555df;
-  font-family: Lucida Handwriting;
+  font-family: var(--font-family-special-tag);
   font-weight: 600;
 }
 .tag[href^="#ideas"] {
   background-color: #28ac00 !important;
   font-weight: 600;
-  font-family: Lucida Handwriting;
+  font-family: var(--font-family-special-tag);
 }
 .tag[href^="#ideas"]::after {
   content:' 💡';
@@ -661,7 +663,7 @@ to get a right-side note block
 }
 .cm-s-obsidian .CodeMirror-line span.cm-tag-ideas:not(.cm-formatting-hashtag) {
   color: #28ac00;
-  font-family: Lucida Handwriting;
+  font-family: var(--font-family-special-tag);
   font-weight: 600;
 }
 
@@ -3844,7 +3846,7 @@ line-height: 0.6;
 /*=====================================*/
 pre.frontmatter.language-yaml:before{
   content: "Specification";
-  font-family: Lucida Handwriting;
+  font-family: var(--font-family-YAML);
   top: 1px;
   right: 32px;
   color: var(--color-specification);
