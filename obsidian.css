@@ -2299,6 +2299,14 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
   opacity: 0.8;
 }
 
+/*rename*/
+.nav-file-title-content.is-being-renamed,
+.nav-folder-title-content.is-being-renamed {
+  cursor: text;
+  border-color: transparent;
+  background-color: white;
+  color: black;
+}
 
 /*---- nav arrows adjust location ----*/
 .nav-folder-collapse-indicator {
@@ -4520,3 +4528,4 @@ aside > h2 {
 .command-list-view-row-selected {
   background-color: gray !important;
 }
+
