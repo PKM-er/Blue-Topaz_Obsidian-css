@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.11.4。[20210302] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.11.4, [20210302] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.11.5。[20210303] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.11.5, [20210303] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 
 /* 
@@ -314,12 +314,22 @@ to get a right-side note block
   --tag9: #b3b3b3bb;
 
   /*titles*/
+  --h1-color: #92c237;
+  --h2-color: #37bd32;
+  --h3-color: #2dc1c1;
+  --h4-color: #3e8aec;
+  --h5-color: #7c84f7;
+  --h6-color: #b18bee;
+
+  /*old*/
+  /*
   --h1-color: #4ea0e2;
   --h2-color: #35d13dd3;
   --h3-color: #dfd111e1;
   --h4-color: #f1a634d0;
   --h5-color: #f15959d0;
   --h6-color: #d06af0d0;
+  */
 
   /*graph*/
   --graph-text-color: #B5B5B5; 
@@ -1354,7 +1364,6 @@ ul > li:not(.task-list-item) {
 
 .theme-dark ul > li:not(.task-list-item) {
   border-left: 2px solid var(--list-ul-block-color);
-
 }
 
 .theme-light ul > li:not(.task-list-item) {
@@ -1991,6 +2000,16 @@ pre[class~='language-txt']:before{
   padding: 0 5px;
 }
 
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting.cm-formatting-header {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-header {
+  font-size: 12px;
+  opacity: 1;
+}
+
 /*-- hide # markup--*//*
 .cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1,
 .cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2,
@@ -2266,7 +2285,7 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
 }
 
 .theme-dark .CodeMirror-activeline .CodeMirror-linebackground{
-  background-color: #468eeb4b !important;
+  background-color: #509cff2f !important;
 }
 
 /*----file explorer smaller fonts & line height----*/
@@ -2434,6 +2453,7 @@ div.heading-collapse-indicator.collapse-indicator::before {
   font-size: 17px;
   font-weight: bold;
   margin-left: -4px;
+  margin-top: 1px;
   color: var(--text-accent);
   transition: transform 10ms linear 0s;
 }
@@ -2445,7 +2465,7 @@ div.is-collapsed h2 div.heading-collapse-indicator.collapse-indicator {
 }
 
 div.is-collapsed div.heading-collapse-indicator.collapse-indicator {
-  transform: translateX(-8px) translateY(21px) rotate(-90deg);
+  transform: translateX(-8px) translateY(22px) rotate(-90deg);
   opacity: 0.5;
 }
 
@@ -2462,7 +2482,7 @@ div.CodeMirror-foldgutter-open.CodeMirror-guttermarker-subtle::after {
   font-size: 14px;
   font-weight: bold;
   margin-left: -4px;
-  top: -2px;
+  top: -1px;
   color: var(--text-accent);
   transition: transform 10ms linear 0s;
 }
@@ -2478,7 +2498,7 @@ div.CodeMirror-foldgutter-folded.CodeMirror-guttermarker-subtle::after {
   font-size: 14px;
   font-weight: bold;
   margin-left: 1px;
-  top: -2px;
+  top: -1px;
   color: var(--text-accent);
   opacity: 0.5;
   transition: transform 10ms linear 0s;
@@ -4528,4 +4548,3 @@ aside > h2 {
 .command-list-view-row-selected {
   background-color: gray !important;
 }
-
