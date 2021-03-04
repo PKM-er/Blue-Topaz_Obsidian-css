@@ -205,6 +205,7 @@ to get a right-side note block
   --font-size-h5:                            17px;
   --font-size-h6:                            15px;
   --font-size-tag:                           16px;
+  --font-size-list-preview:                  16px;
   --font-size-preview-blockquote:            16px;
   --font-size-edit-blockquote:               16px;
   --font-size-code:                          15px;
@@ -1426,6 +1427,10 @@ ol > li::marker {
   font-weight: bold;
   color: var(--list-ol-number-color);
   white-space: pre;
+}
+
+ul li, ol li {
+  font-size: var(--font-size-list-preview);
 }
 
 /*====================================*/
