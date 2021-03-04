@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.11.5。[20210303] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.11.5, [20210303] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.11.5。[20210304] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.11.5, [20210304] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 
 /* 
@@ -318,8 +318,8 @@ to get a right-side note block
   --h2-color: #37bd32;
   --h3-color: #2dc1c1;
   --h4-color: #3e8aec;
-  --h5-color: #7c84f7;
-  --h6-color: #b18bee;
+  --h5-color: #9683ff;
+  --h6-color: #ca8bee;
 
   /*old*/
   /*
@@ -408,6 +408,9 @@ to get a right-side note block
   --stickies-color-1: #84c584;
   --stickies-color-2: #c7a3cf;
   --tape-color: #99999967;
+
+  /*Sliding panes*/
+  --header-color: #f1a634d0;
 }
 
 .theme-light {
@@ -569,6 +572,9 @@ to get a right-side note block
   --stickies-color-1: #b3e2b3;
   --stickies-color-2: #e9c6f1;
   --tape-color: #acacac65;
+
+  /*Sliding panes*/
+  --header-color: #0e64bb;
 }
 
 /*=========================*/
@@ -1313,8 +1319,7 @@ pre.HyperMD-list-line::before {
   color: #da8507;
 }
 
-/* adapted from 2.15 Lista ul*/
-/* thanks to Gabroel from Obsidian discord group */
+/* inspired by Gabroel from Obsidian discord group */
 /* https://discord.com/channels/686053708261228577/702656734631821413/784922140465692712 */
 li > p:not(.task-list-item) {
   margin-top: 5px;
@@ -1364,6 +1369,7 @@ ul > li:not(.task-list-item) {
 
 .theme-dark ul > li:not(.task-list-item) {
   border-left: 2px solid var(--list-ul-block-color);
+
 }
 
 .theme-light ul > li:not(.task-list-item) {
@@ -1448,6 +1454,67 @@ h1, h2, h3, h4, h5, h6, strong, b, .view-header-title {
 
 span.cm-strong, strong {
   color: var(--accent-strong);
+}
+
+.theme-dark strong > em, .theme-dark .cm-strong.cm-em.cm-overlay {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: #f55454;
+  background-image: linear-gradient(120deg, #11a0ff 0%, #f0d040 100%) !important;
+  /* adapted from Obsidianite*/
+  
+  /*background-color: var(--background-secondary-alt);
+  border-radius: 3px;
+  padding: 0 3px;*/
+}
+
+.theme-light strong > em, .theme-light .cm-strong.cm-em.cm-overlay {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: #f55454;
+  background-image: linear-gradient(270deg, #40b3ff 0%, #0065b8 80%) !important;
+}
+
+span.cm-formatting.cm-formatting-strong.cm-strong {
+  opacity: 0.2;
+}
+
+span.cm-formatting.cm-formatting-em.cm-em {
+  opacity: 0.2;
+}
+
+span.cm-formatting.cm-formatting-strong.cm-em.cm-strong {
+  opacity: 0.2;
+}
+
+.theme-dark div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-strong.cm-strong {
+  opacity: 1;
+  color:  var(--text-accent);
+}
+
+.theme-dark div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-em.cm-em {
+  opacity: 1;
+  color:  var(--text-orange);
+}
+
+.theme-dark div.CodeMirror-activeline .CodeMirror-line  span.cm-formatting.cm-formatting-strong.cm-em.cm-strong {
+  opacity: 1;
+  color:  var(--green);
+}
+
+.theme-light div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-strong.cm-strong {
+  opacity: 1;
+  color:  var(--orange);
+}
+
+.theme-light div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-em.cm-em {
+  opacity: 1;
+  color:  var(--orange);
+}
+
+.theme-light div.CodeMirror-activeline .CodeMirror-line  span.cm-formatting.cm-formatting-strong.cm-em.cm-strong {
+  opacity: 1;
+  color:  var(--orange);
 }
 
 .workspace > .workspace-split > .workspace-leaf:first-of-type:last-of-type .view-header {  border: none;} 
@@ -3705,7 +3772,7 @@ body.plugin-sliding-panes .view-header-icon{
 }
 
 body.plugin-sliding-panes .mod-root .workspace-leaf.mod-active .view-header-title{
-  color: var(--h4-color);
+  color: var(--header-color);
   font-family: var(--font-family-title);
   padding-top: 4px;
 }
@@ -3791,7 +3858,7 @@ line-height: 0.6;
   
 /*悬停Today*/
 #calendar-container .reset-button:hover{
-  color:var(--h4-color);
+  color:var(--header-color);
   background-color: var(--table-hover-raw-color);
 }
   
