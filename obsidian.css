@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.11.5。[20210304] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.11.5, [20210304] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.11.5。[20210305] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.11.5, [20210305] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 
 /* 
@@ -133,8 +133,62 @@
 =========================
 =======列表 list=========
 =========================
+Just show vertical line instead of border
+显示竖线，不显示框线
+
+Use the following code to create a css snippet and activate in Obsidian
+使用以下代码创建css snippet，在软件中启用
 
 
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  position: relative;
+}
+
+ul ul::before,
+ol ul::before,
+ul ol::before,
+ol ol::before {
+  content:'';
+  border-left: 2px solid var(--background-modifier-border);
+  position: absolute;
+}
+
+ul ul::before,
+ol ul::before,
+ul ol::before,
+ol ol::before {
+  left: -13px;
+  top: 0;
+  bottom: 0;
+} 
+
+li > p:not(.task-list-item) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+  
+ul > li:not(.task-list-item) {
+  padding-left: 0px;
+  margin-bottom: 8px;
+  padding-right: 0px;
+  margin-block-start: 0.3em;
+  border-left: none !important;
+}
+  
+ol {
+  padding-inline-start: 2.1em;
+  margin-left: 0px;
+  margin-bottom: -9px;
+}
+  
+ol > li {
+  margin-left: 2px;
+  padding-left: 0px;
+  border-left: none !important;
+} 
 
 
 =========================================
