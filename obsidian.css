@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.11.5。[20210305] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.11.5, [20210305] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.11.5。[20210308] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.11.5, [20210308] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 
 /* 
@@ -2350,22 +2350,22 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
 */
 
 /* Image zoom  */
-.view-content img {
+.view-content img:not([class="emoji"]) {
   cursor:zoom-in;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .view-content img:active {
-  cursor:zoom-out;  
-  position: fixed;  
-  object-fit: contain;
-  transition: transform 300ms ease 80ms;
-  max-height: 95%;
-  width: 110%;
-  top: 52%;
-  transform: translateY(-50%);
-  left: 0;
-  right: 0;
-  z-index: 200;
-  margin:-0.5px auto 0;
+  cursor: zoom-out;    
+  background-color: #ffffff;
+  position:fixed;
+  max-height: min(100%, 91vh);
+  width: min(100%, 80vh);
+  object-fit:contain;
+  top:50%;
+  transition: transform 200ms ease 80ms;
+  transform:translateY(-49%);
 }
 
 /*file explorer columns view : slightly buggy ----*/
