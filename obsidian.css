@@ -2356,6 +2356,7 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
   margin-left: auto;
   margin-right: auto;
 }
+
 .view-content img:active {
   cursor: zoom-out;    
   background-color: #ffffff;
@@ -2364,6 +2365,8 @@ span.cm-formatting-task { display: inline !important; font-family: monospace; }
   width: min(100%, 80vh);
   object-fit:contain;
   top:50%;
+  left:0;
+  right:0;
   transition: transform 200ms ease 80ms;
   transform:translateY(-49%);
 }
