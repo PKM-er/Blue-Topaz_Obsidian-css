@@ -2927,7 +2927,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-quote {
 }
 
 .CodeMirror-line span.cm-formatting-quote {
-  color: var(--text-accent) !important;
+  color: var(--red) !important;
 }
 
 div:not(.CodeMirror-activeline) > .HyperMD-quote,
