@@ -2944,7 +2944,7 @@ div > .HyperMD-quote:active {
 }*/
 
 .cm-quote:not([class*="link"]):not([class*="string"]) {
-  color: var(--text-normal) !important;
+  color: var(--text-normal);
 }
 
 /***************************************/
