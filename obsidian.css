@@ -3166,14 +3166,14 @@ pre.language-note-cloze::before {
   fill: var(--background-primary-alt) !important;
 }
 
-.node rect,
-.node circle,
-.node ellipse,
-.node polygon,
-.node path {
+.node rect:not([style*="fill"]):not([style*="stroke"]),
+.node circle:not([style*="fill"]):not([style*="stroke"]),
+.node ellipse:not([style*="fill"]):not([style*="stroke"]),
+.node polygon:not([style*="fill"]):not([style*="stroke"]),
+.node path:not([style*="fill"]):not([style*="stroke"]) {
   fill: var(--background-modifier-border) !important;
-  stroke: var(--text-normal) !important;
-  stroke-width: 0.5px !important;
+  /*stroke: var(--text-normal) !important;
+  stroke-width: 0.5px !important; */
 }
 
 .node .label {
