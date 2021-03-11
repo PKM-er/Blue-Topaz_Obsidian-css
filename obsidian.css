@@ -2488,6 +2488,7 @@ span.cm-formatting-task {
   right: 0;
   transition: transform 200ms ease 80ms;
   transform: translateY(-49%);
+  z-index: 200;
 }
 
 /*file explorer columns view : slightly buggy ----*/
