@@ -284,7 +284,7 @@ to get a right-side note block
   --font-family-vault:                                                   ;/*左侧库名字体*/
   --font-family-special-tag:       "Lucida Handwriting", "Dancing Script", "Hand of Sean", "Angelina", cursive;
   --font-family-YAML:              "Lucida Handwriting", "Dancing Script", "Hand of Sean", "Angelina", cursive;
-  --font-monospace:    "Consolas", "Monaco", "Source Code Pro", monospace;
+  --font-monospace: "Consolas", "Monaco", "Source Code Pro", monospace;
 } 
 
 .theme-dark {
@@ -1459,6 +1459,7 @@ ol ol::before {
   height: 260%;
 }
 
+/*
 pre.HyperMD-list-line::before {
   content: '';
   border-left: 2px solid var(--background-modifier-border);
@@ -1466,6 +1467,7 @@ pre.HyperMD-list-line::before {
   top: 30px;
   height: 50%;
 }
+*/
 
 .cm-formatting.cm-formatting-list.cm-formatting-list-ol {
   color: var(--text-accent);
@@ -1839,6 +1841,18 @@ a:hover,
   opacity: 0.7;
   text-decoration: underline;
   color: var(--graph-unresolved);
+}
+
+.markdown-preview-view a:hover {
+  color: var(--text-accent);
+  background: var(--theme-color-translucent-1);
+  border-radius: 3px;
+  text-decoration: none !important;
+  transition: all 0.3s;
+}
+
+a.external-link {
+  text-decoration: underline;
 }
 
 .markdown-preview-view .internal-link.is-unresolved:hover {
