@@ -284,6 +284,7 @@ to get a right-side note block
   --font-family-vault:                                                   ;/*左侧库名字体*/
   --font-family-special-tag:       "Lucida Handwriting", "Dancing Script", "Hand of Sean", "Angelina", cursive;
   --font-family-YAML:              "Lucida Handwriting", "Dancing Script", "Hand of Sean", "Angelina", cursive;
+  --font-monospace:    "Consolas", "Monaco", "Source Code Pro", monospace;
 } 
 
 .theme-dark {
