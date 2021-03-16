@@ -508,7 +508,7 @@ to get a right-side note block
   --gray-1: #383a42;
   --gray-2: #383a42;
   --red: #f13d64;
-  --green: #2dd063;
+  --green: #4ae125;
   --darkgreen: #acb5b2;
   --blue: #2f90eb;
   --darkblue: #3b84e4;
@@ -517,6 +517,9 @@ to get a right-side note block
   --yellow: #e48100;
   --light-yellow: #ab9a02;
   --orange: #db9600;
+  --light-purple: #b74ff3;
+  --blue-green: #3bd4da;
+  
 
   --embed-color: #468eeb27;
   --search-result-file-title-color: #2f92e4;
@@ -1876,6 +1879,11 @@ a.external-link {
   text-shadow: none;
 }
 
+.theme-light code[class*="language-"], 
+.theme-light pre[class*="language-"] {
+  color: #000000;
+}
+
 .theme-dark code[class*="language-"], 
 .theme-dark pre[class*="language-"] {
   color: #e7e7e7;
@@ -2033,8 +2041,12 @@ pre[class*='language-'] {
   color: var(--purple) !important;
 }
 
-.token.function {
+.theme-dark .token.function {
   color: var(--light-yellow) !important;
+}
+
+.theme-light .token.function {
+  color: var(--red) !important;
 }
 
 .token.macro.property {
@@ -2045,13 +2057,22 @@ pre[class*='language-'] {
   color: var(--yellow) !important;
 }
 
-.token.regex,
-.token.variable {
+.theme-dark .token.regex,
+.theme-dark .token.variable {
   color: var(--red) !important;
 }
 
-.token.important {
+.theme-light .token.regex,
+.theme-light .token.variable {
+  color: var(--light-purple) !important;
+}
+
+.theme-dark .token.important {
   color: var(--darkblue) !important;
+}
+
+.theme-light .token.important {
+  color: var(--blue-green) !important;
 }
 
 .token.important,
