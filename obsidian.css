@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.11.6。[20210311] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.11.6, [20210311] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.11.7。[20210316] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.11.7, [20210316] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 
 /* 
@@ -306,7 +306,7 @@ to get a right-side note block
   --text-normal: #d1d1d1; 
   --text-muted: #8a8a8a;  
   --text-faint: rgb(121, 121, 121);
-  --accent-strong: #eeeeee;
+  --accent-strong: #ffffff;
   /*--text-em-color: #ff9b9b;*/
   --text-error: #e16d76;
   --text-error-hover: #c9626a;
@@ -1404,7 +1404,7 @@ mjx-container[jax='CHTML'] {
 .theme-light .cm-s-obsidian pre.HyperMD-codeblock,
 .theme-light .cm-s-obsidian span.cm-inline-code,
 .theme-light .cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end),
-.theme-light .markdown-preview-view code:not([class*='language-']) {
+.theme-light .markdown-preview-view code {
   color: #ee5f00;
   font-size: var(--font-size-edit-code) !important;
   font-family: var(--font-family-preview-edit-code);
@@ -2451,7 +2451,7 @@ span.cm-formatting-task {
 /* images : reduce displayed size of embedded files, zoom on hover */
 .markdown-preview-view img, 
 .markdown-preview-view video {
-  max-width: min(100%,800px) !important;
+  max-width: min(100%,800px);
   margin-left: auto;
   margin-right: auto;
   outline: 0px solid var(--text-accent);
@@ -2474,20 +2474,20 @@ span.cm-formatting-task {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iMCAwIDgwIDgwIj4KICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjRjJGNEY2Ii8+CiAgICA8ZyBmaWxsPSIjRkZGIj4KICAgICAgPHJlY3Qgd2lkdGg9IjIiIGhlaWdodD0iNzkiIHg9Ijc4Ii8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iMzkiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjU5Ii8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iMjAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSIyMCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjIwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iNDAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSI0MCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjQwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iNjAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSI2MCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjYwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSI3OSIgaGVpZ2h0PSIxIiB5PSIxOSIvPgogICAgICA8cmVjdCB3aWR0aD0iNzkiIGhlaWdodD0iMSIgeT0iMzkiLz4KICAgICAgPHJlY3Qgd2lkdGg9Ijc5IiBoZWlnaHQ9IjEiIHk9IjU5Ii8+CiAgICA8L2c+CiAgICA8cmVjdCB3aWR0aD0iODAiIGhlaWdodD0iMiIgeT0iNzgiIGZpbGw9IiNGRkYiLz4KICA8L2c+Cjwvc3ZnPgo=")
 }
 
-.view-content img:active {
+.view-content img:not([class="emoji"]):active {
   cursor: zoom-out;    
-  background-color: #ffffff;
   position: fixed;
-  max-height: min(100%, 91vh);
-  width: min(100%, 80vh);
   object-fit: contain;
-  top: 50%;
+  height: 100%;
+  width: 100%;
+  top: 50%;  
   left: 0;
   right: 0;
-  transition: transform 200ms ease 80ms;
-  transform: translateY(-49%);
+  bottom: 0;
+  transform: translateY(-50%);
   z-index: 200;
 }
 
