@@ -1364,7 +1364,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 .markdown-preview-view.is-readable-line-width .markdown-preview-section,
 .markdown-source-view.is-readable-line-width .CodeMirror,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
-  line-height: 30px;
+  line-height: 1.7;
   font-family: var(--font-family-major);
   text-align: justify;
 }
@@ -1530,7 +1530,6 @@ ul > li:not(.task-list-item) {
 
 .theme-dark ul > li:not(.task-list-item) {
   border-left: 2px solid var(--list-ul-block-color);
-
 }
 
 .theme-light ul > li:not(.task-list-item) {
@@ -3936,7 +3935,7 @@ g text{
 }
 
 /*emoji🙂*/
-g>g>circle, g>g>path {
+g > g > circle, g > g > path {
   stroke: #000000 !important;
 }
 
@@ -3944,7 +3943,7 @@ line.task-line{
   stroke: #6e6e6e !important;
 }
 
-g>circle{
+g > circle{
   stroke: #000000 !important;
 }
 
@@ -3956,7 +3955,7 @@ g>circle{
 /*better appearance for Andy mode plugin*/
 /*======================================*/
 /* scrollbar*/
-::-webkit-scrollbar:vertical{
+::-webkit-scrollbar:vertical {
   background-color: transparent;
   width: 8px;
 }
@@ -3977,19 +3976,19 @@ body.plugin-sliding-panes .workspace-split.mod-vertical > .workspace-leaf {
   box-shadow: none !important;
 }
 
-body.plugin-sliding-panes .mod-root .workspace-leaf.mod-active .view-header{
+body.plugin-sliding-panes .mod-root .workspace-leaf.mod-active .view-header {
   background-color: var(--background-primary);
   border-right: 3px solid var(--interactive-accent) !important;
 }
 
-body.plugin-sliding-panes .view-header-title{
+body.plugin-sliding-panes .view-header-title {
   font-size: var(--font-size-file-header-title-andy-plugin);
   letter-spacing: 0.7px;
   line-height: 1.8;
   color: var(--text-muted);
 }
 
-body.plugin-sliding-panes .view-header-icon{
+body.plugin-sliding-panes .view-header-icon {
   margin-left: -1px!important;
 }
 
@@ -3999,7 +3998,7 @@ body.plugin-sliding-panes .mod-root .workspace-leaf.mod-active .view-header-titl
   padding-top: 4px;
 }
 
-body.plugin-sliding-panes .view-actions{
+body.plugin-sliding-panes .view-actions {
   margin-left: 0px;
 }
 
@@ -4049,15 +4048,15 @@ line-height: 0.6;
 
 /*天*/
 #calendar-container td {
-  width:12.5%;
-  border-right:2px solid var(--background-secondary-alt);
+  width: 12.5%;
+  border-right: 2px solid var(--background-secondary-alt);
   padding: 0px 0px 0px 0px !important;
   line-height: 22px;
   border-radius: 0px !important;
 }
 
 #calendar-container tr {
-  border:2px solid var(--background-secondary-alt);
+  border: 2px solid var(--background-secondary-alt);
 }
 
 #calendar-container .day:not(:empty):hover{
@@ -4069,7 +4068,7 @@ line-height: 0.6;
 }
 
 /*“Today”*/
-#calendar-container .reset-button{
+#calendar-container .reset-button {
   font-size: 14px !important;
   margin: 0;
   padding: 0px 0px 0px 0px;
@@ -4079,59 +4078,59 @@ line-height: 0.6;
 }
   
 /*悬停Today*/
-#calendar-container .reset-button:hover{
-  color:var(--header-color);
+#calendar-container .reset-button:hover {
+  color: var(--header-color);
   background-color: var(--table-hover-raw-color);
 }
   
 /*悬停arrow*/
-#calendar-container .arrow:hover{
+#calendar-container .arrow:hover {
   color: var(--theme-color);
 }
   
 /*今日笔记时红点去除 today's dot*/
-#calendar-container .dot{
+#calendar-container .dot {
   stroke: transparent;
 }
   
 /*点调整 dot*/
-#calendar-container .dot-container{
+#calendar-container .dot-container {
   margin-top: -2px;
   margin-bottom: -1px;
 }
   
 /*月份调整 month*/
-#calendar-container .month{
+#calendar-container .month {
   font-size: 20px;
   line-height: 1;
 }
   
 /*年份调整 year*/
-#calendar-container .year{
+#calendar-container .year {
   font-size: 20px;
   line-height: 1;
 }
   
 /*星期数 week*/
-#calendar-container .week-num{
+#calendar-container .week-num {
   /*border-right: 2px solid var(--green) !important;*/
   background-color: var(--calendar-week-background-color);
   font-weight: 600;
 }
 
 /*星期数悬停 week hover*/
-#calendar-container .week-num:hover{
+#calendar-container .week-num:hover {
   background-color: var(--calendar-week-hover) !important;
 }
 
 /*星期数表头*//*不完善，等插件更新*//*
-#calendar-container th:not(.svelte-1lgyrog):first-child{
+#calendar-container th:not(.svelte-1lgyrog):first-child {
   background-color: var(--green) !important;
 }
 */
 
 /*隐藏scrollbar*/
-/*div.view-content::-webkit-scrollbar{
+/*div.view-content::-webkit-scrollbar {
   display: none !important;
 }*/
 
@@ -4153,7 +4152,7 @@ line-height: 0.6;
   bottom: 0px !important;
 }
 
-.copy-code-button:hover{
+.copy-code-button:hover {
   background-color: var(--table-hover-color) !important;
   color: var(--accent-strong) !important;
 }
@@ -4161,7 +4160,7 @@ line-height: 0.6;
 /*=====================================*/
 /*frontmatter specification 同义词等声明*/
 /*=====================================*/
-pre.frontmatter.language-yaml:before{
+pre.frontmatter.language-yaml:before {
   content: "Specification";
   font-family: var(--font-family-YAML);
   top: 1px;
@@ -4169,19 +4168,19 @@ pre.frontmatter.language-yaml:before{
   color: var(--color-specification);
 }
 
-.frontmatter-container{
+.frontmatter-container {
   margin: 0;
 }
 
 /*适配copy code插件*/
-.markdown-preview-view pre{
+.markdown-preview-view pre {
   padding: 6px 22px;
 }
 
 /*====================*/
 /*day planner plugin*/
 /*====================*/
-.day-planner-status-bar-text{
+.day-planner-status-bar-text {
   color: var(--text-accent);
   font-weight: 600;
 }
@@ -4200,7 +4199,7 @@ pre.frontmatter.language-yaml:before{
   display: none;
 }
 
-.aside__line{
+.aside__line {
   background: var(--day-planner-dot) !important;
   left: 35px !important;
 }
@@ -4228,9 +4227,9 @@ pre.frontmatter.language-yaml:before{
   background-color: var(--day-planner-timeline) !important;
 }
 
-.event_item:hover{
+.event_item:hover {
   background-color: var(--day-planner-item-hover) !important;
-  box-shadow:0px 0px 52px -18px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 52px -18px rgba(0, 0, 0, 0.75);
 }
 
 .event_item_color1 {
@@ -4584,7 +4583,7 @@ div[alt="-sbq"] .markdown-preview-view p {
 /* Image Flags Snippet by Lithou
 http://github.com/lithou/sandbox */
 
-div{
+div {
   --coremarg: 1%; 
   --extramarg: 1%; /* This margin is used for any added margin between items */
   --defaultwidth: 60%; /*This is the default width for core flags such as the "side" and "tape" */
@@ -4802,7 +4801,7 @@ aside {
 }
 
 aside > h1, 
-aside > h2{
+aside > h2 {
   font-weight:normal !important;
   font-size:16px !important;
   border: 1px solid;
