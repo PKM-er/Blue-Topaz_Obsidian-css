@@ -1446,7 +1446,7 @@ ol ol::before*/ {
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;
   height: 100%;
-  left: 7px;
+  margin-left: 3px;
 }
 
 /*
