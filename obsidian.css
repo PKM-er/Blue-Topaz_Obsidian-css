@@ -323,6 +323,7 @@ to get a right-side note block
   --search-text: #e0e0e0;
   --folder-title: #ffffff;
   --mark-highlight: #e481007c;
+  --background-search-result: #444444;
 
   --gray-1: #5C6370;
   --gray-2: #abb2bf;
@@ -504,6 +505,7 @@ to get a right-side note block
   --search-text: #000000;
   --folder-title: #000000;
   --mark-highlight: #ffd298d8;  
+  --background-search-result: #fdfdfd;
 
   --gray-1: #383a42;
   --gray-2: #383a42;
@@ -1112,7 +1114,7 @@ span.search-result-file-matched-text {
 
 /* background of search result */
 .search-result {
-  background-color: var(--background-primary-alt);
+  background-color: var(--background-search-result);
   border-radius: 5px;
 }
 
