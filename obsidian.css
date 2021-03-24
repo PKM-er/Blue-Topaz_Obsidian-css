@@ -1753,18 +1753,18 @@ span.cm-formatting.cm-formatting-strong.cm-em.cm-strong {
   position: absolute;
   transform: scale(1); /* makes the content smaller */
   max-height: 800px;    /* was 300 */
-  min-height: 100px;
+  min-height: 50px;
   width: 500px; /* was 400 */
   overflow: overlay;      
   padding: 0;
-  border-bottom: none;
+  box-shadow: 0 0 6px 6px var(--theme-color-translucent-1);
 }
 
-/*
+
 .popover.hover-popover .markdown-embed  {
-  height: 100%;
+  height: 500px;
 }
-*/
+
 
 /*table from https://snippets.cacher.io/snippet/018387c872dc39277996 by eluotao*/
 tbody>tr:nth-child(odd) {
@@ -4003,7 +4003,7 @@ g > circle{
 }
   
 ::-webkit-scrollbar-thumb:horizontal {
-  background-color: var(--theme-color);
+  background-color: var(--theme-color-translucent);
 }
 
 ::-webkit-scrollbar:horizontal {
