@@ -1100,8 +1100,11 @@ body {
 /*reduce search result margin*/
 .search-result-file-match {
   padding: 0 3px;
-  width: calc(100% - 5px);
-  left: -5px;
+  width: 101%;
+  left: -9px;
+  background: var(--background-search-result);
+  color: var(--text-normal);
+  border-radius: 6px;
 }
 
 .backlink-pane .search-result-container {
@@ -1110,10 +1113,26 @@ body {
 
 .search-result-file-matches {
   border-bottom: none;
+  margin-bottom: 0px;
 }
 
 .search-result-file-matched-text {
   color: var(--text-muted); 
+}
+
+.tree-item-self.is-clickable:hover {
+  background-color: transparent;
+  color: var(--search-result-file-title-color);
+}
+
+.backlink-pane > .tree-item-self.is-clickable:hover {
+  background-color: var(--background-secondary-alt);
+  color: var(--text-normal);
+}
+
+.search-result-file-match:hover {
+  background-color: var(--background-secondary-alt);
+  color: var(--text-normal);
 }
 
 span.search-result-file-matched-text {
@@ -1124,9 +1143,16 @@ span.search-result-file-matched-text {
 
 /* background of search result */
 .search-result {
-  background-color: var(--background-search-result);
   border-radius: 5px;
   margin: 0 4px 0 1px;
+}
+
+.tree-item.search-result .tree-item-self.search-result-file-title.is-clickable {
+  padding-left: 15px;
+}
+
+.search-result-file-match:after {
+  display: none;
 }
 
 .search-input {
