@@ -1143,11 +1143,11 @@ span.search-result-file-matched-text {
   margin-right: 5px;
   margin-bottom: 1px;
   filter: hue-rotate(var(--theme-color));
-  transition: background-color 200ms ease-out 0s;
+  transition: all 500ms;
   cursor: pointer;
 }
 .markdown-preview-view .task-list-item-checkbox:checked {
-  border:none;
+  border: none;
   background-color: var(--interactive-accent);
 }
 .markdown-preview-view .task-list-item-checkbox:hover {
