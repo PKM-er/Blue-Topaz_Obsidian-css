@@ -1090,9 +1090,9 @@ body {
   -webkit-font-smoothing: auto;
 }
 
-/*==================*/
-/*=======搜索=======*/
-/*==================*/
+/*==========================*/
+/*=======search panel=======*/
+/*==========================*/
 .search-result-file-title {
   color: var(--search-result-file-title-color);
 }
@@ -1100,6 +1100,16 @@ body {
 /*reduce search result margin*/
 .search-result-file-match {
   padding: 0 3px;
+  width: calc(100% - 5px);
+  left: -5px;
+}
+
+.backlink-pane .search-result-container {
+  margin-left: 3px;
+}
+
+.search-result-file-matches {
+  border-bottom: none;
 }
 
 .search-result-file-matched-text {
@@ -1116,6 +1126,7 @@ span.search-result-file-matched-text {
 .search-result {
   background-color: var(--background-search-result);
   border-radius: 5px;
+  margin: 0 4px 0 1px;
 }
 
 .search-input {
