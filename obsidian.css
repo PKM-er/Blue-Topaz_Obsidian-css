@@ -1125,6 +1125,16 @@ body {
   color: var(--search-result-file-title-color);
 }
 
+.tag-container .tree-item-self.tag-pane-tag.is-clickable:hover {
+  background-color: var(--theme-color-translucent-1);
+  color: var(--text-normal);
+}
+
+.outline .tree-item-self.is-clickable:hover {
+  background-color: var(--theme-color-translucent-1);
+  color: var(--text-normal);
+}
+
 .backlink-pane > .tree-item-self.is-clickable:hover {
   background-color: var(--background-secondary-alt);
   color: var(--text-normal);
