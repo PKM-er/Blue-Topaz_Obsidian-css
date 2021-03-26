@@ -1423,12 +1423,6 @@ pre.HyperMD-list-line.HyperMD-list-line {
   text-align: start;
 }
 
-/*preview line height*/
-p {
-  line-height: 1.7;
-  text-align: justify;
-}
-
 /*list*/
 li {
   line-height: 28px;
