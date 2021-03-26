@@ -170,49 +170,50 @@ to get a right-side note block
 ```css
 /* Blockquote header */
 .markdown-preview-view blockquote {
-   position: relative; /* for pseudos */
-   color: var(--ztys);
-   font-size: 1rem;
-   font-weight: normal;
-   line-height: 1.5;
-   margin: 0;
-   border: solid 2px;
-   border-radius:20px;
-   padding: 15px;
+  position: relative; /* for pseudos */
+  color: var(--theme-color);
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  margin: 0;
+  border: 3px solid;
+  border-radius:20px;
+  padding: 10px 15px;
+  background: var(--background-primary);
+}
+
+.theme-dark .markdown-preview-view blockquote {
+  background-color: var(--background-primary) !important;
 }
 
 .markdown-preview-view blockquote p{
-  color: var(--text-normal);
-  font-size: 16px;
+ color: var(--text-normal);
+ font-size: 16px;
 }
 
 .markdown-preview-view blockquote:after {
-   content:"";
-   position: absolute;
-   border: 2px solid var(--ztys);
-   border-radius: 45px 0 0 0;
-   width: 60px;
-   height: 60px;
-   bottom: -62px;
-   left: 20px;
-   border-bottom: none;
-   border-left: none;
-   border-right: none;
-   z-index: 3; 
+  content:"";
+  position: absolute;
+  border: 3px solid var(--theme-color);
+  border-radius: 35px 0 0 0;
+  width: 50px;
+  height: 55px;
+  bottom: -58px;
+  left: 25px;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  z-index: 3; 
 }
 
 .markdown-preview-view blockquote:before {
-   content:"";
-   position: absolute;
-   width: 25px;
-   border: 10px solid var(--background-primary);
-   bottom: -3px;
-   left: 30px;
-   z-index: 2;
-}
-
-.markdown-preview-view blockquote :first-letter {
- margin-left:2em;
+  content:"";
+  position: absolute;
+  width: 25px;
+  border: 10px solid var(--background-primary);
+  bottom: -7px;
+  left: 20px;
+  z-index: 2;
 }
 ```
 ![](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/blockquote.jpg?raw=true)
