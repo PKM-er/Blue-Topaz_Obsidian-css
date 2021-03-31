@@ -1756,17 +1756,10 @@ span.cm-formatting.cm-formatting-strong.cm-em.cm-strong {
 .popover.hover-popover {
   position: absolute;
   transform: scale(1); /* makes the content smaller */
-  max-height: 800px;    /* was 300 */
   min-height: 50px;
   width: 500px; /* was 400 */
-  overflow: overlay;      
   padding: 0;
-  box-shadow: 0 0 6px 6px var(--theme-color-translucent-1);
-}
-
-
-.popover.hover-popover .markdown-embed  {
-  height: 500px;
+  box-shadow: 0 0 3px 3px var(--theme-color-translucent-1);
 }
 
 
