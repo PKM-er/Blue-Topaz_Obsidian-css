@@ -23,6 +23,34 @@
 #questions
 #ideas
 
+==========================
+========图片 images========
+==========================
+用法
+
+在图片末尾加上 “|left” 或 “|right” 可以让图片左或右对齐
+xxx.jpg|left
+
+如果同时调整图片大小，需要把调整大小的数值放在最后
+xxx.png|right|200
+
+使用 “|inlineL” 或 “|inlineR” 可以将图片嵌入在文字中,L左，R右
+xxx.png|inlineL
+
+Usage
+
+Typing "|left" or "|right" at the end of the image file can make the image shown on left or right.
+For example,
+xxx.jpg|left
+
+You can also change the image size with the position. You should put the "|number" at the end.
+For example,
+xxx.png|right|200 
+
+
+Use "inlineL" or "inlineR" to embed the image on the left or right.
+xxx.png|inlineL
+
 
 ===========================
 =====笔记框 Note blocks=====
@@ -192,28 +220,17 @@ ol > li {
 
 
 =========================================
-=========tapes pins and stickies=========
+================stickies=================
 =========================================
 thanks to death_au, Gabroel and Lithou from Obsidian Members Group on Discord 
 
 用法
-
-在图片后加上 #tape 或者 #pin
-形如
-![[Pasted image.png#pin]]
-可以获得特别的效果
+Usage
 
 用以下格式，可以得到不同的样式
 <p class="stickies"\> 你自己的文字 </p>
 <p class="stickies2"\> 你自己的文字 </p>
 <p class="to-recall"\> 你自己的文字 </p>
-
-
-USAGE
-add #tape or #pin at the end of an image,
-like
-![[Pasted image.png#pin]]
-Then you can get a pin-like style for the image
 
 Use the following formats, you can obtain some special styles.
 <p class="stickies"\> Your words </p>
@@ -221,11 +238,6 @@ Use the following formats, you can obtain some special styles.
 <p class="to-recall"\> Your words </p>
 
 
-add Image Flags Snippet by Lithou
-http://github.com/lithou/sandbox
-
-Usage:
-Please see https://github.com/Lithou/Sandbox
 
 =============================
 ==== <aside> </aside> =======
@@ -2561,8 +2573,6 @@ span.cm-formatting-task {
 .view-content img:not([class="emoji"]) {
   cursor: zoom-in;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .view-content img:not([class="emoji"]):active {
@@ -4326,7 +4336,10 @@ pre.frontmatter.language-yaml:before {
 /* =========tapes pins and stickies=========*/
 /* =========================================*/
 /* thanks to death_au, Gabroel and Lithou from Obsidian Members Group on Discord */
-div[src$="#tape"]::before {
+
+/*not word now*/
+/*
+img[src$="#tape"]::before {
   content: "";
   display: block;
   width: 100px;
@@ -4334,7 +4347,7 @@ div[src$="#tape"]::before {
   position: relative;
   top: 10px;
   margin: auto;
-  background-color: var(--tape-color); /*here you can chosse the scotch tape background*/
+  background-color: var(--tape-color); /*here you can chosse the scotch tape background
   -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
   -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
   box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
@@ -4344,17 +4357,17 @@ div[src$="#tape"]::before {
   0% 100%, 2% 90%, 0% 80%, 2% 70%, 0% 60%, 2% 50%, 0% 40%, 2% 30%, 0% 20%, 2% 10%, 0% 0%);
 }
 
-div[src$="#tape"] {
-  float: right; /*here you can choose if image will float to the right or left*/
+img[src$="#tape"] {
+  float: right; /*here you can choose if image will float to the right or left
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(2deg);
-  width: 400px; /*you can change the image max width here*/
+  width: 400px; /*you can change the image max width here
 }
 
-div[src$="#tape"]:active {
+img[src$="#tape"]:active {
   transform: scale(2);
   overflow: auto;
   margin-left: auto;
@@ -4365,7 +4378,7 @@ div[src$="#tape"]:active {
   padding: 30px;
 }
 
-/* Push Pin */
+/* Push Pin 
 div[src$="#pin"] {
   position: relative;
   float: right;
@@ -4402,6 +4415,81 @@ div[src$="#pin"]:active {
   z-index: 100;
   padding: 20px;
 }
+
+
+div[alt="-sbq"] {
+  position: relative;
+  right: -5px;
+  float: right;
+  box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
+  width: 30%;
+  background: #edec92;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(2deg);
+  transition: all 1s ease;
+  z-index: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+div[alt="-sbq"]::after {
+  content: "";
+  display: block;
+  height: 32px;
+  width: 2px;
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  z-index: 1;
+  border-radius: 50%;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border: 1px;
+  box-shadow: inset -10px -10px 10px #f0b7a4, inset 3px 3px 5px;
+}
+
+
+div[alt="-sbq"]:hover {
+  border-bottom-left-radius: 225px 15px;
+  border-bottom-right-radius: 15px 255px;
+  border-top-left-radius: 15px 225px;
+  border-top-right-radius: 255px 15px;
+  box-shadow: 5px 5px rgba(0,0,0,.25);
+  }
+
+div[alt="-sbq"]:active {
+  transform: scale(1.5);
+  z-index: 100;
+}
+
+div[alt="-sbq"] div.markdown-embed-link {
+  visibility: hidden;
+}
+
+div[alt="-sbq"] div.markdown-embed {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+div[alt="-sbq"] .markdown-preview-view {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  overflow: hidden;
+}
+div[alt="-sbq"] .markdown-preview-view p {
+  letter-spacing: -1px;
+  word-wrap: break-word;
+  font-size: 18px;
+  font-family: Input Sans;
+  text-align: left;
+  line-height: 1;
+  color: black;
+}
+
+*/
 
 .stickies {
   text-align: center;
@@ -4500,78 +4588,6 @@ div[src$="#pin"]:active {
   box-shadow: inset -10px -10px 10px #f0b7a4, inset 3px 3px 5px;
 }
 
-div[alt="-sbq"] {
-  position: relative;
-  right: -5px;
-  float: right;
-  box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
-  width: 30%;
-  background: #edec92;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(2deg);
-  transition: all 1s ease;
-  z-index: 1;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-div[alt="-sbq"]::after {
-  content: "";
-  display: block;
-  height: 32px;
-  width: 2px;
-  position: absolute;
-  left: 50%;
-  top: -10px;
-  z-index: 1;
-  border-radius: 50%;
-  display: inline-block;
-  height: 15px;
-  width: 15px;
-  border: 1px;
-  box-shadow: inset -10px -10px 10px #f0b7a4, inset 3px 3px 5px;
-}
-
-
-div[alt="-sbq"]:hover {
-  border-bottom-left-radius: 225px 15px;
-  border-bottom-right-radius: 15px 255px;
-  border-top-left-radius: 15px 225px;
-  border-top-right-radius: 255px 15px;
-  box-shadow: 5px 5px rgba(0,0,0,.25);
-  }
-
-div[alt="-sbq"]:active {
-  transform: scale(1.5);
-  z-index: 100;
-}
-
-div[alt="-sbq"] div.markdown-embed-link {
-  visibility: hidden;
-}
-
-div[alt="-sbq"] div.markdown-embed {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-div[alt="-sbq"] .markdown-preview-view {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  overflow: hidden;
-}
-div[alt="-sbq"] .markdown-preview-view p {
-  letter-spacing: -1px;
-  word-wrap: break-word;
-  font-size: 18px;
-  font-family: Input Sans;
-  text-align: left;
-  line-height: 1;
-  color: black;
-}
-
 .to-recall {
   position: relative;
   float: left;
@@ -4633,16 +4649,18 @@ div[alt="-sbq"] .markdown-preview-view p {
 /* Image Flags Snippet by Lithou
 http://github.com/lithou/sandbox */
 
+/*not work now*/
+/*
 div {
   --coremarg: 1%; 
-  --extramarg: 1%; /* This margin is used for any added margin between items */
-  --defaultwidth: 60%; /*This is the default width for core flags such as the "side" and "tape" */
+  --extramarg: 1%; /* This margin is used for any added margin between items 
+  --defaultwidth: 60%; /*This is the default width for core flags such as the "side" and "tape" 
 }
 
   
 
-/* Core Flags */
-  /*side */
+/* Core Flags 
+  /*side 
       div[alt*="+side"]{
           position: relative;
           width: var(--defaultwidth);
@@ -4651,7 +4669,7 @@ div {
           margin-left: var(--coremarg);
       }
       
-  /*tape */
+  /*tape 
       div[alt*="+tape"] {
           position: relative;
           float: right;
@@ -4672,7 +4690,7 @@ div {
           width: 100px;
           height: 30px;
           top: 12px;
-          background: rgba(255, 234, 118, 0.377); /*here you can chosse the scotch tape background*/
+          background: rgba(255, 234, 118, 0.377); /*here you can chosse the scotch tape background
           -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
           -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
           box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
@@ -4701,7 +4719,7 @@ div {
           height: 5px;
           top: 2px;
       }
-  /* Push Pin */
+  /* Push Pin 
       div[alt*="+pin"] {
           position: relative;
           float: right;
@@ -4724,12 +4742,12 @@ div {
           border: solid #336699 8px;
           border-radius: 50%;
           box-shadow: #274d74 -5px 3px 1px;}
-  /* Portrait and Landscape */
+  /* Portrait and Landscape 
       div[alt*="+portrait"]{
           position: relative;
           width: calc(var(--defaultwidth)/2);
           float: right;
-          /* background-color:blue; This setting will create a border effect of set color */
+          /* background-color:blue; This setting will create a border effect of set color 
           clip-path: ellipse(36% 46% at 50% 50%);}
       div[alt*="+portrait"]>img{
           vertical-align: middle;
@@ -4738,13 +4756,13 @@ div {
           position: relative;
           width: var(--defaultwidth);
           float: right;
-          /* background-color:blue; This setting will create a border effect of set color */
+          /* background-color:blue; This setting will create a border effect of set color 
           clip-path: ellipse(46% 36% at 50% 50%);}
       div[alt*="+landscape"]>img{
           vertical-align: middle;
           clip-path: ellipse(45% 35% at 50% 50%);}
 
-  /* Banner and HR */
+  /* Banner and HR 
       div[alt*="+banner"]{
           height: 100px;
           overflow: hidden;
@@ -4767,7 +4785,7 @@ div {
           }
       
 
-  /*Custom Core Flags */
+  /*Custom Core Flags 
   div[alt*="+custom1"]{
       position: relative;
       width: var(--defaultwidth);
@@ -4786,8 +4804,8 @@ div {
 
 
 
-/* Modifier Flags */
-  /* Orientation and position */
+/* Modifier Flags 
+  /* Orientation and position 
       div[alt*="-left"]{
           float: left;
           margin: 0px;
@@ -4799,7 +4817,7 @@ div {
       div[alt*="-fix"]{position: fixed;}
       div[alt*="-abs"]{position: absolute;}
 
-  /* Size */
+  /* Size 
       div[alt*="-thumb"]{width: 11.50%;}
       div[alt*="-sm"]{width: 24%;}
       div[alt*="-med"]{width: 32.3333%;}
@@ -4807,7 +4825,7 @@ div {
       div[alt*="-huge"]{width: 67%;}
       div[alt*="-cwidth"]{float: none;margin-left: -10%;width: 120%;}
 
-/* Borders */
+/* Borders 
 div[alt*="-border1"]>img{border: solid black 3px;}
 div[alt*="-border2"]>img{border: solid white 3px;}
 div[alt*="-bradius1"]>img{border-radius: 5px;}
@@ -4819,7 +4837,7 @@ div[alt*="-bradiusbl"]>img{border-bottom-left-radius: 20px;}
 div[alt*="-bthick"]>img{border-width: 5px;}
 div[alt*="-bthin"]>img{border-width: 1px;}
 
-/* Div Borders */
+/* Div Borders 
 div[alt*="-divborder1"]{border: solid #336699 2px;}
 div[alt*="-divborder2"]{border: solid black 2px;}
 div[alt*="-divbradius1"]{border-radius: 5px;}
@@ -4839,6 +4857,7 @@ div[alt*="-glow"] > img{
 div[alt*="-nofloat"] {
   float:none
 }
+*/
 
 
 /* thanks to dcoales from obsidian member group on discord */
@@ -4886,4 +4905,26 @@ aside > h2 {
 /* ================================== */
 .command-list-view-row-selected {
   background-color: gray !important;
+}
+
+
+/* ================================== */
+/* ==========image positions========= */
+/* ================================== */
+img[alt$="left"] {
+  margin-left: 0;
+}
+
+img[alt$="right"] {
+  margin-right: 0;
+}
+
+img[alt$="inlineL"] {
+  float: left;
+  padding: 8px 8px 8px 0px;
+}
+
+img[alt$="inlineR"] {
+  float: right;
+  padding: 8px 0px 8px 8px;
 }
