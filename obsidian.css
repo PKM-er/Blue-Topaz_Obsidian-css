@@ -1080,6 +1080,12 @@ input.search-input {
   background-color: var(--background-secondary-alt);
 }
 
+.nav-folder.mod-root > .nav-folder-title:hover {
+  background-color: var(--theme-color);
+  color: white;
+  opacity: 1;
+}
+
 /*==== separators =====*/
 .workspace-split.mod-root .workspace-split.mod-vertical .workspace-leaf-content {
   padding-right: 0px;
