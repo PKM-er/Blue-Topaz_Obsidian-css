@@ -1449,6 +1449,7 @@ mjx-container[jax='CHTML'] {
   color: #e48900;
   font-size: var(--font-size-edit-code) !important;
   font-family: var(--font-family-preview-edit-code);
+  text-align: start;
 }
 
 .theme-light .cm-s-obsidian pre.HyperMD-codeblock,
@@ -1458,6 +1459,7 @@ mjx-container[jax='CHTML'] {
   color: #ee5f00;
   font-size: var(--font-size-edit-code) !important;
   font-family: var(--font-family-preview-edit-code);
+  text-align: start;
 }
 
 /*bold code text except code language*/
