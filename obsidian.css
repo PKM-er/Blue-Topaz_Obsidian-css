@@ -31,17 +31,42 @@
 在图片末尾加上 “|left” 或 “|right” 可以让图片左或右对齐
 xxx.jpg|left
 
+-------------------
+可用变体：
+left/Left/LEFT/L
+right/Right/RIGHT/R
+
+如：xxx.png|L
+-------------------
+
+
 如果同时调整图片大小，需要把调整大小的数值放在最后
 xxx.png|right|200
 
 使用 “|inlineL” 或 “|inlineR” 可以将图片嵌入在文字中,L左，R右
 xxx.png|inlineL
 
+-------------------
+可用变体：
+inlineL/inlL/InlL
+inlineR/inlR/InlR
+
+如：xxx.png|inlR
+-------------------
+
 Usage
 
 Typing "|left" or "|right" at the end of the image file can make the image shown on left or right.
 For example,
 xxx.jpg|left
+
+------------------------
+The variants you can use：
+left/Left/LEFT/L
+right/Right/RIGHT/R
+
+e.g. xxx.png|L
+------------------------
 
 You can also change the image size with the position. You should put the "|number" at the end.
 For example,
@@ -51,6 +76,13 @@ xxx.png|right|200
 Use "inlineL" or "inlineR" to embed the image on the left or right.
 xxx.png|inlineL
 
+----------------------
+The variants you can use：
+inlineL/inlL/InlL
+inlineR/inlR/InlR
+
+e.g. xxx.png|InlL
+----------------------
 
 ===========================
 =====笔记框 Note blocks=====
@@ -2581,6 +2613,7 @@ span.cm-formatting-task {
   object-fit: contain;
   height: 100%;
   width: 100%;
+  padding: 0;
   top: 50%;  
   left: 0;
   right: 0;
@@ -4907,24 +4940,31 @@ aside > h2 {
   background-color: gray !important;
 }
 
-
-/* ================================== */
-/* ==========image positions========= */
-/* ================================== */
-img[alt$="left"] {
+/* image position*/
+img[alt$="left"],
+img[alt$="Left"],
+img[alt$="LEFT"],
+img[alt$="L"] {
   margin-left: 0;
 }
 
-img[alt$="right"] {
+img[alt$="right"],
+img[alt$="Right"],
+img[alt$="RIGHT"],
+img[alt$="R"] {
   margin-right: 0;
 }
 
-img[alt$="inlineL"] {
+img[alt$="inlineL"],
+img[alt$="inlL"],
+img[alt$="InlL"] {
   float: left;
   padding: 8px 8px 8px 0px;
 }
 
-img[alt$="inlineR"] {
+img[alt$="inlineR"],
+img[alt$="inlR"],
+img[alt$="InlR"] {
   float: right;
   padding: 8px 0px 8px 8px;
 }
