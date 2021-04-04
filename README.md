@@ -29,6 +29,69 @@ A blue theme for **Obsidian**. Blue Topaz is not a precious gem, like obsidian�
 #ideas
 ```
 ```
+
+
+==========================
+========图片 images========
+==========================
+用法
+
+在图片末尾加上 “|left” 或 “|right” 可以让图片左或右对齐
+xxx.jpg|left
+
+-------------------
+可用变体：
+left/Left/LEFT/L
+right/Right/RIGHT/R
+
+如：xxx.png|L
+-------------------
+
+
+如果同时调整图片大小，需要把调整大小的数值放在最后
+xxx.png|right|200
+
+使用 “|inlineL” 或 “|inlineR” 可以将图片嵌入在文字中,L左，R右
+xxx.png|inlineL
+
+-------------------
+可用变体：
+inlineL/InlineL/INLINEL/inlL
+inlineR/InlineR/INLINER/inlR
+
+如：xxx.png|inlR
+-------------------
+
+Usage
+
+Typing "|left" or "|right" at the end of the image file can make the image shown on left or right.
+For example,
+xxx.jpg|left
+
+---------------------------
+The variants you can use：
+left/Left/LEFT/L
+right/Right/RIGHT/R
+
+e.g. xxx.png|L
+---------------------------
+
+You can also change the image size with the position. You should put the "|number" at the end.
+For example,
+xxx.png|right|200 
+
+
+Use "inlineL" or "inlineR" to embed the image on the left or right.
+xxx.png|inlineL
+
+-----------------------------
+The variants you can use：
+inlineL/InlineL/INLINEL/inlL
+inlineR/InlineR/INLINER/inlR
+
+e.g. xxx.png|InlL
+-----------------------------
+
 ===========================
 =====笔记框 Note blocks=====
 ===========================
@@ -106,21 +169,9 @@ A blue theme for **Obsidian**. Blue Topaz is not a precious gem, like obsidian�
 
 
 =========================================
-=========tapes pins and stickies=========
+================stickies=================
 =========================================
-```
-thanks to death_au, Gabroel and Lithou from Obsidian Members Group on Discord 
-
-用法
-
-在图片后加上 #tape 或者 #pin
-形如
-```
-![[Pasted image.png#pin]]
-```
-可以获得特别的效果
-
-用以下格式，可以得到不同的样式
+手动输入以下格式，可以得到不同的样式
 ```
 <p class="stickies"\> 你自己的文字 </p>
 <p class="stickies2"\> 你自己的文字 </p>
@@ -128,31 +179,20 @@ thanks to death_au, Gabroel and Lithou from Obsidian Members Group on Discord
 ```
 
 USAGE
-add #tape or #pin at the end of an image,
-like
-```
-![[Pasted image.png#pin]]
-```
-Then you can get a pin-like style for the image
-
-Use the following formats, you can obtain some special styles.
+Typing the following formats, you can obtain some special styles.
 ```
 <p class="stickies"\> Your words </p>
 <p class="stickies2"\> Your words </p>
 <p class="to-recall"\> Your words </p>
 ```
 
-add Image Flags Snippet by Lithou
-http://github.com/lithou/sandbox
-
-Usage:
-Please see https://publish.obsidian.md/lithousandbox/Image+Flags+(Core+Documentation)
 
 ```
 =============================
 ==== <aside> </aside> =======
 =============================
 ```
+
 thanks to dcoales from obsidian member group on discord  
 https://discord.com/channels/686053708261228577/702656734631821413/794236352857374764
 
