@@ -48,8 +48,8 @@ xxx.png|inlineL
 
 -------------------
 可用变体：
-inlineL/inlL/InlL
-inlineR/inlR/InlR
+inlineL/InlineL/INLINEL/inlL
+inlineR/InlineR/INLINER/inlR
 
 如：xxx.png|inlR
 -------------------
@@ -60,13 +60,13 @@ Typing "|left" or "|right" at the end of the image file can make the image shown
 For example,
 xxx.jpg|left
 
-------------------------
+---------------------------
 The variants you can use：
 left/Left/LEFT/L
 right/Right/RIGHT/R
 
 e.g. xxx.png|L
-------------------------
+---------------------------
 
 You can also change the image size with the position. You should put the "|number" at the end.
 For example,
@@ -76,13 +76,13 @@ xxx.png|right|200
 Use "inlineL" or "inlineR" to embed the image on the left or right.
 xxx.png|inlineL
 
-----------------------
+-----------------------------
 The variants you can use：
-inlineL/inlL/InlL
-inlineR/inlR/InlR
+inlineL/InlineL/INLINEL/inlL
+inlineR/InlineR/INLINER/inlR
 
 e.g. xxx.png|InlL
-----------------------
+-----------------------------
 
 ===========================
 =====笔记框 Note blocks=====
@@ -4956,15 +4956,17 @@ img[alt$="R"] {
 }
 
 img[alt$="inlineL"],
-img[alt$="inlL"],
-img[alt$="InlL"] {
+img[alt$="InlineL"],
+img[alt$="INLINEL"],
+img[alt$="inlL"] {
   float: left;
   padding: 8px 8px 8px 0px;
 }
 
 img[alt$="inlineR"],
-img[alt$="inlR"],
-img[alt$="InlR"] {
+img[alt$="InlineR"],
+img[alt$="INLINER"],
+img[alt$="inlR"] {
   float: right;
   padding: 8px 0px 8px 8px;
 }
