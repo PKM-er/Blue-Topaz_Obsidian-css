@@ -89,7 +89,7 @@ The variants you can use：
 inlineL/InlineL/INLINEL/inlL
 inlineR/InlineR/INLINER/inlR
 
-e.g. xxx.png|InlL
+e.g. xxx.png|inlL
 -----------------------------
 
 ===========================
