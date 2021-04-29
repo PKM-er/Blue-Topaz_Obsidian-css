@@ -3063,9 +3063,9 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-quote {
   color: var(--red) !important;
 }
 
-.cm-formatting.cm-formatting-quote  {
+div:not(.CodeMirror-activeline) > .HyperMD-quote,
+div.CodeMirror-activeline > .HyperMD-quote {
   border-left: 7px solid var(--theme-color);
-  padding: 0.34em 0 0.12em 0;
 }
 
 /* thanks to Klaas from Discord *//*
