@@ -1617,8 +1617,8 @@ ul > li:not(.task-list-item) {
   padding-left: 6px;
   border-radius: 5px;
   width: fit-content;
-  margin-bottom: 8px;
-  margin-top: 3px;
+  margin-bottom: 6px;
+  margin-top: 4px;
   padding-right: 6px;
   word-wrap: break-word;
   word-break: break-word;
@@ -1662,10 +1662,10 @@ ol > li {
   margin-left: -5px;
   padding-left: 6px;
   border-radius: 5px;
-  margin-bottom: 8px;
-  margin-top: 3px;
+  margin-bottom: 6px;
+  margin-top: 4px;
   padding-right: 6px;
-  transition:all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 } 
 
 .theme-dark ol > li {
