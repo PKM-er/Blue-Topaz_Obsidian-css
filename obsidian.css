@@ -3084,6 +3084,7 @@ div > .HyperMD-quote:active {
 /***************************************/
 /* Hide right side bar */
 /***************************************/
+/*
 .workspace-ribbon.mod-right:not(:hover) {
   width: 9px;
   transition: all 300ms ease-in-out;
@@ -3092,6 +3093,7 @@ div > .HyperMD-quote:active {
 .workspace-split.mod-right-split {
   margin-right: 9px;
 }
+*/
 
 /*change collapse icon position in left side*/
 .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn{
