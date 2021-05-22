@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.12.2。[20210506] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.12.2, [20210506] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.12.3。[20210522] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.12.3, [20210522] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 
 /* 
@@ -356,6 +356,7 @@ to get a right-side note block
   --text-error: #e16d76;
   --text-error-hover: #c9626a;
   --text-highlight-bg: #e481007c;
+  --text-search-highlight-bg: #bb4361;
   --text-selection: #47a5914d;
   --text-on-accent: #dcddde;
   --interactive-normal: #20242b;
@@ -539,6 +540,7 @@ to get a right-side note block
   --text-error: #e75545;
   --text-error-hover: #f86959;
   --text-highlight-bg: #ffc16fd8;
+  --text-search-highlight-bg: #ffd1dd;
   --text-selection: #66bbaa59;
   --text-on-accent: #f2f2f2;
   --interactive-normal: #eaeaeb;
@@ -1201,7 +1203,7 @@ span.search-result-file-matched-text {
   color: var(--search-text);
   background-color: var(--text-highlight-bg);
   opacity: 0.8;
-  }
+}
 
 /* background of search result */
 .search-result {
@@ -1211,6 +1213,10 @@ span.search-result-file-matched-text {
 
 .tree-item.search-result .tree-item-self.search-result-file-title.is-clickable {
   padding-left: 15px;
+}
+
+span.obsidian-search-match-highlight {
+  background-color: var(--text-search-highlight-bg)!important;
 }
 
 .search-result-file-match:after {
