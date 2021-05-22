@@ -328,7 +328,8 @@ to get a right-side note block
   --font-family-vault:                                                   ;/*左侧库名字体*/
   --font-family-special-tag:       "Lucida Handwriting", "Dancing Script", "Hand of Sean", "Angelina", cursive;
   --font-family-YAML:              "Lucida Handwriting", "Dancing Script", "Hand of Sean", "Angelina", cursive;
-  --font-monospace: "Consolas", "Monaco", "Source Code Pro", monospace;
+  --font-monospace:               "Consolas", "Monaco", "Source Code Pro", monospace;
+  --mermaid-font-family:      Segoe UI, "Microsoft YaHei", "trebuchet ms", verdana, Arial, cursive;
 } 
 
 .theme-dark {
@@ -3301,8 +3302,7 @@ pre.language-note-cloze::before {
 /*======== optionnal mermaid style below ========*/
 
 .label {
-  font-family: Segoe UI, "trebuchet ms", verdana, arial, Fira Code, consolas,
-    monospace !important;
+  font-family: var(--mermaid-font-family) !important;
   color: var(--text-normal) !important;
 }
 
@@ -3365,7 +3365,7 @@ div.mermaidTooltip {
   text-align: center !important;
   max-width: 200px !important;
   padding: 2px !important;
-  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  font-family: var(--mermaid-font-family) !important;
   font-size: 10px !important;
   background: var(--background-secondary) !important;
   border: 1px solid var(--text-faint) !important;
@@ -3375,7 +3375,6 @@ div.mermaidTooltip {
 }
 
 /* Sequence Diagram variables */
-
 .actor {
   stroke: var(--text-accent) !important;
   fill: var(--background-secondary-alt) !important;
@@ -3461,7 +3460,6 @@ text.actor > tspan {
 }
 
 /* Gantt chart variables */
-
 .activation0 {
   fill: var(--background-secondary) !important;
   stroke: var(--text-accent) !important;
@@ -3478,9 +3476,8 @@ text.actor > tspan {
 }
 
 /** Section styling */
-
 .mermaid-main-font {
-  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  font-family: var(--mermaid-font-family) !important;
 }
 
 .section {
@@ -3523,7 +3520,7 @@ text.actor > tspan {
   font-size: 15px !important;
   font-weight: bold;
   line-height: 14px !important;
-  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  font-family: var(--mermaid-font-family) !important;
 }
 
 /* Grid and axis */
@@ -3535,7 +3532,7 @@ text.actor > tspan {
 }
 
 .grid .tick text {
-  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  font-family: var(--mermaid-font-family) !important;
   font-size: 13px;
 }
 
@@ -3561,7 +3558,7 @@ text.actor > tspan {
 
 /*.taskText {
   text-anchor: middle !important;
-  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  font-family: var(--mermaid-font-family) !important;
 }*/
 
 .taskText:not([font-size]) {
@@ -3572,7 +3569,7 @@ text.actor > tspan {
   fill: var(--text-normal) !important;
   text-anchor: start !important;
   font-size: 9px !important;
-  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  font-family: var(--mermaid-font-family) !important;
 }
 
 .taskTextOutsideLeft {
@@ -3721,7 +3718,7 @@ text.actor > tspan {
   text-anchor: middle !important;
   font-size: 20px !important;
   fill: var(--text-normal) !important;
-  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  font-family: var(--mermaid-font-family) !important;
 }
 
 g.classGroup text {
@@ -3823,25 +3820,25 @@ g.classGroup line {
 .branch-label {
   fill: var(--text-muted) !important;
   color: var(--text-muted) !important;
-  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  font-family: var(--mermaid-font-family) !important;
 }
 
 .pieTitleText {
   text-anchor: middle !important;
   font-size: 18px !important;
   fill: var(--text-normal) !important;
-  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  font-family: var(--mermaid-font-family) !important;
 }
 
 .slice {
-  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  font-family: var(--mermaid-font-family) !important;
 }
 
 g.stateGroup text {
   fill: var(--text-accent) !important;
   stroke: none !important;
   font-size: 10px !important;
-  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  font-family: var(--mermaid-font-family) !important;
 }
 
 g.stateGroup text {
@@ -3903,7 +3900,7 @@ g.stateGroup line {
   fill: black !important;
   font-size: 10px !important;
   font-weight: bold !important;
-  font-family: Segoe UI, "trebuchet ms", verdana, arial !important;
+  font-family: var(--mermaid-font-family) !important;
 }
 
 .node circle.state-start {
@@ -3974,11 +3971,6 @@ g.stateGroup line {
   stroke-width: 1px !important;
   rx: 0 !important;
   ry: 0 !important;
-}
-
-:root {
-  --mermaid-font-family: '"trebuchet ms", verdana, arial' !important;
-  --mermaid-font-family: "Comic Sans MS", "Comic Sans", cursive !important;
 }
 
 /* Classes common for multiple diagrams */
