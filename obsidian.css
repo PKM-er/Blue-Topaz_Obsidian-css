@@ -1126,7 +1126,7 @@ input.search-input {
 
 .side-dock-settings {
   margin-top: auto;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 
 .nav-folder.mod-root > .nav-folder-title {
@@ -4121,6 +4121,14 @@ body.plugin-sliding-panes .view-actions {
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root .view-header {
   border-right: 1px solid var(--background-secondary-alt) !important;
   border-left: 1px solid var(--background-secondary-alt) !important;
+}
+
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon {
+  padding: 0px 0px 0px 4px !important;
+}
+
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-actions {
+  padding: 0px 0px 5px 3px !important;
 }
 
 
