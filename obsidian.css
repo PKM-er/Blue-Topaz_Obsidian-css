@@ -1654,8 +1654,6 @@ ul > li:not(.task-list-item):hover {
 }
 
 ol {
-  padding-inline-start: 1em;
-  margin-left: 25px;
   list-style: decimal;
 }
 
