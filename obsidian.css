@@ -2033,6 +2033,7 @@ cursor: pointer !important;
   border: 2px solid var(--embed-color);  
   border-radius: 10px;
   padding: 0px 8px 0px 8px;
+  margin: 5px;
 }
 
 .markdown-preview-view .file-embed:hover {
@@ -2075,7 +2076,7 @@ cursor: pointer !important;
   font-weight: 600; 
   text-align: left; 
   font-size: var(--font-size-embed-file);  
-  margin: 5px 0;
+  margin: -2px;
   padding: 0 10px;
 }
 
