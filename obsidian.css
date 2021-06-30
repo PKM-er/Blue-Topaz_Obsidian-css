@@ -4990,7 +4990,13 @@ img[alt$="inlR"] {
 /*===================================================*/
 /*===================================================*/
 
+.is-mobile .markdown-preview-view ol > li {
+  margin-left: 0px;
+} 
 
+.is-mobile .markdown-preview-view ul > li:not(.task-list-item) {
+  margin-left: 0px;
+}
 
 
 /*collapse allows*/
