@@ -592,14 +592,14 @@ to get a right-side note block
   --stag1: #ff0000;
   --stag2: #ff9900;
   --stag3: #00a030;
-  --tag1: #e77e7e;
-  --tag2: #dbb671;
-  --tag3: #cacc41;
+  --tag1: #e67474;
+  --tag2: #e69040;
+  --tag3: #c2c43c;
   --tag4: #5dcf53;
   --tag5: #49c9ce;
-  --tag6: #6da1dd;
+  --tag6: #62a3ec;
   --tag7: #9270db;
-  --tag8: #e277d9;
+  --tag8: #e25fb0;
   --tag9: #6b6b6b;
 
   /*Titles*/
@@ -825,7 +825,7 @@ to get a right-side note block
 /* ====== Tag Pills ======== */
 .tag:not(.token) {
 	border: none;
-	color: #f1f1f1;
+	color: #f5f5f5;
 	padding: 1px 8px;
 	text-align: center;
 	text-decoration: none;
