@@ -2798,7 +2798,7 @@ span.cm-formatting-task {
 .workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon::before {
   content : "↓";
   font-size: 14px;
-  margin-left: -2px;
+  margin-left: 0px;
   font-weight: bold;
   color: var(--text-accent);
   transition: transform 10ms linear 0s;
@@ -2912,7 +2912,7 @@ span.collapse-icon {
 
 span.collapse-icon::before {
   content : "↓";
-  margin-left: -3px;
+  margin-left: 0px;
   font-size: 16px;
   font-weight: bold;
   color: var(--allow-1);
