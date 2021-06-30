@@ -2745,7 +2745,7 @@ span.cm-formatting-task {
 }
 
 .nav-folder.is-collapsed .nav-folder-collapse-indicator {
-  transform: translateX(-11px) translateY(6px) rotate(-90deg);
+  transform: translateX(-15px) translateY(10px) rotate(-90deg);
   opacity: 0.4;
 }
 
