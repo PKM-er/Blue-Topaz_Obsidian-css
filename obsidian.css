@@ -4990,26 +4990,7 @@ img[alt$="inlR"] {
 /*===================================================*/
 /*===================================================*/
 
-.is-mobile .markdown-preview-view ol > li {
-  margin-left: -5px;
-  padding-left: 6px;
-  border-radius: 5px;
-  margin-bottom: 6px;
-  margin-top: 4px;
-  padding-right: 6px;
-} 
 
-.is-mobile .markdown-preview-view ul > li:not(.task-list-item) {
-  margin-left: -5px;
-  padding-left: 6px;
-  border-radius: 5px;
-  width: fit-content;
-  margin-bottom: 6px;
-  margin-top: 4px;
-  padding-right: 6px;
-  word-wrap: break-word;
-  word-break: break-word;
-}
 
 
 /*collapse allows*/
