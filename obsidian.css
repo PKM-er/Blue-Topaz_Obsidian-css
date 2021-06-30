@@ -2038,11 +2038,10 @@ cursor: pointer !important;
 
 .markdown-preview-view .file-embed:hover {
   border: 2px solid var(--theme-color-translucent);  
-  background-color: transparent;
+  background-color: #3b93dc2d;
   border-radius: 10px;
   padding: 0px 8px 0px 8px;
 }
-
 
 .markdown-embed {
   display: block;
