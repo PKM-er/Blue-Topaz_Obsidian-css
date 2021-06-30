@@ -4027,11 +4027,12 @@ g.stateGroup line {
 
 g rect{
   fill: var(--text-highlight-bg);
-}*/
+}
 
 g text{
   fill:var(--text-muted) !important;
 }
+*/
 
 #arrowhead,  #sequencenumber,  .cluster text,  .label text,  text,  text.actor {
   fill:var(--text-muted) !important;
