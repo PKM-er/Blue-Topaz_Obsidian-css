@@ -5002,3 +5002,8 @@ img[alt$="inlR"] {
   word-wrap: break-word;
   word-break: break-word;
 }
+
+/*folder collapse indicator*/
+.is-mobile .nav-folder.is-collapsed .nav-folder-collapse-indicator {
+  transform: translateX(-13px) translateY(8px) rotate(-90deg);
+}
