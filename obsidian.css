@@ -2745,7 +2745,7 @@ span.cm-formatting-task {
 }
 
 .nav-folder.is-collapsed .nav-folder-collapse-indicator {
-  transform: translateX(-15px) translateY(10px) rotate(-90deg);
+  transform: translateX(-17px) translateY(11px) rotate(-90deg);
   opacity: 0.4;
 }
 
@@ -5003,7 +5003,4 @@ img[alt$="inlR"] {
   word-break: break-word;
 }
 
-/*folder collapse indicator*/
-.is-mobile .nav-folder.is-collapsed .nav-folder-collapse-indicator {
-  transform: translateX(-15px) translateY(10px) rotate(-90deg);
-}
+
