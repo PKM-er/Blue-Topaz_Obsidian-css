@@ -302,7 +302,7 @@ to get a right-side note block
   --font-size-h4:                            1.1875em;
   --font-size-h5:                            1.0625em;
   --font-size-h6:                            0.9375em;
-  --font-size-tag:                           1em;
+  --font-size-tag:                           1.2em;
   --font-size-list:                          1em;
   --font-size-preview-blockquote:            1em;
   --font-size-edit-blockquote:               1em;
@@ -324,7 +324,7 @@ to get a right-side note block
   --font-family-folder-file-title:                                       ;/*左侧边栏文件、文件夹字体*/
   --font-family-preview-edit-code:        "Consolas", "Monaco", monospace;
   --text-family-inline-code:              "Consolas", "Monaco", monospace;
-  --font-family-tag:                                                     ;
+  --font-family-tag:                           STzhongsong, STSong, Serif;
   --font-family-vault:                                                   ;/*左侧库名字体*/
   --font-family-special-tag:       "Lucida Handwriting", "Dancing Script", "Hand of Sean", "Angelina", cursive;
   --font-family-YAML:              "Lucida Handwriting", "Dancing Script", "Hand of Sean", "Angelina", cursive;
@@ -836,6 +836,11 @@ to get a right-side note block
 .tag:not(.token):hover {
 	color: white;
 	background-color: var(--theme-color) !important;
+}
+
+.cm-s-obsidian span.cm-hashtag {
+  font-family: var(--font-family-tag);
+  font-size: var(--font-size-tag);
 }
 
 /*tag pane*//*
