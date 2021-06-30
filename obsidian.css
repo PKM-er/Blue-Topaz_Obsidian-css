@@ -563,7 +563,7 @@ to get a right-side note block
   --darkgreen: #acb5b2;
   --blue: #2f90eb;
   --darkblue: #3b84e4;
-  --purple: #a625a4;
+  --purple: #c74df7;
   --aqua: #0084bc;
   --yellow: #e48100;
   --light-yellow: #ab9a02;
@@ -2127,9 +2127,22 @@ pre[class*='language-'] {
   color: var(--gray-2) !important;
 }
 
-.token.selector,
-.token.tag {
-  color: var(--yellow) !important;
+.theme-dark .token.selector,
+.theme-dark .token.tag {
+  color: var(--red) !important;
+}
+
+.theme-light .token.selector,
+.theme-light .token.tag {
+  color: var(--purple) !important;
+}
+
+.token.class {
+  color: var(--yellow);
+} 
+
+.token.color {
+  color: var(--aqua) !important;
 }
 
 .token.property,
@@ -4972,6 +4985,65 @@ aside > h2 {
   background-color: gray !important;
 }
 
+/* ================================== */
+/* ======editor syntax highlight===== */
+/* ================================== */
+.cm-s-obsidian .cm-hmd-frontmatter.cm-qualifier, 
+.cm-s-obsidian .cm-math.cm-qualifier, 
+.cm-s-obsidian pre.HyperMD-codeblock .cm-qualifier {
+  color: var(--yellow) !important;
+}
+
+.cm-s-obsidian .cm-hmd-frontmatter.cm-property, 
+.cm-s-obsidian .cm-math.cm-property, 
+.cm-s-obsidian pre.HyperMD-codeblock .cm-property {
+  color: var(--blue) !important;
+}
+
+.cm-s-obsidian .cm-hmd-frontmatter.cm-atom, 
+.cm-s-obsidian .cm-math.cm-atom, 
+.cm-s-obsidian pre.HyperMD-codeblock .cm-atom {
+  color: var(--text-normal) !important;
+}
+
+.cm-s-obsidian .cm-hmd-frontmatter.cm-number, 
+.cm-s-obsidian .cm-math.cm-number, 
+.cm-s-obsidian pre.HyperMD-codeblock .cm-number {
+  color: var(--green) !important;
+}
+
+.cm-s-obsidian .cm-hmd-frontmatter.cm-comment, 
+.cm-s-obsidian .cm-math.cm-comment, 
+.cm-s-obsidian pre.HyperMD-codeblock .cm-comment {
+  color: var(--darkgreen) !important;
+}
+
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-tag, 
+.theme-dark .cm-s-obsidian .cm-math.cm-tag, 
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-tag {
+  color: var(--red) !important;
+}
+
+.theme-light .cm-s-obsidian .cm-hmd-frontmatter.cm-tag, 
+.theme-light .cm-s-obsidian .cm-math.cm-tag, 
+.theme-light .cm-s-obsidian pre.HyperMD-codeblock .cm-tag {
+  color: var(--purple) !important;
+}
+
+.theme-light .cm-s-obsidian span.cm-keyword {
+  color: var(--blue-green) !important;
+}
+
+.theme-dark .cm-s-obsidian span.cm-keyword {
+  color: var(--darkblue) !important;
+  font-weight: 600 !important;
+}
+
+.cm-s-obsidian pre.HyperMD-codeblock, 
+.cm-s-obsidian span.cm-inline-code, 
+.cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end) {
+  color: var(--gray-2) !important;
+}
 
 /*image position*/
 img[alt$="left"],
