@@ -561,10 +561,10 @@ to get a right-side note block
   --red-1: #f16464f5;
   --green: #4ae125;
   --darkgreen: #acb5b2;
-  --blue: #2f90eb;
+  --blue: #107fe7;
   --darkblue: #3b84e4;
   --purple: #c74df7;
-  --aqua: #0084bc;
+  --aqua: #15aea6;
   --yellow: #e48100;
   --light-yellow: #ab9a02;
   --orange: #db9600;
@@ -2143,6 +2143,10 @@ pre[class*='language-'] {
 
 .token.color {
   color: var(--aqua) !important;
+}
+
+.token.unit {
+  color: var(--orange) !important;
 }
 
 .token.property,
