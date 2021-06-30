@@ -3348,7 +3348,7 @@ pre.language-note-cloze::before {
 
 .edgePath .path {
   stroke: var(--text-faint) !important;
-  stroke-width: 1.5px !important;
+  /*stroke-width: 2px !important;*/
 }
 
 .flowchart-link {
@@ -3404,13 +3404,13 @@ text.actor > tspan {
 }
 
 .messageLine0 {
-  stroke-width: 1.5 !important;
+  /*stroke-width: 1.5 !important;*/
   stroke-dasharray: none !important;
   stroke: var(--text-muted) !important;
 }
 
 .messageLine1 {
-  stroke-width: 1.5 !important;
+  /*stroke-width: 1.5 !important;*/
   stroke-dasharray: 2, 2 !important;
   stroke: var(--text-muted) !important;
 }
@@ -3456,7 +3456,7 @@ text.actor > tspan {
 }
 
 .loopLine {
-  stroke-width: 2px !important;
+  /*stroke-width: 2px !important;*/
   stroke-dasharray: 2, 2 !important;
   stroke: var(--text-accent) !important;
   fill: var(--text-accent) !important;
