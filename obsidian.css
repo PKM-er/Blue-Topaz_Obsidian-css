@@ -1833,10 +1833,11 @@ span.cm-formatting.cm-formatting-strong.cm-em.cm-strong {
   box-shadow: 0 0 6px 6px var(--theme-color-translucent-1);
 }
 
+/*
 .popover.hover-popover .markdown-embed  {
-  height: 400px;
+  height: auto;
 }
-
+*/
 
 /*table from https://snippets.cacher.io/snippet/018387c872dc39277996 by eluotao*/
 tbody>tr:nth-child(odd) {
