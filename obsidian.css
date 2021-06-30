@@ -1482,7 +1482,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 .markdown-preview-view.is-readable-line-width .markdown-preview-section,
 .markdown-source-view.is-readable-line-width .CodeMirror,
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
-  line-height: 1.7;
+  line-height: 1.5;
   font-family: var(--font-family-major);
   text-align: justify;
 }
@@ -1871,6 +1871,12 @@ tbody > tr {
   background-color: var(--table-hover-thead-color);
 }
 
+.HyperMD-table-row.CodeMirror-line {
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  white-space: break-spaces !important;
+}
+
 /*
 .popover {
   background-color: var(--background-primary);
@@ -2242,8 +2248,8 @@ pre.line-numbers > code {
 
 /*unfold code*/
 pre> code>span {
-  word-wrap:break-word;
-  word-break:break-all;
+  word-wrap: break-word;
+  word-break: break-all;
   white-space: pre-wrap;
 }
 
