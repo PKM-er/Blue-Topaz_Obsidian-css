@@ -1048,7 +1048,7 @@ input.search-input {
 
 .workspace-leaf-content[data-type='search'] .nav-action-button,
 .workspace-leaf-content[data-type='backlink'] .nav-action-button{
-  padding: 3px 3px 3px 3px;
+  padding: 3px;
 }
 
 /*后退前进符号*/
@@ -1076,7 +1076,7 @@ input.search-input {
 /*tag page button*/
 .nav-buttons-container > .nav-action-button,
 .nav-buttons-container > .nav-action-button.is-active {
-  padding: 5px;
+  padding: 3px;
 }
 
 .titlebar-text {
