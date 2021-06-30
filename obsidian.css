@@ -2118,7 +2118,6 @@ pre[class*='language-'] {
   color: var(--gray-1) !important;
 }
 
-
 .token.comment {
   color: var(--darkgreen) !important;
 }
@@ -4158,11 +4157,10 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 --color-background-day: transparent;
 --color-background-weekend: transparent;
 
-  
 --color-dot: var(--text-accent);
 --color-arrow: currentColor;
 --color-button: var(--text-muted);
- --color-text-weeknum: var(--calendar-week-color);
+--color-text-weeknum: var(--calendar-week-color);
   
 --color-text-title: var(--text-normal);
 --color-text-heading: var(--text-normal);
