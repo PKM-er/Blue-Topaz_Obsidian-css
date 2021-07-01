@@ -2975,14 +2975,12 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
 }
 
 .outline .tree-item .collapse-icon {
-  padding: 0 9px;
+  padding: 0px;
   transition: transform 20ms linear 0s;
 }
 
 .outline .tree-item .collapse-icon::before {
   content : "↓";
-  margin-left: -7px;
-  margin-top: 1px;
   font-size: 16px;
   font-weight: bold;
   font-family: 'Inter';
@@ -2998,17 +2996,18 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
 }
 
 .outline .tree-item.is-collapsed .collapse-icon {
-  transform: translateX(1px) translateY(0px) rotate(-90deg);
+  transform: translateX(-1px) translateY(-1px) rotate(-90deg);
   opacity: 0.5;
 }
 
 /*vertical lines in outline page*/
 .outline .tree-item-children {
-  margin-left: 16px;
+  margin-left: 14px;
   border-left: 2px solid rgba(148, 148, 148, 0.2);
   border-radius: 0px;
   transition:all 300ms ease-in-out;
 }
+
 .outline .tree-item-children:hover {
   border-left-color: rgba(45, 135, 211, 0.5);
 }
@@ -3038,6 +3037,41 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
 
 .markdown-preview-view li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon {
   transform: translateX(0px) translateY(-4px) rotate(-90deg);
+  opacity: 0.5;
+}
+
+/*tag collapse indicator*/
+.tag-container .tree-item-children {
+  margin-left: 11px;
+  border-left: 2px solid rgba(148, 148, 148, 0.2);
+  border-radius: 0px;
+  transition:all 300ms ease-in-out;
+}
+
+.tag-container .tree-item-self .tree-item-icon svg {
+  display: none;
+}
+
+.tag-container .tree-item-self .tree-item-icon::before {
+  content : "#";
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Inter';
+  color: var(--text-accent);
+  transition: transform 10ms linear 0s;
+}
+
+.tag-container .tree-item-children {
+  border-left: 2px solid rgba(148, 148, 148, 0.2);
+  border-radius: 0px;
+  transition:all 300ms ease-in-out;
+}
+
+.tag-container .tree-item-children:hover {
+  border-left-color: rgba(45, 135, 211, 0.5);
+}
+
+.tag-container .tree-item.is-collapsed .collapse-icon {
   opacity: 0.5;
 }
 
