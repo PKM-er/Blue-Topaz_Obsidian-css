@@ -2800,7 +2800,6 @@ span.cm-formatting-task {
 .backlink-pane .search-result-container .collapse-icon::before {
   content : "↓";
   font-size: 14px;
-  margin-left: -2px;
   font-family: 'Inter';
   font-weight: bold;
   color: var(--text-accent);
