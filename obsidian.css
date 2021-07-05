@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.12.9。[20210701] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.12.9, [20210701] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.12.9。[20210705] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.12.9, [20210705] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 
 /* 
@@ -220,7 +220,7 @@ ul ul::before,
 ol ul::before,
 ul ol::before,
 ol ol::before {
-  left: -13px;
+  left: -14px;
   top: 0;
   bottom: 0;
 } 
@@ -240,12 +240,11 @@ ul > li:not(.task-list-item) {
   
 ol {
   padding-inline-start: 2.1em;
-  margin-left: 0px;
+  margin-left: 1px;
   margin-bottom: -9px;
 }
   
 ol > li {
-  margin-left: 2px;
   padding-left: 0px;
   border-left: none !important;
 } 
@@ -293,7 +292,7 @@ to get a right-side note block
   --font-size-file-header-title-andy-plugin: 1em;/*文件抬头标题for Andy mode plugin*/
   --font-size-embed-title-size:              1.125em;
   --font-size-embed-file:                    1.25em;
-  --font-size-folder-and-file:               0.8125em;/*左侧边栏文件字体大小*/
+  --font-size-folder-and-file:               0.85em;/*左侧边栏文件字体大小*/
   --font-size-edit-normal:                   1em;/*编辑正文字体大小*/
   --font-size-preview-normal:                1em;/*预览正文字体大小*/
   --font-size-h1:                            1.5625em;
@@ -322,7 +321,7 @@ to get a right-side note block
   --font-family-h5:                                                      ;
   --font-family-h6:                                                      ;
   --font-family-title:                                                   ;/*文件抬头标题*/
-  --font-family-folder-file-title:               Arlrdbd, Source Han Sans;/*左侧边栏文件、文件夹字体*/
+  --font-family-folder-file-title:               Arlrdbd, Source Han Sans;/*左侧边栏文件、文件夹字体*/                
   --font-family-preview-edit-code:        "Consolas", "Monaco", monospace;
   --text-family-inline-code:              "Consolas", "Monaco", monospace;
   --font-family-tag:                           STzhongsong, STSong, Serif;
@@ -359,7 +358,7 @@ to get a right-side note block
   /*--text-em-color: #ff9b9b;*/
   --text-error: #e16d76;
   --text-error-hover: #c9626a;
-  --text-highlight-bg: #e481007c;
+  --text-highlight-bg: #107bc2ad;
   --text-search-highlight-bg: #bb4361;
   --text-selection: #47a5914d;
   --text-on-accent: #dcddde;
@@ -371,7 +370,7 @@ to get a right-side note block
   --panel-border-color: #18191e;
   --search-text: #e0e0e0;
   --folder-title: #ffffff;
-  --mark-highlight: #e481007c;
+  --mark-highlight: #107bc2ad;
   --background-search-result: #444444;
 
   --gray-1: #5C6370;
@@ -544,7 +543,7 @@ to get a right-side note block
   --accent-strong: #000000;
   --text-error: #e75545;
   --text-error-hover: #f86959;
-  --text-highlight-bg: #ffc16fd8;
+  --text-highlight-bg: #ffd298d8;
   --text-search-highlight-bg: #ffd1dd;
   --text-selection: #66bbaa59;
   --text-on-accent: #f2f2f2;
@@ -934,6 +933,25 @@ mark {
   background-color: var(--mark-highlight)!important;
   padding: 1px 3px; 
   border-radius: 3px;
+}
+
+.theme-dark .markdown-preview-view mark .internal-link {
+  color: #92d3ff;
+  text-decoration: underline;
+}
+
+.theme-dark .markdown-preview-view mark .internal-link:hover {
+  color: #ffdba1;
+}
+
+.theme-light .markdown-preview-view mark .internal-link {
+  color: #0086df;
+  text-decoration: underline;
+}
+
+.theme-light .markdown-preview-view mark .internal-link:hover {
+  color: #56b4f3;
+  background-color: transparent;
 }
 
 /* outliner for the outline */
@@ -1750,11 +1768,11 @@ span.cm-strong, strong {
 }
 
 .theme-dark strong > em, 
-.theme-dark .cm-strong.cm-em.cm-overlay {
+.theme-dark .cm-strong.cm-em {
+  padding-right: 0.15em;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-color: #f55454;
-  background-image: linear-gradient(120deg, #11a0ff 0%, #f0d040 100%) !important;
+  background-image: linear-gradient(120deg, #11a0ff 0%, #f0d040 60%, #ff6262 100%) !important;
   /* adapted from Obsidianite*/
   
   /*background-color: var(--background-secondary-alt);
@@ -1763,11 +1781,18 @@ span.cm-strong, strong {
 }
 
 .theme-light strong > em, 
-.theme-light .cm-strong.cm-em.cm-overlay {
+.theme-light .cm-strong.cm-em {
+  padding-right: 0.15em;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-color: #f55454;
-  background-image: linear-gradient(270deg, #40b3ff 0%, #0065b8 80%) !important;
+  background-image: linear-gradient(120deg, #3aa7f0 0%, #068fff 50%, #0068c9 100%) !important;
+}
+
+/*internal link with strong&em*/
+strong > em > .internal-link, 
+.cm-strong.cm-em.cm-hmd-internal-link{
+  -webkit-text-fill-color: initial;
+  text-decoration: underline !important;
 }
 
 span.cm-formatting.cm-formatting-strong.cm-strong {
@@ -1778,38 +1803,54 @@ span.cm-formatting.cm-formatting-em.cm-em {
   opacity: 0.2;
 }
 
-span.cm-formatting.cm-formatting-strong.cm-em.cm-strong {
+.theme-dark .cm-formatting.cm-formatting-strong.cm-em.cm-strong {
   opacity: 0.2;
+  -webkit-text-fill-color: var(--green);
+}
+
+.theme-light .cm-formatting.cm-formatting-strong.cm-em.cm-strong {
+  opacity: 0.2;
+  -webkit-text-fill-color: var(--orange);
+}
+
+/*link format [[]]*/
+.cm-formatting-link.cm-strong.cm-em {
+  -webkit-text-fill-color: var(--text-faint);
+  opacity: 0.2;
+}
+
+div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-em {
+  opacity: 1;
 }
 
 .theme-dark div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-strong.cm-strong {
   opacity: 1;
-  color:  var(--text-accent);
+  color: var(--text-accent);
 }
 
 .theme-dark div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-em.cm-em {
   opacity: 1;
-  color:  var(--text-orange);
+  color: var(--text-orange);
 }
 
-.theme-dark div.CodeMirror-activeline .CodeMirror-line  span.cm-formatting.cm-formatting-strong.cm-em.cm-strong {
+.theme-dark div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-strong.cm-em.cm-strong {
   opacity: 1;
-  color:  var(--green);
+  color: var(--green);
 }
 
 .theme-light div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-strong.cm-strong {
   opacity: 1;
-  color:  var(--orange);
+  color: var(--orange);
 }
 
 .theme-light div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-em.cm-em {
   opacity: 1;
-  color:  var(--orange);
+  color: var(--orange);
 }
 
-.theme-light div.CodeMirror-activeline .CodeMirror-line  span.cm-formatting.cm-formatting-strong.cm-em.cm-strong {
+.theme-light div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-strong.cm-em.cm-strong {
   opacity: 1;
-  color:  var(--orange);
+  color: var(--orange);
 }
 
 .workspace > .workspace-split > .workspace-leaf:first-of-type:last-of-type .view-header {  
@@ -2691,6 +2732,7 @@ span.cm-formatting-task {
   text-indent: 0px;
   word-break: break-word;
 }
+
 .nav-file-title-content.is-being-renamed {
   margin-left: 0px;
   text-indent: 0px;
