@@ -1507,12 +1507,12 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
   border-left-width: 7px;
   border-color: var(--theme-color);
   background-color: var(--background-primary-alt);
-  border-radius: 0%;
+  border-radius: 6px;
 }
+
 .theme-dark .markdown-preview-view blockquote {
   background-color: var(--background-blockquote-dark) !important;
 }
-
 
 .markdown-preview-view blockquote p {
   margin-left: 1px;
@@ -3213,6 +3213,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-quote {
 div:not(.CodeMirror-activeline) > .HyperMD-quote,
 div.CodeMirror-activeline > .HyperMD-quote {
   border-left: 7px solid var(--theme-color);
+  border-radius: 6px;
 }
 
 /* thanks to Klaas from Discord *//*
@@ -5319,7 +5320,7 @@ img[alt$="inlR"] {
 }
 
 /*image*/
-.is-mobile .view-content img:not([class="emoji"]) {
-  cursor:pointer;
+.is-mobile .view-content img:not([class="emoji"]):not(.mobile-image-viewer) {
+  cursor: pointer;
   pointer-events: none;
 }
