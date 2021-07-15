@@ -851,6 +851,16 @@ to get a right-side note block
   color: var(--color-tag-edit);
 }
 
+.cm-formatting.cm-formatting-hashtag.cm-hashtag-begin.cm-hashtag.cm-meta {
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+div.CodeMirror-activeline .CodeMirror-line .cm-formatting.cm-formatting-hashtag.cm-hashtag-begin.cm-hashtag.cm-meta {
+  color: var(--text-muted);
+  opacity: 1;
+}
+
 /*tag pane*//*
 .pane-list-item-ending-flair{
   position: absolute;
@@ -931,7 +941,6 @@ a.tag {
 code {
   font-size: var(--font-size-code) !important;
 }
-
 
 /* mark highlighting */
 mark { 
@@ -5307,4 +5316,10 @@ img[alt$="inlR"] {
 .is-mobile .markdown-source-view.is-readable-line-width .CodeMirror,
 .is-mobile .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   text-align: left;
+}
+
+/*image*/
+.is-mobile .view-content img:not([class="emoji"]) {
+  cursor:pointer;
+  pointer-events: none;
 }
