@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.12.10。[20210714] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.12.10, [20210714] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.12.10。[20210719] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.12.10, [20210719] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 
 /* 
@@ -314,25 +314,25 @@ to get a right-side note block
   --font-size-better-footnote:                  1.3em;
 
   /*font family*/
-  --font-family-list:                                                    ;/*列表字体*/
-  --font-family-major:                                                   ;/*主体（包括列表）字体，除代码框等少数部分*/
-  --font-family-h1:                                                      ;
-  --font-family-h2:                                                      ;
-  --font-family-h3:                                                      ;
-  --font-family-h4:                                                      ;
-  --font-family-h5:                                                      ;
-  --font-family-h6:                                                      ;
-  --font-family-title:                                                   ;/*文件抬头标题*/
-  --font-family-folder-file-title:               Arlrdbd, Source Han Sans, Noto Sans CJK, Source Sans Pro;/*左侧边栏文件、文件夹字体*/                
-  --font-family-preview-edit-code:        "Consolas", "Monaco", monospace;
-  --text-family-inline-code:              "Consolas", "Monaco", monospace;
-  --font-family-tag:                           STzhongsong, STSong, Serif;
-  --font-family-vault:                                                   ;/*左侧库名字体*/
-  --font-family-special-tag:       "Lucida Handwriting", "Dancing Script", "Hand of Sean", "Angelina", cursive;
-  --font-family-YAML:              "Lucida Handwriting", "Dancing Script", "Hand of Sean", "Angelina", cursive;
-  --font-monospace:               "Consolas", "Monaco", "Source Code Pro", monospace;
-  --mermaid-font-family:      Segoe UI, "Microsoft YaHei", "trebuchet ms", verdana, Arial, cursive;
-  --font-family-better-footnote:                 Arlrdbd, Source Han Sans;
+  --font-family-list:                                                     ;/*列表字体*/
+  --font-family-major:          'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;/*主体（包括列表）字体，除代码框等少数部分*/
+  --font-family-h1:                                                       ;
+  --font-family-h2:                                                       ;
+  --font-family-h3:                                                       ;
+  --font-family-h4:                                                       ;
+  --font-family-h5:                                                       ;
+  --font-family-h6:                                                       ;
+  --font-family-title:                                                    ;/*文件抬头标题*/
+  --font-family-folder-file-title: Arlrdbd, Source Han Sans, Noto Sans CJK, Source Sans Pro;/*左侧边栏文件、文件夹字体*/                
+  --font-family-preview-edit-code:         "Consolas", "Monaco", monospace;
+  --text-family-inline-code:               "Consolas", "Monaco", monospace;
+  --font-family-tag:                            STzhongsong, STSong, Serif;
+  --font-family-vault:                                                    ;/*左侧库名字体*/
+  --font-family-special-tag:        "Lucida Handwriting", "Dancing Script", "Hand of Sean", "Angelina", cursive;
+  --font-family-YAML:               "Lucida Handwriting", "Dancing Script", "Hand of Sean", "Angelina", cursive;
+  --font-monospace:                "Consolas", "Monaco", "Source Code Pro", monospace;
+  --mermaid-font-family:       Segoe UI, "Microsoft YaHei", "trebuchet ms", verdana, Arial, cursive;
+  --font-family-better-footnote:                  Arlrdbd, Source Han Sans;
 } 
 
 .theme-dark {
@@ -1071,7 +1071,11 @@ div.nav-header {
 }
 
 div.nav-buttons-container {
-  margin: 0px 0px 0px 0px;
+  margin: 1px;
+}
+
+.workspace-leaf-content[data-type='file-explorer'] .nav-buttons-container {
+  margin-bottom: 2px;
 }
 
 input.search-input {
@@ -1079,12 +1083,17 @@ input.search-input {
 }
 
 .nav-action-button {
-  margin: 0px 2px 0px 2px !important;
+  margin: 0px 5px 0px 5px !important;
 }
 
 .workspace-leaf-content[data-type='search'] .nav-action-button,
 .workspace-leaf-content[data-type='backlink'] .nav-action-button{
+  padding: 4px;
+}
+
+.workspace-leaf-content[data-type='file-explorer'] .nav-action-button {
   padding: 3px;
+  border: 1px dashed;
 }
 
 /*后退前进符号*/
@@ -1112,7 +1121,7 @@ input.search-input {
 /*tag page button*/
 .nav-buttons-container > .nav-action-button,
 .nav-buttons-container > .nav-action-button.is-active {
-  padding: 3px;
+  padding: 4px;
 }
 
 .titlebar-text {
@@ -1464,7 +1473,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 
 .cm-s-obsidian .cm-header,
 .cm-s-obsidian .cm-strong {
-  font-weight:600;
+  font-weight: bold;
 }
 
 .cm-header-1 {
@@ -1774,10 +1783,11 @@ h6,
 strong, 
 b, 
 .view-header-title {
-  font-weight: 600;
+  font-weight: bold;
 }
 
-span.cm-strong, strong {
+span.cm-strong, 
+strong {
   color: var(--accent-strong);
 }
 
@@ -5319,8 +5329,24 @@ img[alt$="inlR"] {
   text-align: left;
 }
 
+/*strong*/
+.is-mobile span.cm-strong, 
+.is-mobile strong {
+  color: var(--accent-strong);
+  font-weight: bold;
+}
+
 /*image*/
-.is-mobile .view-content img:not([class="emoji"]):not(.mobile-image-viewer) {
-  cursor: pointer;
-  pointer-events: none;
+.view-content img:not([class="emoji"]):active {
+  display: inline;
+}
+
+/*buttons*/
+.is-mobile .workspace-leaf-content[data-type='file-explorer'] .nav-action-button {
+  padding: 3px;
+  border: 1px dashed;
+}
+
+.is-mobile .nav-folder.mod-root > .nav-folder-title {
+  background-color: none;
 }
