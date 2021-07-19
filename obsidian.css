@@ -5337,7 +5337,10 @@ img[alt$="inlR"] {
 .is-mobile h5, 
 .is-mobile h6, 
 .is-mobile b, 
-.is-mobile .view-header-title,
+.is-mobile .view-header-title {
+  font-weight: bold;
+}
+
 .is-mobile span.cm-strong, 
 .is-mobile strong {
   color: var(--accent-strong);
@@ -5360,7 +5363,7 @@ img[alt$="inlR"] {
   height: auto;
 }
 
-.is-mobile .nav-folder.mod-root > .nav-folder-title
-.is-mobile .nav-folder.mod-root > .nav-folder-title:hover {
+.is-mobile .nav-folder-title
+.is-mobile .nav-folder-title:hover {
   background-color: transparent;
 }
