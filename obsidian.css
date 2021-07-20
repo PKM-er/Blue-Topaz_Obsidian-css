@@ -1187,8 +1187,7 @@ input.search-input {
 }
 
 .nav-folder.mod-root > .nav-folder-title:hover {
-  background-color: var(--theme-color);
-  color: white;
+  background-color: var(--background-secondary-alt);
   opacity: 1;
 }
 
@@ -5365,5 +5364,5 @@ img[alt$="inlR"] {
 
 .is-mobile .nav-folder.mod-root > .nav-folder-title,
 .is-mobile .nav-folder.mod-root > .nav-folder-title:hover {
-  background-color: transparent;
+  background-color: var(--background-secondary);
 }
