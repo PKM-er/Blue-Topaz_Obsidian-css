@@ -5357,16 +5357,13 @@ img[alt$="inlR"] {
   border: 1px dashed;
 }
 
+.is-mobile .workspace-leaf-content[data-type='file-explorer'] .nav-buttons-container {
+  margin: 0 0 8px 0;
+}
+
 .is-mobile .nav-action-button > svg {
   width: auto;
   height: auto;
 }
 
-.is-mobile .nav-folder.mod-root > .nav-folder-title,
-.is-mobile .nav-folder.mod-root > .nav-folder-title:hover {
-  background-color: var(--background-secondary);
-}
 
-.is-mobile .workspace-leaf-content[data-type='file-explorer'] .nav-buttons-container {
-  margin: 0 0 8px 0;
-}
