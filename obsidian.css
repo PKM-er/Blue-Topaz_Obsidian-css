@@ -1075,7 +1075,7 @@ div.nav-buttons-container {
 }
 
 .workspace-leaf-content[data-type='file-explorer'] .nav-buttons-container {
-  margin-bottom: 2px;
+  margin: 2px 0 4px 0;
 }
 
 input.search-input {
@@ -5365,4 +5365,8 @@ img[alt$="inlR"] {
 .is-mobile .nav-folder.mod-root > .nav-folder-title,
 .is-mobile .nav-folder.mod-root > .nav-folder-title:hover {
   background-color: var(--background-secondary);
+}
+
+.is-mobile .workspace-leaf-content[data-type='file-explorer'] .nav-buttons-container {
+  margin: -3px 0 4px 0;
 }
