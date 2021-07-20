@@ -5363,7 +5363,7 @@ img[alt$="inlR"] {
   height: auto;
 }
 
-.is-mobile .nav-folder-title,
-.is-mobile .nav-folder-title:hover {
+.is-mobile .nav-folder.mod-root > .nav-folder-title,
+.is-mobile .nav-folder.mod-root > .nav-folder-title:hover {
   background-color: transparent;
 }
