@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.12.11。[20210720] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.12.11, [20210720] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.12.11。[20210721] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.12.11, [20210721] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 
 /* 
@@ -352,7 +352,8 @@ to get a right-side note block
   --background-modifier-cover: rgba(0, 0, 0, 0.6);
   --text-accent: #53aaf5;
   --text-accent-hover: #3e8de7; 
-  --text-normal: #d1d1d1; 
+  --text-normal: #bdbdbd; 
+  --text-highlight: #d6d6d6;
   --text-muted: #8a8a8a;  
   --text-faint: rgb(121, 121, 121);
   --text-folder-file: #a7a7a7;
@@ -374,6 +375,7 @@ to get a right-side note block
   --folder-title: #ffffff;
   --mark-highlight: #e4736fbe;
   --background-search-result: #444444;
+  --search-result-file-matched-bg: #005fac;
 
   --gray-1: #5C6370;
   --gray-2: #abb2bf;
@@ -541,6 +543,7 @@ to get a right-side note block
   --text-accent-hover: #4ba8ff;
   --text-normal: #000000;
   --text-muted: #7f7f7f;
+  --text-highlight: #000000;
   --text-faint: #7f7f7f;
   --text-folder-file: #7a7a7a;
   --accent-strong: #000000;
@@ -560,6 +563,7 @@ to get a right-side note block
   --folder-title: #000000;
   --mark-highlight: #ffd298d8;  
   --background-search-result: #fdfdfd;
+  --search-result-file-matched-bg: #ffc3c3;
 
   --gray-1: #383a42;
   --gray-2: #383a42;
@@ -943,10 +947,16 @@ code {
 }
 
 /* mark highlighting */
-mark { 
+.markdown-preview-view mark { 
   background-color: var(--mark-highlight)!important;
   padding: 1px 3px; 
   border-radius: 3px;
+  color: var(--text-highlight);
+}
+
+.cm-s-obsidian span.cm-formatting-highlight, 
+.cm-s-obsidian span.cm-highlight {
+  color: var(--text-highlight);
 }
 
 .theme-dark .markdown-preview-view mark .internal-link {
@@ -1260,8 +1270,12 @@ body {
 
 span.search-result-file-matched-text {
   color: var(--search-text);
-  background-color: var(--text-highlight-bg);
+  background-color: var(--search-result-file-matched-bg);
   opacity: 0.8;
+}
+
+.is-flashing {
+  background-color: var(--search-result-file-matched-bg);
 }
 
 /* background of search result */
