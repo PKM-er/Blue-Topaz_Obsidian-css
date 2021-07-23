@@ -2087,16 +2087,13 @@ a.external-link {
 .theme-light code[class*="language-"], 
 .theme-light pre[class*="language-"]{
   text-shadow: none;
-}
-
-.theme-light code[class*="language-"], 
-.theme-light pre[class*="language-"] {
   color: #000000;
 }
 
 .theme-dark code[class*="language-"], 
 .theme-dark pre[class*="language-"] {
   color: #e7e7e7;
+  text-shadow: none;
 }
 
 /*绑定页面
@@ -3585,8 +3582,8 @@ text.actor > tspan {
 }
 
 .messageText {
-  fill: var(--text-normal) !important;
-  stroke: var(--text-muted) !important;
+  fill: var(--text-muted) !important;
+  /*stroke: var(--text-muted) !important;*/
 }
 
 .labelBox {
@@ -5109,6 +5106,181 @@ aside > h2 {
   color: black;
 }
 
+.theme-dark .print{
+  --background-primary: #ffffff;
+  --background-primary-alt: #f5f5f5;
+  --background-secondary: #f0f0f0;
+  --background-secondary-alt: #dddddd;
+  --background-accent: #fff;
+  --background-modifier-border: #e1dfdf;
+  --background-modifier-form-field: #fff;
+  --background-modifier-form-field-highlighted: #fff;
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+  --background-modifier-success: #A4E7C3;
+  --background-modifier-error: #e68787;
+  --background-modifier-error-rgb: 230, 135, 135;
+  --background-modifier-error-hover: #FF9494;
+  --background-modifier-cover: rgba(0, 0, 0, 0.8);
+  --text-accent: #007de4;
+  --text-accent-hover: #4ba8ff;
+  --text-normal: #000000;
+  --text-muted: #7f7f7f;
+  --text-highlight: #000000;
+  --text-faint: #7f7f7f;
+  --text-folder-file: #7a7a7a;
+  --accent-strong: #000000;
+  --text-error: #e75545;
+  --text-error-hover: #f86959;
+  --text-highlight-bg: #ffd298d8;
+  --text-search-highlight-bg: #ffd1dd;
+  --text-selection: #66bbaa59;
+  --text-on-accent: #f2f2f2;
+  --interactive-normal: #eaeaeb;
+  --interactive-hover: #dbdbdc;
+  --interactive-accent-rgb: 70, 142, 235;
+  --interactive-accent: #2f92e4;
+  --interactive-accent-hover: #4ba8ff;
+  --panel-border-color: #dbdbdc;
+  --search-text: #000000;
+  --folder-title: #000000;
+  --mark-highlight: #ffd298d8;  
+  --background-search-result: #fdfdfd;
+  --search-result-file-matched-bg: #ffc3c3;
+
+  --gray-1: #383a42;
+  --gray-2: #383a42;
+  --red: #f13d64;
+  --red-1: #f16464f5;
+  --green: #4ae125;
+  --darkgreen: #acb5b2;
+  --blue: #107fe7;
+  --darkblue: #3b84e4;
+  --purple: #c74df7;
+  --aqua: #15aea6;
+  --yellow: #e48100;
+  --light-yellow: #ab9a02;
+  --orange: #db9600;
+  --light-purple: #b74ff3;
+  --blue-green: #3bd4da;
+  
+
+  --embed-color: #468eeb27;
+  --search-result-file-title-color: #2f92e4;
+  --theme-color: #2f92e4;
+  --theme-color-translucent: #2f92e4a2;
+  --theme-color-translucent-1: #2f93e426;
+  --color-specification: #0084ff;
+  --allow-1: #ec9a3c;
+
+  /*list*/
+  --list-ul-block-color: #b9751b;
+  --list-ul-disc-color: #ff7300;
+  --list-ul-hover: #dd922f;
+  --list-ol-block-color: #3573a5;
+  --list-ol-number-color: #a3bee0;
+  --list-ol-hover: #5c95e0;
+ 
+  /*tags*/
+  --stag1: #ff0000;
+  --stag2: #ff9900;
+  --stag3: #00a030;
+  --tag1: #e67474;
+  --tag2: #e69040;
+  --tag3: #c2c43c;
+  --tag4: #5dcf53;
+  --tag5: #49c9ce;
+  --tag6: #62a3ec;
+  --tag7: #9270db;
+  --tag8: #e25fb0;
+  --tag9: #6b6b6b;
+  --color-tag-edit: #e26363;
+
+  /*Titles*/
+  --h1-color: #92c237;
+  --h2-color: #37bd32;
+  --h3-color: #2dc1c1;
+  --h4-color: #4495ff;
+  --h5-color: #ad9fff;
+  --h6-color: #ca8bee;
+
+  /*graph*/
+  --graph-text-color: #696969;
+  --graphtag: #77d425cc;
+  --graph-attach: #afcfe0cc;
+  --graph-circle: #1f78b4cc;
+  --graph-line: #dadada;
+  --graph-unresolved: #db4e4ecc; 
+  --graph-arrow: #e25300; 
+
+  /*mermaid*/
+  --mermaid-active-task-color: #44bbff;
+  --mermaid-seq-dia-color: #76c8ff;
+
+  /*table*/
+  --table-background-color: #ebebeb;
+  --table-background-color-odd: #ffffff;
+  --table-border-color: #555555;
+  --table-thead-background-color: #bfddf5;
+  --table-hover-raw-color: #2f93e42f;
+  --table-hover-color: #2f93e47c;
+  --table-hover-thead-color: #cde8ff;
+
+  /*calendar*/
+  --calendar-week-color: #48b432;
+  --calendar-week-hover: #e9ffe3;
+  --calendar-week-background-color: #d6e6bf;
+
+  /*day planner*/
+  --day-planner-pie: #eca95c;
+  --day-planner-timeline: #d62f2f;
+  --day-planner-line: #ffd900;
+  --day-planner-dot: #ffd900;
+  --day-planner-item-hover: #8fccff;
+  --event-item-color1: #65ace6;
+  --event-item-color2: #52a4e7;
+  --event-item-color3: #2e96eb;
+  --event-item-color4: #2786da;
+  --event-item-color5: #1275cc;
+  --event-item-color6: #2664c0;
+  --event-item-color7: #1652ac;
+  --event-item-color8: #0c469c;
+  --event-item-color9: #0a3c86;
+  --event-item-color10:#072f6b;
+
+  /*colourful notes*/
+  --text-gray: #37352f99;
+  --text-brown: #855a46;
+  --text-orange: #d9730d;
+  --text-yellow: #d4a300;
+  --text-green: #00927f;
+  --text-blue: #0083bb;
+  --text-purple: #5d1fb9;
+  --text-pink: #c40075;
+  --text-red: #ff4343;
+
+  --background-gray: #ebeced;
+  --background-brown: #e9e5e3;
+  --background-orange: #faebdd;
+  --background-yellow: #fbf3db;
+  --background-green: #ddedea;
+  --background-blue: #ddebf1;
+  --background-purple: #eae4f2;
+  --background-pink: #f4dfeb;
+  --background-red: #ffe3e3;
+
+  --note-important: #fd4141;
+  --note-cloze: #000000;
+	
+  /* stickies */
+  --stickies-color-1: #b3e2b3;
+  --stickies-color-2: #e9c6f1;
+  --tape-color: #acacac65;
+
+  /*Sliding panes*/
+  --header-color: #0e64bb;
+}
+
+
 
 /* ================================== */
 /* ====== markdown assitance ======== */
@@ -5391,7 +5563,6 @@ img[alt$="inlR"] {
   width: auto;
   height: auto;
 }
-
 
 .is-mobile .cm-s-obsidian pre.HyperMD-codeblock, 
 .is-mobile .cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end) {
