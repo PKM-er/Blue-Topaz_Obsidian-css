@@ -1568,7 +1568,7 @@ mjx-container[jax='CHTML'] {
 .theme-dark .cm-s-obsidian pre.HyperMD-codeblock,
 .theme-dark .cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end),
 .theme-dark .markdown-preview-view code {
-  /*color: #e48900;*/
+  color: #e48900;
   font-size: var(--font-size-edit-code) !important;
   font-family: var(--font-family-preview-edit-code);
   text-align: start;
@@ -1577,7 +1577,7 @@ mjx-container[jax='CHTML'] {
 .theme-light .cm-s-obsidian pre.HyperMD-codeblock,
 .theme-light .cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end),
 .theme-light .markdown-preview-view code {
-  /*color: #ee5f00;*/
+  color: #ee5f00;
   font-size: var(--font-size-edit-code) !important;
   font-family: var(--font-family-preview-edit-code);
   text-align: start;
@@ -5391,6 +5391,7 @@ img[alt$="inlR"] {
   width: auto;
   height: auto;
 }
+
 
 .is-mobile .cm-s-obsidian pre.HyperMD-codeblock, 
 .is-mobile .cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end) {
