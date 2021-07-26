@@ -1,0 +1,116 @@
+/* v1.0, for Blue Topaz theme */
+/*adapted from https://codepen.io/mchernin34/pen/ojXvLq*/
+
+.markdown-preview-view blockquote {
+    position:relative;
+    padding:15px;
+    margin:1em 1em 3em;
+    border:7px solid #4796d6;
+    text-align:center;
+    background:var(--background-primary);
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    border-radius:20px;
+    font-family: 'Bookerly', 'Book Antiqua', 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+}
+
+.theme-dark .markdown-preview-view blockquote {
+    background-color: var(--background-primary) !important;
+    border:7px solid #1d7bc7;
+}
+
+
+.theme-dark .markdown-preview-view blockquote:before,
+.theme-dark .markdown-preview-view blockquote:after {
+    border-color:#1d7bc7;
+}
+.theme-dark .markdown-preview-view blockquote > :first-child:before {
+    background:#1d7bc7;
+}
+
+
+/* creates larger curve */
+.markdown-preview-view blockquote:before {
+    content:"";
+    position:absolute;
+    z-index:10;
+    bottom:-35px;
+    left:50px;
+    width:50px;
+    height:30px;
+    border-style:solid;
+    border-width:0 9px 5px 0;
+    border-color:#4796d6;
+    background:transparent;
+    /* css3 */
+    -webkit-border-bottom-right-radius:80px 50px;
+    -moz-border-radius-bottomright:80px 50px;
+    border-bottom-right-radius:80px 50px;
+    /* reduce the damage in FF3.0 */
+    display:block;
+}
+
+/* creates smaller curve */
+.markdown-preview-view blockquote:after {
+    content:"";
+    position:absolute;
+    z-index:10;
+    bottom:-35px;
+    left:47px;
+    width:20px;
+    height:30px;
+    border-style:solid;
+    border-width:0 10px 5px 0;
+    border-color:#4796d6;
+    background:transparent;
+    /* css3 */
+    -webkit-border-bottom-right-radius:40px 50px;
+    -moz-border-radius-bottomright:40px 50px;
+    border-bottom-right-radius:40px 50px;
+    /* reduce the damage in FF3.0 */
+    display:block;
+}
+
+/* creates a small circle to produce a rounded point where the two curves meet */
+.markdown-preview-view blockquote > :first-child:before {
+    content:"";
+    position:absolute;
+    bottom:-35px;
+    left:45px;
+    width:5px;
+    height:5px;
+    background:#4796d6;
+    /* css3 */
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+}
+
+/* creates a white rectangle to cover part of the oval border*/
+.markdown-preview-view blockquote > :first-child:after {
+    content:"";
+    position:absolute;
+    bottom:-10px;
+    left:76px;
+    width:24px;
+    height:15px;
+    background:var(--background-primary);
+}
+
+/*---*/
+/*
+div:not(.CodeMirror-activeline) > .HyperMD-quote, 
+div.CodeMirror-activeline > .HyperMD-quote {
+    position:relative;
+    padding:15px;
+    border:7px solid #4796d6;
+    text-align:center;
+    background:var(--background-primary);
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    border-radius:20px;
+    font-family: 'Bookerly', 'Book Antiqua', 'Times New Roman', Times, serif;
+    font-size: 1.5em !important;
+}
+*/
