@@ -7,6 +7,22 @@ A blue theme for **Obsidian**. Blue Topaz is not a precious gem, like obsidian�
 # Preview
 ![](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/preview_Blue%20Topaz.png)
 
+# Snippets
+在Snippets文件夹 (https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/tree/master/Snippets) 中有一些片段供选择，下面是预览图:
+
+vertical lines of list-1:
+![image](https://user-images.githubusercontent.com/72023275/127007090-d1951c15-1ba9-4eae-b875-029f8eb372d8.png)
+
+vertical lines of list-2:
+![image](https://user-images.githubusercontent.com/72023275/127007264-69fe21c0-a024-4bb8-83b5-fecaea9cae06.png)
+
+speech bubble-1:
+![image](https://user-images.githubusercontent.com/72023275/127007405-7617269b-5f10-48c0-9331-8c2f55489f72.png)
+
+speech bubble-2:
+![image](https://user-images.githubusercontent.com/72023275/127007428-1bab4145-e55e-4287-83b1-0a962194e331.png)
+
+
 ```
 ===========================    TIPS   ===============================
 ====================================================================
@@ -206,59 +222,6 @@ to get a right-side note block
 
 ---
 
-## BTW
-```css
-/* Blockquote header */
-.markdown-preview-view blockquote {
-  position: relative; /* for pseudos */
-  color: var(--theme-color);
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.5;
-  margin: 0;
-  border: 3px solid;
-  border-radius:20px;
-  padding: 10px 15px;
-  background: var(--background-primary);
-}
-
-.theme-dark .markdown-preview-view blockquote {
-  background-color: var(--background-primary) !important;
-}
-
-.markdown-preview-view blockquote p{
- color: var(--text-normal);
- font-size: 16px;
-}
-
-.markdown-preview-view blockquote:after {
-  content:"";
-  position: absolute;
-  border: 3px solid var(--theme-color);
-  border-radius: 35px 0 0 0;
-  width: 50px;
-  height: 55px;
-  bottom: -58px;
-  left: 25px;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-  z-index: 3; 
-}
-
-.markdown-preview-view blockquote:before {
-  content:"";
-  position: absolute;
-  width: 25px;
-  border: 10px solid var(--background-primary);
-  bottom: -7px;
-  left: 20px;
-  z-index: 2;
-}
-```
-![](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/blockquote.jpg?raw=true)
-
----
 
 By Klaas from Discord group
 ```css
