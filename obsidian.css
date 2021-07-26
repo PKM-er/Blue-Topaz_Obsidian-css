@@ -315,7 +315,7 @@ to get a right-side note block
 
   /*font family*/
   --font-family-list:                                                     ;/*列表字体*/
-  --font-family-major:                       Bookerly, var(--default-font);/*主体（包括列表）字体，除代码框等少数部分*/
+  --font-family-major:        Bookerly, 'LXGW WenKai', var(--default-font);/*主体（包括列表）字体，除代码框等少数部分*/
   --font-family-h1:                                    var(--default-font);
   --font-family-h2:                                    var(--default-font);
   --font-family-h3:                                    var(--default-font);
@@ -357,7 +357,7 @@ to get a right-side note block
   --text-muted: #8a8a8a;  
   --text-faint: rgb(121, 121, 121);
   --text-folder-file: #a7a7a7;
-  --accent-strong: #ffffff;
+  --accent-strong: #f7f7f7;
   /*--text-em-color: #ff9b9b;*/
   --text-error: #e16d76;
   --text-error-hover: #c9626a;
@@ -1543,6 +1543,14 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
   line-height: 1.5;
   font-family: var(--font-family-major);
   text-align: left;
+}
+
+.markdown-preview-view .markdown-preview-section,
+.markdown-source-view .CodeMirror,
+.markdown-preview-view .markdown-preview-sizer {
+  line-height: 1.5;
+  font-family: var(--font-family-major);
+  text-align: justify;
 }
 
 pre.HyperMD-list-line.HyperMD-list-line {
@@ -5144,9 +5152,9 @@ img[alt$="inlR"] {
 }
 
 /*main body*/
-.is-mobile .markdown-preview-view.is-readable-line-width .markdown-preview-section,
-.is-mobile .markdown-source-view.is-readable-line-width .CodeMirror,
-.is-mobile .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+.is-mobile .markdown-preview-view .markdown-preview-section,
+.is-mobile .markdown-source-view .CodeMirror,
+.is-mobile .markdown-preview-view .markdown-preview-sizer {
   text-align: left;
 }
 
