@@ -1,0 +1,88 @@
+/* color scheme_dark to light, v1.0 for Blue Topaz theme */
+
+.theme-dark {
+    --text-accent: #007de4;
+    --text-accent-hover: #4ba8ff;
+    --text-error: #e75545;
+    --text-error-hover: #f86959;
+    --text-highlight-bg: #ff970ed3;
+    --text-search-highlight-bg: #ffd1dd;
+    --text-selection: #66bbaa59;
+    --interactive-accent-rgb: 70, 142, 235;
+    --interactive-accent: #2f92e4;
+    --interactive-accent-hover: #4ba8ff;
+    --search-text: #000000;
+    --folder-title: #000000;
+    --mark-highlight: #ff970ed3;  
+    --search-result-file-matched-bg: #ffc3c3;
+
+    --search-result-file-title-color: #2f92e4;
+    --theme-color: #2f92e4;
+    --theme-color-translucent: #2f92e4a2;
+    --theme-color-translucent-1: #2f93e426;
+    --color-specification: #0084ff;
+    --allow-1: #ec9a3c;
+  
+    /*tags*/
+    --stag1: #ff0000;
+    --stag2: #ff9900;
+    --stag3: #00a030;
+    --tag1: #e67474;
+    --tag2: #e69040;
+    --tag3: #c2c43c;
+    --tag4: #5dcf53;
+    --tag5: #49c9ce;
+    --tag6: #62a3ec;
+    --tag7: #9270db;
+    --tag8: #e25fb0;
+    --tag9: #6b6b6b;
+    --color-tag-edit: #e26363;
+  
+    /*Titles*/
+    --h1-color: #067eee;
+    --h2-color: #169af8;
+    --h3-color: #50b3fa;
+    --h4-color: #76c4fb;
+    --h5-color: #9cd4fc;
+    --h6-color: #d5edfe;
+  
+    /*graph*/
+    --graphtag: #77d425cc;
+    --graph-attach: #afcfe0cc;
+    --graph-circle: #1f78b4cc;
+    --graph-line: #9a9a9a;
+    --graph-unresolved: #db4e4ecc; 
+    --graph-arrow: #e25300; 
+
+    /*day planner*/
+    --day-planner-pie: #eca95c;
+    --day-planner-timeline: #d62f2f;
+    --day-planner-line: #ffd900;
+    --day-planner-dot: #ffd900;
+    --day-planner-item-hover: #8fccff;
+    --event-item-color1: #65ace6;
+    --event-item-color2: #52a4e7;
+    --event-item-color3: #2e96eb;
+    --event-item-color4: #2786da;
+    --event-item-color5: #1275cc;
+    --event-item-color6: #2664c0;
+    --event-item-color7: #1652ac;
+    --event-item-color8: #0c469c;
+    --event-item-color9: #0a3c86;
+    --event-item-color10:#072f6b;
+  
+    /*Sliding panes*/
+    --header-color: #0e64bb;
+}
+
+.theme-dark .CodeMirror-activeline .CodeMirror-linebackground {
+    background-color: #4478bb2f !important;
+}
+
+.theme-dark strong > em, 
+.theme-dark .cm-strong.cm-em {
+  padding-right: 0.15em;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(120deg, #c5e3ff 0%, #0063e4 110%) !important;
+}
