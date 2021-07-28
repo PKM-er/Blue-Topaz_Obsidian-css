@@ -2535,20 +2535,20 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
 .markdown-preview-view h1:hover::before{
   content: 'H1';
   position: absolute;
-  font-size: 12px;
+  font-size: 0.7rem;
   font-weight: 400;
   width: auto;
   left: -26px;
   border: 1px solid;
   padding: 0px 2px;
   border-radius: 3px;
-  top: 15px;
+  top: 12px;
 }
 
 .markdown-preview-view h2:hover::before{
   content: 'H2';
   position: absolute;
-  font-size: 12px;
+  font-size: 0.7rem;
   font-weight: 400;
   width: auto;
   left: -26px;
@@ -2561,7 +2561,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
 .markdown-preview-view h3:hover::before{
   content: 'H3';
   position: absolute;
-  font-size: 12px;
+  font-size: 0.7rem;
   font-weight: 400;
   width: auto;
   left: -26px;
@@ -2574,7 +2574,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
 .markdown-preview-view h4:hover::before{
   content: 'H4';
   position: absolute;
-  font-size: 11px;
+  font-size: 0.7rem;
   font-weight: 400;
   width: auto;
   left: -26px;
@@ -2587,7 +2587,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
 .markdown-preview-view h5:hover::before{
   content: 'H5';
   position: absolute;
-  font-size: 10px;
+  font-size: 0.7rem;
   font-weight: 400;
   width: auto;
   left: -26px;
@@ -2600,7 +2600,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
 .markdown-preview-view h6:hover::before{
   content: 'H6';
   position: absolute;
-  font-size: 10px;
+  font-size: 0.7rem;
   font-weight: 400;
   width: auto;
   left: -26px;
