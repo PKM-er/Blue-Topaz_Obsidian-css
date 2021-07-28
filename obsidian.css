@@ -3334,11 +3334,15 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-quote {
   color: var(--red) !important;
 }
 
-div:not(.CodeMirror-activeline) > .HyperMD-quote,
-div.CodeMirror-activeline > .HyperMD-quote {
+div:not(.CodeMirror-activeline) > .HyperMD-quote {
   border-left: 7px solid var(--theme-color);
   border-radius: 6px;
   background-color: var(--background-primary-alt);
+}
+
+div.CodeMirror-activeline > .HyperMD-quote {
+  border-left: 7px solid var(--theme-color);
+  border-radius: 6px;
 }
 
 /* thanks to Klaas from Discord *//*
