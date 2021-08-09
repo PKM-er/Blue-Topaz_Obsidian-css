@@ -1,0 +1,5 @@
+/* 去除背景 for Blue Topaz */
+.workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content:not([data-type="outline"])::before {
+  display: none;
+  position: unset;
+}
