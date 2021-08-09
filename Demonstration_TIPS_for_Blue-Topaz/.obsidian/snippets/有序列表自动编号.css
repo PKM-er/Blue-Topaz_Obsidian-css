@@ -1,0 +1,27 @@
+/* 有序裂变自动编号 for Blue Topaz */
+
+ol,
+ol ol,
+ol ol ol,
+ol ul ol,
+ol ol ol ol,
+ol ol ul ol,
+ol ul ol ol {
+  list-style: none;
+}
+
+ol {
+  counter-reset: niceBT;
+}
+
+ol > li {
+  counter-increment: niceBT;
+} 
+
+ol > li::before {
+  content: counters(niceBT, '.') '. ';
+  font-weight: bold;
+  color: var(--list-ol-number-color);
+  display: inline-block;
+  white-space: pre;
+}

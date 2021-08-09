@@ -1,0 +1,8 @@
+.markdown-preview-view img:hover, 
+.markdown-preview-view video:hover {
+    width: 300%;
+    height: 300%;
+    max-width: min(300%, 800vw);
+    max-height: min(300%, 800vh);
+    cursor: zoom-in;
+}
