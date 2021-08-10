@@ -1,0 +1,67 @@
+/*for Blue Topaz theme*/
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  position: relative;
+}
+
+ul ul::before,
+ol ul::before,
+ul ol::before,
+ol ol::before {
+  content: '';
+  border-left: 2px solid var(--background-modifier-border);
+  position: absolute;
+}
+
+ul ul::before,
+ol ul::before,
+ul ol::before,
+ol ol::before {
+  left: -17px;
+  top: 0px;
+  bottom: 0px;
+} 
+
+li > p:not(.task-list-item) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+  
+ul > li:not(.task-list-item) {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-left: 0;
+  border-left: none !important;
+}
+  
+ol > li {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-left: 0;
+  border-left: none !important;
+} 
+
+ul,
+ol {
+  padding-inline-start: 30px;
+}
+
+ol,
+ol ol,
+ol ol ol,
+ol ul ol,
+ol ol ol ol,
+ol ol ul ol,
+ol ul ol ol  {
+  list-style: decimal;
+}
+
+ol > li::marker {
+  font-weight: normal;
+  color: var(--text-normal);
+}
