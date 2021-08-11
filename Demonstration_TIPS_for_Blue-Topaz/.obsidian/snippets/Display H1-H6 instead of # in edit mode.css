@@ -1,0 +1,154 @@
+/* display H1-H6 instead of # in edit mode, v1.0 for Blue Topaz */
+
+.markdown-preview-view h1::before{
+  content: 'H1';
+  position: absolute;
+  font-size: 0.7rem;
+  font-family: var(--default-font);
+  width: auto;
+  left: -24px;
+  padding: 0px 2px;
+  top: 25px;
+  opacity: 0.5;
+}
+
+.markdown-preview-view h2::before{
+  content: 'H2';
+  position: absolute;
+  font-size: 0.7rem;
+  font-family: var(--default-font);
+  width: auto;
+  left: -25px;
+  padding: 0px 2px;
+  top: 23px;
+  opacity: 0.5;
+}
+
+.markdown-preview-view h3::before{
+  content: 'H3';
+  position: absolute;
+  font-size: 0.65rem;
+  font-family: var(--default-font);
+  width: auto;
+  left: -25px;
+  padding: 0px 2px;
+  top: 19px;
+  opacity: 0.5;
+}
+
+.markdown-preview-view h4::before{
+  content: 'H4';
+  position: absolute;
+  font-size: 0.6rem;
+  font-family: var(--default-font);
+  width: auto;
+  left: -25px;
+  padding: 0px 2px;
+  top: 20px;
+  opacity: 0.5;
+}
+
+.markdown-preview-view h5::before{
+  content: 'H5';
+  position: absolute;
+  font-size: 0.6rem;
+  font-family: var(--default-font);
+  width: auto;
+  left: -25px;
+  padding: 0px 2px;
+  top: 20px;
+  opacity: 0.5;
+}
+
+.markdown-preview-view h6::before{
+  content: 'H6';
+  position: absolute;
+  font-family: var(--default-font);
+  font-size: 0.6rem;
+  width: auto;
+  left: -25px;
+  padding: 0px 2px;
+  top: 20px;
+  opacity: 0.5;
+}
+
+.markdown-preview-view h1:hover::before,
+.markdown-preview-view h2:hover::before,
+.markdown-preview-view h3:hover::before,
+.markdown-preview-view h4:hover::before,
+.markdown-preview-view h5:hover::before,
+.markdown-preview-view h6:hover::before {
+  font-weight: unset;
+  border: none;
+  border-radius: unset;
+  font-family: var(--default-font);
+}
+
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header {
+  color: transparent !important;
+  background: none;
+}
+
+span.cm-formatting.cm-formatting-header {
+  font-size: 0.4em !important;
+}
+
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting.cm-formatting-header.cm-formatting-header-1::after {
+  content: 'H1';
+  font-size: 0.7rem;
+  font-family: var(--default-font);
+  color: var(--h1-color);
+  position: absolute;
+  top: -1px;
+  left: -10px;
+}
+
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting.cm-formatting-header.cm-formatting-header-2::after {
+  content: 'H2';
+  font-size: 0.7rem;
+  font-family: var(--default-font);
+  color: var(--h2-color);
+  position: absolute;
+  top: -1px;
+  left: -6px;
+}
+
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting.cm-formatting-header.cm-formatting-header-3::after {
+  content: 'H3';
+  font-size: 0.7rem;
+  font-family: var(--default-font);
+  color: var(--h3-color);
+  position: absolute;
+  top: -1px;
+  left: -2px;
+}
+
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting.cm-formatting-header.cm-formatting-header-4::after {
+  content: 'H4';
+  font-size: 0.7rem;
+  font-family: var(--default-font);
+  color: var(--h4-color);
+  position: absolute;
+  top: -1px;
+  left: 0;
+}
+
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting.cm-formatting-header.cm-formatting-header-5::after {
+  content: 'H5';
+  font-size: 0.7rem;
+  font-family: var(--default-font);
+  color: var(--h5-color);
+  position: absolute;
+  top: -1px;
+  left: 0;
+}
+
+div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting.cm-formatting-header.cm-formatting-header-6::after {
+  content: 'H6';
+  font-size: 0.7rem;
+  font-family: var(--default-font);
+  color: var(--h6-color);
+  position: absolute;
+  top: -1px;
+  left: 0;
+}
