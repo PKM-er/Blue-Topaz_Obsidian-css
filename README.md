@@ -11,6 +11,15 @@ English: It's great if you have 'Bookerly' font.
 # Preview
 ![](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/preview_Blue%20Topaz.png)
 
+# TIPS for Blue Topaz
+You can download a demo vault for Blue Topaz as bellow. You can open the folder as vault by Obsidian, then you can explore Blue Topaz visually. 
+https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/tree/master/Demonstration_TIPS_for_Blue-Topaz
+
+# Support me
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/WhyI)
+
+If you think Blue Topaz is helpful, you can buy me a cup of coffee to support me. Thank you!
+
 # Snippets
 在Snippets文件夹 (https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/tree/master/Snippets) 中有一些片段供选择，下面是预览图:
 
@@ -25,206 +34,6 @@ speech bubble-1:
 
 speech bubble-2:
 ![image](https://user-images.githubusercontent.com/72023275/127007428-1bab4145-e55e-4287-83b1-0a962194e331.png)
-
-
-```
-===========================    TIPS   ===============================
-====================================================================
-===========主题中的一些特别样式 Special parts in this theme===========
-=====================================================================
-```
-```
-==========================
-=====标签 Special tags=====
-==========================
-#dailynote
-#weeklynote
-#important
-#重要
-#inprogress
-#进行中
-#complete
-#完成
-#questions
-#ideas
-```
-```
-
-
-==========================
-========图片 images========
-==========================
-用法
-
-在图片末尾加上 “|left” 或 “|right” 可以让图片左或右对齐
-xxx.jpg|left
-
--------------------
-可用变体：
-left/Left/LEFT/L
-right/Right/RIGHT/R
-
-如：xxx.png|L
--------------------
-
-
-如果同时调整图片大小，需要把调整大小的数值放在最后
-xxx.png|right|200
-
-使用 “|inlineL” 或 “|inlineR” 可以将图片嵌入在文字中,L左，R右
-xxx.png|inlineL
-
--------------------
-可用变体：
-inlineL/InlineL/INLINEL/inlL
-inlineR/InlineR/INLINER/inlR
-
-如：xxx.png|inlR
--------------------
-
-Usage
-
-Typing "|left" or "|right" at the end of the image file can make the image shown on left or right.
-For example,
-xxx.jpg|left
-
----------------------------
-The variants you can use：
-left/Left/LEFT/L
-right/Right/RIGHT/R
-
-e.g. xxx.png|L
----------------------------
-
-You can also change the image size with the position. You should put the "|number" at the end.
-For example,
-xxx.png|right|200 
-
-
-Use "inlineL" or "inlineR" to embed the image on the left or right.
-xxx.png|inlineL
-
------------------------------
-The variants you can use：
-inlineL/InlineL/INLINEL/inlL
-inlineR/InlineR/INLINER/inlR
-
-e.g. xxx.png|inlL
------------------------------
-
-===========================
-=====笔记框 Note blocks=====
-===========================
-
-----------------------------------------------------------------------
----------------不同颜色背景 Colourful note backgrounds-----------------
-----------------------------------------------------------------------
-语法：```note-xxx-bg 或```note-xxx-background
----------------------------------------------
-
-```note-orange-bg
-
-```note-yellow-bg
-
-```note-green-bg
-
-```note-blue-bg
-
-```note-purple-bg
-
-```note-pink-bg
-
-```note-red-bg
-
-```note-gray-bg
-
-```note-brown-bg
-
------------------------------------------------------
-----------不同笔记颜色 Colourful note texts------------
------------------------------------------------------
-
-```note-orange
-
-```note-yellow
-
-```note-green
-
-```note-blue
-
-```note-purple
-
-```note-pink
-
-```note-red
-
-```note-gray
-
-```note-brown
-
------------------------------------------------------------
-------------记忆笔记框 Recall/cloze note blocks-------------
------------------------------------------------------------
-可鼠标点击显示笔记内容 To show text by clicking
------------------------------------------------------------
-
-```note-cloze
-
---------------------------------------------------------
-------------重要笔记框 important note blocks-------------
---------------------------------------------------------
-有笔记外框 Different block style
---------------------------------------------------------
-
-```note-imp
-
-```
-
-
-
-```
-=========================
-=======列表 list=========
-=========================
-
-
-=========================================
-================stickies=================
-=========================================
-手动输入以下格式，可以得到不同的样式
-```
-<p class="stickies"\> 你自己的文字 </p>
-<p class="stickies2"\> 你自己的文字 </p>
-<p class="to-recall"\> 你自己的文字 </p>
-```
-
-USAGE
-Typing the following formats, you can obtain some special styles.
-```
-<p class="stickies"\> Your words </p>
-<p class="stickies2"\> Your words </p>
-<p class="to-recall"\> Your words </p>
-```
-
-
-```
-=============================
-==== <aside> </aside> =======
-=============================
-```
-
-thanks to dcoales from obsidian member group on discord  
-https://discord.com/channels/686053708261228577/702656734631821413/794236352857374764
-
-Use 
-```
-<aside><h1> Your words </h1></aside>
-<aside><h2> Your words </h2></aside>
-```
-to get a right-side note block
-
-
----
 
 
 By Klaas from Discord group
