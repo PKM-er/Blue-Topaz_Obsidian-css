@@ -10,6 +10,9 @@ English: It's great if you have 'Bookerly' font.
 
 # Preview
 ![](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/preview_Blue%20Topaz.png)
+![image](https://user-images.githubusercontent.com/72023275/134809308-1bba5cf3-aa70-4581-ae21-2f6fe1da03f8.png)
+![image](https://user-images.githubusercontent.com/72023275/134809312-19884827-0a3b-44eb-a4ab-027afa8fb62a.png)
+
 
 # TIPS for Blue Topaz
 You can download a demo vault for Blue Topaz as bellow. You can open the folder as vault by Obsidian, then you can explore Blue Topaz visually. 
