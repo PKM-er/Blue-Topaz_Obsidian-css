@@ -61,3 +61,6 @@ div:not(.CodeMirror-activeline)>.HyperMD-quote>span:first-of-type::before {
   position: relative;
 }
 ```
+
+# Acknowledgements
+I appreciate the help and support from @boninall @成雙醬 @Klaas @lillian-who @shaggyfeng @Thinkbond, and other cool guys who love Blue Topaz!
