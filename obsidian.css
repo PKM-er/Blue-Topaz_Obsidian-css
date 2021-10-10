@@ -1552,15 +1552,15 @@ span.obsidian-search-match-highlight {
 .markdown-preview-view .task-list-item-checkbox {
   -webkit-appearance: none;
   box-sizing: border-box;
-  border: 1px solid var(--text-normal);
+  border: 2px solid var(--text-normal);
   position: relative;
+  border-radius: var(--radius-xs);
   width: 1.3em;
   height: 1.3em;
   margin: 0 0.5em 0.1215em 0;
   filter: hue-rotate(var(--theme-color));
   transition: all 500ms;
   cursor: pointer;
-  left: 1px;
 }
 
 .markdown-preview-view .task-list-item-checkbox:checked {
@@ -1594,7 +1594,7 @@ span.obsidian-search-match-highlight {
 /*thanks to Piotr and ishgunacar from forum*/
 .cm-s-obsidian span.cm-formatting-task {
   display: inline-block !important; 
-  font-family: var(--font-monospace);
+  font-family: boxicons !important;
 }
 
 span.cm-formatting-task.cm-property {
@@ -1608,19 +1608,24 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 }
 
 div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-meta:after {
-  content: "☐";
+  content: "\eca5";
+  font-family: boxicons !important;
   position: absolute;
-  left: 0.13em;
   color: var(--text-normal);
-  font-size: 1.6em;
+  font-size: 1.65em;
+  position: absolute;
+  left: -0.12em;
+  top: 0.08em;
 }
 
 div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-property:after {
-  content: "☑";
+  content: "\eca6";
+  font-family: boxicons !important;
   color: var(--text-accent) !important;
-  font-size: 1.6em;
+  font-size: 1.65em;
   position: absolute;
-  left: 0.13em;
+  left: -0.12em;
+  top: 0.08em;
 }
 
 /* headers */
@@ -3097,7 +3102,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
 }
 
 .backlink-pane .search-result-container .tree-item.search-result.is-collapsed .collapse-icon {
-  transform: translateX(1px) translateY(1px) rotate(-90deg);
+  transform: translateX(0px) translateY(0px) rotate(-90deg);
   opacity: 0.5;
 }
 
@@ -6176,7 +6181,7 @@ div.nav-buttons-container .nav-action-button[aria-label="Change sort order"] svg
 .nav-action-button[aria-label="New note"]::after,
 .nav-action-button[aria-label="Change sort order"]::after   {
   display: inline-block;
-  font-family: "boxicons";
+  font-family: boxicons;
   font-weight: normal;
   font-style: normal;
   font-size: 1.2rem;
