@@ -5922,8 +5922,7 @@ span[alt*="+grid"]{
 
 /*buttons*/
 .is-mobile .workspace-leaf-content[data-type='file-explorer'] .nav-action-button {
-  padding: 3px;
-  border: 1px dashed;
+  padding: 3px 4px;
 }
 
 .is-mobile .workspace-leaf-content[data-type='file-explorer'] .nav-buttons-container {
@@ -6259,7 +6258,7 @@ div.nav-buttons-container .nav-action-button[aria-label="排序"] svg.up-and-dow
   font-family: boxicons;
   font-weight: normal;
   font-style: normal;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-variant: normal;
   line-height: 1;
 }
