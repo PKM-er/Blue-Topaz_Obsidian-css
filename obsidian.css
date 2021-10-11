@@ -5960,6 +5960,16 @@ span[alt*="+grid"]{
   height: auto;
 }
 
+.is-mobile .nav-action-button::after {
+  display: inline-block;
+  font-family: boxicons;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5rem;
+  font-variant: normal;
+  line-height: 1;
+}
+
 /* tag */
 .is-mobile .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin {
   background-color: var(--color-tag-edit);
