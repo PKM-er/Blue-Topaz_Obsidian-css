@@ -5960,7 +5960,31 @@ span[alt*="+grid"]{
   height: auto;
 }
 
-.is-mobile .nav-action-button::after {
+.is-mobile .nav-action-button[aria-label="New folder"]::after,
+.is-mobile .nav-action-button[aria-label="New note"]::after,
+.is-mobile .nav-action-button[aria-label="Change sort order"]::after,
+.is-mobile .nav-action-button[aria-label="New diagram"]::after,
+.is-mobile .nav-action-button[aria-label="新建文件夹"]::after,
+.is-mobile .nav-action-button[aria-label="新建笔记"]::after,
+.is-mobile .nav-action-button[aria-label="排序"]::after,
+.is-mobile .nav-action-button[aria-label="Новая папка"]::after,
+.is-mobile .nav-action-button[aria-label="Новая заметка"]::after,
+.is-mobile .nav-action-button[aria-label="Порядок сортировки"]::after,
+.is-mobile .nav-action-button[aria-label="Nuova cartella"]::after,
+.is-mobile .nav-action-button[aria-label="Nuova nota"]::after,
+.is-mobile .nav-action-button[aria-label="Ordinamento"]::after,
+.is-mobile .nav-action-button[aria-label="Folder baru"]::after,
+.is-mobile .nav-action-button[aria-label="Catatan baru"]::after,
+.is-mobile .nav-action-button[aria-label="Ubah urutan sortir"]::after,
+.is-mobile .nav-action-button[aria-label="Nova pasta"]::after,
+.is-mobile .nav-action-button[aria-label="Nova nota"]::after,
+.is-mobile .nav-action-button[aria-label="Mudar ordenação"]::after,
+.is-mobile .nav-action-button[aria-label="Director nou"]::after,
+.is-mobile .nav-action-button[aria-label="Notă nouă"]::after,
+.is-mobile .nav-action-button[aria-label="Schimbă ordinea de sortare"]::after,
+.is-mobile .nav-action-button[aria-label="新規フォルダ"]::after,
+.is-mobile .nav-action-button[aria-label="新規ノート"]::after,
+.is-mobile .nav-action-button[aria-label="ソート順の変更"]::after {
   display: inline-block;
   font-family: boxicons;
   font-weight: normal;
