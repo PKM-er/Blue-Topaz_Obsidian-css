@@ -6341,9 +6341,10 @@ div.nav-buttons-container .nav-action-button[aria-label="ソート順の変更"]
   font-family: boxicons;
   font-weight: normal;
   font-style: normal;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-variant: normal;
   line-height: 1;
+  margin-top: -1px;
 }
 
 .nav-action-button[aria-label="New note"]::after,
