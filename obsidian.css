@@ -5984,7 +5984,19 @@ span[alt*="+grid"]{
 .is-mobile .nav-action-button[aria-label="Schimbă ordinea de sortare"]::after,
 .is-mobile .nav-action-button[aria-label="新規フォルダ"]::after,
 .is-mobile .nav-action-button[aria-label="新規ノート"]::after,
-.is-mobile .nav-action-button[aria-label="ソート順の変更"]::after {
+.is-mobile .nav-action-button[aria-label="ソート順の変更"]::after,
+
+.is-mobile .nav-action-button[aria-label="Collapse results"]::after,
+.is-mobile .nav-action-button[aria-label="折叠搜索结果"]::after,
+
+.is-mobile .nav-action-button[aria-label="Show search filter"]::after,
+.is-mobile .nav-action-button[aria-label="筛选"]::after,
+
+.is-mobile .nav-action-button[aria-label="Show more context"]::after,
+.is-mobile .nav-action-button[aria-label="显示上下文"]::after,
+
+.is-mobile .nav-action-button[aria-label="Show nested tags"]::after,
+.is-mobile .nav-action-button[aria-label="显示嵌套标签"]::after  {
   display: inline-block;
   font-family: boxicons;
   font-weight: normal;
@@ -6288,24 +6300,40 @@ div.nav-buttons-container .nav-action-button[aria-label="New note"] svg.document
 div.nav-buttons-container .nav-action-button[aria-label="New folder"] svg.folder,
 div.nav-buttons-container .nav-action-button[aria-label="Change sort order"] svg.up-and-down-arrows,
 div.nav-buttons-container .nav-action-button[aria-label="New diagram"] svg.diagram,
+div.nav-buttons-container .nav-action-button[aria-label="Collapse results"] svg.bullet-list,
+div.nav-buttons-container .nav-action-button[aria-label="Show more context"] svg.expand-vertically,
+div.nav-buttons-container .nav-action-button[aria-label="Show search filter"] svg.magnifying-glass,
+div.nav-buttons-container .nav-action-button[aria-label="Show nested tags"] svg.stacked-levels,
+
+
 div.nav-buttons-container .nav-action-button[aria-label="新建文件夹"] svg.folder,
 div.nav-buttons-container .nav-action-button[aria-label="新建笔记"] svg.document,
 div.nav-buttons-container .nav-action-button[aria-label="排序"] svg.up-and-down-arrows,
+div.nav-buttons-container .nav-action-button[aria-label="折叠搜索结果"] svg.bullet-list,
+div.nav-buttons-container .nav-action-button[aria-label="显示上下文"] svg.expand-vertically,
+div.nav-buttons-container .nav-action-button[aria-label="筛选"] svg.magnifying-glass,
+div.nav-buttons-container .nav-action-button[aria-label="显示嵌套标签"] svg.stacked-levels,
+
 div.nav-buttons-container .nav-action-button[aria-label="Новая папка"] svg.folder,
 div.nav-buttons-container .nav-action-button[aria-label="Новая заметка"] svg.document,
 div.nav-buttons-container .nav-action-button[aria-label="Порядок сортировки"] svg.up-and-down-arrows,
+
 div.nav-buttons-container .nav-action-button[aria-label="Nuova cartella"] svg.folder,
 div.nav-buttons-container .nav-action-button[aria-label="Nuova nota"] svg.document,
 div.nav-buttons-container .nav-action-button[aria-label="Ordinamento"] svg.up-and-down-arrows,
+
 div.nav-buttons-container .nav-action-button[aria-label="Folder baru"] svg.folder,
 div.nav-buttons-container .nav-action-button[aria-label="Catatan baru"] svg.document,
 div.nav-buttons-container .nav-action-button[aria-label="Ubah urutan sortir"] svg.up-and-down-arrows,
+
 div.nav-buttons-container .nav-action-button[aria-label="Nova pasta"] svg.folder,
 div.nav-buttons-container .nav-action-button[aria-label="Nova nota"] svg.document,
 div.nav-buttons-container .nav-action-button[aria-label="Mudar ordenação"] svg.up-and-down-arrows,
+
 div.nav-buttons-container .nav-action-button[aria-label="Director nou"] svg.folder,
 div.nav-buttons-container .nav-action-button[aria-label="Notă nouă"] svg.document,
 div.nav-buttons-container .nav-action-button[aria-label="Schimbă ordinea de sortare"] svg.up-and-down-arrows,
+
 div.nav-buttons-container .nav-action-button[aria-label="新規フォルダ"] svg.folder,
 div.nav-buttons-container .nav-action-button[aria-label="新規ノート"] svg.document,
 div.nav-buttons-container .nav-action-button[aria-label="ソート順の変更"] svg.up-and-down-arrows {
@@ -6316,27 +6344,46 @@ div.nav-buttons-container .nav-action-button[aria-label="ソート順の変更"]
 .nav-action-button[aria-label="New note"]::after,
 .nav-action-button[aria-label="Change sort order"]::after,
 .nav-action-button[aria-label="New diagram"]::after,
+
 .nav-action-button[aria-label="新建文件夹"]::after,
 .nav-action-button[aria-label="新建笔记"]::after,
 .nav-action-button[aria-label="排序"]::after,
+
 .nav-action-button[aria-label="Новая папка"]::after,
 .nav-action-button[aria-label="Новая заметка"]::after,
 .nav-action-button[aria-label="Порядок сортировки"]::after,
+
 .nav-action-button[aria-label="Nuova cartella"]::after,
 .nav-action-button[aria-label="Nuova nota"]::after,
 .nav-action-button[aria-label="Ordinamento"]::after,
+
 .nav-action-button[aria-label="Folder baru"]::after,
 .nav-action-button[aria-label="Catatan baru"]::after,
 .nav-action-button[aria-label="Ubah urutan sortir"]::after,
+
 .nav-action-button[aria-label="Nova pasta"]::after,
 .nav-action-button[aria-label="Nova nota"]::after,
 .nav-action-button[aria-label="Mudar ordenação"]::after,
+
 .nav-action-button[aria-label="Director nou"]::after,
 .nav-action-button[aria-label="Notă nouă"]::after,
 .nav-action-button[aria-label="Schimbă ordinea de sortare"]::after,
+
 .nav-action-button[aria-label="新規フォルダ"]::after,
 .nav-action-button[aria-label="新規ノート"]::after,
-.nav-action-button[aria-label="ソート順の変更"]::after {
+.nav-action-button[aria-label="ソート順の変更"]::after,
+
+.nav-action-button[aria-label="Collapse results"]::after,
+.nav-action-button[aria-label="折叠搜索结果"]::after,
+
+.nav-action-button[aria-label="Show search filter"]::after,
+.nav-action-button[aria-label="筛选"]::after,
+
+.nav-action-button[aria-label="Show more context"]::after,
+.nav-action-button[aria-label="显示上下文"]::after,
+
+.nav-action-button[aria-label="Show nested tags"]::after,
+.nav-action-button[aria-label="显示嵌套标签"]::after {
   display: inline-block;
   font-family: boxicons;
   font-weight: normal;
@@ -6419,6 +6466,62 @@ div.nav-buttons-container .nav-action-button[aria-label="ソート順の変更"]
 
 .nav-action-button[aria-label="New diagram"]:hover::after {
   content: "\ebe1";
+}
+
+.nav-action-button[aria-label="Collapse results"]::after,
+.nav-action-button[aria-label="折叠搜索结果"]::after {
+  content: "\ed1a";
+}
+
+.nav-action-button[aria-label="Collapse results"]:hover::after,
+.nav-action-button[aria-label="折叠搜索结果"]:hover::after {
+  content: "\ecd4";
+}
+
+.nav-action-button.is-active[aria-label="Collapse results"]::after,
+.nav-action-button.is-active[aria-label="折叠搜索结果"]::after {
+  content: "\ee49";
+}
+
+.nav-action-button.is-active[aria-label="Collapse results"]:hover::after,
+.nav-action-button.is-active[aria-label="折叠搜索结果"]:hover::after {
+  content: "\ed2f";
+}
+
+.nav-action-button[aria-label="Show search filter"]::after,
+.nav-action-button[aria-label="筛选"]::after {
+  content: "\ee5a";
+}
+
+.nav-action-button[aria-label="Show search filter"]:hover::after,
+.nav-action-button[aria-label="筛选"]:hover::after,
+.nav-action-button.is-active[aria-label="Show search filter"]::after,
+.nav-action-button.is-active[aria-label="筛选"]::after {
+  content: "\ee5b";
+}
+
+.nav-action-button[aria-label="Show more context"]::after,
+.nav-action-button[aria-label="显示上下文"]::after,
+.nav-action-button.is-active[aria-label="Show more context"]:hover::after,
+.nav-action-button.is-active[aria-label="显示上下文"]:hover::after {
+  content: "\eca5";
+}
+
+.nav-action-button[aria-label="Show more context"]:hover::after,
+.nav-action-button[aria-label="显示上下文"]:hover::after,
+.nav-action-button.is-active[aria-label="Show more context"]::after,
+.nav-action-button.is-active[aria-label="显示上下文"]::after {
+  content: "\ed30";
+}
+
+.nav-action-button[aria-label="Show nested tags"]::after,
+.nav-action-button[aria-label="显示嵌套标签"]::after {
+  content: "\ee73";
+}
+
+.nav-action-button[aria-label="Show nested tags"]:hover::after,
+.nav-action-button[aria-label="显示嵌套标签"]:hover::after {
+  content: "\ee73";
 }
 
 /* Sea and sky for Blue Topaz */
