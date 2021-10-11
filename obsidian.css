@@ -1603,6 +1603,10 @@ span.obsidian-search-match-highlight {
   transform: scale(1);
 }
 
+.markdown-preview-view .task-list-item-checkbox:checked:hover {
+  background-color: var(--red);
+}
+
 @keyframes fade-left
 {
   0%
