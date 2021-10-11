@@ -1360,17 +1360,17 @@ input.search-input {
 
 .workspace-leaf-content[data-type='search'] .nav-action-button,
 .workspace-leaf-content[data-type='backlink'] .nav-action-button{
-  padding: 4px;
+  padding: 5px 4px 2px;
 }
 
 .workspace-leaf-content[data-type='file-explorer'] .nav-action-button {
-  padding: 3px 3px 2px;
+  padding: 5px 4px 2px;
 }
 
 /*tag page button*/
 .nav-buttons-container > .nav-action-button,
 .nav-buttons-container > .nav-action-button.is-active {
-  padding: 4px;
+  padding: 5px 4px 2px;
 }
 
 .titlebar-text {
