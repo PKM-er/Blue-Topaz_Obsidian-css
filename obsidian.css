@@ -6224,12 +6224,30 @@ body.plugin-sliding-panes .workspace-split.mod-root .workspace-leaf:not(:first-o
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjRweCIgZmlsbD0iI0ZGRkZGRiI+PHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xNCAySDZjLTEuMSAwLTEuOTkuOS0xLjk5IDJMNCAyMGMwIDEuMS44OSAyIDEuOTkgMkgxOGMxLjEgMCAyLS45IDItMlY4bC02LTZ6bTIgMTZIOHYtMmg4djJ6bTAtNEg4di0yaDh2MnptLTMtNVYzLjVMMTguNSA5SDEzeiIvPjwvc3ZnPg==);
 }
 
-div.nav-buttons-container .nav-action-button[aria-label="New folder"] svg.folder,
-div.nav-buttons-container .nav-action-button[aria-label="新建文件夹"] svg.folder,
 div.nav-buttons-container .nav-action-button[aria-label="New note"] svg.document,
-div.nav-buttons-container .nav-action-button[aria-label="新建笔记"] svg.document,
+div.nav-buttons-container .nav-action-button[aria-label="New folder"] svg.folder,
 div.nav-buttons-container .nav-action-button[aria-label="Change sort order"] svg.up-and-down-arrows,
-div.nav-buttons-container .nav-action-button[aria-label="排序"] svg.up-and-down-arrows  {
+div.nav-buttons-container .nav-action-button[aria-label="新建文件夹"] svg.folder,
+div.nav-buttons-container .nav-action-button[aria-label="新建笔记"] svg.document,
+div.nav-buttons-container .nav-action-button[aria-label="排序"] svg.up-and-down-arrows,
+div.nav-buttons-container .nav-action-button[aria-label="Новая папка"] svg.folder,
+div.nav-buttons-container .nav-action-button[aria-label="Новая заметка"] svg.document,
+div.nav-buttons-container .nav-action-button[aria-label="Порядок сортировки"] svg.up-and-down-arrows,
+div.nav-buttons-container .nav-action-button[aria-label="Nuova cartella"] svg.folder,
+div.nav-buttons-container .nav-action-button[aria-label="Nuova nota"] svg.document,
+div.nav-buttons-container .nav-action-button[aria-label="Ordinamento"] svg.up-and-down-arrows,
+div.nav-buttons-container .nav-action-button[aria-label="Folder baru"] svg.folder,
+div.nav-buttons-container .nav-action-button[aria-label="Catatan baru"] svg.document,
+div.nav-buttons-container .nav-action-button[aria-label="Ubah urutan sortir"] svg.up-and-down-arrows,
+div.nav-buttons-container .nav-action-button[aria-label="Nova pasta"] svg.folder,
+div.nav-buttons-container .nav-action-button[aria-label="Nova nota"] svg.document,
+div.nav-buttons-container .nav-action-button[aria-label="Mudar ordenação"] svg.up-and-down-arrows,
+div.nav-buttons-container .nav-action-button[aria-label="Director nou"] svg.folder,
+div.nav-buttons-container .nav-action-button[aria-label="Notă nouă"] svg.document,
+div.nav-buttons-container .nav-action-button[aria-label="Schimbă ordinea de sortare"] svg.up-and-down-arrows,
+div.nav-buttons-container .nav-action-button[aria-label="新規フォルダ"] svg.folder,
+div.nav-buttons-container .nav-action-button[aria-label="新規ノート"] svg.document,
+div.nav-buttons-container .nav-action-button[aria-label="ソート順の変更"] svg.up-and-down-arrows {
   display: none;
 }
 
@@ -6248,6 +6266,9 @@ div.nav-buttons-container .nav-action-button[aria-label="排序"] svg.up-and-dow
 .nav-action-button[aria-label="Folder baru"]::after,
 .nav-action-button[aria-label="Catatan baru"]::after,
 .nav-action-button[aria-label="Ubah urutan sortir"]::after,
+.nav-action-button[aria-label="Nova pasta"]::after,
+.nav-action-button[aria-label="Nova nota"]::after,
+.nav-action-button[aria-label="Mudar ordenação"]::after,
 .nav-action-button[aria-label="Director nou"]::after,
 .nav-action-button[aria-label="Notă nouă"]::after,
 .nav-action-button[aria-label="Schimbă ordinea de sortare"]::after,
@@ -6258,7 +6279,7 @@ div.nav-buttons-container .nav-action-button[aria-label="排序"] svg.up-and-dow
   font-family: boxicons;
   font-weight: normal;
   font-style: normal;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-variant: normal;
   line-height: 1;
 }
@@ -6268,6 +6289,7 @@ div.nav-buttons-container .nav-action-button[aria-label="排序"] svg.up-and-dow
 .nav-action-button[aria-label="Новая заметка"]::after,
 .nav-action-button[aria-label="Nuova nota"]::after,
 .nav-action-button[aria-label="Catatan baru"]::after,
+.nav-action-button[aria-label="Nova nota"]::after,
 .nav-action-button[aria-label="Notă nouă"]::after,
 .nav-action-button[aria-label="新規ノート"]::after {
   content: "\ed39";
@@ -6278,6 +6300,7 @@ div.nav-buttons-container .nav-action-button[aria-label="排序"] svg.up-and-dow
 .nav-action-button[aria-label="Новая заметка"]:hover::after,
 .nav-action-button[aria-label="Nuova nota"]:hover::after,
 .nav-action-button[aria-label="Catatan baru"]:hover::after,
+.nav-action-button[aria-label="Nova nota"]:hover::after,
 .nav-action-button[aria-label="Notă nouă"]:hover::after,
 .nav-action-button[aria-label="新規ノート"]:hover::after {
   content: "\ed38";
@@ -6288,6 +6311,7 @@ div.nav-buttons-container .nav-action-button[aria-label="排序"] svg.up-and-dow
 .nav-action-button[aria-label="Новая папка"]::after,
 .nav-action-button[aria-label="Nuova cartella"]::after,
 .nav-action-button[aria-label="Folder baru"]::after,
+.nav-action-button[aria-label="Nova pasta"]::after,
 .nav-action-button[aria-label="Director nou"]::after,
 .nav-action-button[aria-label="新規フォルダ"]::after {
   content: "\ed45";
@@ -6298,6 +6322,7 @@ div.nav-buttons-container .nav-action-button[aria-label="排序"] svg.up-and-dow
 .nav-action-button[aria-label="Новая папка"]:hover::after,
 .nav-action-button[aria-label="Nuova cartella"]:hover::after,
 .nav-action-button[aria-label="Folder baru"]:hover::after,
+.nav-action-button[aria-label="Nova pasta"]:hover::after,
 .nav-action-button[aria-label="Director nou"]:hover::after,
 .nav-action-button[aria-label="新規フォルダ"]:hover::after {
   content: "\eabf";
@@ -6308,6 +6333,7 @@ div.nav-buttons-container .nav-action-button[aria-label="排序"] svg.up-and-dow
 .nav-action-button[aria-label="Порядок сортировки"]::after,
 .nav-action-button[aria-label="Ordinamento"]::after,
 .nav-action-button[aria-label="Ubah urutan sortir"]::after,
+.nav-action-button[aria-label="Mudar ordenação"]::after,
 .nav-action-button[aria-label="Schimbă ordinea de sortare"]::after,
 .nav-action-button[aria-label="ソート順の変更"]::after {
   content: "\ee7f";
@@ -6318,6 +6344,7 @@ div.nav-buttons-container .nav-action-button[aria-label="排序"] svg.up-and-dow
 .nav-action-button[aria-label="Порядок сортировки"]:hover::after,
 .nav-action-button[aria-label="Ordinamento"]:hover::after,
 .nav-action-button[aria-label="Ubah urutan sortir"]:hover::after,
+.nav-action-button[aria-label="Mudar ordenação"]:hover::after,
 .nav-action-button[aria-label="Schimbă ordinea de sortare"]:hover::after,
 .nav-action-button[aria-label="ソート順の変更"]:hover::after {
   content: "\ee82";
