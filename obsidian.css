@@ -3693,6 +3693,8 @@ div.CodeMirror-activeline > .HyperMD-quote {
 
 .app-container .markdown-preview-view pre.language-note-important,
 .app-container .markdown-preview-view pre.language-note-imp,
+.print pre.language-note-important,
+.print pre.language-note-imp,
 .popover .markdown-preview-view pre.language-note-important,
 .popover .markdown-preview-view pre.language-note-imp {
   border: 4px dashed var(--note-important);
