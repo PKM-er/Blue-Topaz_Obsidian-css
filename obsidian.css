@@ -2240,11 +2240,8 @@ strong > em > font {
 .theme-light *:not(font) > strong > em, 
 .theme-light .cm-strong.cm-em {
   padding-right: 0.12em;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-color: #f55454;
-  background-image: linear-gradient(120deg, #3aa7f0 0%, #068fff 50%, #0068c9 100%);
+  color: #0076e4;
+  -webkit-mask:linear-gradient(120deg, #0000006e, #000000);
   font-family: var(--font-family-strong) !important;
 }
 
