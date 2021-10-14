@@ -5953,7 +5953,19 @@ span[alt*="+grid"]{
 
 /*image*/
 .is-mobile .view-content img:not([class="emoji"]):active {
-  all: initial;   
+  cursor: initial;    
+  position: initial;
+  object-fit: initial;
+  height: initial;
+  width: initial;
+  padding: initial;
+  top: initial;  
+  left: initial;
+  right: initial;
+  bottom: initial;
+  transform: initial;
+  z-index: initial;
+  background-image: initial;
 }
 
 /*buttons*/
