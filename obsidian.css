@@ -5966,6 +5966,7 @@ span[alt*="+grid"]{
   transform: initial;
   z-index: initial;
   background-image: initial;
+  margin: initial;
 }
 
 /*buttons*/
