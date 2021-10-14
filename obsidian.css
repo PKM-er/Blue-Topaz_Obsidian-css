@@ -6299,12 +6299,15 @@ body.plugin-sliding-panes .workspace-split.mod-root .workspace-leaf:not(:first-o
 
 .nav-action-button[aria-label="Collapse results"] svg.bullet-list,
 .nav-action-button[aria-label="折叠搜索结果"] svg.bullet-list,
+.nav-action-button[aria-label="Свернуть результаты"] svg.bullet-list,
 
 .nav-action-button[aria-label="Show more context"] svg.expand-vertically,
 .nav-action-button[aria-label="显示上下文"] svg.expand-vertically,
+.nav-action-button[aria-label="Развернуть контекст"] svg.expand-vertically,
 
 .nav-action-button[aria-label="Show search filter"] svg.magnifying-glass,
 .nav-action-button[aria-label="筛选"] svg.magnifying-glass,
+.nav-action-button[aria-label="Показать фильтр поиска"] svg.magnifying-glass,
 
 .nav-action-button[aria-label="Show nested tags"] svg.stacked-levels,
 .nav-action-button[aria-label="显示嵌套标签"] svg.stacked-levels,
@@ -6313,18 +6316,23 @@ body.plugin-sliding-panes .workspace-split.mod-root .workspace-leaf:not(:first-o
 
 .nav-action-button[aria-label="Match case"] svg.uppercase-lowercase-a,
 .nav-action-button[aria-label="区分大小写"] svg.uppercase-lowercase-a,
+.nav-action-button[aria-label="Учитывать регистр"] svg.uppercase-lowercase-a,
 
 .nav-action-button[aria-label="Explain search term"] svg.help,
 .nav-action-button[aria-label="说明搜索含义"] svg.help,
+.nav-action-button[aria-label="Объяснить поисковую строку"] svg.help,
 
 .nav-action-button[aria-label="Copy search results"] svg.documents,
 .nav-action-button[aria-label="复制搜索结果"] svg.documents,
+.nav-action-button[aria-label="Скопировать результаты поиска"] svg.documents,
 
 .nav-action-button[aria-label="Star/unstar current file"] svg.star,
 .nav-action-button[aria-label="为当前文件增加/取消星标"] svg.star,
+.nav-action-button[aria-label="Добавить/удалить из избранного текущий файл"] svg.star,
 
 .nav-action-button[aria-label="Star/unstar current search"] svg.star-list,
-.nav-action-button[aria-label="为当前搜索结果增加/取消星标"] svg.star-list {
+.nav-action-button[aria-label="为当前搜索结果增加/取消星标"] svg.star-list,
+.nav-action-button[aria-label="Добавить/удалить из избранного текущий поиск"] svg.star-list {
   display: none;
 }
 
@@ -6416,48 +6424,59 @@ body.plugin-sliding-panes .workspace-split.mod-root .workspace-leaf:not(:first-o
 }
 
 .nav-action-button[aria-label="Collapse results"]::after,
-.nav-action-button[aria-label="折叠搜索结果"]::after {
+.nav-action-button[aria-label="折叠搜索结果"]::after,
+.nav-action-button[aria-label="Свернуть результаты"]::after {
   content: "\ed1a";
 }
 
 .nav-action-button[aria-label="Collapse results"]:hover::after,
-.nav-action-button[aria-label="折叠搜索结果"]:hover::after {
+.nav-action-button[aria-label="折叠搜索结果"]:hover::after,
+.nav-action-button[aria-label="Свернуть результаты"]:hover::after {
   content: "\ecd4";
 }
 
 .nav-action-button.is-active[aria-label="Collapse results"]::after,
-.nav-action-button.is-active[aria-label="折叠搜索结果"]::after {
+.nav-action-button.is-active[aria-label="折叠搜索结果"]::after,
+.nav-action-button.is-active[aria-label="Свернуть результаты"]::after {
   content: "\ee49";
 }
 
 .nav-action-button.is-active[aria-label="Collapse results"]:hover::after,
-.nav-action-button.is-active[aria-label="折叠搜索结果"]:hover::after {
+.nav-action-button.is-active[aria-label="折叠搜索结果"]:hover::after,
+.nav-action-button.is-active[aria-label="Свернуть результаты"]:hover::after {
   content: "\ed2f";
 }
 
 .nav-action-button[aria-label="Show search filter"]::after,
-.nav-action-button[aria-label="筛选"]::after {
+.nav-action-button[aria-label="筛选"]::after,
+.nav-action-button[aria-label="Показать фильтр поиска"]::after {
   content: "\ee5a";
 }
 
 .nav-action-button[aria-label="Show search filter"]:hover::after,
 .nav-action-button[aria-label="筛选"]:hover::after,
+.nav-action-button[aria-label="Показать фильтр поиска"]:hover::after,
 .nav-action-button.is-active[aria-label="Show search filter"]::after,
-.nav-action-button.is-active[aria-label="筛选"]::after {
+.nav-action-button.is-active[aria-label="筛选"]::after,
+.nav-action-button.is-active[aria-label="Показать фильтр поиска"]::after {
   content: "\ee5b";
 }
 
 .nav-action-button[aria-label="Show more context"]::after,
 .nav-action-button[aria-label="显示上下文"]::after,
+.nav-action-button[aria-label="Развернуть контекст"]::after,
 .nav-action-button.is-active[aria-label="Show more context"]:hover::after,
-.nav-action-button.is-active[aria-label="显示上下文"]:hover::after {
+.nav-action-button.is-active[aria-label="显示上下文"]:hover::after,
+.nav-action-button.is-active[aria-label="Развернуть контекст"]:hover::after {
   content: "\eca5";
 }
 
 .nav-action-button[aria-label="Show more context"]:hover::after,
 .nav-action-button[aria-label="显示上下文"]:hover::after,
+.nav-action-button[aria-label="Развернуть контекст"]:hover::after,
 .nav-action-button.is-active[aria-label="Show more context"]::after,
-.nav-action-button.is-active[aria-label="显示上下文"]::after {
+.nav-action-button.is-active[aria-label="显示上下文"]::after,
+.nav-action-button.is-active[aria-label="Развернуть контекст"]::after {
   content: "\ed30";
 }
 
@@ -6472,33 +6491,39 @@ body.plugin-sliding-panes .workspace-split.mod-root .workspace-leaf:not(:first-o
 }
 
 .nav-action-button[aria-label="Match case"]::after,
-.nav-action-button[aria-label="区分大小写"]::after {
+.nav-action-button[aria-label="区分大小写"]::after,
+.nav-action-button[aria-label="Учитывать регистр"]::after {
   content: "\ed8d";
   font-family: remixicon;
 }
 
 .nav-action-button[aria-label="Explain search term"]::after,
-.nav-action-button[aria-label="说明搜索含义"]::after {
+.nav-action-button[aria-label="说明搜索含义"]::after,
+.nav-action-button[aria-label="Объяснить поисковую строку"]::after {
   content: "\ed84";
 }
 
 .nav-action-button[aria-label="Copy search results"]::after,
-.nav-action-button[aria-label="复制搜索结果"]::after {
+.nav-action-button[aria-label="复制搜索结果"]::after,
+.nav-action-button[aria-label="Скопировать результаты поиска"]::after {
   content: "\ece8";
 }
 
 .nav-action-button[aria-label="Copy search results"]:hover::after,
-.nav-action-button[aria-label="复制搜索结果"]:hover::after {
+.nav-action-button[aria-label="复制搜索结果"]:hover::after,
+.nav-action-button[aria-label="Скопировать результаты поиска"]:hover::after {
   content: "\ea5a";
 }
 
 .nav-action-button[aria-label="Star/unstar current file"]::after,
-.nav-action-button[aria-label="为当前文件增加/取消星标"]::after {
+.nav-action-button[aria-label="为当前文件增加/取消星标"]::after,
+.nav-action-button[aria-label="Добавить/удалить из избранного текущий файл"]::after {
   content: "\ebad";
 }
 
 .nav-action-button[aria-label="Star/unstar current search"]::after,
-.nav-action-button[aria-label="为当前搜索结果增加/取消星标"]::after {
+.nav-action-button[aria-label="为当前搜索结果增加/取消星标"]::after,
+.nav-action-button[aria-label="Добавить/удалить из избранного текущий поиск"]::after {
   content: "\ea11";
   font-family: "Material Icons Outlined";
 }
