@@ -5967,7 +5967,7 @@ span[alt*="+grid"]{
   z-index: initial;
   background-image: initial;
   margin: initial;
-  max-width: min-content;
+  max-width: min(100%,800px);
 }
 
 /*buttons*/
