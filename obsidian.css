@@ -5958,7 +5958,7 @@ span[alt*="+grid"]{
   object-fit: initial;
   height: initial;
   width: initial;
-  padding: initial;
+  padding: 5px;
   top: initial;  
   left: initial;
   right: initial;
@@ -5967,7 +5967,6 @@ span[alt*="+grid"]{
   z-index: initial;
   background-image: initial;
   margin: initial;
-  max-width: min(100%,800px);
 }
 
 /*buttons*/
