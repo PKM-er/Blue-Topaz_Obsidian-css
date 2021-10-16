@@ -5,8 +5,7 @@
 A blue theme for **Obsidian**. Blue Topaz is not a precious gem, like obsidian😜. Generally, Blue Topaz is obtained by artificially treating colourless topaz. Likewise，I did not make this theme from scratch, but modified it after borrowing others' themes. It is like Blue Topaz, which is a modified product. Thus, thanks for the all shared themes, which inspired me indeed! BTW, For the word "colourless topaz", there is no offence and no comparison. And it is not a metaphor. I will be glad if you enjoy the theme, *Blue Topaz*.
 
 # 字体 (fonts)
-中文：霞鹜文楷，免费开源，下载地址：https://github.com/lxgw/LxgwWenKai 觉得喜欢的话，也请给这个项目星星
-English: It's great if you have 'Bookerly' font.
+中文：霞鹜文楷，免费开源，下载地址：https://github.com/lxgw/LxgwWenKai 觉得喜欢的话，也请给这个项目星星。加粗字体请使用霞鹜文楷屏幕版（因为霞鹜文楷的加粗不是很明显）https://github.com/lxgw/LxgwWenKai-Screen
 
 # Preview
 ![](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/preview_Blue%20Topaz.png)
@@ -20,7 +19,6 @@ English: It's great if you have 'Bookerly' font.
 ![image](https://user-images.githubusercontent.com/72023275/134859571-4eb1580c-a7ba-4ecd-9231-8bfad162207f.png)
 ![image](https://user-images.githubusercontent.com/72023275/134859577-ca6bf35a-6a6a-45b1-ba0e-5aca7a4c4990.png)
 ![image](https://user-images.githubusercontent.com/72023275/134859584-ec868841-f237-4f8c-bea8-3e57cfecc3eb.png)
-
 
 
 # TIPS for Blue Topaz
