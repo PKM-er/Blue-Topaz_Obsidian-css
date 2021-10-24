@@ -1449,15 +1449,6 @@ input.search-input {
   opacity: 1;
 }
 
-/*==== separators =====*/
-.workspace-split.mod-root .workspace-split.mod-vertical .workspace-leaf-content {
-  padding-right: 0px;
-}
-
-.workspace-leaf-resize-handle {
-  background-color: var(--background-secondary-alt-bg-4-bt);
-}
-
 body {
   -webkit-font-smoothing: auto;
 }
@@ -5685,6 +5676,62 @@ aside > h2 {
   margin-top: 3px
 }
 
+/* ================================== */
+/* ============== hider ============= */
+/* ================================== */
+/*adopted from minimal by @kepano*/
+.hider-ribbon .workspace-ribbon-collapse-btn {
+  display:none;
+}
+.hider-ribbon .workspace-ribbon.mod-right {
+  pointer-events:none;
+}
+.hider-ribbon .workspace-ribbon.mod-left {
+  position:fixed;
+  border-right:0px;
+  margin:0;
+  height:40px;
+  overflow:visible;
+  flex-basis:0;
+  bottom:0;
+  top:auto;
+  display:flex !important;
+  flex-direction:row;
+  background:var(--background-primary);
+  z-index:17;
+  opacity:0;
+  transition:opacity 0.25s ease-in-out;
+}
+.hider-ribbon .side-dock-actions,
+.hider-ribbon .side-dock-settings {
+  display:flex;
+  border-top:var(--border-width) solid var(--background-modifier-border);
+  background:var(--background-primary);
+  margin:0;
+}
+.hider-ribbon .workspace-ribbon.mod-left:after {
+  border-top:var(--border-width) solid var(--background-modifier-border);
+  background:var(--background-primary);
+  padding-right:100vw;
+  content:" ";
+  pointer-events:none;
+}
+.hider-ribbon .workspace-ribbon.mod-left .side-dock-ribbon-action {
+  display: inline-block;
+  padding: 10px 5px 0 12px;
+}
+.hider-ribbon .workspace-ribbon.mod-left:hover {
+  opacity:1;
+  transition:opacity 0.3s ease-in-out;
+}
+.hider-ribbon .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
+  border-top:1px solid var(--background-modifier-border);
+}
+.hider-ribbon .workspace-split.mod-left-split {
+  margin:0;
+}
+
+
 /* ============ */
 /* ============ */
 /*image position*/
@@ -6170,9 +6217,29 @@ span[alt*="+grid"]{
   background-color: var(--background-secondary-alt-bg-4-bt);
 }
 
-.workspace-split.mod-left-split > .workspace-leaf-resize-handle, 
+/*==== separators =====*/
+.workspace-split.mod-root .workspace-split.mod-vertical .workspace-leaf-content {
+  padding-right: 0px;
+}
+
+.workspace-leaf-resize-handle {
+  background-color: var(--background-secondary-alt-bg-4-bt);
+}
+
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle {
+  height: 95.1%;
+  width: 1px;
+}
+
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
-  height: 95.5%;
+  height: 95.1%;
+  width: 2px;
+}
+
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover, 
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover {
+  width: 3px;
+  background-color: rgba(var(--interactive-accent-rgb), 0.5);
 }
 
 .is-translucent  .workspace-split.mod-left-split > .workspace-leaf-resize-handle, 
@@ -6189,12 +6256,17 @@ span[alt*="+grid"]{
 
 .workspace-tabs {
   background-color: var(--background-secondary-alt-bg-4-bt);
+  padding-right: 0;
 }
 
 .workspace-tab-header-container {
   background-color: var(--background-secondary-alt-bg-4-bt);
-  flex: 0.007 0 auto;
+  flex: 0.012 0 auto;
   padding-top: 7px;
+}
+
+.workspace-split.mod-horizontal.mod-left-split .workspace-tab-header-container {
+  flex: 0.009 0 auto !important;
 }
 
 .workspace-split.mod-horizontal.mod-right-split .workspace-tab-header-container {
