@@ -550,6 +550,7 @@ to get a right-side note block
   --background-transparent-black-or-white-3: #2f2f2f6c;
   --background-transparent-blue: #003e759a;
 
+  --scrollbar-thumb: #8282827e;
 
   --gray-1: #5C6370;
   --gray-2: #abb2bf;
@@ -789,6 +790,8 @@ to get a right-side note block
   --background-transparent-black-or-white-2: #ffffffca;
   --background-transparent-black-or-white-3: #eeeeee91;
   --background-transparent-blue: #c6e5ffde;
+
+  --scrollbar-thumb: #c6c6c6a8;
 
   --gray-1: #383a42;
   --gray-2: #383a42;
@@ -4993,6 +4996,10 @@ pre.frontmatter.language-yaml::before {
 /* ================================== */
 /* ============= kanban ============= */
 /* ================================== */
+.kanban-plugin__lane ::-webkit-scrollbar-thumb:vertical {
+  background-color: var(--scrollbar-thumb);
+}
+
 .kanban-plugin {
   background-color: var(--background-secondary-bg-4-bt) !important;
 }
@@ -6219,7 +6226,7 @@ span[alt*="+grid"]{
 /*==== separators =====*/
 .workspace-split.mod-vertical > .workspace-leaf,
 .workspace-split.mod-root .workspace-split.mod-vertical .workspace-leaf-content {
-  padding-right: 2px;
+  padding-right: 0;
 }
 
 .workspace-leaf-resize-handle {
