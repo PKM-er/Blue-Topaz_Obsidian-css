@@ -557,6 +557,7 @@ to get a right-side note block
   --red: #e06c75;
   --red-1: #d05a63;
   --orange: #d19a66;
+  --orange-1: #da904b;
   --green: #b6e296;
   --darkgreen: #399a58;
   --aqua: #56b6c2;
@@ -806,6 +807,7 @@ to get a right-side note block
   --yellow: #e48100;
   --light-yellow: #ab9a02;
   --orange: #db9600;
+  --orange-1: #cc7523;
   --light-purple: #b74ff3;
   --blue-green: #3bd4da;
   
@@ -5510,7 +5512,6 @@ aside > h2 {
   color: var(--blue) !important;
 }
 
-.cm-s-obsidian .cm-hmd-frontmatter.cm-atom, 
 .cm-s-obsidian .cm-math.cm-atom, 
 .cm-s-obsidian pre.HyperMD-codeblock .cm-atom {
   color: var(--text-normal) !important;
@@ -5538,6 +5539,14 @@ aside > h2 {
 .theme-light .cm-s-obsidian .cm-math.cm-tag, 
 .theme-light .cm-s-obsidian pre.HyperMD-codeblock .cm-tag {
   color: var(--purple) !important;
+}
+
+.cm-atom.cm-hmd-frontmatter {
+  color: var(--orange-1) !important;
+}
+
+.cm-meta.cm-hmd-frontmatter {
+  color: var(--text-muted) !important;
 }
 
 .theme-light .cm-s-obsidian span.cm-keyword {
