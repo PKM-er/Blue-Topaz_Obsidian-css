@@ -2132,6 +2132,10 @@ ul > li:not(.task-list-item) {
   border-left: 0.125em solid var(--list-ul-block-color);
 }
 
+.workspace-leaf-content[data-type="markdown"] ul > li:not(.task-list-item) {
+  border-left: 0.125em solid var(--list-ul-block-color);
+}
+
 ul > li:not(.task-list-item):hover {
   border-color: var(--list-ul-hover);
 }
@@ -2163,8 +2167,11 @@ ol > li {
   margin-top: 0.25em;
   padding-right: 0.375em;
   transition: all 300ms ease-in-out;  
-  border-left: 0.125em solid var(--list-ol-block-color);
 } 
+
+.workspace-leaf-content[data-type="markdown"] ol > li {
+  border-left: 0.125em solid var(--list-ol-block-color);
+}
 
 ol > li:hover {
   border-color: var(--list-ol-hover);
@@ -5696,56 +5703,87 @@ aside > h2 {
 /* ================================== */
 /*adopted from minimal by @kepano*/
 .hider-ribbon .workspace-ribbon-collapse-btn {
-  display:none;
+  display: none;
 }
 .hider-ribbon .workspace-ribbon.mod-right {
-  pointer-events:none;
+  pointer-events: none;
 }
 .hider-ribbon .workspace-ribbon.mod-left {
-  position:fixed;
-  border-right:0px;
-  margin:0;
-  height:40px;
-  overflow:visible;
-  flex-basis:0;
-  bottom:0;
-  top:auto;
-  display:flex !important;
-  flex-direction:row;
-  background:var(--background-primary);
-  z-index:17;
-  opacity:0;
-  transition:opacity 0.25s ease-in-out;
+  position: fixed;
+  border-right: 0px;
+  margin: 0;
+  height: 40px;
+  overflow: visible;
+  flex-basis: 0;
+  bottom: 0;
+  top: auto;
+  display: flex !important;
+  flex-direction: row;
+  background: var(--background-primary);
+  z-index: 17;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
 }
 .hider-ribbon .side-dock-actions,
 .hider-ribbon .side-dock-settings {
-  display:flex;
-  border-top:var(--border-width) solid var(--background-modifier-border);
-  background:var(--background-primary);
-  margin:0;
+  display: flex;
+  border-top: var(--border-width) solid var(--background-modifier-border);
+  background: var(--background-primary);
+  margin: 0;
 }
 .hider-ribbon .workspace-ribbon.mod-left:after {
-  border-top:var(--border-width) solid var(--background-modifier-border);
-  background:var(--background-primary);
-  padding-right:100vw;
-  content:" ";
-  pointer-events:none;
+  border-top: var(--border-width) solid var(--background-modifier-border);
+  background: var(--background-primary);
+  padding-right: 100vw;
+  content: " ";
+  pointer-events: none;
 }
 .hider-ribbon .workspace-ribbon.mod-left .side-dock-ribbon-action {
   display: inline-block;
   padding: 10px 5px 0 12px;
 }
 .hider-ribbon .workspace-ribbon.mod-left:hover {
-  opacity:1;
-  transition:opacity 0.3s ease-in-out;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 .hider-ribbon .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
-  border-top:1px solid var(--background-modifier-border);
+  border-top: 1px solid var(--background-modifier-border);
 }
 .hider-ribbon .workspace-split.mod-left-split {
-  margin:0;
+  margin: 0;
 }
 
+
+/* ================================== */
+/* ========== Breadcrumbs =========== */
+/* ================================== */
+.workspace-leaf-content[data-type="breadcrumbs-matrix"] summary.hier-summary,
+h3.breadcrumbs-matrix-header {
+  color: var(--h3-color) !important;
+}
+
+.workspace-leaf-content[data-type="breadcrumbs-matrix"] summary {
+  color: var(--h4-color) !important;
+}
+
+/*remove H3, H5 when hovering*/
+h3.breadcrumbs-matrix-header:hover::before,
+h5.breadcrumbs-matrix-header:hover::before {
+  display: none;
+}
+
+h5.breadcrumbs-header,
+h5.breadcrumbs-matrix-header {
+  color: var(--h5-color) !important;
+}
+
+.breadcrumbs-matrix-square {
+  border: none !important;
+}
+
+.breadcrumbs-matrix ol {
+  margin-left: 8px !important;
+}
 
 /* ============ */
 /* ============ */
