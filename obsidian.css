@@ -2170,6 +2170,14 @@ mjx-container[jax='CHTML'] {
   background-color: var(--background-code-2);
 }
 
+.theme-dark .cm-s-obsidian span.cm-variable-2 {
+  color: #0072d0;
+}
+
+.theme-dark .cm-s-obsidian span.cm-variable-3 {
+  color: #5a96f7;
+}
+
 /*inline code*/
 .cm-s-obsidian span.cm-formatting-code.cm-inline-code {
   color: var(--text-muted);
