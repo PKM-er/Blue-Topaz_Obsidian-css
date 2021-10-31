@@ -1267,6 +1267,24 @@ span.cm-highlight.cm-inline-code {
   padding: 3px 0 1px !important;
 }
 
+.theme-dark .cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight {
+  background-image: initial;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-color: var(--mark-highlight);
+  color: var(--text-highlight);
+}
+
+.theme-dark  span.cm-strong.cm-em.cm-highlight {
+  background-image: initial;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-color: var(--mark-highlight);
+  color: #c9b8ff;
+}
+
 /* outliner for the outline */
 /*thanks to wonton from forum*/
 .nav-folder-children .nav-folder-children {
@@ -3183,7 +3201,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
 }
 
 .nav-folder.is-collapsed {
-  opacity: 0.5;
+  opacity: 0.55;
 }
 
 .nav-folder.is-collapsed .nav-folder-collapse-indicator {
@@ -5830,7 +5848,7 @@ ul.dataview.list-view-ul > li:not(.task-list-item):first-of-type::before {
 }
 
 ul.dataview.list-view-ul > li:not(.task-list-item):not(:first-of-type):nth-child(2n)::before {
-  content: '\eac4';
+  content: '\ed51';
   font-family: boxicons;
   font-size: 0.8em;
   padding: 0 5px 0 0;
@@ -5838,7 +5856,7 @@ ul.dataview.list-view-ul > li:not(.task-list-item):not(:first-of-type):nth-child
 }
 
 ul.dataview.list-view-ul > li:not(.task-list-item):not(:first-of-type):nth-child(2n+1)::before {
-  content: '\ed51';
+  content: '\eac4';
   font-family: boxicons;
   font-size: 0.8em;
   padding: 0 5px 0 0;
