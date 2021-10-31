@@ -585,7 +585,7 @@ to get a right-side note block
 
   /*list*/
   --list-ul-block-color: #e19742a9;
-  --list-ul-disc-color: #e68248;
+  --list-ul-disc-color: #eb9563;
   --list-ul-hover: #e28915de;
   --list-ol-block-color: #2685bbb4;
   --list-ol-number-color: #95afc4;
@@ -732,6 +732,15 @@ to get a right-side note block
 
   --color-view-header-gradient-1: #000000de;
   --color-view-header-gradient-2: #002e6ac0;
+
+  /*checkbox*/
+  --checkbox-color-1: #a9a608;
+  --checkbox-color-2: #1dac10;
+  --checkbox-color-3: #ffd1d1;
+  --checkbox-color-4: #625d4c;
+  --checkbox-color-5: #9a67ae;
+  --checkbox-color-6: #5f5f5f;
+  --text-checked-checkbox: #8e8e8e;
 }
 
 .theme-light {
@@ -830,7 +839,7 @@ to get a right-side note block
 
   /*list*/
   --list-ul-block-color: #b9751b;
-  --list-ul-disc-color: #f88629;
+  --list-ul-disc-color: #f39c55;
   --list-ul-hover: #dd922f;
   --list-ol-block-color: #3573a5;
   --list-ol-number-color: #6196d6;
@@ -969,6 +978,15 @@ to get a right-side note block
 
   --color-view-header-gradient-1: #a1d9ffef;
   --color-view-header-gradient-2: #e6fffbef;
+
+  /*checkbox*/
+  --checkbox-color-1: #c4c116;
+  --checkbox-color-2: #4bbf40;
+  --checkbox-color-3: #ffe9e9;
+  --checkbox-color-4: #fffbd4;
+  --checkbox-color-5: #ad7fbf;
+  --checkbox-color-6: #5f5f5f;
+  --text-checked-checkbox: #9b9b9b;
 }
 
 /*=========================*/
@@ -1026,6 +1044,7 @@ to get a right-side note block
   font-weight: 600;
   font-family: Wingdings, Microsoft YaHei;
 }
+
 .tag[href^="#dailynote"] {
   background-color: var(--tag-dailynote-bg) !important;
   font-weight: 600;
@@ -1058,7 +1077,6 @@ to get a right-side note block
 .cm-s-obsidian .CodeMirror-line span.cm-tag-weeklynote:not(.cm-formatting-hashtag)::after {
   content:' 🥑';
 }
-
 .cm-s-obsidian .CodeMirror-line span.cm-tag-weeklynote:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
@@ -1066,6 +1084,7 @@ to get a right-side note block
   padding-right: 0.2em;
   background-color: var(--tag-weeklynote-bg);
 }
+
 .tag[href^="#questions"] {
   background-color: var(--tag-questions-bg) !important;
   font-weight: 600;
@@ -1085,6 +1104,7 @@ to get a right-side note block
   padding-right: 0.2em;
   background-color: var(--tag-questions-bg);
 }
+
 .tag[href^="#ideas"] {
   background-color: var(--tag-ideas-bg) !important;
   font-weight: 600;
@@ -1619,7 +1639,6 @@ span.obsidian-search-match-highlight {
   top: 3px;
   right: 2px;
   bottom: 2px;
-  transform: scale(1.1);
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
 }
 
@@ -1631,14 +1650,12 @@ span.obsidian-search-match-highlight {
   top: 3px;
   right: 2px;
   bottom: 2px;
-  transform: scale(1.5);
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
   animation: fade-left 1.5s;
 }
 
 .markdown-preview-view .task-list-item-checkbox:checked:hover::before {
   animation: tada 1s;
-  transform: scale(1);
 }
 
 .markdown-preview-view .task-list-item-checkbox:checked:hover {
@@ -1711,13 +1728,14 @@ span.obsidian-search-match-highlight {
 /*thanks to Piotr and ishgunacar from forum*/
 .cm-s-obsidian span.cm-formatting-task {
   display: inline-block !important; 
-  font-family: boxicons !important;
+  font-family: Consolas !important;
 }
 
 span.cm-formatting-task.cm-property {
   color: var(--text-accent);
 } 
 
+/*
 div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-meta,
 div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-property {
   color: transparent;
@@ -1744,6 +1762,121 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
   left: -0.12em;
   top: 0.08em;
 }
+*/
+
+.markdown-preview-view ul.contains-task-list li[data-task="x"].task-list-item.is-checked {
+  text-decoration: none;
+  color: var(--text-checked-checkbox);
+}
+
+/*- [<]*/
+.markdown-preview-view ul.contains-task-list li[data-task="<"] .task-list-item-checkbox:checked::before {
+  content: ' ';
+  top: -0.25em;
+  left: -0.24em;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTMuMjkzIDYuMjkzIDcuNTg2IDEybDUuNzA3IDUuNzA3IDEuNDE0LTEuNDE0TDEwLjQxNCAxMmw0LjI5My00LjI5M3oiLz48L3N2Zz4=);
+}
+.markdown-preview-view ul.contains-task-list li[data-task="<"] .task-list-item-checkbox:checked {
+  background-color: var(--checkbox-color-1);
+}
+.markdown-preview-view ul.contains-task-list li[data-task="<"].task-list-item.is-checked {
+  text-decoration: none;
+  color: var(--text-normal);
+}
+
+/*- [>]*/
+.markdown-preview-view ul.contains-task-list li[data-task=">"] .task-list-item-checkbox:checked::before {
+  content: ' ';
+  top: -0.25em;
+  left: -0.24em;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTAuNzA3IDE3LjcwNyAxNi40MTQgMTJsLTUuNzA3LTUuNzA3LTEuNDE0IDEuNDE0TDEzLjU4NiAxMmwtNC4yOTMgNC4yOTN6Ii8+PC9zdmc+);
+}
+.markdown-preview-view ul.contains-task-list li[data-task=">"] .task-list-item-checkbox:checked {
+  background-color: var(--checkbox-color-2);
+}
+.markdown-preview-view ul.contains-task-list li[data-task=">"].task-list-item.is-checked {
+  text-decoration: none;
+  color: var(--text-normal);
+}
+
+/*- [?]*/
+.markdown-preview-view ul.contains-task-list li[data-task="?"] .task-list-item-checkbox:checked::before {
+  content: ' ';
+  top: -0.25em;
+  left: -0.24em;
+  right: 0;
+  bottom: 0;
+  background-color: var(--red);
+  transform: scale(0.8);
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgNEM5LjI0MyA0IDcgNi4yNDMgNyA5aDJjMC0xLjY1NCAxLjM0Ni0zIDMtM3MzIDEuMzQ2IDMgM2MwIDEuMDY5LS40NTQgMS40NjUtMS40ODEgMi4yNTUtLjM4Mi4yOTQtLjgxMy42MjYtMS4yMjYgMS4wMzhDMTAuOTgxIDEzLjYwNCAxMC45OTUgMTQuODk3IDExIDE1djJoMnYtMi4wMDljMC0uMDI0LjAyMy0uNjAxLjcwNy0xLjI4NC4zMi0uMzIuNjgyLS41OTggMS4wMzEtLjg2N0MxNS43OTggMTIuMDI0IDE3IDExLjEgMTcgOWMwLTIuNzU3LTIuMjQzLTUtNS01em0tMSAxNGgydjJoLTJ6Ii8+PC9zdmc+);
+}
+.markdown-preview-view ul.contains-task-list li[data-task="?"] .task-list-item-checkbox:checked {
+  background-color: var(--checkbox-color-3);
+}
+.markdown-preview-view ul.contains-task-list li[data-task="?"].task-list-item.is-checked {
+  text-decoration: none;
+  color: var(--text-normal);
+  font-weight: 600;
+}
+
+/*- [!]*/
+.markdown-preview-view ul.contains-task-list li[data-task="!"] .task-list-item-checkbox:checked::before {
+  content: ' ';
+  top: -0.25em;
+  left: -0.2em;
+  right: 0;
+  bottom: -0.2em;
+  background-color: var(--text-yellow);
+  transform: scale(0.75);
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0cHgiIGZpbGw9IiMwMDAwMDAiPjxnPjxyZWN0IGZpbGw9Im5vbmUiIGhlaWdodD0iMjQiIHdpZHRoPSIyNCIvPjwvZz48Zz48Zy8+PGc+PHBhdGggZD0iTTEyLDNjLTAuNDYsMC0wLjkzLDAuMDQtMS40LDAuMTRDNy44NCwzLjY3LDUuNjQsNS45LDUuMTIsOC42NmMtMC40OCwyLjYxLDAuNDgsNS4wMSwyLjIyLDYuNTYgQzcuNzcsMTUuNiw4LDE2LjEzLDgsMTYuNjlWMTljMCwxLjEsMC45LDIsMiwyaDAuMjhjMC4zNSwwLjYsMC45OCwxLDEuNzIsMXMxLjM4LTAuNCwxLjcyLTFIMTRjMS4xLDAsMi0wLjksMi0ydi0yLjMxIGMwLTAuNTUsMC4yMi0xLjA5LDAuNjQtMS40NkMxOC4wOSwxMy45NSwxOSwxMi4wOCwxOSwxMEMxOSw2LjEzLDE1Ljg3LDMsMTIsM3ogTTE0LDE3aC00di0xaDRWMTd6IE0xMCwxOXYtMWg0djFIMTB6IE0xNS4zMSwxMy43NGMtMC4wOSwwLjA4LTAuMTYsMC4xOC0wLjI0LDAuMjZIOC45MmMtMC4wOC0wLjA5LTAuMTUtMC4xOS0wLjI0LTAuMjdjLTEuMzItMS4xOC0xLjkxLTIuOTQtMS41OS00LjcgYzAuMzYtMS45NCwxLjk2LTMuNTUsMy44OS0zLjkzQzExLjMyLDUuMDMsMTEuNjYsNSwxMiw1YzIuNzYsMCw1LDIuMjQsNSw1QzE3LDExLjQzLDE2LjM5LDEyLjc5LDE1LjMxLDEzLjc0eiIvPjwvZz48Zz48cmVjdCBoZWlnaHQ9IjMiIHdpZHRoPSIxIiB4PSIxMS41IiB5PSIxMSIvPjxyZWN0IGhlaWdodD0iMyIgdHJhbnNmb3JtPSJtYXRyaXgoMC43MDcxIC0wLjcwNzEgMC43MDcxIDAuNzA3MSAtNC4wMzEyIDEwLjg1MzYpIiB3aWR0aD0iMSIgeD0iMTAuNTkiIHk9IjguNzkiLz48cmVjdCBoZWlnaHQ9IjMiIHRyYW5zZm9ybT0ibWF0cml4KC0wLjcwNzEgLTAuNzA3MSAwLjcwNzEgLTAuNzA3MSAxNC43Njc4IDI2LjcwMjgpIiB3aWR0aD0iMSIgeD0iMTIuNDEiIHk9IjguNzkiLz48L2c+PC9nPjwvc3ZnPg==);
+}
+.markdown-preview-view ul.contains-task-list li[data-task="!"] .task-list-item-checkbox:checked {
+  background-color: var(--checkbox-color-4);
+}
+.markdown-preview-view ul.contains-task-list li[data-task="!"].task-list-item.is-checked {
+  text-decoration: none;
+  color: var(--text-normal);
+  font-weight: 600;
+}
+
+/*- [+]*/
+.markdown-preview-view ul.contains-task-list li[data-task="+"] .task-list-item-checkbox:checked::before {
+  content: ' ';
+  top: -0.3em;
+  left: -0.22em;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  transform: scale(0.9);
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTkgMTFoLTZWNWgtMnY2SDV2Mmg2djZoMnYtNmg2eiIvPjwvc3ZnPg==);
+}
+.markdown-preview-view ul.contains-task-list li[data-task="+"] .task-list-item-checkbox:checked {
+  background-color: var(--checkbox-color-5);
+}
+.markdown-preview-view ul.contains-task-list li[data-task="+"].task-list-item.is-checked {
+  text-decoration: none;
+  color: var(--checkbox-color-5);
+}
+
+/*- [-]*/
+.markdown-preview-view ul.contains-task-list li[data-task="-"] .task-list-item-checkbox:checked::before {
+  content: ' ';
+  top: -0.3em;
+  left: -0.22em;
+  background-color: white;
+  transform: scale(0.9);
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNSAxMWgxNHYySDV6Ii8+PC9zdmc+);
+}
+.markdown-preview-view ul.contains-task-list li[data-task="-"] .task-list-item-checkbox:checked {
+  background-color: var(--checkbox-color-6);
+}
+
 
 /* headers */
 .markdown-preview-view h1 {
@@ -6835,17 +6968,17 @@ body.plugin-sliding-panes .workspace-split.mod-root .workspace-leaf:not(:first-o
 }
 
 .graph-view-outer .graph-view-container {
-  background-color: var(--background-secondary);
+  background-color: var(--background-secondary-bg-4-bt);
 }
 
 .site-body-left-column,
 .site-body-left-column:before {
-  background-color: var(--background-secondary);
+  background-color: var(--background-secondary-bg-4-bt);
 }
 
 .theme-light .site-body-left-column,
 .theme-light .site-body-left-column:before {
-  background-color: var(--background-primary);
+  background-color: var(--background-primary-bg-4-bt);
 }
 
 .nav-view-outer .tree-item:not(:first-child) .tree-item-children {
