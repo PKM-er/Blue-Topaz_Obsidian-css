@@ -585,7 +585,7 @@ to get a right-side note block
 
   /*list*/
   --list-ul-block-color: #e19742a9;
-  --list-ul-disc-color: #db6019;
+  --list-ul-disc-color: #e68248;
   --list-ul-hover: #e28915de;
   --list-ol-block-color: #2685bbb4;
   --list-ol-number-color: #95afc4;
@@ -5807,6 +5807,43 @@ h5.breadcrumbs-matrix-header {
 
 .breadcrumbs-matrix ol {
   margin-left: 8px !important;
+}
+
+
+/* ================================== */
+/* ============ Dataview ============ */
+/* ================================== */
+ul.dataview.list-view-ul > li:not(.task-list-item) {
+  border-left: none !important;
+  margin-left: -1em;
+}
+
+ul.dataview.list-view-ul > li:not(.task-list-item):first-of-type::before {
+  content: '\eac2';
+  font-family: boxicons;
+  font-size: 0.8em;
+  padding: 0 5px 0 0;
+  color: var(--list-ul-disc-color);
+}
+
+ul.dataview.list-view-ul > li:not(.task-list-item):not(:first-of-type):nth-child(2n)::before {
+  content: '\eac4';
+  font-family: boxicons;
+  font-size: 0.8em;
+  padding: 0 5px 0 0;
+  color: var(--list-ul-disc-color);
+}
+
+ul.dataview.list-view-ul > li:not(.task-list-item):not(:first-of-type):nth-child(2n+1)::before {
+  content: '\ed51';
+  font-family: boxicons;
+  font-size: 0.8em;
+  padding: 0 5px 0 0;
+  color: var(--list-ul-disc-color);
+}
+
+ul.dataview.list-view-ul {
+  list-style: none;
 }
 
 /* ============ */
