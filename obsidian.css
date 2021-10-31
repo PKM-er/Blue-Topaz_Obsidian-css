@@ -4913,15 +4913,16 @@ button.copy-code-button:hover {
 /*frontmatter specification 同义词等声明*/
 /*=====================================*/
 pre.frontmatter.language-yaml::before {
-  content: "Specification";
+  content: "YAML";
   font-family: var(--font-family-YAML);
   top: 1px;
-  right: 32px;
+  right: 36px;
   color: var(--color-specification);
 }
 
 .frontmatter-container {
-  margin: 0;
+  margin: 0 0 1.2em 0;
+  background-color: transparent;
 }
 
 /*适配copy code插件*/
