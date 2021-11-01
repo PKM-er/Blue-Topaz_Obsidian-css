@@ -696,6 +696,7 @@ to get a right-side note block
   --text-brown: #be9684;
   --text-orange: #ffa344;
   --text-yellow: #ffdc51;
+  --text-yellow-2: #cca217;
   --text-green: #52c7b2;
   --text-blue: #8ca1ff;
   --text-purple: #b386f1;
@@ -942,6 +943,7 @@ to get a right-side note block
   --text-brown: #855a46;
   --text-orange: #d9730d;
   --text-yellow: #d4a300;
+  --text-yellow-2: #a78000;
   --text-green: #00927f;
   --text-blue: #0083bb;
   --text-purple: #5d1fb9;
@@ -1863,7 +1865,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 }
 .markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="!"],
 .markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="!"] {
-  text-decoration: none;
+  text-decoration: underline wavy var(--text-yellow-2);
   color: var(--text-normal);
   font-weight: 600;
 }
