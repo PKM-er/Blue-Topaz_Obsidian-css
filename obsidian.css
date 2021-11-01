@@ -6375,7 +6375,6 @@ span[alt*="+grid"]{
 /*==================   MOBILE   =====================*/
 /*===================================================*/
 /*===================================================*/
-
 .is-mobile .markdown-preview-view {
   padding: 0 30px;
 }
@@ -6667,7 +6666,8 @@ span[alt*="+grid"]{
 
 /*==== separators =====*/
 .workspace-split.mod-vertical > .workspace-leaf,
-.workspace-split.mod-root .workspace-split.mod-vertical .workspace-leaf-content {
+.workspace-split.mod-root .workspace-split.mod-vertical .workspace-leaf-content,
+.workspace-split.mod-vertical > .workspace-split {
   padding-right: 2px;
 }
 
@@ -6675,9 +6675,13 @@ span[alt*="+grid"]{
   background-color: var(--background-secondary-alt-bg-4-bt);
 }
 
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
+  height: 2px;
+}
+
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle, 
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
-  height: 95.1%;
+  height: 95.3%;
   width: 2px;
 }
 
@@ -6745,6 +6749,7 @@ span[alt*="+grid"]{
   background-color: var(--background-secondary-bg-4-bt);
   border-top: none;
   height: 36px;
+  border-bottom: 1px solid var(--background-secondary-alt);
 }
 
 body {
