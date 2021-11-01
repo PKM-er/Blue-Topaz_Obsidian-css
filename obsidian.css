@@ -6070,7 +6070,7 @@ ul.dataview.dataview-ul.dataview-result-list-root-ul {
   content: ' ';
   position: absolute;
   padding: 0 0.2em;
-  left: 1.23em;
+  margin-left: 0.4em;
   border-radius: var(--radius-xs);
   background-color: var(--checkbox-color-2);
   z-index: -1;
@@ -6086,7 +6086,7 @@ ul.dataview.dataview-ul.dataview-result-list-root-ul {
   content: ' ';
   position: absolute;
   padding: 0 0.2em;
-  left: 1.23em;
+  margin-left: 0.4em;
   border-radius: var(--radius-xs);
   background-color: var(--checkbox-color-1);
   z-index: -1;
@@ -6106,7 +6106,7 @@ ul.dataview.dataview-ul.dataview-result-list-root-ul {
   content: ' ';
   position: absolute;
   padding: 0 0.2em;
-  left: 1.23em;
+  margin-left: 0.4em;
   border-radius: var(--radius-xs);
   background-color: var(--checkbox-color-4);
   z-index: -1;
@@ -6122,7 +6122,7 @@ ul.dataview.dataview-ul.dataview-result-list-root-ul {
   content: ' ';
   position: absolute;
   padding: 0 0.2em;
-  left: 1.23em;
+  margin-left: 0.4em;
   border-radius: var(--radius-xs);
   background-color: var(--checkbox-color-3);
   z-index: -1;
@@ -6130,7 +6130,7 @@ ul.dataview.dataview-ul.dataview-result-list-root-ul {
 
 .cm-formatting.cm-formatting-task.cm-property.hmd-hidden-token[data-task="+"] {
   background-size: 65% !important;
-  background-position: 60% 60% !important;
+  background-position: 52% 55% !important;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg>') !important;
 }
 
@@ -6138,7 +6138,7 @@ ul.dataview.dataview-ul.dataview-result-list-root-ul {
   content: ' ';
   position: absolute;
   padding: 0 0.2em;
-  left: 1.23em;
+  margin-left: 0.4em;
   border-radius: var(--radius-xs);
   background-color: var(--checkbox-color-5);
   z-index: -1;
@@ -6154,7 +6154,7 @@ ul.dataview.dataview-ul.dataview-result-list-root-ul {
   content: ' ';
   position: absolute;
   padding: 0 0.2em;
-  left: 1.23em;
+  margin-left: 0.4em;
   border-radius: var(--radius-xs);
   background-color: var(--checkbox-color-6);
   z-index: -1;
