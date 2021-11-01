@@ -6175,7 +6175,6 @@ ul.dataview.dataview-ul.dataview-result-list-root-ul {
 .theme-dark .cm-formatting.cm-formatting-task.cm-property.hmd-hidden-token[data-task="?"]::before,
 .theme-dark .cm-formatting.cm-formatting-task.cm-property.hmd-hidden-token[data-task="+"]::before,
 .theme-dark .cm-formatting.cm-formatting-task.cm-property.hmd-hidden-token[data-task="-"]::before {
-  left: 0.4em;
   filter: invert(0) opacity(0.5) !important;
 }
 
