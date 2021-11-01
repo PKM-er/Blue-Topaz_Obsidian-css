@@ -1774,7 +1774,8 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 }
 */
 
-.markdown-preview-view ul.contains-task-list li[data-task="x"].task-list-item.is-checked {
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="x"],
+.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="x"] {
   text-decoration: none;
   color: var(--text-checked-checkbox);
 }
@@ -1794,8 +1795,8 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 .markdown-preview-view ol.contains-task-list li[data-task="<"] .task-list-item-checkbox:checked {
   background-color: var(--checkbox-color-1);
 }
-.markdown-preview-view ul.contains-task-list li[data-task="<"].task-list-item.is-checked,
-.markdown-preview-view ol.contains-task-list li[data-task="<"].task-list-item.is-checked {
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="<"],
+.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="<"] {
   text-decoration: none;
   color: var(--text-normal);
 }
@@ -1815,8 +1816,8 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 .markdown-preview-view ol.contains-task-list li[data-task=">"] .task-list-item-checkbox:checked  {
   background-color: var(--checkbox-color-2);
 }
-.markdown-preview-view ul.contains-task-list li[data-task=">"].task-list-item.is-checked,
-.markdown-preview-view ol.contains-task-list li[data-task=">"].task-list-item.is-checked {
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task=">"],
+.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task=">"] {
   text-decoration: none;
   color: var(--text-normal);
 }
@@ -1837,8 +1838,8 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 .markdown-preview-view ol.contains-task-list li[data-task="?"] .task-list-item-checkbox:checked {
   background-color: var(--checkbox-color-3);
 }
-.markdown-preview-view ul.contains-task-list li[data-task="?"].task-list-item.is-checked,
-.markdown-preview-view ol.contains-task-list li[data-task="?"].task-list-item.is-checked {
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="?"],
+.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="?"] {
   text-decoration: none;
   color: var(--text-normal);
   font-weight: 600;
@@ -1860,8 +1861,8 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 .markdown-preview-view ol.contains-task-list li[data-task="!"] .task-list-item-checkbox:checked {
   background-color: var(--checkbox-color-4);
 }
-.markdown-preview-view ul.contains-task-list li[data-task="!"].task-list-item.is-checked,
-.markdown-preview-view ol.contains-task-list li[data-task="!"].task-list-item.is-checked {
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="!"],
+.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="!"] {
   text-decoration: none;
   color: var(--text-normal);
   font-weight: 600;
@@ -1883,8 +1884,8 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 .markdown-preview-view ol.contains-task-list li[data-task="+"] .task-list-item-checkbox:checked {
   background-color: var(--checkbox-color-5);
 }
-.markdown-preview-view ul.contains-task-list li[data-task="+"].task-list-item.is-checked,
-.markdown-preview-view ol.contains-task-list li[data-task="+"].task-list-item.is-checked {
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="+"],
+.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="+"] {
   text-decoration: none;
   color: var(--checkbox-color-5);
 }
@@ -1904,6 +1905,11 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
   background-color: var(--checkbox-color-6);
 }
 
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="-"],
+.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="-"] {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
 
 /* headers */
 .markdown-preview-view h1 {
