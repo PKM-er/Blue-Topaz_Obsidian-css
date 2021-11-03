@@ -556,6 +556,7 @@ to get a right-side note block
   --orange: #d19a66;
   --orange-1: #da904b;
   --green: #b6e296;
+  --green-1: #79c142;
   --darkgreen: #399a58;
   --aqua: #56b6c2;
   --purple: #c678dd;
@@ -807,6 +808,7 @@ to get a right-side note block
   --red: #f13d64;
   --red-1: #f16464f5;
   --green: #63c951;
+  --green-1: #3dc730;
   --darkgreen: #acb5b2;
   --blue: #107fe7;
   --darkblue: #3b84e4;
@@ -6069,7 +6071,7 @@ ul.dataview.list-view-ul > li:not(.task-list-item):first-of-type::before {
   color: var(--list-ul-disc-color);
 }
 
-ul.dataview.list-view-ul > li:not(.task-list-item):not(:first-of-type):nth-child(2n)::before {
+ul.dataview.list-view-ul > li:not(.task-list-item):not(:first-of-type):nth-of-type(2n):not(:nth-of-type(10n))::before {
   content: '\ed51';
   font-family: boxicons;
   font-size: 0.8em;
@@ -6077,7 +6079,7 @@ ul.dataview.list-view-ul > li:not(.task-list-item):not(:first-of-type):nth-child
   color: var(--list-ul-disc-color);
 }
 
-ul.dataview.list-view-ul > li:not(.task-list-item):not(:first-of-type):nth-child(2n+1)::before {
+ul.dataview.list-view-ul > li:not(.task-list-item):not(:first-of-type):nth-of-type(2n+1)::before {
   content: '\eac4';
   font-family: boxicons;
   font-size: 0.8em;
@@ -6085,6 +6087,14 @@ ul.dataview.list-view-ul > li:not(.task-list-item):not(:first-of-type):nth-child
   display: inline-block;
   position: relative;
   color: var(--list-ul-disc-color);
+}
+
+ul.dataview.list-view-ul > li:not(.task-list-item):nth-of-type(10n)::before {
+  content: '\eac2';
+  font-family: boxicons;
+  font-size: 0.8em;
+  padding: 0 5px 0 0;
+  color: var(--green-1);
 }
 
 ul.dataview.list-view-ul {
