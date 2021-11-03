@@ -1007,11 +1007,9 @@ to get a right-side note block
   font-weight: 600;
   font-family: var(--font-family-special-tag) !important;
 }
-.cm-s-obsidian .CodeMirror-line span.cm-tag-important:not(.cm-formatting-hashtag) {
+.cm-s-obsidian .CodeMirror-line span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-important:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  padding-left: 0.25em;
-  padding-right: 0.5em;
   background-color: var(--stag1-bg);
 }
 .tag[href^="#重要"] {
@@ -1024,11 +1022,9 @@ to get a right-side note block
   font-weight: 600;
   font-family: var(--font-family-special-tag) !important;
 }
-.cm-s-obsidian .CodeMirror-line span.cm-tag-complete:not(.cm-formatting-hashtag) {
+.cm-s-obsidian .CodeMirror-line span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-complete:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  padding-left: 0.25em;
-  padding-right: 0.5em;
   background-color: var(--stag3-bg);
 }
 .tag[href^="#完成"] {
@@ -1041,11 +1037,9 @@ to get a right-side note block
   font-weight: 600;
   font-family: var(--font-family-special-tag) !important;
 }
-.cm-s-obsidian .CodeMirror-line span.cm-tag-inprogress:not(.cm-formatting-hashtag) {
+.cm-s-obsidian .CodeMirror-line span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-inprogress:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  padding-left: 0.25em;
-  padding-right: 0.5em;
   background-color: var(--stag2-bg);
 }
 .tag[href^="#进行中"] {
@@ -1066,11 +1060,9 @@ to get a right-side note block
 .cm-s-obsidian .CodeMirror-line span.cm-tag-dailynote:not(.cm-formatting-hashtag)::after {
   content:' 🐈';
 }
-.cm-s-obsidian .CodeMirror-line span.cm-tag-dailynote:not(.cm-formatting-hashtag) {
+.cm-s-obsidian .CodeMirror-line span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-dailynote:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  padding-left: 0.25em;
-  padding-right: 0.2em;
   background-color: var(--tag-dailynote-bg);
 }
 
@@ -1086,11 +1078,10 @@ to get a right-side note block
 .cm-s-obsidian .CodeMirror-line span.cm-tag-weeklynote:not(.cm-formatting-hashtag)::after {
   content:' 🥑';
 }
-.cm-s-obsidian .CodeMirror-line span.cm-tag-weeklynote:not(.cm-formatting-hashtag) {
+.cm-s-obsidian .CodeMirror-line .cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-weeklynote:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  padding-left: 0.25em;
-  padding-right: 0.2em;
+
   background-color: var(--tag-weeklynote-bg);
 }
 
@@ -1106,11 +1097,9 @@ to get a right-side note block
 .cm-s-obsidian .CodeMirror-line span.cm-tag-questions:not(.cm-formatting-hashtag)::after {
   content:' ❓';
 }
-.cm-s-obsidian .CodeMirror-line span.cm-tag-questions:not(.cm-formatting-hashtag) {
+.cm-s-obsidian .CodeMirror-line span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-questions:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  padding-left: 0.25em;
-  padding-right: 0.2em;
   background-color: var(--tag-questions-bg);
 }
 
@@ -1126,12 +1115,10 @@ to get a right-side note block
 .cm-s-obsidian .CodeMirror-line span.cm-tag-ideas:not(.cm-formatting-hashtag)::after {
   content:' 💡';
 }
-.cm-s-obsidian .CodeMirror-line span.cm-tag-ideas:not(.cm-formatting-hashtag) {
+.cm-s-obsidian .CodeMirror-line span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-ideas:not(.cm-formatting-hashtag) {
   background-color: var(--tag-ideas-bg);
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  padding-left: 0.25em;
-  padding-right: 0.2em;
 }
 
 /*colorful tags*/
