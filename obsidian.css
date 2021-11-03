@@ -2774,7 +2774,6 @@ tbody > tr {
 .nav-file:not(.is-active):hover .nav-file-title,
 .nav-folder:hover .nav-folder-content {
   background-color: var(--theme-color-translucent);
-  color: #ffffff;
   font-weight: 500;
 }
 
