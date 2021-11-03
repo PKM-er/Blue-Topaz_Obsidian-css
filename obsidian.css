@@ -7155,7 +7155,7 @@ body.plugin-sliding-panes .workspace-split.mod-root .workspace-leaf:not(:first-o
   right: 0;
   bottom: 0;
   left: 0;
-  opacity: 0.15;
+  opacity: 0.12;
 }
 
 .theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(5n+0) .workspace-leaf-content[data-type="markdown"]::before {
