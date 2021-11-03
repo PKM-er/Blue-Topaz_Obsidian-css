@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.12.19。uid [20211101] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.12.19, uid [20211101] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.12.19。uid [20211103] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.12.19, uid [20211103] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 
 ===========================    TIPS   ===============================
@@ -88,17 +88,14 @@ image-captions modified from Discordian by @radekkozak
 ===========================
 Usage
 
-Add the following cssclass directive in YAML
----
-cssclass: img-captions
----
-
 Then the syntax is like:
 ![[xxx.png#position|captions|size]]
 
-position: left/right
+position: left/right/center(centre)
 captions: your captions
 
+e.g.
+![[xxx.png#left|Figure 1. Hi|100]]
 
 ===========================
 image-grid adapted from Discordian by @radekkozak and orange by @echoxu
@@ -581,7 +578,7 @@ to get a right-side note block
   --text-color-code: #d58000;
   --text-color-code-normal: #e7e7e7;
 
-  --internal-link-color-in-highlight: #98d6ff;
+  --internal-link-color-in-highlight: #74c7ff;
 
   /*list*/
   --list-ul-block-color: #e19742a9;
@@ -1308,13 +1305,24 @@ span.cm-highlight.cm-inline-code {
   color: var(--text-highlight);
 }
 
+span.cm-strong.cm-em.cm-highlight {
+  padding: 0 1px 1px;
+}
+
 .theme-dark  span.cm-strong.cm-em.cm-highlight {
   background-image: initial;
   background-clip: initial;
   -webkit-background-clip: initial;
-  -webkit-text-fill-color: initial;
+  -webkit-text-fill-color: #a7b4ff;
   background-color: var(--mark-highlight);
-  color: #c9b8ff;
+}
+
+.theme-light span.cm-strong.cm-em.cm-highlight {
+  background-image: initial;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: rgb(35, 122, 221);
+  background-color: var(--mark-highlight);
 }
 
 /* outliner for the outline */
@@ -2427,9 +2435,13 @@ span.cm-em,
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-color: #f55454;
-  background-image: linear-gradient(120deg, #4cd0f8 0%,  #9e88ff 100%);
+  background-image: linear-gradient(120deg, #4cd0f8 0%,  #aa97ff 80%);
   font-family: var(--font-family-strong) !important;
   /* adapted from Obsidianite*/
+}
+
+*:not(font) > mark > strong > em {
+  padding: 0.12em;
 }
 
 em > strong > font,
@@ -2444,23 +2456,14 @@ strong > em > font {
 .theme-light *:not(font) > em > strong,
 .theme-light *:not(font) > strong > em, 
 .theme-light .cm-strong.cm-em {
-  padding-right: 0.12em;
-  color: #0076e4;
-  -webkit-mask:linear-gradient(120deg, #0000006e, #000000);
+  padding-right: 0.15em;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: #f55454;
+  background-image: linear-gradient(120deg, #3a4eff 0%, #3cd2ff 100%);
   font-family: var(--font-family-strong) !important;
 }
 
-.theme-light *:not(font) > strong > em > mark {
-  color: #0076e4 !important;
-}
-
-.theme-dark *:not(font) > strong > em > mark {
-  color: #c9b8ff !important;
-  -webkit-background-clip: initial;
-  -webkit-text-fill-color: initial;
-  background-image: initial;
-  background-clip: initial;
-}
 
 /*internal link with strong&em*/
 strong > em > .internal-link, 
@@ -2774,6 +2777,7 @@ a:hover,
 .cm-highlight.cm-hmd-internal-link,
 .markdown-preview-view mark .internal-link:not(.is-unresolved) {
   color: var(--internal-link-color-in-highlight) !important;
+  text-decoration: underline;
 }
 
 .markdown-preview-view a:hover {
@@ -6256,20 +6260,18 @@ img[alt$="inlR"] {
   padding: 0 0 0.5em 1em !important;
 }
 
-/*===============================*/
-/*=============YAML==============*/
-/*===============================*/
-/*   cssclass: xxx   */
+
 /* img captions */
-/* modified from Discordian theme by @radekkozak */
-.markdown-preview-view .image-embed:not([src$="left"]):not([src$="right"]),
-.markdown-preview-view .image-embed[src$="center"] {
+/* modified from Discordian theme by @radekkozak */.markdown-preview-view .image-embed[src$="center"],
+.markdown-preview-view .image-embed[src$="centre"]  {
   clear: both;
   margin: 1rem auto;
   width: fit-content;
+  display: block;
 }
 
-.markdown-preview-view.img-captions .image-embed:not([src$="left"]):not([src$="right"])::after {
+.markdown-preview-view .image-embed[src$="center"]::after,
+.markdown-preview-view .image-embed[src$="centre"]::after  {
   content: attr(alt);
   padding: 0 1rem 0 1rem;
   margin-top: 0.5rem;
@@ -6279,7 +6281,7 @@ img[alt$="inlR"] {
   font-size: 0.85rem;
 }
 
-.markdown-preview-view.img-captions .image-embed[src$="left"] {
+.markdown-preview-view .image-embed[src$="left"] {
   position: relative;
   float: left;
   margin-right: 2rem;
@@ -6290,7 +6292,7 @@ img[alt$="inlR"] {
   width: fit-content;
 }
 
-.markdown-preview-view.img-captions .image-embed[src$="left"]::after {
+.markdown-preview-view .image-embed[src$="left"]::after {
   content: attr(alt);
   padding: 0 1rem 0 1rem;
   margin-top: 0.5rem;
@@ -6300,7 +6302,7 @@ img[alt$="inlR"] {
   font-size: 0.85rem;
 }
 
-.markdown-preview-view.img-captions .image-embed[src$="right"] {
+.markdown-preview-view .image-embed[src$="right"] {
   position: relative;
   float: right;
   margin-top: 1.5rem;
@@ -6311,7 +6313,7 @@ img[alt$="inlR"] {
   width: fit-content;
 }
 
-.markdown-preview-view.img-captions .image-embed[src$="right"]::after {
+.markdown-preview-view .image-embed[src$="right"]::after {
   content: attr(alt);
   padding: 0 1rem 0 1rem;
   margin-top: 0.5rem;
@@ -6321,14 +6323,19 @@ img[alt$="inlR"] {
   font-size: 0.85rem;
 }
 
-/*inline-list*/
+
+/*===============================*/
+/*=============YAML==============*/
+/*===============================*/
+
+/* cssclass: inline-list*/
 .inline-list ul,
 .inline-list ol {
   display: inline-block;  
   margin-top: 0.3em;
 }
 
-/*code-wrap*/
+/* cssclass: code-wrap*/
 .code-wrap pre > code > span {
   word-wrap: break-word;
   word-break: break-all;
@@ -6355,6 +6362,7 @@ span[alt*="+grid"]{
   padding: 5px;
 }
 
+/* cssclass: image-grid*/
 /* image-grid-2 */
 /* adapted from https://github.com/iEchoxu/obsidian_orange/blob/main/.obsidian/snippets/image-grid.css */
 .img-grid .markdown-preview-section > div > p > .image-embed[alt*="."] {
