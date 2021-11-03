@@ -1191,26 +1191,24 @@ a.tag {
   text-decoration: none;
 }
 
-div.CodeMirror-activeline .CodeMirror-line .cm-formatting.cm-formatting-hashtag.cm-hashtag-begin.cm-hashtag.cm-meta,
-div.CodeMirror-activeline .CodeMirror-line span.cm-hashtag-end {
+div.CodeMirror-activeline .CodeMirror-line .cm-formatting.cm-formatting-hashtag.cm-hashtag-begin.cm-hashtag.cm-meta {
   opacity: 1;
 }
 
 div:not(.CodeMirror-activeline) .CodeMirror-line span.cm-hashtag-begin {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
-div.CodeMirror-activeline .CodeMirror-line span.cm-hashtag-begin {
+div.CodeMirror-line span.cm-hashtag-begin {
   background-color: transparent;
   color: var(--accent-strong);
   border-top-left-radius: var(--radius-l);
   border-bottom-left-radius: var(--radius-l);
   border-right: none;
   text-decoration: none;
-  opacity: 1;
 }
 
-.CodeMirror-line span.cm-hashtag-end {
+div .CodeMirror-line span.cm-hashtag-begin + span.cm-hashtag.cm-meta.cm-hashtag-end {
   background-color: var(--color-tag-edit);
   color: var(--tag-text);
   /*border-top-right-radius: 10px;
@@ -1220,7 +1218,26 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-hashtag-begin {
   padding-left: 0.4375em;
   border-left: none;
   text-decoration: none;
-  opacity: 0.85;
+}
+
+div .CodeMirror-line span.cm-hashtag-begin + .cm-hashtag.cm-meta {
+  padding-right: 0;
+  padding-left: 0.4375em;
+  background-color: var(--color-tag-edit);
+  color: var(--tag-text);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+div .CodeMirror-line span.cm-hashtag-begin + .cm-hashtag.cm-meta + span.cm-hashtag.cm-meta.cm-hashtag-end {
+  padding-left: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: var(--color-tag-edit);
+  color: var(--tag-text);
+  padding-right: 0.4375em;
 }
 
 /*thanks to Klaas from Obsidian Members Group on discord*/
