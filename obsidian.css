@@ -6232,6 +6232,10 @@ ul.dataview.dataview-ul.dataview-result-list-root-ul {
   filter: invert(0) opacity(0.5) !important;
 }
 
+span.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight.hmd-hidden-token {
+  padding: 0;
+}
+
 
 /* ============ */
 /* ============ */
