@@ -556,7 +556,6 @@ to get a right-side note block
   --orange: #d19a66;
   --orange-1: #da904b;
   --green: #b6e296;
-  --green-1: #79c142;
   --darkgreen: #399a58;
   --aqua: #56b6c2;
   --purple: #c678dd;
@@ -584,6 +583,7 @@ to get a right-side note block
   /*list*/
   --list-ul-block-color: #e19742a9;
   --list-ul-disc-color: #eb9563;
+  --green-1: #79c142;
   --list-ul-hover: #e28915de;
   --list-ol-block-color: #2685bbb4;
   --list-ol-number-color: #95afc4;
@@ -653,8 +653,8 @@ to get a right-side note block
   --table-background-color-odd: #0000001c;
   --table-border-color: #c0c0c0;
   --table-thead-background-color: #4e95e67e;
-  --table-hover-raw-color: #3187d33d;
-  --table-hover-color: #2c79bd32;
+  --table-hover-raw-color: #08569a21;
+  --table-hover-color: #1f65a221;
   --table-hover-thead-color: #298c54c7;
 
   /*calendar*/
@@ -808,7 +808,6 @@ to get a right-side note block
   --red: #f13d64;
   --red-1: #f16464f5;
   --green: #63c951;
-  --green-1: #3dc730;
   --darkgreen: #acb5b2;
   --blue: #107fe7;
   --darkblue: #3b84e4;
@@ -840,6 +839,7 @@ to get a right-side note block
   /*list*/
   --list-ul-block-color: #b9751b;
   --list-ul-disc-color: #f39c55;
+  --green-1: #3dc730;
   --list-ul-hover: #dd922f;
   --list-ol-block-color: #3573a5;
   --list-ol-number-color: #6196d6;
@@ -910,8 +910,8 @@ to get a right-side note block
   --table-background-color-odd: #ffffffaf;
   --table-border-color: #555555;
   --table-thead-background-color: #a7d0f1d3;
-  --table-hover-raw-color: #2f93e42f;
-  --table-hover-color: #4199e134;
+  --table-hover-raw-color: #85bfee2f;
+  --table-hover-color: #5dacec34;
   --table-hover-thead-color: #cde8ff;
 
   /*calendar*/
