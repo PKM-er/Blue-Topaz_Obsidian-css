@@ -2326,6 +2326,24 @@ ul ul ul ol ul {
   list-style: circle;
 }
 
+ul.contains-task-list ul,
+ol.contains-task-list ul,
+ul.contains-task-list ol,
+ol.contains-task-list ol {
+  position: relative;
+}
+
+ul.contains-task-list ul::before,
+ol.contains-task-list ul::before,
+ul.contains-task-list ol::before,
+ol.contains-task-list ol::before {
+  content: ' ';
+  border-left: 2px solid var(--background-modifier-border);
+  position: absolute;  
+  margin-left: -59px;
+  height: 100%;
+}
+
 ul > li:not(.task-list-item) {
   margin-left: -0.3125em;
   padding-left: 0.3125em;
@@ -2365,7 +2383,7 @@ ol ul ol ol {
   list-style: decimal;
 }
 
-ol > li:not(.task-list-item) {
+ol:not(.contains-task-list) > li:not(.task-list-item) {
   margin-left: -0.3125em;
   padding-left: 0.3125em;
   border-radius: var(--radius-s);
@@ -2375,7 +2393,7 @@ ol > li:not(.task-list-item) {
   transition: all 300ms ease-in-out;  
 } 
 
-ol > li.task-list-item {
+ol > li {
   margin-left: -0.3125em;
   padding-left: 0.3125em;
   margin-bottom: 0.05em;
@@ -2383,8 +2401,17 @@ ol > li.task-list-item {
   padding-right: 0.375em;  
 } 
 
-.workspace-leaf-content[data-type="markdown"] ol > li:not(.task-list-item) {
+.workspace-leaf-content[data-type="markdown"] ol:not(.contains-task-list) > li:not(.task-list-item) {
   border-left: 0.125em solid var(--list-ol-block-color);
+}
+
+ol.contains-task-list ol li:not(.task-list-item) {
+  border-left: none !important;
+  margin-left: -0.3125em;
+  padding-left: 0.3125em;
+  margin-bottom: 0.05em;
+  margin-top: 0.05em;
+  padding-right: 0.375em;  
 }
 
 ol > li:hover {
@@ -5894,6 +5921,11 @@ aside > h2 {
   -webkit-text-fill-color: initial;
   font-size: var(--font-size-better-footnote) !important;
   font-family: var(--font-family-better-footnote) !important;
+}
+
+/*default footnote*/
+section.footnotes ol > li:not(.task-list-item) {
+  border-left: none !important;
 }
 
 /* ================================== */
