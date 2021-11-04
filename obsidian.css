@@ -899,6 +899,7 @@ to get a right-side note block
   --graph-circle: #1f78b4cc;
   --graph-line: #b1b1b1;
   --graph-unresolved: #db4e4ecc; 
+  --link-unresolved-highlight: #df4747;
   --graph-arrow: #e25300; 
   --graph-control-bg: #ffffff9a;
 
@@ -2805,7 +2806,7 @@ a:hover,
   color: var(--graph-unresolved) !important;
 }
 
-.theme-dark .markdown-preview-view mark .internal-link.is-unresolved {
+.markdown-preview-view mark .internal-link.is-unresolved {
   text-decoration: underline;
   color: var(--link-unresolved-highlight) !important;
   opacity: 0.75;
