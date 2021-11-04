@@ -641,6 +641,7 @@ to get a right-side note block
   --graph-circle: #55a2d6bb;
   --graph-line: #8c8c8c;
   --graph-unresolved: #f08080de;
+  --link-unresolved-highlight: #ffa6a6;
   --graph-arrow: #c23917;
   --graph-control-bg: #00000080;
 
@@ -2804,15 +2805,20 @@ a:hover,
   color: var(--graph-unresolved) !important;
 }
 
+.theme-dark .markdown-preview-view mark .internal-link.is-unresolved {
+  text-decoration: underline;
+  color: var(--link-unresolved-highlight) !important;
+  opacity: 0.75;
+}
+
 .markdown-preview-view .internal-link.is-unresolved:hover {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 /* internal link in highlight */
 .cm-highlight.cm-hmd-internal-link,
 .markdown-preview-view mark .internal-link:not(.is-unresolved) {
   color: var(--internal-link-color-in-highlight) !important;
-  text-decoration: underline;
 }
 
 .markdown-preview-view a:hover {
