@@ -6474,6 +6474,10 @@ span[alt*="+grid"]{
 /*==================   MOBILE   =====================*/
 /*===================================================*/
 /*===================================================*/
+.is-mobile .nav-folder-children .nav-folder-children {
+  margin-left: 12px;
+}
+
 .is-mobile .markdown-preview-view {
   padding: 0 30px;
 }
