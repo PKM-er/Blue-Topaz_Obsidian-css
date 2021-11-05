@@ -1336,7 +1336,7 @@ span.cm-strong.cm-em.cm-highlight {
 /* outliner for the outline */
 /*thanks to wonton from forum*/
 .nav-folder-children .nav-folder-children {
-  margin-left: 0.7em;
+  margin-left: 0.71875rem;
   padding-left: 0;
   border-left: 2px solid var(--background-modifier-border);
   border-radius: 0;
@@ -6474,10 +6474,6 @@ span[alt*="+grid"]{
 /*==================   MOBILE   =====================*/
 /*===================================================*/
 /*===================================================*/
-.is-mobile .nav-folder-children .nav-folder-children {
-  margin-left: 12px;
-}
-
 .is-mobile .markdown-preview-view {
   padding: 0 30px;
 }
