@@ -527,8 +527,9 @@ to get a right-side note block
   --search-text: #e0e0e0;
   --folder-title: #ffffff;
 
-  --text-highlight-bg: #b0ab4e8a; /*edit*/
-  --mark-highlight: #b0ab4e8a; /*preview*/
+  --text-highlight-bg: #89853b8a; /*edit*/
+  --mark-highlight: #89853b8a; /*preview*/
+  --mark-highlight-strong-em: #fff7603a; 
   --text-search-highlight-bg: #bb4361;
 
   --background-search-result: #444444;
@@ -784,7 +785,8 @@ to get a right-side note block
   --search-text: #000000;
   --folder-title: #000000;
 
-  --mark-highlight: #ffd298d8;  /*preview*/
+  --mark-highlight: #ffd298b4;  /*preview*/
+  --mark-highlight-strong-em: #ff880049; 
   --text-highlight-bg: #ffd298d8; /*edit*/
   --text-search-highlight-bg: #ffd1dd;
   
@@ -2477,17 +2479,18 @@ span.cm-em,
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-color: #f55454;
-  background-image: linear-gradient(120deg, #4cd0f8 0%,  #aa97ff 80%);
+  background-image: linear-gradient(120deg, #43d3ff 0%,  #baaaff 80%);
   font-family: var(--font-family-strong) !important;
   /* adapted from Obsidianite*/
 }
 
-*:not(font) > mark > strong > em {
-  padding: 0.12em;
+:not(font) > strong > em> mark {
+  background-color: var(--mark-highlight-strong-em) !important;
 }
 
 em > strong > font,
-strong > em > font {
+strong > em > font,
+strong > em> mark > font  {
   background-image: initial;
   background-clip: initial;
   -webkit-background-clip: initial;
@@ -2502,7 +2505,7 @@ strong > em > font {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-color: #f55454;
-  background-image: linear-gradient(120deg, #3a4eff 0%, #3cd2ff 100%);
+  background-image: linear-gradient(120deg, #1048ff 0%, #14c8ff 100%);
   font-family: var(--font-family-strong) !important;
 }
 
@@ -2875,7 +2878,7 @@ a.external-link {
 
 /*embedded*/
 .popover.hover-popover .markdown-preview-view .markdown-embed,
-.markdown-preview-sizer.markdown-preview-section {
+.popover .markdown-preview-sizer.markdown-preview-section {
   height: auto;
   min-height: min-content !important;
 }
