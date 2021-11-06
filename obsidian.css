@@ -745,7 +745,7 @@ to get a right-side note block
   --checkbox-color-6: #5f5f5f;
   --text-checked-checkbox: #8e8e8e;
 
-  --activeline-background: #468eeb33;
+  --activeline-background: #468eeb1f;
 }
 
 .theme-light {
@@ -998,7 +998,7 @@ to get a right-side note block
   --checkbox-color-6: #5f5f5f;
   --text-checked-checkbox: #9b9b9b;
 
-  --activeline-background: #468eeb33;
+  --activeline-background: #468eeb21;
 }
 
 /* page-size in edit mode*/
@@ -3713,14 +3713,13 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
 
 /* list collaspe icon */
 .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon {
-  margin-top: 0;
-  transition: transform 20ms linear 0s;
+  margin-top: 13px;
 }
 
 .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   content : "↓";
   font-size: 14px;
-  margin-left: -5px;
+  margin-left: 0;
   font-weight: bold;
   font-family: 'Inter';
   color: var(--text-accent);
@@ -3735,7 +3734,7 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
 }
 
 .markdown-preview-view li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon {
-  transform: translateX(-3px) translateY(-2px) rotate(-90deg);
+  transform: translateX(0px) translateY(0px) rotate(-90deg);
   opacity: 0.5;
 }
 
@@ -7001,7 +7000,7 @@ body.plugin-sliding-panes .workspace-split.mod-root .workspace-leaf:not(:first-o
   display: none;
 }
 
-.nav-action-button::after {
+.nav-action-button::before {
   display: inline-block;
   font-family: boxicons;
   font-weight: normal;
@@ -7012,183 +7011,183 @@ body.plugin-sliding-panes .workspace-split.mod-root .workspace-leaf:not(:first-o
   margin-top: -1px;
 }
 
-.nav-action-button[aria-label="New note"]::after,
-.nav-action-button[aria-label="新建笔记"]::after,
-.nav-action-button[aria-label="Новая заметка"]::after,
-.nav-action-button[aria-label="Nuova nota"]::after,
-.nav-action-button[aria-label="Catatan baru"]::after,
-.nav-action-button[aria-label="Nova nota"]::after,
-.nav-action-button[aria-label="Notă nouă"]::after,
-.nav-action-button[aria-label="新規ノート"]::after {
+.nav-action-button[aria-label="New note"]::before,
+.nav-action-button[aria-label="新建笔记"]::before,
+.nav-action-button[aria-label="Новая заметка"]::before,
+.nav-action-button[aria-label="Nuova nota"]::before,
+.nav-action-button[aria-label="Catatan baru"]::before,
+.nav-action-button[aria-label="Nova nota"]::before,
+.nav-action-button[aria-label="Notă nouă"]::before,
+.nav-action-button[aria-label="新規ノート"]::before {
   content: "\ed39";
 }
 
-.nav-action-button[aria-label="New note"]:hover::after,
-.nav-action-button[aria-label="新建笔记"]:hover::after,
-.nav-action-button[aria-label="Новая заметка"]:hover::after,
-.nav-action-button[aria-label="Nuova nota"]:hover::after,
-.nav-action-button[aria-label="Catatan baru"]:hover::after,
-.nav-action-button[aria-label="Nova nota"]:hover::after,
-.nav-action-button[aria-label="Notă nouă"]:hover::after,
-.nav-action-button[aria-label="新規ノート"]:hover::after {
+.nav-action-button[aria-label="New note"]:hover::before,
+.nav-action-button[aria-label="新建笔记"]:hover::before,
+.nav-action-button[aria-label="Новая заметка"]:hover::before,
+.nav-action-button[aria-label="Nuova nota"]:hover::before,
+.nav-action-button[aria-label="Catatan baru"]:hover::before,
+.nav-action-button[aria-label="Nova nota"]:hover::before,
+.nav-action-button[aria-label="Notă nouă"]:hover::before,
+.nav-action-button[aria-label="新規ノート"]:hover::before {
   content: "\ed38";
 }
 
-.nav-action-button[aria-label="New folder"]::after,
-.nav-action-button[aria-label="新建文件夹"]::after,
-.nav-action-button[aria-label="Новая папка"]::after,
-.nav-action-button[aria-label="Nuova cartella"]::after,
-.nav-action-button[aria-label="Folder baru"]::after,
-.nav-action-button[aria-label="Nova pasta"]::after,
-.nav-action-button[aria-label="Director nou"]::after,
-.nav-action-button[aria-label="新規フォルダ"]::after {
+.nav-action-button[aria-label="New folder"]::before,
+.nav-action-button[aria-label="新建文件夹"]::before,
+.nav-action-button[aria-label="Новая папка"]::before,
+.nav-action-button[aria-label="Nuova cartella"]::before,
+.nav-action-button[aria-label="Folder baru"]::before,
+.nav-action-button[aria-label="Nova pasta"]::before,
+.nav-action-button[aria-label="Director nou"]::before,
+.nav-action-button[aria-label="新規フォルダ"]::before {
   content: "\e2cc";
   font-family: "Material Icons Outlined";
 }
 
-.nav-action-button[aria-label="New folder"]:hover::after,
-.nav-action-button[aria-label="新建文件夹"]:hover::after,
-.nav-action-button[aria-label="Новая папка"]:hover::after,
-.nav-action-button[aria-label="Nuova cartella"]:hover::after,
-.nav-action-button[aria-label="Folder baru"]:hover::after,
-.nav-action-button[aria-label="Nova pasta"]:hover::after,
-.nav-action-button[aria-label="Director nou"]:hover::after,
-.nav-action-button[aria-label="新規フォルダ"]:hover::after {
+.nav-action-button[aria-label="New folder"]:hover::before,
+.nav-action-button[aria-label="新建文件夹"]:hover::before,
+.nav-action-button[aria-label="Новая папка"]:hover::before,
+.nav-action-button[aria-label="Nuova cartella"]:hover::before,
+.nav-action-button[aria-label="Folder baru"]:hover::before,
+.nav-action-button[aria-label="Nova pasta"]:hover::before,
+.nav-action-button[aria-label="Director nou"]:hover::before,
+.nav-action-button[aria-label="新規フォルダ"]:hover::before {
   content: "\e2cc";
   font-family: "Material Icons";
 }
 
-.nav-action-button[aria-label="Change sort order"]::after,
-.nav-action-button[aria-label="排序"]::after,
-.nav-action-button[aria-label="Порядок сортировки"]::after,
-.nav-action-button[aria-label="Ordinamento"]::after,
-.nav-action-button[aria-label="Ubah urutan sortir"]::after,
-.nav-action-button[aria-label="Mudar ordenação"]::after,
-.nav-action-button[aria-label="Schimbă ordinea de sortare"]::after,
-.nav-action-button[aria-label="ソート順の変更"]::after {
+.nav-action-button[aria-label="Change sort order"]::before,
+.nav-action-button[aria-label="排序"]::before,
+.nav-action-button[aria-label="Порядок сортировки"]::before,
+.nav-action-button[aria-label="Ordinamento"]::before,
+.nav-action-button[aria-label="Ubah urutan sortir"]::before,
+.nav-action-button[aria-label="Mudar ordenação"]::before,
+.nav-action-button[aria-label="Schimbă ordinea de sortare"]::before,
+.nav-action-button[aria-label="ソート順の変更"]::before {
   content: "\ee7f";
 }
 
-.nav-action-button[aria-label="Change sort order"]:hover::after,
-.nav-action-button[aria-label="排序"]:hover::after,
-.nav-action-button[aria-label="Порядок сортировки"]:hover::after,
-.nav-action-button[aria-label="Ordinamento"]:hover::after,
-.nav-action-button[aria-label="Ubah urutan sortir"]:hover::after,
-.nav-action-button[aria-label="Mudar ordenação"]:hover::after,
-.nav-action-button[aria-label="Schimbă ordinea de sortare"]:hover::after,
-.nav-action-button[aria-label="ソート順の変更"]:hover::after {
+.nav-action-button[aria-label="Change sort order"]:hover::before,
+.nav-action-button[aria-label="排序"]:hover::before,
+.nav-action-button[aria-label="Порядок сортировки"]:hover::before,
+.nav-action-button[aria-label="Ordinamento"]:hover::before,
+.nav-action-button[aria-label="Ubah urutan sortir"]:hover::before,
+.nav-action-button[aria-label="Mudar ordenação"]:hover::before,
+.nav-action-button[aria-label="Schimbă ordinea de sortare"]:hover::before,
+.nav-action-button[aria-label="ソート順の変更"]:hover::before {
   content: "\ee82";
 }
 
-.nav-action-button[aria-label="New diagram"]::after {
+.nav-action-button[aria-label="New diagram"]::before {
   content: "\eece";
 }
 
-.nav-action-button[aria-label="New diagram"]:hover::after {
+.nav-action-button[aria-label="New diagram"]:hover::before {
   content: "\ebe1";
 }
 
-.nav-action-button[aria-label="Collapse results"]::after,
-.nav-action-button[aria-label="折叠搜索结果"]::after,
-.nav-action-button[aria-label="Свернуть результаты"]::after {
+.nav-action-button[aria-label="Collapse results"]::before,
+.nav-action-button[aria-label="折叠搜索结果"]::before,
+.nav-action-button[aria-label="Свернуть результаты"]::before {
   content: "\ed1a";
 }
 
-.nav-action-button[aria-label="Collapse results"]:hover::after,
-.nav-action-button[aria-label="折叠搜索结果"]:hover::after,
-.nav-action-button[aria-label="Свернуть результаты"]:hover::after {
+.nav-action-button[aria-label="Collapse results"]:hover::before,
+.nav-action-button[aria-label="折叠搜索结果"]:hover::before,
+.nav-action-button[aria-label="Свернуть результаты"]:hover::before {
   content: "\ecd4";
 }
 
-.nav-action-button.is-active[aria-label="Collapse results"]::after,
-.nav-action-button.is-active[aria-label="折叠搜索结果"]::after,
-.nav-action-button.is-active[aria-label="Свернуть результаты"]::after {
+.nav-action-button.is-active[aria-label="Collapse results"]::before,
+.nav-action-button.is-active[aria-label="折叠搜索结果"]::before,
+.nav-action-button.is-active[aria-label="Свернуть результаты"]::before {
   content: "\ee49";
 }
 
-.nav-action-button.is-active[aria-label="Collapse results"]:hover::after,
-.nav-action-button.is-active[aria-label="折叠搜索结果"]:hover::after,
-.nav-action-button.is-active[aria-label="Свернуть результаты"]:hover::after {
+.nav-action-button.is-active[aria-label="Collapse results"]:hover::before,
+.nav-action-button.is-active[aria-label="折叠搜索结果"]:hover::before,
+.nav-action-button.is-active[aria-label="Свернуть результаты"]:hover::before {
   content: "\ed2f";
 }
 
-.nav-action-button[aria-label="Show search filter"]::after,
-.nav-action-button[aria-label="筛选"]::after,
-.nav-action-button[aria-label="Показать фильтр поиска"]::after {
+.nav-action-button[aria-label="Show search filter"]::before,
+.nav-action-button[aria-label="筛选"]::before,
+.nav-action-button[aria-label="Показать фильтр поиска"]::before {
   content: "\ee5a";
 }
 
-.nav-action-button[aria-label="Show search filter"]:hover::after,
-.nav-action-button[aria-label="筛选"]:hover::after,
-.nav-action-button[aria-label="Показать фильтр поиска"]:hover::after,
-.nav-action-button.is-active[aria-label="Show search filter"]::after,
-.nav-action-button.is-active[aria-label="筛选"]::after,
-.nav-action-button.is-active[aria-label="Показать фильтр поиска"]::after {
+.nav-action-button[aria-label="Show search filter"]:hover::before,
+.nav-action-button[aria-label="筛选"]:hover::before,
+.nav-action-button[aria-label="Показать фильтр поиска"]:hover::before,
+.nav-action-button.is-active[aria-label="Show search filter"]::before,
+.nav-action-button.is-active[aria-label="筛选"]::before,
+.nav-action-button.is-active[aria-label="Показать фильтр поиска"]::before {
   content: "\ee5b";
 }
 
-.nav-action-button[aria-label="Show more context"]::after,
-.nav-action-button[aria-label="显示上下文"]::after,
-.nav-action-button[aria-label="Развернуть контекст"]::after,
-.nav-action-button.is-active[aria-label="Show more context"]:hover::after,
-.nav-action-button.is-active[aria-label="显示上下文"]:hover::after,
-.nav-action-button.is-active[aria-label="Развернуть контекст"]:hover::after {
+.nav-action-button[aria-label="Show more context"]::before,
+.nav-action-button[aria-label="显示上下文"]::before,
+.nav-action-button[aria-label="Развернуть контекст"]::before,
+.nav-action-button.is-active[aria-label="Show more context"]:hover::before,
+.nav-action-button.is-active[aria-label="显示上下文"]:hover::before,
+.nav-action-button.is-active[aria-label="Развернуть контекст"]:hover::before {
   content: "\eca5";
 }
 
-.nav-action-button[aria-label="Show more context"]:hover::after,
-.nav-action-button[aria-label="显示上下文"]:hover::after,
-.nav-action-button[aria-label="Развернуть контекст"]:hover::after,
-.nav-action-button.is-active[aria-label="Show more context"]::after,
-.nav-action-button.is-active[aria-label="显示上下文"]::after,
-.nav-action-button.is-active[aria-label="Развернуть контекст"]::after {
+.nav-action-button[aria-label="Show more context"]:hover::before,
+.nav-action-button[aria-label="显示上下文"]:hover::before,
+.nav-action-button[aria-label="Развернуть контекст"]:hover::before,
+.nav-action-button.is-active[aria-label="Show more context"]::before,
+.nav-action-button.is-active[aria-label="显示上下文"]::before,
+.nav-action-button.is-active[aria-label="Развернуть контекст"]::before {
   content: "\ed30";
 }
 
-.nav-action-button[aria-label="Show nested tags"]::after,
-.nav-action-button[aria-label="显示嵌套标签"]::after {
+.nav-action-button[aria-label="Show nested tags"]::before,
+.nav-action-button[aria-label="显示嵌套标签"]::before {
   content: "\ee73";
 }
 
-.nav-action-button[aria-label="Show nested tags"]:hover::after,
-.nav-action-button[aria-label="显示嵌套标签"]:hover::after {
+.nav-action-button[aria-label="Show nested tags"]:hover::before,
+.nav-action-button[aria-label="显示嵌套标签"]:hover::before {
   content: "\ee73";
 }
 
-.nav-action-button[aria-label="Match case"]::after,
-.nav-action-button[aria-label="区分大小写"]::after,
-.nav-action-button[aria-label="Учитывать регистр"]::after {
+.nav-action-button[aria-label="Match case"]::before,
+.nav-action-button[aria-label="区分大小写"]::before,
+.nav-action-button[aria-label="Учитывать регистр"]::before {
   content: "\ed8d";
   font-family: remixicon;
 }
 
-.nav-action-button[aria-label="Explain search term"]::after,
-.nav-action-button[aria-label="说明搜索含义"]::after,
-.nav-action-button[aria-label="Объяснить поисковую строку"]::after {
+.nav-action-button[aria-label="Explain search term"]::before,
+.nav-action-button[aria-label="说明搜索含义"]::before,
+.nav-action-button[aria-label="Объяснить поисковую строку"]::before {
   content: "\ed84";
 }
 
-.nav-action-button[aria-label="Copy search results"]::after,
-.nav-action-button[aria-label="复制搜索结果"]::after,
-.nav-action-button[aria-label="Скопировать результаты поиска"]::after {
+.nav-action-button[aria-label="Copy search results"]::before,
+.nav-action-button[aria-label="复制搜索结果"]::before,
+.nav-action-button[aria-label="Скопировать результаты поиска"]::before {
   content: "\ece8";
 }
 
-.nav-action-button[aria-label="Copy search results"]:hover::after,
-.nav-action-button[aria-label="复制搜索结果"]:hover::after,
-.nav-action-button[aria-label="Скопировать результаты поиска"]:hover::after {
+.nav-action-button[aria-label="Copy search results"]:hover::before,
+.nav-action-button[aria-label="复制搜索结果"]:hover::before,
+.nav-action-button[aria-label="Скопировать результаты поиска"]:hover::before {
   content: "\ea5a";
 }
 
-.nav-action-button[aria-label="Star/unstar current file"]::after,
-.nav-action-button[aria-label="为当前文件增加/取消星标"]::after,
-.nav-action-button[aria-label="Добавить/удалить из избранного текущий файл"]::after {
+.nav-action-button[aria-label="Star/unstar current file"]::before,
+.nav-action-button[aria-label="为当前文件增加/取消星标"]::before,
+.nav-action-button[aria-label="Добавить/удалить из избранного текущий файл"]::before {
   content: "\ebad";
 }
 
-.nav-action-button[aria-label="Star/unstar current search"]::after,
-.nav-action-button[aria-label="为当前搜索结果增加/取消星标"]::after,
-.nav-action-button[aria-label="Добавить/удалить из избранного текущий поиск"]::after {
+.nav-action-button[aria-label="Star/unstar current search"]::before,
+.nav-action-button[aria-label="为当前搜索结果增加/取消星标"]::before,
+.nav-action-button[aria-label="Добавить/удалить из избранного текущий поиск"]::before {
   content: "\ea11";
   font-family: "Material Icons Outlined";
 }
