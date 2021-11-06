@@ -918,7 +918,7 @@ to get a right-side note block
   --table-thead-background-color: #bcdffcc7;
   --table-hover-raw-color: #85bfee2f;
   --table-hover-color: #5dacec34;
-  --table-hover-thead-color: #cde8ff;
+  --table-hover-thead-color: #ddefff;
 
   /*calendar*/
   --calendar-week-color: #48b432;
@@ -2698,9 +2698,6 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
 /*table from https://snippets.cacher.io/snippet/018387c872dc39277996 by eluotao*/
 .markdown-preview-view table:not(.dataview.table-view-table) {
   width: 100%;
-  margin-left:auto;
-  margin-right:auto;
-  overflow: hidden;
 }
 
 .markdown-preview-view table tbody > tr:nth-child(odd) {
@@ -2713,11 +2710,11 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
  
 .markdown-preview-view th,
 .markdown-preview-view td{
-  padding: 3px 10px;
+  padding: 4px 10px;
   border: 1px solid var(--table-border-color);
 }
 
-.markdown-preview-view thead {
+.markdown-preview-view th {
   background-color: var(--table-thead-background-color);
   font-family: var(--font-family-strong);
 }
@@ -2728,7 +2725,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
 }
 
 /*table raw hover*/
-.markdown-preview-view tr:hover{
+.markdown-preview-view table tbody > tr:hover{
   background-color: var(--table-hover-raw-color);
 }
 
