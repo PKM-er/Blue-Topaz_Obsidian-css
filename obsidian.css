@@ -2728,8 +2728,9 @@ font > strong {
 }
 
 span.cm-em,
-:not(font):not(strong) > em {
-  color: var(--accent-em);
+:not(font):not(strong) > em,
+em > mark {
+  color: var(--accent-em) !important;
 }
 
 .theme-dark *:not(font) > em > strong,
@@ -2745,13 +2746,13 @@ span.cm-em,
   /* adapted from Obsidianite*/
 }
 
-:not(font) > strong > em> mark {
+:not(font) > strong > em > mark {
   background-color: var(--mark-highlight-strong-em) !important;
 }
 
 em > strong > font,
 strong > em > font,
-strong > em> mark > font  {
+strong > em > mark > font  {
   background-image: initial;
   background-clip: initial;
   -webkit-background-clip: initial;
