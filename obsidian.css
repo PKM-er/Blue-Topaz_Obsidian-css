@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.12.19。uid [20211106] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.12.19, uid [20211106] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.12.19。uid [20211107] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.12.19, uid [20211107] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 
 ===========================    TIPS   ===============================
@@ -620,12 +620,12 @@ to get a right-side note block
   --tag-ideas-bg: #565656d8;
 
   /*titles*/
-  --h1-color: #78ab1a;
-  --h2-color: #20ab1b;
-  --h3-color: #17abab;
-  --h4-color: #1c74e6;
-  --h5-color: #8775eb;
-  --h6-color: #b265df;
+  --h1-color: #85bb1f;
+  --h2-color: #27b822;
+  --h3-color: #1bbbbb;
+  --h4-color: #2f7fe9;
+  --h5-color: #a192f7;
+  --h6-color: #c173ee;
 
   /*old*/
   /*
@@ -746,6 +746,19 @@ to get a right-side note block
   --text-checked-checkbox: #8e8e8e;
 
   --activeline-background: #468eeb1f;
+
+  /*pseudo-kanban*/
+  --p-kanban-bg-color: #6c6c6c42;
+  --p-kanban-border-color: transparent;
+  --p-kanban-card-color-1: #0000002d;
+  --p-kanban-card-color-2: #0000002d;
+  --p-kanban-color-1: #e41b1b41;
+  --p-kanban-color-2: #d37b173b;
+  --p-kanban-color-3: #c5d1142c;
+  --p-kanban-color-4: #26c71832;
+  --p-kanban-color-5: #0ea9a93a;
+  --p-kanban-color-6: #1073c434;
+  --p-kanban-color-7: #952cec34;
 }
 
 .theme-light {
@@ -999,6 +1012,19 @@ to get a right-side note block
   --text-checked-checkbox: #9b9b9b;
 
   --activeline-background: #468eeb21;
+
+  /*pseudo-kanban*/
+  --p-kanban-bg-color: #d3d3d32d;
+  --p-kanban-border-color: #a0a0a060;
+  --p-kanban-card-color-1: #ffffff8c;
+  --p-kanban-card-color-2: #ffffff8c;
+  --p-kanban-color-6: #ffa9a93d;
+  --p-kanban-color-5: #f8c2843d;
+  --p-kanban-color-4: #e5eb903d;
+  --p-kanban-color-3: #a0f8983b;
+  --p-kanban-color-2: #8ef8f842;
+  --p-kanban-color-1: #5ab5ff32;
+  --p-kanban-color-7: #c8a0e934;
 }
 
 /* page-size in edit mode*/
@@ -1009,6 +1035,233 @@ to get a right-side note block
 
 .cm-s-obsidian .CodeMirror-code {
   padding-right: 0px;
+}
+
+
+/*===============================*/
+/*=============YAML==============*/
+/*===============================*/
+
+/* cssclass: inline-list */
+/* can change list from block to inline; can be used with inline images */
+.inline-list ul,
+.inline-list ol {
+  display: inline-block;  
+  margin-top: 0.3em;
+}
+
+/* cssclass: code-wrap */
+/* as implied by the name, to wrap texts for code boxes */
+.code-wrap pre > code > span {
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+.code-wrap code.language-yaml.is-loaded{
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  white-space: pre-wrap !important;
+}
+
+.code-wrap code.language-md.is-loaded{
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  white-space: break-spaces !important;
+}
+
+/* image-grid-1 */
+/* adapted from https://github.com/Lithou/Sandbox/blob/main/.obsidian/snippets/pub-Image%20Flags.css */
+/* to get a kind of image grid with self-adapted size by placing images in the same row */
+span[alt*="+grid"]{
+  display: table-cell;
+  vertical-align: middle;
+  padding: 5px;
+}
+
+/* cssclass: image-grid */
+/* image-grid-2 */
+/* adapted from https://github.com/iEchoxu/obsidian_orange/blob/main/.obsidian/snippets/image-grid.css */
+.img-grid .markdown-preview-section > div > p > .image-embed[alt*="."] {
+  padding: 0 0.3rem;
+}
+
+.img-grid .markdown-preview-section > div > p > .image-embed[alt*="."]:last-child {
+  padding-right: 0;
+}
+
+.img-grid .markdown-preview-section > div > p > .image-embed[alt*="."]:first-child {
+  padding-left: 0;
+}
+
+.img-grid .markdown-preview-section > div hr {
+  width: 100%;
+}
+
+.img-grid span.image-embed[alt*="."] {
+  display: table-cell;
+}
+
+.img-grid img[alt*="."] {
+  max-height: 100vh;
+  object-fit: cover;
+}
+
+
+/* cssclass: kanban */
+/* adopted from spectrum theme, thanks to @Braweria. https://github.com/Braweria/Spectrum */
+/* a kind of css-based pseudo-kanban feature */
+.kanban ul {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid var(--p-kanban-border-color);
+  background-color: var(--p-kanban-bg-color);
+  padding: 1rem;
+  border-radius: var(--radius-m);
+  flex-wrap: wrap;
+}
+
+.kanban ul > li:not(.task-list-item) {
+  flex: 1 1 20%;
+  padding: 0.1em 1em 0.1em 0.8em;
+  margin: 0 0.1em 0.3em 0;
+  list-style: none;
+  border: 1px solid var(--p-kanban-border-color);
+  border-left: 1px solid var(--p-kanban-border-color) !important;
+  border-radius: var(--radius-s);
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.kanban .list-collapse-indicator.collapse-indicator.collapse-icon {
+  margin-left: -1.2em;
+  position: absolute;
+}
+
+.kanban .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+  color: var(--text-accent);
+  transition: transform 10ms linear 0s
+}
+
+.kanban ul > li:nth-of-type(7n+1) {
+  background-color: var(--p-kanban-color-1);
+  padding-left: 1em;
+}
+
+.kanban ul > li:nth-of-type(7n+2) {
+  background-color: var(--p-kanban-color-2);
+  padding-left: 1em;
+}
+
+.kanban ul > li:nth-of-type(7n+3) {
+  background-color: var(--p-kanban-color-3);
+  padding-left: 1em;
+}
+
+.kanban ul > li:nth-of-type(7n+4) {
+  background-color: var(--p-kanban-color-4);
+  padding-left: 1em;
+}
+
+.kanban ul > li:nth-of-type(7n+5) {
+  background-color: var(--p-kanban-color-5);
+  padding-left: 1em;
+}
+
+.kanban ul > li:nth-of-type(7n+6) {
+  background-color: var(--p-kanban-color-6);
+  padding-left: 1em;
+}
+
+.kanban ul > li:nth-of-type(7n) {
+  background-color: var(--p-kanban-color-7);
+  padding-left: 1em;
+}
+
+.kanban ul ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0rem;
+  margin-top: 0.5rem;
+  border-radius: 0;
+  border: 0;
+  background: none;
+}
+
+.kanban ul ul li:not(.task-list-item) {
+  width: 100%;
+  display: block;
+  background-color: var(--p-kanban-card-color-1) !important;
+}
+
+.kanban ul ul li:nth-child(even) {
+  background-color: var(--p-kanban-card-color-2) !important;
+}
+
+.kanban ul > li:hover {
+  border-color: var(--p-kanban-border-color) !important;
+}
+
+.kanban ul ul li:hover {
+  background: transparent !important;
+  border-color: var(--p-kanban-border-color) !important;
+  border-left: 1px solid var(--p-kanban-border-color) !important;
+}
+
+.theme-dark .kanban ul ul li:hover {
+  border-color: #696969e1 !important;
+  border-left: 1px solid #696969e1 !important;
+}
+
+.kanban ul ul li .task-list-item-checkbox {
+  margin-left: 1.5rem;
+}
+
+.kanban ul ul ul {
+  margin-right: 0;
+}
+
+.kanban ul ul::before {
+  border-left: 0;
+}
+
+.markdown-preview-view.is-readable-line-width.kanban .markdown-preview-sizer > div > ul {
+  max-width: 100%;
+}
+
+.kanban ul.contains-task-list ul,
+.kanban ol.contains-task-list ul,
+.kanban ul.contains-task-list ol,
+.kanban ol.contains-task-list ol {
+  position: initial;
+}
+
+.kanban ul.contains-task-list ul::before,
+.kanban ol.contains-task-list ul::before,
+.kanban ul.contains-task-list ol::before,
+.kanban ol.contains-task-list ol::before {
+  all: initial
+}
+
+.kanban ul > li.task-list-item {
+  flex: 1 1 20%;
+  padding: 0.1em 1em;
+  margin: 0 0.1em 0.3em 0;
+  list-style: none;
+  border: 1px solid var(--p-kanban-border-color);
+  border-left: 1px solid var(--p-kanban-border-color) !important;
+  border-radius: var(--radius-s);
+  word-wrap: break-word;
+  word-break: break-word;
+  text-indent: 0;
+}
+
+.kanban ul ul li.task-list-item {
+  width: 100%;
+  display: block;
+  text-indent: -1.5em;
+  background-color: var(--p-kanban-card-color-1) !important;
 }
 
 /*=========================*/
@@ -1650,6 +1903,7 @@ span.obsidian-search-match-highlight {
   border: 2px solid var(--text-normal);
   position: relative;
   border-radius: var(--radius-xs);
+  top: 4px;
   width: 1.3em;
   height: 1.3em;
   margin: 0 0.5em 0.1215em 0;
@@ -2703,7 +2957,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
 }
 
 /*table from https://snippets.cacher.io/snippet/018387c872dc39277996 by eluotao*/
-.markdown-preview-section:not(:first-child) table:not(.dataview.table-view-table) {
+.markdown-preview-section table:not(.dataview.table-view-table) {
   width: 100%;
   border-collapse: collapse;
   overflow: hidden;
@@ -6302,6 +6556,10 @@ span.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight.hmd-hidd
   padding: 0;
 }
 
+.markdown-source-view.mod-cm5 .CodeMirror-lines .view-content {
+  background-color: var(--background-transparent-black-or-white-3) !important;
+}
+
 
 /* ============ */
 /* ============ */
@@ -6408,73 +6666,6 @@ img[alt$="inlR"] {
   caption-side: bottom;
   text-align: center;
   font-size: 0.85rem;
-}
-
-
-/*===============================*/
-/*=============YAML==============*/
-/*===============================*/
-
-/* cssclass: inline-list*/
-.inline-list ul,
-.inline-list ol {
-  display: inline-block;  
-  margin-top: 0.3em;
-}
-
-/* cssclass: code-wrap*/
-.code-wrap pre > code > span {
-  word-wrap: break-word;
-  word-break: break-all;
-  white-space: pre-wrap;
-}
-
-.code-wrap code.language-yaml.is-loaded{
-  word-wrap: break-word !important;
-  word-break: break-word !important;
-  white-space: pre-wrap !important;
-}
-
-.code-wrap code.language-md.is-loaded{
-  word-wrap: break-word !important;
-  word-break: break-word !important;
-  white-space: break-spaces !important;
-}
-
-/* image-grid-1 */
-/* adapted from https://github.com/Lithou/Sandbox/blob/main/.obsidian/snippets/pub-Image%20Flags.css */
-span[alt*="+grid"]{
-  display: table-cell;
-  vertical-align: middle;
-  padding: 5px;
-}
-
-/* cssclass: image-grid*/
-/* image-grid-2 */
-/* adapted from https://github.com/iEchoxu/obsidian_orange/blob/main/.obsidian/snippets/image-grid.css */
-.img-grid .markdown-preview-section > div > p > .image-embed[alt*="."] {
-  padding: 0 0.3rem;
-}
-
-.img-grid .markdown-preview-section > div > p > .image-embed[alt*="."]:last-child {
-  padding-right: 0;
-}
-
-.img-grid .markdown-preview-section > div > p > .image-embed[alt*="."]:first-child {
-  padding-left: 0;
-}
-
-.img-grid .markdown-preview-section > div hr {
-  width: 100%;
-}
-
-.img-grid span.image-embed[alt*="."] {
-  display: table-cell;
-}
-
-.img-grid img[alt*="."] {
-  max-height: 100vh;
-  object-fit: cover;
 }
 
 /*===================================================*/
@@ -6723,6 +6914,10 @@ span[alt*="+grid"]{
 
 .is-mobile #calendar-container .dot {
   margin-top: 0px !important;
+}
+
+.is-mobile #calendar-container .hollow {
+  margin: 0 !important;
 }
 
 .is-mobile .markdown-source-view.mod-cm6 .cm-hmd-list-indent {
