@@ -2440,6 +2440,11 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
   letter-spacing: 0.03em;
 }
 
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
+.markdown-source-view.is-readable-line-width .CodeMirror {
+  max-width: 750px;
+}
+
 p {
   display: block;
   margin-block-start: 0.2em;
