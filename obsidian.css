@@ -283,6 +283,12 @@ settings:
     level: 1
     collapsed: true
   - 
+    id: background-settings-markdown-page
+    title: Note page
+    type: heading
+    level: 2
+    collapsed: true
+  - 
     id: background-image-settings-switch
     title: Switch off background images
     type: class-toggle
@@ -293,6 +299,87 @@ settings:
     description: Images will be refreshed when Obsidian launches; network is needed
     type: class-toggle
     default: false
+  - 
+    id: background-settings-body
+    title: Body
+    type: heading
+    level: 2
+    collapsed: true
+  - 
+    id: background-settings-body-style
+    title: Background image style
+    type: class-select
+    allowEmpty: false
+    default: background-settings-body-style-none
+    options:
+      - 
+        label: None
+        value: background-settings-body-style-none
+      - 
+        label: High transparency (Coming soon)
+        value: background-settings-body-style-high-transparency
+      - 
+        label: Low transparency (Coming soon)
+        value: background-settings-body-style-low-transparency
+      - 
+        label: Blur
+        value: background-settings-body-style-blur
+  - 
+    id: background-settings-body-theme-light
+    title: Theme light
+    type: class-select
+    allowEmpty: false
+    default: background-settings-body-theme-light-none
+    options:
+      - 
+        label: None
+        value: background-settings-body-theme-light-none
+      - 
+        label: Blue Mountain
+        value: background-settings-body-theme-light-blue-mountain
+      - 
+        label: In the sky
+        value: background-settings-body-theme-light-in-the-sky
+      - 
+        label: Orange
+        value: background-settings-body-theme-light-orange
+      - 
+        label: Macaw
+        value: background-settings-body-theme-light-macaw
+      - 
+        label: Leaf
+        value: background-settings-body-theme-light-leaf
+  - 
+    id: background-settings-body-theme-dark-none
+    title: Theme dark
+    type: class-select
+    allowEmpty: false
+    default: background-settings-body-theme-dark-none
+    options:
+      - 
+        label: None
+        value: background-settings-body-theme-dark-none
+      - 
+        label: Night sky 
+        value: background-settings-body-theme-dark-night-sky
+      - 
+        label: Dark sky 
+        value: background-settings-body-theme-dark-dark-sky
+      - 
+        label: In the sky
+        value: background-settings-body-theme-dark-in-the-sky
+      - 
+        label: Blue wave 
+        value: background-settings-body-theme-dark-blue-wave
+      - 
+        label: Jellyfish 1     
+        value: background-settings-body-theme-dark-jellyfish-1
+      - 
+        label: Jellyfish 2   
+        value: background-settings-body-theme-dark-jellyfish-2
+      - 
+        label: Hyacinth macaw
+        value: background-settings-body-theme-dark-hyacinth-macaw
   - 
     id: color-settings
     title: Color
@@ -687,6 +774,29 @@ settings:
         label: Border left 
         value: blockquote-style-border-left
   - 
+    id: export-pdf-style-folder
+    title: Exported PDF in dark mode
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: export-pdf-style-options
+    title: PDF color scheme
+    type: class-select
+    allowEmpty: false
+    default: export-pdf-style-default
+    options:
+      - 
+        label: Default
+        value: export-pdf-style-default
+      - 
+        label: All dark
+        value: export-pdf-style-default-all-dark
+      - 
+        label: Dark codebox
+        value: export-pdf-style-default-dark-codebox
+      - 
+  -
 */
 
 
@@ -8329,6 +8439,7 @@ body:not(.background-image-settings-switch).background-image-settings-change .wo
   background-image: url("https://source.unsplash.com/random?7") !important;
 }
 
+
 /* ================================== */
 /* ============= publish ============ */
 /* ================================== */
@@ -8443,10 +8554,6 @@ body:not(.background-image-settings-switch).background-image-settings-change .wo
 .site-body .publish-renderer .markdown-preview-view ul > li:not(.task-list-item) {
   border-left: 0.125em solid var(--list-ul-block-color);
 }
-
-
-body.folder-default-muted 
-
 
 /*=========*/
 /* Coloured Folders for Blue Topaz 0-Z, v0.3
@@ -9419,4 +9526,475 @@ body.blockquote-style-border-left .markdown-preview-view blockquote {
   border-radius: 0;
   margin-inline-start: 1.2em;
   margin-inline-end: 1.2em;
+}
+
+
+/*all dark*/
+@media print {
+  body.export-pdf-style-default-all-dark .markdown-preview-view {
+    background-color: var(--background-primary) !important;
+    color: var(--text-normal) !important;
+    font-family: var(--font-family-major) !important;
+  }
+  
+  body.export-pdf-style-default-all-dark .markdown-preview-view :not(font) > strong {
+    -webkit-print-color-adjust: exact;
+    color: var(--accent-strong);
+  }
+
+  body.export-pdf-style-default-all-dark .markdown-preview-view mark { 
+    color: var(--text-highlight) !important;
+  }
+
+  /* Print URL After Links */
+  /*
+  a::after{
+    content: " (" attr(href) ") ";
+  }
+  */
+
+  body.export-pdf-style-default-all-dark.theme-dark {
+    --background-primary: #222222; 
+    --background-primary-alt: #444444;
+    --background-secondary: #333333;
+    --background-secondary-alt: #000000; 
+    --background-accent: #000;
+    --background-modifier-border: #565656;
+    --background-modifier-form-field: rgba(0, 0, 0, 0.3);
+    --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.22);
+    --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+    --background-modifier-success: #539126;
+    --background-modifier-error: #9b4343;
+    --background-modifier-error-rgb: 155,67,67;
+    --background-modifier-error-hover: #470000;
+    --background-modifier-cover: rgba(0, 0, 0, 0.6);
+    --text-accent: #53aaf5;
+    --text-accent-hover: #3e8de7; 
+    --text-normal: #bdbdbd; 
+    --text-highlight: #f3f3f3;
+    --text-highlight-2: #e4e4e4;
+    --text-muted: #8a8a8a;  
+    --text-faint: #797979;
+    --text-folder-file: #a7a7a7;
+    --accent-strong: #f7f7f7;
+    --accent-em: #a4ca8e;
+    --text-error: #e16d76;
+    --text-error-hover: #c9626a;
+    --text-selection: #47a5914d;
+    --text-on-accent: #dcddde;
+    --interactive-normal: #20242b;
+    --interactive-hover: #353b47;
+    --interactive-accent: #3187d3; 
+    --interactive-accent-rgb: 45, 135, 211;     
+    --interactive-accent-hover: #3e8de7;
+    --panel-border-color: #18191e;
+    --search-text: #e0e0e0;
+    --folder-title: #ffffff;
+  
+    --text-highlight-bg: #b0ab4e8a; /*edit*/
+    --mark-highlight: #b0ab4e8a; /*preview*/
+    --text-search-highlight-bg: #bb4361;
+  
+    --background-search-result: #444444;
+    --search-result-file-matched-bg: #005fac;
+  
+    --background-primary-bg-4-bt: #222222; 
+    --background-primary-alt-bg-4-bt: #444444;
+    --background-secondary-bg-4-bt: #333333;
+    --background-secondary-alt-bg-4-bt: #000000; 
+    --background-4-sliding-panel: #252525ed;
+  
+    --background-transparent-black-or-white-1: #1b1b1b9a;
+    --background-transparent-black-or-white-2: #1e1e1ebd;
+    --background-transparent-black-or-white-3: #2f2f2f6c;
+    --background-transparent-blue: #003e759a;
+  
+  
+    --gray-1: #5C6370;
+    --gray-2: #abb2bf;
+    --red: #e06c75;
+    --red-1: #d05a63;
+    --orange: #d19a66;
+    --green: #b6e296;
+    --darkgreen: #399a58;
+    --aqua: #56b6c2;
+    --purple: #c678dd;
+    --blue: #9dcffc;
+    --darkblue: #4889df;
+    --yellow: #e4ba6c;
+    --light-yellow: #dfda91;
+    
+    --embed-color: #5c67996c;   
+    --search-result-file-title-color: #96b7e4; 
+    --theme-color: #3187d3;
+    --theme-color-translucent: #3187d388;
+    --theme-color-translucent-1: #1982dd2c;
+    --color-specification: #3ce252;
+  
+    --allow-1: #d18828;
+    --background-blockquote: #d3d3d31c;
+    --background-code: #1616168c;
+    --background-code-2: #444444c5;
+    --text-color-code: #d58000;
+    --text-color-code-normal: #e7e7e7;
+  
+    --internal-link-color-in-highlight: #98d6ff;
+  
+    /*list*/
+    --list-ul-block-color: #e19742a9;
+    --list-ul-disc-color: #db6019;
+    --list-ul-hover: #e28915de;
+    --list-ol-block-color: #2685bbb4;
+    --list-ol-number-color: #95afc4;
+    --list-ol-hover: #2c7bd6;
+  
+    /*tags*/
+    --tag-text: #e4e4e4;
+    --stag1: #f08383;
+    --stag1-bg: #da2525;
+    --stag2: #e7b263;
+    --stag2-bg: #c67700;
+    --stag3: #77df89;
+    --stag3-bg: #08a522;
+    --tag1: #0079dce8;
+    --tag2: #00918ae8;
+    --tag3: #008c07e8;
+    --tag4: #968c00e8;
+    --tag5: #ac3a06e8;
+    --tag6: #ae1010e8;
+    --tag7: #ae25a7e8;
+    --tag8: #7734cee8;
+    --tag9: #2e55ffe8;
+    --color-tag-edit: #006feeb0;
+    --color-tag-edit-mobile: #47cc85;
+    --tag-dailynote: #98c8ff;
+    --tag-dailynote-bg: #156bce;
+    --tag-weeklynote: #d1e6ff;
+    --tag-weeklynote-bg: #4383cc;
+    --tag-questions: #d4bdff;
+    --tag-questions-bg: #8157d0;
+    --tag-ideas: #fcfcc0;
+    --tag-ideas-bg: #565656d8;
+  
+    /*titles*/
+    --h1-color: #92c237;
+    --h2-color: #37bd32;
+    --h3-color: #2dc1c1;
+    --h4-color: #4495ff;
+    --h5-color: #ad9fff;
+    --h6-color: #ca8bee;
+  
+    /*graph*/
+    --graph-text-color: #B5B5B5; 
+    --graphtag: #88d842bb;
+    --graph-attach: #b2cfe0bb;
+    --graph-circle: #55a2d6bb;
+    --graph-line: #8c8c8c;
+    --graph-unresolved: #f08080de;
+    --graph-arrow: #c23917;
+  
+    /*mermaid*/
+    --mermaid-active-task-color: #187ef1;
+    --mermaid-seq-dia-color: #1371be;
+  
+    /*table*/
+    --table-background-color: #8a8a8a32;
+    --table-background-color-odd: #0000001c;
+    --table-border-color: #c0c0c0;
+    --table-thead-background-color: #4e95e67e;
+    --table-hover-raw-color: #3187d33d;
+    --table-hover-color: #3187d388;
+    --table-hover-thead-color: #298c54c7;
+
+    /*kanban*/
+    --kanban-color-1: #0065d852;
+    --kanban-color-2: #30e4e441;
+    --kanban-color-3: #1cb54f44;
+    --kanban-color-4: #97b82b49;
+    --kanban-color-5: #bb722d41;
+    --kanban-color-6: #d12e2e42;
+    --kanban-color-7: #8f36cb3f;
+  
+    /*colourful notes*/
+    --text-gray: #acacac;
+    --text-brown: #be9684;
+    --text-orange: #ffa344;
+    --text-yellow: #ffdc51;
+    --text-green: #52c7b2;
+    --text-blue: #8ca1ff;
+    --text-purple: #b386f1;
+    --text-pink: #ff6bba;
+    --text-red: #ff4f4f;
+  
+    --background-gray: #535353;
+    --background-brown: #493a3a;
+    --background-orange: #53422f;
+    --background-yellow: #585536;
+    --background-green: #32503e;
+    --background-blue: #2f5264;
+    --background-purple: #443f57;
+    --background-pink: #533b4a;
+    --background-red: #683c3c;
+  
+    --note-important: #d64545;
+    --note-cloze: #ffffff;
+      
+    /* stickies */
+    --stickies-color-1: #84c584;
+    --stickies-color-2: #c7a3cf;
+    --tape-color: #99999967;
+  
+    /*Sliding panes*/
+    --header-color: #f1a634d0;
+  
+    /*admonition*/
+    --admonition-bg-color: #1111118f;
+    
+    /*checklist*/
+    --checklist-bg: #1d1d1d96;
+    --checklist-bg-hover: #08080896;
+  
+    --color-view-header-gradient-1: #000000de;
+    --color-view-header-gradient-2: #002e6ac0;
+  }
+}
+
+/*dark codebox*/
+@media print {
+  body.export-pdf-style-default-dark-codebox .markdown-preview-view {
+    color: var(--text-normal) !important;
+    font-family: var(--font-family-major) !important;
+  }
+  
+  body.export-pdf-style-default-dark-codebox .markdown-preview-view :not(font) > strong {
+    -webkit-print-color-adjust: exact;
+    color: var(--accent-strong);
+  }
+
+  body.export-pdf-style-default-dark-codebox .markdown-preview-view mark { 
+    color: var(--text-highlight) !important;
+  }
+
+  /* Print URL After Links */
+  /*
+  a::after{
+    content: " (" attr(href) ") ";
+  }
+  */
+
+  body.export-pdf-style-default-dark-codebox.theme-dark {
+    --background-primary: #222222; 
+    --background-primary-alt: #444444;
+    --background-secondary: #333333;
+    --background-secondary-alt: #000000; 
+    --background-code: #2c2c2c;
+    --text-color-code: #d58000;
+    --text-color-code-normal: #e7e7e7;
+    --background-primary-bg-4-bt: #222222; 
+    --background-primary-alt-bg-4-bt: #444444;
+    --background-secondary-bg-4-bt: #333333;
+    --background-secondary-alt-bg-4-bt: #000000; 
+    --background-4-sliding-panel: #252525ed;
+
+    --gray-1: #5C6370;
+    --gray-2: #abb2bf;
+    --red: #e06c75;
+    --red-1: #d05a63;
+    --orange: #d19a66;
+    --green: #b6e296;
+    --darkgreen: #399a58;
+    --aqua: #56b6c2;
+    --purple: #c678dd;
+    --blue: #9dcffc;
+    --darkblue: #4889df;
+    --yellow: #e4ba6c;
+    --light-yellow: #dfda91;
+  }
+}
+
+/*==========*/
+/*blur*/
+body.background-settings-body-style-blur.theme-light .workspace::before {
+  background-image: var(--theme-background);
+  background-size : cover;
+  filter: blur(10px);
+}
+
+body.background-settings-body-style-blur.theme-dark .workspace::before {
+  background-image: var(--theme-background);
+  background-size : cover;
+  filter: blur(10px) brightness(0.9);
+}
+
+body.background-settings-body-style-blur .workspace::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -4px;
+  right: -15px;
+  bottom: 0px;
+  left: -15px;
+}
+
+body.background-settings-body-style-blur.theme-light .titlebar::before {
+  background-image: var(--theme-background);
+  background-size : cover;
+}
+
+body.background-settings-body-style-blur.theme-dark .titlebar::before {
+  background-image: var(--theme-background);
+  background-size : cover;
+}
+
+
+body.background-settings-body-style-blur.theme-light {
+  --background-primary-bg-4-bt: #ffffffb2; 
+  --background-secondary-bg-4-bt: #ffffff83;
+  --background-secondary-alt-bg-4-bt: #ffffff69; 
+  --background-primary-alt-bg-4-bt: #ffffffbe;
+  --background-code: #fafafa94;
+  --theme-color: #3e99e9;
+  --background-resize-handle-blur: #ebebeba6;
+  --text-folder-file: #292929;
+}
+
+body.background-settings-body-style-blur.background-settings-body-theme-light-blue-mountain.theme-light {
+  --blue-mountain: url("https://images.unsplash.com/photo-1486520299386-6d106b22014b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  --theme-background: var(--blue-mountain);
+}
+
+/* font color */
+body.background-settings-body-style-blur.background-settings-body-theme-light-blue-mountain.theme-light .tree-item-inner:not(:hover),
+body.background-settings-body-style-blur.background-settings-body-theme-light-blue-mountain.theme-light .tree-item-flair:not(:hover),
+body.background-settings-body-style-blur.background-settings-body-theme-light-blue-mountain.theme-light .workspace-ribbon-collapse-btn:not(:hover),
+body.background-settings-body-style-blur.background-settings-body-theme-light-blue-mountain.theme-light .side-dock-ribbon-tab:not(:hover),
+body.background-settings-body-style-blur.background-settings-body-theme-light-blue-mountain.theme-light .side-dock-ribbon-action:not(:hover),
+body.background-settings-body-style-blur.background-settings-body-theme-light-blue-mountain.theme-light .workspace-tab-header:not(:hover),
+
+body.background-settings-body-style-blur.background-settings-body-theme-light-in-the-sky.theme-light .tree-item-inner:not(:hover),
+body.background-settings-body-style-blur.background-settings-body-theme-light-in-the-sky.theme-light .tree-item-flair:not(:hover),
+body.background-settings-body-style-blur.background-settings-body-theme-light-in-the-sky.theme-light .workspace-ribbon-collapse-btn:not(:hover),
+body.background-settings-body-style-blur.background-settings-body-theme-light-in-the-sky.theme-light .side-dock-ribbon-tab:not(:hover),
+body.background-settings-body-style-blur.background-settings-body-theme-light-in-the-sky.theme-light .side-dock-ribbon-action:not(:hover),
+body.background-settings-body-style-blur.background-settings-body-theme-light-in-the-sky.theme-light .workspace-tab-header:not(:hover) {
+  color: var(--text-normal);
+}
+
+body.background-settings-body-style-blur.background-settings-body-theme-light-in-the-sky.theme-light {
+  --in-the-sky: url("https://images.unsplash.com/photo-1514519334989-3d5c8b1a9f91?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+  --theme-background: var(--in-the-sky);
+}
+
+body.background-settings-body-style-blur.background-settings-body-theme-light-orange.theme-light {
+  --orange: url("https://images.unsplash.com/photo-1600676074626-e1f6b5981f25?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=966&q=80");
+  --theme-background: var(--orange);
+}
+
+body.background-settings-body-style-blur.background-settings-body-theme-light-macaw.theme-light {
+  --macaw: url("https://images.unsplash.com/photo-1551189013-03cf5bc1c73c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=781&q=80");
+  --theme-background: var(--macaw);
+}
+
+body.background-settings-body-style-blur.background-settings-body-theme-light-leaf.theme-light {
+  --leaf: url("https://images.unsplash.com/photo-1536882240095-0379873feb4e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1171&q=80");
+  --theme-background: var(--leaf);
+}
+
+body.background-settings-body-style-blur.theme-dark {
+  --background-primary-bg-4-bt: #16161670; 
+  --background-secondary-bg-4-bt: #16161670;
+  --background-secondary-alt-bg-4-bt: #16161670; 
+  --background-primary-alt-bg-4-bt: #2a2a2a91;
+  --background-code: #16161667;
+  --background-resize-handle-blur: #40404077;
+  --text-norma: #cccccc;
+  --theme-color: #4185dd;
+  --interactive-accent: #2076c2;
+}
+
+body.background-settings-body-style-blur.background-settings-body-theme-dark-night-sky.theme-dark {
+  --night-sky: url("https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80");
+  --theme-background: var(--night-sky);
+}
+
+body.background-settings-body-style-blur.background-settings-body-theme-dark-dark-sky.theme-dark {
+  --dark-sky: url("https://images.unsplash.com/photo-1611944674436-a170fbcaa773?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80");
+  --theme-background: var(--dark-sky);
+}
+
+body.background-settings-body-style-blur.background-settings-body-theme-dark-in-the-sky.theme-dark {
+  --in-the-sky: url("https://images.unsplash.com/photo-1556912672-78d3869a6374?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80");
+  --theme-background: var(--in-the-sky);
+}
+
+body.background-settings-body-style-blur.background-settings-body-theme-dark-blue-wave.theme-dark {
+  --blue-wave: url("https://images.unsplash.com/photo-1613946709284-0aa74f040a12?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQ1fHxkYXJrJTIwYmx1ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  --theme-background: var(--blue-wave);
+}
+
+body.background-settings-body-style-blur.background-settings-body-theme-dark-jellyfish-1.theme-dark {
+  --jellyfish-1: url("https://images.unsplash.com/photo-1569887652102-59696fef1528?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzYzfHxkYXJrJTIwYmx1ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80");
+  --theme-background: var(--jellyfish-1);
+}
+
+body.background-settings-body-style-blur.background-settings-body-theme-dark-jellyfish-2.theme-dark {
+  --jellyfish-2: url("https://images.unsplash.com/photo-1560568380-0aa95fee7ae9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+  --theme-background: var(--jellyfish-2);
+}
+
+body.background-settings-body-style-blur.background-settings-body-theme-dark-hyacinth-macaw.theme-dark {
+  --hyacinth-macaw: url("https://images.unsplash.com/photo-1610847034016-49565e0c068a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80");
+  --theme-background: var(--hyacinth-macaw);
+}
+
+body.background-settings-body-style-blur .workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
+body.background-settings-body-style-blur .workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
+body.background-settings-body-style-blur .workspace-tab-header.is-before-active .workspace-tab-header-inner,
+body.background-settings-body-style-blur .workspace-tab-header.is-after-active .workspace-tab-header-inner,
+body.background-settings-body-style-blur .workspace-tab-header,
+body.background-settings-body-style-blur .workspace-tab-header-inner,
+body.background-settings-body-style-blur .workspace-split.mod-left-split .view-content,
+body.background-settings-body-style-blur .workspace-split.mod-right-split .view-content,
+body.background-settings-body-style-blur .workspace-tab-header.is-after-active,
+body.background-settings-body-style-blur .workspace-tab-header.is-before-active,
+body.background-settings-body-style-blur .workspace-tab-container-before.is-before-active .workspace-tab-header-inner {
+  background-color: transparent;
+  border-radius: 0;
+}
+
+body.background-settings-body-style-blur .workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content,
+body.background-settings-body-style-blur .workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content {
+  border-top-right-radius: 0;
+  border-top-left-radius : 0;
+}
+
+body.background-settings-body-style-blur .workspace-tab-header-inner {
+  padding: 3px 9px;
+}
+
+body.background-settings-body-style-blur .workspace-tab-container-before,
+body.background-settings-body-style-blur .workspace-tab-container-after {
+  width: 0;
+}
+
+body.background-settings-body-style-blur .workspace-split.mod-horizontal.mod-left-split .workspace-tab-header-container {
+  flex: 0.012 0 auto !important;
+}
+
+body.background-settings-body-style-blur .workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
+  border-top-right-radius: 0;
+}
+
+body.background-settings-body-style-blur .workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
+  border-top-left-radius: 0;
+}
+
+body.background-settings-body-style-blur .workspace-tab-header-container {
+  background-color: var(--background-primary-alt-bg-4-bt);
+}
+
+body.background-settings-body-style-blur .workspace-split.mod-left-split > .workspace-leaf-resize-handle, 
+body.background-settings-body-style-blur .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  height: 100%;
+  background-color: var(--background-resize-handle-blur);
 }
