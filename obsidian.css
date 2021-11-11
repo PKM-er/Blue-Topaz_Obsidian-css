@@ -3993,16 +3993,17 @@ a.external-link {
 .theme-light pre[class*="language-"]{
   text-shadow: none;
   color: var(--text-color-code-normal);
-  margin: 1em 0;
 }
 
 .theme-dark code[class*="language-"], 
 .theme-dark pre[class*="language-"] {
   color: var(--text-color-code-normal);
   text-shadow: none;
-  margin: 1em 0;
 }
 
+code[class*="language-"] {
+  padding: 1em 0.5em;
+}
 
 /*embedded*/
 .popover.hover-popover .markdown-preview-view .markdown-embed,
@@ -4119,7 +4120,6 @@ pre[class*='language-'] {
   -moz-hyphens: none !important;
   -ms-hyphens: none !important;
   hyphens: none !important;
-  padding-right: 30px !important;
 }
 
 /* Inline code */
@@ -4291,7 +4291,7 @@ pre::before{
   font-family: var(--default-font);
   color: #95a3b5;
   opacity: 0.7;
-  font-size: 0.85em;
+  font-size: 1em;
   font-weight: 600;
   position: absolute;
   right: 48px;
@@ -6276,6 +6276,7 @@ button.copy-code-button {
   color: transparent;
   top: -2px !important;
   right: -2px !important;
+  height: 1.6em;
 }
 
 button.copy-code-button:hover {
@@ -6296,11 +6297,6 @@ pre.frontmatter.language-yaml::before {
 .frontmatter-container {
   margin: 0 0 1.2em 0;
   background-color: transparent;
-}
-
-/*适配copy code插件*/
-.markdown-preview-view pre {
-  padding: 6px 22px;
 }
 
 /*====================*/
