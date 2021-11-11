@@ -3309,6 +3309,11 @@ body.list-vertical-line-one ol ol::before {
   height: 105%;
 } 
 
+body.list-vertical-line-one .kanban ul ul::before,
+body.list-vertical-line-one .kanban ol ul::before {
+  display :none;
+} 
+
 body.list-vertical-line-one ul.contains-task-list ul::before,
 body.list-vertical-line-one ol.contains-task-list ul::before,
 body.list-vertical-line-one ul.contains-task-list ol::before,
@@ -3327,27 +3332,15 @@ body.list-vertical-line-one li > p:not(.task-list-item) {
 }
   
 body.list-vertical-line-one ul > li:not(.task-list-item) {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  padding-left: 0;
   border-left: none !important;
 }
   
 body.list-vertical-line-one ol > li {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
   border-left: none !important;
 } 
 
 body.list-vertical-line-one ol:not(.contains-task-list) > li:not(.task-list-item) {
   padding-left: 0.3em;
-}
-
-body.list-vertical-line-one ul,
-body.list-vertical-line-one ol {
-  padding-inline-start: 30px;
 }
 
 body.list-vertical-line-one ol,
@@ -3386,6 +3379,11 @@ body.list-vertical-line-two ol ol::before {
   height: 110%;
 } 
 
+body.list-vertical-line-two .kanban ul ul::before,
+body.list-vertical-line-two .kanban ol ul::before {
+  display :none;
+} 
+
 body.list-vertical-line-two ul.contains-task-list ul::before,
 body.list-vertical-line-two ol.contains-task-list ul::before,
 body.list-vertical-line-two ul.contains-task-list ol::before,
@@ -3404,25 +3402,12 @@ body.list-vertical-line-two li > p:not(.task-list-item) {
 }
   
 body.list-vertical-line-two ul > li:not(.task-list-item) {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  padding-left: 0;
   border-left: none !important;
 }
   
 body.list-vertical-line-two ol > li {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  padding-left: 0;
   border-left: none !important;
 } 
-
-body.list-vertical-line-two ul,
-body.list-vertical-line-two ol {
-  padding-inline-start: 30px;
-}
 
 /*list-no-border*/
 body.list-no-border ul ul,
@@ -3445,25 +3430,12 @@ body.list-no-border li > p:not(.task-list-item) {
 }
   
 body.list-no-border ul > li:not(.task-list-item) {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  padding-left: 0;
   border-left: none !important;
 }
   
 body.list-no-border ol > li {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  padding-left: 0;
   border-left: none !important;
 } 
-
-body.list-no-border ul,
-body.list-no-border ol {
-  padding-inline-start: 30px;
-}
 
 body.list-no-border .cm-hmd-list-indent .cm-tab::before {
   all: initial;
@@ -3515,6 +3487,16 @@ body.list-vertical-line-three ol ol::before {
   bottom: 0px;
 } 
 
+body.list-vertical-line-three .kanban ul ul::before,
+body.list-vertical-line-three .kanban ol ul::before {
+  display :none;
+} 
+
+body.list-vertical-line-three .kanban ol.contains-task-list ul::before, 
+body.list-vertical-line-three .kanban ol.contains-task-list ol::before {
+  display :none;
+}
+
 body.list-vertical-line-three ul.contains-task-list ul::before,
 body.list-vertical-line-three ol.contains-task-list ul::before,
 body.list-vertical-line-three ul.contains-task-list ol::before,
@@ -3533,25 +3515,12 @@ body.list-vertical-line-three li > p:not(.task-list-item) {
 }
   
 body.list-vertical-line-three ul > li:not(.task-list-item) {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  padding-left: 0;
   border-left: none !important;
 }
   
 body.list-vertical-line-three ol > li {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  padding-left: 0;
   border-left: none !important;
 } 
-
-body.list-vertical-line-three ul,
-body.list-vertical-line-three ol {
-  padding-inline-start: 30px;
-}
 
 body.list-vertical-line-three ul > li:not(.task-list-item) {
   list-style-position: inside;
