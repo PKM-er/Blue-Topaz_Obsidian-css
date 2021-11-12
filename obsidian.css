@@ -8387,6 +8387,7 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active > .nav-file-t
   bottom: 0;
   left: 0;
   opacity: 0.12;
+  background-size: 100% 100%;
 }
 
 body:not(.background-image-settings-switch).theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(5n+0) .workspace-leaf-content[data-type="markdown"]::before {
