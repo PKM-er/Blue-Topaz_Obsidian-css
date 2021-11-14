@@ -4675,10 +4675,10 @@ body.list-vertical-line-one ol ol::before {
   content: '';
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;
-  left: -0.9em;
-  top: -5px;
+  left: -1.2em;
+  top: -2px;
   bottom: 0px;
-  height: 105%;
+  height: 100%;
 } 
 
 body.list-vertical-line-one .kanban ul ul::before,
@@ -4693,7 +4693,7 @@ body.list-vertical-line-one ol.contains-task-list ol::before {
   content: ' ';
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;  
-  left: -1em;
+  left: -1.2em;
   top: 1px;
   height: 100%;
 }
@@ -4745,10 +4745,10 @@ body.list-vertical-line-two ol ol::before {
   content: '';
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;
-  left: -0.9em;
+  left: -1.2em;
   top: -5px;
   bottom: 0px;
-  height: 110%;
+  height: 100%;
 } 
 
 body.list-vertical-line-two .kanban ul ul::before,
@@ -4763,7 +4763,7 @@ body.list-vertical-line-two ol.contains-task-list ol::before {
   content: ' ';
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;  
-  left: -1em;
+  left: -1.2em;
   top: 1px;
   height: 100%;
 }
@@ -4876,7 +4876,7 @@ body.list-vertical-line-three ol.contains-task-list ol::before {
   content: ' ';
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;  
-  left: -1em;
+  left: -1.2em;
   top: 1px;
   height: 100%;
 }
