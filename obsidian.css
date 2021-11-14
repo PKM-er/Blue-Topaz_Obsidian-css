@@ -472,6 +472,14 @@ settings:
         label: Pink (coming soon)
         value: color-scheme-options-pink-topaz
   -
+    id: text-normal
+    title: Main text color
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#0e0e0e'
+    default-dark: '#bdbdbd'
+  -
     id: background-color-settings
     title: Background colors
     title.zh: 背景颜色设置
