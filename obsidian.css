@@ -273,29 +273,35 @@ settings:
   - 
     id: translucent-setting-panel
     title: Translucent Setting Panel
+    title.zh: 半透明窗口
     description: Make this panel translucent
+    description.zh: 使本窗口半透明，便于设置
     type: class-toggle
     default: false
   - 
     id: background-settings
     title: Background Settings
+    title.zh: 背景设置
     type: heading
     level: 1
     collapsed: true
   - 
     id: background-settings-markdown-page
     title: Note page
+    title.zh: 笔记背景
     type: heading
     level: 2
     collapsed: true
   - 
     id: background-image-settings-switch
     title: Switch off background images
+    title.zh: 移除笔记背景
     type: class-toggle
     default: false
   - 
     id: background-image-settings-markdown-page-options
     title: Choose images 
+    title.zh: 选择背景
     type: class-select
     allowEmpty: false
     default: background-image-settings-markdown-page-default
@@ -321,12 +327,15 @@ settings:
   -
     id: background-image-settings-markdown-page-random
     title: Random background images
+    title.zh: 随机背景
     description: Images will be refreshed when Obsidian launches; network is needed
+    description.zh: 图片在Obsidian打开时刷新；需要联网 
     type: class-toggle
     default: false
   - 
     id: background-image-settings-markdown-page-random-options
-    title: Random with topic
+    title: Random image with a certain color
+    title.zh: 特定颜色的随机背景
     type: class-select
     allowEmpty: false
     default: background-image-settings-markdown-page-random-default
@@ -355,12 +364,14 @@ settings:
   -
     id: background-settings-body
     title: Workplace
+    title.zh: 工作页面背景
     type: heading
     level: 2
     collapsed: true
   - 
     id: background-settings-body-style
     title: Background image style
+    title.zh: 背景样式
     type: class-select
     allowEmpty: false
     default: background-settings-body-style-none
@@ -436,12 +447,14 @@ settings:
   - 
     id: color-settings
     title: Color
+    title.zh: 颜色设置
     type: heading
     level: 1
     collapsed: true
   -
     id: color-scheme-options
     title: Color scheme options
+    title.zh: 整体配色选择
     type: class-select
     allowEmpty: false
     default: color-scheme-options-default
@@ -461,6 +474,7 @@ settings:
   -
     id: background-color-settings
     title: Background colors
+    title.zh: 背景颜色设置
     type: heading
     level: 2
     collapsed: true
@@ -498,7 +512,7 @@ settings:
     default-dark: '#000000'
   -
     id: background-modifier-border
-    title: 'Background Modifier: Border'
+    title: Background Modifier Border
     type: variable-themed-color
     opacity: true
     format: rgb
@@ -507,12 +521,14 @@ settings:
   -
     id: accent-color-settings
     title: Accent colors
+    title.zh: 强调色设置
     type: heading
     level: 2
     collapsed: true
   - 
     id: interactive-accent
     title: Theme color
+    title.zh: 主题色
     type: variable-themed-color
     opacity: false
     format: hex
@@ -520,7 +536,8 @@ settings:
     default-dark: '#3187d3'
   -
     id: text-accent
-    title: Theme color-2
+    title: Theme color 2
+    title.zh: 主题色 2
     type: variable-themed-color
     opacity: false
     format: hex
@@ -529,6 +546,7 @@ settings:
   -
     id: header-color-settings
     title: Header colors
+    title.zh: 标题颜色
     type: heading
     level: 2
     collapsed: true
@@ -583,6 +601,7 @@ settings:
   -
     id: tag-color-settings
     title: Tag colors
+    title.zh: 标签颜色
     type: heading
     level: 2
     collapsed: true
@@ -661,12 +680,14 @@ settings:
   -
     id: font-settings
     title: Font
+    title.zh: 字体设置
     type: heading
     level: 1
     collapsed: true
   -
     id: font-family-major
     title: Main font
+    title.zh: 主体字体
     description: Fonts except from the code texts
     type: variable-text
     default: "Bookerly, Merriweather, 'LXGW WenKai', 'Segoe UI Emoji', var(--default-font)"
@@ -703,48 +724,57 @@ settings:
   - 
     id: font-family-folder-file-title
     title: Folder & file title
+    title.zh: 文件栏字体
     type: variable-text
     default: "Arlrdbd, 'Source Han Sans', 'Noto Sans CJK', 'Source Sans Pro', 'Segoe UI Emoji', sans-serif"
   - 
     id: font-family-preview-edit-code
     title: Codebox
+    title.zh: 代码框字体
     type: variable-text
     default: "Consolas, Monaco, 'Source Han Mono', 'Microsoft Yahei Mono', 'Segoe UI Emoji', 'Microsoft YaHei', 'Source Code Pro',  monospace"
   -
     id: font-family-inline-code
     title: Inline code
+    title.zh: 行内代码字体
     type: variable-text
     default: var(--font-family-preview-edit-code)
   - 
     id: font-family-tag
     title: Tag
+    title.zh: 标签字体
     type: variable-text
     default: "Bookerly, 'Microsoft YaHei', STzhongsong, STSong, 'Segoe UI Emoji', Serif"
   - 
     id: font-family-strong
     title: Bold text
+    title.zh: 加粗文字字体
     type: variable-text
     default: "Bookerly, 'LXGW WenKai Screen R', 'LXGW WenKai UI', 'Segoe UI Emoji', var(--default-font)"
   - 
     id: font-family-vault
     title: Vault name
+    title.zh: 库名字体
     type: variable-text
     default: "'Lucida Handwriting', 'Segoe UI Emoji'"
   - 
     id: style-change-options
     title: Style
+    title.zh: 样式设置
     type: heading
     level: 1
     collapsed: true
   -
     id: list-style-change-options-folder
     title: List
+    title.zh: 列表
     type: heading
     level: 2
     collapsed: true
   -
     id: list-style-change-options
     title: List
+    title.zh: 列表样式
     type: class-select
     allowEmpty: false
     default: list-bracket-left
@@ -770,17 +800,20 @@ settings:
   - 
     id: folder-style-change-options-folder
     title: Folder
+    title.zh: 文件夹
     type: heading
     level: 2
     collapsed: true
   -
     id: light-background-color-files
     title: Light file background
+    title.zh: 当前文件背景变浅
     type: class-toggle
     default: false
   -
     id: unmuted-collapsed-folder
     title: Unmute collapsed folder
+    title.zh: 
     description: To normalize opacity of collapsed folder
     type: class-toggle
     default: false
@@ -827,12 +860,14 @@ settings:
   - 
     id: blockquote-style-change-options-folder
     title: Blockquote
+    title.zh: 引用框
     type: heading
     level: 2
     collapsed: true
   -
     id: blockquote-style-change-options
     title: Blockquote
+    title.zh: 引用框样式
     type: class-select
     allowEmpty: false
     default: blockquote-style-default
@@ -858,12 +893,14 @@ settings:
   - 
     id: export-pdf-style-folder
     title: Exported PDF in dark mode
+    title.zh: 黑暗模式下导出PDF样式
     type: heading
     level: 2
     collapsed: true
   -
     id: export-pdf-style-options
     title: PDF color scheme
+    title.zh: PDF配色
     type: class-select
     allowEmpty: false
     default: export-pdf-style-default
@@ -1056,7 +1093,7 @@ settings:
   --background-modifier-error-rgb: 155,67,67;
   --background-modifier-error-hover: #470000;
   --background-modifier-cover: rgba(0, 0, 0, 0.6);
-  --text-accent: #b1b1b1;
+  --text-accent: #53aaf5;
   --text-accent-hover: #3e8de7; 
   --text-normal: #bdbdbd; 
   --text-highlight: #f3f3f3;
