@@ -11218,7 +11218,7 @@ body.blockquote-style-speech-bubble-two .markdown-preview-view blockquote {
   -webkit-border-radius:20px;
   -moz-border-radius:20px;
   border-radius:20px;
-  font-family: 'Bookerly', 'Book Antiqua', 'Times New Roman', Times, serif;
+  font-family: Bookerly, 'Book Antiqua', 'Times New Roman', Times, serif;
   font-size: 1.5em;
 }
 
@@ -11243,7 +11243,7 @@ body.blockquote-style-speech-bubble-two .markdown-preview-view blockquote:before
   content:"";
   position: absolute;
   z-index: 10;
-  bottom: -35px;
+  bottom: -37px;
   left: 50px;
   width: 50px;
   height: 30px;
@@ -11264,7 +11264,7 @@ body.blockquote-style-speech-bubble-two .markdown-preview-view blockquote:after 
   content:"";
   position:absolute;
   z-index:10;
-  bottom:-35px;
+  bottom:-37px;
   left:47px;
   width:20px;
   height:30px;
@@ -11284,7 +11284,7 @@ body.blockquote-style-speech-bubble-two .markdown-preview-view blockquote:after 
 body.blockquote-style-speech-bubble-two .markdown-preview-view blockquote > :first-child:before {
   content:"";
   position:absolute;
-  bottom:-35px;
+  bottom:-37.5px;
   left:45px;
   width:5px;
   height:5px;
