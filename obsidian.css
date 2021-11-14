@@ -813,31 +813,38 @@ settings:
   -
     id: unmuted-collapsed-folder
     title: Unmute collapsed folder
-    title.zh: 
+    title.zh: 未激活文件夹不再黯淡
     description: To normalize opacity of collapsed folder
+    description.zh: 统一激活/未激活文件夹亮度
     type: class-toggle
     default: false
   - 
     id: remove-file-icons
     title: Remove file icons
+    title.zh: 移除文件前图标
     description: To remove the icons before .md files
+    description.zh: 移除md文件前图标
     type: class-toggle
     default: true
   - 
     id: folder-style-change-options-coloful-folder
-    title: Folder-colorful
+    title: Colorful Folder
+    title.zh: 多彩文件夹
     type: heading
     level: 3
     collapsed: true
   -
     id: folder-style-change-options-coloful
     title: Make folder colorful
+    title.zh: 彩色化
     description: Folders should start with the numbers "0-9" or capital letters "A-Z"
+    description.zh: 文件夹需以数字“0-9”或英文字母“A-Z”开头
     type: class-toggle
     default: false
   - 
     id: folder-style-change-options-coloful-subfolder
-    title: Folder
+    title: Folder style
+    title.zh: 文件夹样式
     type: class-select
     allowEmpty: false
     default: folder-colorful-one
