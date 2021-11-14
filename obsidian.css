@@ -1832,8 +1832,8 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --checklist-bg: #dfdfdf8e;
   --checklist-bg-hover: #ffffffcc;
 
-  --color-view-header-gradient-1: #a1d9ffef;
-  --color-view-header-gradient-2: #e6fffbef;
+  --color-view-header-gradient-1: #ddffdcef;
+  --color-view-header-gradient-2: #e6ffeeef;
 
   /*checkbox*/
   --checkbox-color-0: #4cb385;
@@ -2119,7 +2119,7 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --checklist-bg-hover: #08080896;
 
   --color-view-header-gradient-1: #000000de;
-  --color-view-header-gradient-2: #002e6ac0;
+  --color-view-header-gradient-2: #002900c0;
 
   /*checkbox*/
   --checkbox-color-0: #25c648;
@@ -2395,7 +2395,7 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --checklist-bg-hover: #08080896;
 
   --color-view-header-gradient-1: #000000de;
-  --color-view-header-gradient-2: #002e6ac0;
+  --color-view-header-gradient-2: #000000c0;
 
   /*checkbox*/
   --checkbox-color-0: #3187d3; 
@@ -2658,8 +2658,8 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --checklist-bg: #dfdfdf8e;
   --checklist-bg-hover: #ffffffcc;
 
-  --color-view-header-gradient-1: #a1d9ffef;
-  --color-view-header-gradient-2: #e6fffbef;
+  --color-view-header-gradient-1: #ffffffef;
+  --color-view-header-gradient-2: #ffffffef;
 
   /*checkbox*/
   --checkbox-color-0: #3187d3; 
@@ -11532,9 +11532,6 @@ body.blockquote-style-border-left .markdown-preview-view blockquote {
   /*checklist*/
   --checklist-bg: #1d1d1d96;
   --checklist-bg-hover: #08080896;
-
-  --color-view-header-gradient-1: #000000de;
-  --color-view-header-gradient-2: #002e6ac0;
 
   /*checkbox*/
   --checkbox-color-1: #a9a608;
