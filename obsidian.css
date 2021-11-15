@@ -420,7 +420,7 @@ settings:
     id: background-settings-workplace-theme-light-custom
     title: Theme light (url)
     description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
-    description.zh: 自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片
+    description.zh: 自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片 url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
     type: variable-text
     default: url("https://") 
   -
@@ -458,7 +458,7 @@ settings:
     id: background-settings-workplace-theme-dark-custom
     title: Theme Dark (url)
     description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
-    description.zh: 自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片
+    description.zh: 自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片 url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
     type: variable-text
     default: url("https://")
   - 
