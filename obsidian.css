@@ -929,6 +929,68 @@ settings:
       - 
         label: Dark codebox
         value: export-pdf-style-default-dark-codebox
+  -  
+    id: style-options-for-other-plugins
+    title: For other plugins (Coming soon)
+    title.zh: 其他插件样式
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: style-options-for-calendar-plugin
+    title: Calendar (Coming soon)
+    type: class-select
+    allowEmpty: false
+    default: style-options-for-calendar-plugin-default
+    options:
+      - 
+        label: Default
+        value: style-options-for-calendar-plugin-default
+      - 
+        label: Style 1
+        value: style-options-for-calendar-plugin-style-one
+      - 
+        label: Style 2
+        value: style-options-for-calendar-plugin-style-two
+  -
+    id: style-options-for-kanban-plugin-header
+    title: Kanban (Coming soon)
+    title.zh: 其他插件样式
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: style-options-for-kanban-plugin-static
+    title: Static (Coming soon)
+    type: class-select
+    allowEmpty: false
+    default: style-options-for-kanban-plugin-static-default
+    options:
+      - 
+        label: Default
+        value: style-options-for-kanban-plugin-static-default
+      - 
+        label: Style 1
+        value: style-options-for-kanban-plugin-static-style-one
+      - 
+        label: Style 2
+        value: style-options-for-kanban-plugin-static-style-two
+  -
+    id: style-options-for-kanban-plugin-dynamic
+    title: Dynamic (Coming soon)
+    type: class-select
+    allowEmpty: false
+    default: style-options-for-kanban-plugin-dynamic-default
+    options:
+      - 
+        label: Default
+        value: style-options-for-kanban-plugin-dynamic-default
+      - 
+        label: Style 1
+        value: style-options-for-kanban-plugin-dynamic-one
+      - 
+        label: Style 2
+        value: style-options-for-kanban-plugin-dynamic-two
 */ 
 
 
