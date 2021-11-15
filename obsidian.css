@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.12.19。uid [20211114] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.12.19, uid [20211114] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.12.19。uid [20211115] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.12.19, uid [20211115] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 
 ===========================    TIPS   ===============================
@@ -929,7 +929,7 @@ settings:
       - 
         label: Dark codebox
         value: export-pdf-style-default-dark-codebox
-*/
+*/ 
 
 
 @font-face {
@@ -1670,7 +1670,7 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --background-modifier-error-hover: #FF9494;
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
   --text-accent: #4cb385;
-  --text-accent-hover: #4ba8ff;
+  --text-accent-hover: #249562;
   --text-normal: #0e0e0e;
   --text-muted: #7f7f7f;
   --text-highlight: #000000;
@@ -2852,6 +2852,288 @@ body.color-scheme-options-monochrome-topaz  .cm-strong.cm-em {
   -webkit-text-fill-color: initial;
   background-color: initial;
 } 
+
+body.color-scheme-options-pink-topaz.theme-light {
+  --background-primary: #ffffff;
+  --background-primary-alt: #e9e9e9;
+  --background-secondary: #fffaf0; 
+  --background-secondary-alt: #ffebeb; 
+  --background-accent: #fff;
+  --background-modifier-border: #e1dfdf;
+  --background-modifier-form-field: #fff;
+  --background-modifier-form-field-highlighted: #fff;
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+  --background-modifier-success: #A4E7C3;
+  --background-modifier-error: #e68787;
+  --background-modifier-error-rgb: 230, 135, 135;
+  --background-modifier-error-hover: #FF9494;
+  --background-modifier-cover: rgba(0, 0, 0, 0.8);
+  --text-accent: #f068bc;
+  --text-accent-hover: #d551a2;
+  --text-normal: #0e0e0e;
+  --text-muted: #7f7f7f;
+  --text-highlight: #000000;
+  --text-highlight-2: #000000;
+  --text-faint: #7f7f7f;
+  --text-folder-file: #272727;
+  --accent-strong: #000000;
+  --accent-em: #000000;
+  --text-error: #e75545;
+  --text-error-hover: #f86959;
+
+  --text-selection: #f7b2cf59;
+  --text-on-accent: #f2f2f2;
+  --interactive-normal: #eaeaeb;
+  --interactive-hover: #dbdbdc;
+  --interactive-accent-rgb: 122, 189, 148;
+  --interactive-accent: #f394cb;
+  --interactive-accent-hover: #d57aaf;
+  --panel-border-color: #dbdbdc;
+  --search-text: #000000;
+  --folder-title: #000000;
+
+  --mark-highlight: #ffd0e99b;  /*preview*/
+  --mark-highlight-strong-em: #ffd0e99b; 
+  --strong-em-highlight-color: #000000;
+  --text-highlight-bg: #ffd0e99b;  /*edit*/
+  --text-search-highlight-bg: #ffd1dd;
+  
+  --background-search-result: #f3f3f3;
+  --search-result-file-matched-bg: #ffc3c3;
+
+  --background-primary-bg-4-bt: #fffaf0; 
+  --background-primary-alt-bg-4-bt: #e9e9e9;
+  --background-secondary-bg-4-bt: #fffaf0; 
+  --background-secondary-alt-bg-4-bt: #ffebeb; 
+  --background-4-sliding-panel: #ffffffef;
+  --background-mobile-drawer-1: #ffffff;
+  --background-mobile-drawer-2: #ffffff;
+  --background-modifier-border-hr: #585858;
+  --background-secondary-alt-bg-4-bt-publish: #eeeeee61;
+
+  --background-transparent-black-or-white-1: #ffffffb0;
+  --background-transparent-black-or-white-2: #ffffffca;
+  --background-transparent-black-or-white-3: #eeeeee91;
+  --background-transparent-blue: #c6e5ffde;
+
+  --scrollbar-thumb: #c6c6c6a8;
+
+  --gray-1: #383a42;
+  --gray-2: #383a42;
+  --red: #f13d64;
+  --red-1: #f16464f5;
+  --green: #63c951;
+  --darkgreen: #acb5b2;
+  --blue: #107fe7;
+  --darkblue: #3b84e4;
+  --purple: #c74df7;
+  --aqua: #29bdcb;
+  --yellow: #e48100;
+  --light-yellow: #ab9a02;
+  --orange: #db9600;
+  --orange-1: #cc7523;
+  --light-purple: #b74ff3;
+  --blue-green: #3bd4da;
+  --white: #ffffff;
+  
+
+  --embed-color: #ffe1ea4f;
+  --search-result-file-title-color: #10a075;
+  --theme-color: var(--interactive-accent);
+  --theme-color-translucent: #e4bddc7a;
+  --theme-color-translucent-1: #e17cbf26;
+  --color-specification: #0084ff;
+  --allow-1: #ec9a3c;
+  --background-blockquote: #e6d6ba2c;
+  --background-code: #fae4ee4d;
+  --background-code-2: #d5d5d562;
+  --text-color-code: #e95d00;
+  --text-color-code-normal: #000000;
+
+  --internal-link-color-in-highlight: #f15ad1;
+
+  /*list*/
+  --list-ul-block-color: #c7c947;
+  --list-ul-disc-color: #f39c55;
+  --green-1: #3dc730;
+  --list-ul-hover: #dd922f;
+  --list-ol-block-color: #ce6d8a;
+  --list-ol-number-color: #e599ac;
+  --list-ol-hover: #b83175;
+ 
+  /*tags*/
+  --tag-text: #f8f8f8;
+  --stag1: #fa8787;
+  --stag1-bg: #eb2727;
+  --stag2: #fdbd5c;
+  --stag2-bg: #ee9002;
+  --stag3: #50ce3a;
+  --stag3-bg: #22ac09;
+  --tag1: #f1afaf;
+  --tag2: #e7c190;
+  --tag3: #ccce4f;
+  --tag4: #86c93a;
+  --tag5: #54cc64;
+  --tag6: #48c6bf;
+  --tag7: #4cb5d5;
+  --tag8: #797fd1;
+  --tag9: #c47cda;
+  --color-tag-edit: #df96a7;
+  --tag-dailynote: #0077ff;
+  --tag-dailynote-bg: #277CDD;
+  --tag-weeklynote: #4b9fff;
+  --tag-weeklynote-bg: #6aafff;
+  --tag-questions: #b68fff;
+  --tag-questions-bg: #b085ff;
+  --tag-ideas: #ceb900;
+  --tag-ideas-bg: #444444d8;
+
+  /*Titles*/
+  --h1-color: #6f0000;
+  --h2-color: #7a0757;
+  --h3-color: #9a1d75;
+  --h4-color: #b52a87;
+  --h5-color: #bb5795;
+  --h6-color: #cc76b7;
+
+  /*graph*/
+  --graph-text-color: #696969;
+  --graphtag: #da9ee2cc;
+  --graph-attach: #88b0d6cc;
+  --graph-circle: #6fbf8ecc;
+  --graph-line: #b1b1b1;
+  --graph-unresolved: #db4e4ecc; 
+  --link-unresolved-highlight: #df4747;
+  --graph-arrow: #e25300; 
+  --graph-control-bg: #ffffff9a;
+
+  /*mermaid*/
+  --mermaid-active-task-color: #44bbff;
+  --mermaid-seq-dia-color: #76c8ff;
+
+  /*table*/
+  --table-background-color: #ebebebbb;
+  --table-background-color-odd: #ffffffaf;
+  --table-border-color: #7d7d7d;
+  --table-thead-background-color: #b3ccb7c7;
+  --table-hover-raw-color: #85bfee2f;
+  --table-hover-color: #5dacec34;
+  --table-hover-thead-color: #ddefff;
+
+  /*calendar*/
+  --calendar-week-color: #48b432;
+  --calendar-week-hover: #e9ffe3;
+  --calendar-week-background-color: #d6e6bf;
+  --calendar-today-background-color: #aaeec6;
+
+  /*day planner*/
+  --day-planner-pie: #eca95c;
+  --day-planner-timeline: #d62f2f;
+  --day-planner-line: #ffd900;
+  --day-planner-dot: #ffd900;
+  --day-planner-item-hover: #8fccff;
+  --event-item-color1: #65ace6;
+  --event-item-color2: #52a4e7;
+  --event-item-color3: #2e96eb;
+  --event-item-color4: #2786da;
+  --event-item-color5: #1275cc;
+  --event-item-color6: #2664c0;
+  --event-item-color7: #1652ac;
+  --event-item-color8: #0c469c;
+  --event-item-color9: #0a3c86;
+  --event-item-color10:#072f6b;
+
+  /*colourful notes*/
+  --text-gray: #37352f99;
+  --text-brown: #855a46;
+  --text-orange: #d9730d;
+  --text-yellow: #d4a300;
+  --text-yellow-2: #a78000;
+  --text-green: #00927f;
+  --text-blue: #0083bb;
+  --text-purple: #5d1fb9;
+  --text-pink: #c40075;
+  --text-red: #ff4343;
+
+  --background-gray: #ebeced;
+  --background-brown: #e9e5e3;
+  --background-orange: #faebdd;
+  --background-yellow: #fbf3db;
+  --background-green: #ddedea;
+  --background-blue: #ddebf1;
+  --background-purple: #eae4f2;
+  --background-pink: #f4dfeb;
+  --background-red: #ffe3e3;
+
+  --note-important: #fd4141;
+  --note-cloze: #000000;
+	
+  /* stickies */
+  --stickies-color-1: #b3e2b3;
+  --stickies-color-2: #e9c6f1;
+  --tape-color: #acacac65;
+
+  /*Sliding panes*/
+  --header-color: #0e64bb;
+
+  /*admonition*/
+  --admonition-bg-color: #ffffffa6;
+
+  /*checklist*/
+  --checklist-bg: #dfdfdf8e;
+  --checklist-bg-hover: #ffffffcc;
+
+  --color-view-header-gradient-1: #ffdfe4ef;
+  --color-view-header-gradient-2: #ffe4e4ef;
+
+  /*checkbox*/
+  --checkbox-color-0: #4cb385;
+  --checkbox-color-1: #c4c116;
+  --checkbox-color-2: #4077bf;
+  --checkbox-color-3: #ffe9e9;
+  --checkbox-color-4: #fffbd4;
+  --checkbox-color-5: #ad7fbf;
+  --checkbox-color-6: #5f5f5f;
+  --text-checked-checkbox: #9b9b9b;
+
+  --activeline-background: #ffdd922a;
+
+  /*pseudo-kanban*/
+  --p-kanban-bg-color: #d3d3d32d;
+  --p-kanban-border-color: #a0a0a060;
+  --p-kanban-card-color-1: #ffffff8c;
+  --p-kanban-card-color-2: #ffffff8c;
+  --p-kanban-color-6: #f18e8e65;
+  --p-kanban-color-5: #eeb36f65;
+  --p-kanban-color-4: #dce28765;
+  --p-kanban-color-3: #94ec8c65;
+  --p-kanban-color-2: #84ecec65;
+  --p-kanban-color-1: #52aaf365;
+  --p-kanban-color-8: #ba8be165;
+  --p-kanban-color-7: #e677e065;
+
+  --p-kanban-checkbox-color-1: #f18e8e3d;
+  --p-kanban-checkbox-color-2: #eeb36f3d;
+  --p-kanban-checkbox-color-3: #dce2873d;
+  --p-kanban-checkbox-color-4: #94ec8c3b;
+  --p-kanban-checkbox-color-5: #84ecec42;
+  --p-kanban-checkbox-color-6: #52aaf332;
+  --p-kanban-checkbox-color-7: #ba8be134;
+
+  /*style settings*/
+  --background-secondary-translucent: #ffffff3d;
+}
+
+body.color-scheme-options-pink-topaz.theme-light *:not(font) > em > strong,
+body.color-scheme-options-pink-topaz.theme-light *:not(font) > strong > em, 
+body.color-scheme-options-pink-topaz.theme-light .cm-strong.cm-em  {
+  background-image: initial;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-color: initial;
+}
+
 
 /*===========*/
 /* page-size in edit mode*/
@@ -7948,7 +8230,8 @@ button.kanban-plugin__new-item-button:hover {
   position: relative;
   float: right;
   right: -10px;
-  width: 30%;
+  width: max(150px, 30%);
+  max-width: 50%;
   background-color: var(--stickies-color-1);
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -8006,7 +8289,8 @@ button.kanban-plugin__new-item-button:hover {
   position: relative;
   float: left;
   box-shadow: 0 10px 10px 2px #9191912d;
-  width: 30%;
+  width: max(150px, 30%);
+  max-width: 50%;
   background-color: var(--stickies-color-2);
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -11168,11 +11452,11 @@ body.blockquote-style-speech-bubble-one .markdown-preview-view blockquote {
   border: 3px solid;
   border-radius:20px;
   padding: 10px 15px;
-  background: var(--background-primary) !important;
+  background: var(--background-primary-bg-4-bt) !important;
 }
 
 body.blockquote-style-speech-bubble-one .theme-dark .markdown-preview-view blockquote {
-  background-color: var(--background-primary) !important;
+  background-color: var(--background-primary-bg-4-bt) !important;
 }
 
 body.blockquote-style-speech-bubble-one .markdown-preview-view blockquote p{
@@ -11199,7 +11483,7 @@ body.blockquote-style-speech-bubble-one .markdown-preview-view blockquote:before
   content:"";
   position: absolute;
   width: 25px;
-  border: 10px solid var(--background-primary);
+  border: 10px solid var(--background-primary-bg-4-bt);
   bottom: -15px;
   left: 20px;
   z-index: 2;
@@ -11214,7 +11498,7 @@ body.blockquote-style-speech-bubble-two .markdown-preview-view blockquote {
   margin:1em 1em 3em;
   border:7px solid var(--theme-color);
   text-align:center;
-  background:var(--background-primary);
+  background:var(--background-primary-bg-4-bt);
   -webkit-border-radius:20px;
   -moz-border-radius:20px;
   border-radius:20px;
@@ -11223,7 +11507,7 @@ body.blockquote-style-speech-bubble-two .markdown-preview-view blockquote {
 }
 
 body.blockquote-style-speech-bubble-two .theme-dark .markdown-preview-view blockquote {
-  background-color: var(--background-primary) !important;
+  background-color: var(--background-primary-bg-4-bt) !important;
   border:7px solid var(--theme-color);
 }
 
@@ -11243,7 +11527,7 @@ body.blockquote-style-speech-bubble-two .markdown-preview-view blockquote:before
   content:"";
   position: absolute;
   z-index: 10;
-  bottom: -37px;
+  bottom: -35px;
   left: 50px;
   width: 50px;
   height: 30px;
@@ -11264,7 +11548,7 @@ body.blockquote-style-speech-bubble-two .markdown-preview-view blockquote:after 
   content:"";
   position:absolute;
   z-index:10;
-  bottom:-37px;
+  bottom:-35px;
   left:47px;
   width:20px;
   height:30px;
@@ -11284,7 +11568,7 @@ body.blockquote-style-speech-bubble-two .markdown-preview-view blockquote:after 
 body.blockquote-style-speech-bubble-two .markdown-preview-view blockquote > :first-child:before {
   content:"";
   position:absolute;
-  bottom:-37.5px;
+  bottom:-35px;
   left:45px;
   width:5px;
   height:5px;
@@ -11303,7 +11587,7 @@ body.blockquote-style-speech-bubble-two .markdown-preview-view blockquote > :fir
   left:76px;
   width:24px;
   height:15px;
-  background:var(--background-primary);
+  background:var(--background-primary-bg-4-bt);
 }
 
 /*blockquote-style-outline*/
