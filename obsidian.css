@@ -8549,6 +8549,341 @@ aside > h2 {
     --light-purple: #b74ff3;
     --blue-green: #3bd4da;
   }
+
+  body.export-pdf-style-default-all-dark .markdown-preview-view {
+    background-color: var(--background-primary) !important;
+    color: var(--text-normal) !important;
+    font-family: var(--font-family-major) !important;
+  }
+  
+  body.export-pdf-style-default-all-dark .markdown-preview-view :not(font) > strong {
+    -webkit-print-color-adjust: exact;
+    color: var(--accent-strong);
+  }
+
+  body.export-pdf-style-default-all-dark .markdown-preview-view mark { 
+    color: var(--text-highlight) !important;
+  }
+
+  /* Print URL After Links */
+  /*
+  a::after{
+    content: " (" attr(href) ") ";
+  }
+  */
+
+  body.export-pdf-style-default-all-dark.theme-dark {
+  --background-primary: #222222; 
+  --background-primary-alt: #444444;
+  --background-secondary: #2c2c2c;
+  --background-secondary-alt: #000000; 
+  --background-accent: #000;
+  --background-modifier-border: #565656;
+  --background-modifier-form-field: rgba(0, 0, 0, 0.3);
+  --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.22);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+  --background-modifier-success: #539126;
+  --background-modifier-error: #9b4343;
+  --background-modifier-error-rgb: 155,67,67;
+  --background-modifier-error-hover: #470000;
+  --background-modifier-cover: rgba(0, 0, 0, 0.6);
+  --text-accent: #53aaf5;
+  --text-accent-hover: #3e8de7; 
+  --text-normal: #bdbdbd; 
+  --text-highlight: #f3f3f3;
+  --text-highlight-2: #e4e4e4;
+  --text-muted: #8a8a8a;  
+  --text-faint: #797979;
+  --text-folder-file: #b3b3b3;
+  --accent-strong: #f7f7f7;
+  --accent-em: #a4ca8e;
+  --text-error: #e16d76;
+  --text-error-hover: #c9626a;
+  --text-selection: #47a5914d;
+  --text-on-accent: #dcddde;
+  --interactive-normal: #20242b;
+  --interactive-hover: #353b47;
+  --interactive-accent: #3187d3; 
+  --interactive-accent-rgb: 45, 135, 211;     
+  --interactive-accent-hover: #3e8de7;
+  --panel-border-color: #18191e;
+  --search-text: #e0e0e0;
+  --folder-title: #ffffff;
+
+  --text-highlight-bg: #89853b8a; /*edit*/
+  --mark-highlight: #89853b8a; /*preview*/
+  --mark-highlight-strong-em: #fff7603a; 
+  --text-search-highlight-bg: #bb4361;
+
+  --background-search-result: #313131;
+  --search-result-file-matched-bg: #005fac;
+
+  --background-primary-bg-4-bt: #1e1e1e; 
+  --background-primary-alt-bg-4-bt: #444444;
+  --background-secondary-bg-4-bt: #1e1e1e;
+  --background-secondary-alt-bg-4-bt: #000000; 
+  --background-4-sliding-panel: #252525ed;
+  --background-mobile-drawer-1: #1b1b1b;
+  --background-mobile-drawer-2: #1b1b1b69;
+  --background-modifier-border-hr: #7f7f7f;
+
+  --background-transparent-black-or-white-1: #1b1b1b9a;
+  --background-transparent-black-or-white-2: #1e1e1ebd;
+  --background-transparent-black-or-white-3: #2f2f2f6c;
+  --background-transparent-blue: #003e759a;
+
+  --scrollbar-thumb: #8282827e;
+
+  --gray-1: #5C6370;
+  --gray-2: #abb2bf;
+  --red: #e06c75;
+  --red-1: #d05a63;
+  --orange: #d19a66;
+  --orange-1: #da904b;
+  --green: #b6e296;
+  --darkgreen: #399a58;
+  --aqua: #56b6c2;
+  --purple: #c678dd;
+  --blue: #9dcffc;
+  --darkblue: #4889df;
+  --yellow: #e4ba6c;
+  --light-yellow: #dfda91;
+  --white: #ffffff;
+  
+  --embed-color: #1156a534;   
+  --search-result-file-title-color: #96b7e4; 
+  --theme-color: var(--interactive-accent);
+  --theme-color-translucent: #3187d388;
+  --theme-color-translucent-1: #1982dd2c;
+  --color-specification: #3ce252;
+
+  --allow-1: #d18828;
+  --background-blockquote: #9191911c;
+  --background-code: #1111118c;
+  --background-code-2: #4c4c4cc5;
+  --text-color-code: #d58000;
+  --text-color-code-normal: #e7e7e7;
+
+  --internal-link-color-in-highlight: #74c7ff;
+
+  /*list*/
+  --list-ul-block-color: #e19742a9;
+  --list-ul-disc-color: #eb9563;
+  --green-1: #79c142;
+  --list-ul-hover: #e28915de;
+  --list-ol-block-color: #2685bbb4;
+  --list-ol-number-color: #95afc4;
+  --list-ol-hover: #2c7bd6;
+
+  /*tags*/
+  --tag-text: #e4e4e4;
+  --stag1: #f08383;
+  --stag1-bg: #bd1919;
+  --stag2: #e7b263;
+  --stag2-bg: #ac6700;
+  --stag3: #77df89;
+  --stag3-bg: #058c1c;
+  --tag1: #006ec7;
+  --tag2: #007e78;
+  --tag3: #007b06;
+  --tag4: #827900;
+  --tag5: #96390e;
+  --tag6: #9a0c0c;
+  --tag7: #9a1e93;
+  --tag8: #6e2ec1;
+  --tag9: #2244d8;
+  --color-tag-edit: #006feeb0;
+  --tag-dailynote: #98c8ff;
+  --tag-dailynote-bg: #0f60bd;
+  --tag-weeklynote: #d1e6ff;
+  --tag-weeklynote-bg: #3971b1;
+  --tag-questions: #d4bdff;
+  --tag-questions-bg: #6640ae;
+  --tag-ideas: #fcfcc0;
+  --tag-ideas-bg: #565656d8;
+
+  /*titles*/
+  --h1-color: #85bb1f;
+  --h2-color: #27b822;
+  --h3-color: #1bbbbb;
+  --h4-color: #2f7fe9;
+  --h5-color: #a192f7;
+  --h6-color: #c173ee;
+
+  /*graph*/
+  --graph-text-color: #B5B5B5; 
+  --graphtag: #88d842bb;
+  --graph-attach: #b2cfe0bb;
+  --graph-circle: #55a2d6bb;
+  --graph-line: #8c8c8c;
+  --graph-unresolved: #f08080de;
+  --link-unresolved-highlight: #ffa6a6;
+  --graph-arrow: #c23917;
+  --graph-control-bg: #00000080;
+
+  /*mermaid*/
+  --mermaid-active-task-color: #187ef1;
+  --mermaid-seq-dia-color: #1371be;
+
+  /*table*/
+  --table-background-color: #8a8a8a32;
+  --table-background-color-odd: #0000001c;
+  --table-border-color: #878787;
+  --table-thead-background-color: #4e93e263;
+  --table-hover-raw-color: #08569a21;
+  --table-hover-color: #1f65a221;
+  --table-hover-thead-color: #298c54c7;
+
+  /*calendar*/
+  --calendar-week-color: #a2df94;
+  --calendar-week-hover: #61815c;
+  --calendar-week-background-color: #4a5842;
+  --calendar-today-background-color: #8c4545;
+
+  /*day planner*/
+  --day-planner-pie: #f19c1c;
+  --day-planner-timeline: #000000;
+  --day-planner-line: #dfcf77;
+  --day-planner-dot: #dfcf77;
+  --day-planner-item-hover: #053c85;
+  --event-item-color1: #283493bb;
+  --event-item-color2: #1565c0bb;
+  --event-item-color3: #00838fbb;
+  --event-item-color4: #2e7d32bb;
+  --event-item-color5: #9e9d24bb;
+  --event-item-color6: #ff8f00bb;
+  --event-item-color7: #d84315bb;
+  --event-item-color8: #c62828bb;
+  --event-item-color9: #ad1457bb;
+  --event-item-color10:#6a1b9abb;
+
+  /*kanban*/
+  --kanban-color-1: #0065d852;
+  --kanban-color-2: #30e4e441;
+  --kanban-color-3: #1cb54f44;
+  --kanban-color-4: #97b82b49;
+  --kanban-color-5: #bb722d41;
+  --kanban-color-6: #d12e2e42;
+  --kanban-color-7: #8f36cb3f;
+
+  /*colourful notes*/
+  --text-gray: #acacac;
+  --text-brown: #be9684;
+  --text-orange: #ffa344;
+  --text-yellow: #ffdc51;
+  --text-yellow-2: #cca217;
+  --text-green: #52c7b2;
+  --text-blue: #8ca1ff;
+  --text-purple: #b386f1;
+  --text-pink: #ff6bba;
+  --text-red: #ff4f4f;
+
+  --background-gray: #535353;
+  --background-brown: #493a3a;
+  --background-orange: #53422f;
+  --background-yellow: #585536;
+  --background-green: #32503e;
+  --background-blue: #2f5264;
+  --background-purple: #443f57;
+  --background-pink: #533b4a;
+  --background-red: #683c3c;
+
+  --note-important: #d64545;
+  --note-cloze: #ffffff;
+	
+  /* stickies */
+  --stickies-color-1: #84c584;
+  --stickies-color-2: #c7a3cf;
+  --tape-color: #99999967;
+
+  /*Sliding panes*/
+  --header-color: #f1a634d0;
+
+  /*admonition*/
+  --admonition-bg-color: #1111118f;
+  
+  /*checklist*/
+  --checklist-bg: #1d1d1d96;
+  --checklist-bg-hover: #08080896;
+
+  /*checkbox*/
+  --checkbox-color-1: #a9a608;
+  --checkbox-color-2: #1dac10;
+  --checkbox-color-3: #ffd1d1;
+  --checkbox-color-4: #625d4c;
+  --checkbox-color-5: #9a67ae;
+  --checkbox-color-6: #5f5f5f;
+  --text-checked-checkbox: #8e8e8e;
+
+  --activeline-background: #468eeb1f;
+
+  /*pseudo-kanban*/
+  --p-kanban-bg-color: #6c6c6c42;
+  --p-kanban-border-color: transparent;
+  --p-kanban-card-color-1: #0000002d;
+  --p-kanban-card-color-2: #0000002d;
+  --p-kanban-color-6: #f3424252;
+  --p-kanban-color-5: #eb973752;
+  --p-kanban-color-4: #d2dd3852;
+  --p-kanban-color-3: #38ce2a52;
+  --p-kanban-color-2: #2ec4c452;
+  --p-kanban-color-1: #3496e652;
+  --p-kanban-color-8: #b962ff52;
+  --p-kanban-color-7: #e45bdd52;
+
+  /*style settings*/
+  --background-secondary-translucent: #2c2c2c26;
+  }
+
+  body.export-pdf-style-default-dark-codebox .markdown-preview-view {
+    color: var(--text-normal) !important;
+    font-family: var(--font-family-major) !important;
+  }
+  
+  body.export-pdf-style-default-dark-codebox .markdown-preview-view :not(font) > strong {
+    -webkit-print-color-adjust: exact;
+    color: var(--accent-strong);
+  }
+
+  body.export-pdf-style-default-dark-codebox .markdown-preview-view mark { 
+    color: var(--text-highlight) !important;
+  }
+
+  /* Print URL After Links */
+  /*
+  a::after{
+    content: " (" attr(href) ") ";
+  }
+  */
+
+  body.export-pdf-style-default-dark-codebox.theme-dark {
+    --background-primary: #222222; 
+    --background-primary-alt: #444444;
+    --background-secondary: #333333;
+    --background-secondary-alt: #000000; 
+    --background-code: #2c2c2c;
+    --text-color-code: #d58000;
+    --text-color-code-normal: #e7e7e7;
+    --background-primary-bg-4-bt: #222222; 
+    --background-primary-alt-bg-4-bt: #444444;
+    --background-secondary-bg-4-bt: #333333;
+    --background-secondary-alt-bg-4-bt: #000000; 
+    --background-4-sliding-panel: #252525ed;
+
+    --gray-1: #5C6370;
+    --gray-2: #abb2bf;
+    --red: #e06c75;
+    --red-1: #d05a63;
+    --orange: #d19a66;
+    --green: #b6e296;
+    --darkgreen: #399a58;
+    --aqua: #56b6c2;
+    --purple: #c678dd;
+    --blue: #9dcffc;
+    --darkblue: #4889df;
+    --yellow: #e4ba6c;
+    --light-yellow: #dfda91;
+  }
 }
 
 /* ================================== */
@@ -11441,6 +11776,10 @@ body.blockquote-style-quotation-mark .markdown-preview-view blockquote p:first-o
   left: -0.6em;
 }
 
+body.blockquote-style-quotation-mark .markdown-preview-view li > blockquote p:first-of-type::before {
+  top: 5px;
+}
+
 /*speech bubble-1*/
 body.blockquote-style-speech-bubble-one .markdown-preview-view blockquote {
   position: relative; /* for pseudos */
@@ -11608,348 +11947,6 @@ body.blockquote-style-border-left .markdown-preview-view blockquote {
   border-radius: 0;
   margin-inline-start: 1.2em;
   margin-inline-end: 1.2em;
-}
-
-
-/*all dark*/
-@media print {
-  body.export-pdf-style-default-all-dark .markdown-preview-view {
-    background-color: var(--background-primary) !important;
-    color: var(--text-normal) !important;
-    font-family: var(--font-family-major) !important;
-  }
-  
-  body.export-pdf-style-default-all-dark .markdown-preview-view :not(font) > strong {
-    -webkit-print-color-adjust: exact;
-    color: var(--accent-strong);
-  }
-
-  body.export-pdf-style-default-all-dark .markdown-preview-view mark { 
-    color: var(--text-highlight) !important;
-  }
-
-  /* Print URL After Links */
-  /*
-  a::after{
-    content: " (" attr(href) ") ";
-  }
-  */
-
-  body.export-pdf-style-default-all-dark.theme-dark {
-  --background-primary: #222222; 
-  --background-primary-alt: #444444;
-  --background-secondary: #2c2c2c;
-  --background-secondary-alt: #000000; 
-  --background-accent: #000;
-  --background-modifier-border: #565656;
-  --background-modifier-form-field: rgba(0, 0, 0, 0.3);
-  --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.22);
-  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
-  --background-modifier-success: #539126;
-  --background-modifier-error: #9b4343;
-  --background-modifier-error-rgb: 155,67,67;
-  --background-modifier-error-hover: #470000;
-  --background-modifier-cover: rgba(0, 0, 0, 0.6);
-  --text-accent: #53aaf5;
-  --text-accent-hover: #3e8de7; 
-  --text-normal: #bdbdbd; 
-  --text-highlight: #f3f3f3;
-  --text-highlight-2: #e4e4e4;
-  --text-muted: #8a8a8a;  
-  --text-faint: #797979;
-  --text-folder-file: #b3b3b3;
-  --accent-strong: #f7f7f7;
-  --accent-em: #a4ca8e;
-  --text-error: #e16d76;
-  --text-error-hover: #c9626a;
-  --text-selection: #47a5914d;
-  --text-on-accent: #dcddde;
-  --interactive-normal: #20242b;
-  --interactive-hover: #353b47;
-  --interactive-accent: #3187d3; 
-  --interactive-accent-rgb: 45, 135, 211;     
-  --interactive-accent-hover: #3e8de7;
-  --panel-border-color: #18191e;
-  --search-text: #e0e0e0;
-  --folder-title: #ffffff;
-
-  --text-highlight-bg: #89853b8a; /*edit*/
-  --mark-highlight: #89853b8a; /*preview*/
-  --mark-highlight-strong-em: #fff7603a; 
-  --text-search-highlight-bg: #bb4361;
-
-  --background-search-result: #313131;
-  --search-result-file-matched-bg: #005fac;
-
-  --background-primary-bg-4-bt: #1e1e1e; 
-  --background-primary-alt-bg-4-bt: #444444;
-  --background-secondary-bg-4-bt: #1e1e1e;
-  --background-secondary-alt-bg-4-bt: #000000; 
-  --background-4-sliding-panel: #252525ed;
-  --background-mobile-drawer-1: #1b1b1b;
-  --background-mobile-drawer-2: #1b1b1b69;
-  --background-modifier-border-hr: #7f7f7f;
-
-  --background-transparent-black-or-white-1: #1b1b1b9a;
-  --background-transparent-black-or-white-2: #1e1e1ebd;
-  --background-transparent-black-or-white-3: #2f2f2f6c;
-  --background-transparent-blue: #003e759a;
-
-  --scrollbar-thumb: #8282827e;
-
-  --gray-1: #5C6370;
-  --gray-2: #abb2bf;
-  --red: #e06c75;
-  --red-1: #d05a63;
-  --orange: #d19a66;
-  --orange-1: #da904b;
-  --green: #b6e296;
-  --darkgreen: #399a58;
-  --aqua: #56b6c2;
-  --purple: #c678dd;
-  --blue: #9dcffc;
-  --darkblue: #4889df;
-  --yellow: #e4ba6c;
-  --light-yellow: #dfda91;
-  --white: #ffffff;
-  
-  --embed-color: #1156a534;   
-  --search-result-file-title-color: #96b7e4; 
-  --theme-color: var(--interactive-accent);
-  --theme-color-translucent: #3187d388;
-  --theme-color-translucent-1: #1982dd2c;
-  --color-specification: #3ce252;
-
-  --allow-1: #d18828;
-  --background-blockquote: #9191911c;
-  --background-code: #1111118c;
-  --background-code-2: #4c4c4cc5;
-  --text-color-code: #d58000;
-  --text-color-code-normal: #e7e7e7;
-
-  --internal-link-color-in-highlight: #74c7ff;
-
-  /*list*/
-  --list-ul-block-color: #e19742a9;
-  --list-ul-disc-color: #eb9563;
-  --green-1: #79c142;
-  --list-ul-hover: #e28915de;
-  --list-ol-block-color: #2685bbb4;
-  --list-ol-number-color: #95afc4;
-  --list-ol-hover: #2c7bd6;
-
-  /*tags*/
-  --tag-text: #e4e4e4;
-  --stag1: #f08383;
-  --stag1-bg: #bd1919;
-  --stag2: #e7b263;
-  --stag2-bg: #ac6700;
-  --stag3: #77df89;
-  --stag3-bg: #058c1c;
-  --tag1: #006ec7;
-  --tag2: #007e78;
-  --tag3: #007b06;
-  --tag4: #827900;
-  --tag5: #96390e;
-  --tag6: #9a0c0c;
-  --tag7: #9a1e93;
-  --tag8: #6e2ec1;
-  --tag9: #2244d8;
-  --color-tag-edit: #006feeb0;
-  --tag-dailynote: #98c8ff;
-  --tag-dailynote-bg: #0f60bd;
-  --tag-weeklynote: #d1e6ff;
-  --tag-weeklynote-bg: #3971b1;
-  --tag-questions: #d4bdff;
-  --tag-questions-bg: #6640ae;
-  --tag-ideas: #fcfcc0;
-  --tag-ideas-bg: #565656d8;
-
-  /*titles*/
-  --h1-color: #85bb1f;
-  --h2-color: #27b822;
-  --h3-color: #1bbbbb;
-  --h4-color: #2f7fe9;
-  --h5-color: #a192f7;
-  --h6-color: #c173ee;
-
-  /*graph*/
-  --graph-text-color: #B5B5B5; 
-  --graphtag: #88d842bb;
-  --graph-attach: #b2cfe0bb;
-  --graph-circle: #55a2d6bb;
-  --graph-line: #8c8c8c;
-  --graph-unresolved: #f08080de;
-  --link-unresolved-highlight: #ffa6a6;
-  --graph-arrow: #c23917;
-  --graph-control-bg: #00000080;
-
-  /*mermaid*/
-  --mermaid-active-task-color: #187ef1;
-  --mermaid-seq-dia-color: #1371be;
-
-  /*table*/
-  --table-background-color: #8a8a8a32;
-  --table-background-color-odd: #0000001c;
-  --table-border-color: #878787;
-  --table-thead-background-color: #4e93e263;
-  --table-hover-raw-color: #08569a21;
-  --table-hover-color: #1f65a221;
-  --table-hover-thead-color: #298c54c7;
-
-  /*calendar*/
-  --calendar-week-color: #a2df94;
-  --calendar-week-hover: #61815c;
-  --calendar-week-background-color: #4a5842;
-  --calendar-today-background-color: #8c4545;
-
-  /*day planner*/
-  --day-planner-pie: #f19c1c;
-  --day-planner-timeline: #000000;
-  --day-planner-line: #dfcf77;
-  --day-planner-dot: #dfcf77;
-  --day-planner-item-hover: #053c85;
-  --event-item-color1: #283493bb;
-  --event-item-color2: #1565c0bb;
-  --event-item-color3: #00838fbb;
-  --event-item-color4: #2e7d32bb;
-  --event-item-color5: #9e9d24bb;
-  --event-item-color6: #ff8f00bb;
-  --event-item-color7: #d84315bb;
-  --event-item-color8: #c62828bb;
-  --event-item-color9: #ad1457bb;
-  --event-item-color10:#6a1b9abb;
-
-  /*kanban*/
-  --kanban-color-1: #0065d852;
-  --kanban-color-2: #30e4e441;
-  --kanban-color-3: #1cb54f44;
-  --kanban-color-4: #97b82b49;
-  --kanban-color-5: #bb722d41;
-  --kanban-color-6: #d12e2e42;
-  --kanban-color-7: #8f36cb3f;
-
-  /*colourful notes*/
-  --text-gray: #acacac;
-  --text-brown: #be9684;
-  --text-orange: #ffa344;
-  --text-yellow: #ffdc51;
-  --text-yellow-2: #cca217;
-  --text-green: #52c7b2;
-  --text-blue: #8ca1ff;
-  --text-purple: #b386f1;
-  --text-pink: #ff6bba;
-  --text-red: #ff4f4f;
-
-  --background-gray: #535353;
-  --background-brown: #493a3a;
-  --background-orange: #53422f;
-  --background-yellow: #585536;
-  --background-green: #32503e;
-  --background-blue: #2f5264;
-  --background-purple: #443f57;
-  --background-pink: #533b4a;
-  --background-red: #683c3c;
-
-  --note-important: #d64545;
-  --note-cloze: #ffffff;
-	
-  /* stickies */
-  --stickies-color-1: #84c584;
-  --stickies-color-2: #c7a3cf;
-  --tape-color: #99999967;
-
-  /*Sliding panes*/
-  --header-color: #f1a634d0;
-
-  /*admonition*/
-  --admonition-bg-color: #1111118f;
-  
-  /*checklist*/
-  --checklist-bg: #1d1d1d96;
-  --checklist-bg-hover: #08080896;
-
-  /*checkbox*/
-  --checkbox-color-1: #a9a608;
-  --checkbox-color-2: #1dac10;
-  --checkbox-color-3: #ffd1d1;
-  --checkbox-color-4: #625d4c;
-  --checkbox-color-5: #9a67ae;
-  --checkbox-color-6: #5f5f5f;
-  --text-checked-checkbox: #8e8e8e;
-
-  --activeline-background: #468eeb1f;
-
-  /*pseudo-kanban*/
-  --p-kanban-bg-color: #6c6c6c42;
-  --p-kanban-border-color: transparent;
-  --p-kanban-card-color-1: #0000002d;
-  --p-kanban-card-color-2: #0000002d;
-  --p-kanban-color-6: #f3424252;
-  --p-kanban-color-5: #eb973752;
-  --p-kanban-color-4: #d2dd3852;
-  --p-kanban-color-3: #38ce2a52;
-  --p-kanban-color-2: #2ec4c452;
-  --p-kanban-color-1: #3496e652;
-  --p-kanban-color-8: #b962ff52;
-  --p-kanban-color-7: #e45bdd52;
-
-  /*style settings*/
-  --background-secondary-translucent: #2c2c2c26;
-  }
-}
-
-/*dark codebox*/
-@media print {
-  body.export-pdf-style-default-dark-codebox .markdown-preview-view {
-    color: var(--text-normal) !important;
-    font-family: var(--font-family-major) !important;
-  }
-  
-  body.export-pdf-style-default-dark-codebox .markdown-preview-view :not(font) > strong {
-    -webkit-print-color-adjust: exact;
-    color: var(--accent-strong);
-  }
-
-  body.export-pdf-style-default-dark-codebox .markdown-preview-view mark { 
-    color: var(--text-highlight) !important;
-  }
-
-  /* Print URL After Links */
-  /*
-  a::after{
-    content: " (" attr(href) ") ";
-  }
-  */
-
-  body.export-pdf-style-default-dark-codebox.theme-dark {
-    --background-primary: #222222; 
-    --background-primary-alt: #444444;
-    --background-secondary: #333333;
-    --background-secondary-alt: #000000; 
-    --background-code: #2c2c2c;
-    --text-color-code: #d58000;
-    --text-color-code-normal: #e7e7e7;
-    --background-primary-bg-4-bt: #222222; 
-    --background-primary-alt-bg-4-bt: #444444;
-    --background-secondary-bg-4-bt: #333333;
-    --background-secondary-alt-bg-4-bt: #000000; 
-    --background-4-sliding-panel: #252525ed;
-
-    --gray-1: #5C6370;
-    --gray-2: #abb2bf;
-    --red: #e06c75;
-    --red-1: #d05a63;
-    --orange: #d19a66;
-    --green: #b6e296;
-    --darkgreen: #399a58;
-    --aqua: #56b6c2;
-    --purple: #c678dd;
-    --blue: #9dcffc;
-    --darkblue: #4889df;
-    --yellow: #e4ba6c;
-    --light-yellow: #dfda91;
-  }
 }
 
 /*==========*/
@@ -12142,4 +12139,3 @@ body.background-settings-body-style-blur .workspace-split.mod-right-split > .wor
 body.background-settings-body-style-blur .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:hover {
   height: 100%;
 }
-
