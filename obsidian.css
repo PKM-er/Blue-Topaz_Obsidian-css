@@ -1,6 +1,9 @@
 /*蓝色托帕石，适合Obsidian v0.12.19。uid [20211115] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
 /*Blue Topaz for Obsidian v0.12.19, uid [20211115] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
+/* 致谢 Credits：
+@LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond */
+
 /* 
 ===========================    TIPS   ===============================
 ====================================================================
@@ -287,20 +290,20 @@ settings:
     collapsed: true
   - 
     id: background-settings-markdown-page
-    title: Note page
+    title: Note Page
     title.zh: 笔记背景
     type: heading
     level: 2
     collapsed: true
   - 
     id: background-image-settings-switch
-    title: Switch off background images
+    title: Switch off Background Images
     title.zh: 移除笔记背景
     type: class-toggle
     default: false
   - 
     id: background-image-settings-markdown-page-options
-    title: Choose images 
+    title: Choose Images 
     title.zh: 选择背景
     type: class-select
     allowEmpty: false
@@ -323,10 +326,10 @@ settings:
         value: background-image-settings-markdown-page-white-and-black
       - 
         label: Kawaii
-        value: background-image-settings-markdown-page-kawaii
+        value: background-image-settings-markdown-page-kawaii 
   -
     id: background-image-settings-markdown-page-random
-    title: Random background images
+    title: Random Background Images
     title.zh: 随机背景
     description: Images will be refreshed when Obsidian launches; network is needed
     description.zh: 图片在Obsidian打开时刷新；需要联网 
@@ -362,88 +365,102 @@ settings:
         label: Yellow and Orange
         value: background-image-settings-markdown-page-random-yellow-and-orange
   -
-    id: background-settings-body
+    id: background-settings-workplace
     title: Workplace
     title.zh: 工作页面背景
     type: heading
     level: 2
     collapsed: true
   - 
-    id: background-settings-body-style
+    id: background-settings-workplace-style
     title: Background image style
     title.zh: 背景样式
     type: class-select
     allowEmpty: false
-    default: background-settings-body-style-none
+    default: background-settings-workplace-style-none
     options:
       - 
         label: None
-        value: background-settings-body-style-none
+        value: background-settings-workplace-style-none
       - 
-        label: High transparency (Coming soon)
-        value: background-settings-body-style-high-transparency
+        label: High Transparency (Coming soon)
+        value: background-settings-workplace-style-high-transparency
       - 
-        label: Low transparency (Coming soon)
-        value: background-settings-body-style-low-transparency
+        label: Low Transparency (Coming soon)
+        value: background-settings-workplace-style-low-transparency
       - 
         label: Blur
-        value: background-settings-body-style-blur
+        value: background-settings-workplace-style-blur
   - 
-    id: background-settings-body-theme-light
+    id: background-settings-workplace-theme-light
     title: Theme light
     type: class-select
     allowEmpty: false
-    default: background-settings-body-theme-light-none
+    default: background-settings-workplace-theme-light-none
     options:
       - 
         label: None
-        value: background-settings-body-theme-light-none
+        value: background-settings-workplace-theme-light-none
       - 
         label: Blue Mountain
-        value: background-settings-body-theme-light-blue-mountain
+        value: background-settings-workplace-theme-light-blue-mountain
       - 
         label: In the sky
-        value: background-settings-body-theme-light-in-the-sky
+        value: background-settings-workplace-theme-light-in-the-sky
       - 
         label: Orange
-        value: background-settings-body-theme-light-orange
+        value: background-settings-workplace-theme-light-orange
       - 
         label: Macaw
-        value: background-settings-body-theme-light-macaw
+        value: background-settings-workplace-theme-light-macaw
       - 
         label: Leaf
-        value: background-settings-body-theme-light-leaf
-  - 
-    id: background-settings-body-theme-dark-none
+        value: background-settings-workplace-theme-light-leaf
+  -
+    id: background-settings-workplace-theme-light-custom
+    title: Theme light (url)
+    description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
+    description.zh: 自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片
+    type: variable-text
+    default: url("https://") 
+  -
+    id: background-settings-workplace-theme-dark-none
     title: Theme dark
     type: class-select
     allowEmpty: false
-    default: background-settings-body-theme-dark-none
+    default: background-settings-workplace-theme-dark-none
     options:
       - 
         label: None
-        value: background-settings-body-theme-dark-none
+        value: background-settings-workplace-theme-dark-none
       - 
         label: Night sky 
-        value: background-settings-body-theme-dark-night-sky
+        value: background-settings-workplace-theme-dark-night-sky
       - 
         label: Dark sky 
-        value: background-settings-body-theme-dark-dark-sky
+        value: background-settings-workplace-theme-dark-dark-sky
       - 
         label: In the sky
-        value: background-settings-body-theme-dark-in-the-sky
+        value: background-settings-workplace-theme-dark-in-the-sky
       - 
         label: Blue wave 
-        value: background-settings-body-theme-dark-blue-wave
+        value: background-settings-workplace-theme-dark-blue-wave
       - 
         label: Jellyfish 1     
-        value: background-settings-body-theme-dark-jellyfish-1
+        value: background-settings-workplace-theme-dark-jellyfish-1
       - 
         label: Jellyfish 2   
-        value: background-settings-body-theme-dark-jellyfish-2
+        value: background-settings-workplace-theme-dark-jellyfish-2
       - 
         label: Hyacinth macaw
-        value: background-settings-body-theme-dark-hyacinth-macaw
+        value: background-settings-workplace-theme-dark-hyacinth-macaw
+  -
+    id: background-settings-workplace-theme-dark-custom
+    title: Theme Dark (url)
+    description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
+    description.zh: 自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片
+    type: variable-text
+    default: url("https://")
   - 
     id: color-settings
     title: Color
@@ -693,10 +710,17 @@ settings:
     level: 1
     collapsed: true
   -
+    id: font-family-change-to-default
+    title: Use Obsidian Default Font-family
+    title.zh: 使用Obsidian默认字体
+    type: class-toggle
+    default: false
+  -
     id: font-family-major
-    title: Main font
+    title: Main Font
     title.zh: 主体字体
     description: Fonts except from the code texts
+    description.zh: 除代码框外字体
     type: variable-text
     default: "Bookerly, Merriweather, 'LXGW WenKai', 'Segoe UI Emoji', var(--default-font)"
   - 
@@ -731,7 +755,7 @@ settings:
     default: "Bookerly, Merriweather, 'LXGW WenKai', var(--default-font)"
   - 
     id: font-family-folder-file-title
-    title: Folder & file title
+    title: Folder & File Title
     title.zh: 文件栏字体
     type: variable-text
     default: "Arlrdbd, 'Source Han Sans', 'Noto Sans CJK', 'Source Sans Pro', 'Segoe UI Emoji', sans-serif"
@@ -743,7 +767,7 @@ settings:
     default: "Consolas, Monaco, 'Source Han Mono', 'Microsoft Yahei Mono', 'Segoe UI Emoji', 'Microsoft YaHei', 'Source Code Pro',  monospace"
   -
     id: font-family-inline-code
-    title: Inline code
+    title: Inline Code
     title.zh: 行内代码字体
     type: variable-text
     default: var(--font-family-preview-edit-code)
@@ -755,13 +779,13 @@ settings:
     default: "Bookerly, 'Microsoft YaHei', STzhongsong, STSong, 'Segoe UI Emoji', Serif"
   - 
     id: font-family-strong
-    title: Bold text
+    title: Bold Text
     title.zh: 加粗文字字体
     type: variable-text
     default: "Bookerly, 'LXGW WenKai Screen R', 'LXGW WenKai UI', 'Segoe UI Emoji', var(--default-font)"
   - 
     id: font-family-vault
-    title: Vault name
+    title: Vault Name
     title.zh: 库名字体
     type: variable-text
     default: "'Lucida Handwriting', 'Segoe UI Emoji'"
@@ -814,13 +838,13 @@ settings:
     collapsed: true
   -
     id: light-background-color-files
-    title: Light file background
+    title: Light File Background
     title.zh: 当前文件背景变浅
     type: class-toggle
     default: false
   -
     id: unmuted-collapsed-folder
-    title: Unmute collapsed folder
+    title: Unmute Collapsed Folder
     title.zh: 未激活文件夹不再黯淡
     description: To normalize opacity of collapsed folder
     description.zh: 统一激活/未激活文件夹亮度
@@ -828,7 +852,7 @@ settings:
     default: false
   - 
     id: remove-file-icons
-    title: Remove file icons
+    title: Remove File Icons
     title.zh: 移除文件前图标
     description: To remove the icons before .md files
     description.zh: 移除md文件前图标
@@ -843,7 +867,7 @@ settings:
     collapsed: true
   -
     id: folder-style-change-options-coloful
-    title: Make folder colorful
+    title: Make Folder Colorful
     title.zh: 彩色化
     description: Folders should start with the numbers "0-9" or capital letters "A-Z"
     description.zh: 文件夹需以数字“0-9”或英文字母“A-Z”开头
@@ -851,17 +875,17 @@ settings:
     default: false
   - 
     id: folder-style-change-options-coloful-subfolder
-    title: Folder style
+    title: Folder Style
     title.zh: 文件夹样式
     type: class-select
     allowEmpty: false
     default: folder-colorful-one
     options:
       -
-        label: Style 1 high transparency
+        label: Style 1 (high transparency)
         value: folder-colorful-one
       - 
-        label: Style 2 low transparency
+        label: Style 2 (low transparency)
         value: folder-colorful-two
       - 
         label: Style 3
@@ -894,10 +918,10 @@ settings:
         label: With quotation mark
         value: blockquote-style-quotation-mark
       - 
-        label: Speech bubble 1
+        label: Speech Bubble 1
         value: blockquote-style-speech-bubble-one
       - 
-        label: Speech bubble 2
+        label: Speech Bubble 2
         value: blockquote-style-speech-bubble-two
       - 
         label: Outline
@@ -907,14 +931,14 @@ settings:
         value: blockquote-style-border-left
   - 
     id: export-pdf-style-folder
-    title: Exported PDF in dark mode
+    title: Exported PDF in Dark Mode
     title.zh: 黑暗模式下导出PDF样式
     type: heading
     level: 2
     collapsed: true
   -
     id: export-pdf-style-options
-    title: PDF color scheme
+    title: PDF Color Scheme
     title.zh: PDF配色
     type: class-select
     allowEmpty: false
@@ -924,14 +948,14 @@ settings:
         label: Default
         value: export-pdf-style-default
       - 
-        label: All dark
+        label: All Dark
         value: export-pdf-style-default-all-dark
       - 
-        label: Dark codebox
+        label: Dark Codebox
         value: export-pdf-style-default-dark-codebox
   -  
     id: style-options-for-other-plugins
-    title: For other plugins (Coming soon)
+    title: For Other Plugins (Coming soon)
     title.zh: 其他插件样式
     type: heading
     level: 2
@@ -1141,11 +1165,10 @@ settings:
   --font-family-vault:                                "Lucida Handwriting", "Segoe UI Emoji"; /*左侧库名字体*/
   --font-family-special-tag:                          "Lucida Handwriting", "Segoe UI Emoji";
   --font-family-YAML:                                 "Lucida Handwriting";
-  --font-monospace:                    Consolas, Monaco, "Microsoft Yahei Mono", monospace;
+  /*--font-monospace:                    Consolas, Monaco, "Microsoft Yahei Mono", monospace;*/
   --mermaid-font-family:       Segoe UI, "Microsoft YaHei", "Segoe UI Emoji", "trebuchet ms", verdana, Arial, cursive;
   --font-family-better-footnote:                Arlrdbd, "Source Han Sans", "Segoe UI Emoji";
   --font-family-strong:    Bookerly, "LXGW WenKai Screen R", "LXGW WenKai UI", "Segoe UI Emoji", var(--default-font);
-
 
   /*radius*/
   --radius-xs: 0.1875em; /*3px*/
@@ -1153,7 +1176,48 @@ settings:
   --radius-s-border: 5px;
   --radius-m:  0.4375em; /*7px*/
   --radius-l:  0.625em;  /*10px*/
+
+  --background-settings-workplace-theme-light-custom: url("https://");
+  --background-settings-workplace-theme-dark-custom: url("https://");
 } 
+
+body.background-settings-workplace-style-blur.theme-light {
+  --theme-background: var(--background-settings-workplace-theme-light-custom);
+}
+
+body.background-settings-workplace-style-blur.theme-dark {
+  --theme-background: var(--background-settings-workplace-theme-dark-custom);
+} 
+
+body.font-family-change-to-default li,
+body.font-family-change-to-default .markdown-preview-view.is-readable-line-width .markdown-preview-section,
+body.font-family-change-to-default .markdown-source-view.is-readable-line-width .CodeMirror,
+body.font-family-change-to-default .markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
+body.font-family-change-to-default .markdown-preview-view .markdown-preview-section,
+body.font-family-change-to-default .markdown-source-view .CodeMirror,
+body.font-family-change-to-default .markdown-preview-view .markdown-preview-sizer,
+body.font-family-change-to-default .is-mobile .markdown-source-view.mod-cm6 .cm-scroller,
+body.font-family-change-to-default .markdown-preview-view h5,
+body.font-family-change-to-default .markdown-preview-view h6,
+body.font-family-change-to-default .nav-file-title,
+body.font-family-change-to-default .nav-folder-title,
+body.font-family-change-to-default a.tag,
+body.font-family-change-to-default .cm-s-obsidian span.cm-hashtag,
+body.font-family-change-to-default .nav-folder.mod-root > .nav-folder-title,
+body.font-family-change-to-default pre.frontmatter.language-yaml::before,
+body.font-family-change-to-default span.cm-strong, 
+body.font-family-change-to-default :not(font) > strong,
+body.font-family-change-to-default a,
+body.font-family-change-to-default .markdown-preview-view .internal-link 
+body.font-family-change-to-default .markdown-preview-view th,
+body.font-family-change-to-default.theme-light *:not(font) > em > strong,
+body.font-family-change-to-default.theme-light *:not(font) > strong > em,  
+body.font-family-change-to-default.theme-light .cm-strong.cm-em,
+body.font-family-change-to-default.theme-dark *:not(font) > em > strong,
+body.font-family-change-to-default.theme-dark *:not(font) > strong > em, 
+body.font-family-change-to-default.theme-dark .cm-strong.cm-em {
+  font-family: inherit !important;
+}
 
 .theme-dark {
   --background-primary: #222222; 
@@ -1391,7 +1455,7 @@ settings:
   --tape-color: #99999967;
 
   /*Sliding panes*/
-  --header-color: #f1a634d0;
+  --sliding-panes-header-color: #f1a634d0;
 
   /*admonition*/
   --admonition-bg-color: #1111118f;
@@ -1665,7 +1729,7 @@ settings:
   --tape-color: #acacac65;
 
   /*Sliding panes*/
-  --header-color: #0e64bb;
+  --sliding-panes-header-color: #0e64bb;
 
   /*admonition*/
   --admonition-bg-color: #ffffffa6;
@@ -1937,7 +2001,7 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --tape-color: #acacac65;
 
   /*Sliding panes*/
-  --header-color: #0e64bb;
+  --sliding-panes-header-color: #02401f;
 
   /*admonition*/
   --admonition-bg-color: #ffffffa6;
@@ -2077,7 +2141,7 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --white: #ffffff;
 
   --embed-color: #4047424f;
-  --search-result-file-title-color: #96b7e4; 
+  --search-result-file-title-color: #5ac668; 
   --theme-color: var(--interactive-accent);
   --theme-color-translucent: #637b717a;
   --theme-color-translucent-1: #53695f7a;
@@ -2223,7 +2287,7 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --tape-color: #99999967;
 
   /*Sliding panes*/
-  --header-color: #f1a634d0;
+  --sliding-panes-header-color: #27b822;
 
   /*admonition*/
   --admonition-bg-color: #1111118f;
@@ -2352,7 +2416,7 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --white: #ffffff;
   
   --embed-color: #45454534;   
-  --search-result-file-title-color: #96b7e4; 
+  --search-result-file-title-color: #b3b3b3; 
   --theme-color: var(--interactive-accent);
   --theme-color-translucent: #76767688;
   --theme-color-translucent-1: #8585852c;
@@ -2499,7 +2563,7 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --tape-color: #99999967;
 
   /*Sliding panes*/
-  --header-color: #f1a634d0;
+  --sliding-panes-header-color: #ebebeb;
 
   /*admonition*/
   --admonition-bg-color: #1111118f;
@@ -2626,7 +2690,7 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   
 
   --embed-color: #e7e7e74f;
-  --search-result-file-title-color: #10a075;
+  --search-result-file-title-color: #a7a7a7;
   --theme-color: var(--interactive-accent);
   --theme-color-translucent: #cecece7a;
   --theme-color-translucent-1: #95959526;
@@ -2763,7 +2827,7 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --tape-color: #acacac65;
 
   /*Sliding panes*/
-  --header-color: #0e64bb;
+  --sliding-panes-header-color: #000000;
 
   /*admonition*/
   --admonition-bg-color: #ffffffa6;
@@ -2947,7 +3011,7 @@ body.color-scheme-options-pink-topaz.theme-light {
   --text-on-accent: #f2f2f2;
   --interactive-normal: #eaeaeb;
   --interactive-hover: #dbdbdc;
-  --interactive-accent-rgb: 122, 189, 148;
+  --interactive-accent-rgb: 243, 148, 203;
   --interactive-accent: #f394cb;
   --interactive-accent-hover: #d57aaf;
   --panel-border-color: #dbdbdc;
@@ -3000,7 +3064,7 @@ body.color-scheme-options-pink-topaz.theme-light {
   
 
   --embed-color: #ffe1ea4f;
-  --search-result-file-title-color: #10a075;
+  --search-result-file-title-color: #cc437c;
   --theme-color: var(--interactive-accent);
   --theme-color-translucent: #e4bddc7a;
   --theme-color-translucent-1: #e17cbf26;
@@ -3077,9 +3141,9 @@ body.color-scheme-options-pink-topaz.theme-light {
   --table-background-color: #ebebebbb;
   --table-background-color-odd: #ffffffaf;
   --table-border-color: #7d7d7d;
-  --table-thead-background-color: #b3ccb7c7;
-  --table-hover-raw-color: #85bfee2f;
-  --table-hover-color: #5dacec34;
+  --table-thead-background-color: #f4d6e6c7;
+  --table-hover-raw-color: #fad1e92f;
+  --table-hover-color: #e4a9bb34;
   --table-hover-thead-color: #ddefff;
 
   /*calendar*/
@@ -3136,7 +3200,7 @@ body.color-scheme-options-pink-topaz.theme-light {
   --tape-color: #acacac65;
 
   /*Sliding panes*/
-  --header-color: #0e64bb;
+  --sliding-panes-header-color: #6f0000;
 
   /*admonition*/
   --admonition-bg-color: #ffffffa6;
@@ -3639,7 +3703,6 @@ a.tag {
 	text-decoration: none;
 	cursor: pointer;
 	border-radius: var(--radius-l);
-  /*font-family: var(--font-family-tag) !important;*/
 }
 .tag:not(.token):hover {
 	color: white;
@@ -4658,17 +4721,17 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 }
 
 /* preview page */
-.markdown-preview-view.is-readable-line-width .markdown-preview-section,
-.markdown-source-view.is-readable-line-width .CodeMirror,
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+body:not(.font-family-change-to-default) .markdown-preview-view.is-readable-line-width .markdown-preview-section,
+body:not(.font-family-change-to-default) .markdown-source-view.is-readable-line-width .CodeMirror,
+body:not(.font-family-change-to-default) .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   line-height: 1.5;
   font-family: var(--font-family-major);
   letter-spacing: 0.03em;
 }
 
-.markdown-preview-view .markdown-preview-section,
-.markdown-source-view .CodeMirror,
-.markdown-preview-view .markdown-preview-sizer {
+body:not(.font-family-change-to-default) .markdown-preview-view .markdown-preview-section,
+body:not(.font-family-change-to-default) .markdown-source-view .CodeMirror,
+body:not(.font-family-change-to-default) .markdown-preview-view .markdown-preview-sizer {
   line-height: 1.5;
   font-family: var(--font-family-major);
   letter-spacing: 0.03em;
@@ -7778,7 +7841,7 @@ body.plugin-sliding-panes .view-header-icon {
 }
 
 body.plugin-sliding-panes .mod-root .workspace-leaf.mod-active .view-header-title{
-  color: var(--header-color);
+  color: var(--sliding-panes-header-color);
   font-family: var(--font-family-title);
   padding-top: 4px;
 }
@@ -7930,7 +7993,7 @@ line-height: 0.6;
   
 /*悬停Today*/
 #calendar-container .reset-button:hover {
-  color: var(--header-color);
+  color: var(--sliding-panes-header-color);
   background-color: var(--table-hover-raw-color);
 }
   
@@ -8859,7 +8922,7 @@ aside > h2 {
   --tape-color: #99999967;
 
   /*Sliding panes*/
-  --header-color: #f1a634d0;
+  --sliding-panes-header-color: #f1a634d0;
 
   /*admonition*/
   --admonition-bg-color: #1111118f;
@@ -9519,6 +9582,14 @@ body.translucent-setting-panel .modal.mod-settings,
 body.translucent-setting-panel .vertical-tab-content {
   background-color: transparent;
 }
+
+.setting-item-description,
+.setting-item-info {
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
 /* ============ */
 /* ============ */
 /*image position*/
@@ -11912,7 +11983,6 @@ body.blockquote-style-speech-bubble-two .theme-dark .markdown-preview-view block
   border:7px solid var(--theme-color);
 }
 
-
 body.blockquote-style-speech-bubble-two.theme-dark .markdown-preview-view blockquote:before,
 body.blockquote-style-speech-bubble-two.theme-dark .markdown-preview-view blockquote:after {
   border-color: var(--theme-color);
@@ -11921,7 +11991,6 @@ body.blockquote-style-speech-bubble-two.theme-dark .markdown-preview-view blockq
 body.blockquote-style-speech-bubble-two.theme-dark .markdown-preview-view blockquote > :first-child:before {
   background: var(--theme-color);
 }
-
 
 /* creates larger curve */
 body.blockquote-style-speech-bubble-two .markdown-preview-view blockquote:before {
@@ -12012,20 +12081,27 @@ body.blockquote-style-border-left .markdown-preview-view blockquote {
 }
 
 /*==========*/
+body.background-settings-workplace-style-blur .side-dock-ribbon-tab, 
+body.background-settings-workplace-style-blur .side-dock-ribbon-action:not(:hover),
+body.background-settings-workplace-style-high-transparency .side-dock-ribbon-tab,
+body.background-settings-workplace-style-high-transparency .side-dock-ribbon-action:not(:hover) {
+  color: var(--text-normal);
+}
+
 /*blur*/
-body.background-settings-body-style-blur.theme-light .workspace::before {
+body.background-settings-workplace-style-blur.theme-light .workspace::before {
   background-image: var(--theme-background);
   background-size : cover;
   filter: blur(10px);
 }
 
-body.background-settings-body-style-blur.theme-dark .workspace::before {
+body.background-settings-workplace-style-blur.theme-dark .workspace::before {
   background-image: var(--theme-background);
   background-size : cover;
   filter: blur(10px) brightness(0.9);
 }
 
-body.background-settings-body-style-blur .workspace::before {
+body.background-settings-workplace-style-blur .workspace::before {
   content: '';
   display: block;
   position: absolute;
@@ -12035,17 +12111,42 @@ body.background-settings-body-style-blur .workspace::before {
   left: -15px;
 }
 
-body.background-settings-body-style-blur.theme-light .titlebar::before {
-  background-image: var(--theme-background);
-  background-size : cover;
+body.background-settings-workplace-style-blur.theme-light .titlebar,
+body.background-settings-workplace-style-blur.theme-dark .titlebar {
+  z-index: 10;
 }
 
-body.background-settings-body-style-blur.theme-dark .titlebar::before {
-  background-image: var(--theme-background);
-  background-size : cover;
+body.background-settings-workplace-style-blur.theme-light .titlebar-text,
+body.background-settings-workplace-style-blur.theme-dark .titlebar-text {
+  color: var(--text-normal);
 }
 
-body.background-settings-body-style-blur.theme-light {
+body.background-settings-workplace-style-blur.theme-light .titlebar::before {
+  background-image: var(--theme-background);
+  background-size : cover;
+  content: '';
+  display: block;
+  position: absolute;
+  top: -4px;
+  right: -15px;
+  bottom: 0px;
+  left: -15px;
+}
+
+body.background-settings-workplace-style-blur.theme-dark .titlebar::before {
+  background-image: var(--theme-background);
+  background-size : cover;
+  background-size : cover;
+  content: '';
+  display: block;
+  position: absolute;
+  top: -4px;
+  right: -15px;
+  bottom: 0px;
+  left: -15px;
+}
+
+body.background-settings-workplace-style-blur.theme-light {
   --background-primary-bg-4-bt: #ffffffb2; 
   --background-secondary-bg-4-bt: #ffffff83;
   --background-secondary-alt-bg-4-bt: #ffffff69; 
@@ -12056,49 +12157,49 @@ body.background-settings-body-style-blur.theme-light {
   --background-modifier-border: #bfbfbf;
 }
 
-body.background-settings-body-style-blur.background-settings-body-theme-light-blue-mountain.theme-light {
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-light-blue-mountain.theme-light {
   --blue-mountain: url("https://images.unsplash.com/photo-1486520299386-6d106b22014b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
   --theme-background: var(--blue-mountain);
 }
 
 /* font color */
-body.background-settings-body-style-blur.background-settings-body-theme-light-blue-mountain.theme-light .tree-item-inner:not(:hover),
-body.background-settings-body-style-blur.background-settings-body-theme-light-blue-mountain.theme-light .tree-item-flair:not(:hover),
-body.background-settings-body-style-blur.background-settings-body-theme-light-blue-mountain.theme-light .workspace-ribbon-collapse-btn:not(:hover),
-body.background-settings-body-style-blur.background-settings-body-theme-light-blue-mountain.theme-light .side-dock-ribbon-tab:not(:hover),
-body.background-settings-body-style-blur.background-settings-body-theme-light-blue-mountain.theme-light .side-dock-ribbon-action:not(:hover),
-body.background-settings-body-style-blur.background-settings-body-theme-light-blue-mountain.theme-light .workspace-tab-header:not(:hover),
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-light-blue-mountain.theme-light .tree-item-inner:not(:hover),
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-light-blue-mountain.theme-light .tree-item-flair:not(:hover),
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-light-blue-mountain.theme-light .workspace-ribbon-collapse-btn:not(:hover),
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-light-blue-mountain.theme-light .side-dock-ribbon-tab:not(:hover),
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-light-blue-mountain.theme-light .side-dock-ribbon-action:not(:hover),
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-light-blue-mountain.theme-light .workspace-tab-header:not(:hover),
 
-body.background-settings-body-style-blur.background-settings-body-theme-light-in-the-sky.theme-light .tree-item-inner:not(:hover),
-body.background-settings-body-style-blur.background-settings-body-theme-light-in-the-sky.theme-light .tree-item-flair:not(:hover),
-body.background-settings-body-style-blur.background-settings-body-theme-light-in-the-sky.theme-light .workspace-ribbon-collapse-btn:not(:hover),
-body.background-settings-body-style-blur.background-settings-body-theme-light-in-the-sky.theme-light .side-dock-ribbon-tab:not(:hover),
-body.background-settings-body-style-blur.background-settings-body-theme-light-in-the-sky.theme-light .side-dock-ribbon-action:not(:hover),
-body.background-settings-body-style-blur.background-settings-body-theme-light-in-the-sky.theme-light .workspace-tab-header:not(:hover) {
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-light-in-the-sky.theme-light .tree-item-inner:not(:hover),
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-light-in-the-sky.theme-light .tree-item-flair:not(:hover),
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-light-in-the-sky.theme-light .workspace-ribbon-collapse-btn:not(:hover),
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-light-in-the-sky.theme-light .side-dock-ribbon-tab:not(:hover),
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-light-in-the-sky.theme-light .side-dock-ribbon-action:not(:hover),
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-light-in-the-sky.theme-light .workspace-tab-header:not(:hover) {
   color: var(--text-normal);
 }
 
-body.background-settings-body-style-blur.background-settings-body-theme-light-in-the-sky.theme-light {
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-light-in-the-sky.theme-light {
   --in-the-sky: url("https://images.unsplash.com/photo-1514519334989-3d5c8b1a9f91?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
   --theme-background: var(--in-the-sky);
 }
 
-body.background-settings-body-style-blur.background-settings-body-theme-light-orange.theme-light {
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-light-orange.theme-light {
   --orange: url("https://images.unsplash.com/photo-1600676074626-e1f6b5981f25?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=966&q=80");
   --theme-background: var(--orange);
 }
 
-body.background-settings-body-style-blur.background-settings-body-theme-light-macaw.theme-light {
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-light-macaw.theme-light {
   --macaw: url("https://images.unsplash.com/photo-1551189013-03cf5bc1c73c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=781&q=80");
   --theme-background: var(--macaw);
 }
 
-body.background-settings-body-style-blur.background-settings-body-theme-light-leaf.theme-light {
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-light-leaf.theme-light {
   --leaf: url("https://images.unsplash.com/photo-1536882240095-0379873feb4e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1171&q=80");
   --theme-background: var(--leaf);
 }
 
-body.background-settings-body-style-blur.theme-dark {
+body.background-settings-workplace-style-blur.theme-dark {
   --background-primary-bg-4-bt: #16161670; 
   --background-secondary-bg-4-bt: #16161670;
   --background-secondary-alt-bg-4-bt: #16161670; 
@@ -12108,96 +12209,96 @@ body.background-settings-body-style-blur.theme-dark {
   --text-normal: #cccccc;
 }
 
-body.background-settings-body-style-blur.background-settings-body-theme-dark-night-sky.theme-dark {
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-dark-night-sky.theme-dark {
   --night-sky: url("https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80");
   --theme-background: var(--night-sky);
 }
 
-body.background-settings-body-style-blur.background-settings-body-theme-dark-dark-sky.theme-dark {
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-dark-dark-sky.theme-dark {
   --dark-sky: url("https://images.unsplash.com/photo-1611944674436-a170fbcaa773?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80");
   --theme-background: var(--dark-sky);
 }
 
-body.background-settings-body-style-blur.background-settings-body-theme-dark-in-the-sky.theme-dark {
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-dark-in-the-sky.theme-dark {
   --in-the-sky: url("https://images.unsplash.com/photo-1556912672-78d3869a6374?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80");
   --theme-background: var(--in-the-sky);
 }
 
-body.background-settings-body-style-blur.background-settings-body-theme-dark-blue-wave.theme-dark {
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-dark-blue-wave.theme-dark {
   --blue-wave: url("https://images.unsplash.com/photo-1613946709284-0aa74f040a12?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQ1fHxkYXJrJTIwYmx1ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
   --theme-background: var(--blue-wave);
 }
 
-body.background-settings-body-style-blur.background-settings-body-theme-dark-jellyfish-1.theme-dark {
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-dark-jellyfish-1.theme-dark {
   --jellyfish-1: url("https://images.unsplash.com/photo-1569887652102-59696fef1528?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzYzfHxkYXJrJTIwYmx1ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80");
   --theme-background: var(--jellyfish-1);
 }
 
-body.background-settings-body-style-blur.background-settings-body-theme-dark-jellyfish-2.theme-dark {
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-dark-jellyfish-2.theme-dark {
   --jellyfish-2: url("https://images.unsplash.com/photo-1560568380-0aa95fee7ae9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
   --theme-background: var(--jellyfish-2);
 }
 
-body.background-settings-body-style-blur.background-settings-body-theme-dark-hyacinth-macaw.theme-dark {
+body.background-settings-workplace-style-blur.background-settings-workplace-theme-dark-hyacinth-macaw.theme-dark {
   --hyacinth-macaw: url("https://images.unsplash.com/photo-1610847034016-49565e0c068a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80");
   --theme-background: var(--hyacinth-macaw);
 }
 
-body.background-settings-body-style-blur .workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
-body.background-settings-body-style-blur .workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
-body.background-settings-body-style-blur .workspace-tab-header.is-before-active .workspace-tab-header-inner,
-body.background-settings-body-style-blur .workspace-tab-header.is-after-active .workspace-tab-header-inner,
-body.background-settings-body-style-blur .workspace-tab-header,
-body.background-settings-body-style-blur .workspace-tab-header-inner,
-body.background-settings-body-style-blur .workspace-split.mod-left-split .view-content,
-body.background-settings-body-style-blur .workspace-split.mod-right-split .view-content,
-body.background-settings-body-style-blur .workspace-tab-header.is-after-active,
-body.background-settings-body-style-blur .workspace-tab-header.is-before-active,
-body.background-settings-body-style-blur .workspace-tab-container-before.is-before-active .workspace-tab-header-inner {
+body.background-settings-workplace-style-blur .workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
+body.background-settings-workplace-style-blur .workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
+body.background-settings-workplace-style-blur .workspace-tab-header.is-before-active .workspace-tab-header-inner,
+body.background-settings-workplace-style-blur .workspace-tab-header.is-after-active .workspace-tab-header-inner,
+body.background-settings-workplace-style-blur .workspace-tab-header,
+body.background-settings-workplace-style-blur .workspace-tab-header-inner,
+body.background-settings-workplace-style-blur .workspace-split.mod-left-split .view-content,
+body.background-settings-workplace-style-blur .workspace-split.mod-right-split .view-content,
+body.background-settings-workplace-style-blur .workspace-tab-header.is-after-active,
+body.background-settings-workplace-style-blur .workspace-tab-header.is-before-active,
+body.background-settings-workplace-style-blur .workspace-tab-container-before.is-before-active .workspace-tab-header-inner {
   background-color: transparent;
   border-radius: 0;
 }
 
-body.background-settings-body-style-blur .workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content,
-body.background-settings-body-style-blur .workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content {
+body.background-settings-workplace-style-blur .workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content,
+body.background-settings-workplace-style-blur .workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content {
   border-top-right-radius: 0;
   border-top-left-radius : 0;
 }
 
-body.background-settings-body-style-blur .workspace-tab-header-inner {
+body.background-settings-workplace-style-blur .workspace-tab-header-inner {
   padding: 3px 9px;
 }
 
-body.background-settings-body-style-blur .workspace-tab-container-before,
-body.background-settings-body-style-blur .workspace-tab-container-after {
+body.background-settings-workplace-style-blur .workspace-tab-container-before,
+body.background-settings-workplace-style-blur .workspace-tab-container-after {
   width: 0;
 }
 
-body.background-settings-body-style-blur .workspace-split.mod-horizontal.mod-left-split .workspace-tab-header-container {
+body.background-settings-workplace-style-blur .workspace-split.mod-horizontal.mod-left-split .workspace-tab-header-container {
   flex: 0.012 0 auto !important;
 }
 
-body.background-settings-body-style-blur .workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
+body.background-settings-workplace-style-blur .workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
   border-top-right-radius: 0;
 }
 
-body.background-settings-body-style-blur .workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
+body.background-settings-workplace-style-blur .workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
   border-top-left-radius: 0;
 }
 
-body.background-settings-body-style-blur .workspace-tab-header-container {
+body.background-settings-workplace-style-blur .workspace-tab-header-container {
   background-color: var(--background-primary-alt-bg-4-bt);
 }
 
-body.background-settings-body-style-blur .workspace-split.mod-left-split > .workspace-leaf-resize-handle:not(:hover), 
-body.background-settings-body-style-blur .workspace-split.mod-right-split > .workspace-leaf-resize-handle:not(:hover), 
-body.background-settings-body-style-blur .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:not(:hover) {
+body.background-settings-workplace-style-blur .workspace-split.mod-left-split > .workspace-leaf-resize-handle:not(:hover), 
+body.background-settings-workplace-style-blur .workspace-split.mod-right-split > .workspace-leaf-resize-handle:not(:hover), 
+body.background-settings-workplace-style-blur .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:not(:hover) {
   height: 100%;
   background-color: var(--background-resize-handle-blur);
 }
 
-body.background-settings-body-style-blur .workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover, 
-body.background-settings-body-style-blur .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover, 
-body.background-settings-body-style-blur .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:hover {
+body.background-settings-workplace-style-blur .workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover, 
+body.background-settings-workplace-style-blur .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover, 
+body.background-settings-workplace-style-blur .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:hover {
   height: 100%;
 }
