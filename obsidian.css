@@ -420,7 +420,7 @@ settings:
     id: background-settings-workplace-theme-light-custom
     title: Theme light (url)
     description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
-    description.zh: 自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片 url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
+    description.zh: 自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片  url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
     type: variable-text
     default: url("https://") 
   -
@@ -458,7 +458,7 @@ settings:
     id: background-settings-workplace-theme-dark-custom
     title: Theme Dark (url)
     description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
-    description.zh: 自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片 url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
+    description.zh: 自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片  url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
     type: variable-text
     default: url("https://")
   - 
@@ -1270,7 +1270,7 @@ body.font-family-change-to-default.theme-dark .cm-strong.cm-em {
   --background-primary-alt-bg-4-bt: #444444;
   --background-secondary-bg-4-bt: #1e1e1e;
   --background-secondary-alt-bg-4-bt: #000000; 
-  --background-4-sliding-panel: #252525ed;
+  --background-4-sliding-pane: #252525ed;
   --background-mobile-drawer-1: #1b1b1b;
   --background-mobile-drawer-2: #1b1b1b69;
   --background-modifier-border-hr: #7f7f7f;
@@ -1549,7 +1549,7 @@ body.font-family-change-to-default.theme-dark .cm-strong.cm-em {
   --background-primary-alt-bg-4-bt: #e9e9e9;
   --background-secondary-bg-4-bt: #fcfcfc;
   --background-secondary-alt-bg-4-bt: #eeeeee; 
-  --background-4-sliding-panel: #ffffffef;
+  --background-4-sliding-pane: #ffffffef;
   --background-mobile-drawer-1: #ffffff;
   --background-mobile-drawer-2: #ffffff;
   --background-modifier-border-hr: #585858;
@@ -1832,7 +1832,7 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --background-primary-alt-bg-4-bt: #e9e9e9;
   --background-secondary-bg-4-bt: #ffffff;
   --background-secondary-alt-bg-4-bt: #e8f0e8; 
-  --background-4-sliding-panel: #ffffffef;
+  --background-4-sliding-pane: #ffffffef;
   --background-mobile-drawer-1: #ffffff;
   --background-mobile-drawer-2: #ffffff;
   --background-modifier-border-hr: #585858;
@@ -2112,7 +2112,7 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --background-primary-alt-bg-4-bt: #444444;
   --background-secondary-bg-4-bt: #181818;
   --background-secondary-alt-bg-4-bt: #000000; 
-  --background-4-sliding-panel: #252525ed;
+  --background-4-sliding-pane: #252525ed;
   --background-mobile-drawer-1: #1b1b1b;
   --background-mobile-drawer-2: #1b1b1b69;
   --background-modifier-border-hr: #7f7f7f;
@@ -2387,7 +2387,7 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --background-primary-alt-bg-4-bt: #444444;
   --background-secondary-bg-4-bt: #1e1e1e;
   --background-secondary-alt-bg-4-bt: #000000; 
-  --background-4-sliding-panel: #252525ed;
+  --background-4-sliding-pane: #252525ed;
   --background-mobile-drawer-1: #1b1b1b;
   --background-mobile-drawer-2: #1b1b1b69;
   --background-modifier-border-hr: #7f7f7f;
@@ -2657,7 +2657,7 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --background-primary-alt-bg-4-bt: #e9e9e9;
   --background-secondary-bg-4-bt: #ffffff;
   --background-secondary-alt-bg-4-bt: #f5f5f5; 
-  --background-4-sliding-panel: #ffffffef;
+  --background-4-sliding-pane: #ffffffef;
   --background-mobile-drawer-1: #ffffff;
   --background-mobile-drawer-2: #ffffff;
   --background-modifier-border-hr: #585858;
@@ -3031,7 +3031,7 @@ body.color-scheme-options-pink-topaz.theme-light {
   --background-primary-alt-bg-4-bt: #e9e9e9;
   --background-secondary-bg-4-bt: #fffaf0; 
   --background-secondary-alt-bg-4-bt: #ffebeb; 
-  --background-4-sliding-panel: #ffffffef;
+  --background-4-sliding-pane: #ffffffef;
   --background-mobile-drawer-1: #ffffff;
   --background-mobile-drawer-2: #ffffff;
   --background-modifier-border-hr: #585858;
@@ -4087,10 +4087,6 @@ body {
 .search-result-file-matches {
   border-bottom: none;
   margin-bottom: 0px;
-}
-
-.search-result-file-matched-text {
-  color: var(--text-muted); 
 }
 
 .tree-item-self.is-clickable:hover {
@@ -8597,7 +8593,7 @@ aside > h2 {
     --background-primary-alt-bg-4-bt: #e9e9e9;
     --background-secondary-bg-4-bt: #fcfcfc;
     --background-secondary-alt-bg-4-bt: #eeeeee; 
-    --background-4-sliding-panel: #ffffffef;
+    --background-4-sliding-pane: #ffffffef;
 
     --tag-text: #f8f8f8;
     --text-normal: #0e0e0e;
@@ -8747,7 +8743,7 @@ aside > h2 {
   --background-primary-alt-bg-4-bt: #444444;
   --background-secondary-bg-4-bt: #1e1e1e;
   --background-secondary-alt-bg-4-bt: #000000; 
-  --background-4-sliding-panel: #252525ed;
+  --background-4-sliding-pane: #252525ed;
   --background-mobile-drawer-1: #1b1b1b;
   --background-mobile-drawer-2: #1b1b1b69;
   --background-modifier-border-hr: #7f7f7f;
@@ -8993,7 +8989,7 @@ aside > h2 {
     --background-primary-alt-bg-4-bt: #444444;
     --background-secondary-bg-4-bt: #333333;
     --background-secondary-alt-bg-4-bt: #000000; 
-    --background-4-sliding-panel: #252525ed;
+    --background-4-sliding-pane: #252525ed;
 
     --gray-1: #5C6370;
     --gray-2: #abb2bf;
@@ -10117,7 +10113,7 @@ body {
 }
 
 body.plugin-sliding-panes .workspace-split.mod-root .workspace-leaf:not(:first-of-type) .workspace-leaf-content {
-  background-color: var(--background-4-sliding-panel);
+  background-color: var(--background-4-sliding-pane);
 }
 
 body:not(.remove-file-icons).theme-light .nav-folder-children .nav-file-title-content:first-child::before,
@@ -12109,11 +12105,6 @@ body.background-settings-workplace-style-blur .workspace::before {
   right: -15px;
   bottom: 0px;
   left: -15px;
-}
-
-body.background-settings-workplace-style-blur.theme-light .titlebar,
-body.background-settings-workplace-style-blur.theme-dark .titlebar {
-  z-index: 10;
 }
 
 body.background-settings-workplace-style-blur.theme-light .titlebar-text,
