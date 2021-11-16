@@ -392,6 +392,18 @@ settings:
         label: Blur
         value: background-settings-workplace-style-blur
   - 
+    id: blur-depth
+    title: blur depth
+    title.zh: 模糊程度
+    description: To adjust the degree of blur
+    description.zh: 调整背景壁纸模糊程度
+    type: variable-number-slider
+    default: 10
+    format: px
+    min: 0
+    max: 30
+    step: 1
+  -
     id: background-settings-workplace-theme-light
     title: Theme light
     type: class-select
@@ -12069,17 +12081,18 @@ body.background-settings-workplace-style-high-transparency .side-dock-ribbon-act
   color: var(--text-normal);
 }
 
+
 /*blur*/
 body.background-settings-workplace-style-blur.theme-light .workspace::before {
   background-image: var(--theme-background);
   background-size : cover;
-  filter: blur(10px);
+  filter: blur(var(--blur-depth));
 }
 
 body.background-settings-workplace-style-blur.theme-dark .workspace::before {
   background-image: var(--theme-background);
   background-size : cover;
-  filter: blur(10px) brightness(0.9);
+  filter: blur(var(--blur-depth)) brightness(0.9);
 }
 
 body.background-settings-workplace-style-blur .workspace::before {
