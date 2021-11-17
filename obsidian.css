@@ -1556,6 +1556,8 @@ body.font-family-change-to-default.theme-dark .cm-strong.cm-em {
   --strong-em-highlight-color: #237add;
   --text-highlight-bg: #ffd298d8; /*edit*/
   --text-search-highlight-bg: #ffd1dd;
+  --strong-em-color-1: #1048ff;
+  --strong-em-color-2: #14c8ff;
   
   --background-search-result: #f3f3f3;
   --search-result-file-matched-bg: #ffc3c3;
