@@ -2,7 +2,7 @@
 /*Blue Topaz for Obsidian v0.12.19, uid [20211116] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
-@LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond */
+@LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) */
 
 /* 
 ===========================    TIPS   ===============================
@@ -500,6 +500,9 @@ settings:
       - 
         label: Pink (coming soon)
         value: color-scheme-options-pink-topaz
+      -
+        label: Flamingo
+        value: color-scheme-options-flamingo
   -
     id: text-normal
     title: Main text color
@@ -3269,6 +3272,504 @@ body.color-scheme-options-pink-topaz.theme-light .cm-strong.cm-em  {
   -webkit-text-fill-color: initial;
   background-color: initial;
 }
+
+
+/*@Lavi & @嘴 的Flamingo主题色（原Pink Topaz）*/
+body.color-scheme-options-flamingo.theme-light {
+  --background-primary-bg-4-bt: #efe9d9;
+  --background-primary-alt-bg-4-bt: #efe9d9;
+  --background-secondary-bg-4-bt: #efe9d9;
+  --background-4-sliding-panel: #efe9d9;
+  --background-mobile-drawer-1: #efe9d9;
+  --background-mobile-drawer-2: #efe9d9;
+  --graph-control-bg:#efe9d9;
+  
+  --background-primary: #efe9d9;
+  --background-primary-alt: #ffdece;
+  --background-secondary: #efe9d9;
+  --background-secondary-alt: #efe9d9;
+  --background-secondary-alt-bg-4-bt:#efe9d9;
+  --background-accent: #fefcf9;
+  --background-modifier-border: rgba(0, 0, 0, 0.1);
+  --background-modifier-form-field: #ffdece;
+  --background-modifier-form-field-highlighted: #f5a7a2;
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+  --background-modifier-success: #ffdece;
+  --background-modifier-error: #f5a7a2;
+  --background-modifier-error-rgb: 230, 135, 135;
+  --background-modifier-error-hover: #fefcf9;
+  --background-modifier-cover: rgba( 0, 0, 0, 0.2);
+  --text-accent: #980000;
+  --text-accent-hover: #37291a;
+  --text-normal: #37291a;
+  --text-muted: #37291a;
+  --text-faint: #37291a;
+  --accent-strong: #37291a;
+  --text-error: #f5a7a2;
+  --text-error-hover: #fefcf9;
+  --text-highlight-bg: #f5a7a2;
+  --text-selection: #ffebec;
+  --text-on-accent: #37291a;
+  --interactive-normal: #f39ba0;
+  --interactive-hover: #ffdece;
+  --interactive-accent-rgb: #fd355a;
+  --interactive-accent: #f5a7a2;
+  --interactive-accent-hover: #fd355a;
+  --panel-border-color: #fd355a;
+  --search-text: #37291a;
+  --folder-title: #37291a;
+  --mark-highlight: #fd355a;
+  --background-search-result: #ffdece;
+  --gray-1: #c4c4c4;
+  --gray-2: #7c8595;
+  --red: #fd355a;
+  --red-1: #980000;
+  --green: #40916c;
+  --darkgreen: #004f2d;
+  --blue: #69a2ee;
+  --darkblue: #5981f0; 
+  --purple: #8673b4;
+  --aqua: #4dd8ef;
+  --yellow: #ffc727;
+  --light-yellow: #e5e79c;
+  --orange: #f19c79;
+  --light-purple: #d3d6fe;
+  --blue-green: #16bcc0;
+  --embed-color: #fd355a1a;
+  --search-result-file-title-color: #980000;
+  --theme-color: #f5a7a2;
+  --theme-color-translucent: #f5a7a2;
+  --theme-color-translucent-1: #ffdece;
+  --color-specification: #fd355a;
+  --allow-1: #fd355a;
+  --list-ul-block-color: #f5a7a2;
+  --list-ul-disc-color: #fd355a;
+  --list-ul-hover: #980000;
+  --list-ol-block-color: #f5a7a2;
+  --list-ol-number-color: #f5a7a2;
+  --list-ol-hover: #980000;
+  --stag1: #fd355a;
+  --stag2: #fd355a;
+  --stag3: #fd355a;
+  --tag1: #56cfc7c7;
+  --tag2: #eca1bcda;
+  --tag3: #e6d00d;
+  --tag4: #40916c;
+  --tag5: #68c7a4;
+  --tag6: #f5a7a2;
+  --tag7: #f5a7a2;
+  --tag8: #dbb671;
+  --tag9: #f19c79;
+  --h1-color: #f39ba0;
+  --h2-color: #f39ba0;
+  --h3-color: #f39ba0;
+  --h4-color: #f39ba0;
+  --h5-color: #f39ba0;
+  --h6-color: #f39ba0;
+  --graph-text-color: #37291a;
+  --graphtag: #ffdece;
+  --graph-attach: #f5a7a2;
+  --graph-circle: #FD355C;
+  --graph-line: #fea2c2;
+  --graph-unresolved: #E87659;
+  --graph-arrow: #980000;
+  --mermaid-active-task-color: #f5a7a2;
+  --mermaid-seq-dia-color: #ffdece;
+  --table-background-color: #ffdece;
+  --table-background-color-odd: #ffdece;
+  --table-border-color: #fd355a;
+  --table-thead-background-color: #f5a7a2;
+  --table-hover-color: #f5a7a2;
+  --table-hover-thead-color: #f5a7a2;
+  --table-hover-raw-color: #ffdece;
+  --calendar-week-color: #f5a7a2;
+  --calendar-week-hover: #ffdece;
+  --calendar-week-background-color: #ffdece;
+  --day-planner-pie: #f5a7a2;
+  --day-planner-timeline: #ffdece;
+  --day-planner-line: #fd355a;
+  --day-planner-dot: #ffdece;
+  --day-planner-item-hover: #f5a7a2;
+  --event-item-color1: #f39ba063;
+  --event-item-color2: #f39ba091;
+  --event-item-color3: #f39ba0c4;
+  --event-item-color4: #f39ba0;
+  --event-item-color5: #D08489;
+  --event-item-color6: #B27175;
+  --event-item-color7: #D08489;
+  --event-item-color8: #f39ba0;
+  --event-item-color9: #f39ba0c4;
+  --event-item-color10: #f39ba091;
+   /* I am too noob to touch this part
+  --text-gray: #f5a7a2;
+  --text-brown: #f5a7a2;
+  --text-orange: #f5a7a2;
+  --text-yellow: #f5a7a2;
+  --text-green: #f5a7a2;
+  --text-blue: #f5a7a2;
+  --text-purple: #f5a7a2;
+  --text-pink: #f5a7a2;
+  --text-red: #f5a7a2;
+  --background-gray: #ffdece;
+  --background-brown: #ffdece;
+  --background-orange: #ffdece;
+  --background-yellow: #ffdece;
+  --background-green: #ffdece;
+  --background-blue: #ffdece;
+  --background-purple: #ffdece;
+  --background-pink: #ffdece;
+  --background-red: #ffdece;
+  */
+  --note-important: #fd355a;
+  --note-cloze: #fd355a;
+  --stickies-color-1: #e46969;
+  --stickies-color-2: #f5a7a2;
+  --tape-color: #acacac65;
+  --header-color: #f5a7a2;
+}
+
+
+
+body.color-scheme-options-flamingo.theme-dark {
+  --background-primary: #212121;
+  --background-primary-alt: #f937590d;
+  --background-secondary: #242424;
+  --background-secondary-alt: #191919;
+  --background-accent: #e4ba6c;
+  --background-modifier-border: #191919;
+  --background-modifier-form-field: #f39ba0;
+  --background-modifier-form-field-highlighted: #e5c7a9;
+  --background-modifier-box-shadow: #292929;
+  --background-modifier-success: #f93759;
+  --background-modifier-error: #f93759;
+  --background-modifier-error-rgb: #f93759;
+  --background-modifier-error-hover: #F93758;
+  --background-modifier-cover: rgba(0, 0, 0, 0.3);
+  --text-accent: #ffccbc;
+  --text-accent-hover: #f93759;
+  --text-normal: #efe9d9;
+  --text-muted: #efe9d9;
+  --text-faint: #efe9d9;
+  --accent-strong: #efe9d9;
+  --text-em-color: #f93759;
+  --text-error: #f93759;
+  --text-error-hover: #f93759;
+  --text-highlight-bg: #f39ba0;
+  --text-selection:#e5c7a94a;
+  --text-on-accent: #ffffff;
+  --interactive-normal: #f39ba0;
+  --interactive-hover: #ffccbc;
+  --interactive-accent: #f39ba0;
+  --interactive-accent-rgb: 45, 135, 211;
+  --interactive-accent-hover: #f93759;
+  --panel-border-color: #f93759;
+  --search-text: #fff;
+  --folder-title: #fff;
+  --mark-highlight: #f93759;
+  --background-search-result: #292929;
+  --gray-1: #c9b0b0;
+  --gray-2: #b4b1c6;
+  --red: #ff9090;
+  --red-1: #f93759;
+  --orange: #f28d61;
+  --green: #00ffc7;
+  --darkgreen: #1bbc9b;
+  --aqua: #30daff;
+  --purple: #b073ff;
+  --blue: #00a3b9;
+  --darkblue: #0040ff;
+  --yellow: #fcdc00;
+  --light-yellow: #ffd26c;
+  --embed-color: #2929297d;
+  --search-result-file-title-color: #f39ba0;
+  --theme-color: #ffccbc;
+  --theme-color-translucent: #f39ba0;
+  --theme-color-translucent-1: #f39ba0;
+  --color-specification: #f93759;
+  --allow-1: #f93759;
+  --background-blockquote-dark: #292929;
+  --list-ul-block-color: #f39ba0;
+  --list-ul-disc-color: #f93759;
+  --list-ul-hover: #ffebec;
+  --list-ol-block-color: #f39ba0;
+  --list-ol-number-color: #ffccbc;
+  --list-ol-hover: #ffebec;
+  --stag1: #f39ba0;
+  --stag2: #ffccbc;
+  --stag3: #ffebec;
+  --tag1: #028588;
+  --tag2: #40916c;
+  --tag3: #69a2ee;
+  --tag4: #c47a5e;
+  --tag5: #004f2d;
+  --tag6: #f5a7a2;
+  --tag7: #f19c79;
+  --tag8: #02a588;
+  --tag9: #ab4967;
+  --h1-color: #ffccbc;
+  --h2-color: #ffccbc;
+  --h3-color: #ffccbc;
+  --h4-color: #ffccbc;
+  --h5-color: #ffccbc;
+  --h6-color: #ffccbc;
+  --graph-text-color: #efe9d9;
+  --graphtag: #f39ba0;
+  --graph-attach: #ffebec;
+  --graph-circle: #f39ba0;
+  --graph-line: #ffc3bc;
+  --graph-unresolved: #ffccbc;
+  --graph-arrow: #ffc3bc;
+  --mermaid-active-task-color: #F39BA4;
+  --mermaid-seq-dia-color: #ffebec;
+  --table-background-color: #212121;
+  --table-background-color-odd: transparent;
+  --table-border-color: #ffebec;
+  --table-thead-background-color: #f39ba0ad;
+  --table-hover-raw-color: #292929;
+  --table-hover-color: #ffccbc0a;
+  --table-hover-thead-color: #f39ba0;
+  --calendar-week-color: #ffccbc;
+  --calendar-week-hover: #f39ba0;
+  --calendar-week-background-color: transparent;
+  --day-planner-pie: #ffccbc;
+  --day-planner-timeline: #ff9b7c;
+  --day-planner-line: #f39ba0;
+  --day-planner-dot: #ffebec;
+  --day-planner-item-hover: #f39ba0;
+  --event-item-color9: #ffc3bc;
+  --event-item-color8: #ffbcbc;
+  --event-item-color10: #ffccbc;
+  --event-item-color7: #ffbcc4;
+  --event-item-color6: #ffbcbc;
+  --event-item-color5: #ffc3bc;
+  --event-item-color4: #ffccbc;
+  --event-item-color3: #ffd4bc;
+  --event-item-color2: #ffdcbc;
+  --event-item-color1: #ffe4bc;
+      /* I am too noob to touch this part
+  --text-gray: #acacac;
+  --text-brown: #be9684;
+  --text-orange: #ffa344;
+  --text-yellow: #ffdc51;
+  --text-green: #52c7b2;
+  --text-blue: #8ca1ff;
+  --text-purple: #b386f1;
+  --text-pink: #ff6bba;
+  --text-red: #ff4f4f;
+  --background-gray: #535353;
+  --background-brown: #493a3a;
+  --background-orange: #53422f;
+  --background-yellow: #585536;
+  --background-green: #32503e;
+  --background-blue: #2f5264;
+  --background-purple: #443f57;
+  --background-pink: #533b4a;
+  --background-red: #683c3c;
+  */ 
+  --note-important: #f93759;
+  --note-cloze: #f93759;
+  --stickies-color-1: #f39ba0;
+  --stickies-color-2: #ffebec;
+  --tape-color: #ffccbc47;
+  --header-color: #f39ba0;
+
+}
+
+
+body.color-scheme-options-flamingo.theme-light #calendar-container {
+--color-background-heading: transparent;
+--color-background-weeknum: transparent;
+--color-background-day: transparent;
+--color-background-weekend: transparent;
+
+--color-tr: #ffdece !important;
+--color-tr-odd: #ffdece !important;
+
+--color-dot: var(--text-accent);
+--color-arrow: currentColor;
+--color-button: var(--text-muted);
+--color-text-weeknum: var(--calendar-week-color);
+
+--color-text-title: var(--text-normal);
+--color-text-heading: var(--text-normal);
+--color-text-day: var(--text-normal);
+--color-text-today: var(--text-accent);
+
+/*===*/
+padding: 0px 5px 0px 8px;
+margin: -21px -8px 0px -8px;
+line-height: 0.6;
+}
+
+/*表格调整*/
+/*星期*/
+
+body.color-scheme-options-flamingo.theme-light #calendar-container th {
+padding: 6px 0;
+border-radius: 0px !important;
+background-color: var(--table-thead-background-color) !important;
+}
+
+
+body.color-scheme-options-flamingo.theme-light #calendar-container .week-num, #calendar-container .day {
+border-radius: 0px !important;
+}
+
+/*天*/
+
+body.color-scheme-options-flamingo.theme-light #calendar-container td {
+width: 12.5%;
+border-right: 0px solid var(--background-secondary-alt);
+padding: 0px 0px 0px 0px !important;
+line-height: 22px;
+border-radius: 0px !important;
+}
+
+
+body.color-scheme-options-flamingo.theme-light #calendar-container tr {
+border: 2px solid var(--background-secondary-alt);
+}
+
+
+body.color-scheme-options-flamingo.theme-light #calendar-container .day:not(:empty):hover{
+background-color: var(--table-hover-color);
+}
+
+
+body.color-scheme-options-flamingo.theme-light #calendar-container .calendar{
+background-color: #ffdece;
+margin: -8px 0;
+}
+
+/*“Today”*/
+
+body.color-scheme-options-flamingo.theme-light #calendar-container .reset-button {
+font-size: 14px !important;
+margin: 0;
+padding: 0px 0px 0px 0px;
+cursor: pointer;
+line-height: 1.2;
+text-align: center;
+}
+
+/*悬停Today*/
+
+body.color-scheme-options-flamingo.theme-light #calendar-container .reset-button:hover {
+color: var(--header-color);
+background-color: var(--table-hover-raw-color);
+}
+
+/*悬停arrow*/
+
+body.color-scheme-options-flamingo.theme-light #calendar-container .arrow:hover {
+color: var(--theme-color);
+}
+
+/*今日笔记时红点去除 today's dot*/
+
+body.color-scheme-options-flamingo.theme-light #calendar-container .dot {
+stroke: transparent;
+}
+
+
+
+body.color-scheme-options-flamingo.theme-light #calendar-container .day:active, 
+
+body.color-scheme-options-flamingo.theme-light #calendar-container .active, 
+body.color-scheme-options-flamingo.theme-light #calendar-container .active.today {
+background-color: #f5a7a2 !important;
+}
+
+body.color-scheme-options-flamingo.theme-light #calendar-container .day.has-note.active:not(.today) {
+background-color: #f5a7a2 !important;
+color: var(--text-accent) !important;
+font-weight: 700;
+}
+
+/*
+#calendar-container .active.today {
+box-shadow: 0 0 1px 2px transparent;
+}
+*/
+
+/*点调整 dot*/
+
+body.color-scheme-options-flamingo.theme-light #calendar-container .dot-container {
+margin-top: -2px;
+margin-bottom: -1px;
+}
+
+/*月份调整 month*/
+
+body.color-scheme-options-flamingo.theme-light #calendar-container .month {
+font-size: 20px;
+line-height: 1;
+}
+
+/*年份调整 year*/
+
+body.color-scheme-options-flamingo.theme-light #calendar-container .year {
+font-size: 20px;
+line-height: 1;
+}
+
+/*星期数 week*/
+
+body.color-scheme-options-flamingo.theme-light #calendar-container .week-num {
+/*border-right: 2px solid var(--green) !important;*/
+background-color: var(--calendar-week-background-color);
+font-weight: 600;
+}
+
+/*星期数悬停 week hover*/
+
+body.color-scheme-options-flamingo.theme-light #calendar-container .week-num:hover {
+background-color: var(--calendar-week-hover) !important;
+}
+
+/*星期数表头*//*不完善，等插件更新*//*
+#calendar-container th:not(.svelte-1lgyrog):first-child {
+background-color: var(--green) !important;
+}
+*/
+
+/*隐藏scrollbar*/
+/*div.view-content::-webkit-scrollbar {
+display: none !important;
+}*/
+
+
+/*比上面那个还菜鸟的人做的一些修改
+*/
+
+body.color-scheme-options-flamingo.theme-light .nav-folder.mod-root > .nav-folder-title {
+background-color: var(--background-secondary-alt-bg-3-bt)
+}
+
+body.color-scheme-options-flamingo.theme-light .admonition {
+background-color:#ffebec15 !important;
+}
+
+body.color-scheme-options-flamingo.theme-light {
+--font-family-vault:                                Arlrdbd, Source Han Sans, Noto Sans CJK, Source Sans Pro !important; /*左侧库名字体*/
+--font-family-folder-file-title: Arlrdbd, Source Han Sans, Noto Sans CJK, Source Sans Pro !important;/*左侧边栏文件、文件夹字体*/ 
+}
+
+body.color-scheme-options-flamingo.theme-light .tag[href^="#DailyNote"] {
+background-color: var(--tag1);
+font-weight: 600;
+font-family: var(--font-family-special-tag) !important;
+}
+body.color-scheme-options-flamingo.theme-light .tag[href^="#DailyNote"]::after {
+content:'❀';
+font-size: var(--font-size-emoji-after-tag);
+}
+
+body.color-scheme-options-flamingo.theme-light .search-result-file-match {
+background: transparent;
+}
+
+/*@Lavi & @嘴 的Flamingo主题色（原Pink Topaz）到此结束 */
 
 
 /*===========*/
