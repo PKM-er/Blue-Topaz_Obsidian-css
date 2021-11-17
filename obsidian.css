@@ -3837,18 +3837,18 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --main-color: #f1b024;
   --low-color: var(--color3);
   --high-color: var(--color8);
-  --deep-color:var(--color11);
+  --deep-color: var(--color11);
 
 
-  --bg-color:#f8f8f5;
-  --bg-color2:#f0ede0;
+  --bg-color: #f8f8f5;
+  --bg-color2: #f0ede0;
 
 
   --background-primary: var(--bg-color);
   --background-primary-alt: var(--bg-color2);
   --background-secondary: var(--bg-color);
   --background-secondary-alt: var(--bg-color);
-  --background-secondary-alt-bg-4-bt:var(--bg-color);
+  --background-secondary-alt-bg-4-bt: var(--bg-color);
   --background-accent: #fff;
   --background-modifier-border: #e1dfdf;
   --background-modifier-form-field: #fff;
@@ -3859,10 +3859,10 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --background-modifier-error-rgb: 230, 135, 135;
   --background-modifier-error-hover: #FF9494;
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
-  
+
   --text-accent: var(--main-color);
-  --text-accent-hover:  var(--low-color);
-  
+  --text-accent-hover: var(--low-color);
+
   --text-normal: #0e0e0e;
   --text-muted: #7f7f7f;
   --text-highlight: #000000;
@@ -3881,28 +3881,30 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
 
   --interactive-accent-rgb: 215, 178, 88;
   --interactive-accent: var(--main-color);
-  --interactive-accent-hover:  var(--low-color);
+  --interactive-accent-hover: var(--low-color);
 
   --panel-border-color: #dbdbdc;
   --search-text: #000000;
   --folder-title: #000000;
 
-  --mark-highlight: #ffd298b4;  /*preview*/
-  --mark-highlight-strong-em: #ff880049; 
+  --mark-highlight: #ffd298b4;
+  /*preview*/
+  --mark-highlight-strong-em: #ff880049;
   --strong-em-highlight-color: var(--color11);
-  --text-highlight-bg: #ffd298d8; /*edit*/
+  --text-highlight-bg: #ffd298d8;
+  /*edit*/
   --text-search-highlight-bg: var(--color2);
-  
+
   --background-search-result: #f3f3f3;
   --search-result-file-matched-bg: var(--low-color);
 
-  --background-primary-bg-4-bt: var(--bg-color); 
-  --background-primary-alt-bg-4-bt:  var(--bg-color);
-  --background-secondary-bg-4-bt:  var(--bg-color);
-  --background-secondary-alt-bg-4-bt:  var(--bg-color); 
+  --background-primary-bg-4-bt: var(--bg-color);
+  --background-primary-alt-bg-4-bt: var(--bg-color);
+  --background-secondary-bg-4-bt: var(--bg-color);
+  --background-secondary-alt-bg-4-bt: var(--bg-color);
 
-  --background-mobile-drawer-1:  var(--bg-color);
-  --background-mobile-drawer-2:  var(--bg-color);
+  --background-mobile-drawer-1: var(--bg-color);
+  --background-mobile-drawer-2: var(--bg-color);
   --background-modifier-border-hr: #585858;
   --background-secondary-alt-bg-4-bt-publish: #eeeeee61;
 
@@ -3930,7 +3932,7 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --light-purple: #b74ff3;
   --blue-green: #3bd4da;
   --white: #ffffff;
-  
+
 
   --embed-color: #b6d6ff4f;
   --search-result-file-title-color: var(--main-color);
@@ -3955,7 +3957,7 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --list-ol-block-color: var(--deep-color);
   --list-ol-number-color: var(--high-color);
   --list-ol-hover: var(--low-color);
- 
+
   /*tags*/
   --tag-text: #f8f8f8;
   --stag1: #fa8787;
@@ -4006,11 +4008,11 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --graph-text-color: #696969;
   --graphtag: #77d425cc;
   --graph-attach: #afcfe0cc;
-  --graph-circle:  var(--color3);
+  --graph-circle: var(--color3);
   --graph-line: #b1b1b1;
-  --graph-unresolved: #db4e4ecc; 
+  --graph-unresolved: #db4e4ecc;
   --link-unresolved-highlight: #df4747;
-  --graph-arrow: #e25300; 
+  --graph-arrow: #e25300;
   --graph-control-bg: var(--bg-color);
 
   /*mermaid*/
@@ -4047,7 +4049,7 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --event-item-color7: var(--color8);
   --event-item-color8: var(--color9);
   --event-item-color9: var(--color10);
-  --event-item-color10:var(--color11);
+  --event-item-color10: var(--color11);
 
   /*colourful notes*/
   --text-gray: #37352f99;
@@ -4073,7 +4075,7 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
 
   --note-important: #fd4141;
   --note-cloze: #000000;
-	
+
   /* stickies */
   --stickies-color-1: #b3e2b3;
   --stickies-color-2: #e9c6f1;
@@ -4401,34 +4403,34 @@ body.color-scheme-options-honey-milk-topaz #alendar-container {
 /*巧克力色 by Lillian */
 body.color-scheme-options-chocolate-topaz.theme-light {
 
-  --color1: #eed2aa;
-  --color2: #d6bc97;
-  --color3: #b6986f;
-  --color4: #947b57;
-  --color5: #6f5b3e;
-  --color6: #6f4b3e; 
-  --color7: #614237;
-  --color8: #53352a;
-  --color9: #462a20;
-  --color10: #3a2016;
-  --color11: #361b11;
+  --color1: #f8d3a0;
+  --color2: #d8a86a;
+  --color3: #c2907a;
+  --color4: #af7d6b;
+  --color5: #af694f;
+  --color6: #74412d;
+  --color7: #683725;
+  --color8: #502819;
+  --color9: #552917;
+  --color10: #572917;
+  --color11: #4b1e0e;
 
 
   --main-color: var(--color6);
   --low-color: var(--color3);
   --high-color: var(--color8);
-  --deep-color:var(--color11);
+  --deep-color: var(--color11);
 
 
-  --bg-color:#faf4eb;
-  --bg-color2:#f7e6ce;  
+  --bg-color: #faf4eb;
+  --bg-color2: #f7e6ce;
 
 
   --background-primary: var(--bg-color);
   --background-primary-alt: var(--bg-color2);
   --background-secondary: var(--bg-color);
   --background-secondary-alt: var(--bg-color);
-  --background-secondary-alt-bg-4-bt:var(--bg-color);
+  --background-secondary-alt-bg-4-bt: var(--bg-color);
   --background-accent: #fff;
   --background-modifier-border: #e1dfdf;
   --background-modifier-form-field: #fff;
@@ -4439,10 +4441,10 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --background-modifier-error-rgb: 230, 135, 135;
   --background-modifier-error-hover: #FF9494;
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
-  
+
   --text-accent: var(--main-color);
-  --text-accent-hover:  var(--low-color);
-  
+  --text-accent-hover: var(--low-color);
+
   --text-normal: #0e0e0e;
   --text-muted: #7f7f7f;
   --text-highlight: #000000;
@@ -4459,30 +4461,32 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --interactive-normal: #eaeaeb;
   --interactive-hover: #dbdbdc;
 
-  --interactive-accent-rgb: 215, 178, 88;
-  --interactive-accent: var(--main-color);
-  --interactive-accent-hover:  var(--low-color);
+  --interactive-accent: var(--main-color); /*主题强调色*/
+  --interactive-accent-rgb: 104, 56, 39;
+  --interactive-accent-hover: var(--low-color);
 
   --panel-border-color: #dbdbdc;
   --search-text: #000000;
   --folder-title: #000000;
 
-  --mark-highlight: #ffd298b4;  /*preview*/
-  --mark-highlight-strong-em: #ff880049; 
+  --mark-highlight: #ffd298b4;
+  /*preview*/
+  --mark-highlight-strong-em: #ff880049;
   --strong-em-highlight-color: var(--color11);
-  --text-highlight-bg: #ffd298d8; /*edit*/
+  --text-highlight-bg: #ffd298d8;
+  /*edit*/
   --text-search-highlight-bg: #ffd1dd;
-  
+
   --background-search-result: #f3f3f3;
   --search-result-file-matched-bg: var(--low-color);
 
-  --background-primary-bg-4-bt: var(--bg-color); 
-  --background-primary-alt-bg-4-bt:  var(--bg-color);
-  --background-secondary-bg-4-bt:  var(--bg-color);
-  --background-secondary-alt-bg-4-bt:  var(--bg-color); 
+  --background-primary-bg-4-bt: var(--bg-color);
+  --background-primary-alt-bg-4-bt: var(--bg-color);
+  --background-secondary-bg-4-bt: var(--bg-color);
+  --background-secondary-alt-bg-4-bt: var(--bg-color);
 
-  --background-mobile-drawer-1:  var(--bg-color);
-  --background-mobile-drawer-2:  var(--bg-color);
+  --background-mobile-drawer-1: var(--bg-color);
+  --background-mobile-drawer-2: var(--bg-color);
   --background-modifier-border-hr: #585858;
   --background-secondary-alt-bg-4-bt-publish: #eeeeee61;
 
@@ -4494,12 +4498,13 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --scrollbar-thumb: #c6c6c6a8;
 
 
-  
+
 
   --embed-color: #b6d6ff4f;
   --search-result-file-title-color: var(--main-color);
   --theme-color: var(--interactive-accent);
-  --theme-color-translucent: var(--low-color);  /*鼠标经过时文件夹背景色*/
+  --theme-color-translucent: var(--low-color);
+  /*鼠标经过时文件夹背景色*/
   --theme-color-translucent-1: var(--color1);
   --color-specification: var(--high-color);
   --allow-1: #ec9a3c;
@@ -4519,7 +4524,7 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --list-ol-block-color: var(--deep-color);
   --list-ol-number-color: var(--high-color);
   --list-ol-hover: var(--low-color);
- 
+
   /*tags*/
   --tag-text: #f8f8f8;
   --stag1: #fa8787;
@@ -4559,22 +4564,22 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   */
 
   /*Titles*/
-  --h1-color: var(--color6);
-  --h2-color: var(--color7);
-  --h3-color: var(--color8);
-  --h4-color: var(--color9);
-  --h5-color: var(--color10);
-  --h6-color: var(--color11);
+  --h1-color: var(--color7);
+  --h2-color: var(--color6);
+  --h3-color: var(--color5);
+  --h4-color: var(--color4);
+  --h5-color: var(--color3);
+  --h6-color: var(--color2);
 
   /*graph*/
   --graph-text-color: #696969;
   --graphtag: #77d425cc;
   --graph-attach: #afcfe0cc;
-  --graph-circle:  var(--color3);
+  --graph-circle: var(--color3);
   --graph-line: #b1b1b1;
-  --graph-unresolved: #db4e4ecc; 
+  --graph-unresolved: #db4e4ecc;
   --link-unresolved-highlight: #df4747;
-  --graph-arrow: #e25300; 
+  --graph-arrow: #e25300;
   --graph-control-bg: var(--bg-color);
 
   /*mermaid*/
@@ -4611,7 +4616,7 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --event-item-color7: var(--color8);
   --event-item-color8: var(--color9);
   --event-item-color9: var(--color10);
-  --event-item-color10:var(--color11);
+  --event-item-color10: var(--color11);
 
 
 
@@ -4638,39 +4643,39 @@ body.color-scheme-options-chocolate-topaz.theme-light {
 }
 
 body.color-scheme-options-chocolate-topaz.theme-dark {
-/* 焦茶色 焦茶#6f4b3e */
+  /* 焦茶色 焦茶#6f4b3e */
 
---color1: #eed2aa;
---color2: #d6bc97;
---color3: #b6986f;
---color4: #947b57;
---color5: #6f5b3e;
---color6: #6f4b3e;  /*第一步：在这里放入你的主题色。 然后上面和下面用选择器选择更浅和更深的颜色*/
---color7: #614237;
---color8: #53352a;
---color9: #462a20;
---color10: #3a2016;
---color11: #361b11;
+  --color1: #f8d3a0;
+  --color2: #d8a86a;
+  --color3: #c2907a;
+  --color4: #af7d6b;
+  --color5: #af694f;
+  --color6: #74412d;
+  --color7: #683725;
+  --color8: #502819;
+  --color9: #552917;
+  --color10: #572917;
+  --color11: #4b1e0e;
 
---main-color: var(--color6);
---low-color: var(--color3);
---high-color: var(--color8);
---deep-color:var(--color11);
+  --main-color: var(--color6);
+  --low-color: var(--color3);
+  --high-color: var(--color7);
+  --deep-color: var(--color11);
 
-/*黑暗颜色的背景不建议修改*/
---bg-color:#222222;
---bg-color2:#444444;
-
-
-
---background-primary: var(--bg-color);
---background-primary-alt: var(--bg-color2);
---background-secondary: var(--bg-color);
---background-secondary-alt: var(--bg-color);
---background-secondary-alt-bg-4-bt:var(--bg-color);
+  /*黑暗颜色的背景不建议修改*/
+  --bg-color: #222222;
+  --bg-color2: #444444;
 
 
-/*不用管
+
+  --background-primary: var(--bg-color);
+  --background-primary-alt: var(--bg-color2);
+  --background-secondary: var(--bg-color);
+  --background-secondary-alt: var(--bg-color);
+  --background-secondary-alt-bg-4-bt: var(--bg-color);
+
+
+  /*不用管
 --background-accent: #000;
 
 --background-modifier-form-field: rgba(0, 0, 0, 0.3);
@@ -4682,190 +4687,240 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
 --background-modifier-error-hover: #470000;
 --background-modifier-cover: rgba(0, 0, 0, 0.6);
 */
---background-modifier-border: #565656; /*一些线条颜色*/
+  --background-modifier-border: #565656;
+  /*一些线条颜色*/
 
---text-accent: var(--low-color);
---text-accent-hover: var(--main-color); 
+  --text-accent: var(--low-color);
+  --text-accent-hover: var(--main-color);
 
---text-normal: #bdbdbd; /*一般文字颜色*/
---text-highlight: #f3f3f3; /*==高亮== 文字颜色*/
---text-highlight-2: #e4e4e4; /*引用框>==高亮== 文字颜色*/
---text-muted: #8a8a8a;  /*muted 文字颜色*/
---text-faint: #797979;  /*faint 文字颜色*/
---text-folder-file: #b3b3b3; /*文件夹、文件 文字颜色*/
---accent-strong: #f7f7f7; /*加粗 文字颜色*/
---accent-em: #a4ca8e; /*斜体 文字颜色*/
-/*不用管
+  --text-normal: #bdbdbd;
+  /*一般文字颜色*/
+  --text-highlight: #f3f3f3;
+  /*==高亮== 文字颜色*/
+  --text-highlight-2: #e4e4e4;
+  /*引用框>==高亮== 文字颜色*/
+  --text-muted: #8a8a8a;
+  /*muted 文字颜色*/
+  --text-faint: #797979;
+  /*faint 文字颜色*/
+  --text-folder-file: #b3b3b3;
+  /*文件夹、文件 文字颜色*/
+  --accent-strong: #f7f7f7;
+  /*加粗 文字颜色*/
+  --accent-em: #a4ca8e;
+  /*斜体 文字颜色*/
+  /*不用管
 --text-error: #e16d76;
 --text-error-hover: #c9626a;
 */
---text-selection: #47a5914d;  /*鼠标选择 文字背景颜色*/
+  --text-selection: #47a5914d;
+  /*鼠标选择 文字背景颜色*/
   /*不用管
 --text-on-accent: #dcddde;
 --interactive-normal: #20242b;
 --interactive-hover: #353b47;
   */
---interactive-accent: var(--color10); /*主题强调色*/
---interactive-accent-rgb: 215, 178, 88;    /*主题强调色 rgb , 需与主题色一致（把上面的值转成rgb放下面）*/
---interactive-accent-hover: var(--main-color);  /*主题强调色 鼠标悬浮时颜色*/
---panel-border-color: #18191e; /*侧边栏、下部状态栏线条颜色，改了没有，线条被我取消了 :p*/
---search-text: #e0e0e0;  /*搜索结果文字颜色*/
---folder-title: #ffffff; /*文件栏文件夹文字颜色*/
+  --interactive-accent: var(--main-color); /*主题强调色*/
+  --interactive-accent-rgb: 104, 56, 39;
+  /*主题强调色 rgb , 需与主题色一致（把上面的值转成rgb放下面）*/
+  --interactive-accent-hover: var(--main-color);
+  /*主题强调色 鼠标悬浮时颜色*/
+  --panel-border-color: #18191e;
+  /*侧边栏、下部状态栏线条颜色，改了没有，线条被我取消了 :p*/
+  --search-text: #e0e0e0;
+  /*搜索结果文字颜色*/
+  --folder-title: #ffffff;
+  /*文件栏文件夹文字颜色*/
 
---text-highlight-bg: #89853b8a; /*==高亮== 编辑模式edit*/
---mark-highlight: #89853b8a; /*==高亮== 预览preview*/
---mark-highlight-strong-em: #fff7603a; /*==***高亮***== 背景颜色*/
---strong-em-highlight-color: var(--color11);
---text-search-highlight-bg: #bb4361; /* 我忘了=_=||| */
---strong-em-color-1: #43d3ff; /*加粗斜体渐变色1*/
---strong-em-color-2: #baaaff; /*加粗斜体渐变色2*/
+  --text-highlight-bg: #89853b8a;
+  /*==高亮== 编辑模式edit*/
+  --mark-highlight: #89853b8a;
+  /*==高亮== 预览preview*/
+  --mark-highlight-strong-em: #fff7603a;
+  /*==***高亮***== 背景颜色*/
+  --strong-em-highlight-color: var(--color11);
+  --text-search-highlight-bg: #bb4361;
+  /* 我忘了=_=||| */
+  --strong-em-color-1: #43d3ff;
+  /*加粗斜体渐变色1*/
+  --strong-em-color-2: #baaaff;
+  /*加粗斜体渐变色2*/
 
---background-search-result: #313131; /* 搜索结果背景颜色 */
---search-result-file-matched-bg: var(--color9); /* 搜索结果文字高亮颜色 */
+  --background-search-result: #313131;
+  /* 搜索结果背景颜色 */
+  --search-result-file-matched-bg: var(--color9);
+  /* 搜索结果文字高亮颜色 */
 
---background-primary-bg-4-bt: var(--bg-color); 
---background-primary-alt-bg-4-bt:  var(--bg-color);
---background-secondary-bg-4-bt:  var(--bg-color);
---background-secondary-alt-bg-4-bt:  var(--bg-color); 
+  --background-primary-bg-4-bt: var(--bg-color);
+  --background-primary-alt-bg-4-bt: var(--bg-color);
+  --background-secondary-bg-4-bt: var(--bg-color);
+  --background-secondary-alt-bg-4-bt: var(--bg-color);
 
---background-mobile-drawer-1:  var(--bg-color);
---background-mobile-drawer-2:  var(--bg-color);
---background-modifier-border-hr: #7f7f7f;  /*分割线颜色*/
+  --background-mobile-drawer-1: var(--bg-color);
+  --background-mobile-drawer-2: var(--bg-color);
+  --background-modifier-border-hr: #7f7f7f;
+  /*分割线颜色*/
 
---background-transparent-black-or-white-1: #1b1b1b9a; /*用在kanban里的，可以不调*/
---background-transparent-black-or-white-2: #1e1e1ebd; /*用在kanban里的，可以不调*/
---background-transparent-black-or-white-3: #2f2f2f6c; /*用在kanban里的，可以不调*/
---background-transparent-blue: #003e759a; /*用在kanban里的，可以不调*/
+  --background-transparent-black-or-white-1: #1b1b1b9a;
+  /*用在kanban里的，可以不调*/
+  --background-transparent-black-or-white-2: #1e1e1ebd;
+  /*用在kanban里的，可以不调*/
+  --background-transparent-black-or-white-3: #2f2f2f6c;
+  /*用在kanban里的，可以不调*/
+  --background-transparent-blue: #003e759a;
+  /*用在kanban里的，可以不调*/
 
---scrollbar-thumb: #8282827e; /*滚动条颜色*/
-
-
-
-
---embed-color: #1156a534;   /*![[]] 背景颜色*/
---search-result-file-title-color: var(--main-color);
---theme-color: var(--interactive-accent);
---theme-color-translucent: var(--deep-color);
---theme-color-translucent-1: var(--color1);
---color-specification: var(--high-color);
-
---allow-1: #d18828; /*搜索框里黄色箭头颜色*/
---background-blockquote: #9191911c; /*引用框背景颜色*/
---background-code: #1111118c; /*代码框背景颜色*/
---background-code-2: #4c4c4cc5; /*行内代码背景颜色*/
---text-color-code: #d58000; /*代码框文字颜色*/
-
---internal-link-color-in-highlight: var(--main-color); /*==[[]]==双链文字颜色*/
-
-/*list*/
---list-ul-block-color: #e19742a9; /*无序列表框颜色*/
---list-ul-disc-color: #eb9563; /*dataview吃豆人与ghost黄色颜色*/
---green-1: #79c142; /*dataview吃豆人绿色颜色*/
---list-ul-hover: #e28915de; /*无序列表框 鼠标悬浮颜色*/
---list-ol-block-color: var(--deep-color);
---list-ol-number-color: var(--high-color);
---list-ol-hover: var(--low-color);
-
-/*tags*/
---tag-text: #e4e4e4;
---stag1: #f08383;
---stag1-bg: #bd1919;
---stag2: #e7b263;
---stag2-bg: #ac6700;
---stag3: #77df89;
---stag3-bg: #058c1c;
-
-/*普通标签颜色*/
---tag1: var(--color11);
---tag2: var(--color10);
---tag3: var(--color9);
---tag4: var(--color8);
---tag5: var(--color7);
---tag6: var(--color6);
---tag7: var(--color5);
---tag8: var(--color4);
---tag9: var(--color3);
-
---color-tag-edit: var(--main-color);
---tag-dailynote: var(--mian-color);
---tag-dailynote-bg: var(--color5);
---tag-weeklynote: var(--color3);
---tag-weeklynote-bg: var(--color6);
---tag-questions: var(--color8);
---tag-questions-bg: var(--color8);
---tag-ideas: #fcfcc0;
---tag-ideas-bg: #565656d8;
-
-/*titles*/
---h1-color: var(--color6);
---h2-color: var(--color7);
---h3-color: var(--color8);
---h4-color: var(--color9);
---h5-color: var(--color10);
---h6-color: var(--color11);
-
-/*graph*/
---graph-text-color: #B5B5B5;  /*图谱文字颜色*/
---graphtag: #88d842bb; /*图谱线颜色*/
---graph-attach: #b2cfe0bb; /*图谱附件颜色*/
---graph-circle: var(--color8); /*图谱普通点颜色*/
---graph-line: #8c8c8c;  /*图谱线颜色*/
---graph-unresolved: #f08080de; /*图谱未创建点颜色，兼未创建双链颜色*/
---link-unresolved-highlight: #ffa6a6; /*未创建双链颜色加高亮==[[]]==文字颜色*/
---graph-arrow: #c23917; /*图谱箭头颜色*/
---graph-control-bg: #00000080; /*图谱控制窗背景颜色*/
-
-/*mermaid*/
-/*mermaid*/
---mermaid-active-task-color: var(--low-color);
---mermaid-seq-dia-color: var(--high-color);
-
-/*table*/
---table-background-color: #8a8a8a32;
---table-background-color-odd: #0000001c;
---table-border-color: #878787;
---table-thead-background-color:  #462a20bb;
---table-hover-raw-color: #462a2075;
---table-hover-color: #1f65a221;
---table-hover-thead-color:  #462a208a;
-
-/*calendar*/
---calendar-week-color: var(--high-color);
---calendar-week-hover: var(--color1);
---calendar-week-background-color: var(--bg-color);
---calendar-today-background-color: var(--color1);
-
-/*day planner*/
---day-planner-pie: var(--color1);
---day-planner-timeline: #000000;
---day-planner-line: var(--low-color);
---day-planner-dot: var(--low-color);
---day-planner-item-hover: var(--main-color);
---event-item-color1: var(--color2);
---event-item-color2: var(--color3);
---event-item-color3: var(--color4);
---event-item-color4: var(--color5);
---event-item-color5: var(--color6);
---event-item-color6: var(--color7);
---event-item-color7: var(--color8);
---event-item-color8: var(--color9);
---event-item-color9: var(--color10);
---event-item-color10:var(--color11);
+  --scrollbar-thumb: #8282827e;
+  /*滚动条颜色*/
 
 
-/*Sliding panes*/
---sliding-panes-header-color: var(--deep-color);
---background-4-sliding-panel: #252525ed; /* sliding panes 背景颜色 */
 
 
---color-view-header-gradient-1: var(--bg-color2);
---color-view-header-gradient-2: var(--bg-color);
+  --embed-color: #1156a534;
+  /*![[]] 背景颜色*/
+  --search-result-file-title-color: var(--main-color);
+  --theme-color: var(--interactive-accent);
+  --theme-color-translucent: var(--deep-color);
+  --theme-color-translucent-1: var(--color1);
+  --color-specification: var(--high-color);
 
-/*checkbox*/
---checkbox-color-0: var(--main-color); 
+  --allow-1: #d18828;
+  /*搜索框里黄色箭头颜色*/
+  --background-blockquote: #9191911c;
+  /*引用框背景颜色*/
+  --background-code: #1111118c;
+  /*代码框背景颜色*/
+  --background-code-2: #4c4c4cc5;
+  /*行内代码背景颜色*/
+  --text-color-code: #d58000;
+  /*代码框文字颜色*/
+
+  --internal-link-color-in-highlight: var(--main-color);
+  /*==[[]]==双链文字颜色*/
+
+  /*list*/
+  --list-ul-block-color: #e19742a9;
+  /*无序列表框颜色*/
+  --list-ul-disc-color: #eb9563;
+  /*dataview吃豆人与ghost黄色颜色*/
+  --green-1: #79c142;
+  /*dataview吃豆人绿色颜色*/
+  --list-ul-hover: #e28915de;
+  /*无序列表框 鼠标悬浮颜色*/
+  --list-ol-block-color: var(--deep-color);
+  --list-ol-number-color: var(--high-color);
+  --list-ol-hover: var(--low-color);
+
+  /*tags*/
+  --tag-text: #e4e4e4;
+  --stag1: #f08383;
+  --stag1-bg: #bd1919;
+  --stag2: #e7b263;
+  --stag2-bg: #ac6700;
+  --stag3: #77df89;
+  --stag3-bg: #058c1c;
+
+  /*普通标签颜色*/
+  --tag1: var(--color11);
+  --tag2: var(--color10);
+  --tag3: var(--color9);
+  --tag4: var(--color8);
+  --tag5: var(--color7);
+  --tag6: var(--color6);
+  --tag7: var(--color5);
+  --tag8: var(--color4);
+  --tag9: var(--color3);
+
+  --color-tag-edit: var(--main-color);
+  --tag-dailynote: var(--mian-color);
+  --tag-dailynote-bg: var(--color5);
+  --tag-weeklynote: var(--color3);
+  --tag-weeklynote-bg: var(--color6);
+  --tag-questions: var(--color8);
+  --tag-questions-bg: var(--color8);
+  --tag-ideas: #fcfcc0;
+  --tag-ideas-bg: #565656d8;
+
+  /*titles*/
+  --h1-color: var(--color2);
+  --h2-color: var(--color3);
+  --h3-color: var(--color4);
+  --h4-color: var(--color5);
+  --h5-color: var(--color6);
+  --h6-color: var(--color7);
+
+  /*graph*/
+  --graph-text-color: #B5B5B5;
+  /*图谱文字颜色*/
+  --graphtag: #88d842bb;
+  /*图谱线颜色*/
+  --graph-attach: #b2cfe0bb;
+  /*图谱附件颜色*/
+  --graph-circle: var(--color8);
+  /*图谱普通点颜色*/
+  --graph-line: #8c8c8c;
+  /*图谱线颜色*/
+  --graph-unresolved: #f08080de;
+  /*图谱未创建点颜色，兼未创建双链颜色*/
+  --link-unresolved-highlight: #ffa6a6;
+  /*未创建双链颜色加高亮==[[]]==文字颜色*/
+  --graph-arrow: #c23917;
+  /*图谱箭头颜色*/
+  --graph-control-bg: #00000080;
+  /*图谱控制窗背景颜色*/
+
+  /*mermaid*/
+  /*mermaid*/
+  --mermaid-active-task-color: var(--low-color);
+  --mermaid-seq-dia-color: var(--high-color);
+
+  /*table*/
+  --table-background-color: #8a8a8a32;
+  --table-background-color-odd: #0000001c;
+  --table-border-color: #878787;
+  --table-thead-background-color: #462a20bb;
+  --table-hover-raw-color: #462a2075;
+  --table-hover-color: #1f65a221;
+  --table-hover-thead-color: #462a208a;
+
+  /*calendar*/
+  --calendar-week-color: var(--high-color);
+  --calendar-week-hover: var(--color1);
+  --calendar-week-background-color: var(--bg-color);
+  --calendar-today-background-color: var(--color1);
+
+  /*day planner*/
+  --day-planner-pie: var(--color1);
+  --day-planner-timeline: #000000;
+  --day-planner-line: var(--low-color);
+  --day-planner-dot: var(--low-color);
+  --day-planner-item-hover: var(--main-color);
+  --event-item-color1: var(--color2);
+  --event-item-color2: var(--color3);
+  --event-item-color3: var(--color4);
+  --event-item-color4: var(--color5);
+  --event-item-color5: var(--color6);
+  --event-item-color6: var(--color7);
+  --event-item-color7: var(--color8);
+  --event-item-color8: var(--color9);
+  --event-item-color9: var(--color10);
+  --event-item-color10: var(--color11);
 
 
---activeline-background: var(--bg-color2);
+  /*Sliding panes*/
+  --sliding-panes-header-color: var(--deep-color);
+  --background-4-sliding-panel: #252525ed;
+  /* sliding panes 背景颜色 */
+
+
+  --color-view-header-gradient-1: var(--bg-color2);
+  --color-view-header-gradient-2: var(--bg-color);
+
+  /*checkbox*/
+  --checkbox-color-0: var(--main-color);
+
+
+  --activeline-background: var(--bg-color2);
 
 
 }
@@ -4894,6 +4949,7 @@ body.color-scheme-options-chocolate-topaz #alendar-container {
   margin: -21px -8px 0px -8px;
   line-height: 0.6;
 }
+
 /*=================== Lillian 的配色 end  ========================*/
 
 /*===========*/
