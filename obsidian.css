@@ -3305,9 +3305,6 @@ body.color-scheme-options-flamingo.theme-light {
   --background-mobile-drawer-2: #efe9d9;
   --graph-control-bg: #efe9d9;
 
-  --color-view-header-gradient-1: #efe9d9;
-  --color-view-header-gradient-2: #efe9d9;
-
   --background-primary: #efe9d9;
   --background-primary-alt: #ffdece;
   --background-secondary: #efe9d9;
@@ -3625,24 +3622,20 @@ body.color-scheme-options-flamingo.theme-light #calendar-container {
   line-height: 0.6;
 }
 
-
-
 /*表格调整*/
 /*星期*/
-
 body.color-scheme-options-flamingo.theme-light #calendar-container th {
   padding: 6px 0;
   border-radius: 0px !important;
   background-color: var(--table-thead-background-color) !important;
 }
 
-
-body.color-scheme-options-flamingo.theme-light #calendar-container .week-num, #calendar-container .day {
+body.color-scheme-options-flamingo.theme-light #calendar-container .week-num, 
+body.color-scheme-options-flamingo.theme-light #calendar-container .day {
   border-radius: 0px !important;
 }
 
 /*天*/
-
 body.color-scheme-options-flamingo.theme-light #calendar-container td {
   width: 12.5%;
   border-right: 0px solid var(--background-secondary-alt);
@@ -3651,16 +3644,13 @@ body.color-scheme-options-flamingo.theme-light #calendar-container td {
   border-radius: 0px !important;
 }
 
-
 body.color-scheme-options-flamingo.theme-light #calendar-container tr {
   border: 2px solid var(--background-secondary-alt);
 }
 
-
 body.color-scheme-options-flamingo.theme-light #calendar-container .day:not(:empty):hover {
   background-color: var(--table-hover-color);
 }
-
 
 body.color-scheme-options-flamingo.theme-light #calendar-container .calendar {
   background-color: #ffdece;
@@ -3668,7 +3658,6 @@ body.color-scheme-options-flamingo.theme-light #calendar-container .calendar {
 }
 
 /*“Today”*/
-
 body.color-scheme-options-flamingo.theme-light #calendar-container .reset-button {
   font-size: 14px !important;
   margin: 0;
@@ -3679,25 +3668,15 @@ body.color-scheme-options-flamingo.theme-light #calendar-container .reset-button
 }
 
 /*悬停Today*/
-
 body.color-scheme-options-flamingo.theme-light #calendar-container .reset-button:hover {
   color: var(--header-color);
   background-color: var(--table-hover-raw-color);
 }
 
 /*悬停arrow*/
-
 body.color-scheme-options-flamingo.theme-light #calendar-container .arrow:hover {
   color: var(--theme-color);
 }
-
-/*今日笔记时红点去除 today's dot*/
-
-body.color-scheme-options-flamingo.theme-light #calendar-container .dot {
-  stroke: transparent;
-}
-
-
 
 body.color-scheme-options-flamingo.theme-light #calendar-container .day:active,
 
@@ -3712,7 +3691,6 @@ body.color-scheme-options-flamingo.theme-light #calendar-container .day.has-note
   font-weight: 700;
 }
 
-
 /*
 #calendar-container .active.today {
 box-shadow: 0 0 1px 2px transparent;
@@ -3720,28 +3698,24 @@ box-shadow: 0 0 1px 2px transparent;
 */
 
 /*点调整 dot*/
-
 body.color-scheme-options-flamingo.theme-light #calendar-container .dot-container {
   margin-top: -2px;
   margin-bottom: -1px;
 }
 
 /*月份调整 month*/
-
 body.color-scheme-options-flamingo.theme-light #calendar-container .month {
   font-size: 20px;
   line-height: 1;
 }
 
 /*年份调整 year*/
-
 body.color-scheme-options-flamingo.theme-light #calendar-container .year {
   font-size: 20px;
   line-height: 1;
 }
 
 /*星期数 week*/
-
 body.color-scheme-options-flamingo.theme-light #calendar-container .week-num {
   /*border-right: 2px solid var(--green) !important;*/
   background-color: var(--calendar-week-background-color);
@@ -3754,23 +3728,8 @@ body.color-scheme-options-flamingo.theme-light #calendar-container .week-num:hov
   background-color: var(--calendar-week-hover) !important;
 }
 
-/*星期数表头*/
-/*不完善，等插件更新*/
-/*
-#calendar-container th:not(.svelte-1lgyrog):first-child {
-background-color: var(--green) !important;
-}
-*/
 
-/*隐藏scrollbar*/
-/*div.view-content::-webkit-scrollbar {
-display: none !important;
-}*/
-
-
-/*比上面那个还菜鸟的人做的一些修改
-*/
-
+/*比上面那个还菜鸟的人做的一些修改*/
 body.color-scheme-options-flamingo.theme-light .nav-folder.mod-root>.nav-folder-title {
   background-color: var(--background-secondary-alt-bg-3-bt)
 }
@@ -3780,10 +3739,8 @@ body.color-scheme-options-flamingo.theme-light .admonition {
 }
 
 body.color-scheme-options-flamingo.theme-light {
-  --font-family-vault: Arlrdbd, Source Han Sans, Noto Sans CJK, Source Sans Pro !important;
-  /*左侧库名字体*/
-  --font-family-folder-file-title: Arlrdbd, Source Han Sans, Noto Sans CJK, Source Sans Pro !important;
-  /*左侧边栏文件、文件夹字体*/
+  --font-family-vault: Arlrdbd, 'Source Han Sans', 'Noto Sans CJK', 'Source Sans Pro' !important; /*左侧库名字体*/
+  --font-family-folder-file-title: Arlrdbd, 'Source Han Sans', 'Noto Sans CJK', 'Source Sans Pro' !important;/*左侧边栏文件、文件夹字体*/
 }
 
 body.color-scheme-options-flamingo.theme-light .tag[href^="#DailyNote"] {
@@ -4364,7 +4321,7 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
 
 }
 
-body.color-scheme-options-honey-milk-topaz #alendar-container {
+body.color-scheme-options-honey-milk-topaz #calendar-container {
   --color-background-heading: transparent;
   --color-background-weeknum: transparent;
   --color-background-day: transparent;
