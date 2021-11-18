@@ -4357,16 +4357,13 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --color10: #572917;
   --color11: #4b1e0e;
 
-
   --main-color: var(--color6);
   --low-color: var(--color3);
   --high-color: var(--color8);
   --deep-color: var(--color11);
 
-
   --bg-color: #faf4eb;
   --bg-color2: #f7e6ce;
-
 
   --background-primary: var(--bg-color);
   --background-primary-alt: var(--bg-color2);
@@ -4439,9 +4436,6 @@ body.color-scheme-options-chocolate-topaz.theme-light {
 
   --scrollbar-thumb: #c6c6c6a8;
 
-
-
-
   --embed-color: #b6d6ff4f;
   --search-result-file-title-color: var(--main-color);
   --theme-color: var(--interactive-accent);
@@ -4493,17 +4487,6 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --tag-questions-bg: var(--color5);
   --tag-ideas: #ceb900;
   --tag-ideas-bg: #444444d8;
-
-  /*
-  --tag2: #e69040;
-  --tag3: #c2c43c;
-  --tag4: #5dcf53;
-  --tag5: #49c9ce;
-  --tag6: #62a3ec;
-  --tag7: #9270db;
-  --tag8: #e25fb0;
-  --tag9: #6b6b6b;
-  */
 
   /*Titles*/
   --h1-color: var(--color7);
@@ -4560,8 +4543,6 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --event-item-color9: var(--color10);
   --event-item-color10: var(--color11);
 
-
-
   /*Sliding panes*/
   --sliding-panes-header-color: var(--deep-color);
   --background-4-sliding-pane: var(--bg-color);
@@ -4579,9 +4560,7 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   /*checkbox*/
   --checkbox-color-0: var(--main-color);
 
-
   --activeline-background: var(--bg-color2);
-
 }
 
 body.color-scheme-options-chocolate-topaz.theme-dark {
@@ -4970,7 +4949,6 @@ span[alt*="+grid"] {
   object-fit: cover;
 }
 
-
 /* cssclass: kanban */
 /* adapted from spectrum theme, thanks to @Braweria. https://github.com/Braweria/Spectrum */
 /* a kind of css-based pseudo-kanban feature */
@@ -5111,7 +5089,7 @@ span[alt*="+grid"] {
   all: initial
 }
 
-.kanban ul>li.task-list-item {
+.kanban ul > li.task-list-item {
   flex: 1 1 20%;
   padding: 0.1em 1em;
   margin: 0 0.1em 0.3em 0;
@@ -6529,8 +6507,12 @@ pre.HyperMD-list-line.HyperMD-list-line {
   padding: 0 0.25em;
 }
 
+.markdown-preview-view ul > li.task-list-item > * {
+  text-indent: unset;
+}
+
 li {
-  line-height: 1.75em;
+  line-height: 1.7em;
   font-family: var(--font-family-list);
 }
 
@@ -13546,7 +13528,7 @@ body.folder-style-change-options-coloful .nav-folder.mod-root>.nav-folder-childr
 }
 
 /* Scrollbars eliminated */
-.workspace-leaf-content[data-type='file-explorer'] ::-webkit-scrollbar {
+body.folder-style-change-options-coloful .workspace-leaf-content[data-type='file-explorer'] ::-webkit-scrollbar {
   width: 0px;
   height: 0px;
 }
@@ -13802,7 +13784,6 @@ body.background-settings-workplace-style-high-transparency .side-dock-ribbon-tab
 body.background-settings-workplace-style-high-transparency .side-dock-ribbon-action:not(:hover) {
   color: var(--text-normal);
 }
-
 
 /*blur*/
 body.background-settings-workplace-style-blur.theme-light .workspace::before {
