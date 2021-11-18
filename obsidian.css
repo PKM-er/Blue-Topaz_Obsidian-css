@@ -3156,11 +3156,11 @@ body.color-scheme-options-pink-topaz.theme-light {
   --h6-color: #cc76b7;
 
   /*graph*/
-  --graph-text-color: #696969;
-  --graphtag: #da9ee2cc;
-  --graph-attach: #88b0d6cc;
-  --graph-circle: #6fbf8ecc;
-  --graph-line: #b1b1b1;
+  --graph-text-color: #585858;
+  --graphtag: #86dc65cc;
+  --graph-attach: #7fb3e4cc;
+  --graph-circle: #f596bbcc;
+  --graph-line: #e6b0c9;
   --graph-unresolved: #db4e4ecc;
   --link-unresolved-highlight: #df4747;
   --graph-arrow: #e25300;
@@ -3247,9 +3247,9 @@ body.color-scheme-options-pink-topaz.theme-light {
   --color-view-header-gradient-2: #ffe4e4ef;
 
   /*checkbox*/
-  --checkbox-color-0: #4cb385;
+  --checkbox-color-0: #d879a8;
   --checkbox-color-1: #c4c116;
-  --checkbox-color-2: #4077bf;
+  --checkbox-color-2: #50a947;
   --checkbox-color-3: #ffe9e9;
   --checkbox-color-4: #fffbd4;
   --checkbox-color-5: #ad7fbf;
