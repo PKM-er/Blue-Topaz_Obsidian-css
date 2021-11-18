@@ -1583,7 +1583,7 @@ body.font-family-change-to-default.theme-dark .cm-strong.cm-em {
   --background-mobile-drawer-1: #ffffff;
   --background-mobile-drawer-2: #ffffff;
   --background-modifier-border-hr: #585858;
-  --background-secondary-alt-bg-4-bt-publish: #eeeeee61;
+  --background-secondary-alt-bg-4-bt-publish: #f6f6f6;
 
   --background-transparent-black-or-white-1: #ffffffb0;
   --background-transparent-black-or-white-2: #ffffffca;
@@ -1872,7 +1872,7 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --background-mobile-drawer-1: #ffffff;
   --background-mobile-drawer-2: #ffffff;
   --background-modifier-border-hr: #585858;
-  --background-secondary-alt-bg-4-bt-publish: #eeeeee61;
+  --background-secondary-alt-bg-4-bt-publish: #f6f6f6;
 
   --background-transparent-black-or-white-1: #ffffffb0;
   --background-transparent-black-or-white-2: #ffffffca;
@@ -2697,7 +2697,7 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --background-mobile-drawer-1: #ffffff;
   --background-mobile-drawer-2: #ffffff;
   --background-modifier-border-hr: #585858;
-  --background-secondary-alt-bg-4-bt-publish: #eeeeee61;
+  --background-secondary-alt-bg-4-bt-publish: #f6f6f6;
 
   --background-transparent-black-or-white-1: #ffffffb0;
   --background-transparent-black-or-white-2: #ffffffca;
@@ -3068,7 +3068,7 @@ body.color-scheme-options-pink-topaz.theme-light {
   --background-mobile-drawer-1: #ffffff;
   --background-mobile-drawer-2: #ffffff;
   --background-modifier-border-hr: #585858;
-  --background-secondary-alt-bg-4-bt-publish: #eeeeee61;
+  --background-secondary-alt-bg-4-bt-publish: #f6f6f6;
 
   --background-transparent-black-or-white-1: #ffffffb0;
   --background-transparent-black-or-white-2: #ffffffca;
@@ -3852,7 +3852,7 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --background-mobile-drawer-1: var(--bg-color);
   --background-mobile-drawer-2: var(--bg-color);
   --background-modifier-border-hr: #585858;
-  --background-secondary-alt-bg-4-bt-publish: #eeeeee61;
+  --background-secondary-alt-bg-4-bt-publish: #f6f6f6;
 
   --background-transparent-black-or-white-1: #ffffffb0;
   --background-transparent-black-or-white-2: #ffffffca;
@@ -4427,7 +4427,7 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --background-mobile-drawer-1: var(--bg-color);
   --background-mobile-drawer-2: var(--bg-color);
   --background-modifier-border-hr: #585858;
-  --background-secondary-alt-bg-4-bt-publish: #eeeeee61;
+  --background-secondary-alt-bg-4-bt-publish: #f6f6f6;
 
   --background-transparent-black-or-white-1: #ffffffb0;
   --background-transparent-black-or-white-2: #ffffffca;
@@ -8267,6 +8267,10 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
 .markdown-preview-view li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon {
   transform: translateX(-8px) translateY(9px) rotate(-90deg);
   opacity: 0.5;
+}
+
+ul.contains-task-list .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+  margin-left: 30px;
 }
 
 /*tag collapse indicator*/
