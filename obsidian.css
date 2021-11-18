@@ -6395,6 +6395,23 @@ p {
 }
 
 /* code */
+.cm-s-obsidian .hmd-fold-html-stub, 
+.cm-s-obsidian .hmd-fold-code-stub, 
+.cm-s-obsidian.CodeMirror .HyperMD-hover > .HyperMD-hover-content code, 
+.cm-s-obsidian .cm-formatting-hashtag, 
+.cm-s-obsidian .cm-inline-code, 
+.cm-s-obsidian .HyperMD-codeblock, 
+.cm-s-obsidian .HyperMD-hr, 
+.cm-s-obsidian .cm-hmd-frontmatter, 
+.cm-s-obsidian .cm-hmd-orgmode-markup, 
+.cm-s-obsidian .cm-formatting-code, 
+.cm-s-obsidian .cm-math, 
+.cm-s-obsidian span.hmd-fold-math-placeholder, 
+.cm-s-obsidian .CodeMirror-linewidget kbd, 
+.cm-s-obsidian .hmd-fold-html kbd {
+  font-family: var(--font-family-preview-edit-code);
+}
+
 mjx-container[jax='CHTML'] {
   outline: none;
   font-size: var(--font-size-latex);
