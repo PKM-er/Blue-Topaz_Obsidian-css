@@ -3793,7 +3793,7 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --background-primary: var(--bg-color);
   --background-primary-alt: var(--bg-color2);
   --background-secondary: var(--bg-color);
-  --background-secondary-alt: var(--bg-color);
+  --background-secondary-alt: var(--bg-color2);
   --background-secondary-alt-bg-4-bt: var(--bg-color);
   --background-accent: #fff;
   --background-modifier-border: #e1dfdf;
@@ -3896,12 +3896,12 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --internal-link-color-in-highlight: var(--main-color);
 
   /*list*/
-  --list-ul-block-color: #b9751b;
-  --list-ul-disc-color: #f39c55;
+  --list-ul-block-color: var(--color6);
+  --list-ul-disc-color: var(--main-color);
   --green-1: #3dc730;
-  --list-ul-hover: #dd922f;
-  --list-ol-block-color: var(--deep-color);
-  --list-ol-number-color: var(--high-color);
+  --list-ul-hover: var(--low-color);
+  --list-ol-block-color: var(--main-color);
+  --list-ol-number-color: var(--main-color);
   --list-ol-hover: var(--low-color);
 
   /*tags*/
@@ -4086,7 +4086,7 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
   --background-primary: var(--bg-color);
   --background-primary-alt: var(--bg-color2);
   --background-secondary: var(--bg-color);
-  --background-secondary-alt: var(--bg-color);
+  --background-secondary-alt: var(--bg-color2);
   --background-secondary-alt-bg-4-bt: var(--bg-color);
 
 
@@ -4180,7 +4180,7 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
   --search-result-file-title-color: var(--main-color);
   --theme-color: var(--interactive-accent);
   --theme-color-translucent: var(--deep-color);
-  --theme-color-translucent-1: var(--color1);
+  --theme-color-translucent-1: var(--deep-color);
   --color-specification: var(--high-color);
 
   --allow-1: #d18828;
@@ -4198,16 +4198,12 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
   /*==[[]]==双链文字颜色*/
 
   /*list*/
-  --list-ul-block-color: #e19742a9;
-  /*无序列表框颜色*/
-  --list-ul-disc-color: #eb9563;
-  /*dataview吃豆人与ghost黄色颜色*/
-  --green-1: #79c142;
-  /*dataview吃豆人绿色颜色*/
-  --list-ul-hover: #e28915de;
-  /*无序列表框 鼠标悬浮颜色*/
+  --list-ul-block-color: var(--deep-color);
+  --list-ul-disc-color: var(--main-color);
+  --green-1: #3dc730;
+  --list-ul-hover: var(--low-color);
   --list-ol-block-color: var(--deep-color);
-  --list-ol-number-color: var(--high-color);
+  --list-ol-number-color: var(--main-color);
   --list-ol-hover: var(--low-color);
 
   /*tags*/
@@ -4375,7 +4371,7 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --background-primary: var(--bg-color);
   --background-primary-alt: var(--bg-color2);
   --background-secondary: var(--bg-color);
-  --background-secondary-alt: var(--bg-color);
+  --background-secondary-alt: var(--bg-color2);
   --background-secondary-alt-bg-4-bt: var(--bg-color);
   --background-accent: #fff;
   --background-modifier-border: #e1dfdf;
@@ -4463,12 +4459,12 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --internal-link-color-in-highlight: var(--main-color);
 
   /*list*/
-  --list-ul-block-color: #b9751b;
-  --list-ul-disc-color: #f39c55;
+  --list-ul-block-color: var(--color5);
+  --list-ul-disc-color: var(--main-color);
   --green-1: #3dc730;
-  --list-ul-hover: #dd922f;
-  --list-ol-block-color: var(--deep-color);
-  --list-ol-number-color: var(--high-color);
+  --list-ul-hover: var(--low-color);
+  --list-ol-block-color: var(--main-color);
+  --list-ol-number-color: var(--main-color);
   --list-ol-hover: var(--low-color);
 
   /*tags*/
@@ -4617,7 +4613,7 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
   --background-primary: var(--bg-color);
   --background-primary-alt: var(--bg-color2);
   --background-secondary: var(--bg-color);
-  --background-secondary-alt: var(--bg-color);
+  --background-secondary-alt: var(--bg-color2);
   --background-secondary-alt-bg-4-bt: var(--bg-color);
 
 
@@ -4727,7 +4723,7 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
   --search-result-file-title-color: var(--main-color);
   --theme-color: var(--interactive-accent);
   --theme-color-translucent: var(--deep-color);
-  --theme-color-translucent-1: var(--color1);
+  --theme-color-translucent-1: var(--deep-color);
   --color-specification: var(--high-color);
 
   --allow-1: #d18828;
@@ -4744,17 +4740,12 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
   --internal-link-color-in-highlight: var(--main-color);
   /*==[[]]==双链文字颜色*/
 
-  /*list*/
-  --list-ul-block-color: #e19742a9;
-  /*无序列表框颜色*/
-  --list-ul-disc-color: #eb9563;
-  /*dataview吃豆人与ghost黄色颜色*/
-  --green-1: #79c142;
-  /*dataview吃豆人绿色颜色*/
-  --list-ul-hover: #e28915de;
-  /*无序列表框 鼠标悬浮颜色*/
-  --list-ol-block-color: var(--deep-color);
-  --list-ol-number-color: var(--high-color);
+  --list-ul-block-color: var(--color6);
+  --list-ul-disc-color: var(--main-color);
+  --green-1: #3dc730;
+  --list-ul-hover: var(--low-color);
+  --list-ol-block-color: var(--main-color);
+  --list-ol-number-color: var(--main-color);
   --list-ol-hover: var(--low-color);
 
   /*tags*/
@@ -4871,7 +4862,7 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
 
 }
 
-body.color-scheme-options-chocolate-topaz #alendar-container {
+body.color-scheme-options-chocolate-topaz #calendar-container {
   --color-background-heading: transparent;
   --color-background-weeknum: transparent;
   --color-background-day: transparent;
