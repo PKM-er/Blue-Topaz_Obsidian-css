@@ -5854,7 +5854,7 @@ body.color-scheme-options-lilac.theme-dark {
 body.color-scheme-options-lilac .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body.color-scheme-options-lilac .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
   height: 95.3%;
-  width: 2px;
+  width: 4px;
   background-color: transparent;
 }
 
