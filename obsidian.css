@@ -6507,7 +6507,7 @@ div .CodeMirror-line span.cm-hashtag-begin+.cm-hashtag.cm-meta+span.cm-hashtag.c
 }
 
 .markdown-preview-view {
-  padding: 15px 20px 10px 30px;
+  padding: 15px 30px 10px;
   width: 100%;
   height: 100%;
   position: relative;
@@ -7360,7 +7360,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
   position: absolute;
   font-size: 0.7rem;
   width: auto;
-  left: -24px;
+  margin-left: -24px;
   border: 1px solid;
   padding: 0px 2px;
   border-radius: var(--radius-xs);
@@ -7372,7 +7372,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
   position: absolute;
   font-size: 0.7rem;
   width: auto;
-  left: -25px;
+  margin-left: -25px;
   border: 1px solid;
   padding: 0px 2px;
   border-radius: var(--radius-xs);
@@ -7384,7 +7384,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
   position: absolute;
   font-size: 0.65rem;
   width: auto;
-  left: -25px;
+  margin-left: -25px;
   border: 1px solid;
   padding: 0px 2px;
   border-radius: var(--radius-xs);
@@ -7396,7 +7396,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
   position: absolute;
   font-size: 0.6rem;
   width: auto;
-  left: -25px;
+  margin-left: -25px;
   border: 1px solid;
   padding: 0px 2px;
   border-radius: var(--radius-xs);
@@ -7408,7 +7408,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
   position: absolute;
   font-size: 0.6rem;
   width: auto;
-  left: -25px;
+  margin-left: -25px;
   border: 1px solid;
   padding: 0px 2px;
   border-radius: var(--radius-xs);
@@ -7420,7 +7420,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
   position: absolute;
   font-size: 0.6rem;
   width: auto;
-  left: -25px;
+  margin-left: -25px;
   border: 1px solid;
   padding: 0px 2px;
   border-radius: var(--radius-xs);
@@ -12361,6 +12361,29 @@ body.translucent-setting-panel .vertical-tab-content {
   word-wrap: break-word;
   word-break: break-all;
   white-space: pre-wrap;
+}
+
+/* ================================== */
+/* =========== RTL support ========== */
+/* ================================== */
+.CodeMirror-code.CodeMirror-rtl .HyperMD-quote {
+  border-right: 7px solid var(--theme-color);
+  border-left: none;
+}
+
+div[dir="rtl"] blockquote {
+  border-left: none;
+  border-right: 7px solid var(--theme-color);
+}
+
+div[dir="rtl"] ul>li:not(.task-list-item) {
+  border-left: none;
+  border-right: 0.125em solid var(--list-ul-block-color);
+}
+
+div[dir="rtl"] ol:not(.contains-task-list)>li:not(.task-list-item) {
+  border-left: none;
+  border-right: 0.125em solid var(--list-ol-block-color);
 }
 
 /* ============ */
