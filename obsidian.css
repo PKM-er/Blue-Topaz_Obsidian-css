@@ -5853,9 +5853,9 @@ body.color-scheme-options-lilac.theme-dark {
 /*分割工作区的线透明*/
 body.color-scheme-options-lilac .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body.color-scheme-options-lilac .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
-/*height: 95.3%;*/
-/*width: 2px;*/
-background-color: transparent;
+  height: 95.3%;
+  width: 2px;
+  background-color: transparent;
 }
 
 /* scrollbar*/
