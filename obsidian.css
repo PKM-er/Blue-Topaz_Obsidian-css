@@ -509,6 +509,9 @@ settings:
       -
         label: 榛子巧克力
         value: color-scheme-options-chocolate-topaz
+      - 
+        label: Lilac 
+        value: color-scheme-options-lilac
   -
     id: text-normal
     title: Main text color
@@ -4867,6 +4870,698 @@ body.color-scheme-options-chocolate-topaz #calendar-container {
 }
 
 /*=================== Lillian 的配色 end  ========================*/
+
+body.color-scheme-options-lilac.theme-light {
+
+  --bg-color: #e6e0f1;
+  --bg-color2: #d3c5e6;
+  
+  --background-primary: var(--bg-color);
+  --background-primary-alt: var(--bg-color2);
+  --background-secondary: var(--bg-color);
+  --background-secondary-alt: var(--bg-color);
+  --background-secondary-alt-bg-4-bt: var(--bg-color); 
+  --background-accent: #000;
+
+  --background-modifier-border: #e1dfdf;
+  --background-modifier-form-field: #fff;
+  --background-modifier-form-field-highlighted: #fff;
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+  --background-modifier-success: #d7a4e7;
+  --background-modifier-error: #e68787;
+  --background-modifier-error-rgb: 230, 135, 135;
+  --background-modifier-error-hover: #FF9494;
+  --background-modifier-cover: rgba(0, 0, 0, 0.8);
+
+  --text-accent: #c187c9;
+  --text-accent-hover: #592495;
+
+  --text-normal: #0e0e0e;
+  --text-muted: #7f7f7f;
+  --text-highlight: #000000;
+  --text-highlight-2: #000000;
+  --text-faint: #7f7f7f;
+  --text-folder-file: #272727;
+  --accent-strong: #000000;
+  --accent-em: #620ac6;
+  --text-error: #e75545;
+  --text-error-hover: #f86959;
+
+  --text-selection: #8b66bb59;
+  --text-on-accent: #f2f2f2;
+  --interactive-normal: #eaeaeb;
+  --interactive-hover: #d1b6f0;
+
+  --interactive-accent-rgb: 195, 144, 230; /*会影响工作区旁边的线，需要修改*/
+  --interactive-accent: #b28ce4;
+  --interactive-accent-hover: #7b5e96;
+  --panel-border-color: #dbdbdc;
+  --search-text: #000000;
+  --folder-title: #000000;
+
+  --mark-highlight: #a866dfb4;  /*preview*/
+  --mark-highlight-strong-em: #6b28e749; 
+  --strong-em-highlight-color: #7908ae;
+  --text-highlight-bg: #a866dfb4; /*edit*/
+  --text-search-highlight-bg: #d1d2ff;
+  --strong-em-color-1: #5008ae;
+  --strong-em-color-2: #2e0153;
+  
+  --background-search-result: #f3f3f3;
+  --search-result-file-matched-bg: #ffc3c3;
+
+  --background-primary-bg-4-bt: #ffffff; 
+  --background-primary-alt-bg-4-bt: #ffffff;
+  --background-secondary-bg-4-bt: #ffffff;
+
+
+  --background-mobile-drawer-1: #ffffff;
+  --background-mobile-drawer-2: #ffffff;
+  --background-modifier-border-hr: #585858;
+  --background-secondary-alt-bg-4-bt-publish: #e1d5eb61;
+
+  --background-transparent-black-or-white-1: #ffffffb0;
+  --background-transparent-black-or-white-2: #ffffffca;
+  --background-transparent-black-or-white-3: #eeeeee91;
+  --background-transparent-blue: #c6e5ffde;
+
+  --scrollbar-thumb: #c6c6c6a8;
+
+  --gray-1: #383a42;
+  --gray-2: #383a42;
+  --red: #f13d64;
+  --red-1: #f16464f5;
+  --green: #63c951;
+  --darkgreen: #acb5b2;
+  --blue: #107fe7;
+  --darkblue: #3b84e4;
+  --purple: #c74df7;
+  --aqua: #29bdcb;
+  --yellow: #e48100;
+  --light-yellow: #ab9a02;
+  --orange: #db9600;
+  --orange-1: #cc7523;
+  --light-purple: #b74ff3;
+  --blue-green: #3bd4da;
+  --white: #ffffff;
+
+  --embed-color: #e3d6eb4f;
+  --search-result-file-title-color: #5a10a0;
+  --theme-color: var(--interactive-accent);
+  --theme-color-translucent: #d8bde47a;
+  --theme-color-translucent-1: #bc7ce126;
+  --color-specification: #0084ff;
+  --allow-1: #ec9a3c;
+  --background-blockquote: #b6b6b62c;
+  --background-code: #ebebeb71;
+  --background-code-2: #cccccc62;
+  --text-color-code: #e95d00;
+  --text-color-code-normal: #000000;
+
+  --internal-link-color-in-highlight: #6203a2;
+
+  /*list*/
+  --list-ul: #ffffff;
+  --list-ul-block-color: #7f1bb9;
+  --list-ul-disc-color: #d955f3;
+  --list-ul-hover: #ba2fdd;
+  --list-ol-block-color: #7835a5;
+  --list-ol-number-color: #85429a;
+  --list-ol-hover: #9231b8;
+ 
+  --green-1: #9c30c7;
+
+  /*tags*/
+  --tag-text: #d2a3d4;
+  --stag1: #fa8787;
+  --stag1-bg: #eb2727;
+  --stag2: #fdbd5c;
+  --stag2-bg: #ee9002;
+  --stag3: #50ce3a;
+  --stag3-bg: #22ac09;
+  
+  --tag1: #2b85ce;
+  --tag2: #29b325;
+  --tag3: #20b9ce;
+  --tag4: #dfd331;
+  --tag5: #bbbbbb;
+  --tag6: #ca3f3f;
+  --tag7: #b925b2;
+  --tag8: #8a54d1;
+  --tag9: #7b6bda;
+
+  --color-tag-edit: #d070e74b;
+  --tag-dailynote: #0077ff;
+  --tag-dailynote-bg: #277CDD;
+  --tag-weeklynote: #4b9fff;
+  --tag-weeklynote-bg: #6aafff;
+  --tag-questions: #b68fff;
+  --tag-questions-bg: #b085ff;
+  --tag-ideas: #ceb900;
+  --tag-ideas-bg: #444444d8;
+
+  /*Titles*/
+  --h1-color: #6F6493;
+  --h2-color: #724681;
+  --h3-color: #330349;
+  --h4-color: #2d1445;
+  --h5-color: #300e47;
+  --h6-color: #331945;
+
+  /*graph*/
+  --graph-text-color: #696969;
+  --graphtag: #da9ee2cc;
+  --graph-attach: #88b0d6cc;
+  --graph-circle: #ac6fbfcc;
+  --graph-line: #b1b1b1;
+  --graph-unresolved: #db4e4ecc; 
+  --link-unresolved-highlight: #df4747;
+  --graph-arrow: #e25300; 
+  --graph-control-bg: #ffffff9a;
+
+  /*mermaid*/
+  --mermaid-active-task-color: #44bbff;
+  --mermaid-seq-dia-color: #76c8ff;
+
+  /*table*/
+  --table-background-color: #efe0f1;
+  --table-background-color-odd: #ffffffaf;
+  --table-border-color: #7d7d7d;
+  --table-thead-background-color: #d592f0c7;
+  --table-hover-raw-color: #c485ee2f;
+  --table-hover-color: #a75dec34;
+  --table-hover-thead-color: #edddff;
+
+  /*calendar*/
+  --calendar-week-color: #8b32b4;
+  --calendar-week-hover: #f9e3ff;
+  --calendar-week-background-color: #d4bfe6;
+  --calendar-today-background-color: #cdaaee;
+  --color-text-weeknum: #8b32b4;
+
+  /*day planner 改为相应色系*/
+  --day-planner-pie: #eca95c;
+  --day-planner-timeline: #d62f2f;
+  --day-planner-line: #b700ffb4;
+  --day-planner-dot: #ae00ffb4;
+  --day-planner-item-hover: #d68fff;
+
+  --event-item-color1: #e6e0f1;  
+  --event-item-color2: #d4cae5; 
+  --event-item-color3: #c2b4d9; 
+  --event-item-color4: #b09fcd; 
+  --event-item-color5: #9f8ac1; 
+  --event-item-color6: #9078b6; 
+  --event-item-color7: #8066ac; 
+  --event-item-color8: #7154a1; 
+  --event-item-color9: #604195; 
+  --event-item-color10: #4f2d89; 
+  --event-item-color11: #3c197c; 
+  --event-item-color12: #280070;
+  /*colourful notes 不修改*/
+  --text-gray: #37352f99;
+  --text-brown: #855a46;
+  --text-orange: #d9730d;
+  --text-yellow: #d4a300;
+  --text-yellow-2: #a78000;
+  --text-green: #00927f;
+  --text-blue: #0083bb;
+  --text-purple: #5d1fb9;
+  --text-pink: #c40075;
+  --text-red: #ff4343;
+
+  --background-gray: #ebeced;
+  --background-brown: #e9e5e3;
+  --background-orange: #faebdd;
+  --background-yellow: #fbf3db;
+  --background-green: #ddedea;
+  --background-blue: #ddebf1;
+  --background-purple: #eae4f2;
+  --background-pink: #f4dfeb;
+  --background-red: #ffe3e3;
+
+  --note-important: #fd4141;
+  --note-cloze: #000000;
+    
+  /* stickies */
+  --stickies-color-1: #b8b3e2;
+  --stickies-color-2: #e9c6f1;
+  --tape-color: #acacac65;
+
+  /*Sliding panes*/
+  --sliding-panes-header-color: #2c0240;
+  --background-4-sliding-pane: #ffffffef;
+
+  /*admonition*/
+  --admonition-bg-color: #ffffffa6;
+
+  /*checklist*/
+  --checklist-bg: #dfdfdf8e;
+  --checklist-bg-hover: #ffffffcc;
+
+  --color-view-header-gradient-1: #efe0f1; /*标题上的颜色*/
+  --color-view-header-gradient-2: #e1c9f1ef;
+
+  /*checkbox*/
+  --checkbox-color-0: var(--text-accent);
+  --checkbox-color-1: #e0dd2a;
+  --checkbox-color-2: #4077bf;
+  --checkbox-color-3: #ffe9e9;
+  --checkbox-color-4: #fffbd4;
+  --checkbox-color-5: #ad7fbf;
+  --checkbox-color-6: #a3a1a1;
+  --text-checked-checkbox: #9b9b9b;
+
+  --activeline-background: #d1f0e521;
+
+  /*pseudo-kanban 不修改*/
+  --p-kanban-bg-color: #d3d3d32d;
+  --p-kanban-border-color: #a0a0a060;
+  --p-kanban-card-color-1: #ffffff8c;
+  --p-kanban-card-color-2: #ffffff8c;
+  --p-kanban-color-6: #f18e8e65;
+  --p-kanban-color-5: #eeb36f65;
+  --p-kanban-color-4: #dce28765;
+  --p-kanban-color-3: #94ec8c65;
+  --p-kanban-color-2: #84ecec65;
+  --p-kanban-color-1: #52aaf365;
+  --p-kanban-color-8: #ba8be165;
+  --p-kanban-color-7: #e677e065;
+
+  --p-kanban-checkbox-color-1: #f18e8e3d;
+  --p-kanban-checkbox-color-2: #eeb36f3d;
+  --p-kanban-checkbox-color-3: #dce2873d;
+  --p-kanban-checkbox-color-4: #94ec8c3b;
+  --p-kanban-checkbox-color-5: #84ecec42;
+  --p-kanban-checkbox-color-6: #52aaf332;
+  --p-kanban-checkbox-color-7: #ba8be134;
+  --interactive-hover: #dbdbdc;
+
+  /*style settings*/
+  --background-secondary-translucent: #ffffff3d;
+}
+
+body.color-scheme-options-lilac.theme-dark {
+  --bg-color: #462058;
+  --bg-color2: #444444;
+  --background-primary: var(--bg-color);
+  --background-primary-alt: var(--bg-color2);
+  --background-secondary: var(--bg-color);
+  --background-secondary-alt: var(--bg-color);
+  --background-accent: #000;
+
+  --background-modifier-border: #565656;
+  --background-modifier-form-field: rgba(0, 0, 0, 0.3);
+  --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.22);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+  --background-modifier-success: #539126;
+  --background-modifier-error: #9b4343;
+  --background-modifier-error-rgb: 155,67,67;
+  --background-modifier-error-hover: #300047;
+  --background-modifier-cover: rgba(0, 0, 0, 0.6);
+  --text-accent: #b793cc;
+  --text-accent-hover: #efd6f7; 
+  --text-normal: #c9b8e9;  
+  --text-highlight: #eb1eeb;
+  --text-highlight-2: #e4e4e4;
+  --text-muted: #c46ec4;  
+  --text-faint: #797979;
+  --text-folder-file: #b3b3b3;
+  --accent-strong: #f7f7f7;
+  --accent-em: #ca91d8;
+  --text-error: #e16d76;
+  --text-error-hover: #c9626a;
+
+  --text-selection: #47a5914d;
+  --text-on-accent: #dcddde;
+  --interactive-normal: #20242b;
+  --interactive-hover: #353b47;
+  --interactive-accent: #c911c9; 
+  --interactive-accent-rgb: 128, 50, 159;     
+  --interactive-accent-hover: #660f89;
+  --panel-border-color: #18191e;
+  --search-text: #e0e0e0;
+  --folder-title: #ffffff;
+
+  --mark-highlight: #773b898a; /*preview*/
+  --mark-highlight-strong-em: #47893b3a; 
+  --strong-em-highlight-color: #9c8ce6;
+  --text-highlight-bg: #773b898a; /*edit*/
+  --text-search-highlight-bg: #bb4361;
+  --strong-em-color-1: #9c8ce6;
+  --strong-em-color-2: #23d05c;
+
+  --background-search-result: #363636;
+  --search-result-file-matched-bg: #005fac;
+
+  --background-primary-bg-4-bt: #181818; 
+  --background-primary-alt-bg-4-bt: #444444;
+  --background-secondary-bg-4-bt: #181818;
+  --background-secondary-alt-bg-4-bt: var(--bg-color); 
+
+  --background-mobile-drawer-1: #1b1b1b;
+  --background-mobile-drawer-2: #1b1b1b69;
+  --background-modifier-border-hr: #7f7f7f;
+
+  --background-transparent-black-or-white-1: #1b1b1b9a;
+  --background-transparent-black-or-white-2: #1e1e1ebd;
+  --background-transparent-black-or-white-3: #2f2f2f6c;
+  --background-transparent-blue: #003e759a;
+
+  --scrollbar-thumb: #8282827e;
+
+  --gray-1: #5C6370;
+  --gray-2: #abb2bf;
+  --red: #e06c75;
+  --red-1: #d05a63;
+  --orange: #d19a66;
+  --orange-1: #da904b;
+  --green: #b6e296;
+  --darkgreen: #399a58;
+  --aqua: #56b6c2;
+  --purple: #c678dd;
+  --blue: #9dcffc;
+  --darkblue: #4889df;
+  --yellow: #e4ba6c;
+  --light-yellow: #dfda91;
+  --white: #ffffff;
+
+  --embed-color: #4047424f;
+  --search-result-file-title-color: #a75ac6; 
+  --theme-color: var(--interactive-accent);
+  --theme-color-translucent: #637b717a;
+  --theme-color-translucent-1: #53695f7a;
+  --color-specification: #f1a1a1;
+  --allow-1: #d18828;
+  --background-blockquote: #9191911c;
+  --background-code: #1111118c;
+  --background-code-2: #4c4c4cc5;
+  --text-color-code: #d58000;
+  --text-color-code-normal: #e7e7e7;
+
+  --internal-link-color-in-highlight: #a360da;
+
+  /*list*/
+  --list-ul: #f1a8f8;
+  --list-ul-block-color: #e142d9a9;
+  --list-ul-disc-color: #ae63eb;
+  --green-1: #8442c1;
+  --list-ul-hover: #9715e2de;
+  --list-ol-block-color: #9826bbb4;
+  --list-ol-number-color: #b595c4;
+  --list-ol-hover: #ba2cd6;
+
+  /*tags*/
+  --tag-text: #e4e4e4;
+  --stag1: #f08383;
+  --stag1-bg: #bd1919;
+  --stag2: #e7b263;
+  --stag2-bg: #ac6700;
+  --stag3: #77df89;
+  --stag3-bg: #058c1c;
+  --tag1: #2b85ce;
+  --tag2: #29b325;
+  --tag3: #20b9ce;
+  --tag4: #dfd331;
+  --tag5: #bbbbbb;
+  --tag6: #ca3f3f;
+  --tag7: #b925b2;
+  --tag8: #8a54d1;
+  --tag9: #7b6bda;
+  --color-tag-edit: #b4554eb0;
+  --tag-dailynote: #98c8ff;
+  --tag-dailynote-bg: #0f60bd;
+  --tag-weeklynote: #d1e6ff;
+  --tag-weeklynote-bg: #3971b1;
+  --tag-questions: #d4bdff;
+  --tag-questions-bg: #6640ae;
+  --tag-ideas: #fcfcc0;
+  --tag-ideas-bg: #565656d8;
+
+  /*titles*/
+  --h1-color: #bc7ad4;
+  --h2-color: #8d26ac;
+  --h3-color: #9642af;
+  --h4-color: #d496f8;
+  --h5-color: #a192f7;
+  --h6-color: #c675f5;
+
+  /*graph*/
+  --graph-text-color: #B5B5B5; 
+  --graphtag: #b992ddbb;
+  --graph-attach: #76c1f0bb;
+  --graph-circle: #8f70a1bb;
+  --graph-line: #8c8c8c;
+  --graph-unresolved: #c3afdade;
+  --link-unresolved-highlight: #ffa6a6;
+  --graph-arrow: #c23917;
+  --graph-control-bg: #00000080;
+
+  /*mermaid*/
+  --mermaid-active-task-color: #187ef1;
+  --mermaid-seq-dia-color: #1371be;
+
+  /*table*/
+  --table-background-color: #462058;
+  --table-background-color-odd: #0000001c;
+  --table-border-color: #878787;
+  --table-thead-background-color: #72557f63;
+  --table-hover-raw-color: #08569a21;
+  --table-hover-color: #1f65a221;
+  --table-hover-thead-color: #298c54c7;
+
+  /*calendar*/
+  --calendar-week-color: #c194df;
+  --calendar-week-hover: #705c81;
+  --calendar-week-background-color: #683270;
+  --calendar-today-background-color: #e01313;
+
+  /*day planner 改为相应色系*/
+  --day-planner-pie: #eca95c;
+  --day-planner-timeline: #d62f2f;
+  --day-planner-line: #b700ffb4;
+  --day-planner-dot: #ae00ffb4;
+  --day-planner-item-hover: #7419a8;
+  --event-item-color1: #c79cdb;
+  --event-item-color2: #b67fd1;
+  --event-item-color3: #a662c6;
+  --event-item-color4: #9646bc;
+  --event-item-color5: #8b3fae;
+  --event-item-color6: #7f3aa0;
+  --event-item-color7: #683083;
+  --event-item-color8: #592672;
+  --event-item-color9: #371945;
+  --event-item-color10:#351544;
+
+  /*kanban*/
+  --kanban-color-1: #0065d852;
+  --kanban-color-2: #30e4e441;
+  --kanban-color-3: #1cb54f44;
+  --kanban-color-4: #97b82b49;
+  --kanban-color-5: #bb722d41;
+  --kanban-color-6: #d12e2e42;
+  --kanban-color-7: #8f36cb3f;
+
+  /*colourful notes*/
+  --text-gray: #acacac;
+  --text-brown: #be9684;
+  --text-orange: #ffa344;
+  --text-yellow: #ffdc51;
+  --text-yellow-2: #cca217;
+  --text-green: #52c7b2;
+  --text-blue: #8ca1ff;
+  --text-purple: #b386f1;
+  --text-pink: #ff6bba;
+  --text-red: #ff4f4f;
+
+  --background-gray: #535353;
+  --background-brown: #493a3a;
+  --background-orange: #53422f;
+  --background-yellow: #585536;
+  --background-green: #32503e;
+  --background-blue: #2f5264;
+  --background-purple: #443f57;
+  --background-pink: #533b4a;
+  --background-red: #683c3c;
+
+  --note-important: #d64545;
+  --note-cloze: #ffffff;
+    
+  /* stickies */
+  --stickies-color-1: #683083;
+  --stickies-color-2: #823a92;
+  --tape-color: #99999967;
+
+  /*Sliding panes*/
+  --sliding-panes-header-color: var(--h2-color);
+  --background-4-sliding-pane: #252525ed;
+
+  /*admonition*/
+  --admonition-bg-color: #1111118f;
+  
+  /*checklist*/
+  --checklist-bg: #1d1d1d96;
+  --checklist-bg-hover: #08080896;
+
+  --color-view-header-gradient-1: #330c46de;
+  --color-view-header-gradient-2: #002900c0;
+
+  /*checkbox*/
+  --checkbox-color-0: var(--text-accent);
+  --checkbox-color-1: #dbd821;
+  --checkbox-color-2: #1061ac;
+  --checkbox-color-3: #ffd1d1;
+  --checkbox-color-4: #625d4c;
+  --checkbox-color-5: #9a67ae;
+  --checkbox-color-6: #5f5f5f;
+  --text-checked-checkbox: #b9b8b8;
+
+  --activeline-background: #468eeb1f;
+
+  /*pseudo-kanban*/
+  --p-kanban-bg-color: #6c6c6c42;
+  --p-kanban-border-color: transparent;
+  --p-kanban-card-color-1: #0000002d;
+  --p-kanban-card-color-2: #0000002d;
+  --p-kanban-color-6: #f3424252;
+  --p-kanban-color-5: #eb973752;
+  --p-kanban-color-4: #d2dd3852;
+  --p-kanban-color-3: #38ce2a52;
+  --p-kanban-color-2: #2ec4c452;
+  --p-kanban-color-1: #3496e652;
+  --p-kanban-color-8: #b962ff52;
+  --p-kanban-color-7: #e45bdd52;
+
+  /*待做。。。。*/
+  --p-kanban-checkbox-color-1: #f18e8e3d;
+  --p-kanban-checkbox-color-2: #eeb36f3d;
+  --p-kanban-checkbox-color-3: #dce2873d;
+  --p-kanban-checkbox-color-4: #94ec8c3b;
+  --p-kanban-checkbox-color-5: #84ecec42;
+  --p-kanban-checkbox-color-6: #52aaf332;
+  --p-kanban-checkbox-color-7: #ba8be134;
+  --interactive-hover: #dbdbdc;
+
+  /*style settings*/
+  --background-secondary-translucent: #2c2c2c26;
+}
+body.color-scheme-options-lilac.theme-light.workspace-leaf-resize-handle {
+background-color: var(--background-secondary-alt-bg-4-bt);
+}
+
+body.color-scheme-options-lilac .stickies {
+  color: var(--text-normal)
+}
+
+body.color-scheme-options-lilac.theme-dark.workspace-leaf-resize-handle {
+background-color: var(--background-secondary-alt-bg-4-bt);
+}
+
+body.color-scheme-options-lilac .token.number {
+color: var(--aqua) !important;
+}
+body.color-scheme-options-lilac .token.string, 
+body.color-scheme-options-lilac .token.char,
+body.color-scheme-options-lilac .token.attr-value, 
+body.color-scheme-options-lilac .token.builtin, 
+body.color-scheme-options-lilac .token.inserted {
+color: var(--blue) !important;
+}
+
+body.color-scheme-options-lilac .cm-s-obsidian span.cm-link,
+body.color-scheme-options-lilac .cm-s-obsidian span.cm-hmd-internal-link,
+body.color-scheme-options-lilac .markdown-preview-view .internal-link {
+  text-decoration: underline;
+  color: var(--internal-link-color);
+}
+
+body.color-scheme-options-lilac .markdown-preview-view h1,
+body.color-scheme-options-lilac .markdown-preview-view h2 {
+  border-bottom: none;
+}
+
+/*lilac-tags*/
+
+body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+1){
+  border: 1px solid;
+  color: var(--tag1);
+  background-color: transparent;
+}
+
+body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+2){
+  border: 1px solid;
+  color: var(--tag2);
+  background-color: transparent;
+}
+
+body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+3){
+  border: 1px solid;
+  color: var(--tag3);
+  background-color: transparent;
+}
+
+body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+4){
+  border: 1px solid;
+  color: var(--tag4);
+  background-color: transparent;
+}
+
+body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+5){
+  border: 1px solid;
+  color: var(--tag5);
+  background-color: transparent;
+}
+
+body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+6){
+  border: 1px solid;
+  color: var(--tag6);
+  background-color: transparent;
+}
+
+body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+7){
+  border: 1px solid;
+  color: var(--tag7);
+  background-color: transparent;
+}
+
+body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+8){
+  border: 1px solid;
+  color: var(--tag8);
+  background-color: transparent;
+}
+
+body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n){
+  border: 1px solid;
+  color: var(--tag9);
+  background-color: transparent;
+}
+
+body.color-scheme-options-lilac .tag:not(.token):hover{
+  border: 1px solid var(--theme-color) ;
+  color: var(--white) ;
+  background-color: var(--theme-color) ;
+}
+
+body.color-scheme-options-lilac div .CodeMirror-line span.cm-hashtag-begin + span.cm-hashtag.cm-meta.cm-hashtag-end {
+  background-color: transparent;
+  border: 1px solid var(--text-normal);
+  color: var(--tag-text);
+  border-radius: var(--radius-l);
+  padding-right: 0.4375em;
+  padding-left: 0.4375em;
+}
+
+body.color-scheme-options-lilac  *:not(font) > em > strong,
+body.color-scheme-options-lilac  *:not(font) > strong > em, 
+body.color-scheme-options-lilac  .cm-strong.cm-em {
+  background-image: initial;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-color: initial;
+} 
+
+/*======@awyugan--end========*/
 
 /*===========*/
 /* page-size in edit mode*/
