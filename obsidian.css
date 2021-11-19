@@ -2,7 +2,7 @@
 /*Blue Topaz for Obsidian v0.12.19, uid [20211118] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
-@LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) */
+@LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @98yugan */
 
 /* 
 ===========================    TIPS   ===============================
@@ -5258,19 +5258,22 @@ body.color-scheme-options-autumn-topaz #calendar-container {
 
 /*=================== Lillian 的配色 end  ========================*/
 
+
+/*========== awyugan 的 配色 =========*/
+
 body.color-scheme-options-lilac.theme-light {
 
-  --bg-color: #e6e0f1;
-  --bg-color2: #d3c5e6;
+  --bg-color: #d3c8e7;
+  --bg-color2: #c0b0d6;
   
   --background-primary: var(--bg-color);
-  --background-primary-alt: var(--bg-color2);
+  --background-primary-alt: #e8dffa;
   --background-secondary: var(--bg-color);
   --background-secondary-alt: var(--bg-color);
-  --background-secondary-alt-bg-4-bt: var(--bg-color); 
+  --background-secondary-alt-bg-4-bt: #d3c8e7; 
   --background-accent: #000;
 
-  --background-modifier-border: #e1dfdf;
+  --background-modifier-border: #af9dd1;
   --background-modifier-form-field: #fff;
   --background-modifier-form-field-highlighted: #fff;
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
@@ -5434,7 +5437,7 @@ body.color-scheme-options-lilac.theme-light {
   --table-background-color: #efe0f1;
   --table-background-color-odd: #ffffffaf;
   --table-border-color: #7d7d7d;
-  --table-thead-background-color: #d592f0c7;
+  --table-thead-background-color: #d4a7e6c7;
   --table-hover-raw-color: #c485ee2f;
   --table-hover-color: #a75dec34;
   --table-hover-thead-color: #edddff;
@@ -5443,7 +5446,7 @@ body.color-scheme-options-lilac.theme-light {
   --calendar-week-color: #8b32b4;
   --calendar-week-hover: #f9e3ff;
   --calendar-week-background-color: #d4bfe6;
-  --calendar-today-background-color: #cdaaee;
+  --calendar-today-background-color: #c2aaee;
   --color-text-weeknum: #8b32b4;
 
   /*day planner 改为相应色系*/
@@ -5451,7 +5454,7 @@ body.color-scheme-options-lilac.theme-light {
   --day-planner-timeline: #d62f2f;
   --day-planner-line: #b700ffb4;
   --day-planner-dot: #ae00ffb4;
-  --day-planner-item-hover: #d68fff;
+  --day-planner-item-hover: #d0aee6;
 
   --event-item-color1: #e6e0f1;  
   --event-item-color2: #d4cae5; 
@@ -5550,14 +5553,14 @@ body.color-scheme-options-lilac.theme-light {
 
 body.color-scheme-options-lilac.theme-dark {
   --bg-color: #462058;
-  --bg-color2: #444444;
+  --bg-color2: #b276c4;
   --background-primary: var(--bg-color);
   --background-primary-alt: var(--bg-color2);
   --background-secondary: var(--bg-color);
   --background-secondary-alt: var(--bg-color);
   --background-accent: #000;
 
-  --background-modifier-border: #565656;
+  --background-modifier-border: #947676;
   --background-modifier-form-field: rgba(0, 0, 0, 0.3);
   --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.22);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
@@ -5583,7 +5586,7 @@ body.color-scheme-options-lilac.theme-dark {
   --text-on-accent: #dcddde;
   --interactive-normal: #20242b;
   --interactive-hover: #353b47;
-  --interactive-accent: #c911c9; 
+  --interactive-accent: #be3abe; 
   --interactive-accent-rgb: 128, 50, 159;     
   --interactive-accent-hover: #660f89;
   --panel-border-color: #18191e;
@@ -5601,10 +5604,10 @@ body.color-scheme-options-lilac.theme-dark {
   --background-search-result: #363636;
   --search-result-file-matched-bg: #005fac;
 
-  --background-primary-bg-4-bt: #181818; 
-  --background-primary-alt-bg-4-bt: #444444;
+  --background-primary-bg-4-bt: #291333; 
+  --background-primary-alt-bg-4-bt: #462058;
   --background-secondary-bg-4-bt: #181818;
-  --background-secondary-alt-bg-4-bt: var(--bg-color); 
+  --background-secondary-alt-bg-4-bt: #462058; 
 
   --background-mobile-drawer-1: #1b1b1b;
   --background-mobile-drawer-2: #1b1b1b69;
@@ -5709,13 +5712,13 @@ body.color-scheme-options-lilac.theme-dark {
   --mermaid-seq-dia-color: #1371be;
 
   /*table*/
-  --table-background-color: #462058;
+  --table-background-color: #58266e;
   --table-background-color-odd: #0000001c;
-  --table-border-color: #878787;
-  --table-thead-background-color: #72557f63;
+  --table-border-color: #ac9494;
+  --table-thead-background-color: #4332ddc2;
   --table-hover-raw-color: #08569a21;
-  --table-hover-color: #1f65a221;
-  --table-hover-thead-color: #298c54c7;
+  --table-hover-color: #4125a5a1;
+  --table-hover-thead-color: #5f298cc7;
 
   /*calendar*/
   --calendar-week-color: #c194df;
@@ -5725,10 +5728,10 @@ body.color-scheme-options-lilac.theme-dark {
 
   /*day planner 改为相应色系*/
   --day-planner-pie: #eca95c;
-  --day-planner-timeline: #d62f2f;
-  --day-planner-line: #b700ffb4;
-  --day-planner-dot: #ae00ffb4;
-  --day-planner-item-hover: #7419a8;
+  --day-planner-timeline: #9231b8;
+  --day-planner-line: #8b36b3;
+  --day-planner-dot: #8b36b3;
+  --day-planner-item-hover: #834ca3;
   --event-item-color1: #c79cdb;
   --event-item-color2: #b67fd1;
   --event-item-color3: #a662c6;
@@ -5835,6 +5838,8 @@ body.color-scheme-options-lilac.theme-dark {
 body.color-scheme-options-lilac.theme-light.workspace-leaf-resize-handle {
 background-color: var(--background-secondary-alt-bg-4-bt);
 }
+
+/*stickies*/
 
 body.color-scheme-options-lilac .stickies {
   color: var(--text-normal)
