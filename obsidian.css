@@ -5304,7 +5304,7 @@ body.color-scheme-options-lilac.theme-light {
   --text-muted: #7f7f7f;
   --text-highlight: #000000;
   --text-highlight-2: #000000;
-  --text-faint: #7f7f7f;
+  --text-faint: #a23ac2;
   --text-folder-file: #272727;
   --accent-strong: #000000;
   --accent-em: #620ac6;
@@ -5316,7 +5316,7 @@ body.color-scheme-options-lilac.theme-light {
   --interactive-normal: #eaeaeb;
   --interactive-hover: #d1b6f0;
 
-  --interactive-accent-rgb: 195, 144, 230; /*会影响工作区旁边的线，需要修改*/
+  --interactive-accent-rgb: 195, 144, 230;                /*工作区旁边的线*/
   --interactive-accent: #b28ce4;
   --interactive-accent-hover: #7b5e96;
   --panel-border-color: #dbdbdc;
@@ -5349,7 +5349,7 @@ body.color-scheme-options-lilac.theme-light {
   --background-transparent-black-or-white-3: #eeeeee91;
   --background-transparent-blue: #c6e5ffde;
 
-  --scrollbar-thumb: #c6c6c6a8;
+  --scrollbar-thumb: #aa7dd3a8; /*看板滚动条*/
 
   --gray-1: #383a42;
   --gray-2: #383a42;
@@ -5372,8 +5372,8 @@ body.color-scheme-options-lilac.theme-light {
   --embed-color: #e3d6eb4f;
   --search-result-file-title-color: #5a10a0;
   --theme-color: var(--interactive-accent);
-  --theme-color-translucent: #d8bde47a;
-  --theme-color-translucent-1: #bc7ce126;
+  --theme-color-translucent: #c3abe9bd;
+  --theme-color-translucent-1: #8649aa85;
   --color-specification: #0084ff;
   --allow-1: #ec9a3c;
   --background-blockquote: #b6b6b62c;
@@ -5466,8 +5466,8 @@ body.color-scheme-options-lilac.theme-light {
   /*day planner 改为相应色系*/
   --day-planner-pie: #eca95c;
   --day-planner-timeline: #d62f2f;
-  --day-planner-line: #b700ffb4;
-  --day-planner-dot: #ae00ffb4;
+  --day-planner-line: #d0aee6;
+  --day-planner-dot: #d0aee6;
   --day-planner-item-hover: #d0aee6;
 
   --event-item-color1: #e6e0f1;  
@@ -5589,7 +5589,7 @@ body.color-scheme-options-lilac.theme-dark {
   --text-highlight: #eb1eeb;
   --text-highlight-2: #e4e4e4;
   --text-muted: #c46ec4;  
-  --text-faint: #797979;
+  --text-faint: #b932e2;
   --text-folder-file: #b3b3b3;
   --accent-strong: #f7f7f7;
   --accent-em: #ca91d8;
@@ -5632,7 +5632,7 @@ body.color-scheme-options-lilac.theme-dark {
   --background-transparent-black-or-white-3: #2f2f2f6c;
   --background-transparent-blue: #003e759a;
 
-  --scrollbar-thumb: #8282827e;
+  --scrollbar-thumb: #603a81;
 
   --gray-1: #5C6370;
   --gray-2: #abb2bf;
@@ -5653,8 +5653,8 @@ body.color-scheme-options-lilac.theme-dark {
   --embed-color: #4047424f;
   --search-result-file-title-color: #a75ac6; 
   --theme-color: var(--interactive-accent);
-  --theme-color-translucent: #637b717a;
-  --theme-color-translucent-1: #53695f7a;
+  --theme-color-translucent: #6d3c9bc9;/* 页面滚动条*/
+  --theme-color-translucent-1: #5e2877b7;
   --color-specification: #f1a1a1;
   --allow-1: #d18828;
   --background-blockquote: #9191911c;
@@ -5745,11 +5745,11 @@ body.color-scheme-options-lilac.theme-dark {
   --day-planner-timeline: #9231b8;
   --day-planner-line: #8b36b3;
   --day-planner-dot: #8b36b3;
-  --day-planner-item-hover: #834ca3;
+  --day-planner-item-hover: #8b36b3;
   --event-item-color1: #c79cdb;
   --event-item-color2: #b67fd1;
-  --event-item-color3: #a662c6;
   --event-item-color4: #9646bc;
+  --event-item-color3: #a662c6;
   --event-item-color5: #8b3fae;
   --event-item-color6: #7f3aa0;
   --event-item-color7: #683083;
@@ -5849,18 +5849,28 @@ body.color-scheme-options-lilac.theme-dark {
   /*style settings*/
   --background-secondary-translucent: #2c2c2c26;
 }
-body.color-scheme-options-lilac.theme-light.workspace-leaf-resize-handle {
-background-color: var(--background-secondary-alt-bg-4-bt);
+
+/*分割工作区的线透明*/
+body.color-scheme-options-lilac .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
+body.color-scheme-options-lilac .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
+  height: 95.3%;
+  width: 4px;
+  background-color: transparent;
 }
 
-/*stickies*/
+/* scrollbar*/
+body.color-scheme-options-lilac.theme-light ::-webkit-scrollbar-thumb { background-color: var(--event-item-color3); }
+body.color-scheme-options-lilac.theme-dark ::-webkit-scrollbar-thumb { background-color: var(--event-item-color7); }
 
+/*stickies*/
 body.color-scheme-options-lilac .stickies {
   color: var(--text-normal)
 }
 
 body.color-scheme-options-lilac.theme-dark.workspace-leaf-resize-handle {
 background-color: var(--background-secondary-alt-bg-4-bt);
+width: 0px;
+height: 0%;
 }
 
 body.color-scheme-options-lilac .token.number {
