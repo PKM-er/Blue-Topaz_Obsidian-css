@@ -3464,6 +3464,9 @@ body.color-scheme-options-flamingo.theme-light {
   --stickies-color-2: #f5a7a2;
   --tape-color: #acacac65;
   --header-color: #f5a7a2;
+
+  --color-view-header-gradient-1: #efe9d9;
+  --color-view-header-gradient-2: #efe9d9;
 }
 
 body.color-scheme-options-flamingo.theme-dark {
