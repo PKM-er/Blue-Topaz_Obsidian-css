@@ -5050,7 +5050,7 @@ body.color-scheme-options-autumn-topaz.theme-light {
   --sliding-panes-header-color: var(--deep-color);
   --background-4-sliding-pane: var(--bg-color);
 
-  --color-view-header-gradient-1: var(--color1);
+  --color-view-header-gradient-1: #70a60085;
   --color-view-header-gradient-2: var(--bg-color);
 
   /*checkbox*/
