@@ -482,8 +482,8 @@ settings:
     collapsed: true
   -
     id: color-scheme-options
-    title: Color scheme options
-    title.zh: 整体配色选择
+    title: Color scheme options (from Topaz Community)
+    title.zh: 整体配色选择 (由Topaz社区贡献)
     type: class-select
     allowEmpty: false
     default: color-scheme-options-default
@@ -500,17 +500,6 @@ settings:
       - 
         label: Pink (coming soon)
         value: color-scheme-options-pink-topaz
-  -
-    id: color-scheme-options-topaz-community
-    title: Color scheme options (Created by Topaz Community)
-    title.zh: 整体配色选择 (Topaz 社区作品)
-    type: class-select
-    allowEmpty: false
-    default: color-scheme-options-default
-    options:
-      - 
-        label: Default
-        value: color-scheme-options-default
       -
         label: Flamingo (@Mouth on Cloud & @Rainbell)
         value: color-scheme-options-flamingo
