@@ -835,6 +835,13 @@ settings:
     level: 1
     collapsed: true
   -
+    id: bt-status-off
+    title: Wide status bar
+    title.zh: 使用全宽状态栏
+    description: Use full width status bar
+    type: class-toggle
+    default:  false
+  -
     id: list-style-change-options-folder
     title: List
     title.zh: 列表
@@ -8427,8 +8434,24 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   border-color: var(--panel-border-color);
   border-width: 1px;
 }
+ /* ----状态栏透明开关----------- */
+ /* Status bar */
+  
+ body:not(.bt-status-off) .status-bar {
+  background-color:var(--background-secondary-translucent);
+  z-index:30;
+  border-top-left-radius:5px;
+  width:auto;
+  position:absolute;
+  left:auto;
+  border:0;
+  bottom:0;
+  right:0;
+  max-height:26px;
+  padding:2px 8px 6px 3px;
+}
 
-.status-bar {
+.bt-status-off .status-bar {
   --bar-vertical-padding: 4px;
   --bar-height: calc(22px + (var(--bar-vertical-padding)));
   line-height: 1;
