@@ -7496,14 +7496,6 @@ body:not(.font-family-change-to-default) .markdown-preview-view .markdown-previe
   max-width: 750px;
 }
 
-p {
-  display: block;
-  margin-block-start: 0.2em;
-  margin-block-end: 1em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-}
-
 /* code */
 .cm-s-obsidian .hmd-fold-html-stub, 
 .cm-s-obsidian .hmd-fold-code-stub, 
