@@ -894,7 +894,7 @@ settings:
     description: To remove the icons before .md files
     description.zh: 移除md文件前图标
     type: class-toggle
-    default: true
+    default: false
   - 
     id: folder-style-change-options-colorful-folder
     title: Colorful Folder
@@ -8436,7 +8436,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
  /* ----状态栏透明开关----------- */
  /* Status bar */
   
- body:not(.bt-status-off) .status-bar {
+body:not(.bt-status-off) .status-bar {
   background-color:var(--background-secondary-translucent);
   z-index:30;
   border-top-left-radius:5px;
@@ -8461,6 +8461,10 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   overflow: hidden;
   color: var(--text-muted);
   background-color: var(--background-primary);
+}
+
+body:not(.bt-status-off) #scroll-controls {
+  bottom: 13px !important;
 }
 
 .is-translucent .status-bar {
