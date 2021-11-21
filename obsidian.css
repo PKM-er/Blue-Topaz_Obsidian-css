@@ -5281,7 +5281,7 @@ body.color-scheme-options-lilac.theme-light {
   
   --background-primary: var(--bg-color);
   --background-primary-alt: #e8dffa;
-  --background-secondary: var(--bg-color);
+  --background-secondary: #e5d3ff;
   --background-secondary-alt: var(--bg-color);
   --background-secondary-alt-bg-4-bt: #d3c8e7; 
   --background-accent: #000;
@@ -5291,8 +5291,8 @@ body.color-scheme-options-lilac.theme-light {
   --background-modifier-form-field-highlighted: #fff;
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
   --background-modifier-success: #d7a4e7;
-  --background-modifier-error: #e68787;
-  --background-modifier-error-rgb: 230, 135, 135;
+  --background-modifier-error: #eb7060;
+  --background-modifier-error-rgb: 111, 50, 126;
   --background-modifier-error-hover: #FF9494;
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
 
@@ -5373,6 +5373,8 @@ body.color-scheme-options-lilac.theme-light {
   --theme-color: var(--interactive-accent);
   --theme-color-translucent: #c3abe9bd;
   --theme-color-translucent-1: #8649aa85;
+  --theme-color-translucent-3:  #dccaffb0;
+
   --color-specification: #0084ff;
   --allow-1: #ec9a3c;
   --background-blockquote: #b6b6b62c;
@@ -5380,6 +5382,8 @@ body.color-scheme-options-lilac.theme-light {
   --background-code-2: #cccccc62;
   --text-color-code: #e95d00;
   --text-color-code-normal: #000000;
+
+
 
   --internal-link-color-in-highlight: #6203a2;
 
@@ -5535,7 +5539,8 @@ body.color-scheme-options-lilac.theme-light {
   --checkbox-color-6: #a3a1a1;
   --text-checked-checkbox: #9b9b9b;
 
-  --activeline-background: #d1f0e521;
+  /*codemirror-line-bg*/
+  --activeline-background: #d3c8e7;
 
   /*pseudo-kanban 不修改*/
   --p-kanban-bg-color: #d3d3d32d;
@@ -5579,7 +5584,7 @@ body.color-scheme-options-lilac.theme-dark {
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
   --background-modifier-success: #539126;
   --background-modifier-error: #9b4343;
-  --background-modifier-error-rgb: 155,67,67;
+  --background-modifier-error-rgb: 85, 30, 99;
   --background-modifier-error-hover: #300047;
   --background-modifier-cover: rgba(0, 0, 0, 0.6);
   --text-accent: #b793cc;
@@ -5655,6 +5660,8 @@ body.color-scheme-options-lilac.theme-dark {
   --theme-color-translucent: #6d3c9bc9;/* 页面滚动条*/
   --theme-color-translucent-1: #5e2877b7;
   --color-specification: #f1a1a1;
+  --theme-color-translucent-3:  #8b77a3;
+
   --allow-1: #d18828;
   --background-blockquote: #9191911c;
   --background-code: #1111118c;
@@ -5819,7 +5826,7 @@ body.color-scheme-options-lilac.theme-dark {
   --checkbox-color-6: #5f5f5f;
   --text-checked-checkbox: #b9b8b8;
 
-  --activeline-background: #468eeb1f;
+  --activeline-background: #462058;
 
   /*pseudo-kanban*/
   --p-kanban-bg-color: #6c6c6c42;
@@ -5852,9 +5859,9 @@ body.color-scheme-options-lilac.theme-dark {
 /*分割工作区的线透明*/
 body.color-scheme-options-lilac .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body.color-scheme-options-lilac .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
-  height: 95.3%;
-  width: 4px;
-  background-color: transparent;
+height: 95.3%;
+width: 2px;
+background-color: transparent;
 }
 
 /* scrollbar*/
