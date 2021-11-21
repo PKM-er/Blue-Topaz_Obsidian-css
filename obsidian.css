@@ -3548,8 +3548,8 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --checklist-bg: #1d1d1d96;
   --checklist-bg-hover: #08080896;
 
-  --color-view-header-gradient-1: #000000de;
-  --color-view-header-gradient-2: #002900c0;
+  --color-view-header-gradient-1: #000000c2;
+  --color-view-header-gradient-2: #2e1f28c2;
 
   /*checkbox*/
   --checkbox-color-0: #25c648;
@@ -12271,6 +12271,96 @@ section.footnotes ol>li:not(.task-list-item) {
 /* ================================== */
 .admonition {
   background-color: var(--admonition-bg-color) !important;
+}
+
+/*blank ad框全透明隐藏*/
+.admonition-blank {
+  overflow: visible;
+  background-color: rgba(255, 255, 255, 0)!important;
+  border-left:0px!important;;
+  margin: auto;
+  box-shadow:none;
+}
+.admonition-blank .admonition-content {
+  overflow: visible;
+  margin: 0;
+}
+
+/* 感谢 围城 网友分享
+本样式仿造自elegantbook模板:https://github.com/ElegantLaTeX/ElegantBook
+为以下类型设置了样式，需要在admonition中自行添加，设置好颜色和icon
+- def: definition 
+- thm: theorem
+- lem: lemma
+- cor: corollary
+- pro: proposition
+
+标题使用方正书宋_GBK，正文使用方正楷体_GBK,系统需要安装
+*/
+
+.admonition-def,
+.admonition-thm,
+.admonition-lem,
+.admonition-cor,
+.admonition-pro {
+  overflow: visible !important;
+  border: 1px solid rgb(var(--admonition-color)) !important;
+  border-radius: 0.3em !important;
+  background-color: rgba(var(--admonition-color),0.05) !important;
+  box-shadow: 0 0 0 !important;
+}
+
+.admonition-def *.admonition-title,
+.admonition-thm *.admonition-title,
+.admonition-lem *.admonition-title,
+.admonition-cor *.admonition-title,
+.admonition-pro *.admonition-title {
+  display: inline-block;
+  top: -0.9em;
+  left: 1.5em;
+  padding: 1px 8px !important;
+  background-color: rgb(var(--admonition-color)) !important;
+  border-radius: 0.2em;
+}
+
+.admonition-def *.admonition-title-content,
+.admonition-thm *.admonition-title-content,
+.admonition-lem *.admonition-title-content,
+.admonition-cor *.admonition-title-content,
+.admonition-pro *.admonition-title-content {
+  color: white;
+  font-family:  "方正书宋_GBK", var(--font-family-major);
+  font-size: 1.1em;
+}
+
+.admonition-def *.admonition-title-icon,
+.admonition-thm *.admonition-title-icon,
+.admonition-lem *.admonition-title-icon,
+.admonition-cor *.admonition-title-icon,
+.admonition-pro *.admonition-title-icon {
+	/* display: none !important; */
+  color: white;
+  background-color: rgb(var(--admonition-color));
+  margin: 0.2em;
+}
+
+.admonition-def *.admonition-content-holder,
+.admonition-thm *.admonition-content-holder,
+.admonition-lem *.admonition-content-holder,
+.admonition-cor *.admonition-content-holder,
+.admonition-pro *.admonition-content-holder {
+  margin-top: -1em ;
+  padding: 0;
+}
+
+.admonition-def p,
+.admonition-thm p,
+.admonition-lem p,
+.admonition-cor p,
+.admonition-pro p {
+  text-indent: 0;
+  font-family: "方正楷体_GBK", var(--font-family-major) !important;
+  font-size: 1.1em;
 }
 
 /* ================================== */
