@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.12.19。uid [20211119] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.12.19, uid [20211119] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.12.19。uid [20211120] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.12.19, uid [20211120] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 @LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @98yugan */
@@ -482,8 +482,8 @@ settings:
     collapsed: true
   -
     id: color-scheme-options
-    title: Color scheme options
-    title.zh: 整体配色选择
+    title: Color scheme options (from Topaz Community)
+    title.zh: 整体配色选择 (由Topaz社区贡献)
     type: class-select
     allowEmpty: false
     default: color-scheme-options-default
@@ -500,17 +500,9 @@ settings:
       - 
         label: Pink (coming soon)
         value: color-scheme-options-pink-topaz
-  -
-    id: color-scheme-options-topaz-community
-    title: Color scheme options (Created by Topaz Community)
-    title.zh: 整体配色选择 (Topaz 社区作品)
-    type: class-select
-    allowEmpty: false
-    default: color-scheme-options-default
-    options:
       - 
-        label: Default
-        value: color-scheme-options-default
+        label: ==↓👩😺Created by Topaz Community🐵🧑↓==
+        value: 
       -
         label: Flamingo (@Mouth on Cloud & @Rainbell)
         value: color-scheme-options-flamingo
@@ -902,7 +894,7 @@ settings:
     description: To remove the icons before .md files
     description.zh: 移除md文件前图标
     type: class-toggle
-    default: true
+    default: false
   - 
     id: folder-style-change-options-colorful-folder
     title: Colorful Folder
@@ -5289,7 +5281,7 @@ body.color-scheme-options-lilac.theme-light {
   
   --background-primary: var(--bg-color);
   --background-primary-alt: #e8dffa;
-  --background-secondary: var(--bg-color);
+  --background-secondary: #e5d3ff;
   --background-secondary-alt: var(--bg-color);
   --background-secondary-alt-bg-4-bt: #d3c8e7; 
   --background-accent: #000;
@@ -5299,8 +5291,8 @@ body.color-scheme-options-lilac.theme-light {
   --background-modifier-form-field-highlighted: #fff;
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
   --background-modifier-success: #d7a4e7;
-  --background-modifier-error: #e68787;
-  --background-modifier-error-rgb: 230, 135, 135;
+  --background-modifier-error: #eb7060;
+  --background-modifier-error-rgb: 111, 50, 126;
   --background-modifier-error-hover: #FF9494;
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
 
@@ -5381,6 +5373,8 @@ body.color-scheme-options-lilac.theme-light {
   --theme-color: var(--interactive-accent);
   --theme-color-translucent: #c3abe9bd;
   --theme-color-translucent-1: #8649aa85;
+  --theme-color-translucent-3:  #dccaffb0;
+
   --color-specification: #0084ff;
   --allow-1: #ec9a3c;
   --background-blockquote: #b6b6b62c;
@@ -5388,6 +5382,8 @@ body.color-scheme-options-lilac.theme-light {
   --background-code-2: #cccccc62;
   --text-color-code: #e95d00;
   --text-color-code-normal: #000000;
+
+
 
   --internal-link-color-in-highlight: #6203a2;
 
@@ -5543,7 +5539,8 @@ body.color-scheme-options-lilac.theme-light {
   --checkbox-color-6: #a3a1a1;
   --text-checked-checkbox: #9b9b9b;
 
-  --activeline-background: #d1f0e521;
+  /*codemirror-line-bg*/
+  --activeline-background: #d3c8e7;
 
   /*pseudo-kanban 不修改*/
   --p-kanban-bg-color: #d3d3d32d;
@@ -5587,7 +5584,7 @@ body.color-scheme-options-lilac.theme-dark {
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
   --background-modifier-success: #539126;
   --background-modifier-error: #9b4343;
-  --background-modifier-error-rgb: 155,67,67;
+  --background-modifier-error-rgb: 85, 30, 99;
   --background-modifier-error-hover: #300047;
   --background-modifier-cover: rgba(0, 0, 0, 0.6);
   --text-accent: #b793cc;
@@ -5663,6 +5660,8 @@ body.color-scheme-options-lilac.theme-dark {
   --theme-color-translucent: #6d3c9bc9;/* 页面滚动条*/
   --theme-color-translucent-1: #5e2877b7;
   --color-specification: #f1a1a1;
+  --theme-color-translucent-3:  #8b77a3;
+
   --allow-1: #d18828;
   --background-blockquote: #9191911c;
   --background-code: #1111118c;
@@ -5827,7 +5826,7 @@ body.color-scheme-options-lilac.theme-dark {
   --checkbox-color-6: #5f5f5f;
   --text-checked-checkbox: #b9b8b8;
 
-  --activeline-background: #468eeb1f;
+  --activeline-background: #462058;
 
   /*pseudo-kanban*/
   --p-kanban-bg-color: #6c6c6c42;
@@ -5860,9 +5859,9 @@ body.color-scheme-options-lilac.theme-dark {
 /*分割工作区的线透明*/
 body.color-scheme-options-lilac .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 body.color-scheme-options-lilac .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
-  height: 95.3%;
-  width: 4px;
-  background-color: transparent;
+height: 95.3%;
+width: 2px;
+background-color: transparent;
 }
 
 /* scrollbar*/
@@ -7504,14 +7503,6 @@ body:not(.font-family-change-to-default) .markdown-preview-view .markdown-previe
   max-width: 750px;
 }
 
-p {
-  display: block;
-  margin-block-start: 0.2em;
-  margin-block-end: 1em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-}
-
 /* code */
 .cm-s-obsidian .hmd-fold-html-stub, 
 .cm-s-obsidian .hmd-fold-code-stub, 
@@ -7693,13 +7684,20 @@ ol.contains-task-list ol {
 }
 
 ul.contains-task-list ul::before,
+ul.contains-task-list ol::before {
+  content: ' ';
+  border-left: 2px solid var(--background-modifier-border);
+  position: absolute;
+  margin-left: -1.6em;
+  height: 100%;
+}
+
 ol.contains-task-list ul::before,
-ul.contains-task-list ol::before,
 ol.contains-task-list ol::before {
   content: ' ';
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;
-  left: -1em;
+  margin-left: -3.1em;
   height: 100%;
 }
 
@@ -8437,7 +8435,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
  /* ----状态栏透明开关----------- */
  /* Status bar */
   
- body:not(.bt-status-off) .status-bar {
+body:not(.bt-status-off) .status-bar {
   background-color:var(--background-secondary-translucent);
   z-index:30;
   border-top-left-radius:5px;
@@ -8462,6 +8460,10 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   overflow: hidden;
   color: var(--text-muted);
   background-color: var(--background-primary);
+}
+
+body:not(.bt-status-off) #scroll-controls {
+  bottom: 13px !important;
 }
 
 .is-translucent .status-bar {
@@ -12392,7 +12394,7 @@ body.translucent-setting-panel .vertical-tab-content {
 .setting-item-description,
 .setting-item-info {
   word-wrap: break-word;
-  word-break: break-all;
+  word-break: break-word;
   white-space: pre-wrap;
 }
 
@@ -12417,6 +12419,102 @@ div[dir="rtl"] ul>li:not(.task-list-item) {
 div[dir="rtl"] ol:not(.contains-task-list)>li:not(.task-list-item) {
   border-left: none;
   border-right: 0.125em solid var(--list-ol-block-color);
+}
+
+div[dir="rtl"] code[class*="language-"], 
+div[dir="rtl"] pre[class*="language-"] {
+  text-align: right !important;
+}
+
+div[dir="rtl"] .markdown-preview-view {
+  padding: 15px 30px 20px 20px !important;
+}
+
+div[dir="rtl"] .heading-collapse-indicator.collapse-indicator {
+  padding: 0 2px;
+}
+
+div[dir="rtl"] .heading-collapse-indicator.collapse-indicator::before {
+  margin-right: -25px !important;
+  margin-left: 0;
+  margin-top: 0px;
+}
+
+div[dir="rtl"] h1 .heading-collapse-indicator.collapse-indicator::before,
+div[dir="rtl"] h2 .heading-collapse-indicator.collapse-indicator::before {
+  margin-right: -25px !important;
+  margin-left: 0;
+  margin-top: -5px;
+}
+
+div[dir="rtl"] .is-collapsed h1 div.heading-collapse-indicator.collapse-indicator,
+div[dir="rtl"] .is-collapsed h2 div.heading-collapse-indicator.collapse-indicator {
+  transform: translateX(20px) translateY(-10px) rotate(90deg);
+}
+
+div[dir="rtl"] .is-collapsed div.heading-collapse-indicator.collapse-indicator {
+  transform: translateX(28px) translateY(-5px) rotate(90deg);
+}
+
+div[dir="rtl"] .markdown-preview-view h1:hover::before,
+div[dir="rtl"] .markdown-preview-view h2:hover::before,
+div[dir="rtl"] .markdown-preview-view h3:hover::before,
+div[dir="rtl"] .markdown-preview-view h4:hover::before,
+div[dir="rtl"] .markdown-preview-view h5:hover::before,
+div[dir="rtl"] .markdown-preview-view h6:hover::before {
+  margin-right: -25px;
+}
+
+div[dir="rtl"] ul.contains-task-list ul::before, 
+div[dir="rtl"] ul.contains-task-list ol::before {
+  margin-right: -1.3em;
+}
+
+div[dir="rtl"] ol.contains-task-list ul::before, 
+div[dir="rtl"] ol.contains-task-list ol::before {
+  margin-right: -3.2em;
+}
+
+div[dir="rtl"] ol.contains-task-list ol li:not(.task-list-item) {
+  border-right: none;
+}
+
+div[dir="rtl"] .markdown-preview-view .collapse-indicator {
+  float: right;
+}
+
+div[dir="rtl"] .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon {
+  padding-top: 14px;
+  padding-left: 0px;
+}
+
+div[dir="rtl"] .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+  margin-right: -42px;
+  margin-left: 0;
+  margin-top: 0px;
+}
+
+div[dir="rtl"] .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon svg {
+  display: none;
+  color: var(--accent-strong);
+  height: 7px;
+  width: 7px;
+}
+
+div[dir="rtl"] .markdown-preview-view li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon {
+  transform: translateX(40px) translateY(-23px) rotate(90deg);
+}
+
+div[dir="rtl"] ul.contains-task-list .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+  margin-right: -12px;
+}
+
+div[dir="rtl"] .mermaid {
+  margin-right: -60px !important;
+}
+
+div[dir="rtl"] .mermaid svg {
+  width: 100%;
 }
 
 /* ============ */
