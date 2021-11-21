@@ -1014,6 +1014,20 @@ settings:
         label: Style 2
         value: style-options-for-calendar-plugin-style-two
   -
+    id: style-options-for-admonition-plugin-header
+    title: Admonition Style
+    title.zh: Admonition插件样式
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: style-options-for-admonition-plugin
+    title: Admonition special style support
+    title.zh: 是否开启Admonition特别样式支持
+    type: class-toggle
+    default: false
+    description : 目前支持ad类型：bank 全透明框🔸def definition🔸thm theorem🔸lem lemma🔸cor corollary🔸pro proposition❗使用方法❗下面以thm类型为例，在admonition插件的设置页面中，类型填 thm，标题填 定理，图标选择hand-point-right，颜色自己选比如浅绿色，添加成功后，在正文中使用代码块```ad-thm 即可激活。其他类型以此类推。  
+  -
     id: style-options-for-kanban-plugin-header
     title: Kanban (Coming soon)
     title.zh: 其他插件样式
@@ -12274,14 +12288,14 @@ section.footnotes ol>li:not(.task-list-item) {
 }
 
 /*blank ad框全透明隐藏*/
-.admonition-blank {
+body.style-options-for-admonition-plugin .admonition-blank {
   overflow: visible;
   background-color: rgba(255, 255, 255, 0)!important;
   border-left:0px!important;;
   margin: auto;
   box-shadow:none;
 }
-.admonition-blank .admonition-content {
+body.style-options-for-admonition-plugin .admonition-blank .admonition-content {
   overflow: visible;
   margin: 0;
 }
@@ -12298,11 +12312,11 @@ section.footnotes ol>li:not(.task-list-item) {
 标题使用方正书宋_GBK，正文使用方正楷体_GBK,系统需要安装
 */
 
-.admonition-def,
-.admonition-thm,
-.admonition-lem,
-.admonition-cor,
-.admonition-pro {
+body.style-options-for-admonition-plugin .admonition-def,
+body.style-options-for-admonition-plugin .admonition-thm,
+body.style-options-for-admonition-plugin .admonition-lem,
+body.style-options-for-admonition-plugin .admonition-cor,
+body.style-options-for-admonition-plugin .admonition-pro {
   overflow: visible !important;
   border: 1px solid rgb(var(--admonition-color)) !important;
   border-radius: 0.3em !important;
@@ -12310,11 +12324,11 @@ section.footnotes ol>li:not(.task-list-item) {
   box-shadow: 0 0 0 !important;
 }
 
-.admonition-def *.admonition-title,
-.admonition-thm *.admonition-title,
-.admonition-lem *.admonition-title,
-.admonition-cor *.admonition-title,
-.admonition-pro *.admonition-title {
+body.style-options-for-admonition-plugin .admonition-def *.admonition-title,
+body.style-options-for-admonition-plugin .admonition-thm *.admonition-title,
+body.style-options-for-admonition-plugin .admonition-lem *.admonition-title,
+body.style-options-for-admonition-plugin .admonition-cor *.admonition-title,
+body.style-options-for-admonition-plugin .admonition-pro *.admonition-title {
   display: inline-block;
   top: -0.9em;
   left: 1.5em;
@@ -12323,41 +12337,41 @@ section.footnotes ol>li:not(.task-list-item) {
   border-radius: 0.2em;
 }
 
-.admonition-def *.admonition-title-content,
-.admonition-thm *.admonition-title-content,
-.admonition-lem *.admonition-title-content,
-.admonition-cor *.admonition-title-content,
-.admonition-pro *.admonition-title-content {
+body.style-options-for-admonition-plugin .admonition-def *.admonition-title-content,
+body.style-options-for-admonition-plugin .admonition-thm *.admonition-title-content,
+body.style-options-for-admonition-plugin .admonition-lem *.admonition-title-content,
+body.style-options-for-admonition-plugin .admonition-cor *.admonition-title-content,
+body.style-options-for-admonition-plugin .admonition-pro *.admonition-title-content {
   color: white;
   font-family:  "方正书宋_GBK", var(--font-family-major);
   font-size: 1.1em;
 }
 
-.admonition-def *.admonition-title-icon,
-.admonition-thm *.admonition-title-icon,
-.admonition-lem *.admonition-title-icon,
-.admonition-cor *.admonition-title-icon,
-.admonition-pro *.admonition-title-icon {
+body.style-options-for-admonition-plugin .admonition-def *.admonition-title-icon,
+body.style-options-for-admonition-plugin .admonition-thm *.admonition-title-icon,
+body.style-options-for-admonition-plugin .admonition-lem *.admonition-title-icon,
+body.style-options-for-admonition-plugin .admonition-cor *.admonition-title-icon,
+body.style-options-for-admonition-plugin .admonition-pro *.admonition-title-icon {
 	/* display: none !important; */
   color: white;
   background-color: rgb(var(--admonition-color));
   margin: 0.2em;
 }
 
-.admonition-def *.admonition-content-holder,
-.admonition-thm *.admonition-content-holder,
-.admonition-lem *.admonition-content-holder,
-.admonition-cor *.admonition-content-holder,
-.admonition-pro *.admonition-content-holder {
+body.style-options-for-admonition-plugin .admonition-def *.admonition-content-holder,
+body.style-options-for-admonition-plugin .admonition-thm *.admonition-content-holder,
+body.style-options-for-admonition-plugin .admonition-lem *.admonition-content-holder,
+body.style-options-for-admonition-plugin .admonition-cor *.admonition-content-holder,
+body.style-options-for-admonition-plugin .admonition-pro *.admonition-content-holder {
   margin-top: -1em ;
   padding: 0;
 }
 
-.admonition-def p,
-.admonition-thm p,
-.admonition-lem p,
-.admonition-cor p,
-.admonition-pro p {
+body.style-options-for-admonition-plugin .admonition-def p,
+body.style-options-for-admonition-plugin .admonition-thm p,
+body.style-options-for-admonition-plugin .admonition-lem p,
+body.style-options-for-admonition-plugin .admonition-cor p,
+body.style-options-for-admonition-plugin .admonition-pro p {
   text-indent: 0;
   font-family: "方正楷体_GBK", var(--font-family-major) !important;
   font-size: 1.1em;
