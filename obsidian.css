@@ -832,7 +832,13 @@ settings:
     title.zh: 使用全宽状态栏
     description: Use full width status bar
     type: class-toggle
-    default:  false
+    default: false
+  -
+    id: text-indentation-two-em
+    title: Text-indent of the first line in preview mode
+    title.zh: 段落首行缩进（预览模式）
+    type: class-toggle
+    default: false
   -
     id: list-style-change-options-folder
     title: List
@@ -6822,6 +6828,10 @@ pre.CodeMirror-line {
 /*preview mode font size*/
 p {
   font-size: var(--font-size-preview-normal);
+}
+
+body.text-indentation-two-em p {
+  text-indent: 2em;
 }
 
 /*edit mode blockquote font size*/
