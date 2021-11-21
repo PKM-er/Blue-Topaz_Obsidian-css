@@ -3811,7 +3811,7 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
 
   --background-primary: var(--bg-color);
   --background-primary-alt: var(--bg-color2);
-  --background-secondary: var(--bg-color);
+  /* --background-secondary: var(--bg-color); */
   --background-secondary-alt: var(--bg-color2);
   --background-secondary-alt-bg-4-bt: var(--bg-color);
   --background-accent: #fff;
@@ -4104,7 +4104,7 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
 
   --background-primary: var(--bg-color);
   --background-primary-alt: var(--bg-color2);
-  --background-secondary: var(--bg-color);
+  /* --background-secondary: var(--bg-color); */
   --background-secondary-alt: var(--bg-color2);
   --background-secondary-alt-bg-4-bt: var(--bg-color);
 
@@ -4386,7 +4386,7 @@ body.color-scheme-options-chocolate-topaz.theme-light {
 
   --background-primary: var(--bg-color);
   --background-primary-alt: var(--bg-color2);
-  --background-secondary: var(--bg-color);
+  /* --background-secondary: var(--bg-color); */
   --background-secondary-alt: var(--bg-color2);
   --background-secondary-alt-bg-4-bt: var(--bg-color);
   --background-accent: #fff;
@@ -4610,7 +4610,7 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
 
   --background-primary: var(--bg-color);
   --background-primary-alt: var(--bg-color2);
-  --background-secondary: var(--bg-color);
+  /* --background-secondary: var(--bg-color); */
   --background-secondary-alt: var(--bg-color2);
   --background-secondary-alt-bg-4-bt: var(--bg-color);
 
@@ -4915,7 +4915,7 @@ body.color-scheme-options-autumn-topaz.theme-light {
 
   --background-primary: var(--bg-color);
   --background-primary-alt: var(--bg-color2);
-  --background-secondary: var(--bg-color);
+  /* --background-secondary: var(--bg-color); */
   --background-secondary-alt: var(--bg-color2);
   --background-secondary-alt-bg-4-bt:var(--bg-color);
 
@@ -5042,7 +5042,7 @@ body.color-scheme-options-autumn-topaz.theme-light {
   --sliding-panes-header-color: var(--deep-color);
   --background-4-sliding-pane: var(--bg-color);
 
-  --color-view-header-gradient-1: var(--color1);
+  --color-view-header-gradient-1: #70a60085;
   --color-view-header-gradient-2: var(--bg-color);
 
   /*checkbox*/
@@ -5082,7 +5082,7 @@ body.color-scheme-options-autumn-topaz.theme-dark {
 
   --background-primary: var(--bg-color);
   --background-primary-alt: var(--bg-color2);
-  --background-secondary: var(--bg-color);
+  /* --background-secondary: var(--bg-color); */
   --background-secondary-alt: var(--bg-color2);
   --background-secondary-alt-bg-4-bt:var(--bg-color);
 
