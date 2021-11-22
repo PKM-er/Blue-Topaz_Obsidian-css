@@ -12965,7 +12965,7 @@ img[alt$="inlR"] {
 .markdown-preview-view .image-embed[src$="center"],
 .markdown-preview-view .image-embed[src$="centre"] {
   clear: both;
-  margin: 1rem auto;
+  margin: 0.5rem auto;
   width: fit-content;
   display: block;
 }
@@ -12984,9 +12984,9 @@ img[alt$="inlR"] {
 .markdown-preview-view .image-embed[src$="left"] {
   position: relative;
   float: left;
-  margin-right: 2rem;
-  margin-bottom: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
   clear: both;
   display: table;
   width: fit-content;
@@ -13005,9 +13005,9 @@ img[alt$="inlR"] {
 .markdown-preview-view .image-embed[src$="right"] {
   position: relative;
   float: right;
-  margin-top: 1.5rem;
-  margin-left: 2rem;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
   clear: both;
   display: table;
   width: fit-content;
