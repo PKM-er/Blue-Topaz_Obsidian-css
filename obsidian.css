@@ -832,7 +832,7 @@ settings:
     title.zh: 使用全宽状态栏
     description: Use full width status bar
     type: class-toggle
-    default: false
+    default: true
   -
     id: text-indentation-two-em
     title: Text-indent of the first line in preview mode
