@@ -838,7 +838,7 @@ settings:
     title: Text-indent of the first line in preview mode
     title.zh: 段落首行缩进（预览模式）
     type: class-toggle
-    default: true
+    default: false
   -
     id: non-border-bottom-header
     title: Remove underlines of header 1 & 2 
