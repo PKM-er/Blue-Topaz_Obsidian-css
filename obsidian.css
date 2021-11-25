@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.12.19。uid [20211124] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.12.19, uid [20211124] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.12.19。uid [20211125] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.12.19, uid [20211125] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 @LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @98yugan */
@@ -6850,13 +6850,60 @@ p {
   font-size: var(--font-size-preview-normal);
 }
 
-body.text-indentation-two-em p {
+body.text-indentation-two-em *:not(blockquote) > p {
   text-indent: 2em;
 }
 
 /*edit mode blockquote font size*/
 .cm-s-obsidian span.cm-quote {
   font-size: var(--font-size-edit-blockquote);
+}
+
+.cm-s-obsidian span.cm-quote::before {
+  content: "";
+  border-left: 7px solid var(--theme-color);
+  border-radius: 5px 0 0 5px;
+  height: 100%;
+  margin-left: -7px;
+  position: absolute;
+}
+
+.CodeMirror-line span.cm-formatting-quote + *::before,
+.CodeMirror-line span.cm-formatting-quote + span.cm-hmd-indent-in-quote + span.cm-quote:not(.cm-formatting-quote)::before,
+.CodeMirror-line span.cm-inline-code + *::before,
+.CodeMirror-line span.cm-highlight + *::before,
+.CodeMirror-line span.cm-quote + *::before {
+  border-left: none;
+}
+
+/*Quote (> lorem ipsum ...) in edit mode with left border rendered instead of >*/
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-quote {
+  color: transparent !important;
+}
+
+.CodeMirror-line span.cm-formatting-quote {
+  color: var(--red) !important;
+}
+
+.HyperMD-quote.CodeMirror-line {
+  background-color: var(--background-blockquote);
+  border-radius: var(--radius-s-border);
+}
+
+/*
+div:not(.CodeMirror-activeline)>.HyperMD-quote {
+  border-left: 7px solid var(--theme-color);
+  border-radius: var(--radius-s-border);
+  background-color: var(--background-blockquote);
+}
+
+div.CodeMirror-activeline>.HyperMD-quote {
+  border-left: 7px solid var(--theme-color);
+  border-radius: var(--radius-s-border);
+}
+*/
+.cm-quote:not([class*="link"]):not([class*="string"]) {
+  color: var(--text-normal);
 }
 
 /*code font size*/
@@ -7930,7 +7977,7 @@ code:not([class*='language-']) {
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;
   height: 100%;
-  margin-left: -1px;
+  margin-left: 2px;
 }
 
 
@@ -7948,10 +7995,11 @@ pre.HyperMD-list-line.HyperMD-list-line {
   text-align: start;
 }
 
+/*
 .cm-hmd-list-indent.cm-hmd-list-indent .cm-tab {
   padding: 0 0.25em;
 }
-
+*/
 .markdown-preview-view ul > li.task-list-item > * {
   text-indent: unset;
 }
@@ -7995,12 +8043,14 @@ ul ul ul ol ul {
   list-style: circle;
 }
 
+/*
 ul.contains-task-list ul,
 ol.contains-task-list ul,
 ul.contains-task-list ol,
 ol.contains-task-list ol {
   position: relative;
 }
+
 
 ul.contains-task-list ul::before,
 ul.contains-task-list ol::before {
@@ -8019,6 +8069,7 @@ ol.contains-task-list ol::before {
   margin-left: -3.1em;
   height: 100%;
 }
+*/
 
 ul>li:not(.task-list-item) {
   margin-left: -0.3125em;
@@ -8038,6 +8089,10 @@ ul>li:not(.task-list-item) {
 
 ul>li:not(.task-list-item):hover {
   border-color: var(--list-ul-hover);
+}
+
+ul.contains-task-list ul>li:not(.task-list-item) {
+  margin-left: -0.3125em;
 }
 
 ol {
@@ -9854,30 +9909,6 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
   background: var(--text-muted);
   left: 0;
   top: 50%;
-}
-
-/*Quote (> lorem ipsum ...) in edit mode with left border rendered instead of >*/
-div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-quote {
-  color: transparent !important;
-}
-
-.CodeMirror-line span.cm-formatting-quote {
-  color: var(--red) !important;
-}
-
-div:not(.CodeMirror-activeline)>.HyperMD-quote {
-  border-left: 7px solid var(--theme-color);
-  border-radius: var(--radius-s-border);
-  background-color: var(--background-blockquote);
-}
-
-div.CodeMirror-activeline>.HyperMD-quote {
-  border-left: 7px solid var(--theme-color);
-  border-radius: var(--radius-s-border);
-}
-
-.cm-quote:not([class*="link"]):not([class*="string"]) {
-  color: var(--text-normal);
 }
 
 /*change collapse icon position in left side*/
@@ -15318,7 +15349,6 @@ body.blockquote-style-speech-bubble-one .theme-dark .markdown-preview-view block
 
 body.blockquote-style-speech-bubble-one .markdown-preview-view blockquote p {
   color: var(--text-normal);
-  font-size: 16px;
 }
 
 body.blockquote-style-speech-bubble-one .markdown-preview-view blockquote:after {
@@ -15340,8 +15370,8 @@ body.blockquote-style-speech-bubble-one .markdown-preview-view blockquote:before
   content: "";
   position: absolute;
   width: 25px;
-  border: 10px solid var(--background-primary-bg-4-bt);
-  bottom: -15px;
+  border: 4px solid var(--background-primary-bg-4-bt);
+  bottom: -4px;
   left: 20px;
   z-index: 2;
 }
@@ -15351,21 +15381,21 @@ body.blockquote-style-speech-bubble-one .markdown-preview-view blockquote:before
 
 body.blockquote-style-speech-bubble-two .markdown-preview-view blockquote {
   position: relative;
-  padding: 15px;
-  margin: 1em 1em 3em;
-  border: 7px solid var(--theme-color);
+  padding: 10px;
+  margin: 1em 1em 2.5em;
+  border: 4px solid var(--theme-color);
   text-align: center;
   background: var(--background-primary-bg-4-bt);
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
   font-family: Bookerly, 'Book Antiqua', 'Times New Roman', Times, serif;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 body.blockquote-style-speech-bubble-two .theme-dark .markdown-preview-view blockquote {
   background-color: var(--background-primary-bg-4-bt) !important;
-  border: 7px solid var(--theme-color);
+  border: 4px solid var(--theme-color);
 }
 
 body.blockquote-style-speech-bubble-two.theme-dark .markdown-preview-view blockquote:before,
@@ -15385,9 +15415,9 @@ body.blockquote-style-speech-bubble-two .markdown-preview-view blockquote:before
   bottom: -35px;
   left: 50px;
   width: 50px;
-  height: 30px;
+  height: 29px;
   border-style: solid;
-  border-width: 0 9px 5px 0;
+  border-width: 0 7px 4px 0;
   border-color: var(--theme-color);
   background: transparent;
   /* css3 */
@@ -15404,11 +15434,11 @@ body.blockquote-style-speech-bubble-two .markdown-preview-view blockquote:after 
   position: absolute;
   z-index: 10;
   bottom: -35px;
-  left: 47px;
+  left: 49px;
   width: 20px;
-  height: 30px;
+  height: 29px;
   border-style: solid;
-  border-width: 0 10px 5px 0;
+  border-width: 0 7px 4px 0;
   border-color: var(--theme-color);
   background: transparent;
   /* css3 */
@@ -15424,9 +15454,9 @@ body.blockquote-style-speech-bubble-two .markdown-preview-view blockquote> :firs
   content: "";
   position: absolute;
   bottom: -35px;
-  left: 45px;
-  width: 5px;
-  height: 5px;
+  left: 47px;
+  width: 4px;
+  height: 4px;
   background: var(--theme-color);
   /* css3 */
   -webkit-border-radius: 10px;
