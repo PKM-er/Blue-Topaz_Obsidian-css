@@ -8000,9 +8000,6 @@ pre.HyperMD-list-line.HyperMD-list-line {
   padding: 0 0.25em;
 }
 */
-.markdown-preview-view ul > li.task-list-item > * {
-  text-indent: unset;
-}
 
 li {
   line-height: 1.7em;
@@ -9774,8 +9771,8 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
 
 /* list collaspe icon */
 .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon {
-  padding-top: 14px;
-  padding-left: 10px;
+  padding-top: 15px;
+  padding-left: 0px;
 }
 
 .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon::before {
@@ -9795,13 +9792,15 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
 }
 
 .markdown-preview-view li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon {
-  transform: translateX(-8px) translateY(9px) rotate(-90deg);
+  transform: translateX(-13px) translateY(3px) rotate(-90deg);
   opacity: 0.5;
 }
 
+/*
 ul.contains-task-list .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   margin-left: 30px;
 }
+*/
 
 /*tag collapse indicator*/
 .tag-container .tree-item-children .tree-item-self.tag-pane-tag.is-clickable {
