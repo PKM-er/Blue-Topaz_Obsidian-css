@@ -12465,15 +12465,6 @@ body.style-options-for-admonition-plugin .admonition-pro p {
 
 /*hibox*/
 /*改自 https://github.com/chokcoco/iCSS/issues/153 */
-body.style-options-for-admonition-plugin .admonition-hibox *.admonition-title{
-  display: inline-block;
-  top: -0.9em;
-  left: 1.5em;
-  padding: 1px 8px !important;
-  background-color: rgb(var(--admonition-color)) !important;
-  border-radius: 0.2em;
-}
-
 body.style-options-for-admonition-plugin .admonition-hibox .admonition-content-holder {
   margin: -1em 0.2em;
 }
