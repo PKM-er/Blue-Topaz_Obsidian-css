@@ -10170,6 +10170,7 @@ pre.language-note-cloze::before {
 }
 
 /*hidden box*/
+/*改自 https://github.com/chokcoco/iCSS/issues/153 */
 @property --hibox {
   syntax: '<length>';
   inherits: false;
@@ -12463,6 +12464,7 @@ body.style-options-for-admonition-plugin .admonition-pro p {
 }
 
 /*hibox*/
+/*改自 https://github.com/chokcoco/iCSS/issues/153 */
 body.style-options-for-admonition-plugin .admonition-hibox {
   overflow: visible !important;
   border: 1px solid rgb(var(--admonition-color)) !important;
