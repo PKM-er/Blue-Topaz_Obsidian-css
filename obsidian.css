@@ -11534,7 +11534,7 @@ button.kanban-plugin__new-item-button:hover {
   position: relative;
   float: right;
   right: -10px;
-  width: max(150px, 30%);
+  width: max(180px, 30%);
   max-width: 50%;
   background-color: var(--stickies-color-1);
   -webkit-transform: rotate(0deg);
@@ -11593,7 +11593,7 @@ button.kanban-plugin__new-item-button:hover {
   position: relative;
   float: left;
   box-shadow: 0 10px 10px 2px #9191912d;
-  width: max(150px, 30%);
+  width: max(180px, 30%);
   max-width: 50%;
   background-color: var(--stickies-color-2);
   -webkit-transform: rotate(0deg);
