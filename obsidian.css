@@ -12474,22 +12474,8 @@ body.style-options-for-admonition-plugin .admonition-hibox *.admonition-title{
   border-radius: 0.2em;
 }
 
-body.style-options-for-admonition-plugin .admonition-hibox *.admonition-title-content {
-  color: white;
-  font-family: var(--font-family-major);
-  font-size: 1.1em;
-}
-
-body.style-options-for-admonition-plugin .admonition-hibox *.admonition-title-icon {
-	/* display: none !important; */
-  color: white;
-  background-color: rgb(var(--admonition-color));
-  margin: 0.2em;
-}
-
-body.style-options-for-admonition-plugin .admonition-hibox *.admonition-content-holder {
-  margin-top: -1em ;
-  padding: 0;
+body.style-options-for-admonition-plugin .admonition-hibox .admonition-content-holder {
+  margin: -1em 0.2em;
 }
 
 body.style-options-for-admonition-plugin .admonition-hibox {
