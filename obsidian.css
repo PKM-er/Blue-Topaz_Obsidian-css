@@ -12465,14 +12465,6 @@ body.style-options-for-admonition-plugin .admonition-pro p {
 
 /*hibox*/
 /*改自 https://github.com/chokcoco/iCSS/issues/153 */
-body.style-options-for-admonition-plugin .admonition-hibox {
-  overflow: visible !important;
-  border: 1px solid rgb(var(--admonition-color)) !important;
-  border-radius: 0.3em !important;
-  background-color: rgba(var(--admonition-color),0.05) !important;
-  box-shadow: 0 0 0 !important;
-}
-
 body.style-options-for-admonition-plugin .admonition-hibox *.admonition-title{
   display: inline-block;
   top: -0.9em;
@@ -12502,6 +12494,7 @@ body.style-options-for-admonition-plugin .admonition-hibox *.admonition-content-
 
 body.style-options-for-admonition-plugin .admonition-hibox {
   background-color: transparent !important;
+  box-shadow: none !important;
 }
 
 body.style-options-for-admonition-plugin .admonition-hibox *,
@@ -12523,12 +12516,17 @@ body.style-options-for-admonition-plugin .admonition-hibox {
 
 body.style-options-for-admonition-plugin .admonition-hibox:hover {
   --hibox: 1500px;
+  box-shadow: 0 0.2rem 0.5rem var(--background-modifier-box-shadow) !important;
 }
 
 body.style-options-for-admonition-plugin .admonition-hibox:hover * {
   color: var(--text-normal) !important;
   border-color: inherit !important;
   background-color: initial !important;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox .admonition-content-copy {
+  top: 7px;
 }
 
 body.style-options-for-admonition-plugin .admonition-hibox:hover ol:not(.contains-task-list)>li:not(.task-list-item) {
