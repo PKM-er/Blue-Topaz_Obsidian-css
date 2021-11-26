@@ -1038,7 +1038,7 @@ settings:
     title.zh: 是否开启Admonition特别样式支持
     type: class-toggle
     default: false
-    description : 目前支持ad类型：bank 全透明框🔸def definition🔸thm theorem🔸lem lemma🔸cor corollary🔸pro proposition❗使用方法❗下面以thm类型为例，在admonition插件的设置页面中，类型填 thm，标题填 定理，图标选择hand-point-right，颜色自己选比如浅绿色，添加成功后，在正文中使用代码块```ad-thm 即可激活。其他类型以此类推。  
+    description : 目前支持ad类型：bank 全透明框🔸def definition🔸thm theorem🔸lem lemma🔸cor corollary🔸pro proposition 🔸🔸hibox ❗使用方法❗下面以thm类型为例，在admonition插件的设置页面中，类型填 thm，标题填 定理，图标选择hand-point-right，颜色自己选比如浅绿色，添加成功后，在正文中使用代码块```ad-thm 即可激活。其他类型以此类推。  
   -
     id: style-options-for-kanban-plugin-header
     title: Kanban (Coming soon)
@@ -10169,6 +10169,33 @@ pre.language-note-cloze::before {
   left: 22px;
 }
 
+/*hidden box*/
+@property --hibox {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 24px;
+}
+
+.app-container .markdown-preview-view pre.language-hibox {
+  background-color: transparent;
+}
+
+.app-container .markdown-preview-view pre.language-hibox code.language-hibox:hover {
+  color: var(--text-normal);
+  --hibox: 900px;
+}
+
+.app-container .markdown-preview-view pre.language-hibox code.language-hibox {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  background: radial-gradient(circle at 0px 0px, var(--theme-color-translucent-1) 0, var(--theme-color-translucent-1) var(--hibox), transparent var(--hibox), transparent 0);
+  transition: --hibox 0.4s linear;
+  color: var(--background-code);
+  color: transparent;
+}
+
+
 /*=========================================*/
 /* =========== workspace-ribbon ========== */
 /*=========================================*/
@@ -12433,6 +12460,113 @@ body.style-options-for-admonition-plugin .admonition-pro p {
   text-indent: 0;
   font-family: "方正楷体_GBK", var(--font-family-major) !important;
   font-size: 1.1em;
+}
+
+/*hibox*/
+body.style-options-for-admonition-plugin .admonition-hibox {
+  overflow: visible !important;
+  border: 1px solid rgb(var(--admonition-color)) !important;
+  border-radius: 0.3em !important;
+  background-color: rgba(var(--admonition-color),0.05) !important;
+  box-shadow: 0 0 0 !important;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox *.admonition-title{
+  display: inline-block;
+  top: -0.9em;
+  left: 1.5em;
+  padding: 1px 8px !important;
+  background-color: rgb(var(--admonition-color)) !important;
+  border-radius: 0.2em;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox *.admonition-title-content {
+  color: white;
+  font-family: var(--font-family-major);
+  font-size: 1.1em;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox *.admonition-title-icon {
+	/* display: none !important; */
+  color: white;
+  background-color: rgb(var(--admonition-color));
+  margin: 0.2em;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox *.admonition-content-holder {
+  margin-top: -1em ;
+  padding: 0;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox {
+  background-color: transparent !important;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox *,
+body.style-options-for-admonition-plugin .admonition-hibox *::marker {
+  color: transparent !important;
+  border-color: transparent !important;
+  background-color: transparent !important;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  border-radius: var(--radius-s) !important;
+  background: radial-gradient(circle at 0px 0px, rgba(var(--admonition-color), 0.2) 0, rgba(var(--admonition-color), 0.2) var(--hibox), transparent var(--hibox), transparent 0);
+  transition: --hibox 0.6s linear;
+  border-left: none !important;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox:hover {
+  --hibox: 1500px;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox:hover * {
+  color: var(--text-normal) !important;
+  border-color: inherit !important;
+  background-color: initial !important;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox:hover ol:not(.contains-task-list)>li:not(.task-list-item) {
+  border-color: var(--list-ol-block-color) !important;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox:hover ul>li:not(.task-list-item) {
+  border-color: var(--list-ul-block-color) !important;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox:hover *::marker {
+  color: var(--list-ol-number-color) !important;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox:hover blockquote {
+  border-color: var(--theme-color) !important;
+  background-color: var(--background-blockquote) !important;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox:hover {
+  border-color: var(--text-normal) !important;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox .admonition-title {
+  display: none;
+}
+
+.app-container .markdown-preview-view pre.language-hibox code.language-hibox:hover {
+  color: var(--text-normal);
+  --hibox: 900px;
+}
+
+.app-container .markdown-preview-view pre.language-hibox code.language-hibox {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  background: radial-gradient(circle at 0px 0px, var(--theme-color-translucent-1) 0, var(--theme-color-translucent-1) var(--hibox), transparent var(--hibox), transparent 0);
+  transition: --hibox 0.4s linear;
+  color: var(--background-code);
+  color: transparent;
 }
 
 /* ================================== */
