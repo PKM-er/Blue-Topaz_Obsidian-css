@@ -5803,7 +5803,7 @@ body.color-scheme-options-lillimon-topaz.theme-dark {
 
   --background-primary: var(--bg-color);
   --background-primary-alt: var(--bg-color2);
-  --background-secondary: var(--bg-color);
+  /* --background-secondary: var(--bg-color); */
   --background-secondary-alt: var(--bg-color2);
   --background-secondary-alt-bg-4-bt: var(--bg-color);
 
@@ -5839,7 +5839,7 @@ body.color-scheme-options-lillimon-topaz.theme-dark {
   --search-result-file-title-color: var(--magic-main-color);
   --theme-color: var(--interactive-accent);
   --theme-color-translucent: var(--magic-deep-color);
-  --theme-color-translucent-1: var(--color1);
+  --theme-color-translucent-1: var(--magic-deep-color);
   --color-specification: var(--high-color);
 
 
