@@ -4666,7 +4666,7 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
 
 
   /*Sliding panes*/
-  --sliding-panes-header-color: var(--deep-color);
+  --sliding-panes-header-color: var(--color1);
 
   --color-view-header-gradient-1: var(--bg-color2);
   --color-view-header-gradient-2: var(--bg-color);
@@ -5187,7 +5187,7 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
 
 
   /*Sliding panes*/
-  --sliding-panes-header-color: var(--deep-color);
+  --sliding-panes-header-color: var(--color1);
   --background-4-sliding-panel: #252525ed;
   /* sliding panes 背景颜色 */
 
@@ -5567,7 +5567,7 @@ body.color-scheme-options-autumn-topaz.theme-dark {
   --event-item-color10:var(--color11);
 
   /*Sliding panes*/
-  --sliding-panes-header-color: var(--deep-color);
+  --sliding-panes-header-color: var(--color1);
 
   --checklist-bg-hover: #08080896;
 
@@ -5927,7 +5927,7 @@ body.color-scheme-options-lillimon-topaz.theme-dark {
   --event-item-color10: var(--color11);
 
   /*Sliding panes*/
-  --sliding-panes-header-color: var(--magic-deep-color);
+  --sliding-panes-header-color: var(--color1);
 
 
   --color-view-header-gradient-1: var(--bg-color2);
