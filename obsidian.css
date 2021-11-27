@@ -517,7 +517,10 @@ settings:
         value: color-scheme-options-lilac
       - 
         label: Autumn (@LillianWho)
-        value: color-scheme-options-autumn-topaz  
+        value: color-scheme-options-autumn-topaz 
+      - 
+        label: 魔方 (@LillianWho)
+        value: color-scheme-options-lillimon-topaz 
   -
     id: text-normal
     title: Main text color
@@ -526,6 +529,40 @@ settings:
     format: hex
     default-light: '#0e0e0e'
     default-dark: '#bdbdbd'
+  -
+    id: color-magic
+    title: color magic
+    title.zh: 魔方配色
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: magic-main-color
+    title: main color
+    title.zh: 主题色
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: '#95a503'
+    default-dark: '#95a503'
+  -
+    id: magic-low-color
+    title: low color
+    title.zh: 浅色
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: '#e0e79a'
+    default-dark: '#e0e79a'
+  -
+    id: magic-deep-color
+    title: deep color
+    title.zh: 深色
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: '#746909'
+    default-dark: '#746909'
   -
     id: background-color-settings
     title: Background colors
@@ -5546,9 +5583,6 @@ body.color-scheme-options-autumn-topaz.theme-dark {
 
 }
 
-
-
-
 body.color-scheme-options-autumn-topaz #calendar-container {
   --color-background-heading: transparent;
   --color-background-weeknum: transparent;
@@ -5572,9 +5606,363 @@ body.color-scheme-options-autumn-topaz #calendar-container {
   padding: 0px 5px 0px 8px;
   margin: -21px -8px 0px -8px;
   line-height: 0.6;
-  }
+}
+
+body.color-scheme-options-lillimon-topaz.theme-light {
+
+  /*色系设置*/
+  --magic-low-color: #e0e79a;
+  --magic-main-color: #95a503;
+  --magic-deep-color: #746909;
+
+  --bg-color: #f8f8f5;
+  --bg-color2: #e7e7e4;
+
+  /*色系共 5 个值，3个主题色+2个背景色*/
+
+  --color1: var(--magic-low-color);
+  --color2: var(--magic-low-color);
+  --color3: var(--magic-low-color);
+  --color4: var(--magic-low-color);
+  --color5: var(--magic-main-color);
+  --color6: var(--magic-main-color);
+  --color7: var(--magic-main-color);
+  --color8: var(--magic-main-color);
+  --color9: var(--magic-deep-color);
+  --color10: var(--magic-deep-color);
+  --color11: var(--magic-deep-color);
+
+  --high-color: var(--color8);
 
 
+
+  /*色系设置结束*/
+
+  --background-primary: var(--bg-color);
+  --background-primary-alt: var(--bg-color2);
+  /* --background-secondary: var(--bg-color); */
+  --background-secondary-alt: var(--bg-color2);
+  --background-secondary-alt-bg-4-bt: var(--bg-color);
+
+
+  --text-accent: var(--magic-main-color);
+  --text-accent-hover: var(--magic-low-color);
+
+
+  --interactive-accent-rgb: 215, 178, 88;
+  --interactive-accent: var(--magic-main-color);
+  --interactive-accent-hover: var(--magic-low-color);
+
+  --strong-em-highlight-color: var(--color11);
+
+
+  --search-result-file-matched-bg: var(--magic-low-color);
+
+  --background-primary-bg-4-bt: var(--bg-color);
+  --background-primary-alt-bg-4-bt: var(--bg-color);
+  --background-secondary-bg-4-bt: var(--bg-color);
+  --background-secondary-alt-bg-4-bt: var(--bg-color);
+
+  --background-mobile-drawer-1: var(--bg-color);
+  --background-mobile-drawer-2: var(--bg-color);
+
+
+  --embed-color: #b6d6ff4f;
+  --search-result-file-title-color: var(--magic-main-color);
+  --theme-color: var(--interactive-accent);
+  --theme-color-translucent: var(--magic-low-color);
+  --theme-color-translucent-1: var(--color1);
+  --color-specification: var(--high-color);
+
+
+  --internal-link-color-in-highlight: var(--magic-main-color);
+
+  /*list*/
+  --list-ul-block-color: var(--color5);
+  --list-ul-disc-color: var(--magic-main-color);
+  --green-1: #3dc730;
+  --list-ul-hover: var(--magic-low-color);
+  --list-ol-block-color: var(--magic-main-color);
+  --list-ol-number-color: var(--magic-main-color);
+  --list-ol-hover: var(--magic-low-color);
+
+  /*tags*/
+
+  --tag1: var(--color3);
+  --tag2: var(--color4);
+  --tag3: var(--color5);
+  --tag4: var(--color6);
+  --tag5: var(--color7);
+  --tag6: var(--color8);
+  --tag7: var(--color9);
+  --tag8: var(--color10);
+  --tag9: var(--color11);
+  --color-tag-edit: var(--magic-low-color);
+  --tag-dailynote: var(--magic-low-color);
+  --tag-dailynote-bg: var(--color3);
+  --tag-weeklynote: var(--color6);
+  --tag-weeklynote-bg: var(--color4);
+  --tag-questions: var(--color5);
+  --tag-questions-bg: var(--color5);
+  --tag-ideas: #ceb900;
+  --tag-ideas-bg: #444444d8;
+
+
+  /*Titles*/
+  --h1-color: var(--color9);
+  --h2-color: var(--color8);
+  --h3-color: var(--color7);
+  --h4-color: var(--color6);
+  --h5-color: var(--color5);
+  --h6-color: var(--color4);
+
+  /*graph*/
+
+  --graph-circle: var(--color3);
+
+  --graph-control-bg: var(--bg-color);
+
+  /*mermaid*/
+  --mermaid-active-task-color: var(--high-color);
+  --mermaid-seq-dia-color: var(--magic-low-color);
+
+  /*table*/
+  --table-background-color: var(--bg-color2);
+  --table-background-color-odd: var(--bg-color);
+  --table-border-color: #7d7d7d;
+  --table-thead-background-color: var(--color1);
+  --table-hover-raw-color: var(--color2);
+  --table-hover-color: var(--color1);
+  --table-hover-thead-color: var(--color2);
+
+  /*calendar*/
+  --calendar-week-color: var(--high-color);
+  --calendar-week-hover: var(--color1);
+  --calendar-week-background-color: var(--bg-color);
+  --calendar-today-background-color: var(--color1);
+
+  /*day planner*/
+  --day-planner-pie: var(--magic-deep-color);
+  --day-planner-timeline: #d62f2f;
+  --day-planner-line: var(--magic-low-color);
+  --day-planner-dot: var(--magic-low-color);
+  --day-planner-item-hover: var(--color1);
+  --event-item-color1: var(--color2);
+  --event-item-color2: var(--color3);
+  --event-item-color3: var(--color4);
+  --event-item-color4: var(--color5);
+  --event-item-color5: var(--color6);
+  --event-item-color6: var(--color7);
+  --event-item-color7: var(--color8);
+  --event-item-color8: var(--color9);
+  --event-item-color9: var(--color10);
+  --event-item-color10: var(--color11);
+
+
+
+  /*Sliding panes*/
+  --sliding-panes-header-color: var(--magic-deep-color);
+  --background-4-sliding-pane: var(--bg-color);
+
+
+  --color-view-header-gradient-1: var(--color1);
+  --color-view-header-gradient-2: var(--bg-color);
+
+  /*checkbox*/
+  --checkbox-color-0: var(--magic-main-color);
+
+
+  --activeline-background: var(--bg-color2);
+}
+
+body.color-scheme-options-lillimon-topaz.theme-dark {
+
+  /*魔方*/
+  --magic-low-color: #e0e79a;
+  --magic-main-color: #95a503;
+  --magic-deep-color: #746909;
+
+  --bg-color: #222222;
+  --bg-color2: #444444;
+
+  --color1: var(--magic-low-color);
+  --color2: var(--magic-low-color);
+  --color3: var(--magic-low-color);
+  --color4: var(--magic-low-color);
+  --color5: var(--magic-main-color);
+  --color6: var(--magic-main-color);
+  --color7: var(--magic-main-color);
+  --color8: var(--magic-main-color);
+  --color9: var(--magic-deep-color);
+  --color10: var(--magic-deep-color);
+  --color11: var(--magic-deep-color);
+  --high-color: var(--color8);
+
+
+  /*主题色设置结束**/
+
+  --background-primary: var(--bg-color);
+  --background-primary-alt: var(--bg-color2);
+  --background-secondary: var(--bg-color);
+  --background-secondary-alt: var(--bg-color2);
+  --background-secondary-alt-bg-4-bt: var(--bg-color);
+
+
+  --text-accent: var(--magic-low-color);
+  --text-accent-hover: var(--magic-main-color);
+
+
+  --interactive-accent: var(--color10);
+  /*主题强调色*/
+  --interactive-accent-rgb: 58, 91, 82;
+  /*主题强调色 rgb , 需与主题色一致（把上面的值转成rgb放下面）*/
+  --interactive-accent-hover: var(--magic-main-color);
+  /*主题强调色 鼠标悬浮时颜色*/
+
+
+  --strong-em-highlight-color: var(--color11);
+
+  --search-result-file-matched-bg: var(--high-color);
+  /* 搜索结果文字高亮颜色 */
+
+  --background-primary-bg-4-bt: var(--bg-color);
+  --background-primary-alt-bg-4-bt: var(--bg-color);
+  --background-secondary-bg-4-bt: var(--bg-color);
+  --background-secondary-alt-bg-4-bt: var(--bg-color);
+
+  --background-mobile-drawer-1: var(--bg-color);
+  --background-mobile-drawer-2: var(--bg-color);
+
+
+  --embed-color: #1156a534;
+  /*![[]] 背景颜色*/
+  --search-result-file-title-color: var(--magic-main-color);
+  --theme-color: var(--interactive-accent);
+  --theme-color-translucent: var(--magic-deep-color);
+  --theme-color-translucent-1: var(--color1);
+  --color-specification: var(--high-color);
+
+
+  --internal-link-color-in-highlight: var(--magic-main-color);
+  /*==[[]]==双链文字颜色*/
+
+  /*list*/
+  --list-ul-block-color: var(--color6);
+  --list-ul-disc-color: var(--magic-main-color);
+  --green-1: #3dc730;
+  --list-ul-hover: var(--magic-low-color);
+  --list-ol-block-color: var(--magic-main-color);
+  --list-ol-number-color: var(--magic-main-color);
+  --list-ol-hover: var(--magic-low-color);
+
+
+  /*普通标签颜色*/
+  --tag1: var(--color11);
+  --tag2: var(--color10);
+  --tag3: var(--color9);
+  --tag4: var(--color8);
+  --tag5: var(--color7);
+  --tag6: var(--color6);
+  --tag7: var(--color5);
+  --tag8: var(--color4);
+  --tag9: var(--color3);
+
+  --color-tag-edit: var(--magic-main-color);
+  --tag-dailynote: var(--mian-color);
+  --tag-dailynote-bg: var(--color5);
+  --tag-weeklynote: var(--color3);
+  --tag-weeklynote-bg: var(--color6);
+  --tag-questions: var(--color8);
+  --tag-questions-bg: var(--color8);
+  --tag-ideas: #fcfcc0;
+  --tag-ideas-bg: #565656d8;
+
+  /*titles*/
+  --h1-color: var(--color4);
+  --h2-color: var(--color5);
+  --h3-color: var(--color6);
+  --h4-color: var(--color7);
+  --h5-color: var(--color8);
+  --h6-color: var(--color9);
+
+  --graph-circle: var(--color8);
+  /*图谱普通点颜色*/
+
+
+  /*mermaid*/
+  --mermaid-active-task-color: var(--magic-low-color);
+  --mermaid-seq-dia-color: var(--high-color);
+
+  /*table*/
+  --table-background-color: var(--bg-color2);
+  --table-background-color-odd: var(--bg-color);
+  --table-border-color: #878787;
+  --table-thead-background-color: var(--color11);
+  --table-hover-raw-color: var(--color10);
+  --table-hover-color: var(--color11);
+  ;
+  --table-hover-thead-color: var(--color10);
+
+  /*calendar*/
+  --calendar-week-color: var(--high-color);
+  --calendar-week-hover: var(--color1);
+  --calendar-week-background-color: var(--bg-color);
+  --calendar-today-background-color: var(--color1);
+
+  /*day planner*/
+  --day-planner-pie: var(--color1);
+  --day-planner-timeline: #000000;
+  --day-planner-line: var(--magic-low-color);
+  --day-planner-dot: var(--magic-low-color);
+  --day-planner-item-hover: var(--magic-main-color);
+  --event-item-color1: var(--color2);
+  --event-item-color2: var(--color3);
+  --event-item-color3: var(--color4);
+  --event-item-color4: var(--color5);
+  --event-item-color5: var(--color6);
+  --event-item-color6: var(--color7);
+  --event-item-color7: var(--color8);
+  --event-item-color8: var(--color9);
+  --event-item-color9: var(--color10);
+  --event-item-color10: var(--color11);
+
+  /*Sliding panes*/
+  --sliding-panes-header-color: var(--magic-deep-color);
+
+
+  --color-view-header-gradient-1: var(--bg-color2);
+  --color-view-header-gradient-2: var(--bg-color);
+
+  /*checkbox*/
+  --checkbox-color-0: var(--magic-main-color);
+
+  --activeline-background: var(--bg-color2);
+}
+
+body.color-scheme-options-lillimon-topaz #calendar-container {
+  --color-background-heading: transparent;
+  --color-background-weeknum: transparent;
+  --color-background-day: transparent;
+  --color-background-weekend: transparent;
+
+  --color-tr: var(--bg-color) !important;
+  --color-tr-odd: #ffdece !important;
+
+  --color-dot: var(--text-accent);
+  --color-arrow: currentColor;
+  --color-button: var(--text-muted);
+  --color-text-weeknum: var(--calendar-week-color);
+
+  --color-text-title: var(--text-normal);
+  --color-text-heading: var(--text-normal);
+  --color-text-day: var(--text-normal);
+  --color-text-today: var(--text-accent);
+
+  /*===*/
+  padding: 0px 5px 0px 8px;
+  margin: -21px -8px 0px -8px;
+  line-height: 0.6;
+}
 
 /*=================== Lillian 的配色 end  ========================*/
 
