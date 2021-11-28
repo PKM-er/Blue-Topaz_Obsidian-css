@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.12.19。uid [20211127] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.12.19, uid [20211127] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.13.6。uid [20211128] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.13.6, uid [20211128] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 @LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @98yugan */
@@ -517,8 +517,8 @@ settings:
         value: color-scheme-options-lilac
       - 
         label: Autumn (@LillianWho)
-        value: color-scheme-options-autumn-topaz 
-      - 
+        value: color-scheme-options-autumn-topaz  
+      -
         label: 魔方 (@LillianWho)
         value: color-scheme-options-lillimon-topaz 
   -
@@ -5944,25 +5944,25 @@ body.color-scheme-options-lillimon-topaz #calendar-container {
   --color-background-weeknum: transparent;
   --color-background-day: transparent;
   --color-background-weekend: transparent;
-
+  
   --color-tr: var(--bg-color) !important;
   --color-tr-odd: #ffdece !important;
-
+  
   --color-dot: var(--text-accent);
   --color-arrow: currentColor;
   --color-button: var(--text-muted);
-  --color-text-weeknum: var(--calendar-week-color);
-
+   --color-text-weeknum: var(--calendar-week-color);
+    
   --color-text-title: var(--text-normal);
   --color-text-heading: var(--text-normal);
   --color-text-day: var(--text-normal);
   --color-text-today: var(--text-accent);
-
+    
   /*===*/
   padding: 0px 5px 0px 8px;
   margin: -21px -8px 0px -8px;
   line-height: 0.6;
-}
+  }
 
 /*=================== Lillian 的配色 end  ========================*/
 
@@ -6933,12 +6933,13 @@ span[alt*="+grid"] {
   border: none;
 }
 
-.cm-s-obsidian .CodeMirror-line span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-important:not(.cm-formatting-hashtag) {
+.cm-s-obsidian span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-important:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  background-color: var(--stag1-bg);
+  background-color: var(--stag1-bg) !important;
   color: var(--white) !important;
   border: none;
+  font-size: 0.95em;
 }
 
 .tag[href^="#重要"] {
@@ -6957,12 +6958,13 @@ span[alt*="+grid"] {
   border: none;
 }
 
-.cm-s-obsidian .CodeMirror-line span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-complete:not(.cm-formatting-hashtag) {
+.cm-s-obsidian span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-complete:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  background-color: var(--stag3-bg);
+  background-color: var(--stag3-bg) !important;
   color: var(--white) !important;
   border: none;
+  font-size: 0.95em;
 }
 
 .tag[href^="#完成"] {
@@ -6981,12 +6983,13 @@ span[alt*="+grid"] {
   border: none;
 }
 
-.cm-s-obsidian .CodeMirror-line span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-inprogress:not(.cm-formatting-hashtag) {
+.cm-s-obsidian span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-inprogress:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  background-color: var(--stag2-bg);
+  background-color: var(--stag2-bg) !important;
   color: var(--white) !important;
   border: none;
+  font-size: 0.95em;
 }
 
 .tag[href^="#进行中"] {
@@ -7010,16 +7013,17 @@ span[alt*="+grid"] {
   font-size: var(--font-size-emoji-after-tag);
 }
 
-.cm-s-obsidian .CodeMirror-line span.cm-tag-dailynote:not(.cm-formatting-hashtag)::after {
+.cm-s-obsidian span.cm-tag-dailynote:not(.cm-formatting-hashtag)::after {
   content: ' 🐈';
 }
 
-.cm-s-obsidian .CodeMirror-line span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-dailynote:not(.cm-formatting-hashtag) {
+.cm-s-obsidian span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-dailynote:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  background-color: var(--tag-dailynote-bg);
+  background-color: var(--tag-dailynote-bg) !important;
   color: var(--white) !important;
   border: none;
+  font-size: 0.95em;
 }
 
 .tag[href^="#weeklynote"] {
@@ -7035,16 +7039,17 @@ span[alt*="+grid"] {
   font-size: var(--font-size-emoji-after-tag);
 }
 
-.cm-s-obsidian .CodeMirror-line span.cm-tag-weeklynote:not(.cm-formatting-hashtag)::after {
+.cm-s-obsidian span.cm-tag-weeklynote:not(.cm-formatting-hashtag)::after {
   content: ' 🥑';
 }
 
-.cm-s-obsidian .CodeMirror-line .cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-weeklynote:not(.cm-formatting-hashtag) {
+.cm-s-obsidian .cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-weeklynote:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  background-color: var(--tag-weeklynote-bg);
+  background-color: var(--tag-weeklynote-bg) !important;
   color: var(--white) !important;
   border: none;
+  font-size: 0.95em;
 }
 
 .tag[href^="#questions"] {
@@ -7060,16 +7065,17 @@ span[alt*="+grid"] {
   font-size: var(--font-size-emoji-after-tag);
 }
 
-.cm-s-obsidian .CodeMirror-line span.cm-tag-questions:not(.cm-formatting-hashtag)::after {
+.cm-s-obsidian span.cm-tag-questions:not(.cm-formatting-hashtag)::after {
   content: ' ❓';
 }
 
-.cm-s-obsidian .CodeMirror-line span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-questions:not(.cm-formatting-hashtag) {
+.cm-s-obsidian span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-questions:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  background-color: var(--tag-questions-bg);
+  background-color: var(--tag-questions-bg) !important;
   color: var(--white) !important;
   border: none;
+  font-size: 0.95em;
 }
 
 .tag[href^="#ideas"] {
@@ -7085,16 +7091,17 @@ span[alt*="+grid"] {
   font-size: var(--font-size-emoji-after-tag);
 }
 
-.cm-s-obsidian .CodeMirror-line span.cm-tag-ideas:not(.cm-formatting-hashtag)::after {
+.cm-s-obsidian span.cm-tag-ideas:not(.cm-formatting-hashtag)::after {
   content: ' 💡';
 }
 
-.cm-s-obsidian .CodeMirror-line span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-ideas:not(.cm-formatting-hashtag) {
-  background-color: var(--tag-ideas-bg);
+.cm-s-obsidian span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-ideas:not(.cm-formatting-hashtag) {
+  background-color: var(--tag-ideas-bg) !important;
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
   color: var(--white) !important;
   border: none;
+  font-size: 0.95em;
 }
 
 /*colorful tags*/
@@ -7170,7 +7177,7 @@ div:not(.CodeMirror-activeline) .CodeMirror-line span.cm-hashtag-begin {
   opacity: 0.5;
 }
 
-div.CodeMirror-line span.cm-hashtag-begin {
+div .CodeMirror-line span.cm-hashtag-begin {
   background-color: transparent;
   color: var(--accent-strong);
   border-top-left-radius: var(--radius-l);
@@ -7254,10 +7261,6 @@ body.text-indentation-two-em *:not(blockquote) > p {
   height: 100%;
   margin-left: -7px;
   position: absolute;
-}
-
-.markdown-source-view.is-live-preview span.cm-quote::before {
-  all: initial;
 }
 
 .CodeMirror-line span.cm-formatting-quote + *::before,
@@ -7348,7 +7351,7 @@ span.cm-highlight.cm-inline-code {
   color: var(--text-highlight);
 }
 
-span.cm-strong.cm-em.cm-highlight {
+.CodeMirror-lines span.cm-strong.cm-em.cm-highlight {
   padding: 0 1px 1px;
 }
 
@@ -13601,7 +13604,7 @@ img[alt$="inlR"] {
 /*===================================================*/
 /*===================================================*/
 .is-mobile .markdown-preview-view {
-  padding: 0 30px;
+  padding: 0 16px 0 25px;
 }
 
 .is-mobile .markdown-preview-view ol>li {
@@ -13879,6 +13882,329 @@ img[alt$="inlR"] {
   color: var(--text-normal);
 }
 
+.is-mobile .HyperMD-quote.cm-line {
+  content: "";
+  border-left: 7px solid var(--theme-color);
+  border-radius: 5px 0 0 5px;
+  height: 100%;
+  margin-left: 0px;
+  position: relative;
+}
+
+.is-mobile .markdown-preview-view.kanban-plugin__markdown-preview-view {
+  padding: 0 5px;
+}
+
+/*===================================================*/
+/*===================================================*/
+/*=================   Live Preview   ================*/
+/*===================================================*/
+/*===================================================*/
+.markdown-source-view.is-live-preview span.cm-quote::before {
+  all: initial;
+}
+
+.markdown-source-view.mod-cm6 .cm-gutters {
+  background-color: transparent !important;
+}
+
+/*
+.markdown-source-view.is-live-preview span:not([class*=cm-formatting]).cm-em.cm-highlight.cm-strong + span:not([class*=cm-formatting]).cm-em.cm-highlight.cm-strong,
+.markdown-source-view.is-live-preview span:not([class*=cm-formatting]).cm-highlight.cm-strong + span:not([class*=cm-formatting]).cm-highlight.cm-strong {
+  border-radius: var(--radius-xs);
+  padding: 0 3px 1px;
+}
+
+.markdown-source-view.is-live-preview span.cm-formatting.cm-formatting-highlight.cm-highlight + span:not([class*=cm-formatting-link-start]).cm-highlight + span:not([class*=cm-formatting-link-start]).cm-highlight {
+  border-radius: var(--radius-xs);
+  padding: 0 3px 1px;
+}
+*/
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+  border-color: var(--theme-color);
+  background-color: var(--background-blockquote);
+}
+
+/*
+.markdown-source-view.is-live-preview .cm-formatting-link.cm-formatting-link-start.cm-highlight + .cm-highlight.cm-hmd-internal-link + .cm-highlight.cm-hmd-internal-link {
+  border-radius: var(--radius-xs);
+  padding: 0 3px 1px;
+}
+*/
+
+.markdown-source-view.is-live-preview *:not(font)>em>strong,
+.markdown-source-view.is-live-preview *:not(font)>strong>em,
+.markdown-source-view.is-live-preview .cm-strong.cm-em {
+  padding-right: 0;
+}
+
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-quote.cm-quote {
+  color: var(--red);
+}
+
+.markdown-source-view.is-live-preview span.code-block-flair {
+  color: #95a3b5;
+}
+
+.markdown-source-view.is-live-preview span.cm-hashtag {
+  font-family: var(--font-family-tag);
+  font-size: var(--font-size-tag);
+  text-decoration: none;
+  color: var(--accent-strong);
+}
+
+.markdown-source-view.is-live-preview span.cm-hashtag-begin {
+  background-color:var(--color-tag-edit);
+  color: var(--accent-strong);
+  border-top-left-radius: var(--radius-l);
+  border-bottom-left-radius: var(--radius-l);
+  border-right: none;
+  text-decoration: none;
+  padding-left: 0.3em;
+}
+
+.markdown-source-view.is-live-preview span.cm-hashtag-end {
+  background-color: var(--color-tag-edit);
+  color: var(--tag-text);
+  border-radius: 0 var(--radius-l) var(--radius-l) 0;
+  padding-right: 0.3em !important;
+  border-left: none;
+  text-decoration: none;
+}
+
+span.cm-hashtag-begin+.cm-hashtag.cm-meta {
+  padding-right: 0;
+  background-color: var(--color-tag-edit);
+  color: var(--tag-text);
+}
+
+.markdown-source-view.is-live-preview span.cm-hashtag-begin+.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-hashtag-end {
+  padding-left: 0;
+  border-top-right-radius: var(--radius-l);
+  border-bottom-right-radius: var(--radius-l);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: var(--color-tag-edit);
+  color: var(--tag-text);
+  padding-right: 0.3em;
+}
+
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-important {
+  background-color: var(--stag1-bg) !important;
+}
+
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-weeklynote {
+  background-color: var(--tag-weeklynote-bg) !important;
+}
+
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-dailynote {
+  background-color: var(--tag-dailynote-bg) !important;
+}
+
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-ideas {
+  background-color: var(--tag-ideas-bg) !important;
+}
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-inprogress {
+  background-color: var(--stag2-bg) !important;
+}
+
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-questions {
+  background-color: var(--tag-questions-bg) !important;
+}
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-complete {
+  background-color: var(--stag3-bg) !important;
+}
+
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-dailynote,
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-weeklynote,
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-ideas,
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-inprogress,
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-important,
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-questions,
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-complete {
+  font-weight: 600;
+  font-family: var(--font-family-special-tag) !important;
+  display: inline;
+  font-size: 0.95em;
+}
+
+
+.markdown-source-view.is-live-preview .task-list-item-checkbox {
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  border: 2px solid var(--text-normal);
+  position: relative;
+  border-radius: var(--radius-xs);
+  width: 1.3em;
+  height: 1.3em;
+  margin: 0 0.5em 0.1215em 0;
+  filter: hue-rotate(var(--theme-color));
+  transition: all 500ms;
+  cursor: pointer;
+}
+
+.markdown-source-view.is-live-preview .task-list-item-checkbox:checked {
+  border: none;
+  background-color: var(--interactive-accent);
+}
+
+.markdown-source-view.is-live-preview .task-list-item-checkbox:hover {
+  background-color: var(--theme-color-translucent);
+}
+
+
+.markdown-source-view.is-live-preview .task-list-item-checkbox:checked::before {
+  content: " ";
+  position: absolute;
+  background-color: white;
+  left: 3px;
+  top: 3px;
+  right: 2px;
+  bottom: 2px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
+}
+
+.markdown-source-view.is-live-preview .task-list-item-checkbox:hover::before {
+  content: " ";
+  position: absolute;
+  background-color: white;
+  left: 3px;
+  top: 3px;
+  right: 2px;
+  bottom: 2px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
+  animation: fade-left 1.5s;
+}
+
+.markdown-source-view.is-live-preview .task-list-item-checkbox:checked:hover::before {
+  animation: tada 1s;
+}
+
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="x"]:hover {
+  background-color: var(--red) !important;
+}
+
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="x"]::before {
+  content: " ";
+  position: absolute;
+  background-color: white;
+  left: 3px;
+  top: 3px;
+  right: 2px;
+  bottom: 2px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E") !important;
+}
+
+.markdown-preview-view input.task-list-item-checkbox[data-task="x"] {
+  text-decoration: none;
+  color: var(--text-checked-checkbox);
+}
+
+/*- [>]*/
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task=">"]::before {
+  content: ' ';
+  top: -0.25em;
+  left: -0.24em;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTAuNzA3IDE3LjcwNyAxNi40MTQgMTJsLTUuNzA3LTUuNzA3LTEuNDE0IDEuNDE0TDEzLjU4NiAxMmwtNC4yOTMgNC4yOTN6Ii8+PC9zdmc+) !important;
+}
+
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task=">"] {
+  background-color: var(--checkbox-color-2) !important;
+  text-decoration: none;
+  color: var(--text-normal);
+}
+
+/*- [<]*/
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="<"]::before {
+  content: ' ';
+  top: -0.25em;
+  left: -0.24em;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTMuMjkzIDYuMjkzIDcuNTg2IDEybDUuNzA3IDUuNzA3IDEuNDE0LTEuNDE0TDEwLjQxNCAxMmw0LjI5My00LjI5M3oiLz48L3N2Zz4=) !important;
+}
+
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="<"] {
+  background-color: var(--checkbox-color-1) !important;  text-decoration: none;
+  color: var(--text-normal);
+}
+
+/*- [?]*/
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="?"]::before {
+  content: ' ';
+  top: -0.25em;
+  left: -0.24em;
+  right: 0;
+  bottom: 0;
+  background-color: var(--red);
+  transform: scale(0.8);
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgNEM5LjI0MyA0IDcgNi4yNDMgNyA5aDJjMC0xLjY1NCAxLjM0Ni0zIDMtM3MzIDEuMzQ2IDMgM2MwIDEuMDY5LS40NTQgMS40NjUtMS40ODEgMi4yNTUtLjM4Mi4yOTQtLjgxMy42MjYtMS4yMjYgMS4wMzhDMTAuOTgxIDEzLjYwNCAxMC45OTUgMTQuODk3IDExIDE1djJoMnYtMi4wMDljMC0uMDI0LjAyMy0uNjAxLjcwNy0xLjI4NC4zMi0uMzIuNjgyLS41OTggMS4wMzEtLjg2N0MxNS43OTggMTIuMDI0IDE3IDExLjEgMTcgOWMwLTIuNzU3LTIuMjQzLTUtNS01em0tMSAxNGgydjJoLTJ6Ii8+PC9zdmc+) !important;
+}
+
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="?"] {
+  background-color: var(--checkbox-color-3) !important;
+  text-decoration: none;
+  color: var(--text-normal);
+  font-weight: 600;
+}
+
+/*- [!]*/
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="!"]::before {
+  content: ' ';
+  top: -0.25em;
+  left: -0.2em;
+  right: 0;
+  bottom: -0.2em;
+  background-color: var(--text-yellow);
+  transform: scale(0.75);
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0cHgiIGZpbGw9IiMwMDAwMDAiPjxnPjxyZWN0IGZpbGw9Im5vbmUiIGhlaWdodD0iMjQiIHdpZHRoPSIyNCIvPjwvZz48Zz48Zy8+PGc+PHBhdGggZD0iTTEyLDNjLTAuNDYsMC0wLjkzLDAuMDQtMS40LDAuMTRDNy44NCwzLjY3LDUuNjQsNS45LDUuMTIsOC42NmMtMC40OCwyLjYxLDAuNDgsNS4wMSwyLjIyLDYuNTYgQzcuNzcsMTUuNiw4LDE2LjEzLDgsMTYuNjlWMTljMCwxLjEsMC45LDIsMiwyaDAuMjhjMC4zNSwwLjYsMC45OCwxLDEuNzIsMXMxLjM4LTAuNCwxLjcyLTFIMTRjMS4xLDAsMi0wLjksMi0ydi0yLjMxIGMwLTAuNTUsMC4yMi0xLjA5LDAuNjQtMS40NkMxOC4wOSwxMy45NSwxOSwxMi4wOCwxOSwxMEMxOSw2LjEzLDE1Ljg3LDMsMTIsM3ogTTE0LDE3aC00di0xaDRWMTd6IE0xMCwxOXYtMWg0djFIMTB6IE0xNS4zMSwxMy43NGMtMC4wOSwwLjA4LTAuMTYsMC4xOC0wLjI0LDAuMjZIOC45MmMtMC4wOC0wLjA5LTAuMTUtMC4xOS0wLjI0LTAuMjdjLTEuMzItMS4xOC0xLjkxLTIuOTQtMS41OS00LjcgYzAuMzYtMS45NCwxLjk2LTMuNTUsMy44OS0zLjkzQzExLjMyLDUuMDMsMTEuNjYsNSwxMiw1YzIuNzYsMCw1LDIuMjQsNSw1QzE3LDExLjQzLDE2LjM5LDEyLjc5LDE1LjMxLDEzLjc0eiIvPjwvZz48Zz48cmVjdCBoZWlnaHQ9IjMiIHdpZHRoPSIxIiB4PSIxMS41IiB5PSIxMSIvPjxyZWN0IGhlaWdodD0iMyIgdHJhbnNmb3JtPSJtYXRyaXgoMC43MDcxIC0wLjcwNzEgMC43MDcxIDAuNzA3MSAtNC4wMzEyIDEwLjg1MzYpIiB3aWR0aD0iMSIgeD0iMTAuNTkiIHk9IjguNzkiLz48cmVjdCBoZWlnaHQ9IjMiIHRyYW5zZm9ybT0ibWF0cml4KC0wLjcwNzEgLTAuNzA3MSAwLjcwNzEgLTAuNzA3MSAxNC43Njc4IDI2LjcwMjgpIiB3aWR0aD0iMSIgeD0iMTIuNDEiIHk9IjguNzkiLz48L2c+PC9nPjwvc3ZnPg==) !important;
+}
+
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="!"] {
+  background-color: var(--checkbox-color-4) !important;
+  text-decoration: underline wavy var(--text-yellow-2);
+  color: var(--text-normal);
+  font-weight: 600;
+}
+
+/*- [+]*/
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="+"]::before {
+  content: ' ';
+  top: -0.3em;
+  left: -0.22em;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  transform: scale(0.9);
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTkgMTFoLTZWNWgtMnY2SDV2Mmg2djZoMnYtNmg2eiIvPjwvc3ZnPg==) !important;
+}
+
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="+"] {
+  background-color: var(--checkbox-color-5) !important;
+  text-decoration: none;
+  color: var(--checkbox-color-5);
+}
+
+/*- [-]*/
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="-"]::before {
+  content: ' ';
+  top: -0.25em;
+  left: -0.22em;
+  background-color: white;
+  transform: scale(0.9);
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNSAxMWgxNHYySDV6Ii8+PC9zdmc+) !important;
+}
+
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="-"] {
+  background-color: var(--checkbox-color-6) !important;
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
 
 /* ============ */
 /* just for fun */
@@ -14029,6 +14355,7 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Nova nota"] svg.document,
 .nav-action-button[aria-label="Notă nouă"] svg.document,
 .nav-action-button[aria-label="新規ノート"] svg.document,
+.nav-action-button[aria-label="Neue Notiz"] svg.document,
 
 .nav-action-button[aria-label="New folder"] svg.folder,
 .nav-action-button[aria-label="新建文件夹"] svg.folder,
@@ -14038,6 +14365,7 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Nova pasta"] svg.folder,
 .nav-action-button[aria-label="Director nou"] svg.folder,
 .nav-action-button[aria-label="新規フォルダ"] svg.folder,
+.nav-action-button[aria-label="Neuer Ordner"] svg.folder,
 
 .nav-action-button[aria-label="Change sort order"] svg.up-and-down-arrows,
 .nav-action-button[aria-label="排序"] svg.up-and-down-arrows,
@@ -14047,12 +14375,14 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Mudar ordenação"] svg.up-and-down-arrows,
 .nav-action-button[aria-label="Schimbă ordinea de sortare"] svg.up-and-down-arrows,
 .nav-action-button[aria-label="ソート順の変更"] svg.up-and-down-arrows,
+.nav-action-button[aria-label="Sortierreihenfolge ändern"] svg.up-and-down-arrows,
 
 .nav-action-button[aria-label="Collapse results"] svg.bullet-list,
 .nav-action-button[aria-label="折叠搜索结果"] svg.bullet-list,
 .nav-action-button[aria-label="Свернуть результаты"] svg.bullet-list,
 .nav-action-button[aria-label="Comprimi risultati"] svg.bullet-list,
 .nav-action-button[aria-label="Ciutkan hasil"] svg.bullet-list,
+.nav-action-button[aria-label="Ergebnisse zuklappen"] svg.bullet-list,
 
 .nav-action-button[aria-label="Show more context"] svg.expand-vertically,
 .nav-action-button[aria-label="显示上下文"] svg.expand-vertically,
@@ -14124,7 +14454,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Catatan baru"]::before,
 .nav-action-button[aria-label="Nova nota"]::before,
 .nav-action-button[aria-label="Notă nouă"]::before,
-.nav-action-button[aria-label="新規ノート"]::before {
+.nav-action-button[aria-label="新規ノート"]::before,
+.nav-action-button[aria-label="Neue Notiz"]::before {
   content: "\ed39";
 }
 
@@ -14135,7 +14466,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Catatan baru"]:hover::before,
 .nav-action-button[aria-label="Nova nota"]:hover::before,
 .nav-action-button[aria-label="Notă nouă"]:hover::before,
-.nav-action-button[aria-label="新規ノート"]:hover::before {
+.nav-action-button[aria-label="新規ノート"]:hover::before,
+.nav-action-button[aria-label="Neue Notiz"]:hover::before {
   content: "\ed38";
 }
 
@@ -14146,7 +14478,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Folder baru"]::before,
 .nav-action-button[aria-label="Nova pasta"]::before,
 .nav-action-button[aria-label="Director nou"]::before,
-.nav-action-button[aria-label="新規フォルダ"]::before {
+.nav-action-button[aria-label="新規フォルダ"]::before,
+.nav-action-button[aria-label="Neuer Ordner"]::before {
   content: "\e2cc";
   font-family: "Material Icons Outlined";
 }
@@ -14158,7 +14491,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Folder baru"]:hover::before,
 .nav-action-button[aria-label="Nova pasta"]:hover::before,
 .nav-action-button[aria-label="Director nou"]:hover::before,
-.nav-action-button[aria-label="新規フォルダ"]:hover::before {
+.nav-action-button[aria-label="新規フォルダ"]:hover::before,
+.nav-action-button[aria-label="Neuer Ordner"]:hover:before  {
   content: "\e2cc";
   font-family: "Material Icons";
 }
@@ -14170,7 +14504,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Ubah urutan sortir"]::before,
 .nav-action-button[aria-label="Mudar ordenação"]::before,
 .nav-action-button[aria-label="Schimbă ordinea de sortare"]::before,
-.nav-action-button[aria-label="ソート順の変更"]::before {
+.nav-action-button[aria-label="ソート順の変更"]::before,
+.nav-action-button[aria-label="Sortierreihenfolge ändern"]::before {
   content: "\ee7f";
 }
 
@@ -14181,7 +14516,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Ubah urutan sortir"]:hover::before,
 .nav-action-button[aria-label="Mudar ordenação"]:hover::before,
 .nav-action-button[aria-label="Schimbă ordinea de sortare"]:hover::before,
-.nav-action-button[aria-label="ソート順の変更"]:hover::before {
+.nav-action-button[aria-label="ソート順の変更"]:hover::before,
+.nav-action-button[aria-label="Sortierreihenfolge ändern"]:hover::before {
   content: "\ee82";
 }
 
@@ -14197,7 +14533,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="折叠搜索结果"]::before,
 .nav-action-button[aria-label="Свернуть результаты"]::before,
 .nav-action-button[aria-label="Comprimi risultati"]::before,
-.nav-action-button[aria-label="Ciutkan hasil"]::before {
+.nav-action-button[aria-label="Ciutkan hasil"]::before,
+.nav-action-button[aria-label="Ergebnisse zuklappen"]::before  {
   content: "\ed1a";
 }
 
@@ -14205,7 +14542,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="折叠搜索结果"]:hover::before,
 .nav-action-button[aria-label="Свернуть результаты"]:hover::before,
 .nav-action-button[aria-label="Comprimi risultati"]:hover::before,
-.nav-action-button[aria-label="Ciutkan hasil"]:hover:before {
+.nav-action-button[aria-label="Ciutkan hasil"]:hover:before,
+.nav-action-button[aria-label="Ergebnisse zuklappen"]:hover::before {
   content: "\ecd4";
 }
 
@@ -14213,7 +14551,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button.is-active[aria-label="折叠搜索结果"]::before,
 .nav-action-button.is-active[aria-label="Свернуть результаты"]::before,
 .nav-action-button.is-active[aria-label="Comprimi risultati"]::before,
-.nav-action-button.is-active[aria-label="Ciutkan hasil"]::before {
+.nav-action-button.is-active[aria-label="Ciutkan hasil"]::before,
+.nav-action-button.is-active[aria-label="Ergebnisse zuklappen"]::before {
   content: "\ee49";
 }
 
@@ -14221,7 +14560,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button.is-active[aria-label="折叠搜索结果"]:hover::before,
 .nav-action-button.is-active[aria-label="Свернуть результаты"]:hover::before,
 .nav-action-button.is-active[aria-label="Comprimi risultati"]:hover::before,
-.nav-action-button.is-active[aria-label="Ciutkan hasil"]:hover::before {
+.nav-action-button.is-active[aria-label="Ciutkan hasil"]:hover::before,
+.nav-action-button.is-active[aria-label="Ergebnisse zuklappen"]:hover::before {
   content: "\ed2f";
 }
 
@@ -15823,7 +16163,7 @@ body.blockquote-style-quotation-mark .markdown-preview-view blockquote p:first-o
   content: '“';
   font-weight: 700;
   font-size: 60px;
-  font-family: Arial;
+  font-family: Arial, serif;
   color: var(--text-accent);
   position: absolute;
   top: -23px;
