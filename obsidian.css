@@ -904,6 +904,13 @@ settings:
     type: variable-text
     default: "'😀'"
   -
+    id: fancy-hr-rotate
+    title: Degree of icon rotation 
+    title.zh: 图标旋转角度
+    type: variable-number
+    default: 0
+    format: deg
+  -
     id: list-style-change-options-folder
     title: List
     title.zh: 列表
@@ -1307,8 +1314,10 @@ settings:
 
   --background-settings-workplace-theme-light-custom: url("https://");
   --background-settings-workplace-theme-dark-custom: url("https://");
+  --blur-depth: 10px;
 
   --fancy-hr-icon: '😀';
+  --fancy-hr-rotate: 0deg;
 }
 
 body.background-settings-workplace-style-blur.theme-light {
@@ -8241,7 +8250,7 @@ body.fancy-hr .markdown-preview-view hr {
   border-bottom: 2px solid;
   border-image-slice: 1;
   border-width: 2px;
-  border-image-source: linear-gradient(to right, transparent 0%, var(--theme-color) 50%, transparent 100%);
+  border-image-source: linear-gradient(to right, transparent 0%, var(--theme-color) 30%, var(--theme-color) 46%, transparent 46%, transparent 54%, var(--theme-color) 54%, var(--theme-color) 70%, transparent 100%);
 }
 
 body.fancy-hr .markdown-preview-view hr::after {
@@ -8249,11 +8258,41 @@ body.fancy-hr .markdown-preview-view hr::after {
   display: inline-block;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%)  rotate(var(--fancy-hr-rotate));
   transform-origin: 50% 50%;
   padding: 0.3rem;
-  color: var(--text-sub-accent);
-  background-color: var(--background-primary-bg-4-bt);
+  color: var(--theme-color);
+}
+
+body.fancy-hr div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hr {
+  opacity: 0;
+  position: relative;
+}
+
+body.fancy-hr div > .CodeMirror-line span.cm-hr {
+  display: inline-block;
+}
+
+body.fancy-hr div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(to right, transparent 0%, var(--theme-color) 30%, var(--theme-color) 46%, transparent 46%, transparent 54%, var(--theme-color) 54%, var(--theme-color) 70%, transparent 100%);
+  left: 0;
+  top: 50%;
+}
+
+body.fancy-hr div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::after {
+  content: var(--fancy-hr-icon);
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(var(--fancy-hr-rotate));
+  transform-origin: 50% 50%;
+  padding: 0.5rem;
+  color: var(--theme-color);
 }
 
 .nav-files-container {
