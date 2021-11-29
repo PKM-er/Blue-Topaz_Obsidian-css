@@ -13919,7 +13919,7 @@ img[alt$="inlR"] {
 /* calendar plugin */
 .is-mobile #calendar-container {
   padding: 0 4px 2px 4px;
-  margin: unset;
+  margin: unset !important;
   line-height: unset;
 }
 
