@@ -7256,7 +7256,7 @@ body.text-indentation-two-em *:not(blockquote) > p {
 
 .CodeMirror-code span.cm-quote::before {
   content: "";
-  border-left: 6px solid var(--theme-color);
+  border-left: 7px solid var(--theme-color);
   border-radius: 0; /*5px 0 0 5px;*/
   height: 100%;
   margin-left: -7px;
