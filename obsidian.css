@@ -13885,7 +13885,7 @@ img[alt$="inlR"] {
 .is-mobile .HyperMD-quote.cm-line {
   content: "";
   border-left: 7px solid var(--theme-color);
-  border-radius: 5px 0 0 5px;
+  border-radius: 0; /*5px 0 0 5px;*/
   height: 100%;
   margin-left: 0px;
   position: relative;
