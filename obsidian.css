@@ -4094,7 +4094,7 @@ body.color-scheme-options-flamingo.theme-light #calendar-container .week-num:hov
 
 /*比上面那个还菜鸟的人做的一些修改*/
 body.color-scheme-options-flamingo.theme-light .nav-folder.mod-root>.nav-folder-title {
-  background-color: var(--background-secondary-alt-bg-3-bt)
+  background-color: var(--background-secondary-alt-bg-4-bt)
 }
 
 body.color-scheme-options-flamingo.theme-light .admonition {
@@ -9205,7 +9205,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
  /* Status bar */
   
 body:not(.bt-status-off) .status-bar {
-  background-color:var(--background-secondary-translucent);
+  background-color:var(--background-secondary-bg-4-bt);
   z-index:30;
   border-top-left-radius:5px;
   width:auto;
