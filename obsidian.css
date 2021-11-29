@@ -13353,9 +13353,22 @@ body.translucent-setting-panel .vertical-tab-content {
 /* ================================== */
 /* =========== RTL support ========== */
 /* ================================== */
-.CodeMirror-code.CodeMirror-rtl .HyperMD-quote {
+.CodeMirror-code.CodeMirror-rtl span.cm-quote::before {
+  content: "";
   border-right: 7px solid var(--theme-color);
+  border-radius: 0; /*5px 0 0 5px;*/
+  height: 100%;  
   border-left: none;
+  margin-right: -7px;
+  position: absolute;
+}
+
+.CodeMirror-code.CodeMirror-rtl span.cm-formatting-quote + *::before,
+.CodeMirror-code.CodeMirror-rtl span.cm-formatting-quote + span.cm-hmd-indent-in-quote + span.cm-quote:not(.cm-formatting-quote)::before,
+.CodeMirror-code.CodeMirror-rtl span.cm-inline-code + *::before,
+.CodeMirror-code.CodeMirror-rtl span.cm-highlight + *::before,
+.CodeMirror-code.CodeMirror-rtl span.cm-quote + *::before {
+  border-right: none;
 }
 
 div[dir="rtl"] blockquote {
@@ -13455,10 +13468,6 @@ div[dir="rtl"] .markdown-preview-view .list-collapse-indicator.collapse-indicato
 
 div[dir="rtl"] .markdown-preview-view li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon {
   transform: translateX(40px) translateY(-23px) rotate(90deg);
-}
-
-div[dir="rtl"] ul.contains-task-list .list-collapse-indicator.collapse-indicator.collapse-icon::before {
-  margin-right: -12px;
 }
 
 div[dir="rtl"] .mermaid {
