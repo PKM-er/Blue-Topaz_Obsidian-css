@@ -883,6 +883,27 @@ settings:
     type: class-toggle
     default: false
   -
+    id: fancy-hr-folder
+    title: Horizontal Ruler
+    title.zh: 分割线（hr，---）
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: fancy-hr
+    title: Fancy Horizontal Ruler (hr)
+    title.zh: 装饰性分割线（hr，---）
+    type: class-toggle
+    default: false
+  -
+    id: fancy-hr-icon
+    title: Centre Icon
+    title.zh: 分割线中间图标
+    description: Do not remove the quotes
+    description.zh: 保留引号
+    type: variable-text
+    default: "'😀'"
+  -
     id: list-style-change-options-folder
     title: List
     title.zh: 列表
@@ -1286,6 +1307,8 @@ settings:
 
   --background-settings-workplace-theme-light-custom: url("https://");
   --background-settings-workplace-theme-dark-custom: url("https://");
+
+  --fancy-hr-icon: '😀';
 }
 
 body.background-settings-workplace-style-blur.theme-light {
@@ -8204,11 +8227,34 @@ body.non-border-bottom-header .markdown-preview-view h2 {
   top: 20px;
 }
 
-/*===*/
+/*---*/
 .markdown-preview-view hr {
   border-color: var(--background-modifier-border-hr);
 }
 
+/* adapted from Obsidianite */
+body.fancy-hr .markdown-preview-view hr {
+  margin-block-start: 2.5em;
+  margin-block-end: 2.5em;
+  border: none;
+  height: 0;
+  border-bottom: 2px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(to right, transparent 0%, var(--theme-color) 50%, transparent 100%);
+}
+
+body.fancy-hr .markdown-preview-view hr::after {
+  content: var(--fancy-hr-icon);
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50%;
+  padding: 0.3rem;
+  color: var(--text-sub-accent);
+  background-color: var(--background-primary-bg-4-bt);
+}
 
 .nav-files-container {
   flex-grow: 1;
