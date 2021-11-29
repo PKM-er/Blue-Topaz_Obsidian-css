@@ -1067,7 +1067,26 @@ settings:
       - 
         label: Dark Codebox
         value: export-pdf-style-default-dark-codebox
-  -  
+  -
+    id: embed-folder
+    title: Embeds
+    title.zh: 嵌入样式
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: naked-embed
+    title: naked embed
+    title.zh: 嵌入背景透明
+    type: class-toggle
+    default: false
+  -
+    id: embed-hd
+    title: hide embed headings
+    title.zh: 隐藏嵌入标题
+    type: class-toggle
+    default: false
+  - 
     id: style-options-for-other-plugins
     title: For Other Plugins (Coming soon)
     title.zh: 其他插件样式
@@ -9436,6 +9455,18 @@ code[class*="language-"] {
 }
 
 /*embedded*/
+
+body.naked-embed.theme-dark {
+  --embed-color: transparent !important;
+}
+body.naked-embed.theme-light {
+  --embed-color: transparent !important;
+}
+
+body.embed-hd .markdown-embed-title{
+  display: none;
+}
+
 .popover.hover-popover .markdown-preview-view .markdown-embed,
 .popover .markdown-preview-sizer.markdown-preview-section {
   height: auto;
