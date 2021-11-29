@@ -7254,10 +7254,10 @@ body.text-indentation-two-em *:not(blockquote) > p {
   font-size: var(--font-size-edit-blockquote);
 }
 
-.CodeMirror-code .cm-s-obsidian span.cm-quote::before {
+.CodeMirror-code span.cm-quote::before {
   content: "";
-  border-left: 7px solid var(--theme-color);
-  border-radius: 5px 0 0 5px;
+  border-left: 6px solid var(--theme-color);
+  border-radius: 0; /*5px 0 0 5px;*/
   height: 100%;
   margin-left: -7px;
   position: absolute;
@@ -7282,7 +7282,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-quote {
 
 .HyperMD-quote.CodeMirror-line {
   background-color: var(--background-blockquote);
-  border-radius: var(--radius-s-border);
+  /*border-radius: var(--radius-s-border);*/
 }
 
 /*
@@ -13885,7 +13885,7 @@ img[alt$="inlR"] {
 .is-mobile .HyperMD-quote.cm-line {
   content: "";
   border-left: 7px solid var(--theme-color);
-  border-radius: 0; /*5px 0 0 5px;*/
+  border-radius: 5px 0 0 5px;
   height: 100%;
   margin-left: 0px;
   position: relative;
