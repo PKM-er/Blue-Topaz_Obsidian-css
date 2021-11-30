@@ -1163,6 +1163,54 @@ settings:
         label: Style 2
         value: style-options-for-kanban-plugin-dynamic-two
   -
+    id: build-in-style-folder
+    title: Built in style 
+    title.zh:  内置样式 
+    description: 主题内置css类，手动在文档YAML区域进行cssclass声明，详细用法可以参考主题tips库。
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: built-in-style-kanban
+    title: Pseudo Kanban
+    title.zh: 伪看板 kanban
+    type: heading
+    level: 2
+    collapsed: true
+    description :  ❗cssclass：kanban❗实现类似看板样式并排显示，只对无序列表生效。
+  -
+    id: built-in-style-code-wrap
+    title:  code  wrap
+    title.zh: 代码行自动换行 code-wrap
+    type: heading
+    level: 2
+    collapsed: true
+    description :  ❗cssclass：code-wrap❗实现代码块中的代码行自动换行。
+  -
+    id: built-in-style-inline-list
+    title:  The list within the row
+    title.zh: 行内列表 inline-list
+    type: heading
+    level: 2
+    collapsed: true
+    description :  ❗cssclass：inline-list❗列表项横向排布。 
+  -
+    id: built-in-style-img-grid
+    title:  image  grid alignment
+    title.zh: 图片自适应横排显示 img-grid
+    type: heading
+    level: 2
+    collapsed: true
+    description :  ❗cssclass：img-grid❗实现图片类似网格一样自适应横排显示。也可以使用类似格式单独调整![[obsidian_image.png|inl|100]] 
+  -
+    id: built-in-style-matrix
+    title:  Eisenhower Matrix
+    title.zh: 表格四象图分布 matrix
+    type: heading
+    level: 2
+    collapsed: true
+    description :  ❗cssclass：matrix❗实现N*2表格四象限分布。表格内容使用![[XXX]]引入。
+  -
     id: topaz-community
     title: Supported by Topaz Community 😁
     title.zh: 感谢Topaz社区支持😁，欢迎来访，QQ群:908688452
@@ -16683,3 +16731,110 @@ body.background-settings-workplace-style-blur .workspace-split.mod-right-split>.
 body.background-settings-workplace-style-blur .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle:hover {
   height: 100%;
 }
+
+/*-------- Eisenhower Matrix start--- */
+/* Eisenhower Matrix from Spectrum themes */
+/* 
+/*for Blue Topaz theme-表格四象图分布 Modified  by cuman 2021-11-29*/
+/* 用法 yaml区域声明
+cssclass: matrix
+内容如下形式(表格内容最好使用嵌入形式)：
+
+|                   |             |
+| ----------------- | ----------- |
+| ![[#To-Do]]       | ![[#Doing]] |
+| ![[#Considering]] | ![[#Maybe]] |
+
+*/
+
+:root,
+.theme-dark {
+--matrix-1: var(--p-kanban-color-2);
+--matrix-2: var(--p-kanban-color-3);
+--matrix-4: var(--p-kanban-color-5);
+--matrix-5: var(--p-kanban-color-6);
+}
+:root,
+.theme-light {
+  --matrix-1: var(--p-kanban-color-2);
+  --matrix-2: var(--p-kanban-color-3);
+  --matrix-4: var(--p-kanban-color-5);
+  --matrix-5: var(--p-kanban-color-6);
+}
+.markdown-preview-view.matrix table tr {
+  display: flex;
+}
+.markdown-preview-view.matrix table th {
+  background-color: transparent;
+  background-image:none;
+}
+.markdown-preview-view.matrix table tbody>tr {
+  background-color: transparent;
+}
+
+.markdown-preview-view.matrix .internal-embed:not(.image-embed)
+{
+  border: 1px solid;
+  border-radius: 10px;
+}
+.markdown-preview-view.matrix thead {
+  background-color: transparent; 
+}
+.markdown-preview-view.matrix table tr th,
+.markdown-preview-view.matrix table tr td {
+  padding-right:0px;
+  border: 0px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.markdown-preview-view.matrix .markdown-embed 
+{
+  background-color: transparent;
+}
+.markdown-preview-view.matrix table tr th > *,
+.markdown-preview-view.matrix table tr td > * {
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-secondary-bg-4-bt);
+}
+
+.markdown-preview-view.matrix table tr td {
+  background-color: transparent;
+}
+
+.markdown-preview-view.matrix table tr:nth-child(1n) td:nth-child(1) > * {
+  border-color: var(--matrix-1);
+}
+
+.markdown-preview-view.matrix table tr:nth-child(1n) td:nth-child(1):hover {
+  background-color: var(--matrix-1);
+}
+
+.markdown-preview-view.matrix table tr:nth-child(1n) td:nth-child(2) > * {
+  border-color: var(--matrix-2);
+}
+
+.markdown-preview-view.matrix table tr:nth-child(1n) td:nth-child(2):hover {
+  background-color: var(--matrix-2);
+}
+
+.markdown-preview-view.matrix table tr:nth-child(2n) td:nth-child(1) > * {
+  border-color: var(--matrix-4);
+}
+
+.markdown-preview-view.matrix table tr:nth-child(2n) td:nth-child(1):hover {
+  background-color: var(--matrix-4);
+}
+
+.markdown-preview-view.matrix table tr:nth-child(2n) td:nth-child(2) > * {
+  border-color: var(--matrix-5);
+}
+
+.markdown-preview-view.matrix table tr:nth-child(2n) td:nth-child(2):hover {
+  background-color: var(--matrix-5);
+}
+
+/*-------- Eisenhower Matrix end--- */
