@@ -1166,7 +1166,7 @@ settings:
     id: build-in-style-folder
     title: Built-in Style Intro
     title.zh:  内置样式介绍
-    description: There are some built-in CSS classes that should be manually declared in the YAML area (like cssclass: kanban). Details refer to the TIPS demo vault for Blue Topaz on Github.
+    description: There are some built-in CSS classes that should be manually declared in the YAML area (like cssclass：kanban). Details refer to the TIPS demo vault for Blue Topaz on Github.
     description.zh: 主题内置css类，手动在文档YAML区域进行cssclass声明，详细用法可以参考主题tips库，可以在主题QQ群（社区）获取。
     type: heading
     level: 1
