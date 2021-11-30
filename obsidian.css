@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.13.6。uid [20211129] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.13.6, uid [20211129] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.13.6。uid [20211130] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.13.6, uid [20211130] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 @LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @98yugan */
@@ -1164,28 +1164,31 @@ settings:
         value: style-options-for-kanban-plugin-dynamic-two
   -
     id: build-in-style-folder
-    title: Built in style 
-    title.zh:  内置样式 
-    description: 主题内置css类，手动在文档YAML区域进行cssclass声明，详细用法可以参考主题tips库。
+    title: Built-in Style Intro
+    title.zh:  内置样式介绍
+    description: There are some built-in CSS classes that should be manually declared in the YAML area (like cssclass: kanban). Details refer to the TIPS demo vault for Blue Topaz on Github.
+    description.zh: 主题内置css类，手动在文档YAML区域进行cssclass声明，详细用法可以参考主题tips库，可以在主题QQ群（社区）获取。
     type: heading
     level: 1
     collapsed: true
   -
     id: built-in-style-kanban
-    title: Pseudo Kanban
+    title: Pseudo-kanban
     title.zh: 伪看板 kanban
     type: heading
     level: 2
     collapsed: true
-    description :  ❗cssclass：kanban❗实现类似看板样式并排显示，只对无序列表生效。
+    description:  ❗cssclass：kanban❗ A kind of kanban-liked style for unordered lists
+    description.zh:  ❗cssclass：kanban❗实现类似看板样式并排显示，只对无序列表生效。
   -
     id: built-in-style-code-wrap
-    title:  code  wrap
+    title:  Code  Wrap
     title.zh: 代码行自动换行 code-wrap
     type: heading
     level: 2
     collapsed: true
     description :  ❗cssclass：code-wrap❗实现代码块中的代码行自动换行。
+    description-zh:  ❗cssclass：code-wrap❗ Can be used to wrap code in code blocks for individual .md file
   -
     id: built-in-style-inline-list
     title:  The list within the row
@@ -1204,7 +1207,7 @@ settings:
     description :  ❗cssclass：img-grid❗实现图片类似网格一样自适应横排显示。也可以使用类似格式单独调整![[obsidian_image.png|inl|100]] 
   -
     id: built-in-style-matrix
-    title:  Eisenhower Matrix
+    title: Eisenhower Matrix
     title.zh: 表格四象图分布 matrix
     type: heading
     level: 2
