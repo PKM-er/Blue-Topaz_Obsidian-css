@@ -13561,8 +13561,8 @@ body.translucent-setting-panel .vertical-tab-nav-item {
   white-space: pre-wrap;
 }
 
-.style-settings-heading[data-level="0"] {
-  margin-bottom: 10px !important;
+.style-settings-heading {
+  margin-bottom: 5px !important;
 }
 
 /* ================================== */
