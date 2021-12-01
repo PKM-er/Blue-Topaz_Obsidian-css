@@ -8624,7 +8624,7 @@ ol.contains-task-list ol::before {
 
 ul>li:not(.task-list-item) {
   margin-left: -0.3125em;
-  padding-left: 0.4em;
+  padding-left: 0.25em;
   border-radius: var(--radius-s);
   margin-bottom: 0.375em;
   margin-top: 0.25em;
@@ -8967,7 +8967,7 @@ body.list-vertical-line-three ol ol::before {
   content: '';
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;
-  left: 0.1em;
+  left: 0.3em;
   top: 0px;
   bottom: 0px;
 }
