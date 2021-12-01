@@ -883,6 +883,12 @@ settings:
     type: class-toggle
     default: false
   -
+    id: circular-checkbox
+    title: Circular Checkbox
+    title.zh: 圆形勾选框
+    type: class-toggle
+    default: false
+  -
     id: fancy-hr-folder
     title: Horizontal Ruler
     title.zh: 分割线（hr，---）
@@ -7886,6 +7892,12 @@ span.obsidian-search-match-highlight {
   color: var(--text-muted);
 }
 
+
+body.circular-checkbox .markdown-preview-view .task-list-item-checkbox {
+  border-radius: 50%;
+}
+
+
 /*checkbox in edit mode*/
 /*thanks to Piotr and ishgunacar from forum*/
 .cm-s-obsidian span.cm-formatting-task {
@@ -14175,12 +14187,12 @@ img[alt$="inlR"] {
   font-family: var(--font-family-tag);
   font-size: var(--font-size-tag);
   text-decoration: none;
-  color: var(--accent-strong);
+  color: var(--tag-text);
 }
 
 .markdown-source-view.is-live-preview span.cm-hashtag-begin {
   background-color:var(--color-tag-edit);
-  color: var(--accent-strong);
+  color: var(--tag-text);
   border-top-left-radius: var(--radius-l);
   border-bottom-left-radius: var(--radius-l);
   border-right: none;
@@ -14428,6 +14440,10 @@ span.cm-hashtag-begin+.cm-hashtag.cm-meta {
   background-color: var(--checkbox-color-6) !important;
   text-decoration: line-through;
   color: var(--text-muted);
+}
+
+body.circular-checkbox .markdown-source-view.is-live-preview .task-list-item-checkbox {
+  border-radius: 50%;
 }
 
 /* ============ */
