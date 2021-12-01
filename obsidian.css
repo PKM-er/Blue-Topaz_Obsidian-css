@@ -8527,7 +8527,11 @@ code:not([class*='language-']) {
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;
   height: 100%;
-  margin-left: 2px;
+  margin-left: 4px;
+}
+
+body:not(.outliner-plugin-bls) .cm-hmd-list-indent {
+  position: unset !important;
 }
 
 
