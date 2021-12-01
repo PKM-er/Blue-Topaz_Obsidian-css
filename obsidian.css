@@ -10495,6 +10495,8 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 /* Original idea from: https://gist.github.com/mklepaczewski/54e451f09994b9d450de81c8baaf8aa4 */
 /* but also with simpler classes so you can use `<span class='colour'>` as well */
 .app-container .markdown-preview-view pre[class*="language-note-"] code[class*="language-note-"] {
+  background: unset !important;
+  background-color:unset !important;
   white-space: pre-wrap !important;
 }
 
@@ -10506,7 +10508,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 .print pre.language-note-gray-bg .popover .markdown-preview-view pre.language-note-notice,
 .popover .markdown-preview-view pre.language-note-gray-background,
 .popover .markdown-preview-view pre.language-note-gray-bg {
-  background-color: var(--background-gray);
+  background-color: var(--background-gray) !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-brown-background,
@@ -10516,7 +10518,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 .print pre.language-note-brown-bg,
 .popover .markdown-preview-view pre.language-note-brown-background,
 .popover .markdown-preview-view pre.language-note-brown-bg {
-  background-color: var(--background-brown);
+  background-color: var(--background-brown) !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-orange-background,
@@ -10526,7 +10528,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 .print pre.language-note-orange-bg,
 .popover .markdown-preview-view pre.language-note-orange-background,
 .popover .markdown-preview-view pre.language-note-orange-bg {
-  background-color: var(--background-orange);
+  background-color: var(--background-orange) !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-yellow-background,
@@ -10536,7 +10538,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 .print pre.language-note-yellow-bg,
 .popover .markdown-preview-view pre.language-note-yellow-background,
 .popover .markdown-preview-view pre.language-note-yellow-bg {
-  background-color: var(--background-yellow);
+  background-color: var(--background-yellow) !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-green-background,
@@ -10546,7 +10548,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 .print pre.language-note-green-bg,
 .popover .markdown-preview-view pre.language-note-green-background,
 .popover .markdown-preview-view pre.language-note-green-bg {
-  background-color: var(--background-green);
+  background-color: var(--background-green) !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-blue-background,
@@ -10556,7 +10558,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 .print pre.language-note-blue-bg,
 .popover .markdown-preview-view pre.language-note-blue-background,
 .popover .markdown-preview-view pre.language-note-blue-bg {
-  background-color: var(--background-blue);
+  background-color: var(--background-blue) !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-purple-background,
@@ -10566,7 +10568,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 .print pre.language-note-purple-bg,
 .popover .markdown-preview-view pre.language-note-purple-background,
 .popover .markdown-preview-view pre.language-note-purple-bg {
-  background-color: var(--background-purple);
+  background-color: var(--background-purple) !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-pink-background,
@@ -10576,7 +10578,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 .print pre.language-note-pink-bg,
 .popover .markdown-preview-view pre.language-note-pink-background,
 .popover .markdown-preview-view pre.language-note-pink-bg {
-  background-color: var(--background-pink);
+  background-color: var(--background-pink) !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-red-background,
@@ -10586,7 +10588,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 .print pre.language-note-red-bg,
 .popover .markdown-preview-view pre.language-note-red-background,
 .popover .markdown-preview-view pre.language-note-red-bg {
-  background-color: var(--background-red);
+  background-color: var(--background-red) !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-important,
@@ -10595,13 +10597,13 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 .print pre.language-note-imp,
 .popover .markdown-preview-view pre.language-note-important,
 .popover .markdown-preview-view pre.language-note-imp {
-  border: 4px dashed var(--note-important);
+  border: 4px dashed var(--note-important) !important;
 }
 
 pre.language-note-important:before,
 pre.language-note-imp::before {
   content: "Important";
-  color: var(--note-important);
+  color: var(--note-important)  !important;
   font-weight: 800;
   top: -1px;
 }
@@ -10634,7 +10636,7 @@ pre.language-note-imp::before {
 .popover .markdown-preview-view pre.language-note-purple,
 .popover .markdown-preview-view pre.language-note-pink,
 .popover .markdown-preview-view pre.language-note-red {
-  background-color: transparent;
+  background-color: transparent  !important;
   margin: 3px 0;
   padding: 5px 10px;
 }
@@ -10643,64 +10645,74 @@ pre.language-note-imp::before {
 .gray,
 .print code.language-note-gray,
 .popover .markdown-preview-view pre.language-note-gray code.language-note-gray {
-  color: var(--text-gray);
+  color: var(--text-gray) !important;
+  background:unset !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-brown code.language-note-brown,
 .brown,
 .print code.language-note-brown,
 .popover .markdown-preview-view pre.language-note-brown code.language-note-brown {
-  color: var(--text-brown);
+  color: var(--text-brown) !important;
+  background:unset !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-orange code.language-note-orange,
 .orange,
 .print code.language-note-orange,
 .popover .markdown-preview-view pre.language-note-orange code.language-note-orange {
-  color: var(--text-orange);
+  color: var(--text-orange) !important;
+  background:unset !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-yellow code.language-note-yellow,
 .yellow,
 .print code.language-note-yellow,
 .popover .markdown-preview-view pre.language-note-yellow code.language-note-yellow {
-  color: var(--text-yellow);
+  color: var(--text-yellow) !important;
+  background:unset !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-green code.language-note-green,
 .green,
 .print code.language-note-green,
 .popover .markdown-preview-view pre.language-note-green code.language-note-green {
-  color: var(--text-green);
+  color: var(--text-green) !important;
+  background:unset !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-blue code.language-note-blue,
 .blue,
 .print code.language-note-blue,
 .popover .markdown-preview-view pre.language-note-blue code.language-note-blue {
-  color: var(--text-blue);
+  color: var(--text-blue) !important;
+  background:unset !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-purple code.language-note-purple,
 .purple,
 .print code.language-note-purple,
 .popover .markdown-preview-view pre.language-note-purple code.language-note-purple {
-  color: var(--text-purple);
+  color: var(--text-purple) !important;
+  background:unset !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-pink code.language-note-pink,
 .pink,
 .print code.language-note-pink,
 .popover .markdown-preview-view pre.language-note-pink code.language-note-pink {
-  color: var(--text-pink);
+  color: var(--text-pink) !important;
+  background:unset !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-red code.language-note-red,
 .red,
 .print code.language-note-red,
 .popover .markdown-preview-view pre.language-note-red code.language-note-red {
-  color: var(--text-red);
+  color: var(--text-red) !important;
+  background:unset !important;
 }
+
 
 /* cloze */
 .app-container .markdown-preview-view pre.language-note-cloze code.language-note-cloze,
