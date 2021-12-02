@@ -2766,14 +2766,14 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --table-background-color-odd: #0000001c;
   --table-border-color: #878787;
   --table-thead-background-color: #b3b3b363;
-  --table-hover-raw-color: #08569a21;
-  --table-hover-color: #1f65a221;
-  --table-hover-thead-color: #298c54c7;
+  --table-hover-raw-color: #4040401c;
+  --table-hover-color: #59595947;
+  --table-hover-thead-color: #6969691c;
 
   /*calendar*/
-  --calendar-week-color: #a2df94;
-  --calendar-week-hover: #61815c;
-  --calendar-week-background-color: #4a5842;
+  --calendar-week-color: #ededed;
+  --calendar-week-hover: #bfbfbf52;
+  --calendar-week-background-color: #b5b5b52e;
   --calendar-today-background-color: #8c4545;
 
   /*day planner*/
@@ -3044,14 +3044,14 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --table-background-color-odd: #ffffffaf;
   --table-border-color: #7d7d7d;
   --table-thead-background-color: #bdbdbdc7;
-  --table-hover-raw-color: #85bfee2f;
-  --table-hover-color: #5dacec34;
-  --table-hover-thead-color: #ddefff;
+  --table-hover-raw-color: #f0f0f063;
+  --table-hover-color: #e3e3e354;
+  --table-hover-thead-color: #ebebeb54;
 
   /*calendar*/
-  --calendar-week-color: #48b432;
-  --calendar-week-hover: #e9ffe3;
-  --calendar-week-background-color: #d6e6bf;
+  --calendar-week-color: #949494;
+  --calendar-week-hover: #b5b5b52e;
+  --calendar-week-background-color: #878787;
   --calendar-today-background-color: #aaeec6;
 
   /*day planner*/
@@ -3416,13 +3416,13 @@ body.color-scheme-options-pink-topaz.theme-light {
   --table-thead-background-color: #f4d6e6c7;
   --table-hover-raw-color: #fad1e92f;
   --table-hover-color: #e4a9bb34;
-  --table-hover-thead-color: #ddefff;
+  --table-hover-thead-color: #c8a7bc66;
 
   /*calendar*/
-  --calendar-week-color: #48b432;
-  --calendar-week-hover: #e9ffe3;
-  --calendar-week-background-color: #d6e6bf;
-  --calendar-today-background-color: #aaeec6;
+  --calendar-week-color: #b884a5c7;
+  --calendar-week-hover: #e3d8df66;
+  --calendar-week-background-color: #b884a599;
+  --calendar-today-background-color: #b1779c94;
 
   /*day planner*/
   --day-planner-pie: #eca95c;
@@ -3467,8 +3467,8 @@ body.color-scheme-options-pink-topaz.theme-light {
   --note-cloze: #000000;
 
   /* stickies */
-  --stickies-color-1: #b3e2b3;
-  --stickies-color-2: #e9c6f1;
+  --stickies-color-1: #e5c7dab5;
+  --stickies-color-2: #dac7afc7;
   --tape-color: #acacac65;
 
   /*Sliding panes*/
@@ -3610,9 +3610,9 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --embed-color: #4639413d;
   --search-result-file-title-color: #c0689b;
   --theme-color: var(--interactive-accent);
-  --theme-color-translucent: #637b717a;
-  --theme-color-translucent-1: #53695f7a;
-  --color-specification: #3ce252;
+  --theme-color-translucent: #c897b675;
+  --theme-color-translucent-1: #c897b63b;
+  --color-specification: #89396beb;
 
   --allow-1: #d18828;
   --background-blockquote: #9191911c;
@@ -3694,7 +3694,7 @@ body.color-scheme-options-pink-topaz.theme-dark {
   /*calendar*/
   --calendar-week-color: #bb6396e6;
   --calendar-week-hover: #96798a6b;
-  --calendar-week-background-color: #4a5842;
+  --calendar-week-background-color: #c794948c;
   --calendar-today-background-color: #8c4545;
 
   /*day planner*/
@@ -3749,8 +3749,8 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --note-cloze: #ffffff;
 
   /* stickies */
-  --stickies-color-1: #84c584;
-  --stickies-color-2: #c7a3cf;
+  --stickies-color-1: #ecb6d8c7;
+  --stickies-color-2: #ecd9b6c7;
   --tape-color: #99999967;
 
   /*Sliding panes*/
