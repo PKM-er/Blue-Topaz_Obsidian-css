@@ -283,97 +283,110 @@ settings:
     default: false
   - 
     id: background-settings
-    title: Background Settings
-    title.zh: 背景设置
+    title: 1. General Settings
+    title.zh: 1. 整体性设置
     type: heading
     level: 1
-    collapsed: true
+    collapsed: false
   - 
-    id: background-settings-markdown-page
-    title: Note Page
-    title.zh: 笔记背景
+    id: color-settings
+    title: 1.1 Color Palette
+    title.zh: 1.1 颜色设置
     type: heading
     level: 2
     collapsed: true
-  - 
-    id: background-image-settings-switch
-    title: Switch off Background Images
-    title.zh: 移除笔记背景
-    type: class-toggle
-    default: false
-  - 
-    id: background-image-settings-markdown-page-options
-    title: Choose Images 
-    title.zh: 选择背景
+  -
+    id: color-scheme-options
+    title: Color Palette (from Topaz Community)
+    title.zh: 整体配色选择 (由Topaz社区贡献)
     type: class-select
     allowEmpty: false
-    default: background-image-settings-markdown-page-default
+    default: color-scheme-options-default
     options:
       - 
         label: Default
-        value: background-image-settings-markdown-page-default
+        value: color-scheme-options-default
       - 
-        label: Sea and Sky
-        value: background-image-settings-markdown-page-sea-and-sky
+        label: Avocado
+        value: color-scheme-options-avocado-topaz
       - 
-        label: Four Seasons
-        value: background-image-settings-markdown-page-four-seasons
-      - 
-        label: Woof Meow
-        value: background-image-settings-markdown-page-woof-meow
-      - 
-        label: White and Black
-        value: background-image-settings-markdown-page-white-and-black
-      - 
-        label: Kawaii
-        value: background-image-settings-markdown-page-kawaii 
-  -
-    id: background-image-settings-markdown-page-random
-    title: Random Background Images
-    title.zh: 随机背景
-    description: Images will be refreshed when Obsidian launches; network is needed
-    description.zh: 图片在Obsidian打开时刷新；需要联网 
-    type: class-toggle
-    default: false
-  - 
-    id: background-image-settings-markdown-page-random-options
-    title: Random image with a certain color
-    title.zh: 特定颜色的随机背景
-    type: class-select
-    allowEmpty: false
-    default: background-image-settings-markdown-page-random-default
-    options:
-      - 
-        label: None
-        value: background-image-settings-markdown-page-random-default
-      - 
-        label: Blue
-        value: background-image-settings-markdown-page-random-blue
-      - 
-        label: Green
-        value: background-image-settings-markdown-page-random-green
+        label: Monochrome 
+        value: color-scheme-options-monochrome-topaz
       - 
         label: Pink
-        value: background-image-settings-markdown-page-random-pink
-      -
-        label: Purple
-        value: background-image-settings-markdown-page-random-purple
-      -
-        label: Red
-        value: background-image-settings-markdown-page-random-red
+        value: color-scheme-options-pink-topaz
       - 
-        label: Yellow and Orange
-        value: background-image-settings-markdown-page-random-yellow-and-orange
+        label: ==↓👩😺 Created by Topaz Community 🐵🧑↓==
+        value: 
+      -
+        label: Flamingo (@Mouth on Cloud & @Rainbell)
+        value: color-scheme-options-flamingo
+      -
+        label: Honey milk (@LillianWho)
+        value: color-scheme-options-honey-milk-topaz
+      -
+        label: 榛子巧克力 (@LillianWho)
+        value: color-scheme-options-chocolate-topaz
+      - 
+        label: Lilac (@awyugan)
+        value: color-scheme-options-lilac
+      - 
+        label: Autumn (@LillianWho)
+        value: color-scheme-options-autumn-topaz  
+      -
+        label: 魔方 Rubik's Cube (@LillianWho)
+        value: color-scheme-options-lillimon-topaz 
   -
-    id: background-settings-workplace
-    title: Workplace
-    title.zh: 工作页面背景
+    id: color-magic
+    title: Color of Rubik's Cube palette
+    title.zh: 魔方配色
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: magic-main-color
+    title: main color
+    title.zh: 主题色
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: '#95a503'
+    default-dark: '#95a503'
+  -
+    id: magic-low-color
+    title: low color
+    title.zh: 浅色
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: '#e0e79a'
+    default-dark: '#e0e79a'
+  -
+    id: magic-deep-color
+    title: deep color
+    title.zh: 深色
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: '#746909'
+    default-dark: '#746909'
+  - 
+    id: background-settings
+    title: 1.2 Background Images
+    title.zh: 1.2 背景设置
     type: heading
     level: 2
     collapsed: true
   - 
+    id: background-settings-workplace
+    title: 1.2.1 Workplace background image
+    title.zh: 1.2.1 工作页面背景
+    type: heading
+    level: 3
+    collapsed: true
+  - 
     id: background-settings-workplace-style
-    title: Background image style
+    title:  Image Style
     title.zh: 背景样式
     type: class-select
     allowEmpty: false
@@ -473,55 +486,97 @@ settings:
     description.zh: 自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片  url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
     type: variable-text
     default: url("https://")
-  - 
-    id: color-settings
-    title: Color
-    title.zh: 颜色设置
-    type: heading
-    level: 1
-    collapsed: true
   -
-    id: color-scheme-options
-    title: Color scheme options (from Topaz Community)
-    title.zh: 整体配色选择 (由Topaz社区贡献)
+    id: background-settings-markdown-page
+    title: 1.2.2 Note Page Background Image
+    title.zh: 1.2.2 笔记背景
+    type: heading
+    level: 3
+    collapsed: true
+  - 
+    id: background-image-settings-switch
+    title: Switch off Background Images
+    title.zh: 移除笔记背景
+    type: class-toggle
+    default: false
+  - 
+    id: background-image-settings-markdown-page-options
+    title: Choose Images 
+    title.zh: 选择背景
     type: class-select
     allowEmpty: false
-    default: color-scheme-options-default
+    default: background-image-settings-markdown-page-default
     options:
       - 
         label: Default
-        value: color-scheme-options-default
+        value: background-image-settings-markdown-page-default
       - 
-        label: Avocado
-        value: color-scheme-options-avocado-topaz
+        label: Sea and Sky
+        value: background-image-settings-markdown-page-sea-and-sky
       - 
-        label: Monochrome 
-        value: color-scheme-options-monochrome-topaz
+        label: Four Seasons
+        value: background-image-settings-markdown-page-four-seasons
+      - 
+        label: Woof Meow
+        value: background-image-settings-markdown-page-woof-meow
+      - 
+        label: White and Black
+        value: background-image-settings-markdown-page-white-and-black
+      - 
+        label: Kawaii
+        value: background-image-settings-markdown-page-kawaii 
+  -
+    id: background-image-settings-markdown-page-random
+    title: Random Background Images
+    title.zh: 随机背景
+    description: Images will be refreshed when Obsidian launches; network is needed
+    description.zh: 图片在Obsidian打开时刷新；需要联网 
+    type: class-toggle
+    default: false
+  - 
+    id: background-image-settings-markdown-page-random-options
+    title: Random image with a certain color
+    title.zh: 特定颜色的随机背景
+    type: class-select
+    allowEmpty: false
+    default: background-image-settings-markdown-page-random-default
+    options:
+      - 
+        label: None
+        value: background-image-settings-markdown-page-random-default
+      - 
+        label: Blue
+        value: background-image-settings-markdown-page-random-blue
+      - 
+        label: Green
+        value: background-image-settings-markdown-page-random-green
       - 
         label: Pink
-        value: color-scheme-options-pink-topaz
+        value: background-image-settings-markdown-page-random-pink
+      -
+        label: Purple
+        value: background-image-settings-markdown-page-random-purple
+      -
+        label: Red
+        value: background-image-settings-markdown-page-random-red
       - 
-        label: ==↓👩😺 Created by Topaz Community 🐵🧑↓==
-        value: 
-      -
-        label: Flamingo (@Mouth on Cloud & @Rainbell)
-        value: color-scheme-options-flamingo
-      -
-        label: Honey milk (@LillianWho)
-        value: color-scheme-options-honey-milk-topaz
-      -
-        label: 榛子巧克力 (@LillianWho)
-        value: color-scheme-options-chocolate-topaz
-      - 
-        label: Lilac (@awyugan)
-        value: color-scheme-options-lilac
-      - 
-        label: Autumn (@LillianWho)
-        value: color-scheme-options-autumn-topaz  
-      -
-        label: 魔方 (@LillianWho)
-        value: color-scheme-options-lillimon-topaz 
+        label: Yellow and Orange
+        value: background-image-settings-markdown-page-random-yellow-and-orange
   -
+    id: background-settings
+    title: 2. Detail Settings
+    title.zh: 2. 细节设置
+    type: heading
+    level: 1
+    collapsed: true
+  - 
+    id: color-settings
+    title: 2.1 Color Settings
+    title.zh: 2.1 颜色设置
+    type: heading
+    level: 2
+    collapsed: true
+  - 
     id: text-normal
     title: Main text color
     type: variable-themed-color
@@ -530,45 +585,11 @@ settings:
     default-light: '#0e0e0e'
     default-dark: '#bdbdbd'
   -
-    id: color-magic
-    title: color magic
-    title.zh: 魔方配色
-    type: heading
-    level: 2
-    collapsed: true
-  -
-    id: magic-main-color
-    title: main color
-    title.zh: 主题色
-    type: variable-themed-color
-    opacity: false
-    format: rgb
-    default-light: '#95a503'
-    default-dark: '#95a503'
-  -
-    id: magic-low-color
-    title: low color
-    title.zh: 浅色
-    type: variable-themed-color
-    opacity: false
-    format: rgb
-    default-light: '#e0e79a'
-    default-dark: '#e0e79a'
-  -
-    id: magic-deep-color
-    title: deep color
-    title.zh: 深色
-    type: variable-themed-color
-    opacity: false
-    format: rgb
-    default-light: '#746909'
-    default-dark: '#746909'
-  -
     id: background-color-settings
-    title: Background colors
-    title.zh: 背景颜色设置
+    title: 2.1.1 Background Colors
+    title.zh: 2.1.1 背景颜色设置
     type: heading
-    level: 2
+    level: 3
     collapsed: true
   - 
     id: background-primary-bg-4-bt
@@ -612,10 +633,10 @@ settings:
     default-dark: '#333333'
   -
     id: accent-color-settings
-    title: Accent colors
-    title.zh: 强调色设置
+    title: 2.1.2 Accent Colors
+    title.zh: 2.1.2 强调色设置
     type: heading
-    level: 2
+    level: 3
     collapsed: true
   - 
     id: interactive-accent
@@ -637,10 +658,10 @@ settings:
     default-dark: '#53aaf5'
   -
     id: header-color-settings
-    title: Header colors
-    title.zh: 标题颜色
+    title: 2.1.3 Header colors
+    title.zh: 2.1.3 标题颜色
     type: heading
-    level: 2
+    level: 3
     collapsed: true
   - 
     id: h1-color
@@ -692,10 +713,10 @@ settings:
     default-dark: '#c173ee'
   -
     id: tag-color-settings
-    title: Tag colors
-    title.zh: 标签颜色
+    title: 2.1.4 Tag colors
+    title.zh: 2.1.4 标签颜色
     type: heading
-    level: 2
+    level: 3
     collapsed: true
   - 
     id: tag1
@@ -771,10 +792,17 @@ settings:
     default-dark: '#2244d8'
   -
     id: font-settings
-    title: Font
-    title.zh: 字体设置
+    title: 2.2 Font
+    title.zh: 2.2 字体
     type: heading
-    level: 1
+    level: 2
+    collapsed: true
+  -
+    id: font-settings
+    title: 2.2.1 Font Family
+    title.zh: 2.2.1 字体设置
+    type: heading
+    level: 3
     collapsed: true
   -
     id: font-family-change-to-default
@@ -857,11 +885,18 @@ settings:
     type: variable-text
     default: "'Lucida Handwriting', 'Segoe UI Emoji'"
   - 
-    id: style-change-options
-    title: Style
-    title.zh: 样式设置
+    id: font-size-settings
+    title: 2.2.2 Font Size
+    title.zh: 2.2.1 字体大小设置
     type: heading
-    level: 1
+    level: 3
+    collapsed: true
+  -
+    id: style-change-options
+    title: 2.3 Element Style
+    title.zh: 2.3 其他样式设置
+    type: heading
+    level: 2
     collapsed: true
   -
     id: bt-status-off
@@ -890,10 +925,10 @@ settings:
     default: false
   -
     id: fancy-hr-folder
-    title: Horizontal Ruler
-    title.zh: 分割线（hr，---）
+    title: 2.3.1 Horizontal Ruler (hr, ---)
+    title.zh: 2.3.1 分割线（hr，---）
     type: heading
-    level: 2
+    level: 3
     collapsed: true
   -
     id: fancy-hr
@@ -918,10 +953,10 @@ settings:
     format: deg
   -
     id: list-style-change-options-folder
-    title: List
-    title.zh: 列表
+    title: 2.3.2 List
+    title.zh: 2.3.2 列表
     type: heading
-    level: 2
+    level: 3
     collapsed: true
   -
     id: list-style-change-options
@@ -951,10 +986,10 @@ settings:
         value: list-no-border
   - 
     id: folder-style-change-options-folder
-    title: Folder
-    title.zh: 文件夹
+    title: 2.3.3 Folder
+    title.zh: 2.3.3 文件夹
     type: heading
-    level: 2
+    level: 3
     collapsed: true
   -
     id: light-background-color-files
@@ -980,10 +1015,10 @@ settings:
     default: false
   - 
     id: folder-style-change-options-colorful-folder
-    title: Colorful Folder
-    title.zh: 多彩文件夹
+    title: 2.3.3.1 Colorful Folder
+    title.zh: 2.3.3.1 多彩文件夹
     type: heading
-    level: 3
+    level: 4
     collapsed: true
   -
     id: folder-style-change-options-colorful
@@ -1018,10 +1053,10 @@ settings:
         value: folder-colorful-five
   - 
     id: blockquote-style-change-options-folder
-    title: Blockquote
-    title.zh: 引用框
+    title: 2.3.4 Blockquote
+    title.zh: 2.3.4 引用框
     type: heading
-    level: 2
+    level: 3
     collapsed: true
   -
     id: blockquote-style-change-options
@@ -1051,10 +1086,10 @@ settings:
         value: blockquote-style-border-left
   - 
     id: export-pdf-style-folder
-    title: Exported PDF in Dark Mode
-    title.zh: 黑暗模式下导出PDF样式
+    title: 2.3.5 Exported PDF in Dark Mode
+    title.zh: 2.3.5 黑暗模式下导出PDF样式
     type: heading
-    level: 2
+    level: 3
     collapsed: true
   -
     id: export-pdf-style-options
@@ -1075,14 +1110,14 @@ settings:
         value: export-pdf-style-default-dark-codebox
   -
     id: embed-folder
-    title: Embeds
-    title.zh: 嵌入样式
+    title: 2.3.6 Embeds
+    title.zh: 2.3.6 嵌入样式
     type: heading
-    level: 2
+    level: 3
     collapsed: true
   -
     id: naked-embed
-    title: naked embed
+    title: Naked Embed
     title.zh: 嵌入背景透明
     type: class-toggle
     default: false
@@ -1094,8 +1129,15 @@ settings:
     default: false
   - 
     id: style-options-for-other-plugins
-    title: For Other Plugins (Coming soon)
-    title.zh: 其他插件样式
+    title: 3. For Other Plugins (Coming soon)
+    title.zh: 3. 其他插件样式
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: style-options-for-calendar-plugin-header
+    title: 3.1 Calendar
+    title.zh: 3.1 日历插件样式
     type: heading
     level: 2
     collapsed: true
@@ -1117,10 +1159,10 @@ settings:
         value: style-options-for-calendar-plugin-style-two
   -
     id: style-options-for-admonition-plugin-header
-    title: Admonition Style
-    title.zh: Admonition插件样式
+    title: 3.2 Admonition Style
+    title.zh: 3.2 Admonition插件样式
     type: heading
-    level: 3
+    level: 2
     collapsed: true
   -
     id: style-options-for-admonition-plugin
@@ -1131,10 +1173,10 @@ settings:
     description : 目前支持ad类型：bank 全透明框🔸def definition🔸thm theorem🔸lem lemma🔸cor corollary🔸pro proposition 🔸🔸hibox ❗使用方法❗下面以thm类型为例，在admonition插件的设置页面中，类型填 thm，标题填 定理，图标选择hand-point-right，颜色自己选比如浅绿色，添加成功后，在正文中使用代码块```ad-thm 即可激活。其他类型以此类推。  
   -
     id: style-options-for-kanban-plugin-header
-    title: Kanban (Coming soon)
-    title.zh: 其他插件样式
+    title: 3.3 Kanban (Coming soon)
+    title.zh: 3.3 其他插件样式
     type: heading
-    level: 3
+    level: 2
     collapsed: true
   -
     id: style-options-for-kanban-plugin-static
@@ -1170,8 +1212,8 @@ settings:
         value: style-options-for-kanban-plugin-dynamic-two
   -
     id: build-in-style-folder
-    title: Built-in Style Intro
-    title.zh:  内置样式介绍
+    title: 4. Built-in Style Intro
+    title.zh: 4. 内置样式介绍
     description: There are some built-in CSS classes that should be manually declared in the YAML area. Details refer to the TIPS demo vault for Blue Topaz on Github.
     description.zh: 主题内置css类，手动在文档YAML区域进行cssclass声明，详细用法可以参考主题tips库，可以在主题QQ群（社区）获取。
     type: heading
@@ -13573,6 +13615,30 @@ body.translucent-setting-panel .vertical-tab-nav-item {
   margin-bottom: 5px !important;
 }
 
+.setting-item.setting-item-heading.style-settings-heading[data-level="1"] .setting-item-name {
+  color: var(--h2-color) !important;
+}
+
+.setting-item.setting-item-heading.style-settings-heading[data-level="2"] .setting-item-name {
+  color: var(--h3-color)!important;
+}
+
+.setting-item.setting-item-heading.style-settings-heading[data-level="3"] .setting-item-name {
+  color: var(--h4-color) !important;
+}
+
+.setting-item.setting-item-heading.style-settings-heading[data-level="4"] .setting-item-name {
+  color: var(--h5-color) !important;
+}
+
+.style-settings-collapse-indicator {
+  color: var(--theme-color) !important;
+}
+
+.setting-item.setting-item-heading.style-settings-heading.is-collapsed .style-settings-collapse-indicator {
+  opacity: 0.4;
+}
+
 /* ================================== */
 /* =========== RTL support ========== */
 /* ================================== */
@@ -13700,6 +13766,7 @@ div[dir="rtl"] .mermaid {
 div[dir="rtl"] .mermaid svg {
   width: 100%;
 }
+
 
 /* ============ */
 /* ============ */
@@ -14265,7 +14332,7 @@ span.cm-hashtag-begin+.cm-hashtag.cm-meta {
 .markdown-source-view.is-live-preview .task-list-item-checkbox {
   -webkit-appearance: none;
   box-sizing: border-box;
-  border: 2px solid var(--text-normal);
+  border: 2px solid var(--background-modifier-border);
   position: relative;
   border-radius: var(--radius-xs);
   width: 1.3em;
@@ -14283,8 +14350,9 @@ span.cm-hashtag-begin+.cm-hashtag.cm-meta {
 
 .markdown-source-view.is-live-preview .task-list-item-checkbox:hover {
   background-color: var(--theme-color-translucent);
+  border: none;
+  border-color: transparent;
 }
-
 
 .markdown-source-view.is-live-preview .task-list-item-checkbox:checked::before {
   content: " ";
