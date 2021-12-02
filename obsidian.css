@@ -2,7 +2,7 @@
 /*Blue Topaz for Obsidian v0.13.6, uid [20211202] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
-@LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @98yugan */
+@LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @awyugan */
 
 /* 
 ===========================    TIPS   ===============================
@@ -6124,14 +6124,11 @@ body.color-scheme-options-lillimon-topaz #calendar-container {
 
 body.color-scheme-options-lilac.theme-light {
 
-  --bg-color: #d3c8e7;
-  --bg-color2: #c0b0d6;
-  
-  --background-primary: var(--bg-color);
+  --background-primary: #d7c4f2;
   --background-primary-alt: #e8dffa;
-  --background-secondary: #e5d3ff;
-  --background-secondary-alt: var(--bg-color);
-  --background-secondary-alt-bg-4-bt: #d3c8e7; 
+  --background-secondary: #e1cefa;
+  --background-secondary-alt: #d7c4f2;
+  --background-secondary-alt-bg-4-bt: #d7c4f2; 
   --background-accent: #000;
 
   --background-modifier-border: #af9dd1;
@@ -6144,11 +6141,11 @@ body.color-scheme-options-lilac.theme-light {
   --background-modifier-error-hover: #FF9494;
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
 
-  --text-accent: #c187c9;
+  --text-accent: #c488cc;
   --text-accent-hover: #592495;
 
   --text-normal: #0e0e0e;
-  --text-muted: #7f7f7f;
+  --text-muted: #ab7ecf;
   --text-highlight: #000000;
   --text-highlight-2: #000000;
   --text-faint: #a23ac2;
@@ -6221,7 +6218,7 @@ body.color-scheme-options-lilac.theme-light {
   --theme-color: var(--interactive-accent);
   --theme-color-translucent: #c3abe9bd;
   --theme-color-translucent-1: #8649aa85;
-  --theme-color-translucent-3:  #dccaffb0;
+
 
   --color-specification: #0084ff;
   --allow-1: #ec9a3c;
@@ -6231,7 +6228,7 @@ body.color-scheme-options-lilac.theme-light {
   --text-color-code: #e95d00;
   --text-color-code-normal: #000000;
 
-
+  --internal-link-color: #6203a2;
 
   --internal-link-color-in-highlight: #6203a2;
 
@@ -6388,7 +6385,7 @@ body.color-scheme-options-lilac.theme-light {
   --text-checked-checkbox: #9b9b9b;
 
   /*codemirror-line-bg*/
-  --activeline-background: #d3c8e7;
+  --activeline-background: #d7c4f2;
 
   /*pseudo-kanban 不修改*/
   --p-kanban-bg-color: #d3d3d32d;
@@ -6422,7 +6419,7 @@ body.color-scheme-options-lilac.theme-dark {
   --bg-color2: #b276c4;
   --background-primary: var(--bg-color);
   --background-primary-alt: var(--bg-color2);
-  --background-secondary: var(--bg-color);
+  --background-secondary: #44204b;
   --background-secondary-alt: var(--bg-color);
   --background-accent: #000;
 
@@ -6508,7 +6505,7 @@ body.color-scheme-options-lilac.theme-dark {
   --theme-color-translucent: #6d3c9bc9;/* 页面滚动条*/
   --theme-color-translucent-1: #5e2877b7;
   --color-specification: #f1a1a1;
-  --theme-color-translucent-3:  #8b77a3;
+ 
 
   --allow-1: #d18828;
   --background-blockquote: #9191911c;
@@ -6517,6 +6514,7 @@ body.color-scheme-options-lilac.theme-dark {
   --text-color-code: #d58000;
   --text-color-code-normal: #e7e7e7;
 
+  --internal-link-color: #a360da;
   --internal-link-color-in-highlight: #a360da;
 
   /*list*/
@@ -6712,104 +6710,13 @@ width: 2px;
 background-color: transparent;
 }
 
-/* scrollbar*/
-body.color-scheme-options-lilac.theme-light ::-webkit-scrollbar-thumb { background-color: var(--event-item-color3); }
-body.color-scheme-options-lilac.theme-dark ::-webkit-scrollbar-thumb { background-color: var(--event-item-color7); }
+/* scrollbar 滚动条颜色*/
+body.color-scheme-options-lilac.theme-light ::-webkit-scrollbar-thumb { background-color: #cbb5e9; }
+body.color-scheme-options-lilac.theme-dark ::-webkit-scrollbar-thumb { background-color:#683083; }
 
 /*stickies*/
 body.color-scheme-options-lilac .stickies {
   color: var(--text-normal)
-}
-
-body.color-scheme-options-lilac.theme-dark.workspace-leaf-resize-handle {
-background-color: var(--background-secondary-alt-bg-4-bt);
-width: 0px;
-height: 0%;
-}
-
-body.color-scheme-options-lilac .token.number {
-color: var(--aqua) !important;
-}
-body.color-scheme-options-lilac .token.string, 
-body.color-scheme-options-lilac .token.char,
-body.color-scheme-options-lilac .token.attr-value, 
-body.color-scheme-options-lilac .token.builtin, 
-body.color-scheme-options-lilac .token.inserted {
-color: var(--blue) !important;
-}
-
-body.color-scheme-options-lilac .cm-s-obsidian span.cm-link,
-body.color-scheme-options-lilac .cm-s-obsidian span.cm-hmd-internal-link,
-body.color-scheme-options-lilac .markdown-preview-view .internal-link {
-  text-decoration: underline;
-  color: var(--internal-link-color);
-}
-
-body.color-scheme-options-lilac .markdown-preview-view h1,
-body.color-scheme-options-lilac .markdown-preview-view h2 {
-  border-bottom: none;
-}
-
-/*lilac-tags*/
-
-body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+1){
-  border: 1px solid;
-  color: var(--tag1);
-  background-color: transparent;
-}
-
-body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+2){
-  border: 1px solid;
-  color: var(--tag2);
-  background-color: transparent;
-}
-
-body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+3){
-  border: 1px solid;
-  color: var(--tag3);
-  background-color: transparent;
-}
-
-body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+4){
-  border: 1px solid;
-  color: var(--tag4);
-  background-color: transparent;
-}
-
-body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+5){
-  border: 1px solid;
-  color: var(--tag5);
-  background-color: transparent;
-}
-
-body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+6){
-  border: 1px solid;
-  color: var(--tag6);
-  background-color: transparent;
-}
-
-body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+7){
-  border: 1px solid;
-  color: var(--tag7);
-  background-color: transparent;
-}
-
-body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+8){
-  border: 1px solid;
-  color: var(--tag8);
-  background-color: transparent;
-}
-
-body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n){
-  border: 1px solid;
-  color: var(--tag9);
-  background-color: transparent;
-}
-
-body.color-scheme-options-lilac .tag:not(.token):hover{
-  border: 1px solid var(--theme-color) ;
-  color: var(--white) ;
-  background-color: var(--theme-color) ;
 }
 
 body.color-scheme-options-lilac div .CodeMirror-line span.cm-hashtag-begin + span.cm-hashtag.cm-meta.cm-hashtag-end {
@@ -6830,6 +6737,15 @@ body.color-scheme-options-lilac  .cm-strong.cm-em {
   -webkit-text-fill-color: initial;
   background-color: initial;
 } 
+
+body.color-scheme-options-lilac.theme-dark #calendar-container {
+  --theme-color-translucent-3: #553b75;
+}
+
+body.color-scheme-options-lilac.theme-light #calendar-container {
+
+  --theme-color-translucent-3: #dccaffb0;
+}
 
 /*======@awyugan--end========*/
 
