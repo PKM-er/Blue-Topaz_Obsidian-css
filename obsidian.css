@@ -886,8 +886,8 @@ settings:
     default: "'Lucida Handwriting', 'Segoe UI Emoji'"
   - 
     id: font-size-settings
-    title: 2.2.2 Font Size
-    title.zh: 2.2.1 字体大小设置
+    title: 2.2.2 Font Size (Coming soon)
+    title.zh: 2.2.1 字体大小设置 (Coming soon)
     type: heading
     level: 3
     collapsed: true
@@ -921,12 +921,6 @@ settings:
     id: circular-checkbox
     title: Circular Checkbox
     title.zh: 圆形勾选框
-    type: class-toggle
-    default: false
-  -
-    id: highlight-tape
-    title: Tape
-    title.zh: Tape
     type: class-toggle
     default: false
   -
@@ -6511,7 +6505,7 @@ body.color-scheme-options-lilac.theme-dark {
   --theme-color-translucent: #6d3c9bc9;/* 页面滚动条*/
   --theme-color-translucent-1: #5e2877b7;
   --color-specification: #f1a1a1;
- 
+
 
   --allow-1: #d18828;
   --background-blockquote: #9191911c;
@@ -7300,7 +7294,7 @@ div .CodeMirror-line span.cm-hashtag-begin+.cm-hashtag.cm-meta+span.cm-hashtag.c
 }
 
 .markdown-preview-view {
-  padding: 15px 30px 10px;
+  padding: 10px 30px 10px;
   width: 100%;
   height: 100%;
   position: relative;
@@ -8599,6 +8593,14 @@ ol.contains-task-list ol::before {
   height: 100%;
 }
 */
+
+ul {
+  padding-inline-start: 32px;
+}
+
+ol {
+  padding-inline-start: 32px;
+}
 
 ul>li:not(.task-list-item) {
   margin-left: -0.3125em;
@@ -9979,10 +9981,12 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
   background-color: var(--activeline-background) !important;
 }
 
+/*
 .CodeMirror pre.CodeMirror-line,
 .CodeMirror pre.CodeMirror-line-like {
   padding-left: 0;
 }
+*/
 
 .CodeMirror pre.HyperMD-codeblock.CodeMirror-line {
   padding-left: 4px;
@@ -10320,7 +10324,6 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
 /* list collaspe icon */
 .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon {
   padding-top: 15px;
-  padding-left: 0px;
 }
 
 .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon::before {
@@ -10340,7 +10343,7 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
 }
 
 .markdown-preview-view li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon {
-  transform: translateX(-13px) translateY(3px) rotate(-90deg);
+  transform: translateX(-10px) translateY(5px) rotate(-90deg);
   opacity: 0.5;
 }
 
@@ -10769,7 +10772,6 @@ pre.language-note-cloze::before {
   color: var(--background-code);
   color: transparent;
 }
-
 
 /*=========================================*/
 /* =========== workspace-ribbon ========== */
@@ -13692,6 +13694,9 @@ div[dir="rtl"] .mermaid svg {
   width: 100%;
 }
 
+div[dir="rtl"] ol.contains-task-list>li.task-list-item {
+  padding-right: 0;
+}
 
 /* ============ */
 /* ============ */
