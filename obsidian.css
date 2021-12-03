@@ -1208,6 +1208,19 @@ settings:
         label: Style 2
         value: style-options-for-kanban-plugin-dynamic-two
   -
+    id: rainbow-checklist-folder
+    title: 3.2 Checklist Plugin
+    title.zh: 3.2 Checklist插件样式
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: rainbow-checklist
+    title: Rainbow Checklist
+    title.zh: 彩虹色条目
+    type: class-toggle
+    default: false
+  -
     id: build-in-style-folder
     title: 4. Built-in Style Intro
     title.zh: 4. 内置样式介绍
@@ -1757,6 +1770,15 @@ body.font-family-change-to-default.theme-dark .cm-strong.cm-em {
 
   /*style settings*/
   --background-secondary-translucent: #2c2c2c26;
+
+  /*rainbow-checklist*/
+  --checklist-color-1: #005aa486;
+  --checklist-color-2: #00798986;
+  --checklist-color-3: #12781586;
+  --checklist-color-4: #897b0086;
+  --checklist-color-5: #a4620086;
+  --checklist-color-6: #ab100586;
+  --checklist-color-7: #7f1f9086;
 }
 
 .theme-light {
@@ -2045,6 +2067,15 @@ body.font-family-change-to-default.theme-dark .cm-strong.cm-em {
 
   /*style settings*/
   --background-secondary-translucent: #ffffff3d;
+
+  /*rainbow-checklist*/
+  --checklist-color-1: #bbdefbab;
+  --checklist-color-2: #b2ebf2ab;
+  --checklist-color-3: #c8e6c9ab;
+  --checklist-color-4: #f8ef99ab;
+  --checklist-color-5: #ffe0b2ab;
+  --checklist-color-6: #ffcdd2ab;
+  --checklist-color-7: #e1bee7ab;
 }
 
 
@@ -13130,6 +13161,34 @@ body.style-options-for-admonition-plugin .admonition-hibox .admonition-title {
 .checklist-plugin-main {
   --todoList-listItemBackground: var(--checklist-bg) !important;
   --todoList-listItemBackground--hover: var(--checklist-bg-hover) !important;
+}
+
+body.rainbow-checklist .checklist-plugin-main.markdown-preview-view li:nth-of-type(7n+1) {
+  background-color: var(--checklist-color-1);
+}
+
+body.rainbow-checklist .checklist-plugin-main.markdown-preview-view li:nth-of-type(7n+2) {
+  background-color: var(--checklist-color-2);
+}
+
+body.rainbow-checklist .checklist-plugin-main.markdown-preview-view li:nth-of-type(7n+3) {
+  background-color: var(--checklist-color-3);
+}
+
+body.rainbow-checklist .checklist-plugin-main.markdown-preview-view li:nth-of-type(7n+4) {
+  background-color: var(--checklist-color-4);
+}
+
+body.rainbow-checklist .checklist-plugin-main.markdown-preview-view li:nth-of-type(7n+5) {
+  background-color: var(--checklist-color-5);
+}
+
+body.rainbow-checklist .checklist-plugin-main.markdown-preview-view li:nth-of-type(7n+6) {
+  background-color: var(--checklist-color-6);
+}
+
+body.rainbow-checklist .checklist-plugin-main.markdown-preview-view li:nth-of-type(7n+7) {
+  background-color: var(--checklist-color-7);
 }
 
 /* ================================== */
