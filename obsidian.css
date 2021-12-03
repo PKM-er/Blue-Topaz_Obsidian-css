@@ -5,11 +5,8 @@
 @LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @awyugan */
 
 /* 
-===========================    TIPS   ===============================
-====================================================================
+=======    TIPS   ========
 ===========主题中的一些特别样式 Special parts in this theme===========
-=====================================================================
-
 
 ==========================
 =====标签 Special tags=====
@@ -13483,6 +13480,9 @@ span.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight.hmd-hidd
   background-color: var(--background-transparent-black-or-white-3) !important;
 }
 
+.hide-tokens .cm-s-obsidian pre.HyperMD-hr {
+  background: unset !important;
+}
 
 /* ================================== */
 /* ============ QuickAdd ============ */
