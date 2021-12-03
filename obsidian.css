@@ -921,6 +921,12 @@ settings:
     type: class-toggle
     default: false
   -
+    id: muted-activeline-bg
+    title: Mute Active Line
+    title.zh: 取消所在行高亮
+    type: class-toggle
+    default: false
+  -
     id: fancy-hr-folder
     title: 2.3.1 Horizontal Ruler (hr, ---)
     title.zh: 2.3.1 分割线（hr，---）
@@ -7356,7 +7362,7 @@ body.text-indentation-two-em *:not(blockquote) > p {
   border-left: 7px solid var(--theme-color);
   border-radius: 0; /*5px 0 0 5px;*/
   height: 100%;
-  margin-left: -7px;
+  margin-left: -9px;
   position: absolute;
 }
 
@@ -10001,12 +10007,16 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
 }
 
 /*if you want the highlight to present in both normal and insert mode of vim*/
-.theme-light .CodeMirror-activeline .CodeMirror-linebackground {
+.CodeMirror-activeline-background.CodeMirror-linebackground {
   background-color: var(--activeline-background) !important;
 }
 
-.theme-dark .CodeMirror-activeline .CodeMirror-linebackground {
-  background-color: var(--activeline-background) !important;
+body.muted-activeline-bg .CodeMirror-activeline-background.CodeMirror-linebackground {
+  background-color: transparent !important;
+}
+
+body.muted-activeline-bg .HyperMD-codeblock-bg.CodeMirror-activeline-background.CodeMirror-linebackground {
+  background-color: var(--background-code) !important;
 }
 
 /*
@@ -10025,7 +10035,6 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
 }
 
 .cm-s-obsidian pre.HyperMD-header {
-  padding-left: 0 !important;
   padding-top: 0.25em;
 }
 
