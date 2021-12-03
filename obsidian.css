@@ -5266,7 +5266,7 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
   --text-color-code: #d58000;
   /*代码框文字颜色*/
 
-  --internal-link-color-in-highlight: var(--main-color);
+  --internal-link-color-in-highlight: var(--color3);
   /*==[[]]==双链文字颜色*/
 
   --list-ul-block-color: var(--color6);
@@ -5665,7 +5665,7 @@ body.color-scheme-options-autumn-topaz.theme-dark {
   --color-specification: var(--high-color);
 
 
-  --internal-link-color-in-highlight: var(--main-color); /*==[[]]==双链文字颜色*/
+  --internal-link-color-in-highlight: var(--color4); /*==[[]]==双链文字颜色*/
 
   /*list*/
   --list-ul-block-color: var(--color6);
