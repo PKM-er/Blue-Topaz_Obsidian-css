@@ -7370,7 +7370,8 @@ body.text-indentation-two-em *:not(blockquote) > p {
 .CodeMirror-line span.cm-formatting-quote + span.cm-hmd-indent-in-quote + span.cm-quote:not(.cm-formatting-quote)::before,
 .CodeMirror-line span.cm-inline-code + *::before,
 .CodeMirror-line span.cm-highlight + *::before,
-.CodeMirror-line span.cm-quote + *::before {
+.CodeMirror-line span.cm-quote + *::before,
+.CodeMirror-line span.cm-hmd-html-end + *::before {
   border-left: none;
 }
 
