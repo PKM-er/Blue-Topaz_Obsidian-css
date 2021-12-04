@@ -8430,11 +8430,6 @@ code:not([class*='language-']) {
   margin-left: 4px;
 }
 
-body:not(.outliner-plugin-bls) .cm-hmd-list-indent {
-  position: unset !important;
-}
-
-
 /* inspired by Gabroel from Obsidian discord group */
 /* https://discord.com/channels/686053708261228577/702656734631821413/784922140465692712 */
 .cm-formatting.cm-formatting-list.cm-formatting-list-ol {
@@ -8530,7 +8525,7 @@ ol {
   padding-inline-start: 32px;
 }
 
-ul>li:not(.task-list-item) {
+.markdown-preview-view ul>li:not(.task-list-item) {
   margin-left: -0.3125em;
   padding-left: 0.25em;
   border-radius: var(--radius-s);
@@ -8542,15 +8537,15 @@ ul>li:not(.task-list-item) {
   transition: all 300ms ease-in-out;
 }
 
-ul>li:not(.task-list-item) {
+.markdown-preview-view ul >li:not(.task-list-item) {
   border-left: 0.125em solid var(--list-ul-block-color);
 }
 
-ul>li:not(.task-list-item):hover {
+.markdown-preview-view ul>li:not(.task-list-item):hover {
   border-color: var(--list-ul-hover);
 }
 
-ul.contains-task-list ul>li:not(.task-list-item) {
+.markdown-preview-view ul.contains-task-list ul>li:not(.task-list-item) {
   margin-left: -0.3125em;
 }
 
@@ -8573,7 +8568,7 @@ ol ul ol ol {
   list-style: decimal;
 }
 
-ol:not(.contains-task-list)>li:not(.task-list-item) {
+.markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item) {
   margin-left: -0.3125em;
   padding-left: 0.4em;
   border-radius: var(--radius-s);
@@ -8583,7 +8578,7 @@ ol:not(.contains-task-list)>li:not(.task-list-item) {
   transition: all 300ms ease-in-out;
 }
 
-ol>li {
+.markdown-preview-view ol>li {
   margin-left: -0.3125em;
   padding-left: 0.4em;
   margin-bottom: 0.05em;
@@ -8591,7 +8586,7 @@ ol>li {
   padding-right: 0.375em;
 }
 
-ol:not(.contains-task-list)>li:not(.task-list-item) {
+.markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item) {
   border-left: 0.125em solid var(--list-ol-block-color);
 }
 
@@ -8604,7 +8599,7 @@ ol.contains-task-list ol li:not(.task-list-item) {
   padding-right: 0.375em;
 }
 
-ol:not(.contains-task-list)>li:not(.task-list-item):hover {
+.markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item):hover {
   border-color: var(--list-ol-hover);
 }
 
@@ -13670,6 +13665,51 @@ div[dir="rtl"] .mermaid svg {
 
 div[dir="rtl"] ol.contains-task-list>li.task-list-item {
   padding-right: 0;
+}
+
+
+/* ================================== */
+/* ============ CardBoard =========== */
+/* ================================== */
+.card-board input[type="checkbox"] {
+  box-sizing: border-box !important;
+  border: 2px solid var(--background-modifier-border) !important;
+  width: 1.2em !important;
+  height: 1.2em !important;
+  margin: 0.2em 0.5em 0em 0;
+  filter: hue-rotate(var(--theme-color));
+}
+
+.card-board input[type="checkbox"]:checked {
+  background-position: center;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>');
+}
+
+.card-board input[type="checkbox"]:checked {
+  border: none !important;
+}
+
+.card-board input[type="checkbox"]:checked::before,
+.card-board input[type="checkbox"]:hover::before {
+  display: none;
+}
+
+/* ================================== */
+/* ============ Outliner ============ */
+/* ================================== */
+body:not(.outliner-plugin-bls) .cm-hmd-list-indent {
+  position: initial !important;
+}
+
+.outliner-plugin-bls .cm-hmd-list-indent .cm-tab::before {
+  display: none;
+}
+
+.outliner-plugin-bls .CodeMirror-line .cm-hmd-list-indent::before {
+  left: -0.2em !important;
+  background-size: 1.6ch 1px !important;
 }
 
 /* ============ */
