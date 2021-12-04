@@ -13553,6 +13553,10 @@ span.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight.hmd-hidd
   background: unset !important;
 }
 
+.HyperMD-quote.CodeMirror-line .CodeMirror-widget + span.cm-quote::before {
+  border-left: none;
+}
+
 /* ================================== */
 /* ============ QuickAdd ============ */
 /* ================================== */
@@ -13635,6 +13639,10 @@ body.translucent-setting-panel .vertical-tab-nav-item {
   opacity: 0.4;
 }
 
+.style-settings-container {
+  padding-bottom: 5px !important;
+}
+
 /* ================================== */
 /* =========== RTL support ========== */
 /* ================================== */
@@ -13652,7 +13660,8 @@ body.translucent-setting-panel .vertical-tab-nav-item {
 .CodeMirror-code.CodeMirror-rtl span.cm-formatting-quote + span.cm-hmd-indent-in-quote + span.cm-quote:not(.cm-formatting-quote)::before,
 .CodeMirror-code.CodeMirror-rtl span.cm-inline-code + *::before,
 .CodeMirror-code.CodeMirror-rtl span.cm-highlight + *::before,
-.CodeMirror-code.CodeMirror-rtl span.cm-quote + *::before {
+.CodeMirror-code.CodeMirror-rtl span.cm-quote + *::before,
+.CodeMirror-code.CodeMirror-rtl span.cm-hmd-html-end + *::before {
   border-right: none;
 }
 
