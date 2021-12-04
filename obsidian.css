@@ -1569,7 +1569,7 @@ body.font-family-change-to-default.theme-dark .cm-strong.cm-em {
   --orange-1: #da904b;
   --green: #b6e296;
   --darkgreen: #399a58;
-  --aqua: #56b6c2;
+  --aqua: #19b3c7;
   --purple: #c678dd;
   --blue: #9dcffc;
   --darkblue: #4889df;
@@ -1865,7 +1865,7 @@ body.font-family-change-to-default.theme-dark .cm-strong.cm-em {
   --blue: #107fe7;
   --darkblue: #3b84e4;
   --purple: #c74df7;
-  --aqua: #29bdcb;
+  --aqua: #00b0c1;
   --yellow: #e48100;
   --light-yellow: #ab9a02;
   --orange: #db9600;
@@ -2154,25 +2154,6 @@ body.color-scheme-options-avocado-topaz.theme-light {
 
   --scrollbar-thumb: #c6c6c6a8;
 
-  --gray-1: #383a42;
-  --gray-2: #383a42;
-  --red: #f13d64;
-  --red-1: #f16464f5;
-  --green: #63c951;
-  --darkgreen: #acb5b2;
-  --blue: #107fe7;
-  --darkblue: #3b84e4;
-  --purple: #c74df7;
-  --aqua: #29bdcb;
-  --yellow: #e48100;
-  --light-yellow: #ab9a02;
-  --orange: #db9600;
-  --orange-1: #cc7523;
-  --light-purple: #b74ff3;
-  --blue-green: #3bd4da;
-  --white: #ffffff;
-
-
   --embed-color: #d6ebdc4f;
   --search-result-file-title-color: #10a075;
   --theme-color: var(--interactive-accent);
@@ -2432,22 +2413,6 @@ body.color-scheme-options-avocado-topaz.theme-dark {
 
   --scrollbar-thumb: #8282827e;
 
-  --gray-1: #5C6370;
-  --gray-2: #abb2bf;
-  --red: #e06c75;
-  --red-1: #d05a63;
-  --orange: #d19a66;
-  --orange-1: #da904b;
-  --green: #b6e296;
-  --darkgreen: #399a58;
-  --aqua: #56b6c2;
-  --purple: #c678dd;
-  --blue: #9dcffc;
-  --darkblue: #4889df;
-  --yellow: #e4ba6c;
-  --light-yellow: #dfda91;
-  --white: #ffffff;
-
   --embed-color: #4047424f;
   --search-result-file-title-color: #5ac668;
   --theme-color: var(--interactive-accent);
@@ -2702,22 +2667,6 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --background-transparent-blue: #003e759a;
 
   --scrollbar-thumb: #8282827e;
-
-  --gray-1: #5C6370;
-  --gray-2: #abb2bf;
-  --red: #e06c75;
-  --red-1: #d05a63;
-  --orange: #d19a66;
-  --orange-1: #da904b;
-  --green: #b6e296;
-  --darkgreen: #399a58;
-  --aqua: #56b6c2;
-  --purple: #c678dd;
-  --blue: #9dcffc;
-  --darkblue: #4889df;
-  --yellow: #e4ba6c;
-  --light-yellow: #dfda91;
-  --white: #ffffff;
 
   --embed-color: #45454534;
   --search-result-file-title-color: #b3b3b3;
@@ -2978,25 +2927,6 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --background-transparent-blue: #c6e5ffde;
 
   --scrollbar-thumb: #c6c6c6a8;
-
-  --gray-1: #383a42;
-  --gray-2: #383a42;
-  --red: #f13d64;
-  --red-1: #f16464f5;
-  --green: #63c951;
-  --darkgreen: #acb5b2;
-  --blue: #107fe7;
-  --darkblue: #3b84e4;
-  --purple: #c74df7;
-  --aqua: #29bdcb;
-  --yellow: #e48100;
-  --light-yellow: #ab9a02;
-  --orange: #db9600;
-  --orange-1: #cc7523;
-  --light-purple: #b74ff3;
-  --blue-green: #3bd4da;
-  --white: #ffffff;
-
 
   --embed-color: #e7e7e74f;
   --search-result-file-title-color: #a7a7a7;
@@ -3350,25 +3280,6 @@ body.color-scheme-options-pink-topaz.theme-light {
 
   --scrollbar-thumb: #c6c6c6a8;
 
-  --gray-1: #383a42;
-  --gray-2: #383a42;
-  --red: #f13d64;
-  --red-1: #f16464f5;
-  --green: #63c951;
-  --darkgreen: #acb5b2;
-  --blue: #107fe7;
-  --darkblue: #3b84e4;
-  --purple: #c74df7;
-  --aqua: #29bdcb;
-  --yellow: #e48100;
-  --light-yellow: #ab9a02;
-  --orange: #db9600;
-  --orange-1: #cc7523;
-  --light-purple: #b74ff3;
-  --blue-green: #3bd4da;
-  --white: #ffffff;
-
-
   --embed-color: #ffe1ea4f;
   --search-result-file-title-color: #cc437c;
   --theme-color: var(--interactive-accent);
@@ -3625,22 +3536,6 @@ body.color-scheme-options-pink-topaz.theme-dark {
 
   --scrollbar-thumb: #8282827e;
 
-  --gray-1: #5C6370;
-  --gray-2: #abb2bf;
-  --red: #e06c75;
-  --red-1: #d05a63;
-  --orange: #d19a66;
-  --orange-1: #da904b;
-  --green: #b6e296;
-  --darkgreen: #399a58;
-  --aqua: #56b6c2;
-  --purple: #c678dd;
-  --blue: #9dcffc;
-  --darkblue: #4889df;
-  --yellow: #e4ba6c;
-  --light-yellow: #dfda91;
-  --white: #ffffff;
-
   --embed-color: #4639413d;
   --search-result-file-title-color: #c0689b;
   --theme-color: var(--interactive-accent);
@@ -3888,6 +3783,7 @@ body.color-scheme-options-flamingo.theme-light {
   --folder-title: #37291a;
   --mark-highlight: #fd355a;
   --background-search-result: #ffdece;
+
   --gray-1: #c4c4c4;
   --gray-2: #7c8595;
   --red: #fd355a;
@@ -3903,6 +3799,7 @@ body.color-scheme-options-flamingo.theme-light {
   --orange: #f19c79;
   --light-purple: #d3d6fe;
   --blue-green: #16bcc0;
+
   --embed-color: #fd355a1a;
   --search-result-file-title-color: #980000;
   --theme-color: #f5a7a2;
@@ -4036,6 +3933,7 @@ body.color-scheme-options-flamingo.theme-dark {
   --folder-title: #fff;
   --mark-highlight: #f93759;
   --background-search-result: #292929;
+
   --gray-1: #c9b0b0;
   --gray-2: #b4b1c6;
   --red: #ff9090;
@@ -4049,6 +3947,7 @@ body.color-scheme-options-flamingo.theme-dark {
   --darkblue: #0040ff;
   --yellow: #fcdc00;
   --light-yellow: #ffd26c;
+
   --embed-color: #2929297d;
   --search-result-file-title-color: #f39ba0;
   --theme-color: #ffccbc;
@@ -12461,7 +12360,7 @@ aside>h2 {
     --blue: #107fe7;
     --darkblue: #3b84e4;
     --purple: #c74df7;
-    --aqua: #29bdcb;
+    --aqua: #00b0c1;
     --yellow: #e48100;
     --light-yellow: #ab9a02;
     --orange: #db9600;
@@ -12563,7 +12462,7 @@ aside>h2 {
     --orange-1: #da904b;
     --green: #b6e296;
     --darkgreen: #399a58;
-    --aqua: #56b6c2;
+    --aqua: #19b3c7;
     --purple: #c678dd;
     --blue: #9dcffc;
     --darkblue: #4889df;
@@ -12799,7 +12698,7 @@ aside>h2 {
     --orange: #d19a66;
     --green: #b6e296;
     --darkgreen: #399a58;
-    --aqua: #56b6c2;
+    --aqua: #19b3c7;
     --purple: #c678dd;
     --blue: #9dcffc;
     --darkblue: #4889df;
@@ -12819,9 +12718,12 @@ aside>h2 {
 /* ===== editor syntax highlight ==== */
 /* ================================== */
 .cm-s-obsidian .cm-hmd-frontmatter.cm-qualifier,
-.cm-s-obsidian .cm-math.cm-qualifier,
-.cm-s-obsidian pre.HyperMD-codeblock .cm-qualifier {
+.cm-s-obsidian .cm-math.cm-qualifier {
   color: var(--yellow) !important;
+}
+
+.cm-s-obsidian pre.HyperMD-codeblock .cm-qualifier {
+  color: var(--aqua) !important;
 }
 
 .cm-s-obsidian .cm-hmd-frontmatter.cm-property,
