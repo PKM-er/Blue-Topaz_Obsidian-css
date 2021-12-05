@@ -928,10 +928,10 @@ settings:
     default: false
   -
     id: image-zoom
-    title:   Zoom into the image  on click
-    title.zh: 点击图片放大效果
+    title:  Mute  zoom into the image  on click
+    title.zh: 取消点击图片放大效果
     type: class-toggle
-    default: true
+    default: false
   -
     id: fancy-hr-folder
     title: 2.3.1 Horizontal Ruler (hr, ---)
@@ -9843,16 +9843,17 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
 }
 
 /* Image zoom  */
-body.image-zoom .view-content img:not([class="emoji"]) {
+
+body:not(.image-zoom) .view-content img:not([class="emoji"]) {
   cursor: zoom-in;
 }
 
-body.image-zoom .workspace-leaf-content[data-type="markdown"] .view-content img:not([class="emoji"]) {
+body:not(.image-zoom) .workspace-leaf-content[data-type="markdown"] .view-content img:not([class="emoji"]) {
   cursor: zoom-in;
   display: block;
 }
 
-body.image-zoom .view-content img:not([class="emoji"]):active {
+body:not(.image-zoom) .view-content img:not([class="emoji"]):active {
   cursor: zoom-out !important;
   position: fixed;
   object-fit: contain;
