@@ -6894,7 +6894,8 @@ span[alt*="+grid"] {
 .kanban ul ul li.task-list-item {
   width: 100%;
   display: block;
-  text-indent: -1.5em;
+  padding-left: 2em;
+  text-indent: -3.1em;
   background-color: var(--p-kanban-card-color-1) !important;
 }
 
@@ -8532,7 +8533,7 @@ ol {
   padding-inline-start: 32px;
 }
 
-.markdown-preview-view ul>li:not(.task-list-item) {
+.markdown-preview-view:not(.kanban) ul>li:not(.task-list-item) {
   margin-left: -0.3125em;
   padding-left: 0.25em;
   border-radius: var(--radius-s);
@@ -8543,6 +8544,7 @@ ol {
   word-break: break-word;
   transition: all 300ms ease-in-out;
 }
+
 
 .markdown-preview-view ul >li:not(.task-list-item) {
   border-left: 0.125em solid var(--list-ul-block-color);
@@ -11492,6 +11494,13 @@ g>circle {
 /*better appearance for Andy mode plugin*/
 /*======================================*/
 /* scrollbar*/
+::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  border: 3px solid transparent;
+  border-width: 3px 4px 3px 3px;
+  min-height: 45px;
+}
+
 ::-webkit-scrollbar:vertical {
   background-color: transparent;
   width: 8px;
@@ -14144,6 +14153,56 @@ img[alt$="inlR"] {
 
 .is-mobile .markdown-preview-view.kanban-plugin__markdown-preview-view {
   padding: 0 5px;
+}
+/*标题栏隐藏*/
+body.is-mobile {
+  padding: 0 !important;
+}
+.is-mobile .titlebar {
+  height: 0 !important;
+  padding: 0 !important;
+  position: relative !important;
+  border-bottom: none;
+}
+/*侧边栏区域填满*/
+.is-mobile .workspace-drawer:not(.is-pinned) {
+  width: 100vw;
+  max-width: 360pt;
+  border: none;
+  box-shadow: 0 5px 50px 5px rgba(0,0,0,0.05);
+}
+/*侧边栏文件列表字体大小*/
+.is-mobile .nav-file-title, .is-mobile .nav-folder-title, .is-mobile .outline, .is-mobile .tree-item-self, .is-mobile .tag-container, .is-mobile .tag-pane-tag {
+  font-size: var(--font-size-folder-and-file);
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+/*侧边栏工作区标题*/
+.is-mobile .workspace-drawer-tab-option-item-title, .is-mobile .workspace-drawer-active-tab-title {
+  font-size: calc(var(--font-size-folder-and-file) + 0.15em);
+}
+/*小屏幕特别优化*/
+@media (max-width: 400pt)
+{
+  /*文章标题前的图标隐藏*/
+  .view-header-icon {
+    display: none;
+  }
+  /*文章标题跟正文对齐*/
+  .is-mobile .view-header-title-container {
+    padding-left: 25px;
+  }
+   /*文章标题缩小*/
+  .is-mobile .view-header-title {
+    font-size: var(--font-size-file-header-title);
+    letter-spacing: -0.015em;
+    line-height: 45px;
+}
+/*伪看板优化单列显示*/
+.is-mobile .kanban ul {
+  display: contents;
+}
+
 }
 
 /*===================================================*/
