@@ -898,10 +898,10 @@ settings:
   -
     id: bt-status-off
     title: Wide status bar
-    title.zh: 使用全宽状态栏
-    description: Use full width status bar
+    title.zh: 使用半宽状态栏
+    description: Use  half width status bar
     type: class-toggle
-    default: true
+    default: false
   -
     id: text-indentation-two-em
     title: Text-indent of the first line in preview mode
@@ -9275,7 +9275,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
  /* ----状态栏透明开关----------- */
  /* Status bar */
   
-body:not(.bt-status-off) .status-bar {
+body.bt-status-off .status-bar {
   background-color:var(--background-secondary-bg-4-bt);
   z-index:30;
   border-top-left-radius:5px;
@@ -9289,7 +9289,7 @@ body:not(.bt-status-off) .status-bar {
   padding:2px 8px 6px 3px;
 }
 
-.bt-status-off .status-bar {
+ .status-bar {
   --bar-vertical-padding: 4px;
   --bar-height: calc(22px + (var(--bar-vertical-padding)));
   line-height: 1;
@@ -9302,7 +9302,7 @@ body:not(.bt-status-off) .status-bar {
   background-color: var(--background-primary);
 }
 
-body:not(.bt-status-off) #scroll-controls {
+body.bt-status-off #scroll-controls {
   bottom: 13px !important;
 }
 
@@ -12872,6 +12872,14 @@ aside>h2 {
   margin-right: 0px !important;
 }
 
+/* ======== tooltip ========= */
+.tooltip, .tooltip.mod-right{
+  color:var(--white);
+  background-color:var(--interactive-accent);
+}
+.tooltip.mod-right .tooltip-arrow {
+  border-right: 5px solid var(--interactive-accent);
+}
 
 /* ================================== */
 /* ======== better footnote ========= */
