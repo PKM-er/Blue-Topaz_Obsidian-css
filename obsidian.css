@@ -789,8 +789,8 @@ settings:
     default-dark: '#2244d8'
   -
     id: font-settings
-    title: 2.2 Font
-    title.zh: 2.2 字体
+    title: 2.2 Typography
+    title.zh: 2.2 排版
     type: heading
     level: 2
     collapsed: true
@@ -883,29 +883,126 @@ settings:
     default: "'Lucida Handwriting', 'Segoe UI Emoji'"
   - 
     id: font-size-settings
-    title: 2.2.2 Font Size (Coming soon)
-    title.zh: 2.2.1 字体大小设置 (Coming soon)
+    title: 2.2.2 Font Size
+    title.zh: 2.2.2 字体大小
     type: heading
     level: 3
     collapsed: true
   -
+    id: font-size-vault-name
+    title: Vault Name
+    title.zh: 库名称大小
+    type: variable-text
+    default: 0.95em
+  -
+    id: font-size-file-header-title
+    title: File Header (NOT for Sliding Pane plugin)
+    title.zh: 文件抬头标题 (非Sliding Pane plugin)
+    type: variable-text
+    default: 0.9375em
+  -
+    id: font-size-file-header-title-andy-plugin
+    title: File Header (for Sliding Pane plugin)
+    title.zh: 文件抬头标题 (Sliding Pane plugin)
+    type: variable-text
+    default: 1em
+  -
+    id: font-size-folder-and-file
+    title: Folder and File
+    title.zh: 左侧边栏文件字体大小
+    type: variable-text
+    default: 0.85em
+  -
+    id: font-size-code
+    title: Codeblock
+    title.zh: 代码框字体大小
+    type: variable-text
+    default: 1em
+  -
+    id: font-size-h1
+    title: Header 1
+    title.zh: 标题 1
+    type: variable-text
+    default: 1.5625em
+  -
+    id: font-size-h2
+    title: Header 2
+    title.zh: 标题 2
+    type: variable-text
+    default: 1.4375em
+  -
+    id: font-size-h3
+    title: Header 3
+    title.zh: 标题 3
+    type: variable-text
+    default: 1.3125em
+  -
+    id: font-size-h4
+    title: Header 4
+    title.zh: 标题 4
+    type: variable-text
+    default: 1.1875em
+  -
+    id: font-size-h5
+    title: Header 5
+    title.zh: 标题 5
+    type: variable-text
+    default: 1.0625em
+  -
+    id: font-size-h6
+    title: Header 6
+    title.zh: 标题 6
+    type: variable-text
+    default: 0.9375em
+  -
+    id: other-typography-settings
+    title: 2.2.3 Other Settings
+    title.zh: 2.2.3 其他设置
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: line-height-main
+    title: Line Height
+    title.zh: 行间距
+    type: variable-number
+    default: 1.5
+  -
+    id: letter-space-main
+    title: Letter Spacing
+    title.zh: 字间距
+    type: variable-number-slider
+    default: 1
+    min: 0
+    max: 2
+    step: 0.1
+  -
+    id: letter-space-code
+    title: Letter Spacing for Code
+    title.zh: 代码字间距
+    type: variable-number-slider
+    default: 0
+    min: 0
+    max: 2
+    step: 0.1
+  -
+    id: text-indentation-two-em
+    title: Text-indent of the first line in preview mode
+    title.zh: 段落首行缩进（预览模式）
+    type: class-toggle
+    default: false
+  -
     id: style-change-options
-    title: 2.3 Element Style
+    title: 2.3 Element Styles
     title.zh: 2.3 其他样式设置
     type: heading
     level: 2
     collapsed: true
   -
     id: bt-status-off
-    title: Wide status bar
+    title: Reduced Status Bar
     title.zh: 使用半宽状态栏
     description: Use  half width status bar
-    type: class-toggle
-    default: false
-  -
-    id: text-indentation-two-em
-    title: Text-indent of the first line in preview mode
-    title.zh: 段落首行缩进（预览模式）
     type: class-toggle
     default: false
   -
@@ -1425,8 +1522,7 @@ settings:
   --font-size-list: 1em;
   --font-size-preview-blockquote: 1em;
   --font-size-edit-blockquote: 1em;
-  --font-size-code: 0.9375em;
-  --font-size-edit-code: 1em;
+  --font-size-code: 1em;
   --font-size-latex: 1.25em;
   --font-size-cloze: 0.9375em;
   --font-size-better-footnote: 1.3em;
@@ -1467,6 +1563,11 @@ settings:
 
   --fancy-hr-icon: '😀';
   --fancy-hr-rotate: 0deg;
+
+  --line-height-main: 1.5;
+  --letter-space-main: 1;
+  --letter-space-code: 0;
+
 }
 
 body.background-settings-workplace-style-blur.theme-light {
@@ -6921,6 +7022,7 @@ span[alt*="+grid"] {
   border-color: var(--text-normal) !important;
 }
 
+/*
 .kanban ul>li:nth-of-type(2)[data-line="1"],
 .kanban ul>li:nth-of-type(4)[data-line="3"],
 .kanban ul>li:nth-of-type(5)[data-line="4"],
@@ -6941,6 +7043,7 @@ span[alt*="+grid"] {
 .kanban ul>li:nth-of-type(16)[data-line="15"] {
   background-color: var(--p-kanban-color-1);
 }
+*/
 
 /*=========================*/
 /*==========tags===========*/
@@ -7322,11 +7425,6 @@ div.CodeMirror-activeline>.HyperMD-quote {
 */
 .cm-quote:not([class*="link"]):not([class*="string"]) {
   color: var(--text-normal);
-}
-
-/*code font size*/
-code {
-  font-size: var(--font-size-code) !important;
 }
 
 /* highlight */
@@ -8323,18 +8421,13 @@ body.fancy-hr div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::aft
 /* preview page */
 body:not(.font-family-change-to-default) .markdown-preview-view.is-readable-line-width .markdown-preview-section,
 body:not(.font-family-change-to-default) .markdown-source-view.is-readable-line-width .CodeMirror,
-body:not(.font-family-change-to-default) .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
-  line-height: 1.5;
-  font-family: var(--font-family-major);
-  letter-spacing: 0.03em;
-}
-
+body:not(.font-family-change-to-default) .markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
 body:not(.font-family-change-to-default) .markdown-preview-view .markdown-preview-section,
 body:not(.font-family-change-to-default) .markdown-source-view .CodeMirror,
 body:not(.font-family-change-to-default) .markdown-preview-view .markdown-preview-sizer {
-  line-height: 1.5;
+  line-height: var(--line-height-main);
   font-family: var(--font-family-major);
-  letter-spacing: 0.03em;
+  letter-spacing: calc(var(--letter-space-main) * 0.03em);
 }
 
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
@@ -8369,7 +8462,7 @@ mjx-container[jax='CHTML'] {
 .cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end),
 .markdown-preview-view code {
   color: var(--text-color-code);
-  font-size: var(--font-size-edit-code) !important;
+  font-size: var(--font-size-code) !important;
   font-family: var(--font-family-preview-edit-code);
   text-align: start;
 }
@@ -8439,7 +8532,7 @@ code:not([class*='language-']) {
   color: var(--text-color-code);
   font-weight: 600;
   font-family: var(--font-family-inline-code) !important;
-  font-size: var(--font-size-edit-code) !important;
+  font-size: var(--font-size-code) !important;
 }
 
 /*list*/
@@ -9423,12 +9516,14 @@ body.link-underline a.external-link {
 .theme-light pre[class*="language-"] {
   text-shadow: none;
   color: var(--text-color-code-normal);
+  letter-spacing: calc(var(--letter-space-code) * 0.02em);
 }
 
 .theme-dark code[class*="language-"],
 .theme-dark pre[class*="language-"] {
   color: var(--text-color-code-normal);
   text-shadow: none;
+  letter-spacing: calc(var(--letter-space-code) * 0.02em);
 }
 
 code[class*="language-"] {
@@ -9933,6 +10028,7 @@ body.muted-activeline-bg .HyperMD-codeblock-bg.CodeMirror-activeline-background.
 
 .CodeMirror pre.HyperMD-codeblock.CodeMirror-line {
   padding-left: 4px;
+  letter-spacing: calc(var(--letter-space-code) * 0.02em);
 }
 
 .CodeMirror pre.HyperMD-quote.CodeMirror-line {
@@ -14542,6 +14638,10 @@ span.cm-hashtag-begin+.cm-hashtag.cm-meta {
 
 body.circular-checkbox .markdown-source-view.is-live-preview .task-list-item-checkbox {
   border-radius: 50%;
+}
+
+.markdown-source-view.is-live-preview .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line {
+  letter-spacing: calc(var(--letter-space-code) * 0.02em);
 }
 
 /* ============ */
