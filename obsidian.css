@@ -14319,7 +14319,7 @@ body.is-mobile {
 }
 /*伪看板优化单列显示*/
 .is-mobile .kanban ul {
-  display: contents;
+  display: initial;
 }
 
 }
