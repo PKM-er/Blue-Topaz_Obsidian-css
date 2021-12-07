@@ -13802,7 +13802,6 @@ div[dir="rtl"] ol.contains-task-list>li.task-list-item {
   padding-right: 0;
 }
 
-
 /* ================================== */
 /* ============ CardBoard =========== */
 /* ================================== */
@@ -13844,6 +13843,7 @@ body:not(.outliner-plugin-bls) .cm-hmd-list-indent {
 
 .outliner-plugin-bls .CodeMirror-line .cm-hmd-list-indent::before {
   left: -0.2em !important;
+  right: -0.4em;
   background-size: 1.6ch 1px !important;
 }
 
