@@ -14201,12 +14201,8 @@ body.is-mobile {
 @media (max-width: 400pt)
 {
   /*文章标题前的图标隐藏*/
-  .is-mobile .view-header-icon svg.three-horizontal-bars {
-    width: 20px;
-  }
-
-  .is-mobile .view-header-icon {
-    padding: 10px 0px 10px 5px;
+  .is-mobile .workspace-leaf-content:not([data-type="graph"]) .view-header-icon {
+    display: none;
   }
 
   /*文章标题跟正文对齐*/
