@@ -13802,6 +13802,12 @@ div[dir="rtl"] ol.contains-task-list>li.task-list-item {
   padding-right: 0;
 }
 
+.CodeMirror-code.CodeMirror-rtl *:not(font)>em>strong,
+.CodeMirror-code.CodeMirror-rtl *:not(font)>strong>em,
+.CodeMirror-code.CodeMirror-rtl .cm-strong.cm-em {
+  padding-right: 0 !important;
+}
+
 /* ================================== */
 /* ============ CardBoard =========== */
 /* ================================== */
