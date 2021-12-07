@@ -13190,7 +13190,7 @@ body.style-options-for-admonition-plugin .admonition-hibox .admonition-title {
 /* ============ checklist =========== */
 /* ================================== */
 .checklist-plugin-main.markdown-preview-view li {
-  border-left: none;
+  border-left: none !important;
   font-size: var(--font-size-checklist);
 }
 
