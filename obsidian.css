@@ -14206,8 +14206,8 @@ body.is-mobile {
   }
 
   /*文章标题跟正文对齐*/
-  .is-mobile .view-header-title-container {
-    padding-left: 25px;
+  .is-mobile .workspace-leaf-content:not([data-type="graph"]) .view-header-title-container {
+    padding-left: 20px;
   }
    /*文章标题缩小*/
   .is-mobile .view-header-title {
