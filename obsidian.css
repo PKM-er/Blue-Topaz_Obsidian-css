@@ -933,6 +933,12 @@ settings:
     type: class-toggle
     default: false
   -
+    id:  link-underline
+    title:  Mute  link underline 
+    title.zh: 取消预览状态链接下划线
+    type: class-toggle
+    default: false
+  -
     id: fancy-hr-folder
     title: 2.3.1 Horizontal Ruler (hr, ---)
     title.zh: 2.3.1 分割线（hr，---）
@@ -9383,6 +9389,9 @@ a:hover,
 
 a.external-link {
   text-decoration: underline;
+}
+body.link-underline a.external-link {
+  text-decoration: none;
 }
 
 .cm-url:hover {
