@@ -11505,7 +11505,7 @@ g>circle {
 ::-webkit-scrollbar-thumb {
   background-clip: padding-box;
   border: 3px solid transparent;
-  border-width: 3px 4px 3px 3px;
+  border-width: 3px 2px 3px 3px;
   min-height: 45px;
 }
 
@@ -14721,18 +14721,21 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Развернуть контекст"] svg.expand-vertically,
 .nav-action-button[aria-label="Mostra più contesto"] svg.expand-vertically,
 .nav-action-button[aria-label="Tampilkan lebih banyak konteks"] svg.expand-vertically,
+.nav-action-button[aria-label="Mehr Kontext anzeigen"] svg.expand-vertically,
 
 .nav-action-button[aria-label="Show search filter"] svg.magnifying-glass,
 .nav-action-button[aria-label="筛选"] svg.magnifying-glass,
 .nav-action-button[aria-label="Показать фильтр поиска"] svg.magnifying-glass,
 .nav-action-button[aria-label="Mostra filtro di ricerca"] svg.magnifying-glass,
 .nav-action-button[aria-label="Tampilkan filter pencarian"] svg.magnifying-glass,
+.nav-action-button[aria-label="Zeige Suchfilter"] svg.magnifying-glass,
 
 .nav-action-button[aria-label="Show nested tags"] svg.stacked-levels,
 .nav-action-button[aria-label="显示嵌套标签"] svg.stacked-levels,
 .nav-action-button[aria-label="Отображать вложенные теги"] svg.stacked-levels,
 .nav-action-button[aria-label="Mostra tag annidati"] svg.stacked-levels,
 .nav-action-button[aria-label="Tampilkan tag bersarang"] svg.stacked-levels,
+.nav-action-button[aria-label="Zeige verschachtelte Tags"] svg.stacked-levels,
 
 .nav-action-button[aria-label="New diagram"] svg.diagram,
 
@@ -14741,30 +14744,35 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Учитывать регистр"] svg.uppercase-lowercase-a,
 .nav-action-button[aria-label="Maiuscole/minuscole"] svg.uppercase-lowercase-a,
 .nav-action-button[aria-label="Sesuaikan huruf"] svg.uppercase-lowercase-a,
+.nav-action-button[aria-label="Großschreibung beachten"] svg.uppercase-lowercase-a,
 
 .nav-action-button[aria-label="Explain search term"] svg.help,
 .nav-action-button[aria-label="说明搜索含义"] svg.help,
 .nav-action-button[aria-label="Объяснить поисковую строку"] svg.help,
 .nav-action-button[aria-label="Descrizione ricerca"] svg.help,
 .nav-action-button[aria-label="Jelaskan istilah pencarian"] svg.help,
+.nav-action-button[aria-label="Suchbegriff erklären"] svg.help,
 
 .nav-action-button[aria-label="Copy search results"] svg.documents,
 .nav-action-button[aria-label="复制搜索结果"] svg.documents,
 .nav-action-button[aria-label="Скопировать результаты поиска"] svg.documents,
 .nav-action-button[aria-label="Copia risultati della ricerca"] svg.documents,
 .nav-action-button[aria-label="Salin hasil pencarian"] svg.documents,
+.nav-action-button[aria-label="Suchergebnisse kopieren"] svg.documents,
 
 .nav-action-button[aria-label="Star/unstar current file"] svg.star,
 .nav-action-button[aria-label="为当前文件增加/取消星标"] svg.star,
 .nav-action-button[aria-label="Добавить/удалить из избранного текущий файл"] svg.star,
 .nav-action-button[aria-label="Aggiungi/rimuovi file corrente dai Preferiti."] svg.star,
 .nav-action-button[aria-label="Beri/Hapus bintang pada file"] svg.star,
+.nav-action-button[aria-label="Stern zu aktueller Datei hinzufügen/entfernen"] svg.star,
 
 .nav-action-button[aria-label="Star/unstar current search"] svg.star-list,
 .nav-action-button[aria-label="为当前搜索结果增加/取消星标"] svg.star-list,
 .nav-action-button[aria-label="Добавить/удалить из избранного текущий поиск"] svg.star-list,
 .nav-action-button[aria-label="Aggiungi/rimuovi ricerca corrente dai Preferiti"] svg.star-list,
-.nav-action-button[aria-label="Beri/Hapus bintang pada pencarian"] svg.star-list {
+.nav-action-button[aria-label="Beri/Hapus bintang pada pencarian"] svg.star-list,
+.nav-action-button[aria-label="hinzufügen/entfernen des Sterns zu aktueller Suche"] svg.star-list {
   display: none;
 }
 
@@ -14866,7 +14874,7 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Свернуть результаты"]::before,
 .nav-action-button[aria-label="Comprimi risultati"]::before,
 .nav-action-button[aria-label="Ciutkan hasil"]::before,
-.nav-action-button[aria-label="Ergebnisse zuklappen"]::before  {
+.nav-action-button[aria-label="Ergebnisse zuklappen"]::before {
   content: "\ed1a";
 }
 
@@ -14901,7 +14909,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="筛选"]::before,
 .nav-action-button[aria-label="Показать фильтр поиска"]::before,
 .nav-action-button[aria-label="Mostra filtro di ricerca"]::before,
-.nav-action-button[aria-label="Tampilkan filter pencarian"]::before {
+.nav-action-button[aria-label="Tampilkan filter pencarian"]::before,
+.nav-action-button[aria-label="Zeige Suchfilter"]::before {
   content: "\ee5a";
 }
 
@@ -14910,11 +14919,13 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Показать фильтр поиска"]:hover::before,
 .nav-action-button[aria-label="Mostra filtro di ricerca"]:hover::before,
 .nav-action-button[aria-label="Tampilkan filter pencarian"]:hover::before,
+.nav-action-button[aria-label="Zeige Suchfilter"]:hover::before,
 .nav-action-button.is-active[aria-label="Show search filter"]::before,
 .nav-action-button.is-active[aria-label="筛选"]::before,
 .nav-action-button.is-active[aria-label="Показать фильтр поиска"]::before,
 .nav-action-button.is-active[aria-label="Mostra filtro di ricerca"]::before,
-.nav-action-button.is-active[aria-label="Tampilkan filter pencarian"]::before {
+.nav-action-button.is-active[aria-label="Tampilkan filter pencarian"]::before,
+.nav-action-button.is-active[aria-label="Zeige Suchfilter"]::before {
   content: "\ee5b";
 }
 
@@ -14923,11 +14934,13 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Развернуть контекст"]::before,
 .nav-action-button[aria-label="Mostra più contesto"]::before,
 .nav-action-button[aria-label="Tampilkan lebih banyak konteks"]::before,
+.nav-action-button[aria-label="Mehr Kontext anzeigen"]::before,
 .nav-action-button.is-active[aria-label="Show more context"]:hover::before,
 .nav-action-button.is-active[aria-label="显示上下文"]:hover::before,
 .nav-action-button.is-active[aria-label="Развернуть контекст"]:hover::before,
 .nav-action-button.is-active[aria-label="Mostra più contesto"]:hover::before,
-.nav-action-button.is-active[aria-label="Tampilkan lebih banyak konteks"]:hover::before {
+.nav-action-button.is-active[aria-label="Tampilkan lebih banyak konteks"]:hover::before,
+.nav-action-button.is-active[aria-label="Mehr Kontext anzeigen"]:hover::before {
   content: "\eca5";
 }
 
@@ -14936,11 +14949,13 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Развернуть контекст"]:hover::before,
 .nav-action-button[aria-label="Mostra più contesto"]:hover::before,
 .nav-action-button[aria-label="Tampilkan lebih banyak konteks"]:hover::before,
+.nav-action-button[aria-label="Mehr Kontext anzeigen"]:hover::before,
 .nav-action-button.is-active[aria-label="Show more context"]::before,
 .nav-action-button.is-active[aria-label="显示上下文"]::before,
 .nav-action-button.is-active[aria-label="Развернуть контекст"]::before,
 .nav-action-button.is-active[aria-label="Mostra più contesto"]::before,
-.nav-action-button.is-active[aria-label="Tampilkan lebih banyak konteks"]::before {
+.nav-action-button.is-active[aria-label="Tampilkan lebih banyak konteks"]::before,
+.nav-action-button.is-active[aria-label="Mehr Kontext anzeigen"]::before {
   content: "\ed30";
 }
 
@@ -14948,7 +14963,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="显示嵌套标签"]::before,
 .nav-action-button[aria-label="Отображать вложенные теги"]::before,
 .nav-action-button[aria-label="Mostra tag annidati"]::before,
-.nav-action-button[aria-label="Tampilkan tag bersarang"]::before {
+.nav-action-button[aria-label="Tampilkan tag bersarang"]::before,
+.nav-action-button[aria-label="Zeige verschachtelte Tags"]::before {
   content: "\ee73";
 }
 
@@ -14956,7 +14972,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="区分大小写"]::before,
 .nav-action-button[aria-label="Учитывать регистр"]::before,
 .nav-action-button[aria-label="Maiuscole/minuscole"]::before,
-.nav-action-button[aria-label="Sesuaikan huruf"]::before {
+.nav-action-button[aria-label="Sesuaikan huruf"]::before,
+.nav-action-button[aria-label="Großschreibung beachten"]::before {
   content: "\ed8d";
   font-family: remixicon;
 }
@@ -14965,7 +14982,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="说明搜索含义"]::before,
 .nav-action-button[aria-label="Объяснить поисковую строку"]::before,
 .nav-action-button[aria-label="Descrizione ricerca"]::before,
-.nav-action-button[aria-label="Jelaskan istilah pencarian"]::before {
+.nav-action-button[aria-label="Jelaskan istilah pencarian"]::before,
+.nav-action-button[aria-label="Suchbegriff erklären"]::before {
   content: "\ed84";
 }
 
@@ -14973,7 +14991,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="复制搜索结果"]::before,
 .nav-action-button[aria-label="Скопировать результаты поиска"]::before,
 .nav-action-button[aria-label="Copia risultati della ricerca"]::before,
-.nav-action-button[aria-label="Salin hasil pencarian"]::before {
+.nav-action-button[aria-label="Salin hasil pencarian"]::before,
+.nav-action-button[aria-label="Suchergebnisse kopieren"]::before {
   content: "\ece8";
 }
 
@@ -14981,7 +15000,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="复制搜索结果"]:hover::before,
 .nav-action-button[aria-label="Скопировать результаты поиска"]:hover::before,
 .nav-action-button[aria-label="Copia risultati della ricerca"]:hover::before,
-.nav-action-button[aria-label="Salin hasil pencarian"]:hover::before {
+.nav-action-button[aria-label="Salin hasil pencarian"]:hover::before,
+.nav-action-button[aria-label="Suchergebnisse kopieren"]:hover::before {
   content: "\ea5a";
 }
 
@@ -14989,7 +15009,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="为当前文件增加/取消星标"]::before,
 .nav-action-button[aria-label="Добавить/удалить из избранного текущий файл"]::before,
 .nav-action-button[aria-label="Aggiungi/rimuovi file corrente dai Preferiti."]::before,
-.nav-action-button[aria-label="Beri/Hapus bintang pada file"]::before {
+.nav-action-button[aria-label="Beri/Hapus bintang pada file"]::before,
+.nav-action-button[aria-label="Stern zu aktueller Datei hinzufügen/entfernen"]::before {
   content: "\ebad";
 }
 
@@ -14997,7 +15018,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="为当前搜索结果增加/取消星标"]::before,
 .nav-action-button[aria-label="Добавить/удалить из избранного текущий поиск"]::before,
 .nav-action-button[aria-label="Aggiungi/rimuovi ricerca corrente dai Preferiti"]::before,
-.nav-action-button[aria-label="Beri/Hapus bintang pada pencarian"]::before {
+.nav-action-button[aria-label="Beri/Hapus bintang pada pencarian"]::before,
+.nav-action-button[aria-label="hinzufügen/entfernen des Sterns zu aktueller Suche"]::before {
   content: "\ea11";
   font-family: "Material Icons Outlined";
 }
