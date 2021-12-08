@@ -10039,6 +10039,12 @@ body.muted-activeline-bg .HyperMD-codeblock-bg.CodeMirror-activeline-background.
   padding-top: 0.25em;
 }
 
+/*linenumber*/
+.cm-s-obsidian .CodeMirror-linenumber {
+  font-family: var(--font-family-preview-edit-code);
+}
+
+
 /*----file explorer smaller fonts & line height----*/
 .nav-file-title,
 .nav-folder-title {
