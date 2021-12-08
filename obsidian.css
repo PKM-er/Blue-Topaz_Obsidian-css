@@ -14145,13 +14145,12 @@ img[alt$="inlR"] {
 
 .is-mobile .cm-s-obsidian .cm-gutters {
   background-color: transparent !important;
-  color: transparent !important;
   padding-right: 0;
   margin-right: -5px;
 }
 
-.is-mobile .cm-gutter .cm-lineNumbers {
-  color: initial !important;
+.is-mobile .cm-foldGutter .cm-gutterElement {
+  color: transparent !important;
 }
 
 .is-mobile .cm-lineNumbers .cm-gutterElement {
@@ -14162,7 +14161,7 @@ img[alt$="inlR"] {
 
 .is-mobile .cm-gutterElement>span[title="Fold line"]::before {
   content: "↓";
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   font-family: 'Inter';
   color: var(--text-accent);
@@ -14170,7 +14169,7 @@ img[alt$="inlR"] {
 
 .is-mobile .cm-gutterElement>span[title="Unfold line"]::before {
   content: "→";
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   font-family: 'Inter';
   color: var(--text-accent);
