@@ -14278,8 +14278,8 @@ img[alt$="inlR"] {
 .is-mobile .markdown-preview-view.kanban-plugin__markdown-preview-view {
   padding: 0 5px;
 }
-/*标题栏隐藏*/
-body.is-mobile {
+/*标题栏隐藏 --ipad上会跟分屏工具栏重叠先注释*/
+/* body.is-mobile {
   padding: 0 !important;
 }
 .is-mobile .titlebar {
@@ -14287,7 +14287,7 @@ body.is-mobile {
   padding: 0 !important;
   position: relative !important;
   border-bottom: none;
-}
+} */
 /*侧边栏区域填满*/
 .is-mobile .workspace-drawer:not(.is-pinned) {
   width: 100vw;
