@@ -14154,7 +14154,7 @@ img[alt$="inlR"] {
 }
 
 .is-mobile .cm-lineNumbers .cm-gutterElement {
-  padding: 0 10px 0 5px;
+  padding: 0 10px 0 10px;
   margin-left: -10px;
   font-size: 12px;
 }
