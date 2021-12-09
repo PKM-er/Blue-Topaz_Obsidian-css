@@ -1248,7 +1248,28 @@ settings:
     title.zh: 嵌入笔记浮动效果
     type: class-toggle
     default: false
-  - 
+  -
+    id: custom-modal-windows
+    title: 2.3.7 Custom modal windows
+    title.zh: 2.3.7 个性化弹窗
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: disable-math-block
+    title: disable math block on quickadd modal
+    title.zh: 禁用Quickadd弹窗界面的公式预览
+    type: class-toggle
+    default: false
+  -
+    id: modal-title-icon
+    title: modal title icon
+    title.zh: 弹窗标题自定义
+    description: Do not remove the quotes
+    description.zh: 保留引号
+    type: variable-text
+    default: "'  '"
+  -
     id: style-options-for-other-plugins
     title: 3. For Other Plugins (Coming soon)
     title.zh: 3. 其他插件样式
@@ -1572,7 +1593,7 @@ settings:
 
   --fancy-hr-icon: '😀';
   --fancy-hr-rotate: 0deg;
-
+  --modal-title-icon:'  ';
   --line-height-main: 1.5;
   --letter-space-main: 1;
   --letter-space-code: 0;
@@ -7415,7 +7436,7 @@ body.text-indentation-two-em *:not(blockquote) > p {
   font-size: var(--font-size-edit-blockquote);
 }
 
-.CodeMirror-code span.cm-quote::before {
+.CodeMirror-code span.cm-formatting.cm-formatting-quote.cm-formatting-quote.cm-quote::before {
   content: "";
   border-left: 7px solid var(--theme-color);
   border-radius: 0; /*5px 0 0 5px;*/
@@ -13637,7 +13658,18 @@ span.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight.hmd-hidd
 .HyperMD-quote.CodeMirror-line .CodeMirror-widget + span.cm-quote::before {
   border-left: none;
 }
+/*全局modal模块加文字*/
+.modal-container .modal .modal-title::before {
+  font-family: var(--font-family-strong);
+  content: var(--modal-title-icon);
+}
 
+.modal-container .modal-content textarea {
+  height: 18rem!important;
+}
+body.disable-math-block .modal .modal-content .math.math-block{
+  display:none;
+  }
 /* ================================== */
 /* ============ QuickAdd ============ */
 /* ================================== */
