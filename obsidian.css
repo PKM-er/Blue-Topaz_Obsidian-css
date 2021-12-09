@@ -7322,6 +7322,42 @@ div .CodeMirror-line span.cm-hashtag-begin+span.cm-hashtag.cm-meta.cm-hashtag-en
   border-left: none;
   text-decoration: none;
 }
+div .CodeMirror-line span.cm-hashtag-begin+span.cm-hashtag.cm-meta.cm-hashtag-end:nth-child(9n+1) {
+  background-color: var(--tag1);
+}
+
+div .CodeMirror-line span.cm-hashtag-begin+span.cm-hashtag.cm-meta.cm-hashtag-end:nth-child(9n+2) {
+  background-color: var(--tag2);
+}
+
+div .CodeMirror-line span.cm-hashtag-begin+span.cm-hashtag.cm-meta.cm-hashtag-end:nth-child(9n+3) {
+  background-color: var(--tag3);
+}
+
+div .CodeMirror-line span.cm-hashtag-begin+span.cm-hashtag.cm-meta.cm-hashtag-end:nth-child(9n+4) {
+  background-color: var(--tag4);
+}
+
+div .CodeMirror-line span.cm-hashtag-begin+span.cm-hashtag.cm-meta.cm-hashtag-end:nth-child(9n+5) {
+  background-color: var(--tag5);
+}
+
+div .CodeMirror-line span.cm-hashtag-begin+span.cm-hashtag.cm-meta.cm-hashtag-end:nth-child(9n+6) {
+  background-color: var(--tag6);
+}
+
+div .CodeMirror-line span.cm-hashtag-begin+span.cm-hashtag.cm-meta.cm-hashtag-end:nth-child(9n+7) {
+  background-color: var(--tag7);
+}
+
+div .CodeMirror-line span.cm-hashtag-begin+span.cm-hashtag.cm-meta.cm-hashtag-end:nth-child(9n+8) {
+  background-color: var(--tag8);
+}
+
+div .CodeMirror-line span.cm-hashtag-begin+span.cm-hashtag.cm-meta.cm-hashtag-end:nth-child(9n) {
+  background-color: var(--tag9);
+}
+
 
 div .CodeMirror-line span.cm-hashtag-begin+.cm-hashtag.cm-meta {
   padding-right: 0;
@@ -13036,7 +13072,7 @@ section.footnotes ol>li:not(.task-list-item) {
 body.style-options-for-admonition-plugin .admonition-blank {
   overflow: visible;
   background-color: rgba(255, 255, 255, 0)!important;
-  border-left:0px!important;;
+  border-left:0px!important;
   margin: auto;
   box-shadow:none;
 }
