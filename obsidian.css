@@ -313,7 +313,7 @@ settings:
         label: Pink
         value: color-scheme-options-pink-topaz
       - 
-        label: ==↓👩😺 Created by Topaz Community 🐵🧑↓==
+        label: =↓👩😺 Created by Topaz Community 🐵🧑↓=
         value: 
       -
         label: Flamingo (@Mouth on Cloud & @Rainbell)
@@ -337,6 +337,7 @@ settings:
     id: color-magic
     title: Color of Rubik's Cube palette
     title.zh: 魔方配色
+    description.zh: 当整体配色为【魔方】时生效
     type: heading
     level: 3
     collapsed: true
@@ -406,7 +407,7 @@ settings:
     title: blur depth
     title.zh: 模糊程度
     description: To adjust the degree of blur
-    description.zh: 调整背景壁纸模糊程度
+    description.zh: 调整背景壁纸模糊程度，当背景样式为【Blur】时生效
     type: variable-number-slider
     default: 10
     format: px
@@ -1240,6 +1241,12 @@ settings:
     type: class-toggle
     default: false
   - 
+    id: embed-hover
+    title:  embed note floating effect
+    title.zh: 嵌入笔记浮动效果
+    type: class-toggle
+    default: false
+  - 
     id: style-options-for-other-plugins
     title: 3. For Other Plugins (Coming soon)
     title.zh: 3. 其他插件样式
@@ -1282,7 +1289,7 @@ settings:
     title.zh: 是否开启Admonition特别样式支持
     type: class-toggle
     default: false
-    description : 目前支持ad类型：bank 全透明框🔸def definition🔸thm theorem🔸lem lemma🔸cor corollary🔸pro proposition 🔸🔸hibox ❗使用方法❗下面以thm类型为例，在admonition插件的设置页面中，类型填 thm，标题填 定理，图标选择hand-point-right，颜色自己选比如浅绿色，添加成功后，在正文中使用代码块```ad-thm 即可激活。其他类型以此类推。  
+    description : 目前支持ad类型：blank 全透明框🔸def definition🔸thm theorem🔸lem lemma🔸cor corollary🔸pro proposition 🔸hibox 🔸❗使用方法❗下面以thm类型为例，在admonition插件的设置页面中，类型填 thm，标题填 定理，图标选择hand-point-right，颜色自己选比如浅绿色，添加成功后，在正文中使用代码块```ad-thm 即可激活。其他类型以此类推。  
   -
     id: style-options-for-kanban-plugin-header
     title: 3.3 Kanban (Coming soon)
@@ -6872,7 +6879,7 @@ span[alt*="+grid"] {
 .kanban ul>li:not(.task-list-item) {
   flex: 1 1 20%;
   padding: 0.1em 1em 0.1em 0.8em;
-  margin: 0 0.1em 0.3em 0;
+  margin: 0 0.1em 0.3em 0  !important;
   list-style: none;
   border: 1px solid var(--p-kanban-border-color);
   border-left: 1px solid var(--p-kanban-border-color) !important;
@@ -9547,6 +9554,18 @@ body.embed-hd .markdown-embed-title{
 .popover .markdown-preview-sizer.markdown-preview-section {
   height: auto;
   min-height: min-content !important;
+}
+
+/*![[]] 嵌入笔记浮动效果*/
+body.embed-hover.theme-light .internal-embed .markdown-embed:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .25);
+  transition: all .2s ease-in-out;
+  transform: translate3d(0px, -3px, 0px);
+}
+
+body.embed-hover.theme-dark .internal-embed .markdown-embed:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transform: translate3d(0px, -3px, 0px);
 }
 
 .markdown-preview-view .markdown-embed {
