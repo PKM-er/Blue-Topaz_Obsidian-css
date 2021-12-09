@@ -640,6 +640,7 @@ settings:
     id: interactive-accent
     title: Theme color
     title.zh: 主题色
+    description: interactive-accent
     type: variable-themed-color
     opacity: false
     format: hex
@@ -649,6 +650,7 @@ settings:
     id: text-accent
     title: Theme color 2
     title.zh: 主题色 2
+    description: text-accent
     type: variable-themed-color
     opacity: false
     format: hex
@@ -5791,7 +5793,7 @@ body.color-scheme-options-autumn-topaz #calendar-container {
 }
 
 body.color-scheme-options-lillimon-topaz.theme-light {
-
+  /*魔方浅色*/
   /*色系设置*/
   --magic-low-color: #e0e79a;
   --magic-main-color: #95a503;
@@ -5826,13 +5828,13 @@ body.color-scheme-options-lillimon-topaz.theme-light {
   --background-secondary-alt: var(--bg-color2);
   --background-secondary-alt-bg-4-bt: var(--bg-color);
 
-
-  --text-accent: var(--magic-main-color);
+  --text-normal:var(--magic-main-color);
+  --text-accent: var(--magic-deep-color);
   --text-accent-hover: var(--magic-low-color);
 
 
   --interactive-accent-rgb: 215, 178, 88;
-  --interactive-accent: var(--magic-main-color);
+  --interactive-accent: var(--magic-deep-color);
   --interactive-accent-hover: var(--magic-low-color);
 
   --strong-em-highlight-color: var(--color11);
@@ -5870,20 +5872,12 @@ body.color-scheme-options-lillimon-topaz.theme-light {
 
   /*tags*/
 
-  --tag1: var(--color3);
-  --tag2: var(--color4);
-  --tag3: var(--color5);
-  --tag4: var(--color6);
-  --tag5: var(--color7);
-  --tag6: var(--color8);
-  --tag7: var(--color9);
-  --tag8: var(--color10);
-  --tag9: var(--color11);
+ 
   --color-tag-edit: var(--magic-low-color);
   --tag-dailynote: var(--magic-low-color);
-  --tag-dailynote-bg: var(--color3);
+  --tag-dailynote-bg: var(--color10);
   --tag-weeklynote: var(--color6);
-  --tag-weeklynote-bg: var(--color4);
+  --tag-weeklynote-bg: var(--color10);
   --tag-questions: var(--color5);
   --tag-questions-bg: var(--color5);
   --tag-ideas: #ceb900;
@@ -5958,7 +5952,7 @@ body.color-scheme-options-lillimon-topaz.theme-light {
 }
 
 body.color-scheme-options-lillimon-topaz.theme-dark {
-
+  /*魔方深色*/
   /*魔方*/
   --magic-low-color: #e0e79a;
   --magic-main-color: #95a503;
