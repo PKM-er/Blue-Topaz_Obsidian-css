@@ -345,6 +345,7 @@ settings:
     id: magic-main-color
     title: main color
     title.zh: 主题色
+    description.zh: 主题色主要作用于标题，字体，列表等主色调，建议用对比度强，不易疲劳的色系。如果想单独调整个别类目请在2.1中继续细调。
     type: variable-themed-color
     opacity: false
     format: rgb
@@ -354,6 +355,7 @@ settings:
     id: magic-low-color
     title: low color
     title.zh: 浅色
+    description.zh: 浅色主要作用于各类触发背景底色，建议用不影响阅读的背景色系。
     type: variable-themed-color
     opacity: false
     format: rgb
@@ -363,6 +365,7 @@ settings:
     id: magic-deep-color
     title: deep color
     title.zh: 深色
+    description.zh: 深色主要作用于主题强调色系，用在各种控件，提示等使用，建议用浅色相关的醒目色系。
     type: variable-themed-color
     opacity: false
     format: rgb
@@ -5883,6 +5886,7 @@ body.color-scheme-options-lillimon-topaz.theme-light {
   --internal-link-color-in-highlight: var(--magic-main-color);
 
   /*list*/
+
   --list-ul-block-color: var(--color5);
   --list-ul-disc-color: var(--magic-main-color);
   --green-1: #3dc730;
