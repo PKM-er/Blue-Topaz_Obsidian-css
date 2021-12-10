@@ -998,6 +998,13 @@ settings:
     type: class-toggle
     default: false
   -
+    id: clutter-free-headings
+    title: clutter free headings
+    title.zh: 编辑状态使用H1 H2 替代「#」
+    description:  Adapted from https://github.com/deathau/obsidian-snippets/blob/main/clutter-free-headings.css
+    type: class-toggle
+    default: false
+  -
     id: style-change-options
     title: 2.3 Element Styles
     title.zh: 2.3 其他样式设置
@@ -5855,8 +5862,6 @@ body.color-scheme-options-lillimon-topaz.theme-light {
   --text-normal:var(--magic-main-color);
   --text-accent: var(--magic-deep-color);
   --text-accent-hover: var(--magic-low-color);
-
-
   --interactive-accent-rgb: 215, 178, 88;
   --interactive-accent: var(--magic-deep-color);
   --interactive-accent-hover: var(--magic-low-color);
@@ -8183,6 +8188,44 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 }
 
 /* headers */
+/*编辑状态是否显示H1 H2标记*/
+body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header::before {
+  position: absolute;
+ margin-top: 10px;
+  font-size: 0.7rem;
+  width: auto;
+  margin-left: -20px;
+  padding: 0px 2px;
+  border-radius: var(--radius-xs);
+color: var(--text-muted);
+overflow:visible;
+
+}
+
+body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header {
+color: transparent !important;
+background:none;
+}
+
+body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-1::before {
+content: 'H1';
+}
+body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-2::before {
+content: 'H2';
+}
+body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-3::before {
+content: 'H3';
+}
+body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-4::before {
+content: 'H4';
+}
+body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-5::before {
+content: 'H5';
+}
+body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-header-6::before {
+content: 'H6';
+}
+
 .markdown-preview-view h1 {
   font-size: var(--font-size-h1);
   font-weight: bold;
