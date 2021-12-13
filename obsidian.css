@@ -15190,8 +15190,8 @@ body:not(.remove-file-icons).theme-dark .nav-folder-children .nav-file-title-con
   font-family: "Material Icons Outlined";
 }
 
-body:not(.remove-file-icons).theme-dark .nav-file-title.is-active>.nav-file-title-content::before,
-body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-title-content::before {
+body:not(.remove-file-icons).theme-dark .nav-file-title.is-active[data-path$=".md"]>.nav-file-title-content::before,
+body:not(.remove-file-icons).theme-light .nav-file-title.is-active[data-path$=".md"]>.nav-file-title-content::before {
   content: "\e873";
   opacity: 1;
   font-family: "Material Icons";
