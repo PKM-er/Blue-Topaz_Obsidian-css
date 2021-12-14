@@ -1377,12 +1377,9 @@ body.font-family-change-to-default span.cm-strong,
 body.font-family-change-to-default :not(font)>strong,
 body.font-family-change-to-default a,
 body.font-family-change-to-default .markdown-preview-view .internal-link body.font-family-change-to-default .markdown-preview-view th,
-body.font-family-change-to-default.theme-light *:not(font)>em>strong,
-body.font-family-change-to-default.theme-light *:not(font)>strong>em,
-body.font-family-change-to-default.theme-light .cm-strong.cm-em,
-body.font-family-change-to-default.theme-dark *:not(font)>em>strong,
-body.font-family-change-to-default.theme-dark *:not(font)>strong>em,
-body.font-family-change-to-default.theme-dark .cm-strong.cm-em {
+body.font-family-change-to-default *:not(font)>em>strong,
+body.font-family-change-to-default *:not(font)>strong>em,
+body.font-family-change-to-default .cm-strong.cm-em {
   font-family: inherit !important;
 }
 
