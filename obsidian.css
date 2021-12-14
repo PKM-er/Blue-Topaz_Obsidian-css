@@ -1383,7 +1383,7 @@ body.font-family-change-to-default.theme-light .cm-strong.cm-em,
 body.font-family-change-to-default.theme-dark *:not(font)>em>strong,
 body.font-family-change-to-default.theme-dark *:not(font)>strong>em,
 body.font-family-change-to-default.theme-dark .cm-strong.cm-em {
-  font-family: inherit !important;
+  font-family: var(--default-font) !important;
 }
 
 .theme-dark {
