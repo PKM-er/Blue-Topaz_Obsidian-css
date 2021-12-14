@@ -1364,7 +1364,7 @@ body.font-family-change-to-default .markdown-preview-view.is-readable-line-width
 body.font-family-change-to-default .markdown-preview-view .markdown-preview-section,
 body.font-family-change-to-default .markdown-source-view .CodeMirror,
 body.font-family-change-to-default .markdown-preview-view .markdown-preview-sizer,
-body.font-family-change-to-default.is-mobile .markdown-source-view.mod-cm6 .cm-scroller,
+body.font-family-change-to-default .markdown-source-view.mod-cm6 .cm-scroller,
 body.font-family-change-to-default .markdown-preview-view h5,
 body.font-family-change-to-default .markdown-preview-view h6,
 body.font-family-change-to-default .nav-file-title,
