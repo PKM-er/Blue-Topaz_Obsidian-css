@@ -141,7 +141,7 @@ settings:
     title: blur depth
     title.zh: 模糊程度
     description: To adjust the degree of blur
-    description.zh: 调整背景壁纸模糊程度，当背景样式为【Blur】时生效
+    description.zh: 调整背景壁纸模糊程度
     type: variable-number-slider
     default: 10
     format: px
@@ -1076,7 +1076,7 @@ settings:
     title.zh: 是否开启Admonition特别样式支持
     type: class-toggle
     default: false
-    description : 目前支持ad类型：blank 全透明框🔸def definition🔸thm theorem🔸lem lemma🔸cor corollary🔸pro proposition 🔸hibox  自动隐藏框🔸col2 内容分栏🔸kanban 伪看板❗使用方法❗下面以thm类型为例，在admonition插件的设置页面中，类型填 thm，标题填 定理，图标选择hand-point-right，颜色自己选比如浅绿色，添加成功后，在正文中使用代码块```ad-thm 即可激活。其他类型以此类推。  
+    description : 目前支持ad类型：blank 全透明框🔸def definition🔸thm theorem🔸lem lemma🔸cor corollary🔸pro proposition 🔸hibox  自动隐藏框🔸col2 col3 col4内容分多栏🔸kanban 伪看板❗使用方法❗下面以thm类型为例，在admonition插件的设置页面中，类型填 thm，标题填 定理，图标选择hand-point-right，颜色自己选比如浅绿色，添加成功后，在正文中使用代码块```ad-thm 即可激活。其他类型以此类推。  
   -
     id: admonition-bg-color
     title: Admontion codebock background
@@ -13530,6 +13530,7 @@ body.style-options-for-admonition-plugin .admonition-kanban .task-list-item-chec
 body.style-options-for-admonition-plugin .admonition-col2 {
   box-shadow: none!important;
 
+
   }
   
   body.style-options-for-admonition-plugin .admonition-col2 .admonition	
@@ -13549,7 +13550,21 @@ body.style-options-for-admonition-plugin .admonition-col2 {
          /*分栏的分割线
   column-rule: 1px solid #d4d2d2; */
   }
+  body.style-options-for-admonition-plugin .admonition-col2>.admonition-content-holder>.admonition-content ol {	
+    margin: -0.25em;
+  }
+  body.style-options-for-admonition-plugin .admonition-col2>.admonition-content-holder>.admonition-content ul {	
+    margin: -0.25em;
+  }
 
+  body.style-options-for-admonition-plugin .admonition-kanban .admonition-col2>.admonition-content-holder>.admonition-content ul {	
+ margin:0;
+ break-inside: avoid;
+  }
+body.style-options-for-admonition-plugin .admonition-kanban .admonition-col2>.admonition-content-holder>.admonition-content ol {	
+    margin:0;
+    break-inside: avoid;
+     }
   body.style-options-for-admonition-plugin .admonition-col2 .admonition-content {	
     overflow: visible ;
 }
@@ -13561,20 +13576,155 @@ body.style-options-for-admonition-plugin .admonition-col2 {
    body.style-options-for-admonition-plugin .admonition-col2 p{
   text-align: justify;
   margin-top:0;
+  padding: 2px;
  /*  height:100%;
   overflow: auto; */
   
   }
   body.style-options-for-admonition-plugin .admonition-col2 p>img{
-    text-align: justify;
-    margin-top:0;
-    height:auto;
-    overflow:unset;
+    display: block;
+    width: 100%;
+    height: auto;
     }
 
   body.style-options-for-admonition-plugin .admonition-col2-parent .admonition-col2 .admonition > .admonition-title.no-title + .admonition-content-holder {
     margin-top: 0;
   }
+/****col3 三栏*****/
+
+body.style-options-for-admonition-plugin .admonition-col3 {
+  box-shadow: none!important;
+
+  }
+  
+  body.style-options-for-admonition-plugin .admonition-col3 .admonition	
+  {
+    overflow: visible ;
+    margin:0;
+  }
+
+
+  body.style-options-for-admonition-plugin .admonition-col3>.admonition-content-holder>.admonition-content {	
+    columns:150px 3;
+    -moz-columns:150px 3;
+    -webkit-columns:150px 3;
+    column-gap: 1vw;
+      overflow: visible ;
+      margin:0;
+      break-inside: avoid;
+  column-rule: 1px solid #d4d2d2; 
+  }
+  body.style-options-for-admonition-plugin .admonition-col3>.admonition-content-holder>.admonition-content ol {	
+    margin: -0.25em;
+  }
+  body.style-options-for-admonition-plugin .admonition-col3>.admonition-content-holder>.admonition-content ul {	
+    margin: -0.25em;
+  }
+  body.style-options-for-admonition-plugin .admonition-kanban .admonition-col3>.admonition-content-holder>.admonition-content ul {	
+    margin:0;
+    break-inside: avoid;
+     }
+   body.style-options-for-admonition-plugin .admonition-kanban .admonition-col3>.admonition-content-holder>.admonition-content ol {	
+       margin:0;
+       break-inside: avoid;
+        }
+  body.style-options-for-admonition-plugin .admonition-col3 .admonition-content {	
+    overflow: visible ;
+}
+
+  body.style-options-for-admonition-plugin .admonition-col3 >.admonition-content-holder {
+    margin-top:0!important;
+    margin-bottom:0!important;
+   }
+   body.style-options-for-admonition-plugin .admonition-col3 p{
+  text-align: justify;
+  margin-top:0;
+  padding: 2px;
+ /*  height:100%;
+  overflow: auto; */
+  
+  }
+  body.style-options-for-admonition-plugin .admonition-col3 p>img{
+    display: block;
+    width: 100%;
+    height: auto;
+    }
+
+  body.style-options-for-admonition-plugin .admonition-col3-parent .admonition-col3 .admonition > .admonition-title.no-title + .admonition-content-holder {
+    margin-top: 0;
+  }
+/****col4 四栏*****/
+
+body.style-options-for-admonition-plugin .admonition-col4 {
+  box-shadow: none!important;
+  }
+  
+  body.style-options-for-admonition-plugin .admonition-col4 .admonition	
+  {
+    overflow: visible ;
+    margin:0;
+  }
+
+
+  body.style-options-for-admonition-plugin .admonition-col4>.admonition-content-holder>.admonition-content {	
+    columns:100px 4;
+    -moz-columns:100px 4;
+    -webkit-columns:100px 4;
+    column-gap: 1vw;
+    overflow: visible ;
+    margin:0;
+    break-inside: avoid;
+
+  }
+  body.style-options-for-admonition-plugin .admonition-col4>.admonition-content-holder>.admonition-content ol {	
+    margin: -0.25em;
+  }
+  body.style-options-for-admonition-plugin .admonition-col4>.admonition-content-holder>.admonition-content ul {	
+    margin: -0.25em;
+  }
+  body.style-options-for-admonition-plugin .admonition-kanban .admonition-col4>.admonition-content-holder>.admonition-content ul {	
+    margin:0;
+    break-inside: avoid;
+     }
+   body.style-options-for-admonition-plugin .admonition-kanban .admonition-col4>.admonition-content-holder>.admonition-content ol {	
+       margin:0;
+       break-inside: avoid;
+        }
+  body.style-options-for-admonition-plugin .admonition-col4 .admonition-content {	
+    overflow: visible ;
+}
+
+  body.style-options-for-admonition-plugin .admonition-col4 >.admonition-content-holder {
+    margin-top:0!important;
+    margin-bottom:0!important;
+   }
+   body.style-options-for-admonition-plugin .admonition-col4 p{
+  text-align: justify;
+  margin-top:0;
+  padding: 2px;
+  }
+  body.style-options-for-admonition-plugin .admonition-col4 p>img{
+    display: block;
+    width: 100%;
+    height: auto;
+    -webkit-transition: -webkit-transform .3s ease;
+    -moz-transition: -moz-transform .3s ease;
+    -ms-transition: -ms-transform .3s ease;
+    transition: transform .3s ease;
+    }
+
+    body.style-options-for-admonition-plugin .admonition-col4 p>img:hover{
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2)
+      }
+   
+  body.style-options-for-admonition-plugin .admonition-col4-parent .admonition-col4 .admonition > .admonition-title.no-title + .admonition-content-holder {
+    margin-top: 0;
+  }
+
+
 
 /*blank ad框全透明隐藏*/
 body.style-options-for-admonition-plugin .admonition-blank {
@@ -14912,8 +15062,19 @@ img[alt$="inlR"] {
   font-size: calc(var(--font-size-folder-and-file) + 0.15em);
 }
 /*小屏幕特别优化*/
+@media (max-width: 800pt) 
+and (min-width : 400px)
+{
+  body.style-options-for-admonition-plugin .admonition-kanban ul > li.task-list-item {
+    flex: 1 1 40%;
+  }
+}
+
 @media (max-width: 400pt)
 {
+  body.style-options-for-admonition-plugin .admonition-kanban ul > li.task-list-item {
+    flex: 1 1 60%;
+  }
   /*文章标题前的图标隐藏*/
   .is-mobile .workspace-leaf-content:not([data-type="graph"]) .view-header-icon {
     display: none;
