@@ -148,6 +148,28 @@ settings:
     min: 0
     max: 30
     step: 1
+  - 
+    id: brightness-4-bg
+    title: Brightness of Image
+    title.zh: 图片亮度
+    description: To adjust the brightness
+    description.zh: 调整背景壁纸亮度
+    type: variable-number-slider
+    default: 0.9
+    min: 0.3
+    max: 1.5
+    step: 0.1
+  - 
+    id: saturate-4-bg
+    title: Saturation of Image
+    title.zh: 图片饱和度
+    description: To adjust the saturation
+    description.zh: 调整背景壁纸饱和度
+    type: variable-number-slider
+    default: 1
+    min: 0
+    max: 2
+    step: 0.1
   -
     id: background-settings-workplace-theme-light
     title: Theme light
@@ -170,6 +192,9 @@ settings:
       - 
         label: Leaf
         value: background-settings-workplace-theme-light-leaf
+      - 
+        label: Custom
+        value: background-settings-workplace-theme-light-custom-option
   -
     id: background-settings-workplace-theme-light-custom
     title: Theme light (url)
@@ -178,7 +203,7 @@ settings:
     type: variable-text
     default: url("https://") 
   -
-    id: background-settings-workplace-theme-dark-none
+    id: background-settings-workplace-theme-dark
     title: Theme dark
     type: class-select
     allowEmpty: false
@@ -205,6 +230,9 @@ settings:
       - 
         label: Hyacinth macaw
         value: background-settings-workplace-theme-dark-hyacinth-macaw
+      - 
+        label: Custom
+        value: background-settings-workplace-theme-dark-custom-option
   -
     id: background-settings-workplace-theme-dark-custom
     title: Theme Dark (url)
@@ -1363,6 +1391,8 @@ settings:
   --background-settings-workplace-theme-light-custom: url("https://");
   --background-settings-workplace-theme-dark-custom: url("https://");
   --blur-depth: 10px;
+  --saturate-4-bg: 1;
+  --brightness-4-bg: 0.9;
 
   --fancy-hr-icon: '😀';
   --fancy-hr-rotate: 0deg;
@@ -1370,15 +1400,6 @@ settings:
   --line-height-main: 1.5;
   --letter-space-main: 1;
   --letter-space-code: 0;
-
-}
-
-body.background-settings-workplace-background-image.theme-light {
-  --theme-background: var(--background-settings-workplace-theme-light-custom) !important;
-}
-
-body.background-settings-workplace-background-image.theme-dark {
-  --theme-background: var(--background-settings-workplace-theme-dark-custom) !important;
 }
 
 body.font-family-change-to-default li,
@@ -14381,12 +14402,11 @@ body.disable-math-block .modal .modal-content .math.math-block{
 /* ========= Style Settings ========= */
 /* ================================== */
 .setting-item.setting-item-heading.style-settings-heading[data-level="2"],
-.style-settings-container[data-level="2"] {
-  padding-left: 20px;
-}
-
+.style-settings-container[data-level="2"],
 .setting-item.setting-item-heading.style-settings-heading[data-level="3"],
-.style-settings-container[data-level="3"] {
+.style-settings-container[data-level="3"],
+.setting-item.setting-item-heading.style-settings-heading[data-level="4"], 
+.style-settings-container[data-level="4"] {
   padding-left: 20px;
 }
 
@@ -14449,6 +14469,10 @@ body.translucent-setting-panel .vertical-tab-nav-item {
 
 .style-settings-container {
   padding-bottom: 5px !important;
+}
+
+.style-settings-container .setting-item-control select {
+  max-width: 330px;
 }
 
 /* ================================== */
@@ -14899,7 +14923,7 @@ img[alt$="inlR"] {
 }
 
 .is-mobile .workspace-leaf-content[data-type='file-explorer'] .nav-buttons-container {
-  margin: 0 0 10px 0;
+  margin: 0 0 5px 0;
 }
 
 .is-mobile .nav-action-button>svg {
@@ -15028,10 +15052,15 @@ img[alt$="inlR"] {
 
 .is-mobile .workspace-drawer-header-name-text {
   color: var(--text-accent);
+  font-weight: 600;
 }
 
 .is-mobile .workspace-drawer-active-tab-header {
-  margin: 10px 0;
+  margin: 5px 0;
+}
+
+.is-mobile .nav-action-button::before {
+  font-size: 1.5rem;
 }
 
 .is-mobile .workspace-drawer.mod-left {
@@ -17065,10 +17094,12 @@ body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-child
 
 /* General Nav Folder Children (this is the part that expands from each top level folder) */
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-children {
-  padding-left: 0px;
+  padding-left: 0;
+  margin-left: 0;
   border-top: var(--FoldText) 1px solid;
   border-radius: 0px 0px 5px 5px;
   padding-bottom: 12px;
+  border-left: 0px solid;
 }
 
 body.folder-style-change-options-colorful .nav-file-title {
@@ -17079,12 +17110,25 @@ body.folder-style-change-options-colorful .nav-file-title-content {
   color: var(--FoldText);
 }
 
-body.folder-style-change-options-colorful .nav-folder-children .nav-folder-children {
+/*
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder>.nav-folder-children {
   margin-left: 0;
   padding-left: 0;
   border-left: unset !important;
-  border-radius: 0px;
+  border-radius: 0;
   transition: all 400ms ease-in;
+}
+*/
+body.folder-style-change-options-colorful.is-mobile .nav-folder-title {
+  margin-bottom: 0;
+}
+
+body.folder-style-change-options-colorful .nav-folder-children .nav-folder-children {
+  border-left: 2px solid var(--text-muted);
+}
+
+body.folder-style-change-options-colorful.is-mobile .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-children {
+  padding-bottom: 5px;
 }
 
 /* active file increase font size and removes normal highlight marker */
@@ -17294,27 +17338,12 @@ body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-child
   background-color: var(--FoldZ);
 }
 
-/* Scrollbars eliminated */
+/* Scrollbars eliminated 
 body.folder-style-change-options-colorful .workspace-leaf-content[data-type='file-explorer'] ::-webkit-scrollbar {
   width: 0px;
   height: 0px;
 }
-
-/* Relationship lines for 2nd, 3rd, and 4th level folders */
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-children>.nav-folder>.nav-folder-children>.nav-file {
-  border-left: 2px solid var(--text-muted);
-  margin-left: 12px;
-}
-
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-children>.nav-folder>.nav-folder-children>.nav-folder {
-  border-left: 2px solid var(--text-muted);
-  margin-left: 12px;
-}
-
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-children>.nav-folder>.nav-folder-children>.nav-folder .nav-folder-children .nav-folder {
-  border-left: 2px solid var(--text-muted);
-  margin-left: 12px;
-}
+*/
 
 body.folder-style-change-options-colorful .nav-folder-title:hover {
   background-color: var(--background-secondary-alt) !important;
@@ -17540,13 +17569,13 @@ body.background-settings-workplace-style-high-transparency .side-dock-ribbon-act
 body.background-settings-workplace-background-image.theme-light .workspace::before {
   background-image: var(--theme-background);
   background-size: cover;
-  filter: blur(var(--blur-depth));
+  filter: blur(var(--blur-depth)) brightness(var(--brightness-4-bg)) saturate(var(--saturate-4-bg));
 }
 
 body.background-settings-workplace-background-image.theme-dark .workspace::before {
   background-image: var(--theme-background);
   background-size: cover;
-  filter: blur(var(--blur-depth)) brightness(0.9);
+  filter: blur(var(--blur-depth)) brightness(var(--brightness-4-bg)) saturate(var(--saturate-4-bg));
 }
 
 body.background-settings-workplace-background-image .workspace::before {
@@ -17587,6 +17616,7 @@ body.background-settings-workplace-background-image.theme-dark .titlebar::before
   right: -15px;
   bottom: 0px;
   left: -15px;
+  filter: brightness(0.7);
 }
 
 body.background-settings-workplace-background-image.theme-light {
@@ -17692,6 +17722,15 @@ body.layout-style-options-default.background-settings-workplace-background-image
 body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-header.is-before-active .workspace-tab-header-inner {
   background-color: transparent;
 }
+
+body.background-settings-workplace-background-image.background-settings-workplace-theme-light-custom-option.theme-light {
+  --theme-background: var(--background-settings-workplace-theme-light-custom) ;
+}
+
+body.background-settings-workplace-background-image.background-settings-workplace-theme-dark-custom-option.theme-dark {
+  --theme-background: var(--background-settings-workplace-theme-dark-custom) ;
+}
+
 
 /*rectangle*/
 body.layout-style-options-rectangle .workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
