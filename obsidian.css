@@ -1062,8 +1062,8 @@ settings:
     default: "'  '"
   -
     id: style-options-for-other-plugins
-    title: 3. For Other Plugins (Coming soon)
-    title.zh: 3. 其他插件样式
+    title: 3. For Plugins (Coming soon)
+    title.zh: 3. 插件样式
     type: heading
     level: 1
     collapsed: true
@@ -1115,14 +1115,14 @@ settings:
     default-dark: '#1111118f'
   -
     id: style-options-for-kanban-plugin-header
-    title: 3.3 Kanban (Coming soon)
-    title.zh: 3.3 其他插件样式
+    title: 3.3 Kanban
+    title.zh: 3.3 Kanban
     type: heading
     level: 2
     collapsed: true
   -
     id: style-options-for-kanban-plugin-static
-    title: Static (Coming soon)
+    title: Static
     type: class-select
     allowEmpty: false
     default: style-options-for-kanban-plugin-static-default
@@ -1131,11 +1131,14 @@ settings:
         label: Default
         value: style-options-for-kanban-plugin-static-default
       - 
-        label: Style 1
-        value: style-options-for-kanban-plugin-static-style-one
+        label: All color (instead of images in light mode)
+        value: style-options-for-kanban-plugin-static-all-color
       - 
-        label: Style 2
-        value: style-options-for-kanban-plugin-static-style-two
+        label: All image-1 
+        value: style-options-for-kanban-plugin-static-all-image-one
+      - 
+        label: All image-2 abstract
+        value: style-options-for-kanban-plugin-static-all-image-two
   -
     id: style-options-for-kanban-plugin-dynamic
     title: Dynamic (Coming soon)
@@ -12403,6 +12406,8 @@ pre.frontmatter.language-yaml::before {
 /* ================================== */
 .kanban-plugin__lane ::-webkit-scrollbar-thumb:vertical {
   background-color: var(--scrollbar-thumb);
+  background-clip: padding-box;
+  border: 5px solid transparent !important;
 }
 
 .kanban-plugin {
@@ -12561,6 +12566,179 @@ button.kanban-plugin__new-item-button:hover {
 .theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+0) {
   background: linear-gradient(to bottom, var(--kanban-color-7) 60%, transparent);
 }
+
+body.style-options-for-kanban-plugin-static-all-color.theme-light {
+  --kanban-color-1: #1d87ffc7;
+  --kanban-color-2: #23cacab4;
+  --kanban-color-3: #1cb54f9f;
+  --kanban-color-4: #c5c72d9a;
+  --kanban-color-5: #bb722d88;
+  --kanban-color-6: #d12e2e7c;
+  --kanban-color-7: #8f36cb88;
+}
+
+body.style-options-for-kanban-plugin-static-all-color.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+1) {
+  background: linear-gradient(to bottom, var(--kanban-color-1) 30%,  transparent);
+}
+
+body.style-options-for-kanban-plugin-static-all-color.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+2) {
+  background: linear-gradient(to bottom, var(--kanban-color-2) 30%,  transparent);
+}
+
+body.style-options-for-kanban-plugin-static-all-color.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+3) {
+  background: linear-gradient(to bottom, var(--kanban-color-3) 30%,  transparent);
+}
+
+body.style-options-for-kanban-plugin-static-all-color.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+4) {
+  background: linear-gradient(to bottom, var(--kanban-color-4) 30%,  transparent);
+}
+
+body.style-options-for-kanban-plugin-static-all-color.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+5) {
+  background: linear-gradient(to bottom, var(--kanban-color-5) 30%,  transparent);
+}
+
+body.style-options-for-kanban-plugin-static-all-color.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+6) {
+  background: linear-gradient(to bottom, var(--kanban-color-6) 30%,  transparent);
+}
+
+body.style-options-for-kanban-plugin-static-all-color.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+0) {
+  background: linear-gradient(to bottom, var(--kanban-color-7) 30%,  transparent);
+}
+
+body.style-options-for-kanban-plugin-static-all-color .kanban-plugin__item-title-wrapper {
+  background: transparent !important;
+}
+
+/*=========*/
+body.style-options-for-kanban-plugin-static-all-image-one.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+1) {
+  background-image: url("https://images.unsplash.com/photo-1486520299386-6d106b22014b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-one.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+2) {
+  background-image: url("https://images.unsplash.com/photo-1528919699453-27d2dcfbdf06?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=753&q=80");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-one.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+3) {
+  background-image: url("https://images.unsplash.com/photo-1528919880398-4af90c12ac1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=894&q=80");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-one.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+4) {
+  background-image: url("https://images.unsplash.com/photo-1538947151057-dfe933d688d1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-one.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+5) {
+  background-image: url("https://images.unsplash.com/photo-1565942443747-031188e6e56c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-one.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+6) {
+  background-image: url("https://images.unsplash.com/photo-1549279866-41b2b21a0de4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=747&q=80");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-one.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+0) {
+  background-image: url("https://images.unsplash.com/photo-1536147116438-62679a5e01f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80");
+}
+
+/*---------*/
+body.style-options-for-kanban-plugin-static-all-image-one.theme-dark .kanban-plugin__lane-wrapper {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body.style-options-for-kanban-plugin-static-all-image-one.theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+1) {
+  background-image: url("https://images.unsplash.com/photo-1595520519880-a86c48ea536c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZGFyayUyMGJsdWV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-one.theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+2) {
+  background-image: url("https://images.unsplash.com/photo-1593959734793-6e92d102da1e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZGFyayUyMGJsdWV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-one.theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+3) {
+  background-image: url("https://images.unsplash.com/photo-1593270573246-2dca2f2c1c43?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZGFyayUyMGJsdWV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-one.theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+4) {
+  background-image: url("https://images.unsplash.com/photo-1604838656896-171d9d737cbe?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODd8fGRhcmslMjBibHVlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-one.theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+5) {
+  background-image: url("https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODZ8fGRhcmslMjBibHVlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-one.theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+6) {
+  background-image: url("https://images.unsplash.com/photo-1516249181155-bbf89a130f77?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTExfHxkYXJrJTIwYmx1ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-one.theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+0) {
+  background-image: url("https://images.unsplash.com/photo-1578089789664-f256b7c4e07f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTM2fHxkYXJrJTIwYmx1ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
+/* Kanban background images v0.2, special edition abstract, @Solen Feyissa https://unsplash.com/@solenfeyissa and @Pawel Czerwinski https://unsplash.com/@pawel_czerwinski, for Blue Topaz */
+
+body.style-options-for-kanban-plugin-static-all-image-two.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+1) {
+  background-image: url("https://images.unsplash.com/photo-1601682633973-a76aa17a7844?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-two.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+2) {
+  background-image: url("https://images.unsplash.com/photo-1601436155225-2633c7f3818b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-two.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+3) {
+  background-image: url("https://images.unsplash.com/photo-1564951434112-64d74cc2a2d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE4fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-two.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+4) {
+  background-image: url("https://images.unsplash.com/photo-1601436155223-9b6f9c287cd1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-two.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+5) {
+  background-image: url("https://images.unsplash.com/photo-1600456011949-d2fc441999b4?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NTAyfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-two.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+6) {
+  background-image: url("https://images.unsplash.com/photo-1600226082873-02b7eb2b7c23?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NTA2fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-two.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+0) {
+  background-image: url("https://images.unsplash.com/photo-1600538622150-d5a24464bc47?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NTAwfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
+/*---------*/
+body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plugin__lane-wrapper {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plugin__lane-wrapper:nth-child(8n+1) {
+  background-image: url("https://images.unsplash.com/photo-1628432436663-9e588806592a?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MjR8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plugin__lane-wrapper:nth-child(8n+2) {
+  background-image: url("https://images.unsplash.com/photo-1621791554791-cb212a4a55a6?ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plugin__lane-wrapper:nth-child(8n+3) {
+  background-image: url("https://images.unsplash.com/photo-1630182044473-34dd20c6dd8c?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8OHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plugin__lane-wrapper:nth-child(8n+4) {
+  background-image: url("https://images.unsplash.com/photo-1622405538251-e8c48fdc40db?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTA2fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plugin__lane-wrapper:nth-child(8n+5) {
+  background-image: url("https://images.unsplash.com/photo-1628432337777-bdc12ebda14e?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjh8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plugin__lane-wrapper:nth-child(8n+6) {
+  background-image: url("https://images.unsplash.com/photo-1620503266076-5fd971fdd572?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTQxfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
+body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plugin__lane-wrapper:nth-child(8n+7) {
+  background-image: url("https://images.unsplash.com/photo-1625425325558-d83335f635d8?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Njd8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
+  body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plugin__lane-wrapper:nth-child(8n+0) {
+  background-image: url("https://images.unsplash.com/photo-1620503395484-07e2a7ea3f8b?ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
 
 /* =========================================*/
 /* =========tapes pins and stickies=========*/
