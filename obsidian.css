@@ -789,7 +789,6 @@ settings:
     id: bt-status-off
     title: Reduced Status Bar
     title.zh: 使用半宽状态栏
-    description: Use  half width status bar
     type: class-toggle
     default: false
   -
@@ -10058,7 +10057,8 @@ pre[class*='language-'] {
 }
 
 .theme-dark .token.selector,
-.theme-dark .token.tag {
+.theme-dark .token.tag,
+.theme-dark .cm-s-obsidian span.cm-variable-2 {
   color: var(--red) !important;
 }
 
@@ -10088,7 +10088,8 @@ pre[class*='language-'] {
   color: var(--blue) !important;
 }
 
-.token.number {
+.token.number,
+.markdown-source-view.cm-s-obsidian .cm-number {
   color: var(--green) !important;
 }
 
@@ -10104,7 +10105,8 @@ pre[class*='language-'] {
 .token.entity,
 .token.url,
 .language-css .token.string,
-.style .token.string {
+.style .token.string,
+.markdown-source-view.cm-s-obsidian .cm-string {
   color: var(--aqua) !important;
 }
 
@@ -10113,15 +10115,18 @@ pre[class*='language-'] {
   color: var(--purple) !important;
 }
 
-.theme-dark .token.function {
+.theme-dark .token.function,
+.theme-dark .markdown-source-view.cm-s-obsidian .cm-variable {
   color: var(--light-yellow) !important;
 }
 
-.theme-light .token.function {
+.theme-light .token.function,
+.theme-light .markdown-source-view.cm-s-obsidian .cm-variable {
   color: var(--red) !important;
 }
 
-.token.macro.property {
+.token.macro.property,
+.markdown-source-view.cm-s-obsidian .cm-hmd-codeblock.cm-property {
   color: var(--blue) !important;
 }
 
@@ -10135,8 +10140,14 @@ pre[class*='language-'] {
 }
 
 .theme-light .token.regex,
-.theme-light .token.variable {
+.theme-light .token.variable,
+.theme-light .markdown-source-view.cm-s-obsidian .cm-variable-2 {
   color: var(--light-purple) !important;
+}
+
+
+.theme-light .markdown-source-view.cm-s-obsidian .cm-variable-3 {
+  color: var(--darkblue) !important;
 }
 
 .theme-dark .token.important {
@@ -13234,7 +13245,8 @@ aside>h2 {
 /* ===== editor syntax highlight ==== */
 /* ================================== */
 .cm-s-obsidian .cm-hmd-frontmatter.cm-qualifier,
-.cm-s-obsidian .cm-math.cm-qualifier {
+.cm-s-obsidian .cm-math.cm-qualifier,
+.cm-s-obsidian .cm-qualifier {
   color: var(--yellow) !important;
 }
 
@@ -15413,6 +15425,10 @@ body.circular-checkbox .markdown-source-view.is-live-preview .task-list-item-che
 
 .markdown-source-view.is-live-preview .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line {
   letter-spacing: calc(var(--letter-space-code) * 0.02em);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-end-bg {
+  border-bottom: none;
 }
 
 /* ============ */
