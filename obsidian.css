@@ -1160,7 +1160,7 @@ settings:
         value: style-options-for-kanban-plugin-static-little-color
   -
     id: style-options-for-kanban-plugin-dynamic
-    title: Dynamic (Coming soon)
+    title: Dynamic
     type: class-select
     allowEmpty: false
     default: style-options-for-kanban-plugin-dynamic-default
