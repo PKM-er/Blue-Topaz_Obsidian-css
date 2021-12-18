@@ -1139,6 +1139,9 @@ settings:
       - 
         label: All image-2 abstract
         value: style-options-for-kanban-plugin-static-all-image-two
+      - 
+        label: Plain
+        value: style-options-for-kanban-plugin-static-plain
   -
     id: style-options-for-kanban-plugin-dynamic
     title: Dynamic (Coming soon)
@@ -12735,10 +12738,25 @@ body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plu
   background-image: url("https://images.unsplash.com/photo-1625425325558-d83335f635d8?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Njd8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
 }
 
-  body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plugin__lane-wrapper:nth-child(8n+0) {
+body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plugin__lane-wrapper:nth-child(8n+0) {
   background-image: url("https://images.unsplash.com/photo-1620503395484-07e2a7ea3f8b?ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
 }
 
+body.style-options-for-kanban-plugin-static-plain .kanban-plugin__lane-wrapper {
+  background: unset !important;
+}
+
+body.style-options-for-kanban-plugin-static-plain .kanban-plugin__lane {
+  border: 2px solid var(--background-modifier-border) !important;
+}
+
+body.style-options-for-kanban-plugin-static-plain .kanban-plugin__lane-header-wrapper {
+  background: var(--background-transparent-black-or-white-2) !important;
+}
+
+body.style-options-for-kanban-plugin-static-plain.theme-dark .kanban-plugin__lane-header-wrapper {
+  padding: 10px 11px !important;
+}
 
 /* =========================================*/
 /* =========tapes pins and stickies=========*/
