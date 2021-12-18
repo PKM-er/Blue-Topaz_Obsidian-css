@@ -1062,21 +1062,44 @@ settings:
     default: "'  '"
   -
     id: style-options-for-other-plugins
-    title: 3. For Plugins (Coming soon)
+    title: 3. For Plugins
     title.zh: 3. 插件样式
     type: heading
     level: 1
     collapsed: true
   -
+    id: style-options-for-admonition-plugin-header
+    title: 3.1 Admonition Style
+    title.zh: 3.1 Admonition插件样式
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: admonition-bg-color
+    title: Admontion codebock background
+    title.zh: 预览状态Admonition代码块背景色
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#ffffffa6'
+    default-dark: '#1111118f'  
+  -
+    id: style-options-for-admonition-plugin
+    title: Admonition special style support
+    title.zh: 是否开启Admonition特别样式支持
+    type: class-toggle
+    default: false
+    description : 目前支持ad类型：blank 全透明框🔸def definition🔸thm theorem🔸lem lemma🔸cor corollary🔸pro proposition 🔸hibox  自动隐藏框🔸col2 col3 col4内容分多栏🔸kanban 伪看板❗使用方法❗下面以thm类型为例，在admonition插件的设置页面中，类型填 thm，标题填 定理，图标选择hand-point-right，颜色自己选比如浅绿色，添加成功后，在正文中使用代码块```ad-thm 即可激活。其他类型以此类推。  
+  -
     id: style-options-for-calendar-plugin-header
-    title: 3.1 Calendar
-    title.zh: 3.1 日历插件样式
+    title: 3.2 Calendar
+    title.zh: 3.2 日历插件样式
     type: heading
     level: 2
     collapsed: true
   -
     id: style-options-for-calendar-plugin
-    title: Calendar (Coming soon)
+    title: Calendar
     type: class-select
     allowEmpty: false
     default: style-options-for-calendar-plugin-default
@@ -1091,32 +1114,22 @@ settings:
         label: Style 2
         value: style-options-for-calendar-plugin-style-two
   -
-    id: style-options-for-admonition-plugin-header
-    title: 3.2 Admonition Style
-    title.zh: 3.2 Admonition插件样式
+    id: rainbow-checklist-folder
+    title: 3.3 Checklist Plugin
+    title.zh: 3.3 Checklist插件样式
     type: heading
     level: 2
     collapsed: true
   -
-    id: style-options-for-admonition-plugin
-    title: Admonition special style support
-    title.zh: 是否开启Admonition特别样式支持
+    id: rainbow-checklist
+    title: Rainbow Checklist
+    title.zh: 彩虹色条目
     type: class-toggle
     default: false
-    description : 目前支持ad类型：blank 全透明框🔸def definition🔸thm theorem🔸lem lemma🔸cor corollary🔸pro proposition 🔸hibox  自动隐藏框🔸col2 col3 col4内容分多栏🔸kanban 伪看板❗使用方法❗下面以thm类型为例，在admonition插件的设置页面中，类型填 thm，标题填 定理，图标选择hand-point-right，颜色自己选比如浅绿色，添加成功后，在正文中使用代码块```ad-thm 即可激活。其他类型以此类推。  
-  -
-    id: admonition-bg-color
-    title: Admontion codebock background
-    title.zh: 预览状态Admonition代码块背景色
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#ffffffa6'
-    default-dark: '#1111118f'
   -
     id: style-options-for-kanban-plugin-header
-    title: 3.3 Kanban
-    title.zh: 3.3 Kanban
+    title: 3.4 Kanban
+    title.zh: 3.4 Kanban
     type: heading
     level: 2
     collapsed: true
@@ -1142,6 +1155,9 @@ settings:
       - 
         label: Plain
         value: style-options-for-kanban-plugin-static-plain
+      -
+        label: Little color
+        value: style-options-for-kanban-plugin-static-little-color
   -
     id: style-options-for-kanban-plugin-dynamic
     title: Dynamic (Coming soon)
@@ -1150,27 +1166,17 @@ settings:
     default: style-options-for-kanban-plugin-dynamic-default
     options:
       - 
-        label: Default
+        label: None
         value: style-options-for-kanban-plugin-dynamic-default
       - 
-        label: Style 1
-        value: style-options-for-kanban-plugin-dynamic-one
+        label: Neon-1
+        value: style-options-for-kanban-plugin-dynamic-neon-one
       - 
-        label: Style 2
-        value: style-options-for-kanban-plugin-dynamic-two
-  -
-    id: rainbow-checklist-folder
-    title: 3.2 Checklist Plugin
-    title.zh: 3.2 Checklist插件样式
-    type: heading
-    level: 2
-    collapsed: true
-  -
-    id: rainbow-checklist
-    title: Rainbow Checklist
-    title.zh: 彩虹色条目
-    type: class-toggle
-    default: false
+        label: Neon-2
+        value: style-options-for-kanban-plugin-dynamic-neon-two
+      - 
+        label: Neon-3
+        value: style-options-for-kanban-plugin-dynamic-neon-three
   -
     id: build-in-style-folder
     title: 4. Built-in Style Intro
@@ -12417,6 +12423,14 @@ pre.frontmatter.language-yaml::before {
   background-color: var(--background-secondary-bg-4-bt) !important;
 }
 
+.theme-dark .kanban-plugin {
+  --kanban-shadow: #0065d8cc;
+}
+
+.theme-light .kanban-plugin {
+  --kanban-shadow: #91bae8;
+}
+
 .kanban-plugin__item-title ol>li,
 .kanban-plugin__item-title ul>li:not(.task-list-item) {
   border-left: none;
@@ -12571,41 +12585,41 @@ button.kanban-plugin__new-item-button:hover {
 }
 
 body.style-options-for-kanban-plugin-static-all-color.theme-light {
-  --kanban-color-1: #1d87ffc7;
-  --kanban-color-2: #23cacab4;
-  --kanban-color-3: #1cb54f9f;
-  --kanban-color-4: #c5c72d9a;
-  --kanban-color-5: #bb722d88;
-  --kanban-color-6: #d12e2e7c;
-  --kanban-color-7: #8f36cb88;
+  --kanban-color-1: #63a1e970;
+  --kanban-color-2: #63e6e970;
+  --kanban-color-3: #63e98270;
+  --kanban-color-4: #dee96370;
+  --kanban-color-5: #e8c89170;
+  --kanban-color-6: #e8919170;
+  --kanban-color-7: #bd91e870;
 }
 
 body.style-options-for-kanban-plugin-static-all-color.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+1) {
-  background: linear-gradient(to bottom, var(--kanban-color-1) 30%,  transparent);
+  background: linear-gradient(to bottom, var(--kanban-color-1) 30%,  transparent) !important;
 }
 
 body.style-options-for-kanban-plugin-static-all-color.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+2) {
-  background: linear-gradient(to bottom, var(--kanban-color-2) 30%,  transparent);
+  background: linear-gradient(to bottom, var(--kanban-color-2) 30%,  transparent) !important;
 }
 
 body.style-options-for-kanban-plugin-static-all-color.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+3) {
-  background: linear-gradient(to bottom, var(--kanban-color-3) 30%,  transparent);
+  background: linear-gradient(to bottom, var(--kanban-color-3) 30%,  transparent) !important;
 }
 
 body.style-options-for-kanban-plugin-static-all-color.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+4) {
-  background: linear-gradient(to bottom, var(--kanban-color-4) 30%,  transparent);
+  background: linear-gradient(to bottom, var(--kanban-color-4) 30%,  transparent) !important;
 }
 
 body.style-options-for-kanban-plugin-static-all-color.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+5) {
-  background: linear-gradient(to bottom, var(--kanban-color-5) 30%,  transparent);
+  background: linear-gradient(to bottom, var(--kanban-color-5) 30%,  transparent) !important;
 }
 
 body.style-options-for-kanban-plugin-static-all-color.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+6) {
-  background: linear-gradient(to bottom, var(--kanban-color-6) 30%,  transparent);
+  background: linear-gradient(to bottom, var(--kanban-color-6) 30%,  transparent) !important;
 }
 
 body.style-options-for-kanban-plugin-static-all-color.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+0) {
-  background: linear-gradient(to bottom, var(--kanban-color-7) 30%,  transparent);
+  background: linear-gradient(to bottom, var(--kanban-color-7) 30%,  transparent) !important;
 }
 
 body.style-options-for-kanban-plugin-static-all-color .kanban-plugin__item-title-wrapper {
@@ -12754,8 +12768,365 @@ body.style-options-for-kanban-plugin-static-plain .kanban-plugin__lane-header-wr
   background: var(--background-transparent-black-or-white-2) !important;
 }
 
-body.style-options-for-kanban-plugin-static-plain.theme-dark .kanban-plugin__lane-header-wrapper {
+body.style-options-for-kanban-plugin-static-plain.theme-dark .kanban-plugin__lane-header-wrapper,
+body.style-options-for-kanban-plugin-static-little-color.theme-dark .kanban-plugin__lane-header-wrapper {
   padding: 10px 11px !important;
+}
+
+body.style-options-for-kanban-plugin-static-plain .kanban-plugin__item-button-wrapper {
+  background: transparent !important;
+}
+
+body.style-options-for-kanban-plugin-static-little-color.theme-light {
+  --kanban-color-1: #91bae870;
+  --kanban-color-2: #91e8e070;
+  --kanban-color-3: #91e89a70;
+  --kanban-color-4: #e0e89170;
+  --kanban-color-5: #e8c89170;
+  --kanban-color-6: #e8919170;
+  --kanban-color-7: #bd91e870;
+}
+
+body.style-options-for-kanban-plugin-static-little-color.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin__lane,
+body.style-options-for-kanban-plugin-static-plain.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin__lane,
+body.style-options-for-kanban-plugin-static-little-color.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane,
+body.style-options-for-kanban-plugin-static-plain.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane,
+body.style-options-for-kanban-plugin-static-little-color.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane,
+body.style-options-for-kanban-plugin-static-plain.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane {
+  border: none !important;
+}
+
+body.style-options-for-kanban-plugin-static-little-color .kanban-plugin__item,
+body.style-options-for-kanban-plugin-static-little-color .kanban-plugin__lane {
+  border: 1px solid var(--background-modifier-border) !important
+}
+
+body.style-options-for-kanban-plugin-static-little-color  .kanban-plugin__lane-wrapper {
+  background-image: unset !important;
+  background-color: transparent !important;
+}
+
+body.style-options-for-kanban-plugin-static-little-color .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-header-wrapper {
+  background-color: var(--kanban-color-1) !important;
+}
+
+body.style-options-for-kanban-plugin-static-little-color .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-header-wrapper  {
+  background-color: var(--kanban-color-2) !important;
+}
+
+body.style-options-for-kanban-plugin-static-little-color .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-header-wrapper  {
+  background-color: var(--kanban-color-3) !important;
+}
+
+body.style-options-for-kanban-plugin-static-little-color .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-header-wrapper {
+  background-color: var(--kanban-color-4) !important;
+}
+
+body.style-options-for-kanban-plugin-static-little-color .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-header-wrapper  {
+  background-color: var(--kanban-color-5) !important;
+}
+
+body.style-options-for-kanban-plugin-static-little-color .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-header-wrapper  {
+  background-color: var(--kanban-color-6) !important;
+}
+
+body.style-options-for-kanban-plugin-static-little-color .kanban-plugin__lane-wrapper:nth-child(7n) .kanban-plugin__lane-header-wrapper  {
+  background-color: var(--kanban-color-7) !important;
+}
+
+/* Kanban Neon, v0.5, for Blue Topaz, modified from https://codepen.io/Chokcoco/pen/BaQzBEG by @Chokcoco */
+body.style-options-for-kanban-plugin-dynamic-neon-one.theme-dark,
+body.style-options-for-kanban-plugin-dynamic-neon-two.theme-dark,
+body.style-options-for-kanban-plugin-dynamic-neon-three.theme-dark {
+  --background-transparent-black-or-white-1: #232323c2;
+  --background-transparent-black-or-white-2: #0f0f0f69;
+  --background-transparent-black-or-white-3: #2222224d;
+  --background-transparent-blue: #53a3ff41;
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-one.theme-light,
+body.style-options-for-kanban-plugin-dynamic-neon-two.theme-light,
+body.style-options-for-kanban-plugin-dynamic-neon-three.theme-light {
+  --background-transparent-black-or-white-1: #ffffffb0;
+  --background-transparent-black-or-white-2: #eeeeee88;
+  --background-transparent-black-or-white-3: #f5f5f583;
+  --background-transparent-blue: #5eb6ff44;
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin,
+body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin,
+body.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin {
+  background-color: var(--background-secondary-alt-bg-4-bt) !important;
+  display: flex;
+  height: 100vh;
+  background: #000;
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-one.theme-dark .kanban-plugin__lane-header-wrapper,
+body.style-options-for-kanban-plugin-dynamic-neon-two.theme-dark .kanban-plugin__lane-header-wrapper,
+body.style-options-for-kanban-plugin-dynamic-neon-three.theme-dark .kanban-plugin__lane-header-wrapper {
+  background: var(--background-transparent-blue) !important;
+  padding: 5px 11px!important;
+  border-radius: 6px 6px 0 0;
+  margin-bottom: 5px !important;
+  z-index: 100 !important;
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane-wrapper:nth-child(n) {
+  background: unset !important;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .3s;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(0, 0, 0, .4));
+}
+
+@keyframes rotate {
+100% {
+  transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane-wrapper:nth-child(n)::before,
+body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane-wrapper:nth-child(n)::before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 250%;
+  height: 300%;
+  background-color: var(--background-secondary-alt) !important;
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  background-position: 0 0;
+  background-image: conic-gradient(var(--kanban-shadow), var(--kanban-shadow));
+  animation: rotate 2s linear infinite;
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane-wrapper:nth-child(n)::after,
+body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane-wrapper:nth-child(n)::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 2px;
+  top: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  background-color: var(--background-secondary-alt) !important;
+  border-radius: 10px;
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane-wrapper:nth-child(n) {
+  background: unset !important;
+	position: relative;
+	z-index: 0;
+	border-radius: 10px;
+	overflow: hidden;
+	cursor: pointer;
+	transition: .3s;
+  box-shadow: 0px 0px 5px 1px var(--kanban-shadow);
+}
+
+@keyframes rotate {
+100% {
+  transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane-wrapper:nth-child(n):hover
+body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane-wrapper:nth-child(n):hover {
+  box-shadow: 0 0 5px var(--kanban-shadow), 0 0 25px var(--kanban-shadow);
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane-wrapper:nth-child(n):hover::after,
+body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane-wrapper:nth-child(n):hover::before,
+body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane-wrapper:nth-child(n):hover::after,
+body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane-wrapper:nth-child(n):hover::before {
+  transition: .3s;
+  background: linear-gradient(to bottom, var(--kanban-shadow) 30%,  transparent) !important;
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane-wrapper:nth-child(7n+2),
+body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane-wrapper:nth-child(7n+2) {
+  filter: hue-rotate(50deg);
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane-wrapper:nth-child(7n+3),
+body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane-wrapper:nth-child(7n+3) {
+  filter: hue-rotate(140deg);
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane-wrapper:nth-child(7n+4),
+body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane-wrapper:nth-child(7n+4) {
+  filter: hue-rotate(180deg);
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane-wrapper:nth-child(7n+5),
+body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane-wrapper:nth-child(7n+5) {
+  filter: hue-rotate(220deg);
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane-wrapper:nth-child(7n+6),
+body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane-wrapper:nth-child(7n+6) {
+  filter: hue-rotate(280deg);
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane-wrapper:nth-child(7n)
+body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane-wrapper:nth-child(7n) {
+  filter: hue-rotate(330deg);
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin__lane-wrapper:nth-child(n) {
+  background: unset !important;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .3s;
+  animation: huerotate-1 6s infinite linear;
+  filter: hue-rotate(360deg);
+}
+
+@keyframes huerotate-1 {
+  0% {
+      filter: hue-rotate(0deg);
+  }
+  100% {
+      filter: hue-rorate(360deg);
+  }
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin__lane-wrapper:nth-child(n)::before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 250%;
+  height: 300%;
+  background-color: var(--background-secondary-alt) !important;
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  background-position: 0 0;
+  background-image: conic-gradient(var(--kanban-shadow), var(--kanban-shadow));
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+100% {
+  transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin__lane-wrapper:nth-child(n)::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 2px;
+  top: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  background-color: var(--background-secondary-alt) !important;
+  border-radius: 10px;
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin__lane-wrapper:nth-child(n):hover {
+  box-shadow: 0 0 5px var(--kanban-shadow), 0 0 25px var(--kanban-shadow);
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin__lane-wrapper:nth-child(n):hover::after,
+body.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin__lane-wrapper:nth-child(n):hover::before {
+  transition: .3s;
+  background: var(--kanban-shadow);
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin__lane-wrapper:nth-child(7n+2) {
+  animation: huerotate-2 6s infinite linear;
+  filter: hue-rotate(410deg);
+}
+
+@keyframes huerotate-2 {
+  0% {
+      filter: hue-rotate(50deg);
+  }
+  100% {
+      filter: hue-rorate(410deg);
+  }
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin__lane-wrapper:nth-child(7n+3) {
+  animation: huerotate-3 6s infinite linear;
+  filter: hue-rotate(500deg);
+}
+
+@keyframes huerotate-3 {
+  0% {
+      filter: hue-rotate(140deg);
+  }
+  100% {
+      filter: hue-rorate(500deg);
+  }
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin__lane-wrapper:nth-child(7n+4) {
+filter: hue-rotate(540deg);
+  animation: huerotate-4 6s infinite linear;
+}
+
+@keyframes huerotate-4 {
+  0% {
+      filter: hue-rotate(180deg);
+  }
+  100% {
+      filter: hue-rorate(540deg);
+  }
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin__lane-wrapper:nth-child(7n+5) {
+filter: hue-rotate(580deg);
+  animation: huerotate-5 6s infinite linear;
+}
+
+@keyframes huerotate-5 {
+  0% {
+      filter: hue-rotate(220deg);
+  }
+  100% {
+      filter: hue-rorate(580deg);
+  }
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin__lane-wrapper:nth-child(7n+6) {
+filter: hue-rotate(640deg);
+  animation: huerotate-6 6s infinite linear;
+}
+
+@keyframes huerotate-6 {
+  0% {
+      filter: hue-rotate(280deg);
+  }
+  100% {
+      filter: hue-rorate(640deg);
+  }
+}
+
+body.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin__lane-wrapper:nth-child(7n+0) {
+filter: hue-rotate(690deg);
+  animation: huerotate-7 6s infinite linear;
+}
+
+@keyframes huerotate-7 {
+  0% {
+      filter: hue-rotate(330deg);
+  }
+  100% {
+      filter: hue-rorate(690deg);
+  }
 }
 
 /* =========================================*/
