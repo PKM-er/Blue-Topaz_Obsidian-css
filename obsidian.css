@@ -7157,7 +7157,7 @@ a.tag {
 
 .cm-s-obsidian span.cm-hashtag-begin {
   background-color:var(--color-tag-edit);
-  color: var(--tag-text);
+  color: var(--tag-text) !important;
   border-top-left-radius: var(--radius-l);
   border-bottom-left-radius: var(--radius-l);
   border-right: none;
