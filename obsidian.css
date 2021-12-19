@@ -1060,6 +1060,19 @@ settings:
     description.zh: 保留引号
     type: variable-text
     default: "'  '"
+  -   
+    id: table-styles
+    title: 2.3.7 Table
+    title.zh: 2.3.7 表格
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: no-wrapped-table
+    title: No Wrap in Tables
+    title.zh: 表格不换行
+    type: class-toggle
+    default: false
   -
     id: style-options-for-other-plugins
     title: 3. For Plugins
@@ -1093,7 +1106,7 @@ settings:
   -
     id: style-options-for-calendar-plugin-header
     title: 3.2 Calendar
-    title.zh: 3.2 日历插件样式
+    title.zh: 3.2 Calendar插件样式
     type: heading
     level: 2
     collapsed: true
@@ -7994,7 +8007,7 @@ body.circular-checkbox .markdown-preview-view .task-list-item-checkbox:checked {
   background-color: var(--interactive-accent);
 }
 
-body.circular-checkbox .markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="x"]>input.task-list-item-checkbox:checked:hover {
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="x"]>input.task-list-item-checkbox:checked:hover {
   background-color: var(--red) !important;
 }
 
@@ -9641,12 +9654,30 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   margin-left: 0px !important;
 }
 
-/*table from https://snippets.cacher.io/snippet/018387c872dc39277996 by eluotao*/
 .markdown-preview-section table:not(.dataview.table-view-table) {
   width: 100%;
   border-collapse: collapse;
   overflow: hidden;
   margin-top: 20px;
+  resize: both !important;
+}
+
+/*modified from https://codepen.io/brettdewoody/pen/oBjbbB */
+body.no-wrapped-table table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+body.no-wrapped-table th, 
+body.no-wrapped-table td {
+  white-space: nowrap;
+  overflow-x: auto;
+  text-overflow: ellipsis;
+}
+
+body.no-wrapped-table th:hover,
+body.no-wrapped-table td:hover {
+  text-overflow: clip;
 }
 
 .markdown-preview-view table tbody>tr:nth-child(odd) {
