@@ -18574,3 +18574,8 @@ cssclass: matrix
 }
 
 /*-------- Eisenhower Matrix end--- */
+
+.workspace-tab-header.is-active {
+  stroke-width: 4px !important;
+  color: var(--theme-color) !important;
+}
