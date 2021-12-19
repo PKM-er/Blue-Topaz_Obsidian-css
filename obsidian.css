@@ -1062,14 +1062,14 @@ settings:
     default: "'  '"
   -   
     id: table-styles
-    title: 2.3.7 Table
-    title.zh: 2.3.7 表格
+    title: 2.3.8 Table
+    title.zh: 2.3.8 表格
     type: heading
     level: 3
     collapsed: true
   -
     id: no-wrapped-table
-    title: No Wrap in Tables
+    title: Nowrap in Tables
     title.zh: 表格不换行
     type: class-toggle
     default: false
