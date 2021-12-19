@@ -18292,7 +18292,7 @@ body.background-settings-workplace-background-image.theme-dark .titlebar::before
   right: -15px;
   bottom: 0px;
   left: -15px;
-  filter: brightness(0.7);
+  filter: brightness(0.35);
 }
 
 body.background-settings-workplace-background-image.theme-light {
