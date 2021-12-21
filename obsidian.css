@@ -889,14 +889,6 @@ settings:
       - 
         label: Nothing
         value: list-no-border
-  - 
-    id: rainbow-lines
-    title:  Enable rainbow outline
-    title.zh: 开启彩虹大纲线
-    description: it  works when  Vertical line X selected
-    description.zh: 选择 Vertical line系列样式生效
-    type: class-toggle
-    default: false
   -
     id: folder-style-change-options-folder
     title: 2.3.3 Folder
@@ -1035,9 +1027,15 @@ settings:
     type: class-toggle
     default: false
   -
+    id: embed-title
+    title: hide embed title
+    title.zh: 隐藏嵌入文档标题
+    type: class-toggle
+    default: false
+  - 
     id: embed-hd
-    title: hide embed headings
-    title.zh: 隐藏嵌入标题
+    title: hide embed  headings like H1 H2
+    title.zh: 隐藏嵌入文档中的H1 H2 H3标题
     type: class-toggle
     default: false
   - 
@@ -1080,6 +1078,112 @@ settings:
     title.zh: 表格不换行
     type: class-toggle
     default: false
+  -
+    id: rainbow-lines-head
+    title:  2.3.9 rainbow outline
+    title.zh: 2.3.9 彩虹大纲线
+    description: it  works when  Vertical line X selected in 2.3.2
+    description.zh: 当选择2.3.2 Vertical line系列样式生效
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: rainbow-lines
+    title:  Enable rainbow outline
+    title.zh: 开启彩虹大纲线
+    description: it  works when  Vertical line X selected
+    description.zh: 选择 Vertical line系列样式生效
+    type: class-toggle
+    default: false
+  -
+    id: rainbow-ordered-list
+    title:  Enable rainbow outline list order
+    title.zh: 开启彩虹列表序号
+    description: it  works when  Vertical line X selected
+    description.zh: 选择 Vertical line系列样式生效
+    type: class-toggle
+    default: false
+  -
+    id: rainbow-checkbox
+    title:  Enable rainbow outline checkbox
+    title.zh: 开启彩虹任务选择框
+    description: it  works when  Vertical line X selected
+    description.zh: 选择 Vertical line系列样式生效
+    type: class-toggle
+    default: false
+  -
+    id: rainbow-lines-color-settings
+    title: rainbow lines colors
+    title.zh: 彩虹线颜色设置
+    type: heading
+    level: 4
+    collapsed: true
+  - 
+    id: accent-1
+    title: Outline level 1
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+          -
+            id: accent-1-rgb
+            format: rgb-values
+    default: '#38558b'
+  -
+    id: accent-2
+    title: Outline level 2
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+          -
+            id: accent-2-rgb
+            format: rgb-values
+    default: '#5f388b'
+  -
+    id: accent-3
+    title: Outline level 3
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+          -
+            id: accent-3-rgb
+            format: rgb-values
+    default: '#8b3884'
+  -
+    id: accent-4
+    title: Outline level 4
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+          -
+            id: accent-4-rgb
+            format: rgb-values
+    default: '#388b38'
+  -
+    id: accent-5
+    title: Outline level 5
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+          -
+            id: accent-5-rgb
+            format: rgb-values
+    default: '#e08e13'
+  -
+    id: accent-6
+    title: Outline level 6
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+          -
+            id: accent-6-rgb
+            format: rgb-values
+    default: '#e1dfdf'
   -
     id: style-options-for-other-plugins
     title: 3. For Plugins
@@ -9232,12 +9336,6 @@ body.list-vertical-line-three .markdown-preview-view ol li.is-collapsed div.list
   --accent-4-rgb: 56,139,56;
   --accent-5-rgb: 224,142,19;
   --accent-6-rgb: 225,223,223;
-  --accent-1: rgb(var(--accent-1-rgb),0.7);
-  --accent-2: rgb(var(--accent-2-rgb),0.7);
-  --accent-3: rgb(var(--accent-3-rgb),0.7);
-  --accent-4: rgb(var(--accent-4-rgb),0.7);
-  --accent-5: rgb(var(--accent-5-rgb),0.7);
-  --accent-6: rgb(var(--accent-6-rgb),0.7);
 
 }
 /*编辑模式*/
@@ -9245,60 +9343,60 @@ body.list-vertical-line-three .markdown-preview-view ol li.is-collapsed div.list
 border-width:1.5px;;	
 } */
 
-body.rainbow-lines .HyperMD-list-line-1 .cm-formatting-list{
+body.rainbow-ordered-list .HyperMD-list-line-1 .cm-formatting-list{
  color: rgb(var(--accent-1-rgb)) !important;
  }
- body.rainbow-lines .HyperMD-list-line-1 .cm-formatting-task{
+ body.rainbow-checkbox .HyperMD-list-line-1 .cm-formatting-task{
  color: rgb(var(--accent-1-rgb)) !important;
  }
  
  body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(1)::before {
- border-color: var(--accent-1);
+ border-color:  rgb(var(--accent-1-rgb),0.7);
  
  }
  
  
- body.rainbow-lines .HyperMD-list-line-2 .cm-formatting-list{
+ body.rainbow-ordered-list .HyperMD-list-line-2 .cm-formatting-list{
  color:  rgb(var(--accent-2-rgb))!important;
  }
- body.rainbow-lines .HyperMD-list-line-2 .cm-formatting-task{
+ body.rainbow-checkbox .HyperMD-list-line-2 .cm-formatting-task{
  color:  rgb(var(--accent-2-rgb))!important;
  }
  body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(2)::before {
- border-color: var(--accent-2);
+ border-color:  rgb(var(--accent-2-rgb),0.7);
 
  }
  
- body.rainbow-lines .HyperMD-list-line-3 .cm-formatting-list {
+ body.rainbow-ordered-list .HyperMD-list-line-3 .cm-formatting-list {
  color: rgb(var(--accent-3-rgb))!important;
  }
- body.rainbow-lines  .HyperMD-list-line-3 .cm-formatting-task {
+ body.rainbow-checkbox  .HyperMD-list-line-3 .cm-formatting-task {
  color: rgb(var(--accent-3-rgb))!important;
  }
  body.rainbow-lines  .HyperMD-list-line.cm-hmd-list-indent > span.cm-tab:nth-child(3)::before {
- border-color: var(--accent-3);
+ border-color:  rgb(var(--accent-3-rgb),0.7);
 
  }
  
- body.rainbow-lines  .HyperMD-list-line-4 .cm-formatting-list {
+ body.rainbow-ordered-list  .HyperMD-list-line-4 .cm-formatting-list {
  color: rgb(var(--accent-4-rgb))!important;
  }
- body.rainbow-lines  .HyperMD-list-line-4 .cm-formatting-task {
+ body.rainbow-checkbox  .HyperMD-list-line-4 .cm-formatting-task {
  color: rgb(var(--accent-4-rgb))!important;
  }
  body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(4)::before {
- border-color: var(--accent-4) ;
+ border-color:  rgb(var(--accent-4-rgb),0.7) ;
 
  }
  
- body.rainbow-lines  .HyperMD-list-line-5 .cm-formatting-list {
+ body.rainbow-ordered-list  .HyperMD-list-line-5 .cm-formatting-list {
  color: rgb(var(--accent-5-rgb))!important;
  }
- body.rainbow-lines  .HyperMD-list-line-5 .cm-formatting-task {
+ body.rainbow-checkbox  .HyperMD-list-line-5 .cm-formatting-task {
  color: rgb(var(--accent-5-rgb))!important;
  }
  body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(5)::before {
- border-color: var(--accent-5);
+ border-color:  rgb(var(--accent-5-rgb),0.7);
  }
  
  body.rainbow-lines .CodeMirror-foldgutter-open.CodeMirror-guttermarker-subtle::after
@@ -9313,77 +9411,77 @@ body.rainbow-lines .HyperMD-list-line-1 .cm-formatting-list{
 /*无序列表*/
 body.rainbow-lines  ul ul::before
  {
- border-color: var(--accent-1) !important;
+ border-color:  rgb(var(--accent-1-rgb),0.7) !important;
  }
 
  body.rainbow-lines li ul ul::before {
- border-color: var(--accent-2) !important;
+ border-color:  rgb(var(--accent-2-rgb),0.7) !important;
 
  }
  body.rainbow-lines  li ul ul ul::before {
- border-color: var(--accent-3) !important;
+ border-color:  rgb(var(--accent-3-rgb),0.7) !important;
 
  }
  body.rainbow-lines  li ul ul ul ul::before {
- border-color: var(--accent-4) !important;
+ border-color:  rgb(var(--accent-4-rgb),0.7) !important;
  }
  
  body.rainbow-lines  li ul ul ul ul ul::before {
- border-color: var(--accent-5) !important;
+ border-color:  rgb(var(--accent-5-rgb),0.7) !important;
  }
   body.rainbow-lines  li ul ul ul ul ul ul::before {
- border-color: var(--accent-6) !important;
+ border-color:  rgb(var(--accent-6-rgb),0.7) !important;
  }
 
 /*任务列表*/
 body.rainbow-lines  ol ol::before
  {
- border-color: var(--accent-1) !important;
+ border-color: rgb(var(--accent-1-rgb),0.7) !important;
  }
 
 
  body.rainbow-lines  li ol   ol::before {
- border-color: var(--accent-2) !important;
+ border-color:  rgb(var(--accent-2-rgb),0.7) !important;
 
  }
  body.rainbow-lines  li ol   ol ol::before {
- border-color: var(--accent-3) !important;
+ border-color:  rgb(var(--accent-3-rgb),0.7) !important;
 
  }
  body.rainbow-lines  li ol   ol ol ol::before {
- border-color: var(--accent-4) !important;
+ border-color:  rgb(var(--accent-4-rgb),0.7) !important;
  }
  
  body.rainbow-lines  li ol   ol ol ol ol::before {
- border-color: var(--accent-5) !important;
+ border-color:  rgb(var(--accent-5-rgb),0.7) !important;
  }
  body.rainbow-lines  li ol   ol ol ol ol ol::before {
- border-color: var(--accent-6) !important;
+ border-color:  rgb(var(--accent-6-rgb),0.7) !important;
  }
 
 
- body.rainbow-lines .markdown-preview-view li li .task-list-item-checkbox:checked {
-  background-color: var(--accent-2);
+ body.rainbow-checkbox .markdown-preview-view li li .task-list-item-checkbox:checked {
+  background-color:  rgb(var(--accent-2-rgb),0.7);
 }
 
-body.rainbow-lines .markdown-preview-view li li li .task-list-item-checkbox:checked {
-  background-color: var(--accent-3);
+body.rainbow-checkbox .markdown-preview-view li li li .task-list-item-checkbox:checked {
+  background-color:  rgb(var(--accent-3-rgb),0.7);
 }
 
-body.rainbow-lines .markdown-preview-view li li li li .task-list-item-checkbox:checked {
-  background-color: var(--accent-4);
+body.rainbow-checkbox .markdown-preview-view li li li li .task-list-item-checkbox:checked {
+  background-color:  rgb(var(--accent-4-rgb),0.7);
 }
 
-body.rainbow-lines .markdown-preview-view li li li li li .task-list-item-checkbox:checked {
-  background-color: var(--accent-5);
+body.rainbow-checkbox .markdown-preview-view li li li li li .task-list-item-checkbox:checked {
+  background-color:  rgb(var(--accent-5-rgb),0.7);
 }
 
-body.rainbow-lines .markdown-preview-view li li li li li li .task-list-item-checkbox:checked {
-  background-color: var(--accent-6);
+body.rainbow-checkbox .markdown-preview-view li li li li li li .task-list-item-checkbox:checked {
+  background-color:  rgb(var(--accent-6-rgb),0.7);
 }
 
-body.rainbow-lines .markdown-preview-view li li li li li li li .task-list-item-checkbox:checked {
-  background-color: var(--accent-6);
+body.rainbow-checkbox .markdown-preview-view li li li li li li li .task-list-item-checkbox:checked {
+  background-color:  rgb(var(--accent-6-rgb),0.7);
 }
 
 body.rainbow-lines .markdown-preview-view li .list-collapse-indicator.collapse-indicator.collapse-icon::before
@@ -9414,6 +9512,33 @@ body.rainbow-lines .markdown-preview-view li li li li li li .list-collapse-indic
 {
 color:  rgb(var(--accent-6-rgb));
 	
+}
+
+body.rainbow-ordered-list .markdown-preview-view ol>li::marker
+{
+color:  rgb(var(--accent-1-rgb));
+	
+}
+body.rainbow-ordered-list .markdown-preview-view ol>li ol>li::marker
+{
+color:  rgb(var(--accent-2-rgb));
+}
+body.rainbow-ordered-list .markdown-preview-view ol>li ol>li ol>li::marker
+{
+color:  rgb(var(--accent-3-rgb));
+}
+body.rainbow-ordered-list .markdown-preview-view ol>li ol>li ol>li ol>li::marker
+{
+color:  rgb(var(--accent-4-rgb));
+}
+body.rainbow-ordered-list .markdown-preview-view ol>li ol>li ol>li ol>li ol>li::marker
+{
+color:  rgb(var(--accent-5-rgb));
+}
+
+body.rainbow-ordered-list .markdown-preview-view ol>li ol>li ol>li ol>li ol>li ol>li::marker
+{
+color:  rgb(var(--accent-6-rgb));
 }
 
 
@@ -9928,7 +10053,15 @@ body.naked-embed.theme-light {
   --embed-color: transparent !important;
 }
 
-body.embed-hd .markdown-embed-title{
+body.embed-title .markdown-embed-title{
+  display: none;
+}
+body.embed-hd .markdown-embed .markdown-preview-view h1,
+body.embed-hd .markdown-embed .markdown-preview-view h2,
+body.embed-hd .markdown-embed .markdown-preview-view h3,
+body.embed-hd .markdown-embed .markdown-preview-view h4,
+body.embed-hd .markdown-embed .markdown-preview-view h5,
+body.embed-hd .markdown-embed .markdown-preview-view h6{
   display: none;
 }
 
