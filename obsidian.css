@@ -8564,6 +8564,7 @@ body.fancy-hr div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::aft
   border-radius: var(--radius-s);
   margin-inline-start: 2.5%;
   margin-inline-end: 2.5%;
+  display: flex;
 }
 
 .markdown-preview-view blockquote p {
@@ -9810,6 +9811,10 @@ body.bt-status-off #scroll-controls {
 body.light-background-color-files .nav-file-title.is-active {
   color: var(--accent-strong);
   background-color: var(--theme-color-translucent-1);
+}
+
+.nav-file-title.is-active .nav-file-tag {
+  color: var(--white) !important;
 }
 
 .nav-file:not(.is-active):hover .nav-file-title,
