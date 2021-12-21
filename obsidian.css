@@ -811,13 +811,20 @@ settings:
     default: false
   -
     id: image-zoom
-    title:  Mute  zoom into the image  on click
+    title: Deactivate image zooming
     title.zh: 取消点击图片放大效果
     type: class-toggle
     default: false
   -
-    id:  link-underline
-    title:  Mute  link underline 
+    id: plain-file-title
+    title: Remove colorful background of active file title
+    title.zh: 取消激活文件的彩色背景
+    description: Make it austere
+    type: class-toggle
+    default: false
+  -
+    id: link-underline
+    title: Remove underlines of external links
     title.zh: 取消预览状态链接下划线
     type: class-toggle
     default: false
@@ -18587,4 +18594,10 @@ cssclass: matrix
 
 .recent-vaults-list-item:hover {
   color: var(--theme-color) !important;
+}
+
+body.plain-file-title.theme-light,
+body.plain-file-title.theme-dark {
+  --color-view-header-gradient-1: var(--background-primary);
+  --color-view-header-gradient-2: var(--background-primary);
 }
