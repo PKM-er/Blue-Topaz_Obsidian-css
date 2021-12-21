@@ -8564,7 +8564,7 @@ body.fancy-hr div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::aft
   border-radius: var(--radius-s);
   margin-inline-start: 2.5%;
   margin-inline-end: 2.5%;
-  display: flex;
+  /*display: flex;*/
 }
 
 .markdown-preview-view blockquote p {
