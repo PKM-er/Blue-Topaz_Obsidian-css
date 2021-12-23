@@ -774,7 +774,7 @@ settings:
   -
     id: clutter-free-headings
     title: clutter free headings
-    title.zh: 编辑状态使用H1 H2 替代「#」
+    title.zh: 编辑状态使用H1 H2 替代「#」(显示标题级别)
     description:  Adapted from https://github.com/deathau/obsidian-snippets/blob/main/clutter-free-headings.css
     type: class-toggle
     default: false
@@ -1183,7 +1183,7 @@ settings:
           -
             id: accent-6-rgb
             format: rgb-values
-    default: '#e1dfdf'
+    default: '#cccecc'
   -
     id: style-options-for-other-plugins
     title: 3. For Plugins
@@ -8336,12 +8336,46 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 
 /* headers */
 /*编辑状态是否显示H1 H2标记*/
+/*适配Live previe模式*/
+
+body.clutter-free-headings div:not(.cm-active).cm-line  span:not(.cm-formatting-header).cm-header::before {
+
+  margin-top: 10px;
+  font-size: 0.7rem;
+  width: auto;
+  margin-left: -8px;
+  padding: 0px 2px;
+  border-radius: var(--radius-xs);
+  color: var(--text-muted);
+  overflow: visible;
+}
+
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-1:nth-child(2)::before {
+content: 'H1';
+}
+
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-2:nth-child(2)::before {
+content: 'H2';
+}
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-3:nth-child(2)::before {
+content: 'H3';
+}
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-4:nth-child(2)::before {
+content: 'H4';
+}
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-5:nth-child(2)::before {
+content: 'H5';
+}
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-6:nth-child(2)::before {
+content: 'H6';
+}
+/*适配传统模式*/
 body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line.hmd-inactive-line  span.cm-formatting-header::before {
   position: absolute;
  margin-top: 10px;
   font-size: 0.7rem;
   width: auto;
-  margin-left: -22px;
+  margin-left: -18px;
   padding: 0px 2px;
   border-radius: var(--radius-xs);
 color: var(--text-muted);
@@ -9333,6 +9367,10 @@ body.list-vertical-line-three .markdown-preview-view ol li.is-collapsed div.list
 }
 /********彩虹大纲线片段********/
 
+
+/*编辑模式*/
+
+/* RAINBOW INDENT COLORS from https://gist.github.com/GitMurf/5122c0c8405ffa36a03049d9f4434bf4 */ 
 :root {
   --list-padding: 24px;
   --accent-1-rgb: 56,85,139;
@@ -9340,10 +9378,86 @@ body.list-vertical-line-three .markdown-preview-view ol li.is-collapsed div.list
   --accent-3-rgb: 139,56,132;
   --accent-4-rgb: 56,139,56;
   --accent-5-rgb: 224,142,19;
-  --accent-6-rgb: 225,223,223;
+  --accent-6-rgb: 204,206,204;
+  --accent-7-rgb: 0,171,132;
+  --accent-8-rgb: 0,163,224;
+  /* default */
+      --font-use-default: var(--default-font);
+      --font-size-use-default: var(--editor-font-size);
+      --indent-use-default: 1.8ch;
+  /* ------- */
+  
+  /* theme */
+      --font-use-theme: inherit;
+      --font-size-use-theme: inherit;
+      --indent-use-theme: 1.8ch;
+  /* ----- */
+  
+  /* wide */
+      --font-use-wide: monospace;
+      --font-size-use-wide: 12px;
+      --indent-use-wide: 4.009ch;
+  /* ---- */
+  
+  /* custom */
+      --font-use-custom: Arial;
+      --font-size-use-custom: 13px;
+      --indent-use-custom: 14.5px;
+  /* ------ */
+  
+  /* SET FROM VARIABLES ABOVE UPDATING LAST WORD (e.g. ...-default) */
+  /* Copy and replace from one of following: default, theme, wide, custom */
+      --rb-indent-font-family: var(--font-use-default);
+      --rb-indent-font-size: var(--font-size-use-default);
+      --rb-indent-width: var(--indent-use-default);
+      --rb-left-offset: 3.5px;
+  /* ---------------------------------------------- */
+  
+      --rb-line-width: 1.5px;
+      --rb-color-count: 8;
+      --rb-indent-bg-size: calc(var(--rb-color-count) * var(--rb-indent-width)) 1px;
+  }
+  
+  body.rainbow-lines .mod-cm6.is-live-preview .HyperMD-list-line.cm-line {
+      overflow: hidden;
+  }
+  body.rainbow-lines .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent {
+      position: relative;
+      font-family: var(--rb-indent-font-family) !important;
+      font-size: var(--rb-indent-font-size) !important;
+  }
+  body.rainbow-lines .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
+      content: '';
+      font-family: var(--rb-indent-font-family) !important;
+      font-size: var(--rb-indent-font-size) !important;
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: -1.6em;
+      padding-bottom: 999em;
+      background-image: linear-gradient(
+        to right,
+        rgb(var(--accent-1-rgb)) 0 var(--rb-line-width),
+        transparent var(--rb-line-width) calc(1 * var(--rb-indent-width)),
+        rgb(var(--accent-2-rgb)) calc(1 * var(--rb-indent-width)) calc(1 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(1 * var(--rb-indent-width) + var(--rb-line-width)) calc(2 * var(--rb-indent-width)),
+        rgb(var(--accent-3-rgb)) calc(2 * var(--rb-indent-width)) calc(2 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(2 * var(--rb-indent-width) + var(--rb-line-width)) calc(3 * var(--rb-indent-width)),
+        rgb(var(--accent-4-rgb)) calc(3 * var(--rb-indent-width)) calc(3 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(3 * var(--rb-indent-width) + var(--rb-line-width)) calc(4 * var(--rb-indent-width)),
+        rgb(var(--accent-5-rgb)) calc(4 * var(--rb-indent-width)) calc(4 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(4 * var(--rb-indent-width) + var(--rb-line-width)) calc(5 * var(--rb-indent-width)),
+        rgb(var(--accent-6-rgb)) calc(5 * var(--rb-indent-width)) calc(5 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(5 * var(--rb-indent-width) + var(--rb-line-width)) calc(6 * var(--rb-indent-width)),
+        rgb(var(--accent-7-rgb)) calc(6 * var(--rb-indent-width)) calc(6 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(6 * var(--rb-indent-width) + var(--rb-line-width)) calc(7 * var(--rb-indent-width)),
+        rgb(var(--accent-8-rgb)) calc(7 * var(--rb-indent-width)) calc(7 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(7 * var(--rb-indent-width) + var(--rb-line-width)) calc(8 * var(--rb-indent-width))
+    );
+      background-size: var(--rb-indent-bg-size);
+      left: var(--rb-left-offset);
+  }
 
-}
-/*编辑模式*/
 /* .cm-hmd-list-indent .cm-tab::before {
 border-width:1.5px;;	
 } */
@@ -9355,11 +9469,19 @@ body.rainbow-ordered-list .HyperMD-list-line-1 .cm-formatting-list{
  color: rgb(var(--accent-1-rgb)) !important;
  }
  
+body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-1 .task-list-item-checkbox:checked {
+  background-color:  rgb(var(--accent-1-rgb),0.7);
+}
+body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-1 .task-list-item-checkbox {
+  border-color:  rgb(var(--accent-1-rgb),0.7) ;
+}
+  
  body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(1)::before {
  border-color:  rgb(var(--accent-1-rgb),0.7);
- 
  }
- 
+ body.rainbow-lines .mod-cm6 .HyperMD-list-line-1>span.list-bullet {
+  color: rgb(var(--accent-1-rgb)) ;
+}
  
  body.rainbow-ordered-list .HyperMD-list-line-2 .cm-formatting-list{
  color:  rgb(var(--accent-2-rgb))!important;
@@ -9367,21 +9489,41 @@ body.rainbow-ordered-list .HyperMD-list-line-1 .cm-formatting-list{
  body.rainbow-checkbox .HyperMD-list-line-2 .cm-formatting-task{
  color:  rgb(var(--accent-2-rgb))!important;
  }
+
+ body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-2 .task-list-item-checkbox:checked {
+  background-color:  rgb(var(--accent-2-rgb),0.7);
+}
+body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-2 .task-list-item-checkbox {
+  border-color:  rgb(var(--accent-2-rgb),0.7) ;
+}
+
  body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(2)::before {
  border-color:  rgb(var(--accent-2-rgb),0.7);
-
  }
+ body.rainbow-lines .mod-cm6 .HyperMD-list-line-2>span.list-bullet {
+  color: rgb(var(--accent-2-rgb)) ;
+}
  
+
  body.rainbow-ordered-list .HyperMD-list-line-3 .cm-formatting-list {
  color: rgb(var(--accent-3-rgb))!important;
  }
  body.rainbow-checkbox  .HyperMD-list-line-3 .cm-formatting-task {
  color: rgb(var(--accent-3-rgb))!important;
  }
+ body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-3 .task-list-item-checkbox:checked {
+  background-color:  rgb(var(--accent-3-rgb),0.7);
+}
+body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-3 .task-list-item-checkbox {
+  border-color:  rgb(var(--accent-3-rgb),0.7) ;
+}
+
  body.rainbow-lines  .HyperMD-list-line.cm-hmd-list-indent > span.cm-tab:nth-child(3)::before {
  border-color:  rgb(var(--accent-3-rgb),0.7);
-
  }
+ body.rainbow-lines .mod-cm6 .HyperMD-list-line-3>span.list-bullet {
+  color: rgb(var(--accent-3-rgb)) ;
+}
  
  body.rainbow-ordered-list  .HyperMD-list-line-4 .cm-formatting-list {
  color: rgb(var(--accent-4-rgb))!important;
@@ -9389,10 +9531,21 @@ body.rainbow-ordered-list .HyperMD-list-line-1 .cm-formatting-list{
  body.rainbow-checkbox  .HyperMD-list-line-4 .cm-formatting-task {
  color: rgb(var(--accent-4-rgb))!important;
  }
+
+ body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-4 .task-list-item-checkbox:checked {
+  background-color:  rgb(var(--accent-4-rgb),0.7);
+}
+body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-4 .task-list-item-checkbox {
+  border-color:  rgb(var(--accent-4-rgb),0.7) ;
+}
+
  body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(4)::before {
  border-color:  rgb(var(--accent-4-rgb),0.7) ;
-
  }
+ body.rainbow-lines .mod-cm6 .HyperMD-list-line-4>span.list-bullet {
+  color: rgb(var(--accent-4-rgb)) ;
+}
+
  
  body.rainbow-ordered-list  .HyperMD-list-line-5 .cm-formatting-list {
  color: rgb(var(--accent-5-rgb))!important;
@@ -9400,10 +9553,43 @@ body.rainbow-ordered-list .HyperMD-list-line-1 .cm-formatting-list{
  body.rainbow-checkbox  .HyperMD-list-line-5 .cm-formatting-task {
  color: rgb(var(--accent-5-rgb))!important;
  }
+
+ body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-5 .task-list-item-checkbox:checked {
+  background-color:  rgb(var(--accent-5-rgb),0.7);
+}
+body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-5 .task-list-item-checkbox {
+  border-color:  rgb(var(--accent-5-rgb),0.7) ;
+}
+
  body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(5)::before {
  border-color:  rgb(var(--accent-5-rgb),0.7);
  }
+ body.rainbow-lines .mod-cm6 .HyperMD-list-line-5>span.list-bullet {
+  color: rgb(var(--accent-5-rgb)) ;
+}
+
  
+ body.rainbow-ordered-list  .HyperMD-list-line-6 .cm-formatting-list {
+  color: rgb(var(--accent-6-rgb))!important;
+  }
+  body.rainbow-checkbox  .HyperMD-list-line-5 .cm-formatting-task {
+  color: rgb(var(--accent-6-rgb))!important;
+  }
+ 
+  body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-6 .task-list-item-checkbox:checked {
+   background-color:  rgb(var(--accent-6-rgb),0.7);
+ }
+ body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-6 .task-list-item-checkbox {
+  border-color:  rgb(var(--accent-6-rgb),0.7) ;
+}
+
+ body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(6)::before {
+   border-color:  rgb(var(--accent-6-rgb),0.7) ;
+   }
+   body.rainbow-lines .mod-cm6 .HyperMD-list-line-6>span.list-bullet {
+    color: rgb(var(--accent-6-rgb)) ;
+  }
+
  body.rainbow-lines .CodeMirror-foldgutter-open.CodeMirror-guttermarker-subtle::after
  {
 	color:  rgb(var(--accent-1-rgb)); 
