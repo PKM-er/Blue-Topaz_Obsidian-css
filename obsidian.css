@@ -818,7 +818,7 @@ settings:
   -
     id: plain-file-title
     title: Remove colorful background of active file title
-    title.zh: 取消激活文件的彩色背景
+    title.zh: 取消激活文件标题的彩色背景
     description: Make it austere
     type: class-toggle
     default: false
@@ -7597,6 +7597,10 @@ body.text-indentation-two-em *:not(blockquote) > p {
   position: absolute;
 }
 
+.markdown-source-view.mod-cm6 .cm-blockquote-border {
+  border-color: var(--theme-color);
+}
+
 .CodeMirror-line span.cm-formatting-quote + *::before,
 .CodeMirror-line span.cm-formatting-quote + span.cm-hmd-indent-in-quote + span.cm-quote:not(.cm-formatting-quote)::before,
 .CodeMirror-line span.cm-inline-code + *::before,
@@ -10556,12 +10560,13 @@ body:not(.image-zoom) .view-content img:not([class="emoji"]):active {
   background-color: #468eeb33 !important;
 }
 
-/*if you want the highlight to present in both normal and insert mode of vim*/
-.CodeMirror-activeline-background.CodeMirror-linebackground {
+.CodeMirror-activeline-background.CodeMirror-linebackground,
+.markdown-source-view.cm-s-obsidian.mod-cm6 .cm-active.cm-line {
   background-color: var(--activeline-background) !important;
 }
 
-body.muted-activeline-bg .CodeMirror-activeline-background.CodeMirror-linebackground {
+body.muted-activeline-bg .CodeMirror-activeline-background.CodeMirror-linebackground,
+body.muted-activeline-bg .markdown-source-view.cm-s-obsidian.mod-cm6 .cm-active.cm-line {
   background-color: transparent !important;
 }
 
@@ -15493,7 +15498,7 @@ div[dir="rtl"] ol.contains-task-list>li.task-list-item {
 /* ================================== */
 /* ============ Outliner ============ */
 /* ================================== */
-body:not(.outliner-plugin-bls) .cm-hmd-list-indent {
+body:not(.outliner-plugin-bls).markdown-source-view.mod-cm5 .cm-hmd-list-indent {
   position: initial !important;
 }
 
