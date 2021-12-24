@@ -415,7 +415,7 @@ settings:
     collapsed: true
   - 
     id: interactive-accent
-    title: Theme color
+    title: Theme Color
     title.zh: 主题色
     description: interactive-accent
     type: variable-themed-color
@@ -425,7 +425,7 @@ settings:
     default-dark: '#3187d3'
   -
     id: text-accent
-    title: Theme color 2
+    title: Theme Color 2
     title.zh: 主题色 2
     description: text-accent
     type: variable-themed-color
@@ -490,11 +490,19 @@ settings:
     default-dark: '#c173ee'
   -
     id: tag-color-settings
-    title: 2.1.4 Tag colors
+    title: 2.1.4 Tag Colors
     title.zh: 2.1.4 标签颜色
     type: heading
     level: 3
     collapsed: true
+  - 
+    id: tag-text
+    title: Tag Text
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#f8f8f8'
+    default-dark: '#e4e4e4'
   - 
     id: tag1
     title: Tag-1
@@ -567,6 +575,21 @@ settings:
     format: hex
     default-light: '#6ab607'
     default-dark: '#2244d8'
+  -
+    id: other-color-settings
+    title: 2.1.5 Other Colors
+    title.zh: 2.1.5 其他颜色
+    type: heading
+    level: 3
+    collapsed: true
+  - 
+    id: text-color-code
+    title: Inline Code Color
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#e95d00'
+    default-dark: '#d58000'
   -
     id: font-settings
     title: 2.2 Typography
