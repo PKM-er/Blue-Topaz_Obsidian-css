@@ -865,13 +865,31 @@ settings:
     title.zh: 2.3.1 分割线（hr，---）
     type: heading
     level: 3
-    collapsed: true
+    collapsed: true  
   -
     id: fancy-hr
     title: Fancy Horizontal Ruler (hr)
     title.zh: 装饰性分割线（hr，---）
-    type: class-toggle
-    default: false
+    type: class-select
+    allowEmpty: false
+    default: default-hr
+    options:
+      -
+        label: Default
+        value: default-hr
+      - 
+        label: with icons
+        value: fancy-hr-icon
+      - 
+        label: without icons
+        value: fancy-hr-no-icon
+  -
+    id: fancy-hr-folder-icon
+    title: 2.3.1.1 w/ Icons
+    title.zh: 2.3.1.1 有图标的hr
+    type: heading
+    level: 4
+    collapsed: true
   -
     id: fancy-hr-icon
     title: Centre Icon
@@ -887,6 +905,45 @@ settings:
     type: variable-number
     default: 0
     format: deg
+  -
+    id: fancy-hr-folder-no-icon
+    title: 2.3.1.1 w/o Icons
+    title.zh: 2.3.1.1 没有图标的hr
+    type: heading
+    level: 4
+    collapsed: true
+  -
+    id: hr-color-1
+    title: hr-color-1
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#007de4'
+    default-dark: '#53aaf5'
+  -
+    id: hr-color-2
+    title: hr-color-2
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#007de4'
+    default-dark: '#53aaf5'
+  -
+    id: hr-color-3
+    title: hr-color-3
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#007de4'
+    default-dark: '#53aaf5'
+  -
+    id: hr-color-4
+    title: hr-color-4
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#007de4'
+    default-dark: '#53aaf5'
   -
     id: list-style-change-options-folder
     title: 2.3.2 List
@@ -1891,6 +1948,11 @@ body.font-family-change-to-default .cm-strong.cm-em {
 
   --table-color-calendar-2: rgb(0, 91, 144);
   --table-color-rgb: 0, 91, 144;
+
+  --hr-color-1: var(--theme-color);
+  --hr-color-2: var(--theme-color);
+  --hr-color-3: var(--theme-color);
+  --hr-color-4: var(--theme-color);
 }
 
 .theme-light {
@@ -2191,6 +2253,11 @@ body.font-family-change-to-default .cm-strong.cm-em {
 
   --table-color-calendar-2: rgb(167, 223, 251);
   --table-color-rgb: 167, 223, 251;
+
+  --hr-color-1: var(--theme-color);
+  --hr-color-2: var(--theme-color);
+  --hr-color-3: var(--theme-color);
+  --hr-color-4: var(--theme-color);
 }
 
 
@@ -8658,8 +8725,8 @@ body.non-border-bottom-header .markdown-preview-view h2 {
   border-color: var(--background-modifier-border-hr);
 }
 
-/* adapted from Obsidianite */
-body.fancy-hr .markdown-preview-view hr {
+/* inspired by Obsidianite */
+body.fancy-hr-icon .markdown-preview-view hr {
   margin-block-start: 2.5em;
   margin-block-end: 2.5em;
   border: none;
@@ -8670,7 +8737,7 @@ body.fancy-hr .markdown-preview-view hr {
   border-image-source: linear-gradient(to right, transparent 0%, var(--theme-color) 30%, var(--theme-color) 46%, transparent 46%, transparent 54%, var(--theme-color) 54%, var(--theme-color) 70%, transparent 100%);
 }
 
-body.fancy-hr .markdown-preview-view hr::after {
+body.fancy-hr-icon .markdown-preview-view hr::after {
   content: var(--fancy-hr-icon);
   display: inline-block;
   position: absolute;
@@ -8681,16 +8748,16 @@ body.fancy-hr .markdown-preview-view hr::after {
   color: var(--theme-color);
 }
 
-body.fancy-hr div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hr {
+body.fancy-hr-icon div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hr {
   opacity: 0;
   position: relative;
 }
 
-body.fancy-hr div > .CodeMirror-line span.cm-hr {
+body.fancy-hr-icon div > .CodeMirror-line span.cm-hr {
   display: inline-block;
 }
 
-body.fancy-hr div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::before {
+body.fancy-hr-icon div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::before {
   position: absolute;
   content: '';
   width: 100%;
@@ -8700,7 +8767,7 @@ body.fancy-hr div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::bef
   top: 50%;
 }
 
-body.fancy-hr div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::after {
+body.fancy-hr-icon div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::after {
   content: var(--fancy-hr-icon);
   display: inline-block;
   position: absolute;
@@ -8710,6 +8777,48 @@ body.fancy-hr div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::aft
   transform-origin: 50% 50%;
   padding: 0.5rem;
   color: var(--theme-color);
+}
+
+body.fancy-hr-icon .cm-s-obsidian hr {
+  border-image: linear-gradient(to right, transparent 0%, var(--theme-color) 30%, var(--theme-color) 46%, transparent 46%, transparent 54%, var(--theme-color) 54%, var(--theme-color) 70%, transparent 100%) 1;
+  border-width: 2px;
+}
+
+body.fancy-hr-icon .markdown-source-view.mod-cm6 .hr::after {
+  content: var(--fancy-hr-icon);
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(var(--fancy-hr-rotate));
+  transform-origin: 50% 50%;
+  padding: 0.5rem;
+  color: var(--theme-color);
+}
+
+body.fancy-hr-no-icon .cm-s-obsidian hr {
+  border-image: linear-gradient(to right, transparent 0%, var(--hr-color-1) 20%, var(--hr-color-2) 40%, var(--hr-color-3) 60%, var(--hr-color-4) 80%, transparent 100%) 1;
+  border-width: 2px;
+}
+
+body.fancy-hr-no-icon .markdown-preview-view hr {
+  margin-block-start: 2.5em;
+  margin-block-end: 2.5em;
+  border: none;
+  height: 0;
+  border-bottom: 2px solid;
+  border-width: 2px;
+  border-image: linear-gradient(to right, transparent 0%, var(--hr-color-1) 20%, var(--hr-color-2) 40%, var(--hr-color-3) 60%, var(--hr-color-4) 80%, transparent 100%) 1;
+}
+
+body.fancy-hr-no-icon div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(to right, transparent 0%, var(--hr-color-1) 20%, var(--hr-color-2) 40%, var(--hr-color-3) 60%, var(--hr-color-4) 80%, transparent 100%);
+  left: 0;
+  top: 50%;
 }
 
 .nav-files-container {
