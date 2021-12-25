@@ -10690,6 +10690,7 @@ pre[class~='language-c']::before {
   content: "C";
 }
 
+pre[class~='language-py']::before,
 pre[class~='language-python']::before {
   content: "PYTHON";
 }
