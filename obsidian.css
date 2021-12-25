@@ -18700,10 +18700,14 @@ body.background-settings-workplace-background-image .workspace::before {
   content: '';
   display: block;
   position: absolute;
-  top: 0px;
+  top: -5px;
   right: -15px;
   bottom: 0px;
   left: -15px;
+}
+
+body.background-settings-workplace-background-image .titlebar {
+  z-index: 1;
 }
 
 body.background-settings-workplace-background-image.theme-light .titlebar-text,
@@ -18711,7 +18715,7 @@ body.background-settings-workplace-background-image.theme-dark .titlebar-text {
   color: var(--text-normal);
 }
 
-body.background-settings-workplace-background-image.theme-light .titlebar::before {
+body.background-settings-workplace-background-image .titlebar::before {
   background-image: var(--theme-background);
   background-size: cover;
   content: '';
@@ -18724,16 +18728,6 @@ body.background-settings-workplace-background-image.theme-light .titlebar::befor
 }
 
 body.background-settings-workplace-background-image.theme-dark .titlebar::before {
-  background-image: var(--theme-background);
-  background-size: cover;
-  background-size: cover;
-  content: '';
-  display: block;
-  position: absolute;
-  top: -3px;
-  right: -15px;
-  bottom: 0px;
-  left: -15px;
   filter: brightness(0.35);
 }
 
