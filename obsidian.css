@@ -10200,7 +10200,6 @@ body.no-wrapped-table td:hover {
 }
  /* ----状态栏透明开关----------- */
  /* Status bar */
-  
 body.bt-status-off .status-bar {
   background-color:var(--background-secondary-bg-4-bt);
   z-index:30;
@@ -16542,6 +16541,10 @@ body.circular-checkbox .markdown-source-view.is-live-preview .task-list-item-che
 
 .cm-s-obsidian div.HyperMD-codeblock-end-bg {
   border-bottom: none;
+}
+
+.markdown-source-view.cm-s-obsidian.mod-cm6 .cm-line {
+  padding-left: 0;
 }
 
 /* ============ */
