@@ -8633,21 +8633,6 @@ body.non-border-bottom-header .markdown-preview-view h2 {
   position: relative;
 }
 
-.markdown-preview-view h1,
-.markdown-preview-view h2 {
-  margin-bottom: 0.6em;
-}
-
-.markdown-preview-view h3 {
-  margin-bottom: 0.5em;
-}
-
-.markdown-preview-view h4,
-.markdown-preview-view h5,
-.markdown-preview-view h6 {
-  margin-bottom: 0.3em;
-}
-
 .markdown-preview-view h1:hover::before {
   content: 'H1';
   position: absolute;
