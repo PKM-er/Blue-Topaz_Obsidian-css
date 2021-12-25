@@ -8878,7 +8878,7 @@ body:not(.font-family-change-to-default) .markdown-source-view.mod-cm6 .cm-scrol
   max-width: var(--line-width-readable);
 }
 
-.markdown-source-view.mod-cm6.is-line-wrap .cm-content {
+.markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-content {
   width: var(--line-width-readable);
   max-width: 100%;
   margin: 0 auto;
