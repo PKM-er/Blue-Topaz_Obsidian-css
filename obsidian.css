@@ -860,6 +860,12 @@ settings:
     type: class-toggle
     default: false
   -
+    id: loading-animation
+    title: Animation on the Loading Page 
+    title.zh: 加载页面的动画
+    type: class-toggle
+    default: false
+  -
     id: fancy-hr-folder
     title: 2.3.1 Horizontal Ruler (hr, ---)
     title.zh: 2.3.1 分割线（hr，---）
@@ -17719,25 +17725,6 @@ body:not(.background-image-settings-switch).background-image-settings-markdown-p
 /* Coloured Folders for Blue Topaz 0-Z, v0.3
 
 modified from the snippet created by @Lithou */
-
-/* Coloured Folders
-a CSS snippet by Lithou
-
-This will allow the colouring of the top level folders into sections that "drop down" when opened. 
-This is currently set to be the same colour regardless of theme, but you can change that by copy/pasting the colors from the root section into light/dark theme then changing them according to preference.
-The colours are rainbow coloured and 16 in number by default. They are shades such that white/lightgrey text shows up the best. Some have a bit let contrast (the lighter blue and the yellow) but should still be visible. Again, change them however you would like. 
-*/
-
-:root {
-  /* line styles for nesting indicators */
-  --nestlinesize1: solid;
-  --nestlinestyle1: 2px;
-  --nestlinesize2: solid;
-  --nestlinestyle2: 2px;
-  --nestlinesize3: solid;
-  --nestlinestyle3: 2px;
-}
-
 body.folder-style-change-options-colorful.theme-dark {
   --FoldText: #cbcbcb;
 }
@@ -19008,7 +18995,6 @@ cssclass: matrix
 .markdown-preview-view.matrix table tr:nth-child(2n) td:nth-child(2):hover {
   background-color: var(--matrix-5);
 }
-
 /*-------- Eisenhower Matrix end--- */
 
 .workspace-tab-header.is-active {
@@ -19024,4 +19010,35 @@ body.plain-file-title.theme-light,
 body.plain-file-title.theme-dark {
   --color-view-header-gradient-1: var(--background-primary);
   --color-view-header-gradient-2: var(--background-primary);
+}
+
+
+/* the gif animation was created by @Jake Fleming https://dribbble.com/shots/9948351-kitty-wiggle */
+body.loading-animation .progress-bar-message::before {
+  content: "GIF author: Jake Fleming"; 
+  display: block;
+  background: no-repeat center/cover  url(https://cdn.dribbble.com/users/53712/screenshots/9948351/media/2397850c7727f8e70b0ec50b5a83fe76.gif);
+  width: 800px; 
+  height: 500px;
+  margin-top: -20px; 
+  font-size: initial;
+  color: var(--text-muted);
+  filter: hue-rotate(-55deg) saturate(120%);
+}
+
+body.loading-animation.theme-dark .progress-bar-message::before {
+  filter: invert(100%) hue-rotate(153deg) saturate(250%);
+}
+
+body.loading-animation.theme-light .progress-bar {
+  background-color: white;
+}
+
+body.loading-animation.theme-dark .progress-bar {
+  background-color: black;
+}
+
+body.loading-animation .progress-bar-message {
+  color: var(--text-normal);
+  font-size: 25px;
 }
