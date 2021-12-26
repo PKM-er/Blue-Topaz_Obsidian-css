@@ -8469,6 +8469,11 @@ content: 'H5';
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-6:nth-child(2)::before {
 content: 'H6';
 }
+/*适配source mode 模式*/
+body.clutter-free-headings  .mod-cm6 div:not(.cm-active).cm-line span.cm-formatting-header {
+ display:none;
+  }
+
 /*适配传统模式*/
 body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line.hmd-inactive-line  span.cm-formatting-header::before {
   position: absolute;
