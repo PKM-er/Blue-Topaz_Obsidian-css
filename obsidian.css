@@ -10351,6 +10351,7 @@ code[class*="language-"] {
   padding: 1em 0.5em;
 }
 
+
 /*embedded*/
 body.naked-embed.theme-dark {
   --embed-color: transparent !important;
@@ -10383,6 +10384,7 @@ body.embed-hover.theme-light .internal-embed .markdown-embed:hover {
   transition: all .2s ease-in-out;
   transform: translate3d(0px, -3px, 0px);
 }
+
 
 body.embed-hover.theme-dark .internal-embed .markdown-embed:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -19042,3 +19044,37 @@ body.loading-animation .progress-bar-message {
   color: var(--text-normal);
   font-size: 25px;
 }
+
+/* ================================== */
+/* ======= Banner ======= */
+/* ================================== */
+.obsidian-banner-wrapper {
+  margin-top: calc(var(--banner-height) + 10px)!important;
+}
+
+/* ================================== */
+/* ======= custom cssclass ======= */
+/* ========fullwidth  noyaml noscroll================ */
+/*主页预览宽度*/
+
+.markdown-preview-view.fullwidth.is-readable-line-width .markdown-preview-sizer, .markdown-source-view.is-readable-line-width.fullwidth .CodeMirror, .is-readable-line-width.fullwidth .markdown-preview-section, .is-readable-line-width.fullwidth .markdown-preview-section > div, .markdown-preview-view.is-readable-line-width.fullwidth .markdown-preview-section {
+  width:100% !important;
+  max-width: 100%;
+  /* margin: 0 auto; */
+}
+
+/*隐藏yaml区域*/
+.markdown-preview-view.noyaml div>.language-yaml
+{
+  display: none;
+}
+.markdown-preview-view.noyaml div>.frontmatter-container
+{
+  display: none;
+}
+/*隐藏滚动条*/
+.markdown-preview-view.noscroll::-webkit-scrollbar{
+  display:none;
+  }
+ 
+  
