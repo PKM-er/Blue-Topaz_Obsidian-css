@@ -1183,24 +1183,18 @@ settings:
     id: rainbow-lines
     title:  Enable rainbow outline
     title.zh: 开启彩虹大纲线
-    description: it  works when  Vertical line X selected
-    description.zh: 选择 Vertical line系列样式生效
     type: class-toggle
     default: false
   -
     id: rainbow-ordered-list
     title:  Enable rainbow outline list order
     title.zh: 开启彩虹列表序号
-    description: it  works when  Vertical line X selected
-    description.zh: 选择 Vertical line系列样式生效
     type: class-toggle
     default: false
   -
     id: rainbow-checkbox
     title:  Enable rainbow outline checkbox
     title.zh: 开启彩虹任务选择框
-    description: it  works when  Vertical line X selected
-    description.zh: 选择 Vertical line系列样式生效
     type: class-toggle
     default: false
   -
@@ -18500,6 +18494,31 @@ body.blockquote-style-quotation-mark .markdown-preview-view blockquote p:first-o
 
 body.blockquote-style-quotation-mark .markdown-preview-view li>blockquote p:first-of-type::before {
   top: 5px;
+}
+
+/*style settings blockquote quotation marks for cm6 live preview*/
+body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+  border-left-width: 0px;
+}
+body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote span.cm-quote.cm-quote-1:not(.cm-formatting){
+  display: inline-block;
+  position: relative;
+  padding-top: 5px;
+  padding-bottom:5px;
+  padding-right: 12px;
+  margin-left: 1.5em;
+  font-size: var(--font-size-preview-blockquote);
+} 
+
+body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote span.cm-quote.cm-quote-1:not(.cm-formatting):before {
+  content: '“';
+  font-weight: 700;
+  font-size: 60px;
+  font-family: Arial, serif;
+  color: var(--text-accent);
+  position: absolute;
+  top: -10px;
+  left: -0.5em;
 }
 
 /*speech bubble-1*/
