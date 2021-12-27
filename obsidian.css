@@ -9538,13 +9538,7 @@ body.list-vertical-line-three .markdown-preview-view ol li.is-collapsed div.list
   /* default */
       --font-use-default: var(--default-font);
       --font-size-use-default: var(--editor-font-size);
-      --indent-use-default: 1.8ch;
-  /* ------- */
-  
-  /* theme */
-      --font-use-theme: inherit;
-      --font-size-use-theme: inherit;
-      --indent-use-theme: 1.8ch;
+      --indent-use-default: 1.84ch;
   /* ----- */
   
   /* wide */
@@ -9564,10 +9558,10 @@ body.list-vertical-line-three .markdown-preview-view ol li.is-collapsed div.list
       --rb-indent-font-family: var(--font-use-default);
       --rb-indent-font-size: var(--font-size-use-default);
       --rb-indent-width: var(--indent-use-default);
-      --rb-left-offset: 3.5px;
+      --rb-left-offset: 3.3px;
   /* ---------------------------------------------- */
   
-      --rb-line-width: 1.5px;
+      --rb-line-width: 1.4px;
       --rb-color-count: 8;
       --rb-indent-bg-size: calc(var(--rb-color-count) * var(--rb-indent-width)) 1px;
 }
@@ -15799,11 +15793,19 @@ body:not(.outliner-plugin-bls).markdown-source-view.mod-cm5 .cm-hmd-list-indent 
 .outliner-plugin-bls .cm-hmd-list-indent .cm-tab::before {
   display: none;
 }
-
+.outliner-plugin-bls
+  .cm-s-obsidian:not(.is-live-preview)
+  .cm-formatting-list-ul:before, .outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
+   display: none;
+}
 .outliner-plugin-bls .CodeMirror-line .cm-hmd-list-indent::before {
   left: -0.2em !important;
   right: -0.4em;
   background-size: 1.6ch 1px !important;
+}
+.outliner-plugin-bls .cm-line  .cm-hmd-list-indent::before {
+  right: -0.4em;
+  background-size: 1.45ch 1px !important;
 }
 
 
