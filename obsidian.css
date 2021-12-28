@@ -8431,35 +8431,47 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 /*适配Live previe模式*/
 
 body.clutter-free-headings div:not(.cm-active).cm-line  span:not(.cm-formatting-header).cm-header::before {
-
-  margin-top: 10px;
+  display:block;
+  float:left;
   font-size: 0.7rem;
   width: auto;
-  margin-left: -8px;
-  padding: 0px 2px;
   border-radius: var(--radius-xs);
   color: var(--text-muted);
   overflow: visible;
 }
 
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-1:nth-child(2)::before {
+  font-weight:normal;
 content: 'H1';
+margin-top: calc(var(--font-size-h1) - 0.1em);
+
 }
 
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-2:nth-child(2)::before {
+font-weight:normal;
 content: 'H2';
+margin-top: calc(var(--font-size-h2) - 0.2em);
+
 }
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-3:nth-child(2)::before {
+  font-weight:normal;
 content: 'H3';
+margin-top: calc(var(--font-size-h3) - 0.2em);
 }
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-4:nth-child(2)::before {
+  font-weight:normal;
 content: 'H4';
+margin-top: calc(var(--font-size-h4) - 0.3em);
 }
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-5:nth-child(2)::before {
+  font-weight:normal;
 content: 'H5';
+margin-top: calc(var(--font-size-h5) - 0.4em);
 }
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-6:nth-child(2)::before {
+  font-weight:normal;
 content: 'H6';
+margin-top: calc(var(--font-size-h6) - 0.4em);
 }
 /*适配source mode 模式*/
 body.clutter-free-headings  .mod-cm6 div:not(.cm-active).cm-line span.cm-formatting-header {
@@ -8999,7 +9011,7 @@ code:not([class*='language-']) {
   margin-left: 3px;
 }
 
-.cm-s-obsidian .cm-hmd-list-indent {
+.cm-s-obsidian.mod-cm5 .cm-hmd-list-indent {
   padding-top: 0.4em;
   padding-bottom: 0.05em;
 }
@@ -19172,5 +19184,3 @@ body.loading-animation .progress-bar-message {
 .markdown-preview-view.noscroll::-webkit-scrollbar{
   display:none;
   }
- 
-  
