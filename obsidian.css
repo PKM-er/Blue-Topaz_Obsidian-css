@@ -1388,6 +1388,20 @@ settings:
         label: Neon-3
         value: style-options-for-kanban-plugin-dynamic-neon-three
   -
+    id: style-options-for-buttons-plugin-heading
+    title: 3.1 Buttons Style
+    title.zh: 3.1 Buttons 插件样式
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: style-options-for-buttons-plugin
+    title: Buttons special style support
+    title.zh: 是否开启Buttons特别样式支持
+    type: class-toggle
+    default: false
+    description : 目前内置class：🔸circle_btn 圆形按钮🔸blank_btn 透明按钮🔸grad_button渐变按钮🟣g_purple 紫色🔵g_blue蓝色🟢g_green 绿色💚g_lightgreen 浅绿🟡g_yellow黄色
+  -
     id: build-in-style-folder
     title: 4. Built-in Style Intro
     title.zh: 4. 内置样式介绍
@@ -8966,6 +8980,12 @@ mjx-container[jax='CHTML'] {
 }
 
 /*inline code*/
+
+.cm-s-obsidian.mod-cm6 .HyperMD-codeblock span.cm-inline-code {
+  display:inline-block;
+  padding:unset; 
+}
+
 .cm-s-obsidian span.cm-formatting-code.cm-inline-code {
   color: var(--text-muted);
   border-radius: 3px 0 0 3px;
@@ -9003,7 +9023,7 @@ code:not([class*='language-']) {
 /*list*/
 /*Add vertical lines of embedded lists*/
 /*thanks to loikein and death_au from forum and icr1001 from GitHub*/
-.cm-hmd-list-indent .cm-tab::before {
+.cm-s-obsidian.mod-cm5 .cm-hmd-list-indent .cm-tab::before {
   content: '';
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;
@@ -9569,7 +9589,9 @@ body.list-vertical-line-three .markdown-preview-view ol li.is-collapsed div.list
       --rb-color-count: 8;
       --rb-indent-bg-size: calc(var(--rb-color-count) * var(--rb-indent-width)) 1px;
 }
-  
+body.rainbow-lines .mod-cm6.is-live-preview .cm-hmd-list-indent .cm-tab::before {
+  display: none;
+}
 body.rainbow-lines .mod-cm6.is-live-preview .HyperMD-list-line.cm-line {
   overflow: hidden;
 }
@@ -10362,7 +10384,9 @@ body.naked-embed.theme-dark {
 body.naked-embed.theme-light {
   --embed-color: transparent !important;
 }
-
+body.naked-embed .markdown-source-view.mod-cm6 .markdown-embed {
+  border: none;
+}
 body.embed-title .markdown-embed-title{
   display: none;
 }
@@ -10382,10 +10406,19 @@ body.embed-hd .markdown-embed .markdown-preview-view h6{
 }
 
 /*![[]] 嵌入笔记浮动效果*/
-body.embed-hover.theme-light .internal-embed .markdown-embed:hover {
+body.embed-hover.theme-light .markdown-preview-view .internal-embed .markdown-embed:hover {
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .25);
   transition: all .2s ease-in-out;
   transform: translate3d(0px, -3px, 0px);
+}
+body.embed-hover.theme-light .markdown-source-view .internal-embed .markdown-embed:hover {
+   
+    background: var(--background-primary-alt);
+    color: var(--text-normal);
+    
+    border-radius: 6px;
+    border-width: 1px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 }
 
 
@@ -10394,7 +10427,7 @@ body.embed-hover.theme-dark .internal-embed .markdown-embed:hover {
   transform: translate3d(0px, -3px, 0px);
 }
 
-.markdown-preview-view .markdown-embed {
+ .markdown-embed {
   background-color: var(--embed-color);
   border: 1px solid var(--embed-color);
   border-radius: var(--radius-xs);
@@ -12960,6 +12993,11 @@ pre.frontmatter.language-yaml::before {
 /* ================================== */
 /* ============= kanban ============= */
 /* ================================== */
+body:not(.style-options-for-kanban-plugin-static-default) .workspace-leaf .kanban-plugin__lane {
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
+}
+
 .kanban-plugin__lane ::-webkit-scrollbar-thumb:vertical {
   background-color: var(--scrollbar-thumb);
   background-clip: padding-box;
@@ -13052,6 +13090,18 @@ button.kanban-plugin__new-item-button:hover {
   padding: 4px !important;
 }
 
+.kanban-plugin__markdown-preview-view ol.contains-task-list .contains-task-list, .kanban-plugin__markdown-preview-view ul.contains-task-list .contains-task-list, .kanban-plugin__markdown-preview-view ul, .kanban-plugin__markdown-preview-view ol {
+  /* padding-inline-start: 19px; */
+}
+.kanban-plugin__markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item) ,
+.kanban-plugin__markdown-preview-view:not(.kanban) ul>li:not(.task-list-item)
+{
+  margin-left: unset;
+  padding-left: unset;
+  margin-bottom: unset; 
+  margin-top: unset; 
+}
+
 /*meta*/
 .kanban-plugin__meta-row {
   background: transparent !important;
@@ -13081,7 +13131,7 @@ button.kanban-plugin__new-item-button:hover {
   height: 15px;
   filter: hue-rotate(var(--theme-color)) !important;
 }
-
+/* 屏蔽看板的默认样式
 .theme-light .kanban-plugin__lane-wrapper:nth-child(5n+1) {
   background-image: url("https://images.unsplash.com/photo-1487621167305-5d248087c724?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80");
 }
@@ -13101,7 +13151,7 @@ button.kanban-plugin__new-item-button:hover {
 .theme-light .kanban-plugin__lane-wrapper:nth-child(5n+0) {
   background-image: url("https://images.unsplash.com/photo-1553307236-8783cc0a3b9e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80");
 }
-
+ */
 .theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+1) {
   background: linear-gradient(to bottom, var(--kanban-color-1) 60%, transparent);
 }
@@ -14746,6 +14796,9 @@ body.style-options-for-admonition-plugin .admonition-col2>.admonition-content-ho
 body.style-options-for-admonition-plugin  .admonition-col2>.admonition-content-holder>.admonition-content h3 {	
   margin-top: -0.001em;
 }
+body.style-options-for-admonition-plugin  .admonition-col2>.admonition-content-holder>.admonition-content h4 {	
+  margin-top: -0.001em;
+}
 body.style-options-for-admonition-plugin .admonition-kanban .admonition-col2>.admonition-content-holder>.admonition-content ol{	
   margin:0;
   break-inside: avoid;
@@ -15328,7 +15381,20 @@ body.list-vertical-line-three table.dataview.table-view-table ul ol::before,
 body.list-vertical-line-three table.dataview.table-view-table ol ol::before {
   border-left: none;
 }
-
+body.list-vertical-line-one .kanban-plugin__markdown-preview-view ul ul::before,
+body.list-vertical-line-one .kanban-plugin__markdown-preview-view ol ul::before,
+body.list-vertical-line-one .kanban-plugin__markdown-preview-view ul ol::before,
+body.list-vertical-line-one .kanban-plugin__markdown-preview-view ol ol::before,
+body.list-vertical-line-two .kanban-plugin__markdown-preview-view ul ul::before,
+body.list-vertical-line-two .kanban-plugin__markdown-preview-view ol ul::before,
+body.list-vertical-line-two .kanban-plugin__markdown-preview-view ul ol::before,
+body.list-vertical-line-two .kanban-plugin__markdown-preview-view ol ol::before,
+body.list-vertical-line-three .kanban-plugin__markdown-preview-view ul ul::before,
+body.list-vertical-line-three .kanban-plugin__markdown-preview-view ol ul::before,
+body.list-vertical-line-three .kanban-plugin__markdown-preview-view ul ol::before,
+body.list-vertical-line-three .kanban-plugin__markdown-preview-view ol ol::before {
+  border-left: none;
+}
 /* ================================== */
 /* ======= CodeMirror Options ======= */
 /* ================================== */
@@ -16096,6 +16162,106 @@ img[alt$="inlR"] {
   max-width: 100%;
 }
 
+/*=======================
+===custom buttons by cuman====
+========================*/
+/*便签动画效果*/
+@keyframes shake { /* 水平抖动，核心代码 */
+  10%, 90% { transform: translate3d(-1px, 0, 0); }
+  20%, 80% { transform: translate3d(+2px, 0, 0); }
+  30%, 70% { transform: translate3d(-4px, 0, 0); }
+  40%, 60% { transform: translate3d(+4px, 0, 0); }
+  50% { transform: translate3d(-4px, 0, 0); }
+}
+.markdown-preview-view .stickies:hover{
+  animation: shake 800ms ease-in-out;
+}
+
+/*按钮颜色*/
+/* 图标按钮*/
+
+body.style-options-for-buttons-plugin button.circle_btn {
+  font-size: 12px;
+  word-break: keep-all;
+	margin: 4px;
+	padding: 0px;
+    width: 50px;
+    height: 50px;
+    /* border-radius:50%; */
+	position: relative;
+	border: 0;
+	display: inline-block;
+	text-align: center;
+}
+/* blank 透明按钮*/
+body.style-options-for-buttons-plugin  button.blank{
+background: #fff0f000;
+}
+body.style-options-for-buttons-plugin button.blank:hover {
+  animation: swing_image 0.8s linear 0s 1 normal;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+	}
+  body.style-options-for-buttons-plugin  .admonition-content button.grad_button
+  {
+    margin-top: 0px;
+    margin-bottom: -10px;
+  }
+  body.style-options-for-buttons-plugin  button.grad_button{
+    margin:5PX;
+    line-height: inherit;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 90px;
+      padding: 0 28px;
+      height: 38px;
+      font-size: 16px;
+      color: #fff;
+      text-align: center;
+      box-sizing: border-box;
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: box-shadow .5s ease, transform .2s ease; 
+      will-change: transform;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+      transform:
+      translateY(var(--ty, 0))
+      rotateX(var(--rx, 0))
+      rotateY(var(--ry, 0))
+      translateZ(var(--tz, -12px));
+  
+  }
+  
+  
+  body.style-options-for-buttons-plugin button.grad_button:hover {
+    animation: swing_image 0.8s linear 0s 1 normal;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+  }
+  body.style-options-for-buttons-plugin button.g_purple {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+  
+  }
+  
+  body.style-options-for-buttons-plugin  button.g_blue {
+      background: linear-gradient(135deg, #3370ff, #9fb9f6);  
+  }
+  
+  body.style-options-for-buttons-plugin button.g_green {
+      background: linear-gradient(135deg, #0eb347, #5be08a);
+  }
+  
+  body.style-options-for-buttons-plugin button.g_lightgreen {
+      color: #17695e;
+      background: linear-gradient(135deg, #adfdad, #dafdda);
+  }
+  
+  body.style-options-for-buttons-plugin  button.g_yellow {
+      color: #836f20;
+      background: linear-gradient(135deg, #fcd539, #ffeb9b);
+  }
+  
+
 /*buttons*/
 .is-mobile .workspace-leaf-content[data-type='file-explorer'] .nav-action-button {
   padding: 3px 4px;
@@ -16611,6 +16777,9 @@ body.circular-checkbox .markdown-source-view.is-live-preview .task-list-item-che
 
 .markdown-source-view.cm-s-obsidian.mod-cm6 .cm-line {
   padding-left: 0;
+}
+.markdown-source-view.cm-s-obsidian.mod-cm6 .HyperMD-codeblock-bg.cm-line {
+  padding-left: 1em;
 }
 
 /* ============ */
@@ -18539,6 +18708,12 @@ body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-title
 
 /*==========*/
 /*style settings blockquote quotation marks*/
+
+body.blockquote-style-quotation-mark .markdown-preview-view blockquote {
+  color: var(--text-normal);
+  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1);
+}
+
 body.blockquote-style-quotation-mark .markdown-preview-view blockquote {
   padding-left: 35px;
   padding-right: 10px;
@@ -18571,22 +18746,24 @@ body.blockquote-style-quotation-mark .markdown-preview-view li>blockquote p:firs
 
 /*style settings blockquote quotation marks for cm6 live preview*/
 body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+  margin-left: 1.5em !important;
+  padding-right: 10%;
   border-left-width: 0px;
 
 }
 body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
 .HyperMD-quote span.cm-quote.cm-quote-1:not(.cm-formatting){
-  display: inline-block;
+  display: inline;
   position: relative;
   padding-top: 5px;
-  padding-right: 12px;
-  margin-left: 1.5em;
+  /* padding-right: 12px; */
+  /* margin-left: 1.5em; */
   font-size: var(--font-size-preview-blockquote);
 } 
 
 body.blockquote-style-quotation-mark 
 .markdown-source-view.mod-cm6.is-live-preview 
-.HyperMD-quote span.cm-quote.cm-quote-1:not(.cm-formatting)::before {
+.HyperMD-quote:not(.cm-active) span.cm-quote.cm-quote-1:not(.cm-formatting)::before {
   content: '“';
   font-weight: 700;
   font-size: 60px;
@@ -18596,6 +18773,12 @@ body.blockquote-style-quotation-mark
   top: -10px;
   left: -0.5em;
 }
+body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
+.cm-content div.HyperMD-quote  span.cm-quote.cm-quote-1+ span.cm-quote.cm-quote-1:not(.cm-formatting)::before {
+display: none;
+}
+
+
 body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
 .cm-content div.HyperMD-quote-1 + .HyperMD-quote-1 span.cm-quote.cm-quote-1:not(.cm-formatting)::before {
 display: none;
