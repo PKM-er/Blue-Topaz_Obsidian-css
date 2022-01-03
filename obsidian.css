@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.13.16。uid [20211225] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.13.16, uid [20211225] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.13.18。uid [20220103] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.13.18, uid [20220103] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 @LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @awyugan */
@@ -57,6 +57,9 @@ settings:
       - 
         label: Pink
         value: color-scheme-options-pink-topaz
+      - 
+        label: Topaz-Nord (Coming soon)
+        value: color-scheme-options-topaz-nord
       - 
         label: =↓👩😺 Created by Topaz Community 🐵🧑↓=
         value: 
@@ -197,9 +200,9 @@ settings:
         value: background-settings-workplace-theme-light-custom-option
   -
     id: background-settings-workplace-theme-light-custom
-    title: Theme light (url)
+    title: Custom Theme light (url)
     description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
-    description.zh: 自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片  url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片  url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
     type: variable-text
     default: url("https://") 
   -
@@ -235,9 +238,9 @@ settings:
         value: background-settings-workplace-theme-dark-custom-option
   -
     id: background-settings-workplace-theme-dark-custom
-    title: Theme Dark (url)
+    title: Custom Theme Dark (url)
     description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
-    description.zh: 自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片  url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片  url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
     type: variable-text
     default: url("https://")
   -
@@ -585,11 +588,30 @@ settings:
   - 
     id: text-color-code
     title: Inline Code Color
+    title.zh: 行内代码颜色
     type: variable-themed-color
     opacity: false
     format: hex
     default-light: '#e95d00'
     default-dark: '#d58000'
+  -
+    id: list-format-ul
+    title: Bullet Color of Unordered List
+    title.zh: 无序列表点颜色
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#da8507'
+    default-dark: '#da8507'
+  -
+    id: list-ol-number-color
+    title: Number Color of Ordered List
+    title.zh: 有序列表数字颜色
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#6196d6'
+    default-dark: '#2c7bd6'
   -
     id: font-settings
     title: 2.2 Typography
@@ -1421,7 +1443,7 @@ settings:
     description.zh:  ❗cssclass：kanban❗ 实现类似看板样式并排显示，只对无序列表生效。改自Spectrum theme by @Wiktoria Mielcarek
   -
     id: built-in-style-code-wrap
-    title:  Code  Wrap
+    title:  Code Wrap
     title.zh: 代码行自动换行 code-wrap
     type: heading
     level: 2
@@ -1637,6 +1659,30 @@ settings:
   --letter-space-code: 0;
 
   --line-width-readable: 45rem;
+  
+  --nord0: #2E3440;
+  --nord1: #3B4252;
+  --nord2: #434C5E;
+  --nord3: #4C566A;
+  --nord3-1: #717a91;
+
+  --nord4: #d8dee9;
+  --nord5: #E5E9F0;
+  --nord6: #ECEFF4;
+
+  --nord7: #8fbcbb;
+  --nord7-transparent: #8fbcbb2f;
+  --nord8: #88C0D0;
+  --nord9: #81a1c1;
+  --nord9-1: #81a1c16c;
+  --nord9-2: #81a1c13c;
+  --nord10: #5e81ac;
+
+  --nord11: #BF616A;
+  --nord12: #D08770;
+  --nord13: #EBCB8B;
+  --nord14: #A3BE8C;
+  --nord15: #B48EAD;
 }
 
 body.font-family-change-to-default li,
@@ -3959,6 +4005,160 @@ body.color-scheme-options-pink-topaz.theme-light .cm-strong.cm-em {
   background-color: initial;
 }
 
+body.color-scheme-options-topaz-nord.theme-dark {
+  --background-primary: var(--nord0);
+  --background-primary-alt: var(--nord0);
+  --background-secondary: var(--nord1);
+  --background-secondary-alt: var(--nord2);
+
+  --background-primary-bg-4-bt: var(--nord0);
+  --background-primary-alt-bg-4-bt: var(--nord0);
+  --background-secondary-bg-4-bt: var(--nord1);
+  --background-secondary-alt-bg-4-bt: var(--nord2);
+
+  --text-normal: var(--nord4);
+  --text-muted: var(--nord5);
+  --text-faint: var(--nord6);
+
+  --text-accent: var(--nord9);
+  --text-accent-hover: var(--nord9);
+
+  --text-folder-file: var(--nord4);
+  --accent-strong: #f7f7f7;
+  --accent-em: var(--nord14);
+
+  --text-highlight-bg: #89853b8a;
+  --mark-highlight: #89853b8a;
+  --mark-highlight-strong-em: #fff7603a;
+
+  --text-selection: var(--nord9-1);
+  --text-on-accent: #dcddde;
+
+  --interactive-accent: var(--nord9);
+  --interactive-accent-rgb: 129, 161, 193;
+  --interactive-accent-hover: var(--nord10);
+
+  --theme-color-translucent: var(--nord9-1);
+  --theme-color-translucent-1: var(--nord9-2);
+
+  --folder-title: var(--nord4);
+
+  --tag-text: var(--nord7);
+  --tag1: var(--nord7-transparent); 
+  --tag2: var(--nord7-transparent); 
+  --tag3: var(--nord7-transparent); 
+  --tag4: var(--nord7-transparent); 
+  --tag5: var(--nord7-transparent); 
+  --tag6: var(--nord7-transparent); 
+  --tag7: var(--nord7-transparent); 
+  --tag8: var(--nord7-transparent); 
+  --tag9: var(--nord7-transparent); 
+
+  --h1-color: var(--nord11);
+  --h2-color: var(--nord12);
+  --h3-color: var(--nord13);
+  --h4-color: var(--nord14);
+  --h5-color: var(--nord8);
+  --h6-color: var(--nord15);
+
+  --background-code: #3B42525c;
+  --background-blockquote: #3B42525c;
+
+  --text-color-code: var(--nord8);
+
+  --color-view-header-gradient-1: var(--nord0);
+  --color-view-header-gradient-2: var(--nord0);
+
+  --strong-em-color-1: var(--accent-strong);
+  --strong-em-color-2: var(--accent-strong);
+  --strong-em-highlight-color: var(--accent-strong);
+
+  --internal-link-color-in-highlight: var(--nord10);
+
+  --embed-color: #3B425251;
+
+  --activeline-background: #4C566A1a;
+
+  --list-ul-block-color: var(--nord12);
+  --list-ul-disc-color: var(--nord12);
+  --green-1: var(--nord14);
+  --list-ul-hover: var(--nord13);
+  --list-ol-block-color: var(--nord9);
+  --list-ol-number-color: var(--nord9);
+  --list-ol-hover: var(--nord7);
+  --list-format-ul: var(--nord12);
+}
+
+body.color-scheme-options-topaz-nord.theme-dark .titlebar-text {
+  color: var(--nord4);
+}
+
+body.color-scheme-options-topaz-nord.theme-dark .token.unit {
+  color: var(--nord10) !important;
+}
+
+body.color-scheme-options-topaz-nord.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-qualifier, 
+body.color-scheme-options-topaz-nord.theme-dark .cm-s-obsidian .cm-math.cm-qualifier, 
+body.color-scheme-options-topaz-nord.theme-dark .cm-s-obsidian .cm-qualifier,
+body.color-scheme-options-topaz-nord.theme-dark .token.class {
+  color: var(--nord7) !important;
+}
+
+body.color-scheme-options-topaz-nord.theme-dark .token.number, 
+body.color-scheme-options-topaz-nord.theme-dark .cm-number {
+  color: var(--nord15) !important;
+}
+
+body.color-scheme-options-topaz-nord.theme-dark .token.operator, 
+body.color-scheme-options-topaz-nord.theme-dark .token.entity, 
+body.color-scheme-options-topaz-nord.theme-dark .token.url, 
+body.color-scheme-options-topaz-nord.theme-dark .language-css .token.string, 
+body.color-scheme-options-topaz-nord.theme-dark .style .token.string, 
+body.color-scheme-options-topaz-nord.theme-dark .cm-string,
+body.color-scheme-options-topaz-nord.theme-dark .token.string, 
+body.color-scheme-options-topaz-nord.theme-dark .token.char, 
+body.color-scheme-options-topaz-nord.theme-dark .token.attr-value, 
+body.color-scheme-options-topaz-nord.theme-dark .token.builtin, 
+body.color-scheme-options-topaz-nord.theme-dark .token.inserted {
+  color: var(--nord14) !important;
+}
+
+body.color-scheme-options-topaz-nord.theme-dark .cm-s-obsidian span.cm-variable-3,
+body.color-scheme-options-topaz-nord.theme-dark .token.selector, 
+body.color-scheme-options-topaz-nord.theme-dark .token.tag, 
+body.color-scheme-options-topaz-nord.theme-dark .cm-s-obsidian span.cm-variable-2 {
+  color: var(--nord10) !important;
+}
+
+body.color-scheme-options-topaz-nord.theme-dark .token.regex, 
+body.color-scheme-options-topaz-nord.theme-dark .token.variable {
+  color: var(--nord12) !important;
+}
+
+body.color-scheme-options-topaz-nord.theme-dark .token.macro.property, 
+body.color-scheme-options-topaz-nord.theme-dark .markdown-source-view.cm-s-obsidian .cm-hmd-codeblock.cm-property,
+body.color-scheme-options-topaz-nord.theme-dark .token.property, 
+body.color-scheme-options-topaz-nord.theme-dark .token.boolean, 
+body.color-scheme-options-topaz-nord.theme-dark .token.constant, 
+body.color-scheme-options-topaz-nord.theme-dark .token.symbol, 
+body.color-scheme-options-topaz-nord.theme-dark .token.attr-name, 
+body.color-scheme-options-topaz-nord.theme-dark .token.deleted {
+  color: var(--nord9) !important;
+}
+
+body.color-scheme-options-topaz-nord.theme-dark .token.function, 
+body.color-scheme-options-topaz-nord.theme-dark .markdown-source-view.cm-s-obsidian .cm-variable {
+  color: var(--nord13) !important;
+}
+
+body.color-scheme-options-topaz-nord.theme-dark .token.comment {
+  color: var(--nord3-1) !important;
+}
+
+body.color-scheme-options-topaz-nord.theme-dark .token.atrule, 
+body.color-scheme-options-topaz-nord.theme-dark .token.keyword {
+  color: var(--nord13) !important;
+}
 
 /*@Lavi & @嘴 的Flamingo主题色（原Pink Topaz）*/
 body.color-scheme-options-flamingo.theme-light {
@@ -7424,6 +7624,7 @@ a.tag {
   font-family: var(--font-family-special-tag) !important;
   display: inline;
   font-size: 0.95em;
+  color: var(--white) !important;
 }
 
 .cm-s-obsidian span.cm-hashtag-begin:nth-child(9n+1),
@@ -7750,7 +7951,7 @@ div.CodeMirror-activeline>.HyperMD-quote {
 /* highlight */
 .markdown-preview-view mark {
   background-color: var(--mark-highlight);
-  padding: 0px 3px 2px;
+  padding: 1px 3px;
   color: var(--text-highlight);
   border-radius: var(--radius-xs);
 }
@@ -9039,7 +9240,7 @@ code:not([class*='language-']) {
 /* inspired by Gabroel from Obsidian discord group */
 /* https://discord.com/channels/686053708261228577/702656734631821413/784922140465692712 */
 .cm-formatting.cm-formatting-list.cm-formatting-list-ol {
-  color: var(--text-accent);
+  color: var(--list-ol-number-color);
 }
 
 .cm-formatting.cm-formatting-list.cm-formatting-list-ul {
@@ -9057,7 +9258,7 @@ pre.HyperMD-list-line.HyperMD-list-line {
 */
 
 li {
-  line-height: 1.7em;
+  line-height: var(--line-height-main);
   font-family: var(--font-family-list);
 }
 
@@ -9544,7 +9745,6 @@ body.list-vertical-line-three .markdown-preview-view ol li.is-collapsed div.list
   opacity: 0.5;
 }
 /********彩虹大纲线片段********/
-
 
 /*编辑模式*/
 
@@ -10335,7 +10535,7 @@ body.link-underline a.external-link {
 /*cm6 模式的下划线*/
 body.link-underline .markdown-source-view.mod-cm6 .cm-underline,
 a, .markdown-preview-view .internal-link {
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 .cm-url:hover {
@@ -10376,7 +10576,6 @@ code[class*="language-"] {
   padding: 1em 0.5em;
 }
 
-
 /*embedded*/
 body.naked-embed.theme-dark {
   --embed-color: transparent !important;
@@ -10412,13 +10611,11 @@ body.embed-hover.theme-light .markdown-preview-view .internal-embed .markdown-em
   transform: translate3d(0px, -3px, 0px);
 }
 body.embed-hover.theme-light .markdown-source-view .internal-embed .markdown-embed:hover {
-   
-    background: var(--background-primary-alt);
-    color: var(--text-normal);
-    
-    border-radius: 6px;
-    border-width: 1px;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  background: var(--background-primary-alt);
+  color: var(--text-normal);
+  border-radius: 6px;
+  border-width: 1px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 }
 
 
@@ -10427,7 +10624,7 @@ body.embed-hover.theme-dark .internal-embed .markdown-embed:hover {
   transform: translate3d(0px, -3px, 0px);
 }
 
- .markdown-embed {
+.markdown-embed {
   background-color: var(--embed-color);
   border: 1px solid var(--embed-color);
   border-radius: var(--radius-xs);
@@ -10937,7 +11134,6 @@ body.muted-activeline-bg .HyperMD-codeblock-bg.CodeMirror-activeline-background.
   font-family: var(--font-family-preview-edit-code);
 }
 
-
 /*----file explorer smaller fonts & line height----*/
 .nav-file-title,
 .nav-folder-title {
@@ -11431,7 +11627,6 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 /* from Notation by death_au  https://github.com/deathau/Notation-for-Obsidian */
 /* Original idea from: https://gist.github.com/mklepaczewski/54e451f09994b9d450de81c8baaf8aa4 */
 /* but also with simpler classes so you can use `<span class='colour'>` as well */
-
 .app-container .markdown-preview-view pre.language-note-gray-bg code,
 .app-container .markdown-preview-view pre.language-note-brown-bg code,
 .app-container .markdown-preview-view pre.language-note-orange-bg code,
@@ -12588,7 +12783,6 @@ body.plugin-sliding-panes-rotate-header .workspace>.mod-root>.workspace-leaf>.wo
   padding: 0px 0px 5px 3px !important;
 }
 
-
 /*==========================*/
 /* obsidian-calendar-plugin */
 /*==========================*/
@@ -12993,9 +13187,9 @@ pre.frontmatter.language-yaml::before {
 /* ================================== */
 /* ============= kanban ============= */
 /* ================================== */
-body:not(.style-options-for-kanban-plugin-static-default) .workspace-leaf .kanban-plugin__lane {
+/*body:not(.style-options-for-kanban-plugin-static-default)*/ .workspace-leaf .kanban-plugin__lane {
   border-radius: 8px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
 }
 
 .kanban-plugin__lane ::-webkit-scrollbar-thumb:vertical {
@@ -15290,7 +15484,6 @@ h5.breadcrumbs-matrix-header {
   margin-left: 8px !important;
 }
 
-
 /* ================================== */
 /* ============ Dataview ============ */
 /* ================================== */
@@ -16185,28 +16378,28 @@ body.style-options-for-buttons-plugin button.circle_btn {
   word-break: keep-all;
 	margin: 4px;
 	padding: 0px;
-    width: 50px;
-    height: 50px;
-    /* border-radius:50%; */
+  width: 50px;
+  height: 50px;
+  /* border-radius:50%; */
 	position: relative;
 	border: 0;
 	display: inline-block;
 	text-align: center;
 }
 /* blank 透明按钮*/
-body.style-options-for-buttons-plugin  button.blank{
+body.style-options-for-buttons-plugin button.blank{
 background: #fff0f000;
 }
 body.style-options-for-buttons-plugin button.blank:hover {
   animation: swing_image 0.8s linear 0s 1 normal;
 		box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
 	}
-  body.style-options-for-buttons-plugin  .admonition-content button.grad_button
+  body.style-options-for-buttons-plugin .admonition-content button.grad_button
   {
     margin-top: 0px;
     margin-bottom: -10px;
   }
-  body.style-options-for-buttons-plugin  button.grad_button{
+  body.style-options-for-buttons-plugin button.grad_button{
     margin:5PX;
     line-height: inherit;
       display: inline-flex;
@@ -16230,38 +16423,35 @@ body.style-options-for-buttons-plugin button.blank:hover {
       rotateX(var(--rx, 0))
       rotateY(var(--ry, 0))
       translateZ(var(--tz, -12px));
+}
   
+  
+body.style-options-for-buttons-plugin button.grad_button:hover {
+  animation: swing_image 0.8s linear 0s 1 normal;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+}
+body.style-options-for-buttons-plugin button.g_purple {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
   }
   
+body.style-options-for-buttons-plugin  button.g_blue {
+  background: linear-gradient(135deg, #3370ff, #9fb9f6);  
+}
   
-  body.style-options-for-buttons-plugin button.grad_button:hover {
-    animation: swing_image 0.8s linear 0s 1 normal;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
-  }
-  body.style-options-for-buttons-plugin button.g_purple {
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+body.style-options-for-buttons-plugin button.g_green {
+  background: linear-gradient(135deg, #0eb347, #5be08a);
+}
   
-  }
+body.style-options-for-buttons-plugin button.g_lightgreen {
+  color: #17695e;
+  background: linear-gradient(135deg, #adfdad, #dafdda);
+}
   
-  body.style-options-for-buttons-plugin  button.g_blue {
-      background: linear-gradient(135deg, #3370ff, #9fb9f6);  
-  }
+body.style-options-for-buttons-plugin  button.g_yellow {
+  color: #836f20;
+  background: linear-gradient(135deg, #fcd539, #ffeb9b);
+}
   
-  body.style-options-for-buttons-plugin button.g_green {
-      background: linear-gradient(135deg, #0eb347, #5be08a);
-  }
-  
-  body.style-options-for-buttons-plugin button.g_lightgreen {
-      color: #17695e;
-      background: linear-gradient(135deg, #adfdad, #dafdda);
-  }
-  
-  body.style-options-for-buttons-plugin  button.g_yellow {
-      color: #836f20;
-      background: linear-gradient(135deg, #fcd539, #ffeb9b);
-  }
-  
-
 /*buttons*/
 .is-mobile .workspace-leaf-content[data-type='file-explorer'] .nav-action-button {
   padding: 3px 4px;
@@ -16535,9 +16725,7 @@ and (min-width : 400px)
 }
 
 /*===================================================*/
-/*===================================================*/
 /*=================   Live Preview   ================*/
-/*===================================================*/
 /*===================================================*/
 .markdown-source-view.is-live-preview span.cm-quote::before {
   all: initial;
@@ -16778,14 +16966,14 @@ body.circular-checkbox .markdown-source-view.is-live-preview .task-list-item-che
 .markdown-source-view.cm-s-obsidian.mod-cm6 .cm-line {
   padding-left: 0;
 }
-.markdown-source-view.cm-s-obsidian.mod-cm6 .HyperMD-codeblock-bg.cm-line {
-  padding-left: 1em;
+
+.markdown-source-view.cm-s-obsidian.mod-cm6 .HyperMD-codeblock {
+  font-size: var(--font-size-code);
 }
 
 /* ============ */
 /* just for fun */
 /* ============ */
-/*for backgroudn image snippets*/
 .workspace-ribbon.side-dock-ribbon.mod-left,
 .workspace-ribbon.side-dock-ribbon.mod-right {
   background-color: var(--background-secondary-alt-bg-4-bt);
@@ -19366,4 +19554,4 @@ body.loading-animation .progress-bar-message {
 /*隐藏滚动条*/
 .markdown-preview-view.noscroll::-webkit-scrollbar{
   display:none;
-  }
+}
