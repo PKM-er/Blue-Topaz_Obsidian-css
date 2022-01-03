@@ -17110,6 +17110,10 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active[data-path$=".
   opacity: 1;
   font-family: "Material Icons";
 }
+body:not(.remove-file-icons) .nav-file-title.is-active .obsidian-icon-folder-icon + .nav-file-title-content::before
+{
+ display: none;
+}
 
 .nav-action-button[aria-label="New note"] svg.document,
 .nav-action-button[aria-label="新建笔记"] svg.document,
