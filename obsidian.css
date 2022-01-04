@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.13.18。uid [20220103] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.13.18, uid [20220103] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.13.18。uid [20220104] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.13.18, uid [20220104] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 @LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @awyugan */
@@ -1137,20 +1137,34 @@ settings:
     level: 3
     collapsed: true
   -
+    id: adjustable-embed-content-height
+    title: Fix Height of Embedded Content
+    title.zh: 固定嵌入页面高度
+    type: class-toggle
+    default: false
+  -
+    id: embed-content-height
+    title: Height of Embedded Content
+    title.zh: 嵌入页面高度
+    description: Switch on the above button to activate
+    type: variable-number
+    default: 600
+    format: px
+  -
     id: naked-embed
-    title: Naked Embed
+    title: Transparent Embedded background
     title.zh: 嵌入背景透明
     type: class-toggle
     default: false
   -
     id: embed-title
-    title: hide embed title
+    title: Hide Embedded Title
     title.zh: 隐藏嵌入文档标题
     type: class-toggle
     default: false
   - 
     id: embed-hd
-    title: hide embed  headings like H1 H2
+    title: hide embed headings like H1 H2
     title.zh: 隐藏嵌入文档中的H1 H2 H3标题
     type: class-toggle
     default: false
@@ -1659,6 +1673,8 @@ settings:
   --letter-space-code: 0;
 
   --line-width-readable: 45rem;
+
+  --embed-content-height: 600px;
   
   --nord0: #2E3440;
   --nord1: #3B4252;
@@ -1882,7 +1898,7 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --mermaid-seq-dia-color: #1371be;
 
   /*table*/
-  --table-background-color: #8a8a8a32;
+  --table-background-color: #4c4c4c32;
   --table-background-color-odd: #0000001c;
   --table-border-color: #878787;
   --table-thead-background-color: #4e93e263;
@@ -2188,7 +2204,7 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --mermaid-seq-dia-color: #76c8ff;
 
   /*table*/
-  --table-background-color: #ebebebbb;
+  --table-background-color: #f1f1f1bb;
   --table-background-color-odd: #ffffffaf;
   --table-border-color: #7d7d7d;
   --table-thead-background-color: #bcdffcc7;
@@ -4087,6 +4103,13 @@ body.color-scheme-options-topaz-nord.theme-dark {
   --list-ol-number-color: var(--nord9);
   --list-ol-hover: var(--nord7);
   --list-format-ul: var(--nord12);
+
+  --table-thead-background-color: var(--nord9-2);
+  --table-hover-raw-color: var(--nord9-2);
+  --table-hover-color: var(--nord9-2);
+  --table-hover-thead-color: var(--nord9-1);
+
+  --checkbox-color-0: var(--interactive-accent);
 }
 
 body.color-scheme-options-topaz-nord.theme-dark .titlebar-text {
@@ -10682,12 +10705,18 @@ body.embed-hover.theme-dark .internal-embed .markdown-embed:hover {
   margin-bottom: 0.4em;
 }
 
-.markdown-preview-view .markdown-embed-content {
+body:not(.adjustable-embed-content-height) .markdown-preview-view .markdown-embed-content {
   padding-right: 0;
-  display: inline;
   max-height: 100%;
   max-width: 100%;
-  overflow: hidden;
+  overflow: auto;
+}
+
+body.adjustable-embed-content-height .markdown-preview-view .markdown-embed-content {
+  padding-right: 0;
+  max-height: var(--embed-content-height);
+  max-width: 100%;
+  overflow: auto;
 }
 
 .file-embed-icon {
@@ -11037,17 +11066,16 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
 }
 
 /* Image zoom  */
-
-body:not(.image-zoom) .view-content img:not([class="emoji"]) {
+body:not(.image-zoom) .markdown-preview-view img:not([class="emoji"]) {
   cursor: zoom-in;
 }
 
-body:not(.image-zoom) .workspace-leaf-content[data-type="markdown"] .view-content img:not([class="emoji"]) {
+body:not(.image-zoom) .markdown-preview-view .workspace-leaf-content[data-type="markdown"] .view-content img:not([class="emoji"]) {
   cursor: zoom-in;
   display: block;
 }
 
-body:not(.image-zoom) .view-content img:not([class="emoji"]):active {
+body:not(.image-zoom) .markdown-preview-view .view-content img:not([class="emoji"]):active {
   cursor: zoom-out !important;
   position: fixed;
   object-fit: contain;
@@ -11063,6 +11091,22 @@ body:not(.image-zoom) .view-content img:not([class="emoji"]):active {
   z-index: 200;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iMCAwIDgwIDgwIj4KICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjRjJGNEY2Ii8+CiAgICA8ZyBmaWxsPSIjRkZGIj4KICAgICAgPHJlY3Qgd2lkdGg9IjIiIGhlaWdodD0iNzkiIHg9Ijc4Ii8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iMzkiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjU5Ii8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iMjAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSIyMCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjIwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iNDAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSI0MCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjQwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iNjAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSI2MCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjYwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSI3OSIgaGVpZ2h0PSIxIiB5PSIxOSIvPgogICAgICA8cmVjdCB3aWR0aD0iNzkiIGhlaWdodD0iMSIgeT0iMzkiLz4KICAgICAgPHJlY3Qgd2lkdGg9Ijc5IiBoZWlnaHQ9IjEiIHk9IjU5Ii8+CiAgICA8L2c+CiAgICA8cmVjdCB3aWR0aD0iODAiIGhlaWdodD0iMiIgeT0iNzgiIGZpbGw9IiNGRkYiLz4KICA8L2c+Cjwvc3ZnPgo=");
 }
+
+.internal-embed.image-embed.is-loaded img {
+  margin: 3px auto;
+  display: block;
+}
+
+/*
+.internal-embed.image-embed.is-loaded {
+  transition: all 700ms ease;
+}
+
+.internal-embed.image-embed.is-loaded:hover {
+  transform: scale(1.2);
+}
+*/
+
 
 /* file explorer :Wrap long nav text and some paddings */
 .nav-file-title,
