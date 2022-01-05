@@ -1334,7 +1334,7 @@ settings:
     title.zh: 是否开启Admonition特别样式支持
     type: class-toggle
     default: false
-    description : 目前支持ad类型：blank 全透明框🔸def definition🔸thm theorem🔸lem lemma🔸cor corollary🔸pro proposition 🔸hibox  自动隐藏框🔸col2 col3 col4内容分多栏🔸kanban 伪看板❗使用方法❗下面以thm类型为例，在admonition插件的设置页面中，类型填 thm，标题填 定理，图标选择hand-point-right，颜色自己选比如浅绿色，添加成功后，在正文中使用代码块```ad-thm 即可激活。其他类型以此类推。  
+    description : 目前支持ad类型：blank 全透明框🔸def definition🔸thm theorem🔸lem lemma🔸cor corollary🔸pro proposition 🔸hibox  自动隐藏框🔸col2 col3 col4内容分多栏🔸flex自适应分栏🔸kanban 伪看板❗使用方法❗下面以thm类型为例，在admonition插件的设置页面中，类型填 thm，标题填 定理，图标选择hand-point-right，颜色自己选比如浅绿色，添加成功后，在正文中使用代码块```ad-thm 即可激活。其他类型以此类推。  
   -
     id: style-options-for-calendar-plugin-header
     title: 3.2 Calendar
@@ -15035,6 +15035,26 @@ body.style-options-for-admonition-plugin .admonition-col4-parent .admonition-col
   margin-top: 0;
 }
 
+/*自适应分栏*/
+body.style-options-for-admonition-plugin .admonition-flex {
+  margin: auto;
+ box-shadow:none;
+   
+ }
+ body.style-options-for-admonition-plugin .admonition-flex >.admonition-content-holder {
+  margin-top:0!important;
+  margin-bottom:0!important;
+}
+ body.style-options-for-admonition-plugin .admonition-flex .admonition-content {
+ width: 100%;
+ margin: 0px;
+ display: flex;
+ flex-wrap: wrap;
+}
+body.style-options-for-admonition-plugin .admonition-flex .admonition-content div{
+ flex: 1;
+ margin: 0 0.625rem;
+}
 
 /*blank ad框全透明隐藏*/
 body.style-options-for-admonition-plugin .admonition-blank {
@@ -16272,7 +16292,8 @@ body.style-options-for-buttons-plugin button.circle_btn {
 }
 /* blank 透明按钮*/
 body.style-options-for-buttons-plugin button.blank{
-  background: #fff0f000;
+background: #fff0f000;
+padding:  0px;
 }
 body.style-options-for-buttons-plugin button.blank:hover {
   animation: swing_image 0.8s linear 0s 1 normal;
@@ -18848,7 +18869,11 @@ body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-previ
 .cm-content div.HyperMD-quote  span.cm-quote.cm-quote-1+ span.cm-quote.cm-quote-1:not(.cm-formatting)::before {
 display: none;
 }
-
+body.blockquote-style-quotation-mark 
+.markdown-source-view.mod-cm6.is-live-preview 
+.HyperMD-quote:not(.cm-active) span.cm-quote.cm-quote-1:not(.cm-formatting):nth-child(n+5):before {
+  display: none;
+}
 
 body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
 .cm-content div.HyperMD-quote-1 + .HyperMD-quote-1 span.cm-quote.cm-quote-1:not(.cm-formatting)::before {
