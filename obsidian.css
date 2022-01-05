@@ -10907,16 +10907,16 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
 }
 
 /* Image zoom  */
-body:not(.image-zoom) .markdown-preview-view img:not([class="emoji"]) {
+body:not(.image-zoom) .markdown-reading-view img:not([class="emoji"]) {
   cursor: zoom-in;
 }
 
-body:not(.image-zoom) .markdown-preview-view .workspace-leaf-content[data-type="markdown"] .view-content img:not([class="emoji"]) {
+body:not(.image-zoom) .markdown-reading-view .workspace-leaf-content[data-type="markdown"] .view-content img:not([class="emoji"]) {
   cursor: zoom-in;
   display: block;
 }
 
-body:not(.image-zoom) .markdown-preview-view .view-content img:not([class="emoji"]):active {
+body:not(.image-zoom) .markdown-reading-view img:not([class="emoji"]):active {
   cursor: zoom-out !important;
   position: fixed;
   object-fit: contain;
