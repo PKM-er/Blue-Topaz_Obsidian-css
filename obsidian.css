@@ -18843,19 +18843,64 @@ body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-previ
   border-left-width: 0px;
 
 }
-body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
-.HyperMD-quote span.cm-quote.cm-quote-1:not(.cm-formatting){
+/* body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
+.HyperMD-quote span.cm-quote:not(.cm-formatting){
   display: inline;
   position: relative;
   padding-top: 5px;
-  /* padding-right: 12px; */
-  /* margin-left: 1.5em; */
+
   font-size: var(--font-size-preview-blockquote);
-} 
+}  */
 
 body.blockquote-style-quotation-mark 
 .markdown-source-view.mod-cm6.is-live-preview 
-.HyperMD-quote:not(.cm-active) span.cm-quote.cm-quote-1:not(.cm-formatting)::before {
+.HyperMD-quote:not(.cm-active) span.cm-hmd-indent-in-quote:not(.cm-formatting)::before {
+  content: '“';
+  font-weight: 700;
+  font-size: 60px;
+  font-family: Arial, serif;
+  color: var(--text-accent);
+  position: absolute;
+  margin-top: -0.4em;
+  margin-left: -0.5em;
+}
+body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
+.cm-content div.HyperMD-quote-1 + .HyperMD-quote-1 span.cm-hmd-indent-in-quote:not(.cm-formatting)::before {
+display: none;
+}
+body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
+.cm-content div.HyperMD-quote-2 + .HyperMD-quote-2 span.cm-hmd-indent-in-quote:not(.cm-formatting)::before {
+display: none;
+}
+body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
+.cm-content div.HyperMD-quote-3 + .HyperMD-quote-3 span.cm-hmd-indent-in-quote:not(.cm-formatting)::before {
+display: none;
+}
+body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
+.cm-content div.HyperMD-quote-3 + .HyperMD-quote-2 span.cm-hmd-indent-in-quote:not(.cm-formatting)::before {
+display: none;
+}
+body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
+.cm-content div.HyperMD-quote-3 + .HyperMD-quote-1 span.cm-hmd-indent-in-quote:not(.cm-formatting)::before {
+display: none;
+}
+body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
+.cm-content div.HyperMD-quote-2 + .HyperMD-quote-2 span.cm-hmd-indent-in-quote:not(.cm-formatting)::before {
+display: none;
+}
+body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
+.cm-content div.HyperMD-quote-2 + .HyperMD-quote-1 span.cm-hmd-indent-in-quote:not(.cm-formatting)::before {
+display: none;
+}
+body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
+.cm-content div.HyperMD-quote .cm-blockquote-border {
+  border: none;
+}
+
+/* 
+body.blockquote-style-quotation-mark 
+.markdown-source-view.mod-cm6.is-live-preview 
+.HyperMD-quote:not(.cm-active) span.cm-quote.cm-quote:not(.cm-formatting)::before {
   content: '“';
   font-weight: 700;
   font-size: 60px;
@@ -18874,7 +18919,11 @@ body.blockquote-style-quotation-mark
 .HyperMD-quote:not(.cm-active) span.cm-quote.cm-quote-1:not(.cm-formatting):nth-child(n+5):before {
   display: none;
 }
-
+body.blockquote-style-quotation-mark 
+.markdown-source-view.mod-cm6.is-live-preview 
+.HyperMD-quote:not(.cm-active) span.cm-quote.cm-quote-1.cm-hmd-internal-link:not(.cm-formatting)::before {
+  display: none;
+}
 body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
 .cm-content div.HyperMD-quote-1 + .HyperMD-quote-1 span.cm-quote.cm-quote-1:not(.cm-formatting)::before {
 display: none;
@@ -18882,7 +18931,7 @@ display: none;
 body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
 .cm-content div.HyperMD-quote-1 + .HyperMD-quote-1 span.cm-quote.cm-quote-1:not(.cm-formatting) {
 padding-top: 0px;
-}
+} */
 
 /*speech bubble-1*/
 body.blockquote-style-speech-bubble-one .markdown-preview-view blockquote {
