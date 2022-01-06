@@ -8545,35 +8545,35 @@ body.clutter-free-headings div:not(.cm-active).cm-line  span:not(.cm-formatting-
   overflow: visible;
 }
 
-body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-1::before {
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-1:last-child::before {
   font-weight:normal;
 content: 'H1';
 margin-top: calc(var(--font-size-h1) - 0.1em);
 
 }
 
-body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-2::before {
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-2:last-child::before {
 font-weight:normal;
 content: 'H2';
 margin-top: calc(var(--font-size-h2) - 0.2em);
 
 }
-body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-3::before {
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-3:last-child::before {
   font-weight:normal;
 content: 'H3';
 margin-top: calc(var(--font-size-h3) - 0.2em);
 }
-body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-4::before {
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-4:last-child::before {
   font-weight:normal;
 content: 'H4';
 margin-top: calc(var(--font-size-h4) - 0.3em);
 }
-body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-5::before {
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-5:last-child:before {
   font-weight:normal;
 content: 'H5';
 margin-top: calc(var(--font-size-h5) - 0.4em);
 }
-body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-6::before {
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-6:last-child::before {
   font-weight:normal;
 content: 'H6';
 margin-top: calc(var(--font-size-h6) - 0.4em);
@@ -19369,6 +19369,9 @@ cssclass: matrix
   --matrix-2: var(--p-kanban-color-3);
   --matrix-4: var(--p-kanban-color-5);
   --matrix-5: var(--p-kanban-color-6);
+}
+.markdown-preview-view.matrix.is-readable-line-width .markdown-preview-sizer, .markdown-source-view.matrix.is-readable-line-width .CodeMirror, .matrix.is-readable-line-width .markdown-preview-section, .matrix.is-readable-line-width .markdown-preview-section > div, .markdown-preview-view.matrix.is-readable-line-width .markdown-preview-section {
+  width: 100%;
 }
 .markdown-preview-view.matrix table tr {
   display: flex;
