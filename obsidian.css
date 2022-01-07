@@ -15227,6 +15227,23 @@ body.style-options-for-admonition-plugin .admonition-hibox .admonition-title {
   color: var(--background-code);
   color: transparent;
 }
+/* ======Notice================ */
+.notice-container  .notice:nth-child(4n+1){
+  background-color: var(--background-pink);
+  color: var(--text-color-code-normal);
+}
+.notice-container  .notice:nth-child(4n+2){
+  background-color: var(--background-yellow);
+  color: var(--text-color-code-normal);
+}
+.notice-container  .notice:nth-child(4n+3){
+  background-color: var(--background-green);
+  color: var(--text-color-code-normal);
+}
+.notice-container  .notice:nth-child(4n+4){
+  background-color: var(--background-red);
+  color: var(--text-color-code-normal);
+}
 
 /* ================================== */
 /* ============ checklist =========== */
