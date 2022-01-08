@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.13.18。uid [20220105] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.13.18, uid [20220105] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.13.19。uid [20220108] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.13.19, uid [20220108] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 @LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @awyugan */
@@ -612,6 +612,33 @@ settings:
     format: hex
     default-light: '#6196d6'
     default-dark: '#2c7bd6'
+  -
+    id: accent-strong
+    title: Bold Type color
+    title.zh: 加粗颜色
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#000000'
+    default-dark: '#f7f7f7'
+  -
+    id: accent-em
+    title: Italic Type color
+    title.zh: 斜体颜色
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#099d4e'
+    default-dark: '#a4ca8e'
+  -
+    id: mjx-math-color
+    title: Color of Mathematical Expressions
+    title.zh: 数学表达式颜色
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#0e0e0e'
+    default-dark: '#bdbdbd'
   -
     id: font-settings
     title: 2.2 Typography
@@ -1334,7 +1361,7 @@ settings:
     title.zh: 是否开启Admonition特别样式支持
     type: class-toggle
     default: false
-    description : 目前支持ad类型：blank 全透明框🔸def definition🔸thm theorem🔸lem lemma🔸cor corollary🔸pro proposition 🔸hibox  自动隐藏框🔸col2 col3 col4内容分多栏🔸flex自适应分栏🔸kanban 伪看板❗使用方法❗下面以thm类型为例，在admonition插件的设置页面中，类型填 thm，标题填 定理，图标选择hand-point-right，颜色自己选比如浅绿色，添加成功后，在正文中使用代码块```ad-thm 即可激活。其他类型以此类推。  
+    description : 目前支持ad类型：blank 全透明框🔸def definition🔸thm theorem🔸lem lemma🔸cor corollary🔸pro proposition 🔸hibox  自动隐藏框🔸col2 col3 col4内容分多栏🔸kanban 伪看板❗使用方法❗下面以thm类型为例，在admonition插件的设置页面中，类型填 thm，标题填 定理，图标选择hand-point-right，颜色自己选比如浅绿色，添加成功后，在正文中使用代码块```ad-thm 即可激活。其他类型以此类推。  
   -
     id: style-options-for-calendar-plugin-header
     title: 3.2 Calendar
@@ -1494,7 +1521,6 @@ settings:
     level: 1
     collapsed: true
 */
-
 
 @font-face {
   font-family: 'Bookerly';
@@ -1673,13 +1699,18 @@ settings:
   
   --nord0: #2E3440;
   --nord1: #3B4252;
+  --nord1-1: #3B425251;
   --nord2: #434C5E;
   --nord3: #4C566A;
   --nord3-1: #717a91;
 
   --nord4: #d8dee9;
+  --nord4-1: #d8dee95c;
   --nord5: #E5E9F0;
+  --nord5-1: #E5E9F053;
   --nord6: #ECEFF4;
+  --nord6-1: #ECEFF46c;
+  --nord6-2: #ECEFF43c;
 
   --nord7: #8fbcbb;
   --nord7-transparent: #8fbcbb2f;
@@ -1690,8 +1721,10 @@ settings:
   --nord10: #5e81ac;
 
   --nord11: #BF616A;
+  --nord11-1: #BF616A4b;
   --nord12: #D08770;
   --nord13: #EBCB8B;
+  --nord13-1: #ebcb8b4b;
   --nord14: #A3BE8C;
   --nord15: #B48EAD;
 }
@@ -1760,10 +1793,8 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --search-text: #e0e0e0;
   --folder-title: #ffffff;
 
-  --text-highlight-bg: #89853b8a;
-  /*edit*/
-  --mark-highlight: #89853b8a;
-  /*preview*/
+  --text-highlight-bg: #89853b8a;/*edit*/
+  --mark-highlight: #89853b8a;/*preview*/
   --mark-highlight-strong-em: #fff7603a;
   --strong-em-highlight-color: #a7b4ff;
   --text-search-highlight-bg: #bb4361;
@@ -1849,7 +1880,6 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --tag8: #3349cb;
   --tag9: #1c4cd1;
 
-  --color-tag-edit: #006feeb0;
   --tag-dailynote: #98c8ff;
   --tag-dailynote-bg: #0f60bd;
   --tag-weeklynote: #d1e6ff;
@@ -1866,16 +1896,6 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --h4-color: #2f7fe9;
   --h5-color: #a192f7;
   --h6-color: #c173ee;
-
-  /*old*/
-  /*
-  --h1-color: #4ea0e2;
-  --h2-color: #35d13dd3;
-  --h3-color: #dfd111e1;
-  --h4-color: #f1a634d0;
-  --h5-color: #f15959d0;
-  --h6-color: #d06af0d0;
-  */
 
   /*graph*/
   --graph-text-color: #B5B5B5;
@@ -2022,6 +2042,8 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --hr-color-2: var(--theme-color);
   --hr-color-3: var(--theme-color);
   --hr-color-4: var(--theme-color);
+
+  --mjx-math-color: var(--text-normal);
 }
 
 .theme-light {
@@ -2063,12 +2085,10 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --search-text: #000000;
   --folder-title: #000000;
 
-  --mark-highlight: #ffd298b4;
-  /*preview*/
+  --mark-highlight: #ffd298b4;/*preview*/
   --mark-highlight-strong-em: #ff880049;
   --strong-em-highlight-color: #237add;
-  --text-highlight-bg: #ffd298d8;
-  /*edit*/
+  --text-highlight-bg: #ffd298d8;/*edit*/
   --text-search-highlight-bg: #ffd1dd;
   --strong-em-color-1: #1048ff;
   --strong-em-color-2: #14c8ff;
@@ -2145,7 +2165,7 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --stag2-bg: #ee9002;
   --stag3: #50ce3a;
   --stag3-bg: #22ac09;
-  --tag1: #1f75ff;
+  --tag1: #2573f0;
   --tag2: #2193f0;
   --tag3: #17a5e7;
   --tag4: #14acc7;
@@ -2154,7 +2174,6 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --tag7: #0dc416;
   --tag8: #61c108;
   --tag9: #6ab607;
-  --color-tag-edit: #0077ff;
   --tag-dailynote: #0077ff;
   --tag-dailynote-bg: #277CDD;
   --tag-weeklynote: #4b9fff;
@@ -2271,8 +2290,8 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --checklist-bg: #dfdfdf8e;
   --checklist-bg-hover: #ffffffcc;
 
-  --color-view-header-gradient-1: #a1d9ffef;
-  --color-view-header-gradient-2: #e6fffbef;
+  --color-view-header-gradient-1: #d7e8f7ef;
+  --color-view-header-gradient-2: #f5fffdef;
 
   /*checkbox*/
   --checkbox-color-0: #2f92e4;
@@ -2327,6 +2346,8 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --hr-color-2: var(--theme-color);
   --hr-color-3: var(--theme-color);
   --hr-color-4: var(--theme-color);
+
+  --mjx-math-color: var(--text-normal);
 }
 
 
@@ -2369,12 +2390,10 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --search-text: #000000;
   --folder-title: #000000;
 
-  --mark-highlight: #ecf56eb4;
-  /*preview*/
+  --mark-highlight: #ecf56eb4;/*preview*/
   --mark-highlight-strong-em: #dbe72849;
   --strong-em-highlight-color: #08ae84;
-  --text-highlight-bg: #ecf56ed8;
-  /*edit*/
+  --text-highlight-bg: #ecf56ed8;/*edit*/
   --text-search-highlight-bg: #ffd1dd;
   --strong-em-color-1: #08ae84;
   --strong-em-color-2: #01531d;
@@ -2440,7 +2459,6 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --tag7: #15bf1d;
   --tag8: #61c108;
   --tag9: #6ab607;
-  --color-tag-edit: #6ca580;
   --tag-dailynote: #0077ff;
   --tag-dailynote-bg: #277CDD;
   --tag-weeklynote: #4b9fff;
@@ -2546,8 +2564,8 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --checklist-bg: #dfdfdf8e;
   --checklist-bg-hover: #ffffffcc;
 
-  --color-view-header-gradient-1: #ddffdcef;
-  --color-view-header-gradient-2: #e6ffeeef;
+  --color-view-header-gradient-1: #d9f7d9ef;
+  --color-view-header-gradient-2: #e9f3edef;
 
   /*checkbox*/
   --checkbox-color-0: #4cb385;
@@ -2624,10 +2642,8 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --search-text: #e0e0e0;
   --folder-title: #ffffff;
 
-  --text-highlight-bg: #47893b8a;
-  /*edit*/
-  --mark-highlight: #47893b8a;
-  /*preview*/
+  --text-highlight-bg: #47893b8a;/*edit*/
+  --mark-highlight: #47893b8a;/*preview*/
   --mark-highlight-strong-em: #47893b3a;
   --strong-em-highlight-color: #9c8ce6;
   --text-search-highlight-bg: #bb4361;
@@ -2695,7 +2711,6 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --tag7: #9a1e93;
   --tag8: #6e2ec1;
   --tag9: #2244d8;
-  --color-tag-edit: #008e18b0;
   --tag-dailynote: #98c8ff;
   --tag-dailynote-bg: #0f60bd;
   --tag-weeklynote: #d1e6ff;
@@ -2884,10 +2899,8 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --search-text: #e0e0e0;
   --folder-title: #ffffff;
 
-  --text-highlight-bg: #89853b8a;
-  /*edit*/
-  --mark-highlight: #89853b8a;
-  /*preview*/
+  --text-highlight-bg: #89853b8a;/*edit*/
+  --mark-highlight: #89853b8a;/*preview*/
   --mark-highlight-strong-em: #fff7603a;
   --strong-em-highlight-color: #ffffff;
   --text-search-highlight-bg: #bb4361;
@@ -2954,7 +2967,6 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --tag7: #cccccc;
   --tag8: #cccccc;
   --tag9: #cccccc;
-  --color-tag-edit: #006feeb0;
   --tag-dailynote: #98c8ff;
   --tag-dailynote-bg: #0f60bd;
   --tag-weeklynote: #d1e6ff;
@@ -3144,12 +3156,10 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --search-text: #000000;
   --folder-title: #000000;
 
-  --mark-highlight: #ecf56eb4;
-  /*preview*/
+  --mark-highlight: #ecf56eb4;/*preview*/
   --mark-highlight-strong-em: #ecf56eb4;
   --strong-em-highlight-color: #000000;
-  --text-highlight-bg: #ecf56ed8;
-  /*edit*/
+  --text-highlight-bg: #ecf56ed8;/*edit*/
   --text-search-highlight-bg: #ffd1dd;
   --strong-em-color-1: #08ae84;
   --strong-em-color-2: #01531d;
@@ -3216,7 +3226,6 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --tag7: #4f4f4f;
   --tag8: #4f4f4f;
   --tag9: #4f4f4f;
-  --color-tag-edit: #d0d0d0;
   --tag-dailynote: #0077ff;
   --tag-dailynote-bg: #277CDD;
   --tag-weeklynote: #4b9fff;
@@ -3534,12 +3543,10 @@ body.color-scheme-options-pink-topaz.theme-light {
   --search-text: #000000;
   --folder-title: #000000;
 
-  --mark-highlight: #ffd0e99b;
-  /*preview*/
+  --mark-highlight: #ffd0e99b;/*preview*/
   --mark-highlight-strong-em: #ffd0e99b;
   --strong-em-highlight-color: #000000;
-  --text-highlight-bg: #ffd0e99b;
-  /*edit*/
+  --text-highlight-bg: #ffd0e99b;/*edit*/
   --text-search-highlight-bg: #ffd1dd;
 
   --background-search-result: #f3f3f3;
@@ -3603,7 +3610,6 @@ body.color-scheme-options-pink-topaz.theme-light {
   --tag7: #4cb5d5;
   --tag8: #797fd1;
   --tag9: #c47cda;
-  --color-tag-edit: #df96a7;
   --tag-dailynote: #0077ff;
   --tag-dailynote-bg: #277CDD;
   --tag-weeklynote: #4b9fff;
@@ -3784,10 +3790,8 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --search-text: #e0e0e0;
   --folder-title: #ffffff;
 
-  --text-highlight-bg: #de87a785;
-  /*edit*/
-  --mark-highlight: #de87a785;
-  /*preview*/
+  --text-highlight-bg: #de87a785;/*edit*/
+  --mark-highlight: #de87a785;/*preview*/
   --mark-highlight-strong-em: #dc799e85;
   --strong-em-highlight-color: #d9afb3d1;
   --text-search-highlight-bg: #bb4361;
@@ -3855,7 +3859,6 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --tag7: #ba6d96;
   --tag8: #ba6d9c;
   --tag9: #ba6da6;
-  --color-tag-edit: #a5457dc2;
   --tag-dailynote: #98c8ff;
   --tag-dailynote-bg: #0f60bd;
   --tag-weeklynote: #d1e6ff;
@@ -4038,9 +4041,9 @@ body.color-scheme-options-topaz-nord.theme-dark {
   --accent-strong: #f7f7f7;
   --accent-em: var(--nord14);
 
-  --text-highlight-bg: #89853b8a;
-  --mark-highlight: #89853b8a;
-  --mark-highlight-strong-em: #fff7603a;
+  --text-highlight-bg: var(--nord13-1);
+  --mark-highlight: var(--nord13-1);
+  --mark-highlight-strong-em: var(--nord13-1);
 
   --text-selection: var(--nord9-2);
   --text-on-accent: #dcddde;
@@ -4086,7 +4089,7 @@ body.color-scheme-options-topaz-nord.theme-dark {
 
   --internal-link-color-in-highlight: var(--nord10);
 
-  --embed-color: #3B425251;
+  --embed-color: var(--nord1-1);
 
   --activeline-background: #4C566A1a;
 
@@ -4195,6 +4198,86 @@ body.color-scheme-options-topaz-nord.theme-dark .token.deleted,
 body.color-scheme-options-topaz-nord.theme-dark .cm-tag {
   color: var(--nord11) !important;
 }
+
+
+body.color-scheme-options-topaz-nord.theme-light {
+  --text-accent: var(--nord9);
+  --text-accent-hover: var(--nord9);
+
+  --accent-em: var(--nord14);
+
+  --text-selection: var(--nord9-2);
+  --text-on-accent: #dcddde;
+
+  --interactive-accent: var(--nord9);
+  --interactive-accent-rgb: 129, 161, 193;
+  --interactive-accent-hover: var(--nord10);
+
+  --theme-color-translucent: var(--nord9-1);
+  --theme-color-translucent-1: var(--nord9-2);
+
+  --tag-text: #3a79dd;
+  --tag1: #005aec21;
+  --tag2: #005aec21;
+  --tag3: #005aec21; 
+  --tag4: #005aec21; 
+  --tag5: #005aec21; 
+  --tag6: #005aec21;
+  --tag7: #005aec21;
+  --tag8: #005aec21;
+  --tag9: #005aec21;
+
+  --h1-color: var(--nord11);
+  --h2-color: var(--nord12);
+  --h3-color: var(--nord13);
+  --h4-color: var(--nord14);
+  --h5-color: var(--nord8);
+  --h6-color: var(--nord15);
+
+  --background-code: var(--nord6-2);
+  --background-blockquote: var(--nord6-2);
+
+  --text-color-code: var(--nord8);
+
+  --color-view-header-gradient-1: var(--nord0);
+  --color-view-header-gradient-2: var(--nord0);
+
+  --strong-em-color-1: var(--accent-strong);
+  --strong-em-color-2: var(--accent-strong);
+  --strong-em-highlight-color: var(--accent-strong);
+
+  --internal-link-color-in-highlight: var(--nord10);
+
+  --embed-color: var(--nord6-2);
+
+  --activeline-background: var(--nord5-1);
+
+  --list-ul-block-color: var(--nord12);
+  --list-ul-disc-color: var(--nord12);
+  --green-1: var(--nord14);
+  --list-ul-hover: var(--nord13);
+  --list-ol-block-color: var(--nord9);
+  --list-ol-number-color: var(--nord9);
+  --list-ol-hover: var(--nord7);
+  --list-format-ul: var(--nord12);
+
+  --table-thead-background-color: var(--nord9-2);
+  --table-hover-raw-color: var(--nord9-2);
+  --table-hover-color: var(--nord9-2);
+  --table-hover-thead-color: var(--nord9-1);
+
+  --checkbox-color-0: var(--interactive-accent);
+
+  --graph-text-color: var(--nord4);
+  --graphtag: var(--nord7);
+  --graph-attach: var(--nord15);
+  --graph-circle: var(--nord9);
+  --graph-line: var(--nord3-1);
+  --graph-unresolved: var(--nord11);
+  --link-unresolved-highlight: var(--nord11);
+  --graph-arrow: var(--nord11);
+}
+
 
 /*@Lavi & @嘴 的Flamingo主题色（原Pink Topaz）*/
 body.color-scheme-options-flamingo.theme-light {
@@ -4782,7 +4865,6 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --tag7: #0dc416;
   --tag8: #61c108;
   --tag9: #6ab607;
-  --color-tag-edit: #0077ff;
   --tag-dailynote: #0077ff;
   --tag-dailynote-bg: #277CDD;
   --tag-weeklynote: #4b9fff;
@@ -5050,7 +5132,6 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
   --tag8: #6e2ec1;
   --tag9: #2244d8;
 
-  --color-tag-edit: #006feeb0;
   --tag-dailynote: #98c8ff;
   --tag-dailynote-bg: #0f60bd;
   --tag-weeklynote: #d1e6ff;
@@ -5289,7 +5370,6 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --tag7: var(--color9);
   --tag8: var(--color10);
   --tag9: var(--color11);
-  --color-tag-edit: var(--low-color);
   --tag-dailynote: var(--low-color);
   --tag-dailynote-bg: var(--color3);
   --tag-weeklynote: var(--color6);
@@ -5499,7 +5579,6 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
   --tag8: var(--color4);
   --tag9: var(--color3);
 
-  --color-tag-edit: var(--main-color);
   --tag-dailynote: var(--mian-color);
   --tag-dailynote-bg: var(--color5);
   --tag-weeklynote: var(--color3);
@@ -5688,7 +5767,6 @@ body.color-scheme-options-autumn-topaz.theme-light {
   --tag7: var(--color9);
   --tag8: var(--color10);
   --tag9: var(--color11);
-  --color-tag-edit: var(--low-color);
   --tag-dailynote: var(--low-color);
   --tag-dailynote-bg: var(--color3);
   --tag-weeklynote: var(--color6);
@@ -5849,8 +5927,6 @@ body.color-scheme-options-autumn-topaz.theme-dark {
   --tag7: var(--color5);
   --tag8: var(--color4);
   --tag9: var(--color3);
-
-  --color-tag-edit: var(--main-color);
   --tag-dailynote: var(--mian-color);
   --tag-dailynote-bg: var(--color5);
   --tag-weeklynote: var(--color3);
@@ -6029,7 +6105,6 @@ body.color-scheme-options-lillimon-topaz.theme-light {
   --list-ol-hover: var(--magic-low-color);
 
   /*tags*/
-  --color-tag-edit: var(--magic-low-color);
   --tag-dailynote: var(--magic-low-color);
   --tag-dailynote-bg: var(--color10);
   --tag-weeklynote: var(--color6);
@@ -6098,7 +6173,6 @@ body.color-scheme-options-lillimon-topaz.theme-light {
   --checkbox-color-0: var(--magic-main-color);
 
   --activeline-background: var(--bg-color2);
-
 }
 
 body.color-scheme-options-lillimon-topaz.theme-dark {
@@ -6187,7 +6261,6 @@ body.color-scheme-options-lillimon-topaz.theme-dark {
   --tag8: var(--color4);
   --tag9: var(--color3);
 
-  --color-tag-edit: var(--magic-main-color);
   --tag-dailynote: var(--mian-color);
   --tag-dailynote-bg: var(--color5);
   --tag-weeklynote: var(--color3);
@@ -6286,9 +6359,7 @@ body.color-scheme-options-lillimon-topaz #calendar-container {
 
 
 /*========== awyugan 的 配色 =========*/
-
 body.color-scheme-options-lilac.theme-light {
-
   --background-primary: #d7c4f2;
   --background-primary-alt: #e8dffa;
   --background-secondary: #e1cefa;
@@ -6425,7 +6496,6 @@ body.color-scheme-options-lilac.theme-light {
   --tag8: #8a54d1;
   --tag9: #7b6bda;
 
-  --color-tag-edit: #d070e74b;
   --tag-dailynote: #0077ff;
   --tag-dailynote-bg: #277CDD;
   --tag-weeklynote: #4b9fff;
@@ -6703,7 +6773,6 @@ body.color-scheme-options-lilac.theme-dark {
   --tag7: #b925b2;
   --tag8: #8a54d1;
   --tag9: #7b6bda;
-  --color-tag-edit: #b4554eb0;
   --tag-dailynote: #98c8ff;
   --tag-dailynote-bg: #0f60bd;
   --tag-weeklynote: #d1e6ff;
@@ -6965,15 +7034,6 @@ body.color-scheme-options-lilac.theme-light #calendar-container {
   word-wrap: break-word !important;
   word-break: break-word !important;
   white-space: break-spaces !important;
-}
-
-/* image-grid-1 */
-/* adapted from https://github.com/Lithou/Sandbox/blob/main/.obsidian/snippets/pub-Image%20Flags.css */
-/* to get a kind of image grid with self-adapted size by placing images in the same row */
-span[alt*="+grid"] {
-  display: table-cell;
-  vertical-align: middle;
-  padding: 5px;
 }
 
 /* cssclass: image-grid */
@@ -7470,7 +7530,6 @@ a.tag {
 }
 
 .cm-s-obsidian span.cm-hashtag-begin {
-  background-color:var(--color-tag-edit);
   color: var(--tag-text) !important;
   border-top-left-radius: var(--radius-l);
   border-bottom-left-radius: var(--radius-l);
@@ -7480,7 +7539,6 @@ a.tag {
 }
 
 .cm-s-obsidian span.cm-hashtag-end {
-  background-color: var(--color-tag-edit);
   color: var(--tag-text);
   border-radius: 0 var(--radius-l) var(--radius-l) 0;
   padding-right: 0.3em !important;
@@ -7490,7 +7548,6 @@ a.tag {
 
 .cm-s-obsidian span.cm-hashtag-begin+.cm-hashtag.cm-meta {
   padding-right: 0;
-  background-color: var(--color-tag-edit);
   color: var(--tag-text);
 }
 
@@ -7500,7 +7557,6 @@ a.tag {
   border-bottom-right-radius: var(--radius-l);
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  background-color: var(--color-tag-edit);
   color: var(--tag-text);
   padding-right: 0.3em;
 }
@@ -9028,6 +9084,10 @@ mjx-container[jax='CHTML'] {
   font-size: var(--font-size-latex);
 }
 
+mjx-math {
+  color: var(--mjx-math-color);
+}
+
 .cm-s-obsidian pre.HyperMD-codeblock,
 .cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end),
 .markdown-preview-view code {
@@ -9099,7 +9159,8 @@ mjx-container[jax='CHTML'] {
 /*bold code text except code language*/
 code:not([class*='language-']) {
   font-weight: 600;
-  padding: 2px 3px;
+  padding: 2px 4px 1px;
+  margin: 0 1px;
   font-family: var(--font-family-preview-edit-code) !important;
 }
 
@@ -9998,20 +10059,20 @@ strong>em>.internal-link,
   text-decoration: underline !important;
 }
 
-span.cm-formatting.cm-formatting-strong.cm-strong {
+.cm-s-obsidian.mod-cm5 span.cm-formatting.cm-formatting-strong.cm-strong {
   opacity: 0.2;
 }
 
-span.cm-formatting.cm-formatting-em.cm-em {
+.cm-s-obsidian.mod-cm5 span.cm-formatting.cm-formatting-em.cm-em {
   opacity: 0.2;
 }
 
-.theme-dark .cm-formatting.cm-formatting-strong.cm-em.cm-strong {
+.theme-dark .cm-s-obsidian.mod-cm5 .cm-formatting.cm-formatting-strong.cm-em.cm-strong {
   opacity: 0.2;
   -webkit-text-fill-color: var(--green);
 }
 
-.theme-light .cm-formatting.cm-formatting-strong.cm-em.cm-strong {
+.theme-light .cm-s-obsidian.mod-cm5 .cm-formatting.cm-formatting-strong.cm-em.cm-strong {
   opacity: 0.2;
   -webkit-text-fill-color: var(--orange);
 }
@@ -10905,11 +10966,11 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
 }
 
 /* Image zoom  */
-body:not(.image-zoom) .markdown-reading-view img:not([class="emoji"]) {
+body:not(.image-zoom) .view-content img:not([class="emoji"]) {
   cursor: zoom-in;
 }
 
-body:not(.image-zoom) .markdown-reading-view .workspace-leaf-content[data-type="markdown"] .view-content img:not([class="emoji"]) {
+body:not(.image-zoom) .workspace-leaf-content[data-type="markdown"] .view-content img:not([class="emoji"]) {
   cursor: zoom-in;
   display: block;
 }
@@ -10931,20 +10992,10 @@ body:not(.image-zoom) .markdown-reading-view img:not([class="emoji"]):active {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iMCAwIDgwIDgwIj4KICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjRjJGNEY2Ii8+CiAgICA8ZyBmaWxsPSIjRkZGIj4KICAgICAgPHJlY3Qgd2lkdGg9IjIiIGhlaWdodD0iNzkiIHg9Ijc4Ii8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iMzkiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjU5Ii8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iMjAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSIyMCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjIwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iNDAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSI0MCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjQwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iNjAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSI2MCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjYwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSI3OSIgaGVpZ2h0PSIxIiB5PSIxOSIvPgogICAgICA8cmVjdCB3aWR0aD0iNzkiIGhlaWdodD0iMSIgeT0iMzkiLz4KICAgICAgPHJlY3Qgd2lkdGg9Ijc5IiBoZWlnaHQ9IjEiIHk9IjU5Ii8+CiAgICA8L2c+CiAgICA8cmVjdCB3aWR0aD0iODAiIGhlaWdodD0iMiIgeT0iNzgiIGZpbGw9IiNGRkYiLz4KICA8L2c+Cjwvc3ZnPgo=");
 }
 
-.internal-embed.image-embed.is-loaded img {
+.markdown-source-view.is-live-preview .internal-embed.image-embed.is-loaded img {
   margin: 3px auto;
   display: block;
 }
-
-/*
-.internal-embed.image-embed.is-loaded {
-  transition: all 700ms ease;
-}
-
-.internal-embed.image-embed.is-loaded:hover {
-  transform: scale(1.2);
-}
-*/
 
 /* file explorer :Wrap long nav text and some paddings */
 .nav-file-title,
@@ -11430,7 +11481,9 @@ ul.contains-task-list .list-collapse-indicator.collapse-indicator.collapse-icon:
 }
 
 /* ======= graph view ==============*/
-.workspace-leaf-content[data-type="graph"] canvas {}
+.workspace-leaf-content[data-type="graph"] canvas {
+
+}
 
 .workspace-leaf-content[data-type="graph"] .graph-controls {
   background-color: var(--graph-control-bg);
@@ -11745,7 +11798,6 @@ pre.language-note-imp::before {
   background:unset !important;
 }
 
-
 /* cloze */
 .app-container .markdown-preview-view pre.language-note-cloze code.language-note-cloze,
 .popover .markdown-preview-view pre.language-note-cloze code.language-note-cloze {
@@ -11769,7 +11821,6 @@ code.language-note-cloze.is-loaded:hover {
 .app-container .markdown-preview-view pre.language-note-cloze code.language-note-cloze.is-loaded:active, .popover .markdown-preview-view pre.language-note-cloze code.language-note-cloze.is-loaded:active {
   background-color: transparent !important;
 }
-
 
 pre.language-note-cloze::before {
   content: "TO RECALL";
@@ -12067,7 +12118,6 @@ div.mermaidTooltip {
 }
 
 /* Grid and axis */
-
 .mermaid .grid .tick {
   stroke: var(--text-muted) !important;
   opacity: 1 !important;
@@ -12093,7 +12143,6 @@ div.mermaidTooltip {
 /* Task styling */
 
 /* Default task */
-
 .task {
   stroke-width: 0.5px !important;
 }
@@ -12121,7 +12170,6 @@ div.mermaidTooltip {
 }
 
 /* Special case clickable */
-
 .task.clickable {
   cursor: pointer !important;
 }
@@ -12553,21 +12601,6 @@ g.stateGroup line {
   stroke: var(--text-muted) !important;
 }
 
-/*rect.task {
-  fill: var(--text-accent-hover);
-  fill-opacity: 1;
-  stroke: var(--text-normal);
-}
-
-g rect{
-  fill: var(--text-highlight-bg);
-}
-
-g text{
-  fill:var(--text-muted) !important;
-}
-*/
-
 .mermaid div:not(text.tracker-month-label) #arrowhead,
 .mermaid div:not(text.tracker-month-label) #sequencenumber,
 .mermaid div:not(text.tracker-month-label) .cluster text,
@@ -12684,7 +12717,6 @@ body.plugin-sliding-panes-rotate-header .workspace>.mod-root>.workspace-leaf>.wo
   --color-text-day: var(--text-normal);
   --color-text-today: var(--text-accent);
 
-  /*===*/
   padding: 0 8px 0 8px;
   margin: -21px -8px 0px -8px;
   line-height: 0.6;
@@ -12847,7 +12879,6 @@ body.plugin-sliding-panes-rotate-header .workspace>.mod-root>.workspace-leaf>.wo
 #calendar-container .week-num:hover {
   background-color: var(--calendar-week-hover) !important;
 }
-
 
 /* calendar-1 translucent, v0.2, for Blue Topaz*/
 body.style-options-for-calendar-plugin-style-one.theme-dark {
@@ -13189,6 +13220,10 @@ button.kanban-plugin__new-item-button:hover {
 
 .kanban-plugin__lane {
   background: transparent !important;
+}
+
+.theme-light .kanban-plugin__lane {
+  background: var(--background-transparent-black-or-white-3) !important;
 }
 
 .kanban-plugin__lane-wrapper {
@@ -13966,8 +14001,8 @@ filter: hue-rotate(690deg);
 aside {
   float: right;
   position: relative;
-  color: brown;
   left: 5px;
+  padding: 0 0 0 2px;
 }
 
 aside>h1,
@@ -13976,7 +14011,6 @@ aside>h2 {
   font-size: 16px !important;
   border: 1px solid;
   border-bottom: 1px solid !important;
-  border-radius: 3%;
   background-color: transparent;
   padding: 0px 5px 0px 5px;
   width: 130px;
@@ -13986,8 +14020,12 @@ aside>h2 {
   margin-left: 20%;
 }
 
+aside>h1:hover::before,
+aside>h2:hover::before {
+  display: none;
+}
+
 aside>h2 {
-  left: 130px;
   color: #dd9207 !important;
 }
 
@@ -14193,10 +14231,8 @@ aside>h2 {
     --search-text: #e0e0e0;
     --folder-title: #ffffff;
 
-    --text-highlight-bg: #89853b8a;
-    /*edit*/
-    --mark-highlight: #89853b8a;
-    /*preview*/
+    --text-highlight-bg: #89853b8a;/*edit*/
+    --mark-highlight: #89853b8a;/*preview*/
     --mark-highlight-strong-em: #fff7603a;
     --text-search-highlight-bg: #bb4361;
 
@@ -14277,7 +14313,6 @@ aside>h2 {
     --tag7: #9a1e93;
     --tag8: #6e2ec1;
     --tag9: #2244d8;
-    --color-tag-edit: #006feeb0;
     --tag-dailynote: #98c8ff;
     --tag-dailynote-bg: #0f60bd;
     --tag-weeklynote: #d1e6ff;
@@ -14674,7 +14709,7 @@ body.style-options-for-admonition-plugin .admonition-kanban .admonition-content 
   overflow: visible;
   margin: 0;
 }
-​
+
 body.style-options-for-admonition-plugin .admonition-kanban .is-mobile ul{ display: flex; }
 
 body.style-options-for-admonition-plugin .admonition-kanban ul {
@@ -14840,10 +14875,8 @@ body.style-options-for-admonition-plugin .admonition-kanban .task-list-item-chec
   border-color: var(--text-normal) !important;
 }
 
-
 /*blank ad分栏
-修改自 https://forum-zh.obsidian.md/t/topic/2081
-*/
+修改自 https://forum-zh.obsidian.md/t/topic/2081 */
 body.style-options-for-admonition-plugin .admonition-col2 {
   box-shadow: none!important;
 }
@@ -15370,7 +15403,6 @@ body.rainbow-checklist .checklist-plugin-main.markdown-preview-view li:nth-of-ty
 .hider-ribbon .workspace-split.mod-left-split {
   margin: 0;
 }
-
 
 /* ================================== */
 /* ========== Breadcrumbs =========== */
@@ -15990,23 +16022,28 @@ body:not(.outliner-plugin-bls).markdown-source-view.mod-cm5 .cm-hmd-list-indent 
   background-size: 1.45ch 1px !important;
 }
 
-
-/* ============ */
 /* ============ */
 /*image position*/
-/* ============ */
 /* ============ */
 img[alt$="left"],
 img[alt$="Left"],
 img[alt$="LEFT"],
-img[alt$="L"] {
+img[alt$="L"],
+.cm-s-obsidian.mod-cm6 .internal-embed.image-embed.is-loaded img[alt$="left"],
+.cm-s-obsidian.mod-cm6 .internal-embed.image-embed.is-loaded img[alt$="Left"],
+.cm-s-obsidian.mod-cm6 .internal-embed.image-embed.is-loaded img[alt$="LEFT"],
+.cm-s-obsidian.mod-cm6 .internal-embed.image-embed.is-loaded img[alt$="L"]  {
   margin-left: 0;
 }
 
 img[alt$="right"],
 img[alt$="Right"],
 img[alt$="RIGHT"],
-img[alt$="R"] {
+img[alt$="R"],
+.cm-s-obsidian.mod-cm6 .internal-embed.image-embed.is-loaded img[alt$="right"],
+.cm-s-obsidian.mod-cm6 .internal-embed.image-embed.is-loaded img[alt$="Right"],
+.cm-s-obsidian.mod-cm6 .internal-embed.image-embed.is-loaded img[alt$="RIGHT"],
+.cm-s-obsidian.mod-cm6 .internal-embed.image-embed.is-loaded img[alt$="R"] {
   margin-right: 0;
 }
 
@@ -16015,7 +16052,7 @@ img[alt$="Inline"],
 img[alt$="INLINE"],
 img[alt$="inl"] {
   display: inline !important;
-  padding: 0.2em 0.5em !important;
+  padding: 0.05em 0.05em !important;
   vertical-align: bottom;
 }
 
@@ -16024,7 +16061,7 @@ img[alt$="InlineL"],
 img[alt$="INLINEL"],
 img[alt$="inlL"] {
   float: left;
-  padding: 0 1em 0.5em 0 !important;
+  padding: 0 0.05em 0.05em 0 !important;
 }
 
 img[alt$="inlineR"],
@@ -16032,14 +16069,15 @@ img[alt$="InlineR"],
 img[alt$="INLINER"],
 img[alt$="inlR"] {
   float: right;
-  padding: 0 0 0.5em 1em !important;
+  padding: 0 0 0.05em 0.05em !important;
 }
-
 
 /* img captions */
 /* modified from Discordian theme by @radekkozak */
 .markdown-preview-view .image-embed[src$="center"],
-.markdown-preview-view .image-embed[src$="centre"] {
+.markdown-preview-view .image-embed[src$="centre"],
+.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="center"],
+.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="centre"] {
   clear: both;
   margin: 0.5rem auto;
   width: fit-content;
@@ -16047,7 +16085,9 @@ img[alt$="inlR"] {
 }
 
 .markdown-preview-view .image-embed[src$="center"]::after,
-.markdown-preview-view .image-embed[src$="centre"]::after {
+.markdown-preview-view .image-embed[src$="centre"]::after,
+.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="center"]::after,
+.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="centre"]::after {
   content: attr(alt);
   /* padding: 0 1rem 0 1rem; */
   margin-top: 0.5rem;
@@ -16057,7 +16097,8 @@ img[alt$="inlR"] {
   font-size: 0.85rem;
 }
 
-.markdown-preview-view .image-embed[src$="left"] {
+.markdown-preview-view .image-embed[src$="left"],
+.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="left"] {
   position: relative;
   float: left;
   margin-top: 0.5rem;
@@ -16068,7 +16109,8 @@ img[alt$="inlR"] {
   width: fit-content;
 }
 
-.markdown-preview-view .image-embed[src$="left"]::after {
+.markdown-preview-view .image-embed[src$="left"]::after,
+.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="left"]::after {
   content: attr(alt);
   padding: 0 1rem 0 1rem;
   margin-top: 0.5rem;
@@ -16078,7 +16120,8 @@ img[alt$="inlR"] {
   font-size: 0.85rem;
 }
 
-.markdown-preview-view .image-embed[src$="right"] {
+.markdown-preview-view .image-embed[src$="right"],
+.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="right"] {
   position: relative;
   float: right;
   margin-top: 0.5rem;
@@ -16089,47 +16132,8 @@ img[alt$="inlR"] {
   width: fit-content;
 }
 
-.markdown-preview-view .image-embed[src$="right"]::after {
-  content: attr(alt);
-  padding: 0 1rem 0 1rem;
-  margin-top: 0.5rem;
-  display: table-caption;
-  caption-side: bottom;
-  text-align: center;
-  font-size: 0.85rem;
-}
-/* img captions for  cm6 live preview */
-.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="center"],
-.markdown-source-view.mod-cm6.is-live-preview  .image-embed[src$="centre"] {
-  clear: both;
-  margin: 0.5rem auto!important;
-  width: fit-content;
-  display: block;
-}
-
-.markdown-source-view.mod-cm6.is-live-preview  .image-embed[src$="center"]::after,
-.markdown-source-view.mod-cm6.is-live-preview  .image-embed[src$="centre"]::after {
-  content: attr(alt);
-  /* padding: 0 1rem 0 1rem; */
-  margin-top: 0.5rem;
-  display: block;
-  caption-side: bottom;
-  text-align: center;
-  font-size: 0.85rem;
-}
-
-.markdown-source-view.mod-cm6.is-live-preview  .image-embed[src$="left"] {
-  position: relative;
-  float: left;
-  margin-top: 0.5rem;
-  margin-right: 1rem;
-  margin-bottom: 0.5rem;
-  clear: both;
-  display: table;
-  width: fit-content;
-}
-
-.markdown-source-view.mod-cm6.is-live-preview  .image-embed[src$="left"]::after {
+.markdown-preview-view .image-embed[src$="right"]::after,
+.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="right"]::after {
   content: attr(alt);
   padding: 0 1rem 0 1rem;
   margin-top: 0.5rem;
@@ -16139,25 +16143,19 @@ img[alt$="inlR"] {
   font-size: 0.85rem;
 }
 
-.markdown-source-view.mod-cm6.is-live-preview  .image-embed[src$="right"] {
-  position: relative;
-  float: right;
-  margin-top: 0.5rem;
-  margin-left: 1rem;
-  margin-bottom: 0.5rem;
-  clear: both;
-  display: table;
-  width: fit-content;
+/* image-grid-1 */
+/* adapted from https://github.com/Lithou/Sandbox/blob/main/.obsidian/snippets/pub-Image%20Flags.css */
+/* to get a kind of image grid with self-adapted size by placing images in the same row */
+span[alt*="+grid"] {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 5px;
 }
 
-.markdown-source-view.mod-cm6.is-live-preview  .image-embed[src$="right"]::after {
-  content: attr(alt);
-  padding: 0 1rem 0 1rem;
-  margin-top: 0.5rem;
-  display: table-caption;
-  caption-side: bottom;
-  text-align: center;
-  font-size: 0.85rem;
+.markdown-source-view.is-live-preview .internal-embed.image-embed.is-loaded[alt*="+grid"] {
+  display: inline-table;
+  vertical-align: middle;
+  max-width: 25%;
 }
 
 /*===================================================*/
@@ -16307,8 +16305,8 @@ body.style-options-for-buttons-plugin button.circle_btn {
 }
 /* blank 透明按钮*/
 body.style-options-for-buttons-plugin button.blank{
-background: #fff0f000;
-padding:  0px;
+  background: #fff0f000;
+  padding:  0px;
 }
 body.style-options-for-buttons-plugin button.blank:hover {
   animation: swing_image 0.8s linear 0s 1 normal;
@@ -16654,30 +16652,10 @@ and (min-width : 400px)
   background-color: transparent !important;
 }
 
-/*
-.markdown-source-view.is-live-preview span:not([class*=cm-formatting]).cm-em.cm-highlight.cm-strong + span:not([class*=cm-formatting]).cm-em.cm-highlight.cm-strong,
-.markdown-source-view.is-live-preview span:not([class*=cm-formatting]).cm-highlight.cm-strong + span:not([class*=cm-formatting]).cm-highlight.cm-strong {
-  border-radius: var(--radius-xs);
-  padding: 0 3px 1px;
-}
-
-.markdown-source-view.is-live-preview span.cm-formatting.cm-formatting-highlight.cm-highlight + span:not([class*=cm-formatting-link-start]).cm-highlight + span:not([class*=cm-formatting-link-start]).cm-highlight {
-  border-radius: var(--radius-xs);
-  padding: 0 3px 1px;
-}
-*/
-
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
   border-color: var(--theme-color);
   background-color: var(--background-blockquote);
 }
-
-/*
-.markdown-source-view.is-live-preview .cm-formatting-link.cm-formatting-link-start.cm-highlight + .cm-highlight.cm-hmd-internal-link + .cm-highlight.cm-hmd-internal-link {
-  border-radius: var(--radius-xs);
-  padding: 0 3px 1px;
-}
-*/
 
 .markdown-source-view.is-live-preview *:not(font)>em>strong,
 .markdown-source-view.is-live-preview *:not(font)>strong>em,
@@ -16880,10 +16858,6 @@ body.circular-checkbox .markdown-source-view.is-live-preview .task-list-item-che
 
 .cm-s-obsidian div.HyperMD-codeblock-end-bg {
   border-bottom: none;
-}
-
-.markdown-source-view.cm-s-obsidian.mod-cm6 .cm-line {
-  padding-left: 0;
 }
 
 .markdown-source-view.cm-s-obsidian.mod-cm6 .HyperMD-codeblock {
