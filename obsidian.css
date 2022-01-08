@@ -14016,11 +14016,9 @@ aside>h2 {
   border-bottom: 1px solid !important;
   background-color: transparent;
   padding: 0px 5px 0px 5px;
-  width: 130px;
+  max-width: 150px;
   color: #467cf0 !important;
   position: absolute;
-  left: -5px;
-  margin-left: 20%;
 }
 
 aside>h1:hover::before,
