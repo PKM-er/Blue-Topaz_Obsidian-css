@@ -4239,8 +4239,8 @@ body.color-scheme-options-topaz-nord.theme-light {
 
   --text-color-code: var(--nord8);
 
-  --color-view-header-gradient-1: var(--nord0);
-  --color-view-header-gradient-2: var(--nord0);
+  --color-view-header-gradient-1: var(--background-primary-bg-4-bt);
+  --color-view-header-gradient-2: var(--background-primary-bg-4-bt);
 
   --strong-em-color-1: var(--accent-strong);
   --strong-em-color-2: var(--accent-strong);
