@@ -4046,7 +4046,6 @@ body.color-scheme-options-topaz-nord.theme-dark {
   --mark-highlight-strong-em: var(--nord13-1);
 
   --text-selection: var(--nord9-2);
-  --text-on-accent: #dcddde;
 
   --interactive-accent: var(--nord9);
   --interactive-accent-rgb: 129, 161, 193;
@@ -4207,7 +4206,6 @@ body.color-scheme-options-topaz-nord.theme-light {
   --accent-em: var(--nord14);
 
   --text-selection: var(--nord9-2);
-  --text-on-accent: #dcddde;
 
   --interactive-accent: var(--nord9);
   --interactive-accent-rgb: 129, 161, 193;
@@ -10997,6 +10995,11 @@ body:not(.image-zoom) .markdown-reading-view img:not([class="emoji"]):active {
   display: block;
 }
 
+.markdown-source-view.mod-cm6 img {
+  display: block;
+  margin: auto;
+}
+
 /* file explorer :Wrap long nav text and some paddings */
 .nav-file-title,
 .nav-folder-title {
@@ -16029,10 +16032,10 @@ img[alt$="left"],
 img[alt$="Left"],
 img[alt$="LEFT"],
 img[alt$="L"],
-.cm-s-obsidian.mod-cm6 .internal-embed.image-embed.is-loaded img[alt$="left"],
-.cm-s-obsidian.mod-cm6 .internal-embed.image-embed.is-loaded img[alt$="Left"],
-.cm-s-obsidian.mod-cm6 .internal-embed.image-embed.is-loaded img[alt$="LEFT"],
-.cm-s-obsidian.mod-cm6 .internal-embed.image-embed.is-loaded img[alt$="L"]  {
+.markdown-source-view.mod-cm6 img[alt$="left"],
+.markdown-source-view.mod-cm6 img[alt$="Left"],
+.markdown-source-view.mod-cm6 img[alt$="LEFT"],
+.markdown-source-view.mod-cm6 img[alt$="L"]  {
   margin-left: 0;
 }
 
@@ -16040,10 +16043,10 @@ img[alt$="right"],
 img[alt$="Right"],
 img[alt$="RIGHT"],
 img[alt$="R"],
-.cm-s-obsidian.mod-cm6 .internal-embed.image-embed.is-loaded img[alt$="right"],
-.cm-s-obsidian.mod-cm6 .internal-embed.image-embed.is-loaded img[alt$="Right"],
-.cm-s-obsidian.mod-cm6 .internal-embed.image-embed.is-loaded img[alt$="RIGHT"],
-.cm-s-obsidian.mod-cm6 .internal-embed.image-embed.is-loaded img[alt$="R"] {
+.markdown-source-view.mod-cm6 img[alt$="right"],
+.markdown-source-view.mod-cm6 img[alt$="Right"],
+.markdown-source-view.mod-cm6 img[alt$="RIGHT"],
+.markdown-source-view.mod-cm6 img[alt$="R"] {
   margin-right: 0;
 }
 
