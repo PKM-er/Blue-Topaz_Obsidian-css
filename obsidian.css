@@ -9023,11 +9023,11 @@ body:not(.font-family-change-to-default) .markdown-source-view.mod-cm6 .cm-scrol
   letter-spacing: calc(var(--letter-space-main) * 0.03em);
 }
 
-.markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
-.markdown-source-view.is-readable-line-width .CodeMirror,
-.is-readable-line-width .markdown-preview-section,
-.is-readable-line-width .markdown-preview-section > div,
-.markdown-preview-view.is-readable-line-width .markdown-preview-section {
+.markdown-preview-view.is-readable-line-width:not(.matrix) .markdown-preview-sizer,
+.markdown-source-view.is-readable-line-width:not(.matrix) .CodeMirror,
+.markdown-preview-view:not(.matrix) .is-readable-line-width .markdown-preview-section,
+.markdown-preview-view:not(.matrix) .is-readable-line-width .markdown-preview-section > div,
+.markdown-preview-view.is-readable-line-width:not(.matrix) .markdown-preview-section {
   width: var(--line-width-readable);
   max-width: 100%;
   margin: 0 auto;
@@ -19362,9 +19362,7 @@ cssclass: matrix
   --matrix-4: var(--p-kanban-color-5);
   --matrix-5: var(--p-kanban-color-6);
 }
-.markdown-preview-view.matrix.is-readable-line-width .markdown-preview-sizer, .markdown-source-view.matrix.is-readable-line-width .CodeMirror, .matrix.is-readable-line-width .markdown-preview-section, .matrix.is-readable-line-width .markdown-preview-section > div, .markdown-preview-view.matrix.is-readable-line-width .markdown-preview-section {
-  width: 100%;
-}
+
 .markdown-preview-view.matrix table tr {
   display: flex;
 }
