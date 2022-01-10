@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.13.19。uid [20220108] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.13.19, uid [20220108] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.13.19。uid [20220110] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.13.19, uid [20220110] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 @LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @awyugan */
@@ -1715,6 +1715,7 @@ settings:
   --nord7: #8fbcbb;
   --nord7-transparent: #8fbcbb2f;
   --nord8: #88C0D0;
+  --nord8-0: #65afc4;
   --nord9: #81a1c1;
   --nord9-1: #81a1c16c;
   --nord9-2: #81a1c13c;
@@ -1724,8 +1725,10 @@ settings:
   --nord11-1: #BF616A4b;
   --nord12: #D08770;
   --nord13: #EBCB8B;
+  --nord13-0: #e2b65e;
   --nord13-1: #ebcb8b4b;
   --nord14: #A3BE8C;
+  --nord14-0: #95b677;
   --nord15: #B48EAD;
 }
 
@@ -4203,7 +4206,7 @@ body.color-scheme-options-topaz-nord.theme-light {
   --text-accent: var(--nord9);
   --text-accent-hover: var(--nord9);
 
-  --accent-em: var(--nord14);
+  --accent-em: var(--nord14-0);
 
   --text-selection: var(--nord9-2);
 
@@ -4227,15 +4230,15 @@ body.color-scheme-options-topaz-nord.theme-light {
 
   --h1-color: var(--nord11);
   --h2-color: var(--nord12);
-  --h3-color: var(--nord13);
-  --h4-color: var(--nord14);
-  --h5-color: var(--nord8);
+  --h3-color: var(--nord13-0);
+  --h4-color: var(--nord14-0);
+  --h5-color: var(--nord8-0);
   --h6-color: var(--nord15);
 
   --background-code: var(--nord6-2);
   --background-blockquote: var(--nord6-2);
 
-  --text-color-code: var(--nord8);
+  --text-color-code: var(--nord8-0);
 
   --color-view-header-gradient-1: var(--background-primary-bg-4-bt);
   --color-view-header-gradient-2: var(--background-primary-bg-4-bt);
@@ -4252,8 +4255,8 @@ body.color-scheme-options-topaz-nord.theme-light {
 
   --list-ul-block-color: var(--nord12);
   --list-ul-disc-color: var(--nord12);
-  --green-1: var(--nord14);
-  --list-ul-hover: var(--nord13);
+  --green-1: var(--nord14-0);
+  --list-ul-hover: var(--nord13-0);
   --list-ol-block-color: var(--nord9);
   --list-ol-number-color: var(--nord9);
   --list-ol-hover: var(--nord7);
@@ -8598,56 +8601,52 @@ body.clutter-free-headings div:not(.cm-active).cm-line  span:not(.cm-formatting-
   color: var(--text-muted);
   overflow: visible;
 }
-
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-1:last-child::before {
   font-weight:normal;
-content: 'H1';
-margin-top: calc(var(--font-size-h1) - 0.1em);
-
+  content: 'H1';
+  margin-top: calc(var(--font-size-h1) - 0.1em);
 }
-
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-2:last-child::before {
-font-weight:normal;
-content: 'H2';
-margin-top: calc(var(--font-size-h2) - 0.2em);
-
+  font-weight:normal;
+  content: 'H2';
+  margin-top: calc(var(--font-size-h2) - 0.2em);
 }
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-3:last-child::before {
   font-weight:normal;
-content: 'H3';
-margin-top: calc(var(--font-size-h3) - 0.2em);
+  content: 'H3';
+  margin-top: calc(var(--font-size-h3) - 0.2em);
 }
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-4:last-child::before {
   font-weight:normal;
-content: 'H4';
-margin-top: calc(var(--font-size-h4) - 0.3em);
+  content: 'H4';
+  margin-top: calc(var(--font-size-h4) - 0.3em);
 }
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-5:last-child:before {
   font-weight:normal;
-content: 'H5';
-margin-top: calc(var(--font-size-h5) - 0.4em);
+  content: 'H5';
+  margin-top: calc(var(--font-size-h5) - 0.4em);
 }
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-6:last-child::before {
   font-weight:normal;
-content: 'H6';
-margin-top: calc(var(--font-size-h6) - 0.4em);
+  content: 'H6';
+  margin-top: calc(var(--font-size-h6) - 0.4em);
 }
 /*适配source mode 模式*/
 body.clutter-free-headings  .mod-cm6 div:not(.cm-active).cm-line span.cm-formatting-header {
- display:none;
-  }
+  display:none;
+}
 
 /*适配传统模式*/
 body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line.hmd-inactive-line  span.cm-formatting-header::before {
   position: absolute;
- margin-top: 10px;
+  margin-top: 10px;
   font-size: 0.7rem;
   width: auto;
   margin-left: -18px;
   padding: 0px 2px;
   border-radius: var(--radius-xs);
-color: var(--text-muted);
-overflow:visible;
+  color: var(--text-muted);
+  overflow:visible;
 }
 body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line:not(.hmd-inactive-line)  span.cm-formatting-header::before {
   position: absolute;
@@ -8806,7 +8805,6 @@ body.non-border-bottom-header .markdown-preview-view h2 {
 .markdown-preview-view h6 {
   position: relative;
 }
-
 .markdown-preview-view h1:hover::before {
   content: 'H1';
   position: absolute;
@@ -8818,7 +8816,6 @@ body.non-border-bottom-header .markdown-preview-view h2 {
   border-radius: var(--radius-xs);
   top: 25px;
 }
-
 .markdown-preview-view h2:hover::before {
   content: 'H2';
   position: absolute;
@@ -8830,7 +8827,6 @@ body.non-border-bottom-header .markdown-preview-view h2 {
   border-radius: var(--radius-xs);
   top: 23px;
 }
-
 .markdown-preview-view h3:hover::before {
   content: 'H3';
   position: absolute;
@@ -8842,7 +8838,6 @@ body.non-border-bottom-header .markdown-preview-view h2 {
   border-radius: var(--radius-xs);
   top: 19px;
 }
-
 .markdown-preview-view h4:hover::before {
   content: 'H4';
   position: absolute;
@@ -8854,7 +8849,6 @@ body.non-border-bottom-header .markdown-preview-view h2 {
   border-radius: var(--radius-xs);
   top: 20px;
 }
-
 .markdown-preview-view h5:hover::before {
   content: 'H5';
   position: absolute;
@@ -8866,7 +8860,6 @@ body.non-border-bottom-header .markdown-preview-view h2 {
   border-radius: var(--radius-xs);
   top: 20px;
 }
-
 .markdown-preview-view h6:hover::before {
   content: 'H6';
   position: absolute;
@@ -9129,7 +9122,6 @@ mjx-math {
 }
 
 /*inline code*/
-
 .cm-s-obsidian.mod-cm6 .HyperMD-codeblock span.cm-inline-code {
   display:inline-block;
   padding:unset; 
@@ -11412,7 +11404,7 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
 }
 
 .markdown-preview-view li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon {
-  transform: translateX(-10px) translateY(5px) rotate(-90deg);
+  transform: translateX(-10px) translateY(8px) rotate(-90deg);
   opacity: 0.5;
 }
 
@@ -16033,7 +16025,11 @@ img[alt$="L"],
 .markdown-source-view.mod-cm6 img[alt$="left"],
 .markdown-source-view.mod-cm6 img[alt$="Left"],
 .markdown-source-view.mod-cm6 img[alt$="LEFT"],
-.markdown-source-view.mod-cm6 img[alt$="L"]  {
+.markdown-source-view.mod-cm6 img[alt$="L"],
+.internal-embed.image-embed.is-loaded[alt$="left"] img[alt$="left"],
+.internal-embed.image-embed.is-loaded[alt$="Left"] img[alt$="Left"],
+.internal-embed.image-embed.is-loaded[alt$="LEFT"] img[alt$="LEFT"],
+.internal-embed.image-embed.is-loaded[alt$="L"] img[alt$="L"] {
   margin-left: 0;
 }
 
@@ -16044,7 +16040,11 @@ img[alt$="R"],
 .markdown-source-view.mod-cm6 img[alt$="right"],
 .markdown-source-view.mod-cm6 img[alt$="Right"],
 .markdown-source-view.mod-cm6 img[alt$="RIGHT"],
-.markdown-source-view.mod-cm6 img[alt$="R"] {
+.markdown-source-view.mod-cm6 img[alt$="R"],
+.internal-embed.image-embed.is-loaded[alt$="right"] img[alt$="right"],
+.internal-embed.image-embed.is-loaded[alt$="Right"] img[alt$="Right"],
+.internal-embed.image-embed.is-loaded[alt$="RIGHT"] img[alt$="RIGHT"],
+.internal-embed.image-embed.is-loaded[alt$="R"] img[alt$="R"] {
   margin-right: 0;
 }
 
@@ -16343,7 +16343,6 @@ body.style-options-for-buttons-plugin button.grad_button{
     translateZ(var(--tz, -12px));
 }
   
-  
 body.style-options-for-buttons-plugin button.grad_button:hover {
   animation: swing_image 0.8s linear 0s 1 normal;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
@@ -16351,20 +16350,16 @@ body.style-options-for-buttons-plugin button.grad_button:hover {
 body.style-options-for-buttons-plugin button.g_purple {
   background: linear-gradient(135deg, #6e8efb, #a777e3);
 }
-  
 body.style-options-for-buttons-plugin  button.g_blue {
   background: linear-gradient(135deg, #3370ff, #9fb9f6);  
 }
-  
 body.style-options-for-buttons-plugin button.g_green {
   background: linear-gradient(135deg, #0eb347, #5be08a);
 }
-  
 body.style-options-for-buttons-plugin button.g_lightgreen {
   color: #17695e;
   background: linear-gradient(135deg, #adfdad, #dafdda);
 }
-  
 body.style-options-for-buttons-plugin  button.g_yellow {
   color: #836f20;
   background: linear-gradient(135deg, #fcd539, #ffeb9b);
@@ -18790,7 +18785,6 @@ body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-title
 
 /*==========*/
 /*style settings blockquote quotation marks*/
-
 body.blockquote-style-quotation-mark .markdown-preview-view blockquote {
   color: var(--text-normal);
   box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1);
