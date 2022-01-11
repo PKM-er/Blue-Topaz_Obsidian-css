@@ -1352,6 +1352,19 @@ settings:
             format: rgb-values
     default: '#cccecc'
   -
+    id: codeblock-folder
+    title: 2.3.10 Codeblock
+    title.zh: 2.3.10 代码框
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: whole-code-wrap
+    title: Code Wrap
+    title.zh: 代码换行
+    type: class-toggle
+    default: false
+  -
     id: style-options-for-other-plugins
     title: 3. For Plugins
     title.zh: 3. 插件样式
@@ -10590,19 +10603,23 @@ body.adjustable-embed-content-height .markdown-preview-view .markdown-embed-cont
 }
 
 /* Source: https://github.com/AGMStudio/prism-theme-one-dark */
-code[class*='language-'],
-pre[class*='language-'] {
-  word-spacing: normal !important;
-  word-break: normal !important;
-  word-wrap: pre-wrap !important;
-  line-height: 1.5 !important;
+body:not(.whole-code-wrap) code[class*='language-'],
+body:not(.whole-code-wrap) pre[class*='language-'] {
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: break-word;
+  white-space: pre;
   -moz-tab-size: 4 !important;
   -o-tab-size: 4 !important;
   tab-size: 4 !important;
-  -webkit-hyphens: none !important;
-  -moz-hyphens: none !important;
-  -ms-hyphens: none !important;
-  hyphens: none !important;
+}
+
+body.whole-code-wrap code[class*='language-'],
+body.whole-code-wrap pre[class*='language-'] {
+  word-spacing: normal;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: normal;
 }
 
 /* Inline code */
