@@ -1491,6 +1491,32 @@ settings:
     default: false
     description : 目前内置class：🔸circle_btn 圆形按钮🔸blank_btn 透明按钮🔸grad_button渐变按钮🟣g_purple 紫色🔵g_blue蓝色🟢g_green 绿色💚g_lightgreen 浅绿🟡g_yellow黄色
   -
+    id: style-options-for-buttons-plugin-heading
+    title: 3.6 Dataview
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: style-options-for-dataview-plugin-heading
+    title: 3.6.1 Dataview List
+    type: heading
+    level: 3
+    collapsed: true
+  - 
+    id: folder-dataview-list-style
+    title: Style
+    title.zh: 样式
+    type: class-select
+    allowEmpty: false
+    default: dataview-list-style-pacman
+    options:
+      -
+        label: Pac-man
+        value: dataview-list-style-pacman
+      - 
+        label: Normal
+        value: dataview-list-style-normal
+  -
     id: build-in-style-folder
     title: 4. Built-in Style Intro
     title.zh: 4. 内置样式介绍
@@ -15356,27 +15382,27 @@ ul.dataview.list-view-ul>li:not(.task-list-item)::before {
   padding: 0 5px 0 0;
 }
 
-ul.dataview.list-view-ul>li:not(.task-list-item):first-of-type::before {
+body.dataview-list-style-pacman ul.dataview.list-view-ul>li:not(.task-list-item):first-of-type::before {
   content: '\edcf';
   color: var(--list-ol-number-color);
 }
 
-ul.dataview.list-view-ul>li:not(.task-list-item):not(:first-of-type):nth-of-type(2n):not(:nth-of-type(10n))::before {
+body.dataview-list-style-pacman ul.dataview.list-view-ul>li:not(.task-list-item):not(:first-of-type):nth-of-type(2n):not(:nth-of-type(10n))::before {
   content: '\eaee';
   color: var(--list-ul-disc-color);
 }
 
-ul.dataview.list-view-ul>li:not(.task-list-item):not(:first-of-type):nth-of-type(2n+1)::before {
+body.dataview-list-style-pacman ul.dataview.list-view-ul>li:not(.task-list-item):not(:first-of-type):nth-of-type(2n+1)::before {
   content: '\edd1';
   color: var(--list-ul-disc-color);
 }
 
-ul.dataview.list-view-ul>li:not(.task-list-item):nth-of-type(10n)::before {
+body.dataview-list-style-pacman ul.dataview.list-view-ul>li:not(.task-list-item):nth-of-type(10n)::before {
   content: '\ef29';
   color:  var(--list-ol-number-color);
 }
 
-ul.dataview.list-view-ul {
+body.dataview-list-style-pacman ul.dataview.list-view-ul {
   list-style: none;
 }
 
@@ -16191,7 +16217,6 @@ span[alt*="+grid"] {
 
 /*按钮颜色*/
 /* 图标按钮*/
-
 body.style-options-for-buttons-plugin button.circle_btn {
   font-size: 12px;
   word-break: keep-all;
@@ -17582,9 +17607,8 @@ body:not(.background-image-settings-switch).background-image-settings-markdown-p
   border-left: 0.125em solid var(--list-ul-block-color);
 }
 
-/*=========*/
-/* Coloured Folders for Blue Topaz 0-Z, v0.3
 
+/* Coloured Folders for Blue Topaz 0-Z, v0.3
 modified from the snippet created by @Lithou */
 body.folder-style-change-options-colorful.theme-dark {
   --FoldText: #cbcbcb;
@@ -18391,42 +18415,6 @@ body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-previ
   border: none;
 }
 
-/* 
-body.blockquote-style-quotation-mark 
-.markdown-source-view.mod-cm6.is-live-preview 
-.HyperMD-quote:not(.cm-active) span.cm-quote.cm-quote:not(.cm-formatting)::before {
-  content: '“';
-  font-weight: 700;
-  font-size: 60px;
-  font-family: Arial, serif;
-  color: var(--text-accent);
-  position: absolute;
-  top: -10px;
-  left: -0.5em;
-}
-body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
-.cm-content div.HyperMD-quote  span.cm-quote.cm-quote-1+ span.cm-quote.cm-quote-1:not(.cm-formatting)::before {
-display: none;
-}
-body.blockquote-style-quotation-mark 
-.markdown-source-view.mod-cm6.is-live-preview 
-.HyperMD-quote:not(.cm-active) span.cm-quote.cm-quote-1:not(.cm-formatting):nth-child(n+5):before {
-  display: none;
-}
-body.blockquote-style-quotation-mark 
-.markdown-source-view.mod-cm6.is-live-preview 
-.HyperMD-quote:not(.cm-active) span.cm-quote.cm-quote-1.cm-hmd-internal-link:not(.cm-formatting)::before {
-  display: none;
-}
-body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
-.cm-content div.HyperMD-quote-1 + .HyperMD-quote-1 span.cm-quote.cm-quote-1:not(.cm-formatting)::before {
-display: none;
-}
-body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
-.cm-content div.HyperMD-quote-1 + .HyperMD-quote-1 span.cm-quote.cm-quote-1:not(.cm-formatting) {
-padding-top: 0px;
-} */
-
 /*speech bubble-1*/
 body.blockquote-style-speech-bubble-one .markdown-preview-view blockquote {
   position: relative;
@@ -18750,17 +18738,11 @@ body.background-settings-workplace-background-image.background-settings-workplac
 
 body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-container-before.is-before-active .workspace-tab-header-inner, 
 body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-container-after.is-after-active .workspace-tab-header-inner, body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-header.is-before-active .workspace-tab-header-inner, 
-body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-header.is-after-active .workspace-tab-header-inner {
-  background-color: transparent;
-}
-
+body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-header.is-after-active .workspace-tab-header-inner,
 body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-container-before.is-before-active, 
 body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-container-after.is-after-active,
 body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-header.is-before-active, 
-body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-header.is-after-active {
-  background-color: transparent;
-}
-
+body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-header.is-after-active,
 body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-header-container {
   background-color: transparent;
 }
