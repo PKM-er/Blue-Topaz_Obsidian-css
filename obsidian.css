@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.13.19。uid [20220111] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.13.19, uid [20220111] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.13.19。uid [20220112] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.13.19, uid [20220112] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 @LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @awyugan */
@@ -10104,10 +10104,8 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
 /*============bigger link popup preview  ================*/
 .popover.hover-popover {
   position: absolute;
-  transform: scale(1);
   min-height: 50px;
   width: 500px;
-  padding: 3px 0 0;
   box-shadow: 0 0 6px 6px var(--theme-color-translucent-1);
   background: var(--background-primary);
 }
@@ -11744,7 +11742,8 @@ pre.language-note-imp::before {
 code.language-note-cloze.is-loaded:hover {
   cursor: pointer;
 }
-.app-container .markdown-preview-view pre.language-note-cloze code.language-note-cloze.is-loaded:active, .popover .markdown-preview-view pre.language-note-cloze code.language-note-cloze.is-loaded:active {
+.app-container .markdown-preview-view pre.language-note-cloze code.language-note-cloze.is-loaded:active, 
+.popover .markdown-preview-view pre.language-note-cloze code.language-note-cloze.is-loaded:active {
   background-color: transparent !important;
 }
 
@@ -15344,38 +15343,46 @@ li.dataview-result-list-li ul>li:not(.task-list-item) {
   border-left: none !important;
 }
 
+ul.dataview.list-view-ul>li:not(.task-list-item)::before {
+  width: 0.9em;
+  top: 3px;
+  height: 0.9em;
+  margin-right: 3px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 ul.dataview.list-view-ul>li:not(.task-list-item):first-of-type::before {
-  content: '\eac2';
-  font-family: boxicons;
-  font-size: 0.8em;
-  padding: 0 5px 0 0;
-  color: var(--list-ul-disc-color);
+  position: relative;
+  content: " ";
+  display: inline-block;
+  background-color: var(--list-ul-disc-color);
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22c3.719 0 7.063-2.035 8.809-5.314L13 12l7.809-4.686C19.063 4.035 15.719 2 12 2 6.486 2 2 6.486 2 12s4.486 10 10 10zm-.5-16a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 11.5 6z"></path></svg>');
 }
 
 ul.dataview.list-view-ul>li:not(.task-list-item):not(:first-of-type):nth-of-type(2n):not(:nth-of-type(10n))::before {
-  content: '\ed51';
-  font-family: boxicons;
-  font-size: 0.8em;
-  padding: 0 5px 0 0;
-  color: var(--list-ul-disc-color);
+  position: relative;
+  content: " ";
+  display: inline-block;
+  background-color: var(--list-ul-disc-color);
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c-4.963 0-9 4.038-9 9v8h.051c.245 1.691 1.69 3 3.449 3 1.174 0 2.074-.417 2.672-1.174a3.99 3.99 0 0 0 5.668-.014c.601.762 1.504 1.188 2.66 1.188 1.93 0 3.5-1.57 3.5-3.5V11c0-4.962-4.037-9-9-9zm7 16.5c0 .827-.673 1.5-1.5 1.5-.449 0-1.5 0-1.5-2v-1h-2v1c0 1.103-.897 2-2 2s-2-.897-2-2v-1H8v1c0 1.845-.774 2-1.5 2-.827 0-1.5-.673-1.5-1.5V11c0-3.86 3.141-7 7-7s7 3.14 7 7v7.5z"></path><circle cx="9" cy="10" r="2"></circle><circle cx="15" cy="10" r="2"></circle></svg>');
 }
 
 ul.dataview.list-view-ul>li:not(.task-list-item):not(:first-of-type):nth-of-type(2n+1)::before {
-  content: '\eac4';
-  font-family: boxicons;
-  font-size: 0.8em;
-  padding: 0 5px 0 0;
-  display: inline-block;
   position: relative;
-  color: var(--list-ul-disc-color);
+  content: " ";
+  display: inline-block;
+  background-color: var(--list-ul-disc-color);
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 11v8h.051c.245 1.692 1.69 3 3.449 3 1.174 0 2.074-.417 2.672-1.174a3.99 3.99 0 0 0 5.668-.014c.601.762 1.504 1.188 2.66 1.188 1.93 0 3.5-1.57 3.5-3.5V11c0-4.962-4.037-9-9-9s-9 4.038-9 9zm6 1c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2zm6-4c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z"></path></svg>');
 }
 
 ul.dataview.list-view-ul>li:not(.task-list-item):nth-of-type(10n)::before {
-  content: '\eac2';
-  font-family: boxicons;
-  font-size: 0.8em;
-  padding: 0 5px 0 0;
-  color: var(--green-1);
+  position: relative;
+  content: " ";
+  display: inline-block;
+  background-color:  var(--list-ol-number-color);
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.45,8.74h0A2.23,2.23,0,0,1,21.64,7a3.51,3.51,0,0,0,.24-2.47,3.55,3.55,0,0,0-2.45-2.45A3.51,3.51,0,0,0,17,2.36a2.23,2.23,0,0,1-1.7.19,10.07,10.07,0,0,0-6.53,0A9.87,9.87,0,0,0,2.54,8.73a10.07,10.07,0,0,0,0,6.53A2.23,2.23,0,0,1,2.36,17a3.51,3.51,0,0,0-.24,2.47,3.55,3.55,0,0,0,2.45,2.45A3.51,3.51,0,0,0,7,21.64a2.23,2.23,0,0,1,1.7-.19A9.83,9.83,0,0,0,12,22a10.33,10.33,0,0,0,3.27-.54,9.87,9.87,0,0,0,6.19-6.19A10.07,10.07,0,0,0,21.45,8.74ZM12,7a5,5,0,0,0-5,5H5a7,7,0,0,1,7-7Z"></path></svg>');
 }
 
 ul.dataview.list-view-ul {
@@ -15389,13 +15396,18 @@ ul.dataview.dataview-ul.dataview-result-list-root-ul>li.dataview-result-list-li 
 }
 
 ul.dataview.dataview-ul.dataview-result-list-root-ul>li.dataview-result-list-li::before {
-  content: '\ee2e';
-  font-family: boxicons;
-  font-size: 0.75em;
-  margin-left: -1.3em;
-  margin-top: 0.1em;
-  position: absolute;
-  color: var(--list-ul-disc-color);
+  width: 0.9em;
+  top: 3px;
+  height: 0.9em;
+  margin-right: 3px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  content: " ";
+  display: inline-block;
+  background-color:  var(--list-ul-disc-color);
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.45,8.74h0A2.23,2.23,0,0,1,21.64,7a3.51,3.51,0,0,0,.24-2.47,3.55,3.55,0,0,0-2.45-2.45A3.51,3.51,0,0,0,17,2.36a2.23,2.23,0,0,1-1.7.19,10.07,10.07,0,0,0-6.53,0A9.87,9.87,0,0,0,2.54,8.73a10.07,10.07,0,0,0,0,6.53A2.23,2.23,0,0,1,2.36,17a3.51,3.51,0,0,0-.24,2.47,3.55,3.55,0,0,0,2.45,2.45A3.51,3.51,0,0,0,7,21.64a2.23,2.23,0,0,1,1.7-.19A9.83,9.83,0,0,0,12,22a10.33,10.33,0,0,0,3.27-.54,9.87,9.87,0,0,0,6.19-6.19A10.07,10.07,0,0,0,21.45,8.74ZM12,7a5,5,0,0,0-5,5H5a7,7,0,0,1,7-7Z"></path></svg>');
 }
 
 ul.dataview.dataview-ul.dataview-result-list-root-ul {
@@ -16829,7 +16841,7 @@ body:not(.remove-file-icons) .nav-file-title.is-active .obsidian-icon-folder-ico
 }
 
 .nav-action-button svg.stacked-levels {
-  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 13.01h-7V10h1c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v4c0 1.103.897 2 2 2h1v3.01H4V18H3v4h4v-4H6v-2.99h5V18h-1v4h4v-4h-1v-2.99h5V18h-1v4h4v-4h-1v-4.99zM10 8V4h4l.002 4H10z"/></svg>');
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0H24V24H0z"/><path d="M10 2c.552 0 1 .448 1 1v4c0 .552-.448 1-1 1H8v2h5V9c0-.552.448-1 1-1h6c.552 0 1 .448 1 1v4c0 .552-.448 1-1 1h-6c-.552 0-1-.448-1-1v-1H8v6h5v-1c0-.552.448-1 1-1h6c.552 0 1 .448 1 1v4c0 .552-.448 1-1 1h-6c-.552 0-1-.448-1-1v-1H7c-.552 0-1-.448-1-1V8H4c-.552 0-1-.448-1-1V3c0-.552.448-1 1-1h6zm9 16h-4v2h4v-2zm0-8h-4v2h4v-2zM9 4H5v2h4V4z"/></svg>');
 }
 
 .nav-action-button svg.uppercase-lowercase-a {
@@ -18345,20 +18357,23 @@ body.blockquote-style-quotation-mark .markdown-preview-view blockquote {
 
 body.blockquote-style-quotation-mark .markdown-preview-view blockquote p {
   position: relative;
-  margin-left: 1.05em;
+  margin-left: 0.7em;
   margin-right: 0;
   font-size: var(--font-size-preview-blockquote);
 }
 
 body.blockquote-style-quotation-mark .markdown-preview-view blockquote p:first-of-type::before {
-  content: '\ee81';
-  font-weight: 700;
-  font-size: 2.2em;
-  font-family: boxicons;
-  color: var(--text-accent);
   position: absolute;
-  top: -0.4em;
-  left: -1.15em;
+  top: 0;
+  left: -2.4rem;
+  content: " ";
+  width: 2em;
+  height: 2em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: var(--text-folder-file-icon);
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35l.539-.222.474-.197-.485-1.938-.597.144c-.191.048-.424.104-.689.171-.271.05-.56.187-.882.312-.318.142-.686.238-1.028.466-.344.218-.741.4-1.091.692-.339.301-.748.562-1.05.945-.33.358-.656.734-.909 1.162-.293.408-.492.856-.702 1.299-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539l.025.168.026-.006A4.5 4.5 0 1 0 6.5 10zm11 0c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35l.539-.222.474-.197-.485-1.938-.597.144c-.191.048-.424.104-.689.171-.271.05-.56.187-.882.312-.317.143-.686.238-1.028.467-.344.218-.741.4-1.091.692-.339.301-.748.562-1.05.944-.33.358-.656.734-.909 1.162-.293.408-.492.856-.702 1.299-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539l.025.168.026-.006A4.5 4.5 0 1 0 17.5 10z"></path></svg>');
 }
 
 body.blockquote-style-quotation-mark .markdown-preview-view li>blockquote p:first-of-type::before {
@@ -18368,9 +18383,8 @@ body.blockquote-style-quotation-mark .markdown-preview-view li>blockquote p:firs
 /*style settings blockquote quotation marks for cm6 live preview*/
 body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
   margin-left: 1.5em !important;
-  padding-right: 10%;
+  padding-left: 2em !important;
   border-left-width: 0px;
-
 }
 /* body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
 .HyperMD-quote span.cm-quote:not(.cm-formatting){
@@ -18383,42 +18397,33 @@ body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-previ
 body.blockquote-style-quotation-mark 
 .markdown-source-view.mod-cm6.is-live-preview 
 .HyperMD-quote:not(.cm-active) span.cm-hmd-indent-in-quote:not(.cm-formatting)::before {
-  content: '“';
-  font-weight: 700;
-  font-size: 60px;
-  font-family: Arial, serif;
-  color: var(--text-accent);
   position: absolute;
-  margin-top: -0.4em;
-  margin-left: -0.5em;
+  top: 0.1rem;
+  left: -2.4rem;
+  content: " ";
+  width: 2em;
+  height: 2em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: var(--text-folder-file-icon);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35l.539-.222.474-.197-.485-1.938-.597.144c-.191.048-.424.104-.689.171-.271.05-.56.187-.882.312-.318.142-.686.238-1.028.466-.344.218-.741.4-1.091.692-.339.301-.748.562-1.05.945-.33.358-.656.734-.909 1.162-.293.408-.492.856-.702 1.299-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539l.025.168.026-.006A4.5 4.5 0 1 0 6.5 10zm11 0c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35l.539-.222.474-.197-.485-1.938-.597.144c-.191.048-.424.104-.689.171-.271.05-.56.187-.882.312-.317.143-.686.238-1.028.467-.344.218-.741.4-1.091.692-.339.301-.748.562-1.05.944-.33.358-.656.734-.909 1.162-.293.408-.492.856-.702 1.299-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539l.025.168.026-.006A4.5 4.5 0 1 0 17.5 10z"></path></svg>');
 }
 body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
-.cm-content div.HyperMD-quote-1 + .HyperMD-quote-1 span.cm-hmd-indent-in-quote:not(.cm-formatting)::before {
-display: none;
-}
+.cm-content div.HyperMD-quote-1 + .HyperMD-quote-1 span.cm-hmd-indent-in-quote:not(.cm-formatting)::before,
 body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
-.cm-content div.HyperMD-quote-2 + .HyperMD-quote-2 span.cm-hmd-indent-in-quote:not(.cm-formatting)::before {
-display: none;
-}
+.cm-content div.HyperMD-quote-2 + .HyperMD-quote-2 span.cm-hmd-indent-in-quote:not(.cm-formatting)::before,
 body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
-.cm-content div.HyperMD-quote-3 + .HyperMD-quote-3 span.cm-hmd-indent-in-quote:not(.cm-formatting)::before {
-display: none;
-}
+.cm-content div.HyperMD-quote-3 + .HyperMD-quote-3 span.cm-hmd-indent-in-quote:not(.cm-formatting)::before,
 body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
-.cm-content div.HyperMD-quote-3 + .HyperMD-quote-2 span.cm-hmd-indent-in-quote:not(.cm-formatting)::before {
-display: none;
-}
+.cm-content div.HyperMD-quote-3 + .HyperMD-quote-2 span.cm-hmd-indent-in-quote:not(.cm-formatting)::before,
 body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
-.cm-content div.HyperMD-quote-3 + .HyperMD-quote-1 span.cm-hmd-indent-in-quote:not(.cm-formatting)::before {
-display: none;
-}
+.cm-content div.HyperMD-quote-3 + .HyperMD-quote-1 span.cm-hmd-indent-in-quote:not(.cm-formatting)::before,
 body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
-.cm-content div.HyperMD-quote-2 + .HyperMD-quote-2 span.cm-hmd-indent-in-quote:not(.cm-formatting)::before {
-display: none;
-}
+.cm-content div.HyperMD-quote-2 + .HyperMD-quote-2 span.cm-hmd-indent-in-quote:not(.cm-formatting)::before,
 body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
 .cm-content div.HyperMD-quote-2 + .HyperMD-quote-1 span.cm-hmd-indent-in-quote:not(.cm-formatting)::before {
-display: none;
+  display: none;
 }
 body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-preview 
 .cm-content div.HyperMD-quote .cm-blockquote-border {
