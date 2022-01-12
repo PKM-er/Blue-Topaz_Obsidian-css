@@ -15351,45 +15351,29 @@ li.dataview-result-list-li ul>li:not(.task-list-item) {
 }
 
 ul.dataview.list-view-ul>li:not(.task-list-item)::before {
-  width: 0.9em;
-  top: 3px;
-  height: 0.9em;
-  margin-right: 3px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
+  font-family: boxicons;
+  font-size: 0.8em;
+  padding: 0 5px 0 0;
 }
 
 ul.dataview.list-view-ul>li:not(.task-list-item):first-of-type::before {
-  position: relative;
-  content: " ";
-  display: inline-block;
-  background-color: var(--list-ul-disc-color);
-  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22c3.719 0 7.063-2.035 8.809-5.314L13 12l7.809-4.686C19.063 4.035 15.719 2 12 2 6.486 2 2 6.486 2 12s4.486 10 10 10zm-.5-16a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 11.5 6z"></path></svg>');
+  content: '\edcf';
+  color: var(--list-ol-number-color);
 }
 
 ul.dataview.list-view-ul>li:not(.task-list-item):not(:first-of-type):nth-of-type(2n):not(:nth-of-type(10n))::before {
-  position: relative;
-  content: " ";
-  display: inline-block;
-  background-color: var(--list-ul-disc-color);
-  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c-4.963 0-9 4.038-9 9v8h.051c.245 1.691 1.69 3 3.449 3 1.174 0 2.074-.417 2.672-1.174a3.99 3.99 0 0 0 5.668-.014c.601.762 1.504 1.188 2.66 1.188 1.93 0 3.5-1.57 3.5-3.5V11c0-4.962-4.037-9-9-9zm7 16.5c0 .827-.673 1.5-1.5 1.5-.449 0-1.5 0-1.5-2v-1h-2v1c0 1.103-.897 2-2 2s-2-.897-2-2v-1H8v1c0 1.845-.774 2-1.5 2-.827 0-1.5-.673-1.5-1.5V11c0-3.86 3.141-7 7-7s7 3.14 7 7v7.5z"></path><circle cx="9" cy="10" r="2"></circle><circle cx="15" cy="10" r="2"></circle></svg>');
+  content: '\eaee';
+  color: var(--list-ul-disc-color);
 }
 
 ul.dataview.list-view-ul>li:not(.task-list-item):not(:first-of-type):nth-of-type(2n+1)::before {
-  position: relative;
-  content: " ";
-  display: inline-block;
-  background-color: var(--list-ul-disc-color);
-  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 11v8h.051c.245 1.692 1.69 3 3.449 3 1.174 0 2.074-.417 2.672-1.174a3.99 3.99 0 0 0 5.668-.014c.601.762 1.504 1.188 2.66 1.188 1.93 0 3.5-1.57 3.5-3.5V11c0-4.962-4.037-9-9-9s-9 4.038-9 9zm6 1c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2zm6-4c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z"></path></svg>');
+  content: '\edd1';
+  color: var(--list-ul-disc-color);
 }
 
 ul.dataview.list-view-ul>li:not(.task-list-item):nth-of-type(10n)::before {
-  position: relative;
-  content: " ";
-  display: inline-block;
-  background-color:  var(--list-ol-number-color);
-  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.45,8.74h0A2.23,2.23,0,0,1,21.64,7a3.51,3.51,0,0,0,.24-2.47,3.55,3.55,0,0,0-2.45-2.45A3.51,3.51,0,0,0,17,2.36a2.23,2.23,0,0,1-1.7.19,10.07,10.07,0,0,0-6.53,0A9.87,9.87,0,0,0,2.54,8.73a10.07,10.07,0,0,0,0,6.53A2.23,2.23,0,0,1,2.36,17a3.51,3.51,0,0,0-.24,2.47,3.55,3.55,0,0,0,2.45,2.45A3.51,3.51,0,0,0,7,21.64a2.23,2.23,0,0,1,1.7-.19A9.83,9.83,0,0,0,12,22a10.33,10.33,0,0,0,3.27-.54,9.87,9.87,0,0,0,6.19-6.19A10.07,10.07,0,0,0,21.45,8.74ZM12,7a5,5,0,0,0-5,5H5a7,7,0,0,1,7-7Z"></path></svg>');
+  content: '\ef29';
+  color:  var(--list-ol-number-color);
 }
 
 ul.dataview.list-view-ul {
@@ -15401,22 +15385,15 @@ ul.dataview.dataview-ul.dataview-result-list-root-ul>li.dataview-result-list-li 
   margin: 0;
   padding-left: 1em;
 }
-
+/*
 ul.dataview.dataview-ul.dataview-result-list-root-ul>li.dataview-result-list-li::before {
-  width: 0.9em;
-  top: 3px;
-  height: 0.9em;
-  margin-right: 3px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  position: relative;
-  content: " ";
-  display: inline-block;
-  background-color:  var(--list-ul-disc-color);
-  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.45,8.74h0A2.23,2.23,0,0,1,21.64,7a3.51,3.51,0,0,0,.24-2.47,3.55,3.55,0,0,0-2.45-2.45A3.51,3.51,0,0,0,17,2.36a2.23,2.23,0,0,1-1.7.19,10.07,10.07,0,0,0-6.53,0A9.87,9.87,0,0,0,2.54,8.73a10.07,10.07,0,0,0,0,6.53A2.23,2.23,0,0,1,2.36,17a3.51,3.51,0,0,0-.24,2.47,3.55,3.55,0,0,0,2.45,2.45A3.51,3.51,0,0,0,7,21.64a2.23,2.23,0,0,1,1.7-.19A9.83,9.83,0,0,0,12,22a10.33,10.33,0,0,0,3.27-.54,9.87,9.87,0,0,0,6.19-6.19A10.07,10.07,0,0,0,21.45,8.74ZM12,7a5,5,0,0,0-5,5H5a7,7,0,0,1,7-7Z"></path></svg>');
+  content: "\ebcb";
+  font-family: boxicons;
+  font-size: 0.8em;
+  padding: 0 5px 0 0;
+  color: var(--list-ul-disc-color);
 }
-
+*/
 ul.dataview.dataview-ul.dataview-result-list-root-ul {
   list-style: none;
 }
@@ -18370,17 +18347,13 @@ body.blockquote-style-quotation-mark .markdown-preview-view blockquote p {
 }
 
 body.blockquote-style-quotation-mark .markdown-preview-view blockquote p:first-of-type::before {
+  content: '\ee81';
+  font-size: 2em;
+  font-family: boxicons;
+  color: var(--text-folder-file-icon);
   position: absolute;
-  top: 0.1rem;
-  left: -2.4rem;
-  content: " ";
-  width: 2em;
-  height: 2em;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: var(--text-folder-file-icon);
-  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35l.539-.222.474-.197-.485-1.938-.597.144c-.191.048-.424.104-.689.171-.271.05-.56.187-.882.312-.318.142-.686.238-1.028.466-.344.218-.741.4-1.091.692-.339.301-.748.562-1.05.945-.33.358-.656.734-.909 1.162-.293.408-.492.856-.702 1.299-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539l.025.168.026-.006A4.5 4.5 0 1 0 6.5 10zm11 0c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35l.539-.222.474-.197-.485-1.938-.597.144c-.191.048-.424.104-.689.171-.271.05-.56.187-.882.312-.317.143-.686.238-1.028.467-.344.218-.741.4-1.091.692-.339.301-.748.562-1.05.944-.33.358-.656.734-.909 1.162-.293.408-.492.856-.702 1.299-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539l.025.168.026-.006A4.5 4.5 0 1 0 17.5 10z"></path></svg>');
+  top: -0.4em;
+  left: -1.2em;
 }
 
 body.blockquote-style-quotation-mark .markdown-preview-view li>blockquote p:first-of-type::before {
