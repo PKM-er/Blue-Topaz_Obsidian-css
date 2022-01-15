@@ -16442,9 +16442,6 @@ and (min-width : 400px)
   .kanban ul>li.task-list-item {
     flex: 1 1 auto;
   }
-  .nav-files-container.node-insert-event .nav-folder-title {
-    display: none;
-  }
 }
 
 /*===================================================*/
