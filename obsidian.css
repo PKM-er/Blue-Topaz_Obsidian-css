@@ -15988,14 +15988,14 @@ span[alt*="+grid"] {
 /*===================================================*/
 /*===================================================*/
 .is-mobile .markdown-preview-view {
-  padding: 0 16px 0 25px;
+  padding: 0 16px;
 }
 
-.is-mobile .markdown-preview-view ol>li {
+.is-mobile .markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item) {
   margin-left: 0px;
 }
 
-.is-mobile .markdown-preview-view ul>li:not(.task-list-item) {
+.is-mobile .markdown-preview-view:not(.kanban) ul>li:not(.task-list-item) {
   margin-left: 0px;
 }
 
@@ -16047,7 +16047,19 @@ span[alt*="+grid"] {
 }
 
 .is-mobile .view-header-title {
-  line-height: 45px;
+  line-height: 35px;
+}
+
+.is-mobile .view-header-title-container,
+.is-mobile .view-header {
+  height: 40px;
+}
+
+.is-mobile .view-actions {
+  padding: 6px 10px 6px 5px;
+}
+.is-mobile .view-action {
+  margin: 0 5px;
 }
 
 .is-mobile span.cm-strong,
@@ -16292,13 +16304,6 @@ body:not(.font-family-change-to-default).is-mobile .markdown-source-view.mod-cm6
   margin: 0 !important;
 }
 
-.is-mobile .markdown-source-view.mod-cm6 .cm-hmd-list-indent {
-  content: '';
-  border-left: 2px solid var(--background-modifier-border);
-  height: 100%;
-  margin-left: 3px;
-}
-
 .is-mobile .workspace-drawer-header-name-text {
   color: var(--text-accent);
   font-weight: 600;
@@ -16426,7 +16431,7 @@ and (min-width : 400px)
   .is-mobile .view-header-title {
     font-size: var(--font-size-file-header-title);
     letter-spacing: -0.015em;
-    line-height: 45px;
+    line-height: 35px;
 }
 /*伪看板优化显示*/
 .kanban ul>li:not(.task-list-item) {
