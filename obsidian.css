@@ -16206,18 +16206,8 @@ body.style-options-for-buttons-plugin  button.g_yellow {
 }
 
 .is-mobile .nav-action-button>svg {
-  width: auto;
-  height: auto;
-}
-
-.is-mobile .nav-action-button::after {
-  display: inline-block;
-  font-family: boxicons;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 1.5rem;
-  font-variant: normal;
-  line-height: 1;
+  width: 20px;
+  height: 20px;
 }
 
 /* side bar button */
@@ -16283,7 +16273,6 @@ body:not(.font-family-change-to-default).is-mobile .markdown-source-view.mod-cm6
   font-family: var(--font-family-major);
 }
 
-/* calendar plugin */
 .is-mobile #calendar-container {
   padding: 0 4px 2px 4px;
   margin: unset !important;
@@ -16329,10 +16318,6 @@ body:not(.font-family-change-to-default).is-mobile .markdown-source-view.mod-cm6
 
 .is-mobile .workspace-drawer-active-tab-header {
   margin: 5px 0;
-}
-
-.is-mobile .nav-action-button::before {
-  font-size: 1.5rem;
 }
 
 .is-mobile .workspace-drawer.mod-left {
@@ -16435,12 +16420,11 @@ and (min-width : 400px)
   }
   body.style-options-for-admonition-plugin .admonition-kanban ul>li:not(.task-list-item) {
     flex: 1 1 40%;
-}
+  }
   /*文章标题前的图标隐藏*/
   .is-mobile .workspace-leaf-content:not([data-type="graph"]) .view-header-icon {
     display: none;
   }
-
   /*文章标题跟正文对齐*/
   .is-mobile .workspace-leaf-content:not([data-type="graph"]) .view-header-title-container {
     padding-left: 25px;
@@ -16450,15 +16434,17 @@ and (min-width : 400px)
     font-size: var(--font-size-file-header-title);
     letter-spacing: -0.015em;
     line-height: 35px;
-}
-/*伪看板优化显示*/
-.kanban ul>li:not(.task-list-item) {
-  flex: 1 1 auto;
-}
-.kanban ul>li.task-list-item {
-  flex: 1 1 auto;
-}
-
+  }
+  /*伪看板优化显示*/
+  .kanban ul>li:not(.task-list-item) {
+    flex: 1 1 auto;
+  }
+  .kanban ul>li.task-list-item {
+    flex: 1 1 auto;
+  }
+  .nav-files-container.node-insert-event .nav-folder-title {
+    display: none;
+  }
 }
 
 /*===================================================*/
