@@ -8957,7 +8957,6 @@ body.fancy-hr-no-icon div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD
   flex-grow: 1;
   overflow-y: auto;
   padding-left: 0px;
-  /* reduce to 0 for more space */
   padding-bottom: 15px;
   overflow-x: hidden;
 }
@@ -9254,7 +9253,7 @@ ol ul ol ol {
 
 .markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item) {
   margin-left: -0.3125em;
-  padding-left: 0.4em;
+  padding-left: 0.25em;
   border-radius: var(--radius-s);
   margin-bottom: 0.375em;
   margin-top: 0.25em;
@@ -9263,7 +9262,7 @@ ol ul ol ol {
 
 .markdown-preview-view ol>li {
   margin-left: -0.3125em;
-  padding-left: 0.4em;
+  padding-left: 0.25em;
   margin-bottom: 0.05em;
   margin-top: 0.05em;
 }
@@ -9275,7 +9274,7 @@ ol ul ol ol {
 ol.contains-task-list ol li:not(.task-list-item) {
   border-left: none !important;
   margin-left: -0.3125em;
-  padding-left: 0.4em;
+  padding-left: 0.25em;
   margin-bottom: 0.05em;
   margin-top: 0.05em;
 }
@@ -9446,6 +9445,13 @@ body.list-vertical-line-two ol ol::before {
   bottom: 0px;
   height: 100%;
 }
+body.list-vertical-line-two.is-mobile ul ul::before,
+body.list-vertical-line-two.is-mobile ol ul::before,
+body.list-vertical-line-two.is-mobile ul ol::before,
+body.list-vertical-line-two.is-mobile ol ol::before {
+  left: -1em;
+  top: 0px;
+}
 
 body.list-vertical-line-two .kanban ul ul::before,
 body.list-vertical-line-two .kanban ol ul::before {
@@ -9462,6 +9468,12 @@ body.list-vertical-line-two ol.contains-task-list ol::before {
   left: -1.2em;
   top: 1px;
   height: 100%;
+}
+body.list-vertical-line-two.is-mobile ul.contains-task-list ul::before,
+body.list-vertical-line-two.is-mobile ol.contains-task-list ul::before,
+body.list-vertical-line-two.is-mobile ul.contains-task-list ol::before,
+body.list-vertical-line-two.is-mobile ol.contains-task-list ol::before {
+  left: -1em;
 }
 
 body.list-vertical-line-two li>p:not(.task-list-item) {
@@ -9577,6 +9589,13 @@ body.list-vertical-line-three ol.contains-task-list ol::before {
   height: 100%;
 }
 
+body.list-vertical-line-three.is-mobile ul.contains-task-list ul::before,
+body.list-vertical-line-three.is-mobile ol.contains-task-list ul::before,
+body.list-vertical-line-three.is-mobile ul.contains-task-list ol::before,
+body.list-vertical-line-three.is-mobile ol.contains-task-list ol::before {
+  left: -1em;
+}
+
 body.list-vertical-line-three li>p:not(.task-list-item) {
   margin-top: 0;
   margin-bottom: 0;
@@ -9622,9 +9641,8 @@ body.list-vertical-line-three .markdown-preview-view ol li.is-collapsed div.list
   transform: translateX(-2px) translateY(16px) rotate(-90deg);
   opacity: 0.5;
 }
-/********彩虹大纲线片段********/
-/*编辑模式*/
 
+/********彩虹大纲线片段********/
 /* RAINBOW INDENT COLORS from https://gist.github.com/GitMurf/5122c0c8405ffa36a03049d9f4434bf4 */ 
 :root {
   --list-padding: 24px;
