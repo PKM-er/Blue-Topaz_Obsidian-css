@@ -16444,6 +16444,10 @@ and (min-width : 400px)
   }
 }
 
+.nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+  display: none;
+}
+
 /*===================================================*/
 /*=================   Live Preview   ================*/
 /*===================================================*/
