@@ -16206,8 +16206,8 @@ body.style-options-for-buttons-plugin  button.g_yellow {
 }
 
 .is-mobile .nav-action-button>svg {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
 }
 
 /* side bar button */
@@ -16309,6 +16309,10 @@ body:not(.font-family-change-to-default).is-mobile .markdown-source-view.mod-cm6
 
 .is-mobile #calendar-container .hollow {
   margin: 0 !important;
+}
+
+.is-mobile .workspace-drawer-header-name {
+  font-size: 25px;
 }
 
 .is-mobile .workspace-drawer-header-name-text {
@@ -16442,9 +16446,14 @@ and (min-width : 400px)
   .kanban ul>li.task-list-item {
     flex: 1 1 auto;
   }
+  .is-mobile .workspace-drawer-active-tab-icon svg.fullscreen > path,
+  .is-mobile .workspace-drawer-header-icon svg.pin > path {
+    display: none;
+  }
 }
 
-.nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+.nav-folder.mod-root > .nav-folder-title .nav-folder-title-content,
+.nav-folder.mod-root > .nav-folder-title .nav-folder-collapse-indicator.collapse-icon {
   display: none;
 }
 
