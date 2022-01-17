@@ -11323,7 +11323,7 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
 }
 
 .markdown-preview-view li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon {
-  transform: translateX(-5px) translateY(0px) rotate(-90deg);
+  transform: translateX(-3px) translateY(0px) rotate(-90deg);
   opacity: 0.5;
 }
 
