@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.13.19。uid [20220115] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.13.19, uid [20220115] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.13.19。uid [20220117] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.13.19, uid [20220117] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 @LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @awyugan */
@@ -9213,11 +9213,10 @@ ol {
 }
 
 .markdown-preview-view:not(.kanban) ul>li:not(.task-list-item) {
-  margin-left: -0.3125em;
   padding-left: 0.25em;
   border-radius: var(--radius-s);
-  margin-bottom: 0.375em;
-  margin-top: 0.25em;
+  padding-bottom: 0.1em;
+  padding-top: 0.1em;
   word-wrap: break-word;
   word-break: break-word;
   transition: all 300ms ease-in-out;
@@ -9229,10 +9228,6 @@ ol {
 
 .markdown-preview-view ul>li:not(.task-list-item):hover {
   border-color: var(--list-ul-hover);
-}
-
-.markdown-preview-view ul.contains-task-list ul>li:not(.task-list-item) {
-  margin-left: -0.3125em;
 }
 
 ol {
@@ -9252,19 +9247,11 @@ ol ul ol ol {
 }
 
 .markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item) {
-  margin-left: -0.3125em;
   padding-left: 0.25em;
   border-radius: var(--radius-s);
-  margin-bottom: 0.375em;
-  margin-top: 0.25em;
+  padding-bottom: 0.1em;
+  padding-top: 0.1em;
   transition: all 300ms ease-in-out;
-}
-
-.markdown-preview-view ol>li {
-  margin-left: -0.3125em;
-  padding-left: 0.25em;
-  margin-bottom: 0.05em;
-  margin-top: 0.05em;
 }
 
 .markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item) {
@@ -9273,10 +9260,9 @@ ol ul ol ol {
 
 ol.contains-task-list ol li:not(.task-list-item) {
   border-left: none !important;
-  margin-left: -0.3125em;
   padding-left: 0.25em;
-  margin-bottom: 0.05em;
-  margin-top: 0.05em;
+  padding-bottom: 0.1em;
+  padding-top: 0.1em;
 }
 
 .markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item):hover {
@@ -9371,8 +9357,6 @@ body.list-vertical-line-one ol ol::before {
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;
   left: -1.2em;
-  top: -2px;
-  bottom: 0px;
   height: 100%;
 }
 
@@ -9406,10 +9390,6 @@ body.list-vertical-line-one ol>li {
   border-left: none !important;
 }
 
-body.list-vertical-line-one ol:not(.contains-task-list)>li:not(.task-list-item) {
-  padding-left: 0.3em;
-}
-
 body.list-vertical-line-one ol,
 body.list-vertical-line-one ol ol,
 body.list-vertical-line-one ol ol ol,
@@ -9441,8 +9421,6 @@ body.list-vertical-line-two ol ol::before {
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;
   left: -1.2em;
-  top: -5px;
-  bottom: 0px;
   height: 100%;
 }
 body.list-vertical-line-two.is-mobile ul ul::before,
@@ -9466,7 +9444,7 @@ body.list-vertical-line-two ol.contains-task-list ol::before {
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;
   left: -1.2em;
-  top: 1px;
+  top: 0px;
   height: 100%;
 }
 body.list-vertical-line-two.is-mobile ul.contains-task-list ul::before,
@@ -11325,7 +11303,7 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
 
 /* list collaspe icon */
 .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon {
-  padding-top: 15px;
+  padding-left: 5px;
 }
 
 .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon::before {
@@ -11345,7 +11323,7 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
 }
 
 .markdown-preview-view li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon {
-  transform: translateX(-10px) translateY(8px) rotate(-90deg);
+  transform: translateX(-5px) translateY(0px) rotate(-90deg);
   opacity: 0.5;
 }
 
@@ -14737,15 +14715,11 @@ body.style-options-for-admonition-plugin .admonition-col2>.admonition-content-ho
   /*分栏的分割线
   column-rule: 1px solid #d4d2d2; */
 }
-body.style-options-for-admonition-plugin .admonition-col2>.admonition-content-holder>.admonition-content ol {	
-  margin-top: -0.25em;
-}
+body.style-options-for-admonition-plugin .admonition-col2>.admonition-content-holder>.admonition-content ol,
 body.style-options-for-admonition-plugin .admonition-col2>.admonition-content-holder>.admonition-content ul {	
   margin-top: -0.25em;
 }
-body.style-options-for-admonition-plugin  .admonition-col2>.admonition-content-holder>.admonition-content h3 {	
-  margin-top: -0.001em;
-}
+body.style-options-for-admonition-plugin  .admonition-col2>.admonition-content-holder>.admonition-content h3,
 body.style-options-for-admonition-plugin  .admonition-col2>.admonition-content-holder>.admonition-content h4 {	
   margin-top: -0.001em;
 }
@@ -14803,9 +14777,7 @@ body.style-options-for-admonition-plugin .admonition-col3>.admonition-content-ho
   break-inside: avoid;
   column-rule: 1px solid #d4d2d2; 
 }
-body.style-options-for-admonition-plugin .admonition-col3>.admonition-content-holder>.admonition-content ol {	
-  margin-top: -0.25em;
-}
+body.style-options-for-admonition-plugin .admonition-col3>.admonition-content-holder>.admonition-content ol,
 body.style-options-for-admonition-plugin .admonition-col3>.admonition-content-holder>.admonition-content ul {	
   margin-top: -0.25em;
 }
@@ -14859,9 +14831,7 @@ body.style-options-for-admonition-plugin .admonition-col4>.admonition-content-ho
   margin:0;
   break-inside: avoid;
 }
-body.style-options-for-admonition-plugin .admonition-col4>.admonition-content-holder>.admonition-content ol {	
-  margin-top: -0.25em;
-}
+body.style-options-for-admonition-plugin .admonition-col4>.admonition-content-holder>.admonition-content ol,
 body.style-options-for-admonition-plugin .admonition-col4>.admonition-content-holder>.admonition-content ul {	
   margin-top: -0.25em;
 }
@@ -15627,7 +15597,6 @@ body.translucent-setting-panel .vertical-tab-nav-item {
 
 .markdown-preview-view.rtl:not(.kanban) ul>li:not(.task-list-item),
 .markdown-preview-view.rtl ol:not(.contains-task-list)>li:not(.task-list-item) {
-  margin-right: -0.3125em;
   padding-right: 0.25em;
 }
 
