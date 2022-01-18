@@ -1890,7 +1890,7 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --allow-1: #d18828;
   --background-blockquote: #9191911c;
   --background-code: #1111118c;
-  --background-code-2: #4c4c4cc5;
+  --background-code-2: #4c4c4cb0;
   --text-color-code: #d58000;
   --text-color-code-normal: #e7e7e7;
 
@@ -2727,7 +2727,7 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --allow-1: #d18828;
   --background-blockquote: #9191911c;
   --background-code: #1111118c;
-  --background-code-2: #4c4c4cc5;
+  --background-code-2: #4c4c4cb0;
   --text-color-code: #d58000;
   --text-color-code-normal: #e7e7e7;
 
@@ -2982,7 +2982,7 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --allow-1: #d18828;
   --background-blockquote: #9191911c;
   --background-code: #1111118c;
-  --background-code-2: #4c4c4cc5;
+  --background-code-2: #4c4c4cb0;
   --text-color-code: #d58000;
   --text-color-code-normal: #e7e7e7;
 
@@ -3867,7 +3867,7 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --allow-1: #d18828;
   --background-blockquote: #9191911c;
   --background-code: #1111118c;
-  --background-code-2: #4c4c4cc5;
+  --background-code-2: #4c4c4cb0;
   --text-color-code: #d58000;
   --text-color-code-normal: #e7e7e7;
 
@@ -5136,7 +5136,7 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
   --allow-1: #d18828;/*搜索框里黄色箭头颜色*/
   --background-blockquote: #9191911c;/*引用框背景颜色*/
   --background-code: #1111118c;/*代码框背景颜色*/
-  --background-code-2: #4c4c4cc5;/*行内代码背景颜色*/
+  --background-code-2: #4c4c4cb0;
   --text-color-code: #d58000;/*代码框文字颜色*/
 
   --internal-link-color-in-highlight: var(--main-color);/*==[[]]==双链文字颜色*/
@@ -5584,7 +5584,7 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
   --allow-1: #d18828;/*搜索框里黄色箭头颜色*/
   --background-blockquote: #9191911c;/*引用框背景颜色*/
   --background-code: #1111118c;/*代码框背景颜色*/
-  --background-code-2: #4c4c4cc5;/*行内代码背景颜色*/
+  --background-code-2: #4c4c4cb0;
   --text-color-code: #d58000;/*代码框文字颜色*/
 
   --internal-link-color-in-highlight: var(--color3);/*==[[]]==双链文字颜色*/
@@ -6777,7 +6777,7 @@ body.color-scheme-options-lilac.theme-dark {
   --allow-1: #d18828;
   --background-blockquote: #9191911c;
   --background-code: #1111118c;
-  --background-code-2: #4c4c4cc5;
+  --background-code-2: #4c4c4cb0;
   --text-color-code: #d58000;
   --text-color-code-normal: #e7e7e7;
 
@@ -7893,7 +7893,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-quote {
 }
 
 /* highlight */
-.markdown-preview-view mark {
+.markdown-preview-view :not(em)>mark {
   background-color: var(--mark-highlight);
   padding: 1px 3px;
   color: var(--text-highlight);
@@ -9372,7 +9372,7 @@ body.list-vertical-line-one ol.contains-task-list ol::before {
   content: ' ';
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;
-  left: -1.2em;
+  left: -0.9em;
   top: 1px;
   height: 100%;
 }
@@ -9970,8 +9970,8 @@ font>strong {
 
 span.cm-em,
 :not(font):not(strong)>em,
-em>mark {
-  color: var(--accent-em) !important;
+.markdown-preview-view em>mark  {
+  color: var(--accent-em);
 }
 
 *:not(font)>em>strong,
@@ -10087,7 +10087,6 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   font-weight: 600;
   overflow: auto;
   padding: 0px 6px 0px 0px;
-  /*"6px" for Andy mode plugin v3.0.1*/
   white-space: nowrap;
   top: 2px;
   border-top: 3px transparent;
@@ -13877,7 +13876,7 @@ aside>h2 {
     content: " (" attr(href) ") ";
   }
   */
-
+  /*
   .theme-dark {
     --background-primary: #ffffff;
     --background-primary-alt: #e9e9e9;
@@ -13910,7 +13909,6 @@ aside>h2 {
     --folder-title: #000000;
     --background-code-2: #cccccc62;
     --mark-highlight: #ffd298d8;
-    /*preview*/
 
     --background-search-result: #fdfdfd;
     --search-result-file-matched-bg: #ffc3c3;
@@ -13921,37 +13919,38 @@ aside>h2 {
     --background-secondary-alt-bg-4-bt: #eeeeee;
     --background-4-sliding-pane: #ffffffef;
 
-    --tag-text: #f8f8f8;
     --text-normal: #0e0e0e;
     --internal-link-color-in-highlight: #007fd3;
     --background-code: #f7f7f7;
-    --search-result-file-title-color: #2f92e4;
-    --theme-color: #2f92e4;
     --theme-color-translucent: #3892dc7a;
     --theme-color-translucent-1: #2f93e426;
     --background-blockquote: #b6b6b62c;
 
-    --stag1: #f08383;
-    --stag1-bg: #da2525;
-    --stag2: #e7b263;
-    --stag2-bg: #c67700;
-    --stag3: #77df89;
-    --stag3-bg: #08a522;
-    --tag1: #0083ee;
-    --tag2: #00b8af;
-    --tag3: #00ba09;
-    --tag4: #c2b500fb;
-    --tag5: #d54300;
-    --tag6: #d11212f3;
-    --tag7: #c722bf;
-    --tag8: #7d32df;
-    --tag9: #2e54fff5;
-    --tag-dailynote-bg: #117af3;
-    --tag-weeklynote-bg: #4995ec;
-    --tag-questions-bg: #915fec;
-    --tag-ideas-bg: #565656e1;
+    --tag-text: #f8f8f8;
+    --stag1: #fa8787;
+    --stag1-bg: #eb2727;
+    --stag2: #fdbd5c;
+    --stag2-bg: #ee9002;
+    --stag3: #50ce3a;
+    --stag3-bg: #22ac09;
+    --tag1: #2573f0;
+    --tag2: #2193f0;
+    --tag3: #17a5e7;
+    --tag4: #14acc7;
+    --tag5: #10bdbd;
+    --tag6: #12c690;
+    --tag7: #0dc416;
+    --tag8: #61c108;
+    --tag9: #6ab607;
+    --tag-dailynote: #0077ff;
+    --tag-dailynote-bg: #277CDD;
+    --tag-weeklynote: #4b9fff;
+    --tag-weeklynote-bg: #6aafff;
+    --tag-questions: #b68fff;
+    --tag-questions-bg: #b085ff;
+    --tag-ideas: #ceb900;
+    --tag-ideas-bg: #444444d8;
 
-    /*colourful notes*/
     --text-gray: #37352f99;
     --text-brown: #855a46;
     --text-orange: #d9730d;
@@ -13972,7 +13971,6 @@ aside>h2 {
     --background-pink: #f4dfeb;
     --background-red: #ffe3e3;
 
-    /*admonition*/
     --admonition-bg-color: #ffffffa6;
 
     --table-background-color: #e4e4e4bb;
@@ -13996,6 +13994,7 @@ aside>h2 {
     --light-purple: #b74ff3;
     --blue-green: #3bd4da;
   }
+  */
 
   body.export-pdf-style-default-all-dark .markdown-preview-view {
     background-color: var(--background-primary) !important;
@@ -14107,13 +14106,12 @@ aside>h2 {
     --allow-1: #d18828;
     --background-blockquote: #9191911c;
     --background-code: #1111118c;
-    --background-code-2: #4c4c4cc5;
+    --background-code-2: #4c4c4cb0;
     --text-color-code: #d58000;
     --text-color-code-normal: #e7e7e7;
 
     --internal-link-color-in-highlight: #74c7ff;
 
-    /*list*/
     --list-ul-block-color: #e19742a9;
     --list-ul-disc-color: #eb9563;
     --green-1: #79c142;
@@ -14122,7 +14120,6 @@ aside>h2 {
     --list-ol-number-color: #95afc4;
     --list-ol-hover: #2c7bd6;
 
-    /*tags*/
     --tag-text: #e4e4e4;
     --stag1: #f08383;
     --stag1-bg: #bd1919;
@@ -14148,7 +14145,6 @@ aside>h2 {
     --tag-ideas: #fcfcc0;
     --tag-ideas-bg: #565656d8;
 
-    /*titles*/
     --h1-color: #85bb1f;
     --h2-color: #27b822;
     --h3-color: #1bbbbb;
@@ -14156,22 +14152,9 @@ aside>h2 {
     --h5-color: #a192f7;
     --h6-color: #c173ee;
 
-    /*graph*/
-    --graph-text-color: #B5B5B5;
-    --graphtag: #88d842bb;
-    --graph-attach: #b2cfe0bb;
-    --graph-circle: #55a2d6bb;
-    --graph-line: #8c8c8c;
-    --graph-unresolved: #f08080de;
-    --link-unresolved-highlight: #ffa6a6;
-    --graph-arrow: #c23917;
-    --graph-control-bg: #00000080;
-
-    /*mermaid*/
     --mermaid-active-task-color: #187ef1;
     --mermaid-seq-dia-color: #1371be;
 
-    /*table*/
     --table-background-color: #8a8a8a32;
     --table-background-color-odd: #0000001c;
     --table-border-color: #878787;
@@ -14180,13 +14163,11 @@ aside>h2 {
     --table-hover-color: #1f65a221;
     --table-hover-thead-color: #298c54c7;
 
-    /*calendar*/
     --calendar-week-color: #a2df94;
     --calendar-week-hover: #61815c;
     --calendar-week-background-color: #4a5842;
     --calendar-today-background-color: #8c4545;
 
-    /*day planner*/
     --day-planner-pie: #f19c1c;
     --day-planner-timeline: #000000;
     --day-planner-line: #dfcf77;
@@ -14203,7 +14184,6 @@ aside>h2 {
     --event-item-color9: #ad1457bb;
     --event-item-color10: #6a1b9abb;
 
-    /*kanban*/
     --kanban-color-1: #0065d852;
     --kanban-color-2: #30e4e441;
     --kanban-color-3: #1cb54f44;
@@ -14212,7 +14192,6 @@ aside>h2 {
     --kanban-color-6: #d12e2e42;
     --kanban-color-7: #8f36cb3f;
 
-    /*colourful notes*/
     --text-gray: #acacac;
     --text-brown: #be9684;
     --text-orange: #ffa344;
@@ -14237,23 +14216,15 @@ aside>h2 {
     --note-important: #d64545;
     --note-cloze: #ffffff;
 
-    /* stickies */
     --stickies-color-1: #84c584;
     --stickies-color-2: #c7a3cf;
     --tape-color: #99999967;
 
-    /*Sliding panes*/
     --sliding-panes-header-color: #f1a634d0;
     --background-4-sliding-pane: #252525ed;
 
-    /*admonition*/
     --admonition-bg-color: #1111118f;
 
-    /*checklist*/
-    --checklist-bg: #1d1d1d96;
-    --checklist-bg-hover: #08080896;
-
-    /*checkbox*/
     --checkbox-color-1: #a9a608;
     --checkbox-color-2: #1dac10;
     --checkbox-color-3: #ffd1d1;
