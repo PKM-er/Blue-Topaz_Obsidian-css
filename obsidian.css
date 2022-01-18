@@ -9986,8 +9986,8 @@ span.cm-em,
   font-family: var(--font-family-strong) !important;
 }
 
-:not(font)>strong>em>mark {
-  background-color: var(--mark-highlight-strong-em) !important;
+.markdown-preview-view :not(font)>strong>em>mark {
+  background-color: var(--mark-highlight-strong-em);
 }
 
 em>strong>font,
