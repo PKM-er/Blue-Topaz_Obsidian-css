@@ -7891,7 +7891,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-quote {
   /*border-radius: var(--radius-s-border);*/
 }
 
-.cm-quote:not([class*="link"]):not([class*="string"]) {
+.cm-quote:not([class*="link"]):not([class*="string"]):not([class*="em"]) {
   color: var(--text-normal);
 }
 
@@ -9972,8 +9972,11 @@ font>strong {
 }
 
 span.cm-em,
+span.cm-em.cm-highlight,
+span.cm-em.cm-quote,
+span.cm-em.cm-highlight.cm-quote,
 :not(font):not(strong)>em,
-.markdown-preview-view em>mark  {
+.markdown-preview-view em>mark {
   color: var(--accent-em);
 }
 
@@ -15909,7 +15912,6 @@ img[alt$="inlR"] {
 
 /* image-grid-1 */
 /* adapted from https://github.com/Lithou/Sandbox/blob/main/.obsidian/snippets/pub-Image%20Flags.css */
-/* to get a kind of image grid with self-adapted size by placing images in the same row */
 span[alt*="+grid"] {
   display: table-cell;
   vertical-align: middle;
@@ -15944,9 +15946,7 @@ span[alt*="+grid"] {
 }
 
 /*===================================================*/
-/*===================================================*/
 /*==================   MOBILE   =====================*/
-/*===================================================*/
 /*===================================================*/
 .is-mobile .markdown-preview-view {
   padding: 0 16px;
@@ -16289,11 +16289,6 @@ body:not(.font-family-change-to-default).is-mobile .markdown-source-view.mod-cm6
 
 .is-mobile .nav-buttons-container {
   margin-bottom: 10px;
-}
-
-.is-mobile .side-dock-ribbon-action svg.open-vault {
-  width: 20px;
-  height: 20px;
 }
 
 .is-mobile .cm-line .cm-link.cm-strong {
