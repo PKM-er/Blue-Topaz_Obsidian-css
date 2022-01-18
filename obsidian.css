@@ -4192,15 +4192,15 @@ body.color-scheme-options-topaz-nord.theme-dark .token.inserted {
   color: var(--nord14) !important;
 }
 
-body.color-scheme-options-topaz-nord.theme-dark .cm-s-obsidian span.cm-variable-3,
 body.color-scheme-options-topaz-nord.theme-dark .token.selector, 
-body.color-scheme-options-topaz-nord.theme-dark .token.tag, 
-body.color-scheme-options-topaz-nord.theme-dark .cm-s-obsidian span.cm-variable-2 {
+body.color-scheme-options-topaz-nord.theme-dark .token.tag,
+body.color-scheme-options-topaz-nord.theme-dark .cm-s-obsidian span.cm-variable-3 {
   color: var(--nord10) !important;
 }
 
 body.color-scheme-options-topaz-nord.theme-dark .token.regex, 
-body.color-scheme-options-topaz-nord.theme-dark .token.variable {
+body.color-scheme-options-topaz-nord.theme-dark .token.variable,
+body.color-scheme-options-topaz-nord.theme-dark .cm-s-obsidian span.cm-variable-2 {
   color: var(--nord12) !important;
 }
 
@@ -4220,7 +4220,8 @@ body.color-scheme-options-topaz-nord.theme-dark .markdown-source-view.cm-s-obsid
   color: var(--nord13) !important;
 }
 
-body.color-scheme-options-topaz-nord.theme-dark .token.comment {
+body.color-scheme-options-topaz-nord.theme-dark .token.comment,
+body.color-scheme-options-topaz-nord.theme-dark .cm-s-obsidian span.cm-comment {
   color: var(--nord3-1) !important;
 }
 
@@ -4229,7 +4230,6 @@ body.color-scheme-options-topaz-nord.theme-dark .token.keyword {
   color: var(--nord13) !important;
 }
 
-body.color-scheme-options-topaz-nord.theme-dark .token.property, 
 body.color-scheme-options-topaz-nord.theme-dark .token.tag, 
 body.color-scheme-options-topaz-nord.theme-dark .token.constant, 
 body.color-scheme-options-topaz-nord.theme-dark .token.symbol, 
