@@ -7904,7 +7904,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-quote {
 }
 
 .cm-s-obsidian span.cm-highlight,
-.cm-highlight.cm-quote.cm-quote-1 {
+.cm-highlight.cm-quote {
   color: var(--text-highlight-2);
   padding: 0 0 1px 0;
 }
@@ -9962,7 +9962,8 @@ b,
 }
 
 span.cm-strong,
-:not(font)>strong {
+:not(font)>strong,
+.cm-s-obsidian .cm-highlight.cm-strong {
   color: var(--accent-strong);
   font-family: var(--font-family-strong) !important;
 }
@@ -11825,12 +11826,10 @@ div.mermaid svg {
 
 .mermaid .edgePath .path {
   stroke: var(--text-faint) !important;
-  /*stroke-width: 2px !important;*/
 }
 
 .mermaid .flowchart-link {
   stroke: var(--text-faint) !important;
-  fill: none !important;
 }
 
 .mermaid .edgeLabel {
@@ -11845,7 +11844,6 @@ div.mermaid svg {
 .mermaid .cluster rect {
   fill: var(--background-primary-alt) !important;
   stroke: var(--text-faint) !important;
-  stroke-width: 1px !important;
 }
 
 .mermaid  .cluster text {
@@ -11881,13 +11879,11 @@ div.mermaidTooltip {
 }
 
 .mermaid .messageLine0 {
-  /*stroke-width: 1.5 !important;*/
   stroke-dasharray: none !important;
   stroke: var(--text-muted) !important;
 }
 
 .mermaid .messageLine1 {
-  /*stroke-width: 1.5 !important;*/
   stroke-dasharray: 2, 2 !important;
   stroke: var(--text-muted) !important;
 }
@@ -11912,7 +11908,6 @@ div.mermaidTooltip {
 
 .mermaid .messageText {
   fill: var(--text-muted) !important;
-  /*stroke: var(--text-muted) !important;*/
 }
 
 .mermaid .labelBox {
@@ -11933,7 +11928,6 @@ div.mermaidTooltip {
 }
 
 .mermaid .loopLine {
-  /*stroke-width: 2px !important;*/
   stroke-dasharray: 2, 2 !important;
   stroke: var(--text-accent) !important;
   fill: var(--text-accent) !important;
@@ -11973,7 +11967,7 @@ div.mermaidTooltip {
 
 .mermaid .section {
   stroke: none !important;
-  opacity: 0.2 !important;
+  opacity: 0.3 !important;
 }
 
 .mermaid .section0 {
@@ -11987,7 +11981,7 @@ div.mermaidTooltip {
 .mermaid .section1,
 .mermaid .section3 {
   fill: var(--text-normal) !important;
-  opacity: 0.2 !important;
+  opacity: 0.3 !important;
 }
 
 .mermaid .sectionTitle0 {
@@ -12139,7 +12133,6 @@ div.mermaidTooltip {
 .done3 {
   stroke: var(--text-muted) !important;
   fill: var(--background-secondary) !important;
-  stroke-width: 1 !important;
 }
 
 .doneText0,
@@ -12156,7 +12149,6 @@ div.mermaidTooltip {
 .crit3 {
   stroke: var(--red-1) !important;
   fill: var(--red-1) !important;
-  stroke-width: 1 !important;
 }
 
 .activeCrit0,
@@ -12165,7 +12157,6 @@ div.mermaidTooltip {
 .activeCrit3 {
   stroke: var(--accent-strong) !important;
   fill: var(--text-accent) !important;
-  stroke-width: 1 !important;
 }
 
 .doneCrit0,
@@ -12174,7 +12165,6 @@ div.mermaidTooltip {
 .doneCrit3 {
   stroke: var(--accent-strong) !important;
   fill: var(--text-muted) !important;
-  stroke-width: 0.5 !important;
   cursor: pointer !important;
   shape-rendering: crispEdges !important;
 }
@@ -12246,7 +12236,6 @@ g.classGroup line {
 
 .relation {
   stroke: var(--text-accent) !important;
-  stroke-width: 1 !important;
   fill: none !important;
 }
 
@@ -12257,49 +12246,41 @@ g.classGroup line {
 #compositionStart {
   fill: var(--text-accent) !important;
   stroke: var(--text-accent) !important;
-  stroke-width: 1 !important;
 }
 
 #compositionEnd {
   fill: var(--text-accent) !important;
   stroke: var(--text-accent) !important;
-  stroke-width: 1 !important;
 }
 
 #aggregationStart {
   fill: var(--background-secondary-alt) !important;
   stroke: var(--text-accent) !important;
-  stroke-width: 1 !important;
 }
 
 #aggregationEnd {
   fill: var(--background-secondary-alt) !important;
   stroke: var(--text-accent) !important;
-  stroke-width: 1 !important;
 }
 
 #dependencyStart {
   fill: var(--text-accent) !important;
   stroke: var(--text-accent) !important;
-  stroke-width: 1 !important;
 }
 
 #dependencyEnd {
   fill: var(--text-accent) !important;
   stroke: var(--text-accent) !important;
-  stroke-width: 1 !important;
 }
 
 #extensionStart {
   fill: var(--text-accent) !important;
   stroke: var(--text-accent) !important;
-  stroke-width: 1 !important;
 }
 
 #extensionEnd {
   fill: var(--text-accent) !important;
   stroke: var(--text-accent) !important;
-  stroke-width: 1 !important;
 }
 
 .commit-id,
@@ -12346,13 +12327,10 @@ g.stateGroup rect {
 
 g.stateGroup line {
   stroke: var(--text-accent) !important;
-  stroke-width: 1 !important;
 }
 
 .transition {
   stroke: var(--text-accent) !important;
-  stroke-width: 1 !important;
-  fill: none !important;
 }
 
 .stateGroup .composit {
@@ -12407,7 +12385,6 @@ g.stateGroup line {
 
 .statediagram-cluster rect {
   fill: var(--background-secondary-alt) !important;
-  stroke-width: 1px !important;
 }
 
 .statediagram-cluster rect.outer {
@@ -12470,13 +12447,6 @@ g.stateGroup line {
   stroke: var(--text-muted) !important;
 }
 
-.edge-thickness-normal {
-  stroke-width: 1px !important;
-}
-
-.edge-thickness-thick {
-  stroke-width: 3px !important;
-}
 
 .edge-pattern-solid {
   stroke-dasharray: 0 !important;
@@ -12520,9 +12490,7 @@ g.stateGroup line {
   stroke: #000000 !important;
 }
 
-/*===========*/
 /*for plugins*/
-
 /*======================================*/
 /*better appearance for Andy mode plugin*/
 /*======================================*/
