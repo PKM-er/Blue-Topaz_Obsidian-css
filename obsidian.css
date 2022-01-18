@@ -16420,12 +16420,6 @@ and (min-width : 400px)
   background-color: var(--background-blockquote);
 }
 
-.markdown-source-view.is-live-preview *:not(font)>em>strong,
-.markdown-source-view.is-live-preview *:not(font)>strong>em,
-.markdown-source-view.is-live-preview .cm-strong.cm-em {
-  padding-right: 0;
-}
-
 .markdown-source-view.is-live-preview .cm-formatting.cm-formatting-quote.cm-quote {
   color: var(--red);
 }
