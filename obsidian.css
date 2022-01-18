@@ -4016,7 +4016,6 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --color-view-header-gradient-1: #000000c2;
   --color-view-header-gradient-2: #2e1f28c2;
 
-  /*checkbox*/
   --checkbox-color-0: #25c648;
   --checkbox-color-1: #a9a608;
   --checkbox-color-2: #1061ac;
@@ -4238,6 +4237,11 @@ body.color-scheme-options-topaz-nord.theme-dark .cm-tag {
   color: var(--nord11) !important;
 }
 
+body.color-scheme-options-topaz-nord.theme-dark .token.color,
+body.color-scheme-options-topaz-nord.theme-dark .token.hexcode.color {
+  color: var(--nord8) !important;
+}
+
 
 body.color-scheme-options-topaz-nord.theme-light {
   --text-accent: var(--nord9);
@@ -4315,7 +4319,6 @@ body.color-scheme-options-topaz-nord.theme-light {
   --link-unresolved-highlight: var(--nord11);
   --graph-arrow: var(--nord11);
 }
-
 
 /*@Lavi & @嘴 的Flamingo主题色（原Pink Topaz）*/
 body.color-scheme-options-flamingo.theme-light {
