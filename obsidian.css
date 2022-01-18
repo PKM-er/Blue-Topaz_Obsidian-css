@@ -16291,6 +16291,11 @@ body:not(.font-family-change-to-default).is-mobile .markdown-source-view.mod-cm6
   margin-bottom: 10px;
 }
 
+.is-mobile .side-dock-ribbon-action svg.open-vault {
+  width: 20px;
+  height: 20px;
+}
+
 .is-mobile .cm-line .cm-link.cm-strong {
   color: var(--text-accent);
 }
