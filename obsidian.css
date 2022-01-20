@@ -4093,14 +4093,13 @@ body.color-scheme-options-flamingo.theme-dark {
   --table-color-rgb: 215, 86, 125;
 }
 
-
 body.color-scheme-options-flamingo.theme-light #calendar-container {
   --color-background-heading: transparent;
   --color-background-weeknum: transparent;
   --color-background-day: transparent;
   --color-background-weekend: transparent;
 
-  --color-tr: #ffdece !important;
+  --color-tr: #ffdece8c !important;
   --color-tr-odd: #ffdece !important;
 
   --color-dot: var(--text-accent);
@@ -4149,7 +4148,7 @@ body.color-scheme-options-flamingo.theme-light #calendar-container .day:not(:emp
 }
 
 body.color-scheme-options-flamingo.theme-light #calendar-container .calendar {
-  background-color: #ffdece;
+  background-color: var(--color-tr);
   margin: -8px 0;
 }
 
@@ -8282,7 +8281,7 @@ body.fancy-hr-no-icon div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD
   flex-grow: 1;
   overflow-y: auto;
   padding-left: 0px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   overflow-x: hidden;
 }
 
@@ -8298,7 +8297,6 @@ body.fancy-hr-no-icon div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD
   border-radius: var(--radius-s);
   margin-inline-start: 2.5%;
   margin-inline-end: 2.5%;
-  /*display: flex;*/
 }
 
 .markdown-preview-view blockquote p {
@@ -11910,7 +11908,7 @@ body.plugin-sliding-panes-rotate-header .workspace>.mod-root>.workspace-leaf>.wo
 }
 
 .theme-dark #calendar-container {
-  --color-tr: #111111a6;
+  --color-tr: #11111166;
   --color-tr-odd: #1e1e1e93;
 
   --color-calendar-weekends: #cc8484;
@@ -11920,7 +11918,7 @@ body.plugin-sliding-panes-rotate-header .workspace>.mod-root>.workspace-leaf>.wo
 }
 
 .theme-light #calendar-container {
-  --color-tr: #ffffffca;
+  --color-tr: #ffffff6a;
   --color-tr-odd: #eeeeeea2;
 
   --color-calendar-weekends: #c74a4a;
@@ -14734,8 +14732,16 @@ span.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight.hmd-hidd
   content: var(--modal-title-icon);
 }
 
+.modal-title {
+  background-color: var(--background-secondary-alt);
+}
+
+.vertical-tab-content {
+  padding-bottom: 40px;
+}
+
 .modal-container .modal-content textarea {
-  height: 18rem!important;
+  height: 18rem !important;
 }
 body.disable-math-block .modal .modal-content .math.math-block{
   display:none;
