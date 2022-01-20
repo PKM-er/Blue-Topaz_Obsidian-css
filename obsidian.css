@@ -12155,15 +12155,13 @@ body.style-options-for-calendar-plugin-style-two #calendar-container tbody tr:nt
 /*===========================*/
 /*copy button for code blocks*/
 /*===========================*/
-button.copy-code-button {
+button.copy-code-button:not([style="right: 32pt"]) {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAABU0lEQVRYhe2WMU4CQRSG/2eMjQRptQB7j8AJnIbKEq/A2qg0SjRROgauYGljTMALLN7AA7Ak1oRIY7HPYt0IuzPLMgxggK97u2/e/PPv25kBNh0yGSSavQqYqkHEDx2n0FqaANH0SmC8RIqU2k7+1YqAs9rH3uggcw+iMoBD7UDyi75PRESuLoeBT4CeMoPhzXPt5FuVsxt98JXL3hH4cpryduX4HQCE9LQ5BBwBfDXKZRlANZUAgMtAsMJwkt+JGAA6Tn7CtTBWvT9t9IpE5DL4XCdgR636b4Xz8HZR6I7XVKFwIJlwpbaIObBsUjsQ/fa2WLkDWwEz/wWzMq13Vu6AsQAh+10hPdc0nlsAwEwAm8cahPTY9m6XxPr0gGm+xR6wlL/tgbQsrAeCi2RwnUouaacHYvu0kP1HgK91ZWzfC2IO7A+GtwDVQyf+Let7FmwcPzCZvMtlTU3QAAAAAElFTkSuQmCC);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   background-color: transparent;
   color: transparent;
-  top: -2px !important;
-  right: -2px !important;
   height: 1.6em;
 }
 
