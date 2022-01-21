@@ -8530,15 +8530,19 @@ ul ul ul ol ul {
 
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line.cm-line .list-bullet:after {
   content: '\25E6';
+  left: 3px;
 }
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line .list-bullet:after {
   content: '\2022';
+  left: 0px;
 }
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line .list-bullet:after {
   content: '\25E6';
+  left: 1px;
 }
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line .list-bullet:after {
   content: '\25AA';
+  left: -1px;
 }
 
 .markdown-preview-view ul>li:not(.task-list-item)::marker {
@@ -8963,6 +8967,52 @@ body.list-vertical-line-three .markdown-preview-view ol li.is-collapsed div.list
   opacity: 0.5;
 }
 
+
+body:not(.list-no-border) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
+  content: '';
+  font-family: var(--rb-indent-font-family) !important;
+  font-size: var(--rb-indent-font-size) !important;
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: -0.5em;
+  bottom: -0.5em;
+  padding-bottom: 999em;
+  background-image: linear-gradient(
+        to right,
+        var(--background-modifier-border) 0 var(--rb-line-width),
+        transparent var(--rb-line-width) calc(1 * var(--rb-indent-width)),
+        var(--background-modifier-border) calc(1 * var(--rb-indent-width)) calc(1 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(1 * var(--rb-indent-width) + var(--rb-line-width)) calc(2 * var(--rb-indent-width)),
+        var(--background-modifier-border) calc(2 * var(--rb-indent-width)) calc(2 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(2 * var(--rb-indent-width) + var(--rb-line-width)) calc(3 * var(--rb-indent-width)),
+        var(--background-modifier-border) calc(3 * var(--rb-indent-width)) calc(3 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(3 * var(--rb-indent-width) + var(--rb-line-width)) calc(4 * var(--rb-indent-width)),
+        var(--background-modifier-border) calc(4 * var(--rb-indent-width)) calc(4 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(4 * var(--rb-indent-width) + var(--rb-line-width)) calc(5 * var(--rb-indent-width)),
+        var(--background-modifier-border) calc(5 * var(--rb-indent-width)) calc(5 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(5 * var(--rb-indent-width) + var(--rb-line-width)) calc(6 * var(--rb-indent-width)),
+        var(--background-modifier-border) calc(6 * var(--rb-indent-width)) calc(6 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(6 * var(--rb-indent-width) + var(--rb-line-width)) calc(7 * var(--rb-indent-width)),
+        var(--background-modifier-border) calc(7 * var(--rb-indent-width)) calc(7 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(7 * var(--rb-indent-width) + var(--rb-line-width)) calc(8 * var(--rb-indent-width))
+    );
+  background-size: var(--rb-indent-bg-size);
+  left: var(--rb-left-offset);
+}
+
+body:not(.list-no-border) .mod-cm6.is-live-preview .cm-hmd-list-indent .cm-tab::before {
+  display: none;
+}
+body:not(.list-no-border) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line {
+  overflow: hidden;
+}
+body:not(.list-no-border) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent {
+  position: relative;
+  font-family: var(--rb-indent-font-family) !important;
+  font-size: var(--rb-indent-font-size) !important;
+}
+
 /********彩虹大纲线片段********/
 /* RAINBOW INDENT COLORS from https://gist.github.com/GitMurf/5122c0c8405ffa36a03049d9f4434bf4 */ 
 :root {
@@ -8998,9 +9048,9 @@ body.list-vertical-line-three .markdown-preview-view ol li.is-collapsed div.list
       --rb-indent-font-family: var(--font-use-default);
       --rb-indent-font-size: var(--font-size-use-default);
       --rb-indent-width: var(--indent-use-default);
-      --rb-left-offset: 3.3px;
+      --rb-left-offset: 3px;
   /* ---------------------------------------------- */
-      --rb-line-width: 1.4px;
+      --rb-line-width: 2px;
       --rb-color-count: 8;
       --rb-indent-bg-size: calc(var(--rb-color-count) * var(--rb-indent-width)) 1px;
 }
@@ -9022,7 +9072,8 @@ body.rainbow-lines .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-l
   display: block;
   position: absolute;
   width: 100%;
-  top: -1.6em;
+  top: -0.5em;
+  bottom: -0.5em;
   padding-bottom: 999em;
   background-image: linear-gradient(
         to right,
@@ -9180,7 +9231,6 @@ body.rainbow-lines .CodeMirror-foldgutter-open.CodeMirror-guttermarker-subtle::a
 	color: rgb(var(--accent-1-rgb)); 
 }
  
-
 /*预览模式*/ 
 /*无序列表*/
 body.rainbow-lines ul ul::before {
@@ -14793,6 +14843,10 @@ body.translucent-setting-panel .vertical-tab-nav-item {
 
 .style-settings-container .setting-item-control select {
   max-width: 330px;
+}
+
+.workspace-leaf-content .style-settings-container .setting-item:first-child {
+  margin-top: 20px;
 }
 
 /* ================================== */
