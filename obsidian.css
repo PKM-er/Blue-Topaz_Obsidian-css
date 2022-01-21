@@ -8528,21 +8528,29 @@ ul ul ul ol ul {
   list-style: circle;
 }
 
+.markdown-source-view.mod-cm6 .list-bullet {
+  padding-right: 4px;
+}
+
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line.cm-line .list-bullet:after {
   content: '\25E6';
-  left: 3px;
+  left: 1px;
+  font-family: 'Inter';
 }
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line .list-bullet:after {
   content: '\2022';
-  left: 0px;
+  left: -2px;
+  font-family: 'Inter';
 }
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line .list-bullet:after {
   content: '\25E6';
-  left: 1px;
+  left: -1px;
+  font-family: 'Inter';
 }
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line .list-bullet:after {
   content: '\25AA';
-  left: -1px;
+  left: 1px;
+  font-family: 'Inter';
 }
 
 .markdown-preview-view ul>li:not(.task-list-item)::marker {
@@ -8600,12 +8608,14 @@ ol ul ol ol {
 
 body:not(.list-vertical-line-one):not(.list-vertical-line-two):not(.list-vertical-line-three):not(.list-no-border) .markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item),
 body:not(.list-vertical-line-one):not(.list-vertical-line-two):not(.list-vertical-line-three):not(.list-no-border) .markdown-preview-view:not(.kanban) ul>li:not(.task-list-item) {
-  margin: 0.2em 0;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
 }
 
 body:not(.list-bracket-left):not(.list-bracket-left-two):not(.list-no-border) .markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item),
 body:not(.list-bracket-left):not(.list-bracket-left-two):not(.list-no-border) .markdown-preview-view:not(.kanban) ul>li:not(.task-list-item) {
-  padding: 0.1em 0;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
 }
 
 .markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item) {
@@ -8967,7 +8977,6 @@ body.list-vertical-line-three .markdown-preview-view ol li.is-collapsed div.list
   opacity: 0.5;
 }
 
-
 body:not(.list-no-border) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
   content: '';
   font-family: var(--rb-indent-font-family) !important;
@@ -9060,11 +9069,13 @@ body.rainbow-lines .mod-cm6.is-live-preview .cm-hmd-list-indent .cm-tab::before 
 body.rainbow-lines .mod-cm6.is-live-preview .HyperMD-list-line.cm-line {
   overflow: hidden;
 }
+
 body.rainbow-lines .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent {
   position: relative;
   font-family: var(--rb-indent-font-family) !important;
   font-size: var(--rb-indent-font-size) !important;
 }
+
 body.rainbow-lines .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
   content: '';
   font-family: var(--rb-indent-font-family) !important;
