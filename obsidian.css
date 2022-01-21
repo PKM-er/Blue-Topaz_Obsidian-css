@@ -595,8 +595,8 @@ settings:
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: '#da8507'
-    default-dark: '#da8507'
+    default-light: '#0e0e0e'
+    default-dark: '#bdbdbd'
   -
     id: list-ol-number-color
     title: Number Color of Ordered List
@@ -1897,7 +1897,7 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --list-ol-block-color: #2685bbb4;
   --list-ol-number-color: #95afc4;
   --list-ol-hover: #2c7bd6;
-  --list-format-ul: #da8507;
+  --list-format-ul: var(--text-normal);
 
   --tag-text: #e4e4e4;
   --stag1: #f08383;
@@ -2187,7 +2187,7 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --list-ol-block-color: #3573a5;
   --list-ol-number-color: #6196d6;
   --list-ol-hover: #5c95e0;
-  --list-format-ul: #da8507;
+  --list-format-ul: var(--text-normal);
 
   --tag-text: #f8f8f8;
   --stag1: #fa8787;
@@ -3635,7 +3635,6 @@ body.color-scheme-options-topaz-nord.theme-dark {
   --list-ol-block-color: var(--nord9);
   --list-ol-number-color: var(--nord9);
   --list-ol-hover: var(--nord7);
-  --list-format-ul: var(--nord12);
 
   --table-thead-background-color: var(--nord9-2);
   --table-hover-raw-color: var(--nord9-2);
@@ -3798,7 +3797,6 @@ body.color-scheme-options-topaz-nord.theme-light {
   --list-ol-block-color: var(--nord9);
   --list-ol-number-color: var(--nord9);
   --list-ol-hover: var(--nord7);
-  --list-format-ul: var(--nord12);
 
   --table-thead-background-color: var(--nord9-2);
   --table-hover-raw-color: var(--nord9-2);
@@ -8316,6 +8314,7 @@ body:not(.font-family-change-to-default) .markdown-source-view.mod-cm6 .cm-scrol
   line-height: var(--line-height-main);
   font-family: var(--font-family-major);
   letter-spacing: calc(var(--letter-space-main) * 0.03em);
+  text-align: var();
 }
 
 .markdown-preview-view.is-readable-line-width:not(.matrix) .markdown-preview-sizer,
@@ -8484,6 +8483,7 @@ mjx-math {
   color: var(--list-ol-number-color);
 }
 
+ul>li::marker,
 .cm-formatting.cm-formatting-list.cm-formatting-list-ul {
   color: var(--list-format-ul);
 }
@@ -8528,6 +8528,23 @@ ul ul ul ol ul {
   list-style: circle;
 }
 
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line.cm-line .list-bullet:after {
+  content: '\25E6';
+}
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line .list-bullet:after {
+  content: '\2022';
+}
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line .list-bullet:after {
+  content: '\25E6';
+}
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line .list-bullet:after {
+  content: '\25AA';
+}
+
+.markdown-preview-view ul>li:not(.task-list-item)::marker {
+  font-size: 0.8em;
+}
+
 ul {
   padding-inline-start: 32px;
 }
@@ -8565,6 +8582,10 @@ ol ol ol ol,
 ol ol ul ol,
 ol ul ol ol {
   list-style: decimal;
+}
+
+::marker {
+  margin-right: -30px !important;
 }
 
 .markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item) {
@@ -8867,7 +8888,7 @@ body.list-vertical-line-three ol ol::before {
   content: '';
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;
-  left: 0.3em;
+  left: 0.1em;
   top: 0px;
   bottom: 0px;
 }
@@ -17347,10 +17368,6 @@ body.blockquote-style-quotation-mark .markdown-preview-view blockquote p:first-o
   position: absolute;
   top: -0.4em;
   left: -1.2em;
-}
-
-body.blockquote-style-quotation-mark .markdown-preview-view li>blockquote p:first-of-type::before {
-  top: 5px;
 }
 
 /*style settings blockquote quotation marks for cm6 live preview*/
