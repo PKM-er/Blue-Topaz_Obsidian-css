@@ -15310,7 +15310,7 @@ span[alt*="+grid"] {
 }
 
 /*image*/
-.is-mobile .markdown-reading-view img:not([class="emoji"]):active {
+body:not(.image-zoom).is-mobile .markdown-reading-view img:not([class="emoji"]):active {
   cursor: initial;
   position: initial;
   object-fit: initial;
