@@ -10213,6 +10213,7 @@ body:not(.image-zoom) .view-content img:not([class="emoji"]) {
 body:not(.image-zoom) .workspace-leaf-content[data-type="markdown"] .view-content img:not([class="emoji"]) {
   cursor: zoom-in;
   display: block;
+  margin: 0 auto !important;
 }
 
 body:not(.image-zoom) .markdown-reading-view img:not([class="emoji"]):active {
@@ -15302,13 +15303,14 @@ span[alt*="+grid"] {
 }
 
 .is-mobile span.cm-strong,
-.is-mobile :not(font)>strong {
+.is-mobile :not(font)>strong,
+.is-mobile .cm-highlight.cm-strong {
   color: var(--accent-strong);
   font-weight: bold;
 }
 
 /*image*/
-.is-mobile .view-content img:not([class="emoji"]):active {
+.is-mobile .markdown-reading-view img:not([class="emoji"]):active {
   cursor: initial;
   position: initial;
   object-fit: initial;
