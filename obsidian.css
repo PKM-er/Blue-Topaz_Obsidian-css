@@ -8477,20 +8477,17 @@ ul ul ul ol ul {
   padding-right: 4px;
 }
 
-*:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line.cm-line .list-bullet::after,
-.is-mobile .HyperMD-list-line.HyperMD-list-line.cm-line:first-of-type .list-bullet::after {
+*:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line.cm-line .list-bullet::after {
   content: '\25E6';
   left: 1px;
   font-family: 'Inter';
 }
-*:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line .list-bullet::after,
-.is-mobile .HyperMD-list-line.HyperMD-list-line-1.cm-line:first-of-type[class="cm-formatting cm-formatting-list cm-formatting-list-ul cm-list-1"] .list-bullet::after {
+*:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line .list-bullet::after {
   content: '\2022';
   left: -2px;
   font-family: 'Inter';
 }
-*:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line .list-bullet::after,
-.is-mobile .HyperMD-list-line.HyperMD-list-line-2.cm-line:first-of-type[class="cm-formatting cm-formatting-list cm-formatting-list-ul cm-list-2"] .list-bullet::after {
+*:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line .list-bullet::after {
   content: '\25E6';
   left: -1px;
   font-family: 'Inter';
