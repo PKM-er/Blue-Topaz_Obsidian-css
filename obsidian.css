@@ -8477,23 +8477,22 @@ ul ul ul ol ul {
   padding-right: 4px;
 }
 
-*:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line.cm-line .list-bullet::after {
+body:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line.cm-line .list-bullet::after {
   content: '\25E6';
   left: 1px;
   font-family: 'Inter';
 }
-*:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line .list-bullet::after {
+body:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line .list-bullet::after {
   content: '\2022';
   left: -2px;
   font-family: 'Inter';
 }
-*:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line .list-bullet::after {
+body:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line .list-bullet::after {
   content: '\25E6';
   left: -1px;
   font-family: 'Inter';
 }
-*:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line .list-bullet::after,
-.is-mobile .HyperMD-list-line.HyperMD-list-line-3.cm-line:first-of-type[class="cm-formatting cm-formatting-list cm-formatting-list-ul cm-list-3"] .list-bullet::after {
+body:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line .list-bullet::after {
   content: '\25AA';
   left: 1px;
   font-family: 'Inter';
@@ -8923,7 +8922,7 @@ body.list-vertical-line-three:not(.default-icons) .markdown-preview-view ol li.i
   opacity: 0.5;
 }
 
-body:not(.list-no-border) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
+body:not(.list-no-border):not(.is-mobile) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
   content: '';
   font-family: var(--rb-indent-font-family) !important;
   font-size: var(--rb-indent-font-size) !important;
@@ -8956,13 +8955,13 @@ body:not(.list-no-border) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .c
   left: var(--rb-left-offset);
 }
 
-body:not(.list-no-border) .mod-cm6.is-live-preview .cm-hmd-list-indent .cm-tab::before {
+body:not(.list-no-border):not(.is-mobile) .mod-cm6.is-live-preview .cm-hmd-list-indent .cm-tab::before {
   display: none;
 }
-body:not(.list-no-border) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line {
+body:not(.list-no-border):not(.is-mobile) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line {
   overflow: hidden;
 }
-body:not(.list-no-border) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent {
+body:not(.list-no-border):not(.is-mobile) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent {
   position: relative;
   font-family: var(--rb-indent-font-family) !important;
   font-size: var(--rb-indent-font-size) !important;
