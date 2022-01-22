@@ -1286,7 +1286,7 @@ settings:
     collapsed: true
   -
     id: adjustable-embed-content-height
-    title: Fix Height of Embedded Content
+    title: To Fix Height of Embedded Content
     title.zh: 固定嵌入页面高度
     type: class-toggle
     default: false
