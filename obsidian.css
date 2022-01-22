@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.13.21。uid [20220121] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.13.21, uid [20220121] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.13.21。uid [20220122] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.13.21, uid [20220122] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 @LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @awyugan */
@@ -924,6 +924,12 @@ settings:
     type: class-toggle
     default: false
   - 
+    id: default-icons
+    title: Remove Collapse Icons
+    title.zh: 还原折叠图标
+    type: class-toggle
+    default: false
+  - 
     id: fancy-hr-folder
     title: 2.3.1 Horizontal Ruler (hr, ---)
     title.zh: 2.3.1 分割线（hr，---）
@@ -1041,6 +1047,103 @@ settings:
       - 
         label: Nothing
         value: list-no-border
+      - 
+        label: Rainbow Outline
+        value: rainbow-lines
+  -
+    id: rainbow-lines-head
+    title:  2.3.2.1 Rainbow Outline Style Settings
+    title.zh: 2.3.2.1 彩虹大纲线设置
+    description: Settings for "Rainbow Outlines" option
+    type: heading
+    level: 4
+    collapsed: true
+  -
+    id: rainbow-ordered-list
+    title:  Enable rainbow outline list order
+    title.zh: 开启彩虹列表序号
+    type: class-toggle
+    default: false
+  -
+    id: rainbow-checkbox
+    title:  Enable rainbow outline checkbox
+    title.zh: 开启彩虹任务选择框
+    type: class-toggle
+    default: false
+  -
+    id: rainbow-lines-color-settings
+    title: 2.3.2.2 Rainbow Lines Colors Settings
+    title.zh: 2.3.2.2 彩虹线颜色设置
+    description: Settings for "Rainbow Outlines" option
+    type: heading
+    level: 4
+    collapsed: true
+  - 
+    id: accent-1
+    title: Outline level 1
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+          -
+            id: accent-1-rgb
+            format: rgb-values
+    default: '#38558b'
+  -
+    id: accent-2
+    title: Outline level 2
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+          -
+            id: accent-2-rgb
+            format: rgb-values
+    default: '#5f388b'
+  -
+    id: accent-3
+    title: Outline level 3
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+          -
+            id: accent-3-rgb
+            format: rgb-values
+    default: '#8b3884'
+  -
+    id: accent-4
+    title: Outline level 4
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+          -
+            id: accent-4-rgb
+            format: rgb-values
+    default: '#388b38'
+  -
+    id: accent-5
+    title: Outline level 5
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+          -
+            id: accent-5-rgb
+            format: rgb-values
+    default: '#e08e13'
+  -
+    id: accent-6
+    title: Outline level 6
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+          -
+            id: accent-6-rgb
+            format: rgb-values
+    default: '#cccecc'
   -
     id: folder-style-change-options-folder
     title: 2.3.3 Folder
@@ -1254,107 +1357,9 @@ settings:
     type: class-toggle
     default: false
   -
-    id: rainbow-lines-head
-    title:  2.3.9 rainbow outline
-    title.zh: 2.3.9 彩虹大纲线
-    type: heading
-    level: 3
-    collapsed: true
-  -
-    id: rainbow-lines
-    title:  Enable rainbow outline
-    title.zh: 开启彩虹大纲线
-    type: class-toggle
-    default: false
-  -
-    id: rainbow-ordered-list
-    title:  Enable rainbow outline list order
-    title.zh: 开启彩虹列表序号
-    type: class-toggle
-    default: false
-  -
-    id: rainbow-checkbox
-    title:  Enable rainbow outline checkbox
-    title.zh: 开启彩虹任务选择框
-    type: class-toggle
-    default: false
-  -
-    id: rainbow-lines-color-settings
-    title: rainbow lines colors
-    title.zh: 彩虹线颜色设置
-    type: heading
-    level: 4
-    collapsed: true
-  - 
-    id: accent-1
-    title: Outline level 1
-    type: variable-color
-    opacity: false
-    format: hex
-    alt-format:
-          -
-            id: accent-1-rgb
-            format: rgb-values
-    default: '#38558b'
-  -
-    id: accent-2
-    title: Outline level 2
-    type: variable-color
-    opacity: false
-    format: hex
-    alt-format:
-          -
-            id: accent-2-rgb
-            format: rgb-values
-    default: '#5f388b'
-  -
-    id: accent-3
-    title: Outline level 3
-    type: variable-color
-    opacity: false
-    format: hex
-    alt-format:
-          -
-            id: accent-3-rgb
-            format: rgb-values
-    default: '#8b3884'
-  -
-    id: accent-4
-    title: Outline level 4
-    type: variable-color
-    opacity: false
-    format: hex
-    alt-format:
-          -
-            id: accent-4-rgb
-            format: rgb-values
-    default: '#388b38'
-  -
-    id: accent-5
-    title: Outline level 5
-    type: variable-color
-    opacity: false
-    format: hex
-    alt-format:
-          -
-            id: accent-5-rgb
-            format: rgb-values
-    default: '#e08e13'
-  -
-    id: accent-6
-    title: Outline level 6
-    type: variable-color
-    opacity: false
-    format: hex
-    alt-format:
-          -
-            id: accent-6-rgb
-            format: rgb-values
-    default: '#cccecc'
-  -
     id: codeblock-folder
-    title: 2.3.10 Codeblock
-    title.zh: 2.3.10 代码框
+    title: 2.3.9 Codeblock
+    title.zh: 2.3.9 代码框
     type: heading
     level: 3
     collapsed: true
@@ -2370,7 +2375,6 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --text-folder-file-icon: var(--theme-color);
 }
 
-
 body.color-scheme-options-avocado-topaz.theme-light {
   --background-primary: #ffffff;
   --background-primary-alt: #e9e9e9;
@@ -2453,7 +2457,6 @@ body.color-scheme-options-avocado-topaz.theme-light {
 
   --internal-link-color-in-highlight: #03a240;
 
-  /*list*/
   --list-ul-block-color: #b9751b;
   --list-ul-disc-color: #f39c55;
   --green-1: #3dc730;
@@ -2462,7 +2465,6 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --list-ol-number-color: #429a71;
   --list-ol-hover: #31b870;
 
-  /*tags*/
   --tag-text: #f8f8f8;
   --stag1: #fa8787;
   --stag1-bg: #eb2727;
@@ -2488,7 +2490,6 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --tag-ideas: #ceb900;
   --tag-ideas-bg: #444444d8;
 
-  /*Titles*/
   --h1-color: #02401f;
   --h2-color: #034f27;
   --h3-color: #034924;
@@ -4172,7 +4173,6 @@ body.color-scheme-options-flamingo.theme-light #calendar-container .arrow:hover 
 }
 
 body.color-scheme-options-flamingo.theme-light #calendar-container .day:active,
-
 body.color-scheme-options-flamingo.theme-light #calendar-container .active,
 body.color-scheme-options-flamingo.theme-light #calendar-container .active.today {
   background-color: #f5a7a2 !important;
@@ -4210,7 +4210,6 @@ body.color-scheme-options-flamingo.theme-light #calendar-container .week-num {
 }
 
 /*星期数悬停 week hover*/
-
 body.color-scheme-options-flamingo.theme-light #calendar-container .week-num:hover {
   background-color: var(--calendar-week-hover) !important;
 }
@@ -4340,24 +4339,6 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
 
   --scrollbar-thumb: #c6c6c6a8;
 
-  --gray-1: #383a42;
-  --gray-2: #383a42;
-  --red: #f13d64;
-  --red-1: #f16464f5;
-  --green: #63c951;
-  --darkgreen: #acb5b2;
-  --blue: #107fe7;
-  --darkblue: #3b84e4;
-  --purple: #c74df7;
-  --aqua: #29bdcb;
-  --yellow: #e48100;
-  --light-yellow: #ab9a02;
-  --orange: #db9600;
-  --orange-1: #cc7523;
-  --light-purple: #b74ff3;
-  --blue-green: #3bd4da;
-  --white: #ffffff;
-
   --embed-color: #ece4b74f;
   --search-result-file-title-color: var(--main-color);
   --theme-color: var(--interactive-accent);
@@ -4373,7 +4354,6 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
 
   --internal-link-color-in-highlight: var(--main-color);
 
-  /*list*/
   --list-ul-block-color: var(--color6);
   --list-ul-disc-color: var(--main-color);
   --green-1: #3dc730;
@@ -4382,7 +4362,6 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --list-ol-number-color: var(--main-color);
   --list-ol-hover: var(--low-color);
 
-  /*tags*/
   --tag-text: #f8f8f8;
   --stag1: #fa8787;
   --stag1-bg: #eb2727;
@@ -4408,7 +4387,6 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --tag-ideas: #ceb900;
   --tag-ideas-bg: #444444d8;
 
-  /*Titles*/
   --h1-color: var(--color6);
   --h2-color: var(--color7);
   --h3-color: var(--color8);
@@ -4564,23 +4542,6 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
 
   --scrollbar-thumb: #8282827e;/*滚动条颜色*/
 
-  /*代码框使用的颜色，可以不调*/
-  --gray-1: #5C6370;
-  --gray-2: #abb2bf;
-  --red: #e06c75;
-  --red-1: #d05a63;
-  --orange: #d19a66;
-  --orange-1: #da904b;
-  --green: #b6e296;
-  --darkgreen: #399a58;
-  --aqua: #56b6c2;
-  --purple: #c678dd;
-  --blue: #9dcffc;
-  --darkblue: #4889df;
-  --yellow: #e4ba6c;
-  --light-yellow: #dfda91;
-  --white: #ffffff;
-
   --embed-color: #46402134;/*![[]] 背景颜色*/
   --search-result-file-title-color: var(--main-color);
   --theme-color: var(--interactive-accent);
@@ -4612,7 +4573,6 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
   --stag3: #77df89;
   --stag3-bg: #058c1c;
 
-  /*普通标签颜色*/
   --tag1: #006ec7;
   --tag2: #007e78;
   --tag3: #007b06;
@@ -4632,7 +4592,6 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
   --tag-ideas: #fcfcc0;
   --tag-ideas-bg: #565656d8;
 
-  /*titles*/
   --h1-color: var(--color6);
   --h2-color: var(--color7);
   --h3-color: var(--color8);
@@ -4720,7 +4679,6 @@ body.color-scheme-options-honey-milk-topaz #calendar-container {
   --color-text-day: var(--text-normal);
   --color-text-today: var(--text-accent);
 
-  /*===*/
   padding: 0px 5px 0px 8px;
   margin: -21px -8px 0px -8px;
   line-height: 0.6;
@@ -5054,7 +5012,6 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
   --stag3: #77df89;
   --stag3-bg: #058c1c;
 
-  /*普通标签颜色*/
   --tag1: var(--color11);
   --tag2: var(--color10);
   --tag3: var(--color9);
@@ -5348,7 +5305,6 @@ body.color-scheme-options-autumn-topaz.theme-dark {
   /* --background-secondary: var(--bg-color); */
   --background-secondary-alt: var(--bg-color2);
   --background-secondary-alt-bg-4-bt:var(--bg-color);
-
 
   --text-accent: var(--low-color);
   --text-accent-hover: var(--main-color); 
@@ -5817,10 +5773,8 @@ body.color-scheme-options-lillimon-topaz #calendar-container {
   padding: 0px 5px 0px 8px;
   margin: -21px -8px 0px -8px;
   line-height: 0.6;
-  }
-
+}
 /*=================== Lillian 的配色 end  ========================*/
-
 
 /*========== awyugan 的 配色 =========*/
 body.color-scheme-options-lilac.theme-light {
@@ -6170,7 +6124,6 @@ body.color-scheme-options-lilac.theme-dark {
   --internal-link-color: #a360da;
   --internal-link-color-in-highlight: #a360da;
 
-  /*list*/
   --list-ul: #f1a8f8;
   --list-ul-block-color: #e142d9a9;
   --list-ul-disc-color: #ae63eb;
@@ -6180,7 +6133,6 @@ body.color-scheme-options-lilac.theme-dark {
   --list-ol-number-color: #b595c4;
   --list-ol-hover: #ba2cd6;
 
-  /*tags*/
   --tag-text: #e4e4e4;
   --stag1: #f08383;
   --stag1-bg: #bd1919;
@@ -6322,9 +6274,9 @@ body.color-scheme-options-lilac div .CodeMirror-line span.cm-hashtag-begin + spa
   padding-left: 0.4375em;
 }
 
-body.color-scheme-options-lilac  *:not(font) > em > strong,
-body.color-scheme-options-lilac  *:not(font) > strong > em, 
-body.color-scheme-options-lilac  .cm-strong.cm-em {
+body.color-scheme-options-lilac *:not(font) > em > strong,
+body.color-scheme-options-lilac *:not(font) > strong > em, 
+body.color-scheme-options-lilac .cm-strong.cm-em {
   background-image: initial;
   background-clip: initial;
   -webkit-background-clip: initial;
@@ -6383,13 +6335,11 @@ body.color-scheme-options-lilac.theme-light #calendar-container {
   word-break: break-all;
   white-space: pre-wrap;
 }
-
 .code-wrap code.language-yaml.is-loaded {
   word-wrap: break-word !important;
   word-break: break-word !important;
   white-space: pre-wrap !important;
 }
-
 .code-wrap code.language-md.is-loaded {
   word-wrap: break-word !important;
   word-break: break-word !important;
@@ -6402,23 +6352,18 @@ body.color-scheme-options-lilac.theme-light #calendar-container {
 .img-grid .markdown-preview-section>div>p>.image-embed[alt*="."] {
   padding: 0 0.3rem;
 }
-
 .img-grid .markdown-preview-section>div>p>.image-embed[alt*="."]:last-child {
   padding-right: 0;
 }
-
 .img-grid .markdown-preview-section>div>p>.image-embed[alt*="."]:first-child {
   padding-left: 0;
 }
-
 .img-grid .markdown-preview-section>div hr {
   width: 100%;
 }
-
 .img-grid span.image-embed[alt*="."] {
   display: table-cell;
 }
-
 .img-grid img[alt*="."] {
   max-height: 100vh;
   object-fit: cover;
@@ -9119,37 +9064,33 @@ body.rainbow-ordered-list .HyperMD-list-line-1 .cm-formatting-list{
 body.rainbow-checkbox .HyperMD-list-line-1 .cm-formatting-task{
   color: rgb(var(--accent-1-rgb)) !important;
 }
- 
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-1 .task-list-item-checkbox:checked {
-  background-color:  rgb(var(--accent-1-rgb),0.7);
+  background-color: rgba(var(--accent-1-rgb),0.7);
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-1 .task-list-item-checkbox {
-  border-color:  rgb(var(--accent-1-rgb),0.7) ;
+  border-color: rgba(var(--accent-1-rgb),0.7) ;
 }
-  
-body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(1)::before {
-  border-color:  rgb(var(--accent-1-rgb),0.7);
+body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(8n+1)::before {
+  border-color: rgba(var(--accent-1-rgb),0.7);
 }
 body.rainbow-lines .mod-cm6 .HyperMD-list-line-1>span.list-bullet {
   color: rgb(var(--accent-1-rgb)) ;
 }
- 
-body.rainbow-ordered-list .HyperMD-list-line-2 .cm-formatting-list{
-  color:  rgb(var(--accent-2-rgb))!important;
-}
-body.rainbow-checkbox .HyperMD-list-line-2 .cm-formatting-task{
-  color:  rgb(var(--accent-2-rgb))!important;
-}
 
+body.rainbow-ordered-list .HyperMD-list-line-2 .cm-formatting-list {
+  color: rgb(var(--accent-2-rgb))!important;
+}
+body.rainbow-checkbox .HyperMD-list-line-2 .cm-formatting-task {
+  color: rgb(var(--accent-2-rgb))!important;
+}
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-2 .task-list-item-checkbox:checked {
-  background-color:  rgb(var(--accent-2-rgb),0.7);
+  background-color: rgba(var(--accent-2-rgb),0.7);
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-2 .task-list-item-checkbox {
-  border-color:  rgb(var(--accent-2-rgb),0.7) ;
+  border-color: rgba(var(--accent-2-rgb),0.7) ;
 }
-
-body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(2)::before {
-  border-color:  rgb(var(--accent-2-rgb),0.7);
+body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(8n+2)::before {
+  border-color: rgba(var(--accent-2-rgb),0.7);
 }
 body.rainbow-lines .mod-cm6 .HyperMD-list-line-2>span.list-bullet {
   color: rgb(var(--accent-2-rgb)) ;
@@ -9162,80 +9103,111 @@ body.rainbow-checkbox  .HyperMD-list-line-3 .cm-formatting-task {
   color: rgb(var(--accent-3-rgb))!important;
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-3 .task-list-item-checkbox:checked {
-  background-color:  rgb(var(--accent-3-rgb),0.7);
+  background-color: rgba(var(--accent-3-rgb),0.7);
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-3 .task-list-item-checkbox {
-  border-color:  rgb(var(--accent-3-rgb),0.7) ;
+  border-color: rgba(var(--accent-3-rgb),0.7) ;
 }
-
-body.rainbow-lines  .HyperMD-list-line.cm-hmd-list-indent > span.cm-tab:nth-child(3)::before {
-  border-color:  rgb(var(--accent-3-rgb),0.7);
+body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(8n+3)::before {
+  border-color: rgba(var(--accent-3-rgb),0.7);
 }
 body.rainbow-lines .mod-cm6 .HyperMD-list-line-3>span.list-bullet {
   color: rgb(var(--accent-3-rgb)) ;
 }
- 
-body.rainbow-ordered-list  .HyperMD-list-line-4 .cm-formatting-list {
-  color: rgb(var(--accent-4-rgb))!important;
-}
-body.rainbow-checkbox  .HyperMD-list-line-4 .cm-formatting-task {
-  color: rgb(var(--accent-4-rgb))!important;
-}
 
+body.rainbow-ordered-list .HyperMD-list-line-4 .cm-formatting-list {
+  color: rgb(var(--accent-4-rgb))!important;
+}
+body.rainbow-checkbox .HyperMD-list-line-4 .cm-formatting-task {
+  color: rgb(var(--accent-4-rgb))!important;
+}
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-4 .task-list-item-checkbox:checked {
-  background-color: rgb(var(--accent-4-rgb),0.7);
+  background-color: rgba(var(--accent-4-rgb),0.7);
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-4 .task-list-item-checkbox {
-  border-color: rgb(var(--accent-4-rgb),0.7) ;
+  border-color: rgba(var(--accent-4-rgb),0.7) ;
 }
-
-body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(4)::before {
-  border-color: rgb(var(--accent-4-rgb),0.7) ;
+body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(8n+4)::before {
+  border-color: rgba(var(--accent-4-rgb),0.7) ;
 }
 body.rainbow-lines .mod-cm6 .HyperMD-list-line-4>span.list-bullet {
   color: rgb(var(--accent-4-rgb)) ;
 }
 
-body.rainbow-ordered-list  .HyperMD-list-line-5 .cm-formatting-list {
+body.rainbow-ordered-list .HyperMD-list-line-5 .cm-formatting-list{
   color: rgb(var(--accent-5-rgb))!important;
 }
-body.rainbow-checkbox  .HyperMD-list-line-5 .cm-formatting-task {
+body.rainbow-checkbox .HyperMD-list-line-5 .cm-formatting-task{
   color: rgb(var(--accent-5-rgb))!important;
 }
-
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-5 .task-list-item-checkbox:checked {
-  background-color:  rgb(var(--accent-5-rgb),0.7);
+  background-color:  rgba(var(--accent-5-rgb),0.7);
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-5 .task-list-item-checkbox {
-  border-color:  rgb(var(--accent-5-rgb),0.7) ;
+  border-color: rgba(var(--accent-5-rgb),0.7) ;
 }
-
-body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(5)::before {
-  border-color:  rgb(var(--accent-5-rgb),0.7);
+body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(8n+5)::before {
+  border-color: rgba(var(--accent-5-rgb),0.7);
 }
 body.rainbow-lines .mod-cm6 .HyperMD-list-line-5>span.list-bullet {
   color: rgb(var(--accent-5-rgb)) ;
 }
 
-body.rainbow-ordered-list  .HyperMD-list-line-6 .cm-formatting-list {
+body.rainbow-ordered-list .HyperMD-list-line-6 .cm-formatting-list{
   color: rgb(var(--accent-6-rgb))!important;
 }
-body.rainbow-checkbox  .HyperMD-list-line-5 .cm-formatting-task {
+body.rainbow-checkbox .HyperMD-list-line-6 .cm-formatting-task{
   color: rgb(var(--accent-6-rgb))!important;
 }
- 
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-6 .task-list-item-checkbox:checked {
-  background-color: rgb(var(--accent-6-rgb),0.7);
+  background-color: rgba(var(--accent-6-rgb),0.7);
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-6 .task-list-item-checkbox {
-  border-color: rgb(var(--accent-6-rgb),0.7) ;
+  border-color: rgba(var(--accent-6-rgb),0.7);
 }
-
-body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(6)::before {
-  border-color: rgb(var(--accent-6-rgb),0.7) ;
+body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(8n+6)::before {
+  border-color: rgba(var(--accent-6-rgb),0.7);
 }
 body.rainbow-lines .mod-cm6 .HyperMD-list-line-6>span.list-bullet {
-  color: rgb(var(--accent-6-rgb)) ;
+  color: rgb(var(--accent-6-rgb));
+}
+
+body.rainbow-ordered-list .HyperMD-list-line-7 .cm-formatting-list{
+  color: rgb(var(--accent-7-rgb))!important;
+}
+body.rainbow-checkbox .HyperMD-list-line-7 .cm-formatting-task{
+  color: rgb(var(--accent-7-rgb))!important;
+}
+body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-7 .task-list-item-checkbox:checked {
+  background-color: rgba(var(--accent-7-rgb),0.7);
+}
+body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-7 .task-list-item-checkbox {
+  border-color: rgba(var(--accent-7-rgb),0.7);
+}
+body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(8n+7)::before {
+  border-color: rgba(var(--accent-7-rgb),0.7);
+}
+body.rainbow-lines .mod-cm6 .HyperMD-list-line-7>span.list-bullet {
+  color: rgb(var(--accent-7-rgb));
+}
+
+body.rainbow-ordered-list .HyperMD-list-line-8 .cm-formatting-list{
+  color: rgb(var(--accent-8-rgb))!important;
+}
+body.rainbow-checkbox .HyperMD-list-line-8 .cm-formatting-task{
+  color: rgb(var(--accent-8-rgb))!important;
+}
+body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-8 .task-list-item-checkbox:checked {
+  background-color: rgba(var(--accent-8-rgb),0.7);
+}
+body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-8 .task-list-item-checkbox {
+  border-color: rgba(var(--accent-8-rgb),0.7);
+}
+body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(8n)::before {
+  border-color: rgba(var(--accent-8-rgb),0.7);
+}
+body.rainbow-lines .mod-cm6 .HyperMD-list-line-7>span.list-bullet {
+  color: rgb(var(--accent-8-rgb));
 }
 
 body.rainbow-lines .CodeMirror-foldgutter-open.CodeMirror-guttermarker-subtle::after {
@@ -9247,7 +9219,6 @@ body.rainbow-lines .CodeMirror-foldgutter-open.CodeMirror-guttermarker-subtle::a
 body.rainbow-lines ul ul::before {
  border-color: rgb(var(--accent-1-rgb),0.7) !important;
 }
-
 body.rainbow-lines li ul ul::before {
   border-color: rgb(var(--accent-2-rgb),0.7) !important;
 }
@@ -9257,7 +9228,6 @@ body.rainbow-lines li ul ul ul::before {
 body.rainbow-lines li ul ul ul ul::before {
   border-color: rgb(var(--accent-4-rgb),0.7) !important;
 }
- 
 body.rainbow-lines li ul ul ul ul ul::before {
   border-color: rgb(var(--accent-5-rgb),0.7) !important;
 }
@@ -9269,7 +9239,6 @@ body.rainbow-lines li ul ul ul ul ul ul::before {
 body.rainbow-lines  ol ol::before {
   border-color: rgb(var(--accent-1-rgb),0.7) !important;
 }
-
 body.rainbow-lines li ol ol::before {
   border-color: rgb(var(--accent-2-rgb),0.7) !important;
 }
@@ -9328,23 +9297,37 @@ body.rainbow-lines .markdown-preview-view li li li li li .list-collapse-indicato
 body.rainbow-lines .markdown-preview-view li li li li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   color: rgb(var(--accent-6-rgb));	
 }
+body.rainbow-ordered-list .markdown-preview-view ul>li::marker,
 body.rainbow-ordered-list .markdown-preview-view ol>li::marker {
   color: rgb(var(--accent-1-rgb));	
 }
+body.rainbow-ordered-list .markdown-preview-view ul>li ul>li::marker,
 body.rainbow-ordered-list .markdown-preview-view ol>li ol>li::marker {
   color: rgb(var(--accent-2-rgb));
 }
+body.rainbow-ordered-list .markdown-preview-view ul>li ul>li ul>li::marker,
 body.rainbow-ordered-list .markdown-preview-view ol>li ol>li ol>li::marker {
   color:  rgb(var(--accent-3-rgb));
 }
+body.rainbow-ordered-list .markdown-preview-view ul>li ul>li ul>li ul>li::marker,
 body.rainbow-ordered-list .markdown-preview-view ol>li ol>li ol>li ol>li::marker {
   color: rgb(var(--accent-4-rgb));
 }
+body.rainbow-ordered-list .markdown-preview-view ul>li ul>li ul>li ul>li ul>li::marker,
 body.rainbow-ordered-list .markdown-preview-view ol>li ol>li ol>li ol>li ol>li::marker {
   color: rgb(var(--accent-5-rgb));
 }
+body.rainbow-ordered-list .markdown-preview-view ul>li ul>li ul>li ul>li ul>li ul>li::marker,
 body.rainbow-ordered-list .markdown-preview-view ol>li ol>li ol>li ol>li ol>li ol>li::marker {
-color: rgb(var(--accent-6-rgb));
+  color: rgb(var(--accent-6-rgb));
+}
+body.rainbow-ordered-list .markdown-preview-view ul>li ul>li ul>li ul>li ul>li ul>li ul>li::marker,
+body.rainbow-ordered-list .markdown-preview-view ol>li ol>li ol>li ol>li ol>li ol>li ol>li::marker {
+  color: rgb(var(--accent-7-rgb));
+}
+body.rainbow-ordered-list .markdown-preview-view ul>li ul>li ul>li ul>li ul>li ul>li ul>li ul>li::marker,
+body.rainbow-ordered-list .markdown-preview-view ol>li ol>li ol>li ol>li ol>li ol>li ol>li ol>li::marker {
+  color: rgb(var(--accent-8-rgb));
 }
 
 /*===========*/
@@ -10429,14 +10412,18 @@ body.muted-activeline-bg .HyperMD-codeblock-bg.CodeMirror-activeline-background.
 }
 
 /*---- nav arrows adjust location ----*/
-.nav-folder-collapse-indicator {
+body:not(.default-icons) .nav-folder-collapse-indicator {
   position: absolute;
   left: 21px;
   top: 3px;
   transition: transform 20ms linear 0s;
 }
 
-.nav-folder-collapse-indicator::after {
+body.default-icons .nav-folder-collapse-indicator {
+  margin-left: -9px;
+}
+
+body:not(.default-icons) .nav-folder-collapse-indicator::after {
   position: absolute;
   content: "↓";
   left: -3px;
@@ -10448,7 +10435,7 @@ body.muted-activeline-bg .HyperMD-codeblock-bg.CodeMirror-activeline-background.
   transition: transform 10ms linear 0s;
 }
 
-.nav-folder-collapse-indicator svg {
+body:not(.default-icons) .nav-folder-collapse-indicator svg {
   display: none;
   color: var(--accent-strong);
   height: 7px;
@@ -10459,20 +10446,20 @@ body:not(.unmuted-collapsed-folder) .nav-folder.is-collapsed {
   opacity: 0.55;
 }
 
-.nav-folder.is-collapsed .nav-folder-collapse-indicator {
+body:not(.default-icons) .nav-folder.is-collapsed .nav-folder-collapse-indicator {
   transform: translateX(-11px) translateY(6px) rotate(-90deg);
   opacity: 0.7;
 }
 
 /*search icon 1*/
-.backlink-pane .search-result-container .collapse-icon {
+body:not(.default-icons) .backlink-pane .search-result-container .collapse-icon {
   left: 0px;
   top: 7px;
   margin-top: 0px;
   transition: transform 20ms linear 0s;
 }
 
-.backlink-pane .search-result-container .collapse-icon::before {
+body:not(.default-icons) .backlink-pane .search-result-container .collapse-icon::before {
   content: "↓";
   font-size: 14px;
   font-family: 'Inter';
@@ -10481,27 +10468,27 @@ body:not(.unmuted-collapsed-folder) .nav-folder.is-collapsed {
   transition: transform 10ms linear 0s;
 }
 
-.backlink-pane .search-result-container .collapse-icon svg {
+body:not(.default-icons) .backlink-pane .search-result-container .collapse-icon svg {
   display: none;
   color: var(--accent-strong);
   height: 7px;
   width: 7px;
 }
 
-.backlink-pane .search-result-container .tree-item.search-result.is-collapsed .collapse-icon {
+body:not(.default-icons) .backlink-pane .search-result-container .tree-item.search-result.is-collapsed .collapse-icon {
   transform: translateX(0px) translateY(0px) rotate(-90deg);
   opacity: 0.5;
 }
 
 /* search panel icons */
-.workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon {
+body:not(.default-icons) .workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon {
   left: 0px;
   top: 7px;
   margin-top: 0px;
   transition: transform 20ms linear 0s;
 }
 
-.workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon::before {
+body:not(.default-icons) .workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon::before {
   content: "↓";
   font-size: 14px;
   margin-left: 0px;
@@ -10511,14 +10498,14 @@ body:not(.unmuted-collapsed-folder) .nav-folder.is-collapsed {
   transition: transform 10ms linear 0s;
 }
 
-.workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon svg {
+body:not(.default-icons) .workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon svg {
   display: none;
   color: var(--accent-strong);
   height: 7px;
   width: 7px;
 }
 
-.workspace-leaf .search-result-container.mod-global-search .tree-item.search-result.is-collapsed .collapse-icon {
+body:not(.default-icons) .workspace-leaf .search-result-container.mod-global-search .tree-item.search-result.is-collapsed .collapse-icon {
   transform: translateX(1px) translateY(1px) rotate(-90deg);
   opacity: 0.5;
 }
@@ -10537,22 +10524,22 @@ body:not(.unmuted-collapsed-folder) .nav-folder.is-collapsed {
   color: var(--text-faint);
 }
 
-div.heading-collapse-indicator.collapse-indicator {
+body:not(.default-icons) div.heading-collapse-indicator.collapse-indicator {
   position: absolute;
   padding-left: 10px;
   transition: transform 20ms linear 0s;
 }
 
-h1 div.heading-collapse-indicator.collapse-indicator,
-h2 div.heading-collapse-indicator.collapse-indicator {
+body:not(.default-icons) h1 div.heading-collapse-indicator.collapse-indicator,
+body:not(.default-icons) h2 div.heading-collapse-indicator.collapse-indicator {
   position: absolute;
   padding-left: 10px;
   margin-top: 13px;
   transition: transform 20ms linear 0s;
 }
 
-h1 div.heading-collapse-indicator.collapse-indicator::before,
-h2 div.heading-collapse-indicator.collapse-indicator::before {
+body:not(.default-icons) h1 div.heading-collapse-indicator.collapse-indicator::before,
+body:not(.default-icons) h2 div.heading-collapse-indicator.collapse-indicator::before {
   content: "↓";
   position: absolute;
   font-size: 17px;
@@ -10565,11 +10552,11 @@ h2 div.heading-collapse-indicator.collapse-indicator::before {
   opacity: 0;
 }
 
-.heading-collapse-indicator.collapse-indicator.collapse-icon svg {
+body:not(.default-icons) .heading-collapse-indicator.collapse-indicator.collapse-icon svg {
   display: none;
 }
 
-div.heading-collapse-indicator.collapse-indicator::before {
+body:not(.default-icons) div.heading-collapse-indicator.collapse-indicator::before {
   content: "↓";
   position: absolute;
   font-size: 17px;
@@ -10582,13 +10569,13 @@ div.heading-collapse-indicator.collapse-indicator::before {
   opacity: 0;
 }
 
-div.is-collapsed h1 div.heading-collapse-indicator.collapse-indicator,
-div.is-collapsed h2 div.heading-collapse-indicator.collapse-indicator {
+body:not(.default-icons) div.is-collapsed h1 div.heading-collapse-indicator.collapse-indicator,
+body:not(.default-icons) div.is-collapsed h2 div.heading-collapse-indicator.collapse-indicator {
   transform: translateX(3px) translateY(10px) rotate(-90deg);
   opacity: 0.5;
 }
 
-div.is-collapsed div.heading-collapse-indicator.collapse-indicator {
+body:not(.default-icons) div.is-collapsed div.heading-collapse-indicator.collapse-indicator {
   transform: translateX(-8px) translateY(20px) rotate(-90deg);
   opacity: 0.5;
 }
@@ -10603,13 +10590,13 @@ h6:hover div.heading-collapse-indicator.collapse-indicator::before {
 }
 
 /* headering collaspe indicators in edit */
-div.CodeMirror-foldgutter-open {
+body:not(.default-icons) div.CodeMirror-foldgutter-open {
   left: 5px;
   position: absolute;
   transition: transform 20ms linear 0s;
 }
 
-div.CodeMirror-foldgutter-open::after {
+body:not(.default-icons) div.CodeMirror-foldgutter-open::after {
   content: "↓";
   position: absolute;
   font-size: 14px;
@@ -10621,12 +10608,12 @@ div.CodeMirror-foldgutter-open::after {
   transition: transform 10ms linear 0s;
 }
 
-div.CodeMirror-foldgutter-folded {
+body:not(.default-icons) div.CodeMirror-foldgutter-folded {
   position: absolute;
   transition: transform 20ms linear 0s;
 }
 
-div.CodeMirror-foldgutter-folded::after {
+body:not(.default-icons) div.CodeMirror-foldgutter-folded::after {
   content: "→";
   position: absolute;
   font-size: 14px;
@@ -10640,12 +10627,12 @@ div.CodeMirror-foldgutter-folded::after {
 }
 
 /*search icon 2*/
-span.collapse-icon {
+body:not(.default-icons) span.collapse-icon {
   margin-top: 0px;
   transition: transform 20ms linear 0s;
 }
 
-span.collapse-icon::before {
+body:not(.default-icons) span.collapse-icon::before {
   content: "↓";
   margin-left: 0px;
   font-size: 16px;
@@ -10655,29 +10642,29 @@ span.collapse-icon::before {
   transition: transform 10ms linear 0s;
 }
 
-span.collapse-icon svg {
+body:not(.default-icons) span.collapse-icon svg {
   display: none;
   color: var(--accent-strong);
   height: 7px;
   width: 7px;
 }
 
-div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
+body:not(.default-icons) div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
   transform: translateX(0px) translateY(0px) rotate(-90deg);
   opacity: 0.5;
 }
 
 /* outline page*/
-.outline .tree-item-self.is-clickable {
+body:not(.default-icons) .outline .tree-item-self.is-clickable {
   padding-left: 27px !important;
 }
 
-.outline .tree-item .collapse-icon {
+body:not(.default-icons) .outline .tree-item .collapse-icon {
   padding: 0px;
   transition: transform 20ms linear 0s;
 }
 
-.outline .tree-item .collapse-icon::before {
+body:not(.default-icons) .outline .tree-item .collapse-icon::before {
   content: "↓";
   font-size: 16px;
   font-weight: bold;
@@ -10686,14 +10673,14 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
   transition: transform 10ms linear 0s;
 }
 
-.outline .tree-item .collapse-icon svg {
+body:not(.default-icons) .outline .tree-item .collapse-icon svg {
   display: none;
   color: var(--accent-strong);
   height: 7px;
   width: 7px;
 }
 
-.outline .tree-item.is-collapsed .collapse-icon {
+body:not(.default-icons) .outline .tree-item.is-collapsed .collapse-icon {
   transform: translateX(-1px) translateY(-1px) rotate(-90deg);
   opacity: 0.5;
 }
@@ -10706,16 +10693,20 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
   transition: all 300ms ease-in-out;
 }
 
+body.default-icons .outline .tree-item-children {
+  margin-left: 10px;
+}
+
 .outline .tree-item-children:hover {
   border-left-color: var(--theme-color);
 }
 
 /* list collaspe icon */
-.markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon {
+body:not(.default-icons) .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon {
   padding-left: 5px;
 }
 
-.markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+body:not(.default-icons) .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   content: "↓";
   font-size: 14px;
   font-weight: bold;
@@ -10724,14 +10715,14 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
   transition: transform 10ms linear 0s;
 }
 
-.markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon svg {
+body:not(.default-icons) .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon svg {
   display: none;
   color: var(--accent-strong);
   height: 7px;
   width: 7px;
 }
 
-.markdown-preview-view li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon {
+body:not(.default-icons) .markdown-preview-view li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon {
   transform: translateX(-3px) translateY(0px) rotate(-90deg);
   opacity: 0.5;
 }
@@ -10804,10 +10795,6 @@ ul.contains-task-list .list-collapse-indicator.collapse-indicator.collapse-icon:
 }
 
 /* ======= graph view ==============*/
-.workspace-leaf-content[data-type="graph"] canvas {
-
-}
-
 .workspace-leaf-content[data-type="graph"] .graph-controls {
   background-color: var(--graph-control-bg);
   border: none;
@@ -10816,40 +10803,31 @@ ul.contains-task-list .list-collapse-indicator.collapse-indicator.collapse-icon:
 .graph-view.color-fill {
   color: var(--graph-circle);
 }
-
 .graph-view.color-circle {
   color: transparent;
 }
-
 .graph-view.color-line {
   color: var(--graph-line);
 }
-
 .graph-view.color-text {
   color: var(--graph-text-color);
 }
-
 .graph-view.color-fill-highlight {
   color: var(--interactive-accent);
 }
-
 .graph-view.color-line-highlight {
   color: rgb(var(--interactive-accent-rgb));
 }
-
 .graph-view.color-fill-tag {
   color: var(--graphtag) !important;
 }
-
 .graph-view.color-fill-attachment {
   color: var(--graph-attach) !important;
 }
-
 .graph-view.color-fill-unresolved {
   color: var(--graph-unresolved);
   opacity: 1;
 }
-
 .graph-view.color-arrow {
   color: var(--graph-arrow);
   opacity: 1;
@@ -11836,7 +11814,6 @@ g.stateGroup line {
 }
 
 /* Classes common for multiple diagrams */
-
 .error-icon {
   fill: var(--text-error) !important;
 }
@@ -11845,7 +11822,6 @@ g.stateGroup line {
   fill: var(--text-muted) !important;
   stroke: var(--text-muted) !important;
 }
-
 
 .edge-pattern-solid {
   stroke-dasharray: 0 !important;
@@ -12862,27 +12838,22 @@ body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane-wrapp
 body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane-wrapper:nth-child(7n+2) {
   filter: hue-rotate(50deg);
 }
-
 body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane-wrapper:nth-child(7n+3),
 body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane-wrapper:nth-child(7n+3) {
   filter: hue-rotate(140deg);
 }
-
 body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane-wrapper:nth-child(7n+4),
 body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane-wrapper:nth-child(7n+4) {
   filter: hue-rotate(180deg);
 }
-
 body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane-wrapper:nth-child(7n+5),
 body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane-wrapper:nth-child(7n+5) {
   filter: hue-rotate(220deg);
 }
-
 body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane-wrapper:nth-child(7n+6),
 body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane-wrapper:nth-child(7n+6) {
   filter: hue-rotate(280deg);
 }
-
 body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane-wrapper:nth-child(7n)
 body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane-wrapper:nth-child(7n) {
   filter: hue-rotate(330deg);
@@ -12946,13 +12917,11 @@ body.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin__lane-wra
 body.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin__lane-wrapper:nth-child(n):hover {
   box-shadow: 0 0 5px var(--kanban-shadow), 0 0 25px var(--kanban-shadow);
 }
-
 body.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin__lane-wrapper:nth-child(n):hover::after,
 body.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin__lane-wrapper:nth-child(n):hover::before {
   transition: .3s;
   background: var(--kanban-shadow);
 }
-
 body.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin__lane-wrapper:nth-child(7n+2) {
   animation: huerotate-2 6s infinite linear;
   filter: hue-rotate(410deg);
@@ -15507,7 +15476,7 @@ body.style-options-for-buttons-plugin  button.g_yellow {
   font-size: 12px;
 }
 
-.is-mobile .cm-gutterElement>span[title="Fold line"]::before {
+body:not(.default-icons) .is-mobile .cm-gutterElement>span[title="Fold line"]::before {
   content: "↓";
   font-size: 1rem;
   font-weight: bold;
@@ -15515,7 +15484,7 @@ body.style-options-for-buttons-plugin  button.g_yellow {
   color: var(--text-accent);
 }
 
-.is-mobile .cm-gutterElement>span[title="Unfold line"]::before {
+body:not(.default-icons) .is-mobile .cm-gutterElement>span[title="Unfold line"]::before {
   content: "→";
   font-size: 1rem;
   font-weight: bold;
@@ -16623,13 +16592,13 @@ body:not(.background-image-settings-switch).background-image-settings-markdown-p
   border-left-color: var(--theme-color);
 }
 
-.nav-view-outer .tree-item-self.collapse-icon {
+body:not(.default-icons) .nav-view-outer .tree-item-self.collapse-icon {
   left: 0px;
   top: 7px;
   margin-top: 0px;
 }
 
-.nav-view-outer .tree-item-self .tree-item-icon::before {
+body:not(.default-icons) .nav-view-outer .tree-item-self .tree-item-icon::before {
   content: "↓";
   font-size: 14px;
   font-family: 'Inter';
@@ -16638,14 +16607,14 @@ body:not(.background-image-settings-switch).background-image-settings-markdown-p
   transition: transform 10ms linear 0s;
 }
 
-.nav-view-outer .tree-item-self .tree-item-icon svg {
+body:not(.default-icons) .nav-view-outer .tree-item-self .tree-item-icon svg {
   display: none;
   color: var(--accent-strong);
   height: 7px;
   width: 7px;
 }
 
-.nav-view-outer .tree-item.is-collapsed .tree-item-icon.collapse-icon {
+body:not(.default-icons) .nav-view-outer .tree-item.is-collapsed .tree-item-icon.collapse-icon {
   transform: translateX(0px) translateY(0px) rotate(-90deg);
   opacity: 0.5;
 }
