@@ -14927,12 +14927,12 @@ div[dir="rtl"] h2 .heading-collapse-indicator.collapse-indicator::before {
   margin-top: -5px;
 }
 
-div[dir="rtl"] .is-collapsed h1 div.heading-collapse-indicator.collapse-indicator,
-div[dir="rtl"] .is-collapsed h2 div.heading-collapse-indicator.collapse-indicator {
+body:not(.default-icons) div[dir="rtl"] .is-collapsed h1 div.heading-collapse-indicator.collapse-indicator,
+body:not(.default-icons) div[dir="rtl"] .is-collapsed h2 div.heading-collapse-indicator.collapse-indicator {
   transform: translateX(20px) translateY(-10px) rotate(90deg);
 }
 
-div[dir="rtl"] .is-collapsed div.heading-collapse-indicator.collapse-indicator {
+body:not(.default-icons) div[dir="rtl"] .is-collapsed div.heading-collapse-indicator.collapse-indicator {
   transform: translateX(28px) translateY(-5px) rotate(90deg);
 }
 
@@ -14981,7 +14981,7 @@ div[dir="rtl"] .markdown-preview-view .list-collapse-indicator.collapse-indicato
   width: 7px;
 }
 
-div[dir="rtl"] .markdown-preview-view li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon {
+body:not(.default-icons) div[dir="rtl"] .markdown-preview-view li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon {
   transform: translateX(40px) translateY(-23px) rotate(90deg);
 }
 
@@ -15243,15 +15243,15 @@ span[alt*="+grid"] {
 }
 
 /*collapse allows*/
-body:not(.default-icons) .is-mobile .nav-folder.is-collapsed .nav-folder-collapse-indicator {
+body:not(.default-icons).is-mobile .nav-folder.is-collapsed .nav-folder-collapse-indicator {
   transform: translateX(-15px) translateY(9px) rotate(-90deg);
 }
 
-body:not(.default-icons) .is-mobile .workspace-leaf .search-result-container.mod-global-search .tree-item.search-result.is-collapsed .collapse-icon {
+body:not(.default-icons).is-mobile .workspace-leaf .search-result-container.mod-global-search .tree-item.search-result.is-collapsed .collapse-icon {
   transform: translateX(0px) translateY(0px) rotate(-90deg);
 }
 
-body:not(.default-icons) .is-mobile .tree-item-self.is-clickable.is-collapsed span.collapse-icon {
+body:not(.default-icons).is-mobile .tree-item-self.is-clickable.is-collapsed span.collapse-icon {
   transform: translateX(-1px) translateY(-1px) rotate(-90deg);
 }
 
