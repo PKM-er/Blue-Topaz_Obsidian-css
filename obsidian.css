@@ -8255,11 +8255,12 @@ body:not(.font-family-change-to-default) .markdown-preview-view.is-readable-line
 body:not(.font-family-change-to-default) .markdown-preview-view .markdown-preview-section,
 body:not(.font-family-change-to-default) .markdown-source-view .CodeMirror,
 body:not(.font-family-change-to-default) .markdown-preview-view .markdown-preview-sizer,
-body:not(.font-family-change-to-default) .markdown-source-view.mod-cm6 .cm-scroller {
+body:not(.font-family-change-to-default) .markdown-source-view.mod-cm6 .cm-scroller,
+body:not(.font-family-change-to-default) .cm-s-obsidian.is-folding.is-readable-line-width .markdown-reading-view  {
   line-height: var(--line-height-main);
   font-family: var(--font-family-major);
   letter-spacing: calc(var(--letter-space-main) * 0.03em);
-  text-align: var();
+  /*text-align: var();*/
 }
 
 .markdown-preview-view.is-readable-line-width:not(.matrix) .markdown-preview-sizer,
