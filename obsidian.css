@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.13.21。uid [20220122] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.13.21, uid [20220122] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.13.21。uid [20220123] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.13.21, uid [20220123] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 @LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @awyugan */
@@ -1859,6 +1859,11 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --background-transparent-black-or-white-1: #1b1b1b9a;
   --background-transparent-black-or-white-2: #1e1e1ebd;
   --background-transparent-black-or-white-3: #2f2f2f6c;
+  --background-transparent-black-or-white-4: #7e7e7e65;
+  --background-transparent-black-or-white-5: #0f0f0f6c;
+
+  --background-black-or-white-1: #353535;
+
   --background-transparent-blue: #003e759a;
 
   --scrollbar-thumb: #8282827e;
@@ -2148,6 +2153,9 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --background-transparent-black-or-white-1: #ffffffb0;
   --background-transparent-black-or-white-2: #ffffffca;
   --background-transparent-black-or-white-3: #eeeeee91;
+  --background-transparent-black-or-white-4: #a7a7a765;
+  --background-transparent-black-or-white-5: #f0f0f091;
+  --background-black-or-white-1: #e4e4e4;
   --background-transparent-blue: #c6e5ffde;
 
   --scrollbar-thumb: #c6c6c6a8;
@@ -2435,9 +2443,6 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --background-modifier-border-hr: #585858;
   --background-secondary-alt-bg-4-bt-publish: #f6f6f6;
 
-  --background-transparent-black-or-white-1: #ffffffb0;
-  --background-transparent-black-or-white-2: #ffffffca;
-  --background-transparent-black-or-white-3: #eeeeee91;
   --background-transparent-blue: #c6e5ffde;
 
   --scrollbar-thumb: #c6c6c6a8;
@@ -2655,9 +2660,6 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --background-mobile-drawer-2: #1b1b1b69;
   --background-modifier-border-hr: #7f7f7f;
 
-  --background-transparent-black-or-white-1: #1b1b1b9a;
-  --background-transparent-black-or-white-2: #1e1e1ebd;
-  --background-transparent-black-or-white-3: #2f2f2f6c;
   --background-transparent-blue: #003e759a;
 
   --scrollbar-thumb: #8282827e;
@@ -3230,11 +3232,6 @@ body.color-scheme-options-pink-topaz.theme-light {
   --background-modifier-border-hr: #585858;
   --background-secondary-alt-bg-4-bt-publish: #f6f6f6;
 
-  --background-transparent-black-or-white-1: #ffffffb0;
-  --background-transparent-black-or-white-2: #ffffffca;
-  --background-transparent-black-or-white-3: #eeeeee91;
-  --background-transparent-blue: #c6e5ffde;
-
   --scrollbar-thumb: #c6c6c6a8;
 
   --embed-color: #ffe1ea4f;
@@ -3402,9 +3399,6 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --background-mobile-drawer-2: #1b1b1b69;
   --background-modifier-border-hr: #7f7f7f;
 
-  --background-transparent-black-or-white-1: #1b1b1b9a;
-  --background-transparent-black-or-white-2: #1e1e1ebd;
-  --background-transparent-black-or-white-3: #2f2f2f6c;
   --background-transparent-blue: #003e759a;
 
   --embed-color: #4639413d;
@@ -4332,13 +4326,6 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --background-modifier-border-hr: #585858;
   --background-secondary-alt-bg-4-bt-publish: #f6f6f6;
 
-  --background-transparent-black-or-white-1: #ffffffb0;
-  --background-transparent-black-or-white-2: #ffffffca;
-  --background-transparent-black-or-white-3: #eeeeee91;
-  --background-transparent-blue: #c6e5ffde;
-
-  --scrollbar-thumb: #c6c6c6a8;
-
   --embed-color: #ece4b74f;
   --search-result-file-title-color: var(--main-color);
   --theme-color: var(--interactive-accent);
@@ -4535,9 +4522,6 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
   --background-mobile-drawer-2: var(--bg-color);
   --background-modifier-border-hr: #7f7f7f;/*分割线颜色*/
 
-  --background-transparent-black-or-white-1: #1b1b1b9a;
-  --background-transparent-black-or-white-2: #1e1e1ebd;
-  --background-transparent-black-or-white-3: #2f2f2f6c;
   --background-transparent-blue: #003e759a;
 
   --scrollbar-thumb: #8282827e;/*滚动条颜色*/
@@ -4770,13 +4754,6 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --background-modifier-border-hr: #585858;
   --background-secondary-alt-bg-4-bt-publish: #f6f6f6;
 
-  --background-transparent-black-or-white-1: #ffffffb0;
-  --background-transparent-black-or-white-2: #ffffffca;
-  --background-transparent-black-or-white-3: #eeeeee91;
-  --background-transparent-blue: #c6e5ffde;
-
-  --scrollbar-thumb: #c6c6c6a8;
-
   --embed-color: #eccc854f;
   --search-result-file-title-color: var(--main-color);
   --theme-color: var(--interactive-accent);
@@ -4974,9 +4951,6 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
   --background-mobile-drawer-2: var(--bg-color);
   --background-modifier-border-hr: #7f7f7f;/*分割线颜色*/
 
-  --background-transparent-black-or-white-1: #1b1b1b9a;/*用在kanban里的，可以不调*/
-  --background-transparent-black-or-white-2: #1e1e1ebd;/*用在kanban里的，可以不调*/
-  --background-transparent-black-or-white-3: #2f2f2f6c;/*用在kanban里的，可以不调*/
   --background-transparent-blue: #003e759a;/*用在kanban里的，可以不调*/
   --scrollbar-thumb: #8282827e;/*滚动条颜色*/
 
@@ -5841,11 +5815,6 @@ body.color-scheme-options-lilac.theme-light {
   --background-modifier-border-hr: #585858;
   --background-secondary-alt-bg-4-bt-publish: #e1d5eb61;
 
-  --background-transparent-black-or-white-1: #ffffffb0;
-  --background-transparent-black-or-white-2: #ffffffca;
-  --background-transparent-black-or-white-3: #eeeeee91;
-  --background-transparent-blue: #c6e5ffde;
-
   --scrollbar-thumb: #aa7dd3a8; /*看板滚动条*/
 
   --gray-1: #383a42;
@@ -6083,9 +6052,6 @@ body.color-scheme-options-lilac.theme-dark {
   --background-mobile-drawer-2: #1b1b1b69;
   --background-modifier-border-hr: #7f7f7f;
 
-  --background-transparent-black-or-white-1: #1b1b1b9a;
-  --background-transparent-black-or-white-2: #1e1e1ebd;
-  --background-transparent-black-or-white-3: #2f2f2f6c;
   --background-transparent-blue: #003e759a;
 
   --scrollbar-thumb: #603a81;
@@ -13364,11 +13330,6 @@ aside>h2 {
     --background-mobile-drawer-2: #1b1b1b69;
     --background-modifier-border-hr: #7f7f7f;
 
-    --background-transparent-black-or-white-1: #1b1b1b9a;
-    --background-transparent-black-or-white-2: #1e1e1ebd;
-    --background-transparent-black-or-white-3: #2f2f2f6c;
-    --background-transparent-blue: #003e759a;
-
     --scrollbar-thumb: #8282827e;
 
     --gray-1: #5C6370;
@@ -14726,10 +14687,6 @@ span.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight.hmd-hidd
   content: var(--modal-title-icon);
 }
 
-.modal-title {
-  background-color: var(--background-secondary-alt);
-}
-
 .vertical-tab-content {
   padding-bottom: 40px;
 }
@@ -15054,6 +15011,63 @@ body:not(.outliner-plugin-bls).markdown-source-view.mod-cm5 .cm-hmd-list-indent 
 .outliner-plugin-bls .cm-line  .cm-hmd-list-indent::before {
   right: -0.4em;
   background-size: 1.45ch 1px !important;
+}
+
+/* ================================== */
+/* ============== Memos ============= */
+/* ================================== */
+div[data-type="memos_view"] .memo-editor-wrapper > .memo-editor {
+  background-color: transparent !important;
+}
+div[data-type="memos_view"] .memo-editor-wrapper,
+div[data-type="memos_view"] .memo-wrapper {
+  background-color: var(--background-primary-bg-4-bt) !important;
+}
+div[data-type="memos_view"] .search-bar-container > .search-bar-inputer {
+  border: 2px solid var(--background-black-or-white-1) !important;
+  background-color: transparent !important;
+}
+
+div[data-type="memos_view"] .queries-wrapper > .create-query-btn-container > .btn {
+  border-color: var(--text-muted) !important;
+}
+
+div[data-type="memos_view"] {
+  color: var(--text-muted) !important;
+}
+
+div[data-type="memos_view"] .common-editor-wrapper > .common-tools-wrapper > .btns-container > .confirm-btn {
+  background-color: var(--theme-color) !important;
+}
+
+div[data-type="memos_view"] .common-editor-wrapper > .common-tools-wrapper > .btns-container > .confirm-btn:disabled {
+  opacity: 0.8 !important;
+}
+
+div[data-type="memos_view"] .usage-heat-map-wrapper > .usage-heat-map > .stat-container:not([class*="bg"]) {
+  background-color: var(--background-transparent-black-or-white-4) !important;
+}
+div[data-type="memos_view"] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L1-bg {
+  background-color: rgba(var(--interactive-accent-rgb), 0.3) !important;
+}
+div[data-type="memos_view"] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L2-bg {
+  background-color: rgba(var(--interactive-accent-rgb), 0.5) !important;
+}
+div[data-type="memos_view"] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L3-bg {
+  background-color: rgba(var(--interactive-accent-rgb), 0.7) !important;
+}
+div[data-type="memos_view"] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L4-bg {
+  background-color: rgba(var(--interactive-accent-rgb), 0.9) !important;
+}
+
+div[data-type="memos_view"] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.today {
+  border-color: var(--theme-color) !important;
+}
+
+div[data-type="memos_view"] .tags-wrapper > .tags-container > .tag-tip-container > .code-text {
+  padding: 4px 2px 4px 4px !important;
+  margin: 0 3px !important;
+  font-weight: bold;
 }
 
 /* ============ */
