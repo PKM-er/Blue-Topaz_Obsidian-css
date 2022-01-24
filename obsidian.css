@@ -15645,6 +15645,14 @@ body:not(.font-family-change-to-default).is-mobile .markdown-source-view.mod-cm6
 @media (max-width: 800pt) 
 and (min-width : 400px)
 {
+  body.style-options-for-admonition-plugin .admonition-flex .admonition-content
+  {
+   gap:24px;
+  }
+  body.style-options-for-admonition-plugin .admonition-flex .admonition-content div
+  {
+    flex: auto;
+  }
   body.style-options-for-admonition-plugin .admonition-kanban ul > li.task-list-item {
     flex: 1 1 40%;
   }
@@ -15660,6 +15668,15 @@ and (min-width : 400px)
 }
 @media (max-width: 400pt)
 {
+  body.style-options-for-admonition-plugin .admonition-flex .admonition-content
+  {
+   gap:15px;
+  }
+  body.style-options-for-admonition-plugin .admonition-flex .admonition-content div
+  {
+    flex: 1 1 60%;
+    margin: 0;
+  }
   body.style-options-for-admonition-plugin .admonition-kanban ul > li.task-list-item {
     flex: 1 1 60%;
   }
