@@ -1522,6 +1522,18 @@ settings:
         label: Normal
         value: dataview-list-style-normal
   -
+    id: style-options-for-dataview-table-plugin-heading
+    title: 3.6.1 Dataview Table
+    type: heading
+    level: 3
+    collapsed: true
+  - 
+    id: no-wrapped-dvtable
+    title: Nowrap in DataviewTables
+    title.zh: Dataview表格紧凑显示
+    type: class-toggle
+    default: false
+  -
     id: build-in-style-folder
     title: 4. Built-in Style Intro
     title.zh: 4. 内置样式介绍
@@ -7824,6 +7836,8 @@ body.clutter-free-headings div:not(.cm-active).cm-line  span:not(.cm-formatting-
   overflow: visible;
 }
 
+/*匹配折叠编辑显示*/
+body.clutter-free-headings div:not(.cm-active).cm-line span[contenteditable]:not(.cm-formatting-header)+ span.cm-header-1::before,
 /*匹配正常显示*/
 body.clutter-free-headings div:not(.cm-active).cm-line span.cm-formatting-header+ span.cm-header-1::before,
 /*匹配标题折叠状态，选中显示*/
@@ -7833,7 +7847,7 @@ body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:
   margin-top: calc(var(--font-size-h1) - 0.1em);
 }
 
-
+body.clutter-free-headings div:not(.cm-active).cm-line span[contenteditable]:not(.cm-formatting-header)+ span.cm-header-2::before,
 body.clutter-free-headings div:not(.cm-active).cm-line span.cm-formatting-header+ span.cm-header-2::before,
 body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-2:nth-last-of-type(2)::before {
   font-weight:normal;
@@ -7841,6 +7855,7 @@ body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:
   margin-top: calc(var(--font-size-h2) - 0.2em);
 }
 
+body.clutter-free-headings div:not(.cm-active).cm-line span[contenteditable]:not(.cm-formatting-header)+ span.cm-header-3::before,
 body.clutter-free-headings div:not(.cm-active).cm-line span.cm-formatting-header+ span.cm-header-3::before,
 body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-3:nth-last-of-type(2)::before {
   font-weight:normal;
@@ -7848,6 +7863,7 @@ body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:
   margin-top: calc(var(--font-size-h3) - 0.2em);
 }
 
+body.clutter-free-headings div:not(.cm-active).cm-line span[contenteditable]:not(.cm-formatting-header)+ span.cm-header-4::before,
 body.clutter-free-headings div:not(.cm-active).cm-line span.cm-formatting-header+ span.cm-header-4::before,
 body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-4:nth-last-of-type(2)::before {
   font-weight:normal;
@@ -7855,6 +7871,7 @@ body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:
   margin-top: calc(var(--font-size-h4) - 0.3em);
 }
 
+body.clutter-free-headings div:not(.cm-active).cm-line span[contenteditable]:not(.cm-formatting-header)+ span.cm-header-5::before,
 body.clutter-free-headings div:not(.cm-active).cm-line span.cm-formatting-header+ span.cm-header-5::before,
 body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-5:nth-last-of-type(2)::before  {
   font-weight:normal;
@@ -7862,7 +7879,7 @@ body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:
   margin-top: calc(var(--font-size-h5) - 0.4em);
 }
 
-
+body.clutter-free-headings div:not(.cm-active).cm-line span[contenteditable]:not(.cm-formatting-header)+ span.cm-header-6::before,
 body.clutter-free-headings div:not(.cm-active).cm-line span.cm-formatting-header+ span.cm-header-6::before,
 body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-6:nth-last-of-type(2)::before {
   font-weight:normal;
@@ -9584,6 +9601,36 @@ body.no-wrapped-table th:hover,
 body.no-wrapped-table td:hover {
   text-overflow: clip;
 }
+/*modified from https://forum.obsidian.md/t/custom-css-for-tables-5-new-styles-ready-to-use-in-your-notes/17084 */
+
+body.no-wrapped-dvtable table.dataview  th {
+  padding: 0px 20px;
+  font-size: 1em;
+}
+body.no-wrapped-dvtable table.dataview  thead tr th:first-child,
+body.no-wrapped-dvtable table.dataview  tbody tr td:first-child {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+	max-width: 14em;
+	word-break: break-all;
+}
+body.no-wrapped-dvtable table.dataview  tbody tr td:first-child {
+  font-size: 0.9em;
+}
+body.no-wrapped-dvtable table.dataview  th {
+    padding: 0px 20px;
+    font-size: 1em;
+    overflow-x: auto;
+}
+body.no-wrapped-dvtable table.dataview  td:not(:first-child),
+body.no-wrapped-dvtable table.dataview  tr > td:last-of-type { 
+  font-size: 0.9em;
+	white-space: nowrap;
+	overflow-x: auto;
+  	max-width: 17em;
+}
+
 
 .markdown-preview-view table tbody>tr:nth-child(odd) {
   background-color: var(--table-background-color-odd);
