@@ -7825,55 +7825,46 @@ body.clutter-free-headings div:not(.cm-active).cm-line  span:not(.cm-formatting-
 }
 
 /*匹配正常显示*/
-body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-1:last-child::before , 
-/*匹配标题折叠状态下显示*/
-body.clutter-free-headings div:not(.cm-active).cm-line div.is-collapsed ~ span:not(.cm-formatting-header).cm-header-1:nth-last-child(2)::before , 
+body.clutter-free-headings div:not(.cm-active).cm-line span.cm-formatting-header+ span.cm-header-1::before,
 /*匹配标题折叠状态，选中显示*/
-body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-1:nth-last-child(2)::before {
+body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-1:nth-last-of-type(2)::before {
   font-weight:normal;
   content: 'H1';
   margin-top: calc(var(--font-size-h1) - 0.1em);
 }
 
 
-body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-2:last-child::before , 
-body.clutter-free-headings div:not(.cm-active).cm-line div.is-collapsed ~ span:not(.cm-formatting-header).cm-header-2:nth-last-child(2)::before ,
-body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-2:nth-last-child(2)::before {
+body.clutter-free-headings div:not(.cm-active).cm-line span.cm-formatting-header+ span.cm-header-2::before,
+body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-2:nth-last-of-type(2)::before {
   font-weight:normal;
   content: 'H2';
   margin-top: calc(var(--font-size-h2) - 0.2em);
 }
 
-
-body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-3:last-child::before,
-body.clutter-free-headings div:not(.cm-active).cm-line div.is-collapsed ~ span:not(.cm-formatting-header).cm-header-3:nth-last-child(2)::before,
-body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-3:nth-last-child(2)::before {
+body.clutter-free-headings div:not(.cm-active).cm-line span.cm-formatting-header+ span.cm-header-3::before,
+body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-3:nth-last-of-type(2)::before {
   font-weight:normal;
   content: 'H3';
   margin-top: calc(var(--font-size-h3) - 0.2em);
 }
 
-
-body.clutter-free-headings div:not(.cm-active).cm-line  span:not(.cm-formatting-header).cm-header-4:last-child::before,
-body.clutter-free-headings div:not(.cm-active).cm-line div.is-collapsed ~ span:not(.cm-formatting-header).cm-header-4:nth-last-child(2)::before,
-body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-4:nth-last-child(2)::before {
+body.clutter-free-headings div:not(.cm-active).cm-line span.cm-formatting-header+ span.cm-header-4::before,
+body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-4:nth-last-of-type(2)::before {
   font-weight:normal;
   content: 'H4';
   margin-top: calc(var(--font-size-h4) - 0.3em);
 }
 
-body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-5:last-child:before ,
-body.clutter-free-headings div:not(.cm-active).cm-line div.is-collapsed ~ span:not(.cm-formatting-header).cm-header-5:nth-last-child(2)::before,
-body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-5:nth-last-child(2)::before  {
+body.clutter-free-headings div:not(.cm-active).cm-line span.cm-formatting-header+ span.cm-header-5::before,
+body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-5:nth-last-of-type(2)::before  {
   font-weight:normal;
   content: 'H5';
   margin-top: calc(var(--font-size-h5) - 0.4em);
 }
 
 
-body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-6:last-child::before ,
-body.clutter-free-headings div:not(.cm-active).cm-line div.is-collapsed ~ span:not(.cm-formatting-header).cm-header-6:nth-last-child(2)::before,
-body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-6:nth-last-child(2)::before {
+body.clutter-free-headings div:not(.cm-active).cm-line span.cm-formatting-header+ span.cm-header-6::before,
+body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-6:nth-last-of-type(2)::before {
   font-weight:normal;
   content: 'H6';
   margin-top: calc(var(--font-size-h6) - 0.4em);
