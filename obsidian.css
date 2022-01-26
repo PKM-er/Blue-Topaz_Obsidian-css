@@ -9452,8 +9452,7 @@ span.cm-em,
 span.cm-em.cm-highlight,
 span.cm-em.cm-quote,
 span.cm-em.cm-highlight.cm-quote,
-.markdown-preview-view :not(font)>em,
-.markdown-preview-view :not(strong)>em,
+.markdown-preview-view :not(font):not(strong)>em,
 .markdown-preview-view em>mark {
   color: var(--accent-em);
 }
