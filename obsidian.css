@@ -15941,7 +15941,7 @@ and (min-width : 400px)
 
 .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
-  height: 95%;
+  height: 95.6%;
   width: 2px;
 }
 
