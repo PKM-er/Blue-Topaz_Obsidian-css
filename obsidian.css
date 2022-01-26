@@ -8411,8 +8411,7 @@ mjx-math {
 /*bold code text except code language*/
 :not(pre)>code:not([class*='language-']) {
   font-weight: 600;
-  padding: 2px 4px 1px;
-  margin: 0 2px;
+  padding: 2px 3px 1px;
   font-family: var(--font-family-preview-edit-code) !important;
 }
 
@@ -9769,11 +9768,6 @@ body.overflow-x-dvtable table.dataview  th {
 
 .markdown-preview-view th:hover {
   background-color: var(--table-hover-thead-color);
-}
-
-.markdown-preview-view td code,
-.markdown-preview-view td mark {
-  margin-left: -3px;
 }
 
 /* table wrap*/
