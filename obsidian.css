@@ -1022,6 +1022,12 @@ settings:
     level: 3
     collapsed: true
   -
+    id: line-height-list
+    title: Line Height of List
+    title.zh: 列表行间距
+    type: variable-number
+    default: 1.4
+  -
     id: list-style-change-options
     title: List
     title.zh: 列表样式
@@ -1749,6 +1755,7 @@ settings:
   --fancy-hr-rotate: 0deg;
   --modal-title-icon:'  ';
   --line-height-main: 1.5;
+  --line-height-list: 1.4;
   --letter-space-main: 1;
   --letter-space-code: 0;
 
@@ -8446,7 +8453,7 @@ pre.HyperMD-list-line.HyperMD-list-line {
 }
 
 li {
-  line-height: var(--line-height-main);
+  line-height: var(--line-height-list);
   font-family: var(--font-family-list);
 }
 
@@ -8574,10 +8581,10 @@ body:not(.list-vertical-line-one):not(.list-vertical-line-two):not(.list-vertica
   margin-bottom: 0.2em;
 }
 
-body:not(.list-bracket-left):not(.list-bracket-left-two):not(.list-no-border):not(.rainbow-lines) .markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item),
-body:not(.list-bracket-left):not(.list-bracket-left-two):not(.list-no-border):not(.rainbow-lines) .markdown-preview-view:not(.kanban) ul>li:not(.task-list-item) {
-  padding-top: 0.1em;
-  padding-bottom: 0.1em;
+.markdown-preview-view ol>li,
+.markdown-preview-view:not(.kanban) ul>li {
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
 }
 
 .markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item) {
