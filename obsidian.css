@@ -15970,7 +15970,7 @@ and (min-width : 400px)
 .workspace-tab-header-container {
   background-color: var(--background-secondary-alt-bg-4-bt);
   flex: 0.009 0 auto;
-  padding: 5px;
+  padding: 5px 0 0;
 }
 
 .workspace-split.mod-horizontal.mod-right-split .workspace-tab-header-container {
