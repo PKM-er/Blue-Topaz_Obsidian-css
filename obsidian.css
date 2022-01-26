@@ -8949,7 +8949,7 @@ body.list-vertical-line-three:not(.default-icons) .markdown-preview-view ol li.i
   opacity: 0.5;
 }
 
-body:not(.list-no-border):not(.rainbow-lines):not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
+body:not(.list-no-border):not(.rainbow-lines):not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line:not([class*="quote"]) .cm-hmd-list-indent::before {
   content: '';
   font-family: var(--rb-indent-font-family) !important;
   font-size: var(--rb-indent-font-size) !important;
@@ -8982,8 +8982,43 @@ body:not(.list-no-border):not(.rainbow-lines):not(.is-mobile) .mod-cm6 .HyperMD-
   left: var(--rb-left-offset);
 }
 
+body:not(.list-no-border):not(.rainbow-lines):not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line.HyperMD-quote .cm-hmd-list-indent::before  {
+  content: '';
+  font-family: var(--rb-indent-font-family) !important;
+  font-size: var(--rb-indent-font-size) !important;
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: -0.1em;
+  bottom: 0;
+  background-image: linear-gradient(
+        to right,
+        var(--background-modifier-border) 0 var(--rb-line-width),
+        transparent var(--rb-line-width) calc(1 * var(--rb-indent-width)),
+        var(--background-modifier-border) calc(1 * var(--rb-indent-width)) calc(1 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(1 * var(--rb-indent-width) + var(--rb-line-width)) calc(2 * var(--rb-indent-width)),
+        var(--background-modifier-border) calc(2 * var(--rb-indent-width)) calc(2 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(2 * var(--rb-indent-width) + var(--rb-line-width)) calc(3 * var(--rb-indent-width)),
+        var(--background-modifier-border) calc(3 * var(--rb-indent-width)) calc(3 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(3 * var(--rb-indent-width) + var(--rb-line-width)) calc(4 * var(--rb-indent-width)),
+        var(--background-modifier-border) calc(4 * var(--rb-indent-width)) calc(4 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(4 * var(--rb-indent-width) + var(--rb-line-width)) calc(5 * var(--rb-indent-width)),
+        var(--background-modifier-border) calc(5 * var(--rb-indent-width)) calc(5 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(5 * var(--rb-indent-width) + var(--rb-line-width)) calc(6 * var(--rb-indent-width)),
+        var(--background-modifier-border) calc(6 * var(--rb-indent-width)) calc(6 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(6 * var(--rb-indent-width) + var(--rb-line-width)) calc(7 * var(--rb-indent-width)),
+        var(--background-modifier-border) calc(7 * var(--rb-indent-width)) calc(7 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(7 * var(--rb-indent-width) + var(--rb-line-width)) calc(8 * var(--rb-indent-width))
+    );
+  background-size: var(--rb-indent-bg-size);
+  left: var(--rb-left-offset);
+}
+
 body:not(.list-no-border):not(.is-mobile) .mod-cm6.cm-hmd-list-indent .cm-tab::before {
   display: none;
+}
+body:not(.list-no-border):not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line:not(.HyperMD-list-line-1) {
+  overflow: hidden;
 }
 body:not(.list-no-border):not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent {
   position: relative;
@@ -9045,7 +9080,7 @@ body.rainbow-lines .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent {
   font-size: var(--rb-indent-font-size) !important;
 }
 
-body.rainbow-lines .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
+body.rainbow-lines .mod-cm6 .HyperMD-list-line.cm-line:not([class*="quote"]) .cm-hmd-list-indent::before {
   content: '';
   font-family: var(--rb-indent-font-family) !important;
   font-size: var(--rb-indent-font-size) !important;
@@ -9079,7 +9114,37 @@ body.rainbow-lines .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent::befo
 }
 
 
-
+body.rainbow-lines .mod-cm6 .HyperMD-list-line.cm-line.HyperMD-quote .cm-hmd-list-indent::before {
+  content: '';
+  font-family: var(--rb-indent-font-family) !important;
+  font-size: var(--rb-indent-font-size) !important;
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: -0.1em;
+  bottom: 0;
+  background-image: linear-gradient(
+        to right,
+        rgb(var(--accent-1-rgb)) 0 var(--rb-line-width),
+        transparent var(--rb-line-width) calc(1 * var(--rb-indent-width)),
+        rgb(var(--accent-2-rgb)) calc(1 * var(--rb-indent-width)) calc(1 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(1 * var(--rb-indent-width) + var(--rb-line-width)) calc(2 * var(--rb-indent-width)),
+        rgb(var(--accent-3-rgb)) calc(2 * var(--rb-indent-width)) calc(2 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(2 * var(--rb-indent-width) + var(--rb-line-width)) calc(3 * var(--rb-indent-width)),
+        rgb(var(--accent-4-rgb)) calc(3 * var(--rb-indent-width)) calc(3 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(3 * var(--rb-indent-width) + var(--rb-line-width)) calc(4 * var(--rb-indent-width)),
+        rgb(var(--accent-5-rgb)) calc(4 * var(--rb-indent-width)) calc(4 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(4 * var(--rb-indent-width) + var(--rb-line-width)) calc(5 * var(--rb-indent-width)),
+        rgb(var(--accent-6-rgb)) calc(5 * var(--rb-indent-width)) calc(5 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(5 * var(--rb-indent-width) + var(--rb-line-width)) calc(6 * var(--rb-indent-width)),
+        rgb(var(--accent-7-rgb)) calc(6 * var(--rb-indent-width)) calc(6 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(6 * var(--rb-indent-width) + var(--rb-line-width)) calc(7 * var(--rb-indent-width)),
+        rgb(var(--accent-8-rgb)) calc(7 * var(--rb-indent-width)) calc(7 * var(--rb-indent-width) + var(--rb-line-width)),
+        transparent calc(7 * var(--rb-indent-width) + var(--rb-line-width)) calc(8 * var(--rb-indent-width))
+    );
+  background-size: var(--rb-indent-bg-size);
+  left: var(--rb-left-offset);
+}
 
 /*rainbow-lines*/
 body.rainbow-lines ul ul,
