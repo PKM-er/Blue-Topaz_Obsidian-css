@@ -15978,7 +15978,7 @@ and (min-width : 400px)
 }
 
 .workspace-split.mod-horizontal.mod-right-split .workspace-tab-header-container {
-  height: 2em;
+  height: 2.1em;
 }
 
 .workspace-split.mod-root {
