@@ -14770,6 +14770,12 @@ body.list-vertical-line-three .kanban-plugin__markdown-preview-view ol ol::befor
   border-left: none;
 }
 
+
+.markdown-preview-view .dataview.inline-field-standalone-value {
+  font-family: var(--font-family-major); 
+  background-color:  transparent;
+ 
+}
 /* ================================== */
 /* ======= CodeMirror Options ======= */
 /* ================================== */
@@ -15308,6 +15314,30 @@ div[data-type='memos_view'] .tags-wrapper > .title-text,
   color: var(--text-normal) !important;
   opacity: 0.7 !important;
 }
+
+
+.mod-right-split div[data-type="memos_view"] #page-wrapper {
+ 
+  padding-left: 8px;
+  padding-right: 8px;
+  transform: translateX(0);
+ 
+}
+
+.mod-right-split div[data-type="memos_view"] #page-wrapper  textarea{
+padding: 0;
+}
+
+.mod-right-split  div[data-type="memos_view"] #page-wrapper > .content-wrapper-padding-fix {
+width: 100%;
+  padding: 0;
+}
+
+.mod-right-split  div[data-type="memos_view"]  .view-content
+{
+  padding:0;
+}
+
 
 /* ============ */
 /*image position*/
