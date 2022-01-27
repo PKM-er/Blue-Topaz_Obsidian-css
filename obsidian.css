@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.13.22。uid [20220127] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.13.22, uid [20220127] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.13.22。uid [20220126] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.13.22, uid [20220124] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 @LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @awyugan */
@@ -1762,7 +1762,7 @@ settings:
   --line-width-readable: 45rem;
 
   --embed-content-height: 600px;
-  
+
   --nord0: #2E3440;
   --nord1: #3B4252;
   --nord1-1: #3B425251;
@@ -7400,10 +7400,6 @@ input.search-input {
   opacity: 1;
 }
 
-body {
-  -webkit-font-smoothing: auto;
-}
-
 /*=======search panel=======*/
 .search-result-file-title {
   color: var(--search-result-file-title-color);
@@ -8279,6 +8275,7 @@ body:not(.font-family-change-to-default) .cm-s-obsidian.is-folding.is-readable-l
   font-family: var(--font-family-major);
   letter-spacing: calc(var(--letter-space-main) * 0.03em);
   /*text-align: var();*/
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .markdown-preview-view.is-readable-line-width:not(.matrix) .markdown-preview-sizer,
@@ -8575,7 +8572,6 @@ body:not(.list-vertical-line-one):not(.list-vertical-line-two):not(.list-vertica
 .markdown-preview-view ol>li,
 .markdown-preview-view:not(.kanban) ul>li {
   padding-top: 0.2em;
-  padding-bottom: 0.2em;
 }
 
 .markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item) {
@@ -8937,7 +8933,7 @@ body.list-vertical-line-three:not(.default-icons) .markdown-preview-view ol li.i
   opacity: 0.5;
 }
 
-body:not(.list-no-border):not(.rainbow-lines):not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line:not([class*="quote"]) .cm-hmd-list-indent::before {
+body:not(.list-no-border):not(.rainbow-lines) .mod-cm6 .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before {
   content: '';
   font-family: var(--rb-indent-font-family) !important;
   font-size: var(--rb-indent-font-size) !important;
@@ -8947,38 +8943,6 @@ body:not(.list-no-border):not(.rainbow-lines):not(.is-mobile) .mod-cm6 .HyperMD-
   top: -0.5em;
   bottom: -0.5em;
   padding-bottom: 999em;
-  background-image: linear-gradient(
-        to right,
-        var(--background-modifier-border) 0 var(--rb-line-width),
-        transparent var(--rb-line-width) calc(1 * var(--rb-indent-width)),
-        var(--background-modifier-border) calc(1 * var(--rb-indent-width)) calc(1 * var(--rb-indent-width) + var(--rb-line-width)),
-        transparent calc(1 * var(--rb-indent-width) + var(--rb-line-width)) calc(2 * var(--rb-indent-width)),
-        var(--background-modifier-border) calc(2 * var(--rb-indent-width)) calc(2 * var(--rb-indent-width) + var(--rb-line-width)),
-        transparent calc(2 * var(--rb-indent-width) + var(--rb-line-width)) calc(3 * var(--rb-indent-width)),
-        var(--background-modifier-border) calc(3 * var(--rb-indent-width)) calc(3 * var(--rb-indent-width) + var(--rb-line-width)),
-        transparent calc(3 * var(--rb-indent-width) + var(--rb-line-width)) calc(4 * var(--rb-indent-width)),
-        var(--background-modifier-border) calc(4 * var(--rb-indent-width)) calc(4 * var(--rb-indent-width) + var(--rb-line-width)),
-        transparent calc(4 * var(--rb-indent-width) + var(--rb-line-width)) calc(5 * var(--rb-indent-width)),
-        var(--background-modifier-border) calc(5 * var(--rb-indent-width)) calc(5 * var(--rb-indent-width) + var(--rb-line-width)),
-        transparent calc(5 * var(--rb-indent-width) + var(--rb-line-width)) calc(6 * var(--rb-indent-width)),
-        var(--background-modifier-border) calc(6 * var(--rb-indent-width)) calc(6 * var(--rb-indent-width) + var(--rb-line-width)),
-        transparent calc(6 * var(--rb-indent-width) + var(--rb-line-width)) calc(7 * var(--rb-indent-width)),
-        var(--background-modifier-border) calc(7 * var(--rb-indent-width)) calc(7 * var(--rb-indent-width) + var(--rb-line-width)),
-        transparent calc(7 * var(--rb-indent-width) + var(--rb-line-width)) calc(8 * var(--rb-indent-width))
-    );
-  background-size: var(--rb-indent-bg-size);
-  left: var(--rb-left-offset);
-}
-
-body:not(.list-no-border):not(.rainbow-lines):not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line.HyperMD-quote .cm-hmd-list-indent::before  {
-  content: '';
-  font-family: var(--rb-indent-font-family) !important;
-  font-size: var(--rb-indent-font-size) !important;
-  display: block;
-  position: absolute;
-  width: 100%;
-  top: -0.1em;
-  bottom: 0;
   background-image: linear-gradient(
         to right,
         var(--background-modifier-border) 0 var(--rb-line-width),
@@ -9030,19 +8994,16 @@ body:not(.list-no-border):not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line .c
       --font-use-default: var(--default-font);
       --font-size-use-default: var(--editor-font-size);
       --indent-use-default: 1.84ch;
-  /* ----- */
   
   /* wide */
       --font-use-wide: monospace;
       --font-size-use-wide: 12px;
       --indent-use-wide: 4.009ch;
-  /* ---- */
   
   /* custom */
       --font-use-custom: Arial;
       --font-size-use-custom: 13px;
       --indent-use-custom: 14.5px;
-  /* ------ */
   
   /* SET FROM VARIABLES ABOVE UPDATING LAST WORD (e.g. ...-default) */
   /* Copy and replace from one of following: default, theme, wide, custom */
@@ -9068,7 +9029,7 @@ body.rainbow-lines .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent {
   font-size: var(--rb-indent-font-size) !important;
 }
 
-body.rainbow-lines .mod-cm6 .HyperMD-list-line.cm-line:not([class*="quote"]) .cm-hmd-list-indent::before {
+body.rainbow-lines .mod-cm6 .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before {
   content: '';
   font-family: var(--rb-indent-font-family) !important;
   font-size: var(--rb-indent-font-size) !important;
@@ -9100,38 +9061,49 @@ body.rainbow-lines .mod-cm6 .HyperMD-list-line.cm-line:not([class*="quote"]) .cm
   background-size: var(--rb-indent-bg-size);
   left: var(--rb-left-offset);
 }
-
-
-body.rainbow-lines .mod-cm6 .HyperMD-list-line.cm-line.HyperMD-quote .cm-hmd-list-indent::before {
-  content: '';
-  font-family: var(--rb-indent-font-family) !important;
-  font-size: var(--rb-indent-font-size) !important;
-  display: block;
-  position: absolute;
-  width: 100%;
-  top: -0.1em;
-  bottom: 0;
-  background-image: linear-gradient(
-        to right,
-        rgb(var(--accent-1-rgb)) 0 var(--rb-line-width),
-        transparent var(--rb-line-width) calc(1 * var(--rb-indent-width)),
-        rgb(var(--accent-2-rgb)) calc(1 * var(--rb-indent-width)) calc(1 * var(--rb-indent-width) + var(--rb-line-width)),
-        transparent calc(1 * var(--rb-indent-width) + var(--rb-line-width)) calc(2 * var(--rb-indent-width)),
-        rgb(var(--accent-3-rgb)) calc(2 * var(--rb-indent-width)) calc(2 * var(--rb-indent-width) + var(--rb-line-width)),
-        transparent calc(2 * var(--rb-indent-width) + var(--rb-line-width)) calc(3 * var(--rb-indent-width)),
-        rgb(var(--accent-4-rgb)) calc(3 * var(--rb-indent-width)) calc(3 * var(--rb-indent-width) + var(--rb-line-width)),
-        transparent calc(3 * var(--rb-indent-width) + var(--rb-line-width)) calc(4 * var(--rb-indent-width)),
-        rgb(var(--accent-5-rgb)) calc(4 * var(--rb-indent-width)) calc(4 * var(--rb-indent-width) + var(--rb-line-width)),
-        transparent calc(4 * var(--rb-indent-width) + var(--rb-line-width)) calc(5 * var(--rb-indent-width)),
-        rgb(var(--accent-6-rgb)) calc(5 * var(--rb-indent-width)) calc(5 * var(--rb-indent-width) + var(--rb-line-width)),
-        transparent calc(5 * var(--rb-indent-width) + var(--rb-line-width)) calc(6 * var(--rb-indent-width)),
-        rgb(var(--accent-7-rgb)) calc(6 * var(--rb-indent-width)) calc(6 * var(--rb-indent-width) + var(--rb-line-width)),
-        transparent calc(6 * var(--rb-indent-width) + var(--rb-line-width)) calc(7 * var(--rb-indent-width)),
-        rgb(var(--accent-8-rgb)) calc(7 * var(--rb-indent-width)) calc(7 * var(--rb-indent-width) + var(--rb-line-width)),
-        transparent calc(7 * var(--rb-indent-width) + var(--rb-line-width)) calc(8 * var(--rb-indent-width))
-    );
-  background-size: var(--rb-indent-bg-size);
-  left: var(--rb-left-offset);
+body:not(.list-no-border):not(.rainbow-lines) .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 2"] .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before,
+body.rainbow-lines .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 2"] .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before {
+  --indent-use-default: 0.92ch;
+  --indent-use-wide: 6ch;
+  --rb-indent-width: var(--indent-use-default);
+}
+body:not(.list-no-border):not(.rainbow-lines) .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 3"] .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before,
+body.rainbow-lines .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 3"] .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before {
+  --indent-use-default: 1.38ch;
+  --indent-use-wide: 3ch;
+  --rb-indent-width: var(--indent-use-default);
+}
+body:not(.list-no-border):not(.rainbow-lines) .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 4"] .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent,
+body.rainbow-lines .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 4"] .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before {
+  --indent-use-default: 1.84ch;
+  --indent-use-wide: 4.009ch;
+  --rb-indent-width: var(--indent-use-default);
+}
+body:not(.list-no-border):not(.rainbow-lines) .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 5"] .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before,
+body.rainbow-lines .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 5"] .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before {
+  --indent-use-default: 2.3ch;
+  --indent-use-wide: 3ch;
+  --rb-indent-width: var(--indent-use-default);
+}
+body:not(.list-no-border):not(.rainbow-lines) .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 6"] .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before,
+body.rainbow-lines .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 6"] .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before {
+  --indent-use-default: 2.74ch;
+  --indent-use-wide: 5ch;
+  --rb-indent-width: var(--indent-use-default);
+}
+body:not(.list-no-border):not(.rainbow-lines) .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 7"] .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before,
+body.rainbow-lines .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 7"] .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before {
+  --indent-use-default: 3.18ch;
+  --indent-use-wide: 6ch;
+  --rb-indent-width: var(--indent-use-default);
+  --rb-indent-bg-size: calc(var(--rb-color-count) * var(--rb-indent-width)) 4px;
+}
+body:not(.list-no-border):not(.rainbow-lines) .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 8"] .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before,
+body.rainbow-lines .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 8"] .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before {
+  --indent-use-default: 3.65ch;
+  --indent-use-wide: 6ch;
+  --rb-indent-width: var(--indent-use-default);
+  --rb-indent-bg-size: calc(var(--rb-color-count) * var(--rb-indent-width)) 2px;
 }
 
 /*rainbow-lines*/
@@ -18317,4 +18289,38 @@ body.loading-animation .progress-bar-message {
 /*隐藏滚动条*/
 .markdown-preview-view.noscroll::-webkit-scrollbar {
   display:none;
+}
+
+
+.community-theme {
+  max-width: 270px;
+}
+.community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
+  content: "uid:20220127";
+  font-family: var(--font-family-inline-code);
+  font-size: 12px;
+  font-weight: normal;
+  color: var(--text-tag);
+  box-shadow: 2px 2px 2px rgba(23, 48, 81, 0.2), -1px -1px 2px rgba(117, 188, 255, 0.5);
+  position: absolute;
+  padding: 0 2px;
+  top: 3px;
+  left: 3px;
+  border-radius: 5px;
+}
+.community-theme-container .theme-list .community-theme.is-selected .community-theme-title::after {
+  position: absolute;
+  top: 4px;
+  left: 0px;
+  width: 20px;
+  height: 23px;
+  content: "";
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0,rgba(208, 232, 255, 0.1) 50%,rgba(122,255,255,0) 100%);
+  transform: skewX(-45deg);
+  animation: move 1.2s linear infinite;
+}
+@keyframes move {
+  100% {
+    transform: translateX(350%);
+    }
 }
