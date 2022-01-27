@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.13.22。uid [20220126] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.13.22, uid [20220124] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.13.22。uid [20220127] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.13.22, uid [20220127] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 @LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @awyugan */
@@ -6258,7 +6258,7 @@ body.color-scheme-options-lilac.theme-dark ::-webkit-scrollbar-thumb {
 
 /*stickies*/
 body.color-scheme-options-lilac .stickies {
-  color: var(--text-normal)
+  color: var(--text-normal);
 }
 
 body.color-scheme-options-lilac div .CodeMirror-line span.cm-hashtag-begin + span.cm-hashtag.cm-meta.cm-hashtag-end {
@@ -6797,7 +6797,7 @@ a.tag {
   text-decoration: none;
   font-family: var(--font-family-tag);
   font-size: var(--font-size-tag);
-  color: var(--tag-text);
+  color: var(--tag-text) !important;
 }
 
 .cm-s-obsidian span.cm-hashtag-begin {
@@ -6810,7 +6810,7 @@ a.tag {
 }
 
 .cm-s-obsidian span.cm-hashtag-end {
-  color: var(--tag-text);
+  color: var(--tag-text) !important;
   border-radius: 0 var(--radius-l) var(--radius-l) 0;
   padding-right: 0.3em !important;
   border-left: none;
@@ -6819,7 +6819,7 @@ a.tag {
 
 .cm-s-obsidian span.cm-hashtag-begin+.cm-hashtag.cm-meta {
   padding-right: 0;
-  color: var(--tag-text);
+  color: var(--tag-text) !important;
 }
 
 .cm-s-obsidian span.cm-hashtag-begin+.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-hashtag-end {
@@ -9537,7 +9537,7 @@ span.cm-em.cm-highlight.cm-quote,
 *:not(font)>em>strong,
 *:not(font)>strong>em,
 .cm-strong.cm-em {
-  padding-right: 0.12em;
+  padding-right: 0.05em;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -10218,7 +10218,7 @@ body.whole-code-wrap pre[class*='language-'] {
   color: var(--gray-1) !important;
 }
 .token.comment,
-.cm-s-obsidian span.cm-comment {
+.cm-s-obsidian span.cm-comment:not([class*="hashtag"]) {
   color: var(--darkgreen) !important;
 }
 .token.punctuation {
@@ -10234,7 +10234,7 @@ body.whole-code-wrap pre[class*='language-'] {
   color: var(--purple) !important;
 }
 .token.class {
-  color: var(--yellow);
+  color: var(--yellow) !important;
 }
 .token.color {
   color: var(--aqua) !important;
