@@ -18324,7 +18324,7 @@ body.loading-animation .progress-bar-message {
     transform: translateX(350%);
     }
 }
-.community-theme-container .theme-list .community-theme.is-selected .clickable-icon::after {
+.community-theme-container .theme-list .community-theme.is-selected .clickable-icon:not([class*="u-muted"])::after {
   content: "Get Demo Vault";
   color: white;
   font-weight: bold;
@@ -18337,6 +18337,6 @@ body.loading-animation .progress-bar-message {
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(120deg, #b0ffd5 10%, #ffedb0 100%);
 }
-.community-theme-container .theme-list .community-theme.is-selected .clickable-icon {
+.community-theme-container .theme-list .community-theme.is-selected .clickable-icon:not([class*="u-muted"]) {
   color: transparent;
 }
