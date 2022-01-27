@@ -8323,18 +8323,6 @@ body:not(.font-family-change-to-default) .cm-s-obsidian.is-folding.is-readable-l
   font-family: var(--font-family-preview-edit-code);
 }
 
-.theme-light .token.operator, 
-.theme-light .token.entity, 
-.theme-light .token.url, 
-.theme-light .language-css .token.string, 
-.theme-light .style .token.string, 
-.theme-light .cm-operator, 
-.theme-light .cm-string, 
-.theme-light .cm-string-2, 
-.theme-light .cm-link {
-  background: transparent;
-}
-
 mjx-container[jax='CHTML'] {
   outline: none;
   font-size: var(--font-size-latex);
@@ -9035,7 +9023,7 @@ body:not(.list-no-border):not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line .c
   --accent-3-rgb: 139,56,132;
   --accent-4-rgb: 56,139,56;
   --accent-5-rgb: 224,142,19;
-  --accent-6-rgb: 204,206,204;
+  --accent-6-rgb: 211,103,103;
   --accent-7-rgb: 0,171,132;
   --accent-8-rgb: 0,163,224;
   /* default */
@@ -9372,66 +9360,85 @@ body.rainbow-lines .CodeMirror-foldgutter-open.CodeMirror-guttermarker-subtle::a
 /*预览模式*/ 
 /*无序列表*/
 body.rainbow-lines ul ul::before {
- border-color: rgb(var(--accent-1-rgb),0.7) !important;
+ border-color: rgba(var(--accent-1-rgb),0.7) !important;
 }
 body.rainbow-lines li ul ul::before {
-  border-color: rgb(var(--accent-2-rgb),0.7) !important;
+  border-color: rgba(var(--accent-2-rgb),0.7) !important;
 }
 body.rainbow-lines li ul ul ul::before {
-  border-color: rgb(var(--accent-3-rgb),0.7) !important;
+  border-color: rgba(var(--accent-3-rgb),0.7) !important;
 }
 body.rainbow-lines li ul ul ul ul::before {
-  border-color: rgb(var(--accent-4-rgb),0.7) !important;
+  border-color: rgba(var(--accent-4-rgb),0.7) !important;
 }
 body.rainbow-lines li ul ul ul ul ul::before {
-  border-color: rgb(var(--accent-5-rgb),0.7) !important;
+  border-color: rgba(var(--accent-5-rgb),0.7) !important;
 }
 body.rainbow-lines li ul ul ul ul ul ul::before {
-  border-color: rgb(var(--accent-6-rgb),0.7) !important;
+  border-color: rgba(var(--accent-6-rgb),0.7) !important;
+}
+body.rainbow-lines li ul ul ul ul ul ul ul::before {
+  border-color: rgba(var(--accent-7-rgb),0.7) !important;
+}
+body.rainbow-lines li ul ul ul ul ul ul ul ul::before {
+  border-color: rgba(var(--accent-8-rgb),0.7) !important;
+}
+body.rainbow-lines li ul ul ul ul ul ul ul ul ul::before {
+  border-color: rgba(var(--accent-1-rgb),0.7) !important;
 }
 
 /*任务列表*/
-body.rainbow-lines  ol ol::before {
-  border-color: rgb(var(--accent-1-rgb),0.7) !important;
+body.rainbow-lines ol ol::before {
+  border-color: rgba(var(--accent-1-rgb),0.7) !important;
 }
 body.rainbow-lines li ol ol::before {
-  border-color: rgb(var(--accent-2-rgb),0.7) !important;
+  border-color: rgba(var(--accent-2-rgb),0.7) !important;
 }
 body.rainbow-lines li ol ol ol::before {
-  border-color: rgb(var(--accent-3-rgb),0.7) !important;
+  border-color: rgba(var(--accent-3-rgb),0.7) !important;
 }
 body.rainbow-lines li ol ol ol ol::before {
-  border-color: rgb(var(--accent-4-rgb),0.7) !important;
+  border-color: rgba(var(--accent-4-rgb),0.7) !important;
 }
 body.rainbow-lines li ol ol ol ol ol::before {
-  border-color: rgb(var(--accent-5-rgb),0.7) !important;
+  border-color: rgba(var(--accent-5-rgb),0.7) !important;
 }
 body.rainbow-lines li ol ol ol ol ol ol::before {
-  border-color: rgb(var(--accent-6-rgb),0.7) !important;
+  border-color: rgba(var(--accent-6-rgb),0.7) !important;
+}
+body.rainbow-lines li ol ol ol ol ol ol ol::before {
+  border-color: rgba(var(--accent-7-rgb),0.7) !important;
+}
+body.rainbow-lines li ol ol ol ol ol ol ol ol::before {
+  border-color: rgba(var(--accent-8-rgb),0.7) !important;
+}
+body.rainbow-lines li ol ol ol ol ol ol ol ol::before {
+  border-color: rgba(var(--accent-1-rgb),0.7) !important;
 }
 
 body.rainbow-checkbox .markdown-preview-view li li .task-list-item-checkbox:checked {
   background-color: rgb(var(--accent-2-rgb),0.7);
 }
-
 body.rainbow-checkbox .markdown-preview-view li li li .task-list-item-checkbox:checked {
   background-color: rgb(var(--accent-3-rgb),0.7);
 }
-
 body.rainbow-checkbox .markdown-preview-view li li li li .task-list-item-checkbox:checked {
   background-color: rgb(var(--accent-4-rgb),0.7);
 }
-
 body.rainbow-checkbox .markdown-preview-view li li li li li .task-list-item-checkbox:checked {
   background-color: rgb(var(--accent-5-rgb),0.7);
 }
-
 body.rainbow-checkbox .markdown-preview-view li li li li li li .task-list-item-checkbox:checked {
   background-color: rgb(var(--accent-6-rgb),0.7);
 }
-
 body.rainbow-checkbox .markdown-preview-view li li li li li li li .task-list-item-checkbox:checked {
   background-color: rgb(var(--accent-6-rgb),0.7);
+}
+body.rainbow-checkbox .markdown-preview-view li li li li li li li li .task-list-item-checkbox:checked {
+  background-color: rgb(var(--accent-7-rgb),0.7);
+}
+body.rainbow-checkbox .markdown-preview-view li li li li li li li li li .task-list-item-checkbox:checked {
+  background-color: rgb(var(--accent-8-rgb),0.7);
 }
 
 body.rainbow-lines .markdown-preview-view li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
@@ -9452,6 +9459,13 @@ body.rainbow-lines .markdown-preview-view li li li li li .list-collapse-indicato
 body.rainbow-lines .markdown-preview-view li li li li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   color: rgb(var(--accent-6-rgb));	
 }
+body.rainbow-lines .markdown-preview-view li li li li li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+  color: rgb(var(--accent-7-rgb));	
+}
+body.rainbow-lines .markdown-preview-view li li li li li li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+  color: rgb(var(--accent-8-rgb));	
+}
+
 body.rainbow-ordered-list .markdown-preview-view ul>li::marker,
 body.rainbow-ordered-list .markdown-preview-view ol>li::marker {
   color: rgb(var(--accent-1-rgb));	
@@ -10171,14 +10185,6 @@ body.adjustable-embed-content-height .markdown-preview-view .markdown-embed-cont
   font-size: var(--font-size-embed-file);
 }
 
-.theme-light .token.operator,
-.theme-light .token.entity,
-.theme-light .token.url,
-.theme-light .language-css .token.string,
-.theme-light .style .token.string {
-  background: transparent;
-}
-
 /* Source: https://github.com/AGMStudio/prism-theme-one-dark */
 body:not(.whole-code-wrap) code[class*='language-'],
 body:not(.whole-code-wrap) pre[class*='language-'] {
@@ -10211,7 +10217,8 @@ body.whole-code-wrap pre[class*='language-'] {
 .token.cdata {
   color: var(--gray-1) !important;
 }
-.token.comment {
+.token.comment,
+.cm-s-obsidian span.cm-comment {
   color: var(--darkgreen) !important;
 }
 .token.punctuation {
@@ -15259,7 +15266,7 @@ div[data-type="memos_view"] .queries-wrapper > .create-query-btn-container > .bt
 }
 
 div[data-type="memos_view"] {
-  color: var(--text-muted) !important;
+  color: var(--text-normal) !important;
 }
 
 div[data-type="memos_view"] .common-editor-wrapper > .common-tools-wrapper > .btns-container > .confirm-btn {
