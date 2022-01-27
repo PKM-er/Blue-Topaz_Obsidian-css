@@ -18301,9 +18301,9 @@ body.loading-animation .progress-bar-message {
   font-size: 12px;
   font-weight: normal;
   color: var(--text-tag);
-  box-shadow: 2px 2px 2px rgba(23, 48, 81, 0.2), -1px -1px 2px rgba(117, 188, 255, 0.5);
+  box-shadow: inset 1px 1px 2px rgba(23, 48, 81, 0.2), inset -1px -1px 2px rgba(117, 188, 255, 0.5);
   position: absolute;
-  padding: 0 2px;
+  padding: 0 3px;
   top: 3px;
   left: 3px;
   border-radius: 5px;
@@ -18323,4 +18323,20 @@ body.loading-animation .progress-bar-message {
   100% {
     transform: translateX(350%);
     }
+}
+.community-theme-container .theme-list .community-theme.is-selected .clickable-icon::after {
+  content: "Get Demo Vault";
+  color: white;
+  font-weight: bold;
+  box-shadow: 3px 3px 3px rgba(23, 48, 81, 0.2), -1px -1px 2px rgba(117, 188, 255, 0.5);
+  border-radius: 3px;
+  padding: 3px 5px;
+  margin-left: -15px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(120deg, #b0ffd5 10%, #ffedb0 100%);
+}
+.community-theme-container .theme-list .community-theme.is-selected .clickable-icon {
+  color: transparent;
 }
