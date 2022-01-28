@@ -18341,5 +18341,6 @@ body.loading-animation .progress-bar-message {
   color: transparent;
 }
 .is-mobile .community-theme {
-  max-width: 550px;
+  margin: 15px 0px;
+  padding: 15px 0px;
 }
