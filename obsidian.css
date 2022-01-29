@@ -8744,10 +8744,6 @@ ul ul ul ol ul {
   left: 0;
   font-family: 'Inter';
 }
-.is-mobile .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line div.cm-fold-indicator + span.cm-formatting .list-bullet::after,
-.is-mobile .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line span.cm-hmd-list-indent + span.cm-formatting .list-bullet::after {
-  left: -2px;
-}
 
 .markdown-preview-view ul>li:not(.task-list-item)::marker {
   font-size: 0.8em;
