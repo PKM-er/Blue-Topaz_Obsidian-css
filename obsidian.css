@@ -8717,29 +8717,29 @@ ul ul ul ol ul {
 .markdown-source-view.mod-cm6 .list-bullet:after {
   content: none;
   }
-body:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line.cm-line div.cm-fold-indicator + span.cm-formatting .list-bullet::after,
-body:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line.cm-line span.cm-hmd-list-indent + span.cm-formatting .list-bullet::after
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line.cm-line div.cm-fold-indicator + span.cm-formatting .list-bullet::after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line.cm-line span.cm-hmd-list-indent + span.cm-formatting .list-bullet::after
 {
   content: '\25E6';
   left: -1px;
   font-family: 'Inter';
 }
-body:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line div.cm-fold-indicator + span.cm-formatting .list-bullet::after,
-body:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line>span.cm-formatting:first-of-type .list-bullet::after
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line div.cm-fold-indicator + span.cm-formatting .list-bullet::after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line>span.cm-formatting:first-of-type .list-bullet::after
 {
   content: '\2022';
   left: -2px;
   font-family: 'Inter';
 }
-body:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line div.cm-fold-indicator + span.cm-formatting .list-bullet::after,
-body:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line span.cm-hmd-list-indent + span.cm-formatting .list-bullet::after
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line div.cm-fold-indicator + span.cm-formatting .list-bullet::after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line span.cm-hmd-list-indent + span.cm-formatting .list-bullet::after
 {
   content: '\25E6';
   left: -1px;
   font-family: 'Inter';
 }
-body:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line div.cm-fold-indicator + span.cm-formatting .list-bullet::after,
-body:not(.is-mobile) .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line span.cm-hmd-list-indent + span.cm-formatting .list-bullet::after {
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line div.cm-fold-indicator + span.cm-formatting .list-bullet::after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line span.cm-hmd-list-indent + span.cm-formatting .list-bullet::after {
   content: '\25AA';
   left: 1px;
   font-family: 'Inter';
@@ -9200,13 +9200,13 @@ body:not(.list-no-border):not(.rainbow-lines) .mod-cm6.is-live-preview .HyperMD-
   left: var(--rb-left-offset);
 }
 
-body:not(.list-no-border):not(.is-mobile) .mod-cm6.cm-hmd-list-indent .cm-tab::before {
+body:not(.list-no-border) .mod-cm6.cm-hmd-list-indent .cm-tab::before {
   display: none;
 }
-body:not(.list-no-border):not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line:not(.HyperMD-list-line-1) {
+body:not(.list-no-border) .mod-cm6 .HyperMD-list-line.cm-line:not(.HyperMD-list-line-1) {
   overflow: hidden;
 }
-body:not(.list-no-border):not(.is-mobile) .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent {
+body:not(.list-no-border) .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent {
   position: relative;
   font-family: var(--rb-indent-font-family) !important;
   font-size: var(--rb-indent-font-size) !important;
