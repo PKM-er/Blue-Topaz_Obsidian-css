@@ -2779,7 +2779,7 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --checkbox-color-6: #5f5f5f;
   --text-checked-checkbox: #8e8e8e;
 
-  --activeline-background: #468eeb1f;
+  --activeline-background: #004d132c;
 
   --table-color-calendar-2: rgb(5, 158, 5);
   --table-color-rgb: 5, 158, 5;
@@ -8566,7 +8566,6 @@ ol ul ol ol {
 body:not(.list-vertical-line-one):not(.list-vertical-line-two):not(.list-vertical-line-three):not(.list-no-border):not(.rainbow-lines) .markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item),
 body:not(.list-vertical-line-one):not(.list-vertical-line-two):not(.list-vertical-line-three):not(.list-no-border):not(.rainbow-lines) .markdown-preview-view:not(.kanban) ul>li:not(.task-list-item) {
   margin-top: 0.2em;
-  margin-bottom: 0.2em;
 }
 
 .markdown-preview-view ol>li,
@@ -9079,7 +9078,7 @@ body.rainbow-lines .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 3
 body:not(.list-no-border):not(.rainbow-lines) .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 4"] .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent,
 body.rainbow-lines .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 4"] .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before {
   --indent-use-default: 1.84ch;
-  --indent-use-wide: 4.009ch;
+  --indent-use-wide: 4.00ch;
   --rb-indent-width: var(--indent-use-default);
 }
 body:not(.list-no-border):not(.rainbow-lines) .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 5"] .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before,
@@ -9124,7 +9123,7 @@ body.rainbow-lines ol ol::before {
   content: '';
   border-left: 1.5px solid var(--background-modifier-border);
   position: absolute;
-  left: -1em;
+  left: -1.1em;
   height: 100%;
 }
 
