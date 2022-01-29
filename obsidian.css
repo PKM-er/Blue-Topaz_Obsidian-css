@@ -739,6 +739,12 @@ settings:
     type: variable-text
     default: "Bookerly, 'LXGW WenKai Screen R', 'LXGW WenKai UI', 'Segoe UI Emoji', var(--default-font)"
   - 
+    id: font-family-em
+    title: Italic Text
+    title.zh: 斜体文字字体
+    type: variable-text
+    default: "var(--font-family-major)"
+  - 
     id: font-family-vault
     title: Vault Name
     title.zh: 库名字体
@@ -818,19 +824,207 @@ settings:
     type: variable-text
     default: 0.9375em
   -
-    id: other-typography-settings
-    title: 2.2.3 Other Settings
-    title.zh: 2.2.3 其他设置
+    id: headering-settings
+    title: 2.2.3 Headering
+    title.zh: 2.2.3 文内标题（H1-H6）
     type: heading
     level: 3
     collapsed: true
-  - 
+  -
+    id: clutter-free-headings
+    title: Clutter Free Headings
+    title.zh: 编辑状态使用H1 H2 替代「#」(显示标题级别)
+    description:  Adapted from https://github.com/deathau/obsidian-snippets/blob/main/clutter-free-headings.css
+    type: class-toggle
+    default: false
+  -
+    id: h1-settings
+    title: 2.2.3.1 Header 1
+    type: heading
+    level: 4
+    collapsed: true
+  -
+    id: h1-toggle-underline
+    title: toggle h1 underline
+    title.zh: 切换h1下划线
+    type: class-toggle
+    default: false
+  -
+    id: h1-text-align-settings
+    title: H1 text-align
+    title.zh: H1 位置
+    type: class-select
+    allowEmpty: false
+    default: h1-text-align-start
+    options:
+      -
+        label: Default (Left/Start)
+        value: h1-text-align-start
+      - 
+        label: Center
+        value: h1-text-align-center
+      -
+        label: Right/End
+        value: h1-text-align-end
+  -
+    id: h2-settings
+    title: 2.2.3.2 Header 2
+    type: heading
+    level: 4
+    collapsed: true
+  -
+    id: h2-toggle-underline
+    title: toggle H2 underline
+    title.zh: 切换H2下划线
+    type: class-toggle
+    default: false
+  -
+    id: h2-text-align-settings
+    title: H2 text-align
+    title.zh: H2 位置
+    type: class-select
+    allowEmpty: false
+    default: h2-text-align-start
+    options:
+      -
+        label: Default (Left/Start)
+        value: h2-text-align-start
+      - 
+        label: Center
+        value: h2-text-align-center
+      -
+        label: Right/End
+        value: h2-text-align-end
+  -
+    id: h3-settings
+    title: 2.2.3.3 Header 3
+    type: heading
+    level: 4
+    collapsed: true
+  -
+    id: h3-toggle-underline
+    title: toggle H3 underline
+    title.zh: 切换H3下划线
+    type: class-toggle
+    default: false
+  -
+    id: h3-text-align-settings
+    title: H3 text-align
+    title.zh: H3 位置
+    type: class-select
+    allowEmpty: false
+    default: h3-text-align-start
+    options:
+      -
+        label: Default (Left/Start)
+        value: h3-text-align-start
+      - 
+        label: Center
+        value: h3-text-align-center
+      -
+        label: Right/End
+        value: h3-text-align-end
+  -
+    id: h4-settings
+    title: 2.2.3.4 Header 4
+    type: heading
+    level: 4
+    collapsed: true
+  -
+    id: h4-toggle-underline
+    title: toggle H4 underline
+    title.zh: 切换H4下划线
+    type: class-toggle
+    default: false
+  -
+    id: h4-text-align-settings
+    title: H4 text-align
+    title.zh: H4 位置
+    type: class-select
+    allowEmpty: false
+    default: h4-text-align-start
+    options:
+      -
+        label: Default (Left/Start)
+        value: h4-text-align-start
+      - 
+        label: Center
+        value: h4-text-align-center
+      -
+        label: Right/End
+        value: h4-text-align-end
+  -
+    id: h5-settings
+    title: 2.2.3.5 Header 5
+    type: heading
+    level: 4
+    collapsed: true
+  -
+    id: h5-toggle-underline
+    title: toggle H5 underline
+    title.zh: 切换H5下划线
+    type: class-toggle
+    default: false
+  -
+    id: h5-text-align-settings
+    title: H5 text-align
+    title.zh: H5 位置
+    type: class-select
+    allowEmpty: false
+    default: h5-text-align-start
+    options:
+      -
+        label: Default (Left/Start)
+        value: h5-text-align-start
+      - 
+        label: Center
+        value: h5-text-align-center
+      -
+        label: Right/End
+        value: h5-text-align-end
+  -
+    id: h6-settings
+    title: 2.2.3.6 Header 6
+    type: heading
+    level: 4
+    collapsed: true
+  -
+    id: h6-toggle-underline
+    title: toggle H6 underline
+    title.zh: 切换H6下划线
+    type: class-toggle
+    default: false
+  -
+    id: h6-text-align-settings
+    title: H6 text-align
+    title.zh: H6 位置
+    type: class-select
+    allowEmpty: false
+    default: h6-text-align-start
+    options:
+      -
+        label: Default (Left/Start)
+        value: h6-text-align-start
+      - 
+        label: Center
+        value: h6-text-align-center
+      -
+        label: Right/End
+        value: h5-text-align-end
+  -
+    id: other-typography-settings
+    title: 2.2.4 Other Settings
+    title.zh: 2.2.4 其他设置
+    type: heading
+    level: 3
+    collapsed: true
+  -
     id: line-width-readable
     title: Line width (in the mode of 'Readable line length')
     title.zh: 行宽（缩减栏宽模式下）
     description: The maximum line width in rem units (1rem = Body font size)
     type: variable-number
-    default: 45
+    default: 42
     format: rem
   -
     id: line-height-main
@@ -863,13 +1057,6 @@ settings:
     type: class-toggle
     default: false
   -
-    id: clutter-free-headings
-    title: clutter free headings
-    title.zh: 编辑状态使用H1 H2 替代「#」(显示标题级别)
-    description:  Adapted from https://github.com/deathau/obsidian-snippets/blob/main/clutter-free-headings.css
-    type: class-toggle
-    default: false
-  -
     id: style-change-options
     title: 2.3 Element Styles
     title.zh: 2.3 其他样式设置
@@ -880,12 +1067,6 @@ settings:
     id: bt-status-off
     title: Reduced Status Bar
     title.zh: 使用半宽状态栏
-    type: class-toggle
-    default: false
-  -
-    id: non-border-bottom-header
-    title: Remove underlines of header 1 & 2 
-    title.zh: 去除标题1、2的下划线
     type: class-toggle
     default: false
   -
@@ -1745,6 +1926,7 @@ settings:
   --mermaid-font-family: Segoe UI, "Microsoft YaHei", "Segoe UI Emoji", "trebuchet ms", verdana, Arial, cursive;
   --font-family-better-footnote: Arlrdbd, "Source Han Sans", "Segoe UI Emoji";
   --font-family-strong: Bookerly, "LXGW WenKai Screen R", "LXGW WenKai UI", "Segoe UI Emoji", var(--default-font);
+  --font-family-em: ;
 
   /*radius*/
   --radius-xs: 0.1875em;/*3px*/
@@ -7967,7 +8149,6 @@ content: 'H6';
   font-weight: bold;
   line-height: 1.2;
   padding-bottom: 1px;
-  border-bottom: 2px solid var(--h1-color);
   font-family: var(--font-family-h1);
   color: var(--h1-color);
 }
@@ -7977,23 +8158,33 @@ content: 'H6';
   font-weight: bold;
   line-height: 1.2;
   padding-bottom: 1px;
-  border-bottom: 1px solid var(--h2-color);
   font-family: var(--font-family-h2);
   color: var(--h2-color);
 }
 
-.markdown-source-view.is-live-preview .HyperMD-header.HyperMD-header-1.cm-line {
+body.h1-toggle-underline .markdown-preview-view h1,
+body.h1-toggle-underline .markdown-source-view.is-live-preview .HyperMD-header.HyperMD-header-1.cm-line {
   border-bottom: 2px solid var(--h1-color);
 }
-.markdown-source-view.is-live-preview .HyperMD-header.HyperMD-header-2.cm-line {
+body.h2-toggle-underline .markdown-preview-view h2,
+body.h2-toggle-underline .markdown-source-view.is-live-preview .HyperMD-header.HyperMD-header-2.cm-line {
   border-bottom: 1px solid var(--h2-color);
 }
-
-body.non-border-bottom-header .markdown-preview-view h1, 
-body.non-border-bottom-header .markdown-preview-view h2,
-body.non-border-bottom-header .markdown-source-view.is-live-preview .HyperMD-header.HyperMD-header-1.cm-line,
-body.non-border-bottom-header .markdown-source-view.is-live-preview .HyperMD-header.HyperMD-header-2.cm-line {
-  border-bottom: none;
+body.h3-toggle-underline .markdown-preview-view h3,
+body.h3-toggle-underline .markdown-source-view.is-live-preview .HyperMD-header.HyperMD-header-3.cm-line {
+  border-bottom: 1px solid var(--h3-color);
+}
+body.h4-toggle-underline .markdown-preview-view h4,
+body.h4-toggle-underline .markdown-source-view.is-live-preview .HyperMD-header.HyperMD-header-4.cm-line {
+  border-bottom: 1px solid var(--h2-color);
+}
+body.h5-toggle-underline .markdown-preview-view h5,
+body.h5-toggle-underline .markdown-source-view.is-live-preview .HyperMD-header.HyperMD-header-5.cm-line {
+  border-bottom: 1px solid var(--h5-color);
+}
+body.h6-toggle-underline .markdown-preview-view h6,
+body.h6-toggle-underline .markdown-source-view.is-live-preview .HyperMD-header.HyperMD-header-6.cm-line {
+  border-bottom: 1px solid var(--h6-color);
 }
 
 .markdown-preview-view h3 {
@@ -8020,6 +8211,7 @@ body.non-border-bottom-header .markdown-source-view.is-live-preview .HyperMD-hea
   font-family: var(--font-family-h6);
   color: var(--h6-color);
 }
+
 .cm-header-1 {
   font-size: var(--font-size-h1);
   position: relative;
@@ -8055,6 +8247,35 @@ body.non-border-bottom-header .markdown-source-view.is-live-preview .HyperMD-hea
   position: relative;
   font-family: var(--font-family-h6);
   color: var(--h6-color);
+}
+
+body.h1-text-align-center .HyperMD-header.HyperMD-header-1.cm-line,
+body.h2-text-align-center .HyperMD-header.HyperMD-header-2.cm-line,
+body.h3-text-align-center .HyperMD-header.HyperMD-header-3.cm-line,
+body.h4-text-align-center .HyperMD-header.HyperMD-header-4.cm-line,
+body.h5-text-align-center .HyperMD-header.HyperMD-header-5.cm-line,
+body.h6-text-align-center .HyperMD-header.HyperMD-header-6.cm-line,
+body.h1-text-align-center .markdown-preview-view h1,
+body.h2-text-align-center .markdown-preview-view h2,
+body.h3-text-align-center .markdown-preview-view h3,
+body.h4-text-align-center .markdown-preview-view h4,
+body.h5-text-align-center .markdown-preview-view h5,
+body.h6-text-align-center .markdown-preview-view h6 {
+  text-align: center;
+}
+body.h1-text-align-end .HyperMD-header.HyperMD-header-1.cm-line,
+body.h2-text-align-end .HyperMD-header.HyperMD-header-2.cm-line,
+body.h3-text-align-end .HyperMD-header.HyperMD-header-3.cm-line,
+body.h4-text-align-end .HyperMD-header.HyperMD-header-4.cm-line,
+body.h5-text-align-end .HyperMD-header.HyperMD-header-5.cm-line,
+body.h6-text-align-end .HyperMD-header.HyperMD-header-6.cm-line,
+body.h1-text-align-end .markdown-preview-view h1,
+body.h2-text-align-end .markdown-preview-view h2,
+body.h3-text-align-end .markdown-preview-view h3,
+body.h4-text-align-end .markdown-preview-view h4,
+body.h5-text-align-end .markdown-preview-view h5,
+body.h6-text-align-end .markdown-preview-view h6 {
+  text-align: end;
 }
 
 .markdown-preview-section:not(:first-child) h1,
@@ -9520,6 +9741,7 @@ span.cm-em.cm-highlight.cm-quote,
 .markdown-preview-view :not(font):not(strong)>em,
 .markdown-preview-view em>mark {
   color: var(--accent-em);
+  font-family: var(--font-family-em);
 }
 
 *:not(font)>em>strong,
@@ -10726,13 +10948,6 @@ body:not(.default-icons) h2 div.heading-collapse-indicator.collapse-indicator {
   padding-left: 10px;
   margin-top: 13px;
   transition: transform 20ms linear 0s;
-}
-
-.HyperMD-header.HyperMD-header-1.cm-line {
-  border-bottom: 2px solid;
-}
-.HyperMD-header.HyperMD-header-2.cm-line {
-  border-bottom: 2px solid;
 }
 
 body:not(.default-icons) h1 div.heading-collapse-indicator.collapse-indicator::before,
