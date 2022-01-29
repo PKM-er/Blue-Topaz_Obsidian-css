@@ -320,6 +320,14 @@ settings:
     type: heading
     level: 2
     collapsed: true
+  - 
+    id: hide-right-ribbon
+    title: Hide Right Ribbon
+    title.zh: 隐藏右侧边栏
+    description: Sliding out when hovering
+    description.zh: 鼠标悬浮时滑出
+    type: class-toggle
+    default: false
   -
     id: layout-style-options
     title: Layout Styles
@@ -7964,10 +7972,6 @@ content: 'H6';
   color: var(--h1-color);
 }
 
-body.non-border-bottom-header .markdown-preview-view h1 {
-  border-bottom: none;
-}
-
 .markdown-preview-view h2 {
   font-size: var(--font-size-h2);
   font-weight: bold;
@@ -7978,7 +7982,17 @@ body.non-border-bottom-header .markdown-preview-view h1 {
   color: var(--h2-color);
 }
 
-body.non-border-bottom-header .markdown-preview-view h2 {
+.markdown-source-view.is-live-preview .HyperMD-header.HyperMD-header-1.cm-line {
+  border-bottom: 2px solid var(--h1-color);
+}
+.markdown-source-view.is-live-preview .HyperMD-header.HyperMD-header-2.cm-line {
+  border-bottom: 1px solid var(--h2-color);
+}
+
+body.non-border-bottom-header .markdown-preview-view h1, 
+body.non-border-bottom-header .markdown-preview-view h2,
+body.non-border-bottom-header .markdown-source-view.is-live-preview .HyperMD-header.HyperMD-header-1.cm-line,
+body.non-border-bottom-header .markdown-source-view.is-live-preview .HyperMD-header.HyperMD-header-2.cm-line {
   border-bottom: none;
 }
 
@@ -10714,6 +10728,13 @@ body:not(.default-icons) h2 div.heading-collapse-indicator.collapse-indicator {
   transition: transform 20ms linear 0s;
 }
 
+.HyperMD-header.HyperMD-header-1.cm-line {
+  border-bottom: 2px solid;
+}
+.HyperMD-header.HyperMD-header-2.cm-line {
+  border-bottom: 2px solid;
+}
+
 body:not(.default-icons) h1 div.heading-collapse-indicator.collapse-indicator::before,
 body:not(.default-icons) h2 div.heading-collapse-indicator.collapse-indicator::before {
   content: "↓";
@@ -10756,12 +10777,12 @@ body:not(.default-icons) div.is-collapsed div.heading-collapse-indicator.collaps
   opacity: 0.5;
 }
 
-h1:hover div.heading-collapse-indicator.collapse-indicator::before,
-h2:hover div.heading-collapse-indicator.collapse-indicator::before,
-h3:hover div.heading-collapse-indicator.collapse-indicator::before,
-h4:hover div.heading-collapse-indicator.collapse-indicator::before,
-h5:hover div.heading-collapse-indicator.collapse-indicator::before,
-h6:hover div.heading-collapse-indicator.collapse-indicator::before {
+body:not(.default-icons) h1:hover div.heading-collapse-indicator.collapse-indicator::before,
+body:not(.default-icons) h2:hover div.heading-collapse-indicator.collapse-indicator::before,
+body:not(.default-icons) h3:hover div.heading-collapse-indicator.collapse-indicator::before,
+body:not(.default-icons) h4:hover div.heading-collapse-indicator.collapse-indicator::before,
+body:not(.default-icons) h5:hover div.heading-collapse-indicator.collapse-indicator::before,
+body:not(.default-icons) h6:hover div.heading-collapse-indicator.collapse-indicator::before {
   opacity: 1;
 }
 
@@ -11029,10 +11050,6 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
   margin-top: 0px;
   padding: 7px 6px 2px 6px;
-}
-
-.workspace-ribbon.is-collapsed .workspace-ribbon-collapse-btn:not(:hover) {
-  margin-left: 15px;
 }
 
 /* colourful notes */
@@ -11329,6 +11346,14 @@ pre.language-note-cloze::before {
 
 .status-bar {
   border: none;
+}
+
+body.hide-right-ribbon .workspace-ribbon.side-dock-ribbon.mod-right {
+  transition: all 280ms ease-in-out;
+}
+
+body.hide-right-ribbon .workspace-ribbon.side-dock-ribbon.mod-right:not(:hover) {
+  margin-right: -20px;
 }
 
 /*======== optionnal mermaid style below ========*/
@@ -16183,7 +16208,6 @@ and (min-width : 400px)
   }
 }
 
-
 /*===================================================*/
 /*=================   Live Preview   ================*/
 /*===================================================*/
@@ -16282,10 +16306,6 @@ and (min-width : 400px)
   padding: 5px 0 0;
 }
 
-.workspace-split.mod-horizontal.mod-right-split .workspace-tab-header-container {
-  height: 1.98em;
-}
-
 .workspace-split.mod-root {
   background-color: var(--background-secondary-alt-bg-4-bt);
 }
@@ -16311,6 +16331,9 @@ and (min-width : 400px)
   border-top: none;
   height: 33px;
   border-bottom: 1px solid var(--background-modifier-border-1);
+}
+.workspace > .workspace-split {
+  height: 100.5%;
 }
 
 body {
