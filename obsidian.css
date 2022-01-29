@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.13.23。uid [20220127] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.13.23, uid [20220127] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.13.23。uid [20220129] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.13.23, uid [20220129] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 @LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @awyugan */
@@ -12022,7 +12022,7 @@ g.stateGroup line {
 }
 
 /*emoji🙂*/
-.mermaid g>g>circle,.mermaid g>g>path {
+.mermaid g>g>circle {
   stroke: #000000 !important;
 }
 
@@ -18528,12 +18528,12 @@ body.loading-animation .progress-bar-message {
   max-width: 270px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220127";
+  content: "uid:20220129";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
   color: var(--text-tag);
-  box-shadow: inset 1px 1px 2px rgba(23, 48, 81, 0.2), inset -1px -1px 2px rgba(117, 188, 255, 0.5);
+  box-shadow: inset 1px 1px 2px rgba(10, 10, 10, 0.2), inset -1px -1px 2px rgba(220, 220, 220, 0.5);
   position: absolute;
   padding: 0 3px;
   top: 3px;
@@ -18560,7 +18560,7 @@ body.loading-animation .progress-bar-message {
   content: "Get Demo Vault";
   color: white;
   font-weight: bold;
-  box-shadow: 3px 3px 3px rgba(23, 48, 81, 0.2), -1px -1px 2px rgba(117, 188, 255, 0.5);
+  box-shadow: 2px 2px 2px rgba(10, 10, 10, 0.2), -1px -1px 2px rgba(220, 220, 220, 0.5);
   border-radius: 3px;
   padding: 3px 5px;
   margin-left: -15px;
