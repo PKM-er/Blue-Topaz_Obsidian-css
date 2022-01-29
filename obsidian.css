@@ -16179,7 +16179,7 @@ body.style-options-for-buttons-plugin  button.g_yellow {
 
 .is-mobile code:not([class*='language-']),
 .is-mobile .cm-s-obsidian span.cm-inline-code {
-  padding: 5px 0px 2px 0px;
+  padding: 5px 3px 2px;
 }
 
 .is-mobile .workspace>.workspace-split>.workspace-leaf:first-of-type:last-of-type .view-header {
