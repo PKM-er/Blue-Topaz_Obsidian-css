@@ -16547,6 +16547,14 @@ and (min-width : 400px)
   height: 33px;
   border-bottom: 1px solid var(--background-modifier-border-1);
 }
+body.color-scheme-options-flamingo .view-header,
+body.color-scheme-options-honey-milk-topaz .view-header,
+body.color-scheme-options-chocolate-topaz .view-header,
+body.color-scheme-options-autumn-topaz .view-header,
+body.color-scheme-options-lillimon-topaz .view-header {
+  border-bottom: 1px solid transparent;
+}
+
 .workspace > .workspace-split {
   height: 100.5%;
 }
