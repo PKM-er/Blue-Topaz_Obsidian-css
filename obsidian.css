@@ -16026,7 +16026,7 @@ body:not(.default-icons).is-mobile .tree-item-self.is-clickable.is-collapsed spa
 }
 
 .is-mobile .view-actions {
-  padding: 8px 10px 7px 5px;
+  padding: 7px 10px 7px 5px;
 }
 .is-mobile .view-action {
   margin: 0 5px;
