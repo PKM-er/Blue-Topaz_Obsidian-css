@@ -324,8 +324,6 @@ settings:
     id: fix-right-ribbon
     title: Fix Right Ribbon
     title.zh: 固定右侧边栏
-    description: Sliding out when hovering
-    description.zh: 鼠标悬浮时滑出
     type: class-toggle
     default: false
   -
