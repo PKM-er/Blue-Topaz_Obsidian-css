@@ -16561,7 +16561,7 @@ body.color-scheme-options-lillimon-topaz .view-header {
   border-bottom: 1px solid transparent;
 }
 
-.workspace > .workspace-split {
+body:not(.plugin-sliding-panes) .workspace > .workspace-split {
   height: 100.5%;
 }
 
