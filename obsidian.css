@@ -16559,8 +16559,7 @@ body.dialogue-style-wechat .dialogue-plugin-message .dialogue-plugin-message-con
 }
 
 
-
-body.dialogue-style-chat .dialogue-style-wechat.theme-dark .dialogue-plugin-message .dialogue-plugin-message-content:after {
+.dialogue-style-wechat.theme-dark .dialogue-plugin-message .dialogue-plugin-message-content:after {
   background: #343434;
 }
 
