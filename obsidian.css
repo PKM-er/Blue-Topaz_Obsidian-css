@@ -341,13 +341,6 @@ settings:
         label: Rectangle
         value: layout-style-options-rectangle
   -
-    id: show-hide-UI-elements
-    title: 1.4 show/hide UI elements
-    title.zh: 1.4 界面元素调整
-    type: heading
-    level: 2
-    collapsed: true
-  - 
     id: hide-titlebar-text
     title: Hide text in Title Bar
     title.zh: 隐藏Obsidian标题栏中的文字
