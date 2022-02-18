@@ -358,7 +358,7 @@ settings:
     title.zh: 使用半宽状态栏
     type: class-toggle
     default: false
-	-
+  -
     id: background-settings
     title: 2. Detail Settings
     title.zh: 2. 细节设置
