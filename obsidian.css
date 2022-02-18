@@ -10729,8 +10729,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
 }
 
 /* images : reduce displayed size of embedded files, zoom on hover */
-.markdown-preview-view img:not([class="emoji"]),
-.markdown-preview-view video {
+.markdown-preview-view img:not([class="emoji"]){
   max-width: min(100%, 800px);
   margin-left: auto;
   margin-right: auto;
