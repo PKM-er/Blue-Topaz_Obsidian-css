@@ -12341,12 +12341,16 @@ g.stateGroup line {
   background-clip: padding-box;
   border: 3px solid transparent;
   border-width: 3px 2px 3px 3px;
-  min-height: 45px;
+  min-height: 65px;
+	background-color: rgba(157, 165, 183, 0.4);
 }
 
 ::-webkit-scrollbar:vertical {
   background-color: transparent;
   width: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(157, 165, 183, 0.7);
 }
 
 .workspace-split::-webkit-scrollbar:vertical {
