@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.13.23。uid [20220202] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.13.23, uid [20220202] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.13.26。uid [20220226] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.13.26, uid [20220226] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 @LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @awyugan */
@@ -52,7 +52,7 @@ settings:
         label: Pink
         value: color-scheme-options-pink-topaz
       - 
-        label: Topaz-Nord (Coming soon)
+        label: Topaz-Nord
         value: color-scheme-options-topaz-nord
       - 
         label: =↓👩😺 Created by Topaz Community 🐵🧑↓=
@@ -1562,6 +1562,32 @@ settings:
     type: class-toggle
     default: false
   -
+    id: show-border-table
+    title: Show borders
+    title.zh: 显示表格框线
+    type: class-toggle
+    default: false
+  -
+    id: table-style-options
+    title: Table Style
+    title.zh: 表格样式
+    type: class-select
+    allowEmpty: false
+    default: table-style-default
+    options:
+      - 
+        label: Default
+        value: table-style-default
+      - 
+        label: Style I
+        value: table-style-one
+      - 
+        label: Style II
+        value: table-style-two
+      - 
+        label: Style III
+        value: table-style-three
+  -
     id: codeblock-folder
     title: 2.3.9 Codeblock
     title.zh: 2.3.9 代码框
@@ -2209,10 +2235,10 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --mermaid-seq-dia-color: #1371be;
 
   /*table*/
-  --table-background-color: #4c4c4c32;
+  --table-background-color: #3e3e3e32;
   --table-background-color-odd: #0000001c;
-  --table-border-color: #878787;
-  --table-thead-background-color: #4e93e263;
+  --table-border-color: #4a4a4a;
+  --table-thead-background-color: #2e507863;
   --table-hover-raw-color: #08569a21;
   --table-hover-color: #1f65a221;
   --table-hover-thead-color: #298c54c7;
@@ -2505,7 +2531,7 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --table-background-color: #f1f1f1bb;
   --table-background-color-odd: #ffffffaf;
   --table-border-color: #7d7d7d;
-  --table-thead-background-color: #bcdffcc7;
+  --table-thead-background-color: #c2d3e1c7;
   --table-hover-raw-color: #85bfee2f;
   --table-hover-color: #5dacec34;
   --table-hover-thead-color: #ddefff;
@@ -2958,7 +2984,7 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   /*table*/
   --table-background-color: #8a8a8a32;
   --table-background-color-odd: #0000001c;
-  --table-border-color: #878787;
+
   --table-thead-background-color: #557f5c63;
   --table-hover-raw-color: #08569a21;
   --table-hover-color: #1f65a221;
@@ -3729,7 +3755,7 @@ body.color-scheme-options-pink-topaz.theme-dark {
   /*table*/
   --table-background-color: #8a8a8a32;
   --table-background-color-odd: #0000001c;
-  --table-border-color: #878787;
+
   --table-thead-background-color: #a2718eab;
   --table-hover-raw-color: #a76c8f45;
   --table-hover-color: #a76c8f3b;
@@ -9538,13 +9564,13 @@ body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-5 .task-list-item-checkbox:che
   background-color:  rgba(var(--accent-5-rgb),0.7);
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-5 .task-list-item-checkbox {
-  border-color: rgba(var(--accent-5-rgb),0.7) ;
+  border-color: rgba(var(--accent-5-rgb),0.7);
 }
 body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(8n+5)::before {
   border-color: rgba(var(--accent-5-rgb),0.7);
 }
 body.rainbow-lines .mod-cm6 .HyperMD-list-line-5>span.list-bullet {
-  color: rgb(var(--accent-5-rgb)) ;
+  color: rgb(var(--accent-5-rgb));
 }
 
 body.rainbow-ordered-list .HyperMD-list-line-6 .cm-formatting-list{
@@ -9911,7 +9937,6 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   position: relative;
 }
 
-/*============bigger link popup preview  ================*/
 .popover.hover-popover {
   position: absolute;
   min-height: 50px;
@@ -10003,10 +10028,8 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   resize: both !important;
 }
 /*修复Itinerary插件显示问题*/
-.markdown-preview-view .markdown-preview-section .block-language-itinerary.fc table
-{
-	overflow:unset;
-	
+.markdown-preview-view .markdown-preview-section .block-language-itinerary.fc table {
+	overflow: unset;
 }
 
 /*modified from https://codepen.io/brettdewoody/pen/oBjbbB */
@@ -10027,42 +10050,41 @@ body.no-wrapped-table td:hover {
   text-overflow: clip;
 }
 /*modified from https://forum.obsidian.md/t/custom-css-for-tables-5-new-styles-ready-to-use-in-your-notes/17084 */
-
-body.no-wrapped-dvtable table.dataview  th {
+body.no-wrapped-dvtable table.dataview th {
   padding: 0px 20px;
   font-size: 1em;
 }
-body.no-wrapped-dvtable table.dataview  thead tr th:first-child,
-body.no-wrapped-dvtable table.dataview  tbody tr td:first-child {
+body.no-wrapped-dvtable table.dataview thead tr th:first-child,
+body.no-wrapped-dvtable table.dataview tbody tr td:first-child {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 	max-width: 14em;
 	word-break: break-all;
 }
-body.no-wrapped-dvtable table.dataview  tbody tr td:first-child {
+body.no-wrapped-dvtable table.dataview tbody tr td:first-child {
   font-size: 0.9em;
 }
-body.no-wrapped-dvtable table.dataview  th {
-    padding: 0px 20px;
-    font-size: 1em;
-    overflow-x: auto;
+body.no-wrapped-dvtable table.dataview th {
+  padding: 0px 20px;
+  font-size: 1em;
+  overflow-x: auto;
 }
-body.no-wrapped-dvtable table.dataview  td:not(:first-child),
-body.no-wrapped-dvtable table.dataview  tr > td:last-of-type { 
+body.no-wrapped-dvtable table.dataview td:not(:first-child),
+body.no-wrapped-dvtable table.dataview tr > td:last-of-type { 
   font-size: 0.9em;
 	white-space: nowrap;
 	overflow-x: auto;
-  	max-width: 17em;
+  max-width: 17em;
 }
-body.overflow-x-dvtable table.dataview  td,
-body.overflow-x-dvtable table.dataview  th { 
+body.overflow-x-dvtable table.dataview td,
+body.overflow-x-dvtable table.dataview th { 
   text-overflow: ellipsis !important;
   overflow: hidden  !important;
-  overflow-x:hidden  !important;
-  }
+  overflow-x: hidden  !important;
+}
 
-  table.dataview ul.dataview-ul li {
+table.dataview ul.dataview-ul li {
   white-space: nowrap;
 }
 
@@ -10072,45 +10094,41 @@ body.overflow-x-dvtable table.dataview  th {
 }
 
 .markdown-preview-view table tbody>tr:nth-child(odd),
-.markdown-source-view table tbody>tr:nth-child(odd)
- {
+.markdown-source-view table tbody>tr:nth-child(odd) {
   background-color: var(--table-background-color-odd);
 }
 
 .markdown-preview-view table tbody>tr,
-.markdown-source-view table tbody>tr 
-{
+.markdown-source-view table tbody>tr {
   background-color: var(--table-background-color);
 }
 
 .markdown-preview-view th,
 .markdown-preview-view td {
   padding: 4px 10px;
-  border: 1px solid var(--table-border-color);
+  border: none;
 }
 
-.markdown-preview-view th,.markdown-source-view th {
+.markdown-preview-view th,
+.markdown-source-view th {
   background-color: var(--table-thead-background-color);
   font-family: var(--font-family-strong);
 }
 
 /*table hover*/
 .markdown-preview-view td:hover,
-.markdown-source-view td:hover
- {
+.markdown-source-view td:hover {
   background-color: var(--table-hover-color);
 }
 
 /*table raw hover*/
 .markdown-preview-view table tbody>tr:hover,
-.markdown-source-view table tbody>tr:hover
- {
+.markdown-source-view table tbody>tr:hover {
   background-color: var(--table-hover-raw-color);
 }
 
 .markdown-preview-view th:hover,
-.markdown-source-view th:hover
- {
+.markdown-source-view th:hover {
   background-color: var(--table-hover-thead-color);
 }
 
@@ -10122,6 +10140,88 @@ body.overflow-x-dvtable table.dataview  th {
   white-space: break-spaces !important;
 }
 */
+body.show-border-table .markdown-preview-view th,
+body.show-border-table .markdown-preview-view td {
+  border: 1px solid var(--table-border-color);
+}
+
+.markdown-preview-view table {
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.table-style-one.theme-light {
+  --table-background-color-odd: rgba(0, 0, 0, 0.02);
+  --table-background-color: rgba(0, 0, 0, 0.02);
+  --table-thead-background-color: rgba(0, 0, 0, 0.1);
+  --table-hover-color: rgba(0, 0, 0, 0.03);
+  --table-hover-raw-color: rgba(0, 0, 0, 0.05);
+  --table-hover-thead-color: var(--table-thead-background-color);
+}
+body.table-style-one.theme-dark {
+  --table-background-color-odd: rgba(0, 0, 0, 0.3);
+  --table-background-color: rgba(0, 0, 0, 0.3);
+  --table-thead-background-color: rgba(0, 0, 0, 0.5);
+  --table-hover-color: rgba(0, 0, 0, 0.5);
+  --table-hover-raw-color: rgba(0, 0, 0, 0.5);
+  --table-hover-thead-color: var(--table-thead-background-color);
+}
+
+body.table-style-two.theme-light {
+  --table-background-color-odd: rgba(0, 0, 0, 0.02);
+  --table-background-color: rgba(0, 0, 0, 0.05);
+  --table-thead-background-color: rgba(0, 0, 0, 0.1);
+  --table-hover-color: rgba(0, 0, 0, 0.03);
+  --table-hover-raw-color: rgba(0, 0, 0, 0.09);
+  --table-hover-thead-color: var(--table-thead-background-color);
+}
+body.table-style-two.theme-dark {
+  --table-background-color-odd: rgba(0, 0, 0, 0.3);
+  --table-background-color: rgba(0, 0, 0, 0.4);
+  --table-thead-background-color: rgba(0, 0, 0, 0.5);
+  --table-hover-color: rgba(0, 0, 0, 0.5);
+  --table-hover-raw-color: rgba(0, 0, 0, 0.5);
+  --table-hover-thead-color: var(--table-thead-background-color);
+}
+
+body.table-style-two .markdown-preview-view th {
+  border: none;
+  border-bottom: 2px solid;
+}
+body.table-style-two .markdown-preview-view td {
+  border: none;
+}
+
+body.table-style-three .markdown-preview-view th,
+body.table-style-three .markdown-source-view th,
+body.table-style-three .markdown-preview-view th:hover,
+body.table-style-three .markdown-source-view th:hover,
+body.table-style-three .markdown-preview-view td:hover,
+body.table-style-three .markdown-source-view td:hover,
+body.table-style-three .markdown-preview-view table tbody>tr:hover,
+body.table-style-three .markdown-source-view table tbody>tr:hover,
+body.table-style-three .markdown-preview-view table tbody>tr:nth-child(odd),
+body.table-style-three .markdown-source-view table tbody>tr:nth-child(odd),
+body.table-style-three .markdown-preview-view table tbody>tr,
+body.table-style-three .markdown-source-view table tbody>tr {
+  background-color: transparent;
+}
+
+/*table hover*/
+.markdown-preview-view td:hover,
+.markdown-source-view td:hover {
+  background-color: var(--table-hover-color);
+}
+
+/*table raw hover*/
+.markdown-preview-view table tbody>tr:hover,
+.markdown-source-view table tbody>tr:hover {
+  background-color: var(--table-hover-raw-color);
+}
+
+.markdown-preview-view th:hover,
+.markdown-source-view th:hover {
+  background-color: var(--table-hover-thead-color);
+}
 
 .popover mark {
   background-color: var(--text-highlight-bg);
@@ -13914,10 +14014,10 @@ aside>h2 {
     --mermaid-active-task-color: #187ef1;
     --mermaid-seq-dia-color: #1371be;
 
-    --table-background-color: #8a8a8a32;
+    --table-background-color: #3e3e3e32;
     --table-background-color-odd: #0000001c;
-    --table-border-color: #878787;
-    --table-thead-background-color: #4e93e263;
+    --table-border-color: #4a4a4a;
+    --table-thead-background-color: #2e507863;
     --table-hover-raw-color: #08569a21;
     --table-hover-color: #1f65a221;
     --table-hover-thead-color: #298c54c7;
@@ -14203,12 +14303,16 @@ aside>h2 {
 }
 
 /* ======== tooltip ========= */
-.tooltip, .tooltip.mod-right{
+.tooltip, 
+.tooltip.mod-right{
   color:var(--white);
   background-color:var(--interactive-accent);
 }
 .tooltip.mod-right .tooltip-arrow {
   border-right: 5px solid var(--interactive-accent);
+}
+.tooltip.mod-left .tooltip-arrow {
+  border-left: 5px solid var(--interactive-accent);
 }
 
 /* ================================== */
@@ -16529,15 +16633,12 @@ and (min-width : 400px)
 /*=======================
 ===  dialogue by cuman====
 ========================*/
-
-
 body.dialogue-style-wechat .dialogue-plugin-block-wrapper {
   margin-bottom: 15px;
   position: relative;
   display: flex;
 }
-body.dialogue-style-wechat .dialogue-plugin-message
-{
+body.dialogue-style-wechat .dialogue-plugin-message {
   background-color:unset;
 }
 
@@ -16561,8 +16662,7 @@ body.dialogue-style-wechat .dialogue-plugin-comment-wrapper::after {
   margin: 20px 0;
   text-align: center;
 }
-body.dialogue-style-wechat .dialogue-plugin-comment-wrapper .dialogue-plugin-comment
-{
+body.dialogue-style-wechat .dialogue-plugin-comment-wrapper .dialogue-plugin-comment {
   margin: 7px;
 }
 
@@ -16582,18 +16682,16 @@ body.dialogue-style-wechat .dialogue-plugin-message .dialogue-plugin-message-tit
   background-color:unset;
 }
 
-body.dialogue-style-wechat .dialogue-plugin-message-wrapper-right .dialogue-plugin-message-title
-{
+body.dialogue-style-wechat .dialogue-plugin-message-wrapper-right .dialogue-plugin-message-title {
   right: 0;
-
 }
-body.dialogue-style-wechat .dialogue-plugin-message-wrapper-left .dialogue-plugin-message .dialogue-plugin-message-content{
+body.dialogue-style-wechat .dialogue-plugin-message-wrapper-left .dialogue-plugin-message .dialogue-plugin-message-content {
   margin-right: 0px;
 }
-body.dialogue-style-wechat .dialogue-plugin-message-wrapper-right .dialogue-plugin-message .dialogue-plugin-message-content{
+body.dialogue-style-wechat .dialogue-plugin-message-wrapper-right .dialogue-plugin-message .dialogue-plugin-message-content {
   color: black;
-    background: #98e970;
-    margin-left: 0px;
+  background: #98e970;
+  margin-left: 0px;
 }
 body.dialogue-style-wechat .dialogue-plugin-message-wrapper-right .dialogue-plugin-message .dialogue-plugin-message-content:after {
   background: #98e970;
@@ -16619,7 +16717,6 @@ body.dialogue-style-wechat .dialogue-plugin-message .dialogue-plugin-message-con
   background:#343434;
 }
 
-
 body.dialogue-style-wechat .dialogue-plugin-message .dialogue-plugin-message-content:after {
   content: '';
   background: #fff;
@@ -16631,7 +16728,6 @@ body.dialogue-style-wechat .dialogue-plugin-message .dialogue-plugin-message-con
   position: absolute;
   transform: rotate(45deg);
 }
-
 
 .dialogue-style-wechat.theme-dark .dialogue-plugin-message .dialogue-plugin-message-content:after {
   background: #343434;
@@ -16652,14 +16748,14 @@ body.dialogue-style-chat .dialogue-plugin-message-wrapper-left .dialogue-plugin-
   font-size: 15px;
   background: #f5f8ff;
   letter-spacing: 1.5px;
-    color: #333;
-    border-radius:12px;
-    border-bottom-left-radius: 0px;
-    margin-left: 6px;
-    box-shadow: 0px 2px 1px 0px #f3f3f3,0px 2px 1px 0px #f3f3f3;
-    margin-right: 3em;
-    align-self: flex-end;
- }
+  color: #333;
+  border-radius:12px;
+  border-bottom-left-radius: 0px;
+  margin-left: 6px;
+  box-shadow: 0px 2px 1px 0px #f3f3f3,0px 2px 1px 0px #f3f3f3;
+  margin-right: 3em;
+  align-self: flex-end;
+}
 
  body.dialogue-style-chat .dialogue-plugin-message-wrapper-right .dialogue-plugin-message{
   font-size: 15px;
@@ -16671,18 +16767,15 @@ body.dialogue-style-chat .dialogue-plugin-message-wrapper-left .dialogue-plugin-
   margin-right: 6px;
   align-self: flex-end;
   margin-left: 3em;
-  
 } 
 
 body.dialogue-style-chat .dialogue-plugin-message-title {
-    font-size: 16px;
-    letter-spacing: 2px;
-    text-align: center;
-    color: rgb(236, 236, 236);
-    font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: rgb(236, 236, 236);
+  font-weight: bold;
 }
-
-
 
 
 /*===================================================*/
@@ -19067,7 +19160,7 @@ body.loading-animation .progress-bar-message {
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220202";
+  content: "uid:20220226";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
