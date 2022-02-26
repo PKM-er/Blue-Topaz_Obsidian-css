@@ -327,6 +327,12 @@ settings:
     type: class-toggle
     default: false
   -
+    id: hide-left-ribbon
+    title: Hide Left Ribbon
+    title.zh: 隐藏左侧边栏
+    type: class-toggle
+    default: false
+  -
     id: layout-style-options
     title: Layout Styles
     title.zh: 界面布局样式选择
@@ -11723,12 +11729,16 @@ pre.language-note-cloze::before {
   border: none;
 }
 
-body:not(.fix-right-ribbon) .workspace-ribbon.side-dock-ribbon.mod-right {
+body:not(.fix-right-ribbon) .workspace-ribbon.side-dock-ribbon.mod-right,
+body.hide-left-ribbon .workspace-ribbon.side-dock-ribbon.mod-left {
   transition: all 280ms ease-in-out;
 }
 
 body:not(.fix-right-ribbon) .workspace-ribbon.side-dock-ribbon.mod-right:not(:hover) {
-  margin-right: -20px;
+  margin-right: -22px;
+}
+body.hide-left-ribbon .workspace-ribbon.side-dock-ribbon.mod-left:not(:hover) {
+  margin-left: -24px;
 }
 
 /*======== optionnal mermaid style below ========*/
