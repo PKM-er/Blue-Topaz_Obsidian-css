@@ -1770,7 +1770,7 @@ settings:
     title.zh: 是否开启Buttons特别样式支持
     type: class-toggle
     default: false
-    description : 目前内置class：🔸circle_btn 圆形按钮🔸blank_btn 透明按钮🔸grad_button渐变按钮🟣g_purple 紫色🔵g_blue蓝色🟢g_green 绿色💚g_lightgreen 浅绿🟡g_yellow黄色
+    description : 目前内置class：🔸circle_btn 圆形按钮🔸blank 透明按钮🔸grad_button渐变按钮🟣g_purple 紫色🔵g_blue蓝色🟢g_green 绿色💚g_lightgreen 浅绿🟡g_yellow黄色
   -
     id: style-options-for-buttons-plugin-heading
     title: 3.6 Dataview
