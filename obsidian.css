@@ -1,8 +1,7 @@
-/*蓝色托帕石，适合Obsidian v0.13.26。uid [20220227] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.13.26, uid [20220227] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.13.27。uid [20220301] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.13.27, uid [20220301] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
-
 Many thanks to @Cuman
 @LillianWho @成雙酱 @嘴上云  @Klaas @Thinkbond @Rainbell129(AKA Lavi) @awyugan */
 
@@ -8144,68 +8143,57 @@ body.circular-checkbox .markdown-source-view.is-live-preview .task-list-item-che
 /* headers */
 /*编辑状态是否显示H1 H2标记*/
 /*适配Live previe模式*/
-
 body.clutter-free-headings div:not(.cm-active).cm-line  span:not(.cm-formatting-header).cm-header::before {
   font-size: 0.7rem;
   width: auto;
+  margin-right: 1px;
   border-radius: var(--radius-xs);
   color: var(--text-muted);
   overflow: visible;
 }
 
-/*匹配折叠编辑显示*/
-body.clutter-free-headings div:not(.cm-active).cm-line span[contenteditable]:not(.cm-formatting-header)+ span.cm-header-1::before,
-/*匹配正常显示*/
+/*匹配折叠编辑显示
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header)+ span.cm-header-1::before,
+/*匹配正常显示
 body.clutter-free-headings div:not(.cm-active).cm-line span.cm-formatting-header+ span.cm-header-1::before,
-/*匹配标题折叠状态，选中显示*/
-body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-1:nth-last-of-type(2)::before {
-  font-weight:normal;
+/*匹配标题折叠状态，选中显示
+body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-1:nth-last-of-type(2)::before
+*/
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-1::before {
   content: 'H1';
   margin-top: calc(var(--font-size-h1) - 0.1em);
 }
 
-body.clutter-free-headings div:not(.cm-active).cm-line span[contenteditable]:not(.cm-formatting-header)+ span.cm-header-2::before,
-body.clutter-free-headings div:not(.cm-active).cm-line span.cm-formatting-header+ span.cm-header-2::before,
-body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-2:nth-last-of-type(2)::before {
-  font-weight:normal;
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-2::before {
   content: 'H2';
   margin-top: calc(var(--font-size-h2) - 0.2em);
 }
 
-body.clutter-free-headings div:not(.cm-active).cm-line span[contenteditable]:not(.cm-formatting-header)+ span.cm-header-3::before,
-body.clutter-free-headings div:not(.cm-active).cm-line span.cm-formatting-header+ span.cm-header-3::before,
-body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-3:nth-last-of-type(2)::before {
-  font-weight:normal;
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-3::before {
   content: 'H3';
   margin-top: calc(var(--font-size-h3) - 0.2em);
 }
 
-body.clutter-free-headings div:not(.cm-active).cm-line span[contenteditable]:not(.cm-formatting-header)+ span.cm-header-4::before,
-body.clutter-free-headings div:not(.cm-active).cm-line span.cm-formatting-header+ span.cm-header-4::before,
-body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-4:nth-last-of-type(2)::before {
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-4::before {
   font-weight:normal;
   content: 'H4';
   margin-top: calc(var(--font-size-h4) - 0.3em);
 }
 
-body.clutter-free-headings div:not(.cm-active).cm-line span[contenteditable]:not(.cm-formatting-header)+ span.cm-header-5::before,
-body.clutter-free-headings div:not(.cm-active).cm-line span.cm-formatting-header+ span.cm-header-5::before,
-body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-5:nth-last-of-type(2)::before  {
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-5::before {
   font-weight:normal;
   content: 'H5';
   margin-top: calc(var(--font-size-h5) - 0.4em);
 }
 
-body.clutter-free-headings div:not(.cm-active).cm-line span[contenteditable]:not(.cm-formatting-header)+ span.cm-header-6::before,
-body.clutter-free-headings div:not(.cm-active).cm-line span.cm-formatting-header+ span.cm-header-6::before,
-body.clutter-free-headings div:not(.cm-active).cm-line span.cm-selection ~ span:not(.cm-formatting-header).cm-header-6:nth-last-of-type(2)::before {
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-6::before {
   font-weight:normal;
   content: 'H6';
   margin-top: calc(var(--font-size-h6) - 0.4em);
 }
 
 /*适配source mode 模式*/
-body.clutter-free-headings  .mod-cm6 div:not(.cm-active).cm-line span.cm-formatting-header {
+body.clutter-free-headings .mod-cm6 div:not(.cm-active).cm-line span.cm-formatting-header {
   display:none;
 }
 
@@ -8221,7 +8209,7 @@ body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line.hmd-
   color: var(--text-muted);
   overflow:visible;
 }
-body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line:not(.hmd-inactive-line)  span.cm-formatting-header::before {
+body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line:not(.hmd-inactive-line) span.cm-formatting-header::before {
   position: absolute;
   margin-top: 10px;
   font-size: 0.7rem;
@@ -8445,7 +8433,7 @@ body.h6-text-align-end .markdown-preview-view h6 {
   border: 1px solid;
   padding: 0px 2px;
   border-radius: var(--radius-xs);
-  top: 19px;
+  top: 22px;
 }
 .markdown-preview-view h4:hover::before {
   content: 'H4';
@@ -8456,7 +8444,7 @@ body.h6-text-align-end .markdown-preview-view h6 {
   border: 1px solid;
   padding: 0px 2px;
   border-radius: var(--radius-xs);
-  top: 20px;
+  top: 22px;
 }
 .markdown-preview-view h5:hover::before {
   content: 'H5';
@@ -8467,7 +8455,7 @@ body.h6-text-align-end .markdown-preview-view h6 {
   border: 1px solid;
   padding: 0px 2px;
   border-radius: var(--radius-xs);
-  top: 20px;
+  top: 22px;
 }
 .markdown-preview-view h6:hover::before {
   content: 'H6';
@@ -8478,7 +8466,7 @@ body.h6-text-align-end .markdown-preview-view h6 {
   border: 1px solid;
   padding: 0px 2px;
   border-radius: var(--radius-xs);
-  top: 20px;
+  top: 22px;
 }
 
 /*---*/
@@ -11154,7 +11142,7 @@ body:not(.default-icons) h1 div.heading-collapse-indicator.collapse-indicator,
 body:not(.default-icons) h2 div.heading-collapse-indicator.collapse-indicator {
   position: absolute;
   padding-left: 10px;
-  margin-top: 13px;
+  margin-top: 11px;
   transition: transform 20ms linear 0s;
 }
 
@@ -11196,7 +11184,7 @@ body:not(.default-icons) div.is-collapsed h2 div.heading-collapse-indicator.coll
 }
 
 body:not(.default-icons) div.is-collapsed div.heading-collapse-indicator.collapse-indicator {
-  transform: translateX(-8px) translateY(20px) rotate(-90deg);
+  transform: translateX(-11px) translateY(24px) rotate(-90deg);
   opacity: 0.5;
 }
 
@@ -15861,19 +15849,19 @@ body:not(.default-icons).is-mobile .tree-item-self.is-clickable.is-collapsed spa
   transform: translateX(-1px) translateY(-1px) rotate(-90deg);
 }
 
-.is-mobile h1 div.heading-collapse-indicator.collapse-indicator,
-.is-mobile h2 div.heading-collapse-indicator.collapse-indicator,
-.is-mobile div.heading-collapse-indicator.collapse-indicator {
-  padding-left: 5px;
+body:not(.default-icons).is-mobile h1 div.heading-collapse-indicator.collapse-indicator,
+body:not(.default-icons).is-mobile h2 div.heading-collapse-indicator.collapse-indicator,
+body:not(.default-icons).is-mobile div.heading-collapse-indicator.collapse-indicator {
+  padding-left: 2px;
 }
 
-.is-mobile div.is-collapsed h1 div.heading-collapse-indicator.collapse-indicator,
-.is-mobile div.is-collapsed h2 div.heading-collapse-indicator.collapse-indicator {
-  transform: translateX(-2px) translateY(9px) rotate(-90deg);
+body:not(.default-icons).is-mobile div.is-collapsed h1 div.heading-collapse-indicator.collapse-indicator,
+body:not(.default-icons).is-mobile div.is-collapsed h2 div.heading-collapse-indicator.collapse-indicator {
+  transform: translateX(-2px) translateY(6px) rotate(-90deg);
 }
 
-.is-mobile div.is-collapsed div.heading-collapse-indicator.collapse-indicator {
-  transform: translateX(-10px) translateY(16px) rotate(-90deg);
+body:not(.default-icons).is-mobile div.is-collapsed div.heading-collapse-indicator.collapse-indicator {
+  transform: translateX(-15px) translateY(21px) rotate(-90deg);
 }
 
 /*main body*/
@@ -19051,7 +19039,7 @@ body.loading-animation .progress-bar-message {
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220227";
+  content: "uid:20220301";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
