@@ -15876,7 +15876,7 @@ body:not(.default-icons).is-mobile div.is-collapsed div.heading-collapse-indicat
 
 body:not(.default-icons).is-mobile div.is-collapsed h1 div.heading-collapse-indicator.collapse-indicator,
 body:not(.default-icons).is-mobile div.is-collapsed h2 div.heading-collapse-indicator.collapse-indicator {
-  transform: translateX(-2px) translateY(8px) rotate(-90deg);
+  transform: translateX(-2px) translateY(6px) rotate(-90deg);
 }
 
 /*main body*/
