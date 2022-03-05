@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.13.27。uid [20220301] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.13.27, uid [20220301] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.13.28。uid [20220305] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.13.28, uid [20220305] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -656,9 +656,18 @@ settings:
     default-light: '#099d4e'
     default-dark: '#a4ca8e'
   -
+    id: mjx-inline-math-color
+    title: Color of Mathematical Expressions (inline $x=0$)
+    title.zh: 数学表达式颜色(行内 $x=0$)
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#0e0e0e'
+    default-dark: '#bdbdbd'
+  -
     id: mjx-math-color
-    title: Color of Mathematical Expressions
-    title.zh: 数学表达式颜色
+    title: Color of Mathematical Expressions ($$x=0$$)
+    title.zh: 数学表达式颜色($$x=0$$)
     type: variable-themed-color
     opacity: true
     format: hex
@@ -2030,7 +2039,7 @@ settings:
   /*--font-monospace:                    Consolas, Monaco, "Microsoft Yahei Mono", monospace;*/
   --mermaid-font-family: Segoe UI, "Microsoft YaHei", "Segoe UI Emoji", "trebuchet ms", verdana, Arial, cursive;
   --font-family-better-footnote: Arlrdbd, "Source Han Sans", "Segoe UI Emoji";
-  --font-family-strong: Bookerly, "LXGW WenKai Screen R", "LXGW WenKai UI", "Segoe UI Emoji", var(--default-font);
+  --font-family-strong: Bookerly, "LXGW WenKai Screen", "LXGW WenKai Screen R", "Segoe UI Emoji", var(--default-font);
   --font-family-em: ;
 
   /*radius*/
@@ -2410,6 +2419,7 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --hr-color-3: var(--theme-color);
   --hr-color-4: var(--theme-color);
 
+  --mjx-inline-math-color: var(--text-normal);
   --mjx-math-color: var(--text-normal);
   --background-leaf-resize-handle: var(--background-primary-alt-bg-4-bt);
   --text-folder-file-icon: var(--theme-color);
@@ -2704,6 +2714,7 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --hr-color-3: var(--theme-color);
   --hr-color-4: var(--theme-color);
 
+  --mjx-inline-math-color: var(--text-normal);
   --mjx-math-color: var(--text-normal);
   --background-leaf-resize-handle: var(--background-primary-alt-bg-4-bt);
   --text-folder-file-icon: var(--theme-color);
@@ -8661,6 +8672,9 @@ mjx-container[jax='CHTML'] {
   font-size: var(--font-size-latex);
 }
 mjx-math {
+  color: var(--mjx-inline-math-color);
+}
+div.math.math-block mjx-math {
   color: var(--mjx-math-color);
 }
 
@@ -10805,7 +10819,8 @@ pre[class~='language-js']::before {
 pre[class~='language-php']::before {
   content: "PHP";
 }
-pre[class~='language-shell']::before {
+pre[class~='language-shell']::before，
+pre[class~='language-bash']::before {
   content: "SHELL";
 }
 pre[class~='language-flow']::before {
@@ -11184,7 +11199,7 @@ body:not(.default-icons) div.is-collapsed h2 div.heading-collapse-indicator.coll
 }
 
 body:not(.default-icons) div.is-collapsed div.heading-collapse-indicator.collapse-indicator {
-  transform: translateX(-11px) translateY(24px) rotate(-90deg);
+  transform: translateX(-8px) translateY(20px) rotate(-90deg);
   opacity: 0.5;
 }
 
@@ -15825,7 +15840,7 @@ span[alt*="+grid"] {
 /*==================   MOBILE   =====================*/
 /*===================================================*/
 .is-mobile .markdown-preview-view {
-  padding: 0 16px;
+  padding: 0 16px 0 20px;
 }
 
 .is-mobile .markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item) {
@@ -15855,13 +15870,13 @@ body:not(.default-icons).is-mobile div.heading-collapse-indicator.collapse-indic
   padding-left: 2px;
 }
 
-body:not(.default-icons).is-mobile div.is-collapsed h1 div.heading-collapse-indicator.collapse-indicator,
-body:not(.default-icons).is-mobile div.is-collapsed h2 div.heading-collapse-indicator.collapse-indicator {
-  transform: translateX(-2px) translateY(6px) rotate(-90deg);
+body:not(.default-icons).is-mobile div.is-collapsed div.heading-collapse-indicator.collapse-indicator {
+  transform: translateX(-11px) translateY(16px) rotate(-90deg);
 }
 
-body:not(.default-icons).is-mobile div.is-collapsed div.heading-collapse-indicator.collapse-indicator {
-  transform: translateX(-15px) translateY(21px) rotate(-90deg);
+body:not(.default-icons).is-mobile div.is-collapsed h1 div.heading-collapse-indicator.collapse-indicator,
+body:not(.default-icons).is-mobile div.is-collapsed h2 div.heading-collapse-indicator.collapse-indicator {
+  transform: translateX(-2px) translateY(8px) rotate(-90deg);
 }
 
 /*main body*/
@@ -18675,8 +18690,7 @@ cssclass: matrix
   background-color: transparent;
 }
 
-.markdown-preview-view.matrix .internal-embed:not(.image-embed)
-{
+.markdown-preview-view.matrix .internal-embed:not(.image-embed) {
   border: 1px solid;
   border-radius: 10px;
 }
@@ -18693,8 +18707,7 @@ cssclass: matrix
   justify-content: center;
   align-items: center;
 }
-.markdown-preview-view.matrix .markdown-embed 
-{
+.markdown-preview-view.matrix .markdown-embed {
   background-color: transparent;
 }
 .markdown-preview-view.matrix table tr th > *,
@@ -18823,8 +18836,7 @@ body.loading-animation .progress-bar-message {
   .markdown-preview-view :not(font)>strong {
     -webkit-print-color-adjust: exact;
     color: var(--print-strong-color);
-    font-family: var(--font-family-strong) !important;
-    font-weight: 900 !important;
+    font-family: var(--font-family-strong);
   }
 
   .markdown-preview-view :not(font):not(strong)>em,
@@ -19039,7 +19051,7 @@ body.loading-animation .progress-bar-message {
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220301";
+  content: "uid:20220305";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
