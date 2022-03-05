@@ -15840,7 +15840,7 @@ span[alt*="+grid"] {
 /*==================   MOBILE   =====================*/
 /*===================================================*/
 .is-mobile .markdown-preview-view {
-  padding: 0 16px 0 20px;
+  padding: 0 18px 0 21px;
 }
 
 .is-mobile .markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item) {
