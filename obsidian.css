@@ -8153,7 +8153,7 @@ body.circular-checkbox .markdown-source-view.is-live-preview .task-list-item-che
 
 /* headers */
 /*编辑状态是否显示H1 H2标记*/
-/*适配Live previe模式*/
+/*适配Live preview模式*/
 body.clutter-free-headings div:not(.cm-active).cm-line  span:not(.cm-formatting-header):not(.cm-hashtag):not(.cm-inline-code):not(.cm-highlight).cm-header::before {
   font-size: 0.6rem;
   width: auto;
@@ -8165,9 +8165,13 @@ body.clutter-free-headings div:not(.cm-active).cm-line  span:not(.cm-formatting-
   font-weight: normal !important;
 }
 
-body.clutter-free-headings div:not(.cm-active).cm-line .cm-hashtag.cm-header ~ span.cm-header::before,
+/* body.clutter-free-headings div:not(.cm-active).cm-line .cm-hashtag.cm-header ~ span.cm-header::before,
 body.clutter-free-headings div:not(.cm-active).cm-line .cm-header.cm-inline-code ~ span.cm-header::before,
 body.clutter-free-headings div:not(.cm-active).cm-line .cm-header.cm-highlight ~ span.cm-header::before {
+  display: none;
+} */
+body.clutter-free-headings div.mod-cm6.is-live-preview div:not(.cm-active).cm-line .cm-header ~  span.cm-header::before
+{
   display: none;
 }
 
@@ -8201,10 +8205,14 @@ body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-h
 }
 
 /*适配source mode 模式*/
-body.clutter-free-headings .mod-cm6 div:not(.cm-active).cm-line span.cm-formatting-header {
+
+body.clutter-free-headings div.mod-cm6:not(.is-live-preview) div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header ~  span.cm-header::before
+{
+  display: none;
+}
+ body.clutter-free-headings div.mod-cm6:not(.is-live-preview) div:not(.cm-active).cm-line span.cm-formatting-header {
   display:none;
 }
-
 /*适配传统模式*/
 body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line.hmd-inactive-line  span.cm-formatting-header::before {
   position: absolute;
@@ -8832,8 +8840,8 @@ ul ul ul ol ul {
 .markdown-source-view.mod-cm6 .list-bullet:after {
   content: none;
   }
-.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line.cm-line div.cm-fold-indicator + span.cm-formatting .list-bullet::after,
-.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line.cm-line span.cm-hmd-list-indent + span.cm-formatting .list-bullet::after
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after
 {
   content: '\25E6';
   left: -1px;
