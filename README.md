@@ -1,4 +1,12 @@
+# 示例 Demo vault
+感谢@cumany制作的升级版示例库 https://github.com/cumany/Blue-topaz-examples
+
 # 更新日志
+### 20220308
+1. 修复style settings 2.2.3，“编辑状态使用H1 H2 替代[#]”
+2. 其他修复
+3. 暂时不对版本v0.13.30进行修复，直到下次软件更新
+
 ### 20220307
 1. 修复最新banner插件（1.3.1），在阅读模式下显示宽度不全的问题
 2. 修复memos插件输入框无法滚动的问题，另外增强memos放右侧边栏滚动效果。
