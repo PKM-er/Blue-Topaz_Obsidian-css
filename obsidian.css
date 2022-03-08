@@ -820,37 +820,37 @@ settings:
     type: variable-text
     default: 1em
   -
-    id: font-size-h1
+    id: h1
     title: Header 1
     title.zh: 标题 1
     type: variable-text
     default: 1.5625em
   -
-    id: font-size-h2
+    id: h2
     title: Header 2
     title.zh: 标题 2
     type: variable-text
     default: 1.4375em
   -
-    id: font-size-h3
+    id: h3
     title: Header 3
     title.zh: 标题 3
     type: variable-text
     default: 1.3125em
   -
-    id: font-size-h4
+    id: h4
     title: Header 4
     title.zh: 标题 4
     type: variable-text
     default: 1.1875em
   -
-    id: font-size-h5
+    id: h5
     title: Header 5
     title.zh: 标题 5
     type: variable-text
     default: 1.0625em
   -
-    id: font-size-h6
+    id: h6
     title: Header 6
     title.zh: 标题 6
     type: variable-text
@@ -2002,12 +2002,12 @@ settings:
   --font-size-folder-and-file: 0.85em;/*左侧边栏文件字体大小*/
   --font-size-edit-normal: 1em;/*编辑正文字体大小*/
   --font-size-preview-normal: 1em;/*预览正文字体大小*/
-  --font-size-h1: 1.5625em;
-  --font-size-h2: 1.4375em;
-  --font-size-h3: 1.3125em;
-  --font-size-h4: 1.1875em;
-  --font-size-h5: 1.0625em;
-  --font-size-h6: 0.9375em;
+  --h1: 1.5625rem;
+  --h2: 1.4375rem;
+  --h3: 1.3125rem;
+  --h4: 1.1875rem;
+  --h5: 1.0625rem;
+  --h6: 0.9375rem;
   --font-size-tag: 1em;
   --font-size-emoji-after-tag: 1.5625em;
   --font-size-list: 1em;
@@ -8173,31 +8173,31 @@ body.clutter-free-headings div:not(.cm-active).cm-line .cm-header.cm-highlight ~
 
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-1::before {
   content: 'H1';
-  margin-top: calc(var(--font-size-h1) - 0.1em);
+  margin-top: calc(var(--h1) - 0.1em);
 }
 
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-2::before {
   content: 'H2';
-  margin-top: calc(var(--font-size-h2) - 0.2em);
+  margin-top: calc(var(--h2) - 0.2em);
 }
 
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-3::before {
   content: 'H3';
-  margin-top: calc(var(--font-size-h3) - 0.2em);
+  margin-top: calc(var(--h3) - 0.2em);
 }
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-4::before {
   content: 'H4';
-  margin-top: calc(var(--font-size-h4) - 0.3em);
+  margin-top: calc(var(--h4) - 0.3em);
 }
 
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-5::before {
   content: 'H5';
-  margin-top: calc(var(--font-size-h5) - 0.4em);
+  margin-top: calc(var(--h5) - 0.4em);
 }
 
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-6::before {
   content: 'H6';
-  margin-top: calc(var(--font-size-h6) - 0.4em);
+  margin-top: calc(var(--h6) - 0.4em);
 }
 
 /*适配source mode 模式*/
@@ -8224,8 +8224,7 @@ body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line:not(
   margin-top: 10px;
   font-size: 0.7rem;
   width: auto;
-  margin-left: -2px;
-  padding: 0px 2px;
+  margin-left: -6px;
   border-radius: var(--radius-xs);
   color: var(--text-muted);
   overflow: visible;
@@ -8258,7 +8257,7 @@ content: 'H6';
 }
 
 .markdown-preview-view h1 {
-  font-size: var(--font-size-h1);
+  font-size: var(--h1);
   font-weight: bold;
   line-height: 1.2;
   padding-bottom: 1px;
@@ -8267,7 +8266,7 @@ content: 'H6';
 }
 
 .markdown-preview-view h2 {
-  font-size: var(--font-size-h2);
+  font-size: var(--h2);
   font-weight: bold;
   line-height: 1.2;
   padding-bottom: 1px;
@@ -8301,62 +8300,62 @@ body.h6-toggle-underline .markdown-source-view.is-live-preview .HyperMD-header.H
 }
 
 .markdown-preview-view h3 {
-  font-size: var(--font-size-h3);
+  font-size: var(--h3);
   font-weight: bold;
   font-family: var(--font-family-h3);
   color: var(--h3-color);
 }
 .markdown-preview-view h4 {
-  font-size: var(--font-size-h4);
+  font-size: var(--h4);
   font-weight: bold;
   font-family: var(--font-family-h4);
   color: var(--h4-color);
 }
 .markdown-preview-view h5 {
-  font-size: var(--font-size-h5);
+  font-size: var(--h5);
   font-weight: bold;
   font-family: var(--font-family-h5);
   color: var(--h5-color);
 }
 .markdown-preview-view h6 {
-  font-size: var(--font-size-h6);
+  font-size: var(--h6);
   font-weight: bold;
   font-family: var(--font-family-h6);
   color: var(--h6-color);
 }
 
 .cm-header-1 {
-  font-size: var(--font-size-h1);
+  font-size: var(--h1) !important;
   position: relative;
   font-family: var(--font-family-h1);
   color: var(--h1-color);
 }
 .cm-header-2 {
-  font-size: var(--font-size-h2);
+  font-size: var(--h2) !important;
   position: relative;
   font-family: var(--font-family-h2);
   color: var(--h2-color);
 }
 .cm-header-3 {
-  font-size: var(--font-size-h3);
+  font-size: var(--h3) !important;
   position: relative;
   font-family: var(--font-family-h3);
   color: var(--h3-color);
 }
 .cm-header-4 {
-  font-size: var(--font-size-h4);
+  font-size: var(--h4) !important;
   position: relative;
   font-family: var(--font-family-h4);
   color: var(--h4-color);
 }
 .cm-header-5 {
-  font-size: var(--font-size-h5);
+  font-size: var(--h5) !important;
   position: relative;
   font-family: var(--font-family-h5);
   color: var(--h5-color);
 }
 .cm-header-6 {
-  font-size: var(--font-size-h6);
+  font-size: var(--h6) !important;
   position: relative;
   font-family: var(--font-family-h6);
   color: var(--h6-color);
