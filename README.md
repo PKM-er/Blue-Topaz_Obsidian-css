@@ -2,9 +2,15 @@
 感谢@cumany制作的升级版示例库 https://github.com/cumany/Blue-topaz-examples
 
 # 更新日志
+### 20220310
+
+文件夹列表单行显示，增加文件名滚动效果 （2.3.3）
+
 ### 20220309
+
 1.调整dataview 表格字体
 2.增加dataview单行显示效果
+
 ### 20220308
 1. 修复style settings 2.2.3，“编辑状态使用H1 H2 替代[#]”
 2. 其他修复
