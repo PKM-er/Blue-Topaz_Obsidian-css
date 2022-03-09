@@ -10393,26 +10393,24 @@ body.bt-status-off #scroll-controls {
 
 body.file-name-animation .nav-file-title-content:hover
 {
- 
-  animation: filemove 2.5s 1 normal linear;
+  animation: filemove 1.5s 1 normal linear;
 }
+
 body.file-name-animation .nav-file-title-content
 {
- 
+  min-width: 190px;
   display: inline-block;
   white-space: nowrap;
+
 }
 
 @keyframes filemove {
-    0% {
-      left: 0;
-        transform: translate(0, 0);
-    }
-
-    100% {
-      left: 100%;
-      transform: translate(-30%, 0);
-    }
+  0% {
+    transform: translate(0, 0);
+}
+100% {
+    transform: translate(calc(-100% + 190px), 0);
+}
 }
 
 
