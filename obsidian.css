@@ -1373,6 +1373,12 @@ settings:
     level: 3
     collapsed: true
   -
+    id: file-name-animation
+    title: File name animation
+    title.zh: 文件名自动滚动效果
+    type: class-toggle
+    default: false
+  -
     id: light-background-color-files
     title: Light File Background
     title.zh: 当前文件背景变浅
@@ -10384,6 +10390,33 @@ body.bt-status-off #scroll-controls {
   color: var(--white);
 }
 
+
+body.file-name-animation .nav-file-title-content:hover
+{
+ 
+  animation: filemove 2.5s 1 normal linear;
+}
+body.file-name-animation .nav-file-title-content
+{
+ 
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@keyframes filemove {
+    0% {
+      left: 0;
+        transform: translate(0, 0);
+    }
+
+    100% {
+      left: 100%;
+      transform: translate(-30%, 0);
+    }
+}
+
+
+
 body.light-background-color-files .nav-file-title.is-active {
   color: var(--accent-strong);
   background-color: var(--theme-color-translucent-1);
@@ -10971,6 +11004,7 @@ body.hide-vault-name .nav-folder.mod-root>.nav-folder-title {
 
 
 /* file explorer :Wrap long nav text and some paddings */
+
 .nav-file-title,
 .nav-folder-title {
   white-space: normal;
@@ -14905,7 +14939,6 @@ body.list-vertical-line-three .kanban-plugin__markdown-preview-view ol ol::befor
 }
 
 .markdown-preview-view .dataview.inline-field-standalone-value {
-  font-family: var(--font-family-major); 
   background-color:  transparent;
 }
 
