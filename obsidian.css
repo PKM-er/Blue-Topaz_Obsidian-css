@@ -1681,7 +1681,7 @@ settings:
     title.zh: 是否开启Admonition特别样式支持
     type: class-toggle
     default: false
-    description : 目前支持ad类型：blank 全透明框🔸def definition🔸thm theorem🔸lem lemma🔸cor corollary🔸pro proposition 🔸hibox  自动隐藏框🔸col2 col3 col4内容分多栏🔸kanban 伪看板🔸table 带滚动条不换行表格❗使用方法❗下面以thm类型为例，在admonition插件的设置页面中，类型填 thm，标题填 定理，图标选择hand-point-right，颜色自己选比如浅绿色，添加成功后，在正文中使用代码块```ad-thm 即可激活。其他类型以此类推。  
+    description : 目前支持ad类型：blank 全透明框🔸def definition🔸thm theorem🔸lem lemma🔸cor corollary🔸pro proposition 🔸hibox  自动隐藏框🔸col2 col3 col4内容分多栏🔸kanban 伪看板🔸table 表格单行全部显示❗使用方法❗下面以thm类型为例，在admonition插件的设置页面中，类型填 thm，标题填 定理，图标选择hand-point-right，颜色自己选比如浅绿色，添加成功后，在正文中使用代码块```ad-thm 即可激活。其他类型以此类推。  
   -
     id: style-options-for-calendar-plugin-header
     title: 3.2 Calendar
@@ -1814,20 +1814,13 @@ settings:
   - 
     id: no-wrapped-dvtable
     title: Nowrap in DataviewTables
-    title.zh: Dataview表格紧凑显示
+    title.zh: Dataview表格单行显示
     type: class-toggle
     default: false
-  -
-    id: overflow-x-dvtable
-    title:  Hides the X-axis scroll bar in DataviewTables
-    title.zh: 是否隐藏dv表格中的横向滚动条
-    type: class-toggle
-    default: false
-    description.zh: 如果开启表格内容过长用...省略
   -
     id: auto-serial-number-dvtable
     title: Automatically add serial numbers to tables
-    title.zh: 表格自动添加序号
+    title.zh: Dataview表格自动添加序号
     type: class-toggle
     default: false
   -
@@ -10114,57 +10107,83 @@ body.no-wrapped-table td:hover {
   text-overflow: clip;
 }
 /*modified from https://forum.obsidian.md/t/custom-css-for-tables-5-new-styles-ready-to-use-in-your-notes/17084 */
+
+
+/****dataview table***/
+
+
+table.table-view-table > thead > tr > th 
+{
+  font-size: 0.9em;
+}
+table.table-view-table > tbody > tr > td 
+{
+  font-size: 0.85em;
+}
+
+body:not(.no-wrapped-dvtable) .markdown-preview-view .table-view-table>thead>tr,
+body:not(.no-wrapped-dvtable) .markdown-preview-view .table-view-table>tbody>tr
+{
+  white-space: pre-wrap; 
+  word-break: break-word; 
+   overflow-wrap: anywhere; 
+}
+
+body.no-wrapped-dvtable .block-language-dataview
+{
+  width: 100%;
+  margin: 0;
+  overflow-x: auto; 
+  white-space: nowrap;
+}
 body.no-wrapped-dvtable table.dataview th {
   padding: 0px 20px;
   font-size: 1em;
 }
-body.no-wrapped-dvtable table.dataview thead tr th:first-child,
-body.no-wrapped-dvtable table.dataview tbody tr td:first-child {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-	max-width: 14em;
-	word-break: break-all;
-}
+
 body.no-wrapped-dvtable table.dataview tbody tr td:first-child {
   font-size: 0.9em;
 }
-body.no-wrapped-dvtable table.dataview th {
-  padding: 0px 20px;
-  font-size: 1em;
-  overflow-x: auto;
-}
+
 body.no-wrapped-dvtable table.dataview td:not(:first-child),
 body.no-wrapped-dvtable table.dataview tr > td:last-of-type { 
   font-size: 0.9em;
-	white-space: nowrap;
-	overflow-x: auto;
-  max-width: 17em;
-}
-body.overflow-x-dvtable table.dataview td,
-body.overflow-x-dvtable table.dataview th { 
-  text-overflow: ellipsis !important;
-  overflow: hidden  !important;
-  overflow-x: hidden  !important;
+  max-width: unset;
 }
 
 
-body.auto-serial-number-dvtable .markdown-preview-view:not(.cards) .dataview.table-view-table
+
+body.auto-serial-number-dvtable .markdown-source-view:not(.cards) .dataview.table-view-table 
+{
+  counter-reset: sec;
+}
+body.auto-serial-number-dvtable .markdown-source-view:not(.cards) .dataview.table-view-table> tbody > tr> td:first-child::before
+{
+  counter-increment: sec;
+  content:counter(sec) ". ";
+
+}
+
+body.auto-serial-number-dvtable .markdown-preview-view:not(.cards) .dataview.table-view-table 
 {
   counter-reset: section;
 }
-body.auto-serial-number-dvtable .markdown-preview-view:not(.cards) .dataview.table-view-table> tbody > tr> td:first-child::before{
+body.auto-serial-number-dvtable .markdown-preview-view:not(.cards) .dataview.table-view-table> tbody > tr> td:first-child::before
+{
   counter-increment: section;
   content:counter(section) ". ";
 
 }
-
 table.dataview ul.dataview-ul li {
   white-space: nowrap;
 }
 
-.markdown-preview-view .table-view-table>tbody>tr>td, 
-.markdown-source-view.mod-cm6 .table-view-table>tbody>tr>td {
+
+
+
+
+body:not(.no-wrapped-dvtable) .markdown-preview-view .table-view-table>tbody>tr>td, 
+body:not(.no-wrapped-dvtable) .markdown-source-view.mod-cm6 .table-view-table>tbody>tr>td {
   max-width: 18em;
 }
 
@@ -14786,6 +14805,7 @@ h5.breadcrumbs-matrix-header {
 /* ================================== */
 /* ============ Dataview ============ */
 /* ================================== */
+
 ul.dataview.list-view-ul>li:not(.task-list-item) {
   border-left: none !important;
   margin-left: -1em;
@@ -14800,6 +14820,8 @@ ul.dataview.list-view-ul>li:not(.task-list-item)::before {
   font-size: 0.8em;
   padding: 0 5px 0 0;
 }
+
+  
 
 body.dataview-list-style-pacman ul.dataview.list-view-ul>li:not(.task-list-item):first-of-type::before {
   content: '\edcf';
