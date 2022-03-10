@@ -15763,27 +15763,45 @@ div[data-type='memos_view'] .tags-wrapper > .title-text,
   color: var(--text-normal) !important;
   opacity: 0.7 !important;
 }
-
+.mod-left-split div[data-type="memos_view"] #page-wrapper,
 .mod-right-split div[data-type="memos_view"] #page-wrapper {
   padding-left: 8px;
   padding-right: 8px;
   transform: translateX(0);
 }
-
+.mod-left-split div[data-type="memos_view"] #page-wrapper  textarea,
 .mod-right-split div[data-type="memos_view"] #page-wrapper  textarea{
 padding: 0;
 max-height: calc(28vh);
 }
-
+.mod-left-split  div[data-type="memos_view"] #page-wrapper > .content-wrapper-padding-fix,
 .mod-right-split  div[data-type="memos_view"] #page-wrapper > .content-wrapper-padding-fix {
 width: 100%;
   padding: 0;
 }
-
+.mod-left-split  div[data-type="memos_view"]  .view-content,
 .mod-right-split  div[data-type="memos_view"]  .view-content {
   padding:0;
 }
-
+.mod-left-split  div[data-type="memos_view"]  .view-content .title-text span,
+.mod-right-split  div[data-type="memos_view"]  .view-content  .title-text span {
+  font-size: var(--editor-font-size);
+}
+.mod-left-split  div[data-type="memos_view"] .memo-editor-wrapper, div[data-type="memos_view"] .search-bar-container > .search-bar-inputer,
+.mod-right-split  div[data-type="memos_view"] .memo-editor-wrapper, div[data-type="memos_view"] .search-bar-container > .search-bar-inputer {
+  border: 0 !important;
+}
+.mod-left-split div[data-type="memos_view"] .memo-editor-wrapper, div[data-type="memos_view"] .search-bar-container > .search-bar-inputer input,
+.mod-right-split div[data-type="memos_view"] .memo-editor-wrapper, div[data-type="memos_view"] .search-bar-container > .search-bar-inputer input
+  { 
+      border: none;
+      border-bottom: 1px solid #ccc;
+}
+div.mod-right-split  div[data-type='memos_view'] .search-bar-container > .quickly-action-wrapper,
+div.mod-left-split  div[data-type='memos_view'] .search-bar-container > .quickly-action-wrapper
+{
+width:100%;
+}
 
 /* ============ */
 /*image position*/
@@ -16100,7 +16118,9 @@ body.style-options-for-buttons-plugin button.blank:hover {
 }
 body.style-options-for-buttons-plugin .admonition-content button.grad_button{
   margin-top: 0px;
-  margin-bottom: -10px;
+}
+body.style-options-for-buttons-plugin .admonition-content span>button.grad_button{
+  margin:3px;
 }
 body.style-options-for-buttons-plugin button.grad_button{
   margin:5PX;
@@ -16109,7 +16129,7 @@ body.style-options-for-buttons-plugin button.grad_button{
   justify-content: center;
   align-items: center;
   min-width: 90px;
-  padding: 0 28px;
+  padding: 0 18px;
   height: 38px;
   font-size: 16px;
   color: #fff;
