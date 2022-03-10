@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.13.28。uid [20220308] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.13.28, uid [20220308] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.13.32。uid [20220310] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.13.32, uid [20220310] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -4144,7 +4144,7 @@ body.color-scheme-options-topaz-nord.theme-light {
 
   --checkbox-color-0: var(--interactive-accent);
 
-  --graph-text-color: var(--nord4);
+  --graph-text-color: var(--nord1);
   --graphtag: var(--nord7);
   --graph-attach: var(--nord15);
   --graph-circle: var(--nord9);
@@ -19145,7 +19145,7 @@ body.loading-animation .progress-bar-message {
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220308";
+  content: "uid:20220310";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
