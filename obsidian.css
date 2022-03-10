@@ -10180,9 +10180,6 @@ body.auto-serial-number-dvtable .markdown-preview-view:not(.cards) .dataview.tab
   content:counter(section) ". ";
 
 }
-table.dataview ul.dataview-ul li {
-  white-space: nowrap;
-}
 
 
 
@@ -10390,18 +10387,48 @@ body.bt-status-off #scroll-controls {
   color: var(--white);
 }
 
+/** file name**/
 
-body.file-name-animation .nav-file-title-content:hover
+body.file-name-animation .nav-file-title-content:not(.is-being-renamed):hover
 {
   animation: filemove 1.5s 1 normal linear;
 }
 
-body.file-name-animation .nav-file-title-content
+body.file-name-animation .nav-file-title-content:not(.is-being-renamed)
 {
-  min-width: 190px;
+  min-width: 200px;
+  white-space: nowrap;
+}
+body.file-name-animation .nav-file
+{
+  display: inline-block;
+}
+/** file folder name**/
+body.file-name-animation .obsidian-icon-folder-icon
+{
+  vertical-align: middle;
+  display: inline;
+}
+
+body.file-name-animation .nav-folder-title
+{
   display: inline-block;
   white-space: nowrap;
+}
 
+.nav-folder-title-content.is-being-renamed
+{
+  white-space: break-spaces;
+}
+
+body.file-name-animation .nav-folder-title-content:not(.is-being-renamed)
+{
+  min-width: 200px;
+  white-space: nowrap;
+}
+body.file-name-animation .nav-folder-title-content:not(.is-being-renamed):hover
+{
+  animation: filemove 1.5s 1 normal linear;
 }
 
 @keyframes filemove {
@@ -10409,7 +10436,7 @@ body.file-name-animation .nav-file-title-content
     transform: translate(0, 0);
 }
 100% {
-    transform: translate(calc(-100% + 190px), 0);
+    transform: translate(calc(-100% + 200px), 0);
 }
 }
 
@@ -14879,7 +14906,7 @@ body.dataview-list-style-pacman ul.dataview.list-view-ul {
 ul.dataview.dataview-ul.dataview-result-list-root-ul>li.dataview-result-list-li {
   border-left: none !important;
   margin: 0;
-  padding-left: 1em;
+  padding-left: 0em;
 }
 /*
 ul.dataview.dataview-ul.dataview-result-list-root-ul>li.dataview-result-list-li::before {
