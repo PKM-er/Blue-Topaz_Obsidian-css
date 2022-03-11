@@ -9510,18 +9510,6 @@ body.rainbow-lines .kanban ol ul::before {
   display: none;
 }
 
-body.rainbow-lines ul.contains-task-list ul::before,
-body.rainbow-lines ol.contains-task-list ul::before,
-body.rainbow-lines ul.contains-task-list ol::before,
-body.rainbow-lines ol.contains-task-list ol::before {
-  content: ' ';
-  border-left: 1.5px solid var(--background-modifier-border);
-  position: absolute;
-  left: -0.9em;
-  top: 1px;
-  height: 100%;
-}
-
 body.rainbow-lines li>p:not(.task-list-item) {
   margin-top: 0;
   margin-bottom: 0;
