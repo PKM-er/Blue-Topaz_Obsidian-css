@@ -9011,7 +9011,9 @@ body.list-bracket-left-two ol>li::before {
   display: inline-block;
   white-space: pre;
 }
-
+body.list-bracket-left-two ul>li:not(.task-list-item)>p {
+  display:inline
+}
 body.list-bracket-left-two ul>li:not(.task-list-item) {
   list-style-position: inside;
 }
