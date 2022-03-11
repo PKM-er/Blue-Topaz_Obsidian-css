@@ -824,37 +824,37 @@ settings:
     title: Header 1
     title.zh: 标题 1
     type: variable-text
-    default: 1.5625em
+    default: 1.5625rem
   -
     id: h2
     title: Header 2
     title.zh: 标题 2
     type: variable-text
-    default: 1.4375em
+    default: 1.4375rem
   -
     id: h3
     title: Header 3
     title.zh: 标题 3
     type: variable-text
-    default: 1.3125em
+    default: 1.3125rem
   -
     id: h4
     title: Header 4
     title.zh: 标题 4
     type: variable-text
-    default: 1.1875em
+    default: 1.1875rem
   -
     id: h5
     title: Header 5
     title.zh: 标题 5
     type: variable-text
-    default: 1.0625em
+    default: 1.0625rem
   -
     id: h6
     title: Header 6
     title.zh: 标题 6
     type: variable-text
-    default: 0.9375em
+    default: 0.9375rem
   -
     id: headering-settings
     title: 2.2.3 Headering
