@@ -8762,7 +8762,7 @@ div.math.math-block mjx-math {
 :not(pre)>code:not([class*='language-']) {
   font-weight: 600;
   padding: 2px 3px 1px;
-  font-family: var(--font-family-preview-edit-code) !important;
+  font-family: var(--font-family-inline-code) !important;
 }
 
 .cm-s-obsidian span.cm-inline-code {
@@ -8817,6 +8817,10 @@ li.task-list-item>p {
   margin-bottom: 0.25em;
 }
 
+ul > li.task-list-item {
+  text-indent: 0em;
+}
+
 ul,
 ol ul,
 ol ol ul,
@@ -8844,28 +8848,25 @@ ul ul ul ol ul {
 }
 
 .markdown-source-view.mod-cm6 .list-bullet {
-  padding-right: 4px;
+  padding-right: 0;
 }
 .markdown-source-view.mod-cm6 .list-bullet:after {
   content: none;
-  }
+}
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
-.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after
-{
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
   content: '\25E6';
   left: -1px;
   font-family: 'Inter';
 }
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line div.cm-fold-indicator + span.cm-formatting .list-bullet::after,
-.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line>span.cm-formatting:first-of-type .list-bullet::after
-{
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line>span.cm-formatting:first-of-type .list-bullet::after {
   content: '\2022';
   left: -2px;
   font-family: 'Inter';
 }
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line div.cm-fold-indicator + span.cm-formatting .list-bullet::after,
-.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line span.cm-hmd-list-indent + span.cm-formatting .list-bullet::after
-{
+.markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line span.cm-hmd-list-indent + span.cm-formatting .list-bullet::after {
   content: '\25E6';
   left: -1px;
   font-family: 'Inter';
@@ -8878,7 +8879,7 @@ ul ul ul ol ul {
 }
 
 .markdown-preview-view ul>li:not(.task-list-item)::marker {
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 ul {
@@ -9303,7 +9304,7 @@ body.list-vertical-line-three:not(.default-icons) .markdown-preview-view ol li.i
 
 body:not(.list-no-border):not(.rainbow-lines) .mod-cm6  .HyperMD-list-line.HyperMD-list-line-1.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before {
   content: none;
-  }
+}
 body:not(.list-no-border):not(.rainbow-lines) .mod-cm6 .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before {
   content: '';
   font-family: var(--rb-indent-font-family) !important;
@@ -13066,7 +13067,11 @@ pre.frontmatter.language-yaml::before {
 /* ================================== */
 /* ============= kanban ============= */
 /* ================================== */
-/*body:not(.style-options-for-kanban-plugin-static-default)*/ .workspace-leaf .kanban-plugin__lane {
+.kanban-plugin__markdown-preview-view {
+  font-family: var(--font-family-major) !important;
+}
+/*body:not(.style-options-for-kanban-plugin-static-default)*/ 
+.workspace-leaf .kanban-plugin__lane {
   border-radius: 8px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
 }
@@ -13166,9 +13171,8 @@ button.kanban-plugin__new-item-button:hover {
 .kanban-plugin__markdown-preview-view ol.contains-task-list .contains-task-list, .kanban-plugin__markdown-preview-view ul.contains-task-list .contains-task-list, .kanban-plugin__markdown-preview-view ul, .kanban-plugin__markdown-preview-view ol {
   /* padding-inline-start: 19px; */
 }
-.kanban-plugin__markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item) ,
-.kanban-plugin__markdown-preview-view:not(.kanban) ul>li:not(.task-list-item)
-{
+.kanban-plugin__markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item),
+.kanban-plugin__markdown-preview-view:not(.kanban) ul>li:not(.task-list-item) {
   margin-left: unset;
   padding-left: unset;
   margin-bottom: unset; 
@@ -13438,19 +13442,19 @@ body.style-options-for-kanban-plugin-static-little-color  .kanban-plugin__lane-w
 body.style-options-for-kanban-plugin-static-little-color .kanban-plugin__lane-wrapper:nth-child(7n+1) .kanban-plugin__lane-header-wrapper {
   background-color: var(--kanban-color-1) !important;
 }
-body.style-options-for-kanban-plugin-static-little-color .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-header-wrapper  {
+body.style-options-for-kanban-plugin-static-little-color .kanban-plugin__lane-wrapper:nth-child(7n+2) .kanban-plugin__lane-header-wrapper {
   background-color: var(--kanban-color-2) !important;
 }
-body.style-options-for-kanban-plugin-static-little-color .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-header-wrapper  {
+body.style-options-for-kanban-plugin-static-little-color .kanban-plugin__lane-wrapper:nth-child(7n+3) .kanban-plugin__lane-header-wrapper {
   background-color: var(--kanban-color-3) !important;
 }
 body.style-options-for-kanban-plugin-static-little-color .kanban-plugin__lane-wrapper:nth-child(7n+4) .kanban-plugin__lane-header-wrapper {
   background-color: var(--kanban-color-4) !important;
 }
-body.style-options-for-kanban-plugin-static-little-color .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-header-wrapper  {
+body.style-options-for-kanban-plugin-static-little-color .kanban-plugin__lane-wrapper:nth-child(7n+5) .kanban-plugin__lane-header-wrapper {
   background-color: var(--kanban-color-5) !important;
 }
-body.style-options-for-kanban-plugin-static-little-color .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-header-wrapper  {
+body.style-options-for-kanban-plugin-static-little-color .kanban-plugin__lane-wrapper:nth-child(7n+6) .kanban-plugin__lane-header-wrapper {
   background-color: var(--kanban-color-6) !important;
 }
 body.style-options-for-kanban-plugin-static-little-color .kanban-plugin__lane-wrapper:nth-child(7n) .kanban-plugin__lane-header-wrapper  {
