@@ -2,6 +2,8 @@
 感谢@cumany制作的升级版示例库 https://github.com/cumany/Blue-topaz-examples
 
 # 更新日志
+### 20220311
+修复伪看板跟floating-toc插件冲突
 ### 20220310
 1. 文件夹列表单行显示，增加文件名滚动效果 （2.3.3）
 2. 修复dataview  table多行结果溢出

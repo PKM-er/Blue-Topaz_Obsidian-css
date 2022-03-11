@@ -6682,7 +6682,7 @@ body.color-scheme-options-lilac.theme-light #calendar-container {
 /* cssclass: kanban */
 /* adapted from spectrum theme, thanks to @Braweria. https://github.com/Braweria/Spectrum */
 /* a kind of css-based pseudo-kanban feature */
-.kanban ul {
+.kanban ul:not(.floating-toc) {
   display: flex;
   flex-direction: row;
   border: 0px solid var(--p-kanban-border-color);
@@ -6691,7 +6691,7 @@ body.color-scheme-options-lilac.theme-light #calendar-container {
   flex-wrap: wrap;
 }
 
-.kanban ul>li:not(.task-list-item) {
+.kanban ul:not(.floating-toc)>li:not(.task-list-item) {
   flex: 1 1 20%;
   padding: 0.1em 1em 0.1em 0.8em;
   margin: 0 0.1em 0.3em 0  !important;
@@ -6703,50 +6703,50 @@ body.color-scheme-options-lilac.theme-light #calendar-container {
   word-break: break-word;
 }
 
-.kanban ul .list-collapse-indicator.collapse-indicator.collapse-icon {
+.kanban ul:not(.floating-toc) .list-collapse-indicator.collapse-indicator.collapse-icon {
   margin-left: -1.2em;
   position: absolute;
 }
 
-.kanban ul .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+.kanban ul:not(.floating-toc) .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   color: var(--text-accent);
   transition: transform 10ms linear 0s
 }
 
-.kanban ul>li:nth-of-type(8n+1) {
+.kanban ul:not(.floating-toc)>li:nth-of-type(8n+1) {
   background-color: var(--p-kanban-color-1);
   padding-left: 1em;
 }
-.kanban ul>li:nth-of-type(8n+2) {
+.kanban ul:not(.floating-toc)>li:nth-of-type(8n+2) {
   background-color: var(--p-kanban-color-2);
   padding-left: 1em;
 }
-.kanban ul>li:nth-of-type(8n+3) {
+.kanban ul:not(.floating-toc)>li:nth-of-type(8n+3) {
   background-color: var(--p-kanban-color-3);
   padding-left: 1em;
 }
-.kanban ul>li:nth-of-type(8n+4) {
+.kanban ul:not(.floating-toc)>li:nth-of-type(8n+4) {
   background-color: var(--p-kanban-color-4);
   padding-left: 1em;
 }
-.kanban ul>li:nth-of-type(8n+5) {
+.kanban ul:not(.floating-toc)>li:nth-of-type(8n+5) {
   background-color: var(--p-kanban-color-5);
   padding-left: 1em;
 }
-.kanban ul>li:nth-of-type(8n+6) {
+.kanban ul:not(.floating-toc)>li:nth-of-type(8n+6) {
   background-color: var(--p-kanban-color-6);
   padding-left: 1em;
 }
-.kanban ul>li:nth-of-type(8n+7) {
+.kanban ul:not(.floating-toc)>li:nth-of-type(8n+7) {
   background-color: var(--p-kanban-color-7);
   padding-left: 1em;
 }
-.kanban ul>li:nth-of-type(8n) {
+.kanban ul:not(.floating-toc)>li:nth-of-type(8n) {
   background-color: var(--p-kanban-color-8);
   padding-left: 1em;
 }
 
-.kanban ul ul {
+.kanban ul:not(.floating-toc) ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6757,40 +6757,40 @@ body.color-scheme-options-lilac.theme-light #calendar-container {
   background: none;
 }
 
-.kanban ul ul li:not(.task-list-item) {
+.kanban ul:not(.floating-toc) ul li:not(.task-list-item) {
   width: 100%;
   display: block;
   background-color: var(--p-kanban-card-color-1) !important;
 }
 
-.kanban ul ul li:nth-child(even) {
+.kanban ul:not(.floating-toc) ul li:nth-child(even) {
   background-color: var(--p-kanban-card-color-2) !important;
 }
 
-.kanban ul>li:hover {
+.kanban ul:not(.floating-toc)>li:hover {
   border-color: var(--p-kanban-border-color) !important;
 }
 
-.kanban ul ul li:hover {
+.kanban ul:not(.floating-toc) ul li:hover {
   background: transparent !important;
   border-color: var(--p-kanban-border-color) !important;
   border-left: 1px solid var(--p-kanban-border-color) !important;
 }
 
-.theme-dark .kanban ul ul li:hover {
+.theme-dark .kanban ul:not(.floating-toc) ul li:hover {
   border-color: #696969e1 !important;
   border-left: 1px solid #696969e1 !important;
 }
 
-.kanban ul ul li .task-list-item-checkbox {
+.kanban ul:not(.floating-toc) ul li .task-list-item-checkbox {
   margin-left: 1.5rem;
 }
 
-.kanban ul ul ul {
+.kanban ul:not(.floating-toc) ul ul {
   margin-right: 0;
 }
 
-.kanban ul ul::before {
+.kanban ul:not(.floating-toc) ul::before {
   border-left: 0;
 }
 
@@ -6798,21 +6798,21 @@ body.color-scheme-options-lilac.theme-light #calendar-container {
   max-width: 100%;
 }
 
-.kanban ul.contains-task-list ul,
+.kanban ul:not(.floating-toc).contains-task-list ul,
 .kanban ol.contains-task-list ul,
-.kanban ul.contains-task-list ol,
+.kanban ul:not(.floating-toc).contains-task-list ol,
 .kanban ol.contains-task-list ol {
   position: initial;
 }
 
-.kanban ul.contains-task-list ul::before,
+.kanban ul:not(.floating-toc).contains-task-list ul::before,
 .kanban ol.contains-task-list ul::before,
-.kanban ul.contains-task-list ol::before,
+.kanban ul:not(.floating-toc).contains-task-list ol::before,
 .kanban ol.contains-task-list ol::before {
   all: initial
 }
 
-.kanban ul > li.task-list-item {
+.kanban ul:not(.floating-toc) > li.task-list-item {
   flex: 1 1 20%;
   padding: 0.1em 1em;
   margin: 0 0.1em 0.3em 0;
@@ -6825,7 +6825,7 @@ body.color-scheme-options-lilac.theme-light #calendar-container {
   text-indent: 0;
 }
 
-.kanban ul ul li.task-list-item {
+.kanban ul:not(.floating-toc) ul li.task-list-item {
   width: 100%;
   display: block;
   padding-left: 2em;
