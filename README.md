@@ -41,6 +41,9 @@
 2. 显示图片标题的居中格式![[xxx.png#centre|figure]]，现在在live preview下正确居中显示了
 3. 其他一些细节问题
 
+### 20220226
+1. 增加左侧边栏（ribbon）隐藏选项（style settings中设置，默认关闭）
+2. 增加表格样式选项（style settings中）
 
 # Blue-Topaz_Obsidian-css
 
