@@ -8817,8 +8817,9 @@ li.task-list-item>p {
   margin-bottom: 0.25em;
 }
 
+ul > li.task-list-item > *,
 ul > li.task-list-item {
-  text-indent: 0em;
+  text-indent: -1.1em;
 }
 
 ul,
@@ -9059,7 +9060,7 @@ body.list-vertical-line-one ol.contains-task-list ol::before {
   content: ' ';
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;
-  left: -0.9em;
+  left: -1rem;
   top: 1px;
   height: 100%;
 }
@@ -9130,7 +9131,7 @@ body.list-vertical-line-two ol.contains-task-list ol::before {
   content: ' ';
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;
-  left: -1.2em;
+  left: -1.1em;
   top: 0px;
   height: 100%;
 }
@@ -9187,6 +9188,10 @@ body.list-no-border .cm-hmd-list-indent .cm-tab::before {
 }
 
 /*list-vertical-line-three*/
+body.list-vertical-line-three ol {
+  padding-inline-start: 13px;
+}
+
 body.list-vertical-line-three ol,
 body.list-vertical-line-three ol ol,
 body.list-vertical-line-three ol ol ol,
@@ -9221,7 +9226,14 @@ body.list-vertical-line-three ol ol {
 }
 
 body.list-vertical-line-three ul ul::before,
-body.list-vertical-line-three ol ul::before,
+body.list-vertical-line-three ol ul::before {
+  content: '';
+  border-left: 2px solid var(--background-modifier-border);
+  position: absolute;
+  left: -1.1em;
+  top: 0px;
+  bottom: 0px;
+}
 body.list-vertical-line-three ul ol::before,
 body.list-vertical-line-three ol ol::before {
   content: '';
@@ -9243,15 +9255,19 @@ body.list-vertical-line-three .kanban ol.contains-task-list ol::before {
 }
 
 body.list-vertical-line-three ul.contains-task-list ul::before,
-body.list-vertical-line-three ol.contains-task-list ul::before,
-body.list-vertical-line-three ul.contains-task-list ol::before,
-body.list-vertical-line-three ol.contains-task-list ol::before {
+body.list-vertical-line-three ul.contains-task-list ol::before {
   content: ' ';
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;
   left: -1.2em;
   top: 1px;
   height: 100%;
+}
+body.list-vertical-line-three ol.contains-task-list ul::before,
+body.list-vertical-line-three ol.contains-task-list ol::before {
+  left: 0em;
+  top: 0px;
+  bottom: 0px;
 }
 
 body.list-vertical-line-three.is-mobile ul.contains-task-list ul::before,
@@ -9272,17 +9288,6 @@ body.list-vertical-line-three ul>li:not(.task-list-item) {
 
 body.list-vertical-line-three ol>li {
   border-left: none !important;
-}
-
-body.list-vertical-line-three ul>li:not(.task-list-item) {
-  list-style-position: inside;
-}
-
-body.list-vertical-line-three ol.contains-task-list ul::before,
-body.list-vertical-line-three ol.contains-task-list ol::before {
-  left: 0.5em;
-  top: 0px;
-  bottom: 0px;
 }
 
 body.list-vertical-line-three:not(.default-icons) .markdown-preview-view ul:not(.contains-task-list) .list-collapse-indicator.collapse-indicator.collapse-icon::before,
