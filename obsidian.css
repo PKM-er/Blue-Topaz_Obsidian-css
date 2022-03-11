@@ -9857,7 +9857,7 @@ b,
 span.cm-strong,
 :not(font)>strong,
 .cm-s-obsidian .cm-highlight.cm-strong {
-  color: var(--accent-strong);
+  color: var(--accent-strong) !important;
   font-family: var(--font-family-strong) !important;
 }
 
