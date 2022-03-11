@@ -7465,7 +7465,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-quote {
   /*border-radius: var(--radius-s-border);*/
 }
 
-.cm-quote:not([class*="link"]):not([class*="string"]):not([class*="em"]) {
+.cm-quote:not([class*="link"]):not([class*="string"]):not([class*="em"]):not([class*="strong"]) {
   color: var(--text-normal);
 }
 
