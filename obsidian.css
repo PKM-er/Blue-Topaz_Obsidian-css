@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.13.32。uid [20220310] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.13.32, uid [20220310] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.13.33。uid [20220311] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.13.33, uid [20220311] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -8809,8 +8809,12 @@ li {
 }
 
 li>p:not(.task-list-item) {
-  margin-top: 0.3125em;
-  margin-bottom: 0.3125em;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+li.task-list-item>p {
+  margin-bottom: 0.25em;
 }
 
 ul,
@@ -8931,10 +8935,12 @@ body:not(.list-vertical-line-one):not(.list-vertical-line-two):not(.list-vertica
   margin-top: 0.2em;
 }
 
+/*
 .markdown-preview-view ol>li,
 .markdown-preview-view:not(.kanban) ul>li {
   padding-top: 0.2em;
 }
+*/
 
 .markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item) {
   border-left: 0.125em solid var(--list-ol-block-color);
@@ -19192,7 +19198,7 @@ body.loading-animation .progress-bar-message {
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220310";
+  content: "uid:20220311";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
