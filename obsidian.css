@@ -8400,6 +8400,24 @@ body.h6-toggle-underline .markdown-source-view.is-live-preview .HyperMD-header.H
   font-family: var(--font-family-h6);
   color: var(--h6-color);
 }
+.markdown-source-view.mod-cm5 .HyperMD-header-1 {
+  font-size: var(--h1) !important;
+}
+.markdown-source-view.mod-cm5 .HyperMD-header-2 {
+  font-size: var(--h2) !important;
+}
+.markdown-source-view.mod-cm5 .HyperMD-header-3 {
+  font-size: var(--h3) !important;
+}
+.markdown-source-view.mod-cm5 .HyperMD-header-4 {
+  font-size: var(--h4) !important;
+}
+.markdown-source-view.mod-cm5 .HyperMD-header-5 {
+  font-size: var(--h5) !important;
+}
+.markdown-source-view.mod-cm5 .HyperMD-header-6 {
+  font-size: var(--h6) !important;
+}
 
 body.h1-text-align-center .HyperMD-header.HyperMD-header-1.cm-line,
 body.h2-text-align-center .HyperMD-header.HyperMD-header-2.cm-line,
