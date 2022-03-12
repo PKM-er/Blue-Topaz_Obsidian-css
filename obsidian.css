@@ -15686,7 +15686,7 @@ body:not(.outliner-plugin-bls).markdown-source-view.mod-cm5 .cm-hmd-list-indent 
 .outliner-plugin-bls .cm-hmd-list-indent .cm-tab::before {
   display: none;
 }
-.outliner-plugin-bls .cm-s-obsidian:not(.is-live-preview) .cm-formatting-list-ul:before, 
+
 .outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
   display: none;
 }
