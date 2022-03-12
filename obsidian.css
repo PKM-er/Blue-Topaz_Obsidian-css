@@ -9331,7 +9331,7 @@ body.list-vertical-line-three:not(.default-icons) .markdown-preview-view ol .lis
 
 body.list-vertical-line-three:not(.default-icons) .markdown-preview-view ul:not(.contains-task-list) li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon,
 body.list-vertical-line-three:not(.default-icons) .markdown-preview-view ol li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon {
-  transform: translateX(0px) translateY(0px) rotate(-90deg);
+  transform: translateX(-2px) translateY(1px) rotate(-90deg);
   opacity: 0.5;
 }
 
@@ -10528,7 +10528,8 @@ body.link-underline a.external-link {
 }
 /*cm6 模式的下划线*/
 body.link-underline .markdown-source-view.mod-cm6 .cm-underline,
-a, .markdown-preview-view .internal-link {
+body.link-underline a, 
+body.link-underline .markdown-preview-view .internal-link {
   text-decoration: none !important;
 }
 
