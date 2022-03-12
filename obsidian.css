@@ -1243,6 +1243,15 @@ settings:
     type: variable-number
     default: 1.4
   -
+    id: margin-list
+    title: List Margin
+    title.zh: 列表项间距
+    type: variable-number-slider
+    default: 1
+    min: 0
+    max: 2
+    step: 0.1
+  -
     id: list-style-change-options
     title: List Style
     title.zh: 列表样式
@@ -2084,6 +2093,7 @@ settings:
   --line-height-list: 1.4;
   --letter-space-main: 1;
   --letter-space-code: 0;
+  --margin-list: 1;
 
   --line-width-readable: 45rem;
 
@@ -8949,9 +8959,10 @@ ol ul ol ol {
   transition: all 300ms ease-in-out;
 }
 
-body:not(.list-vertical-line-one):not(.list-vertical-line-two):not(.list-vertical-line-three):not(.list-no-border):not(.rainbow-lines-reading) .markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item),
-body:not(.list-vertical-line-one):not(.list-vertical-line-two):not(.list-vertical-line-three):not(.list-no-border):not(.rainbow-lines-reading) .markdown-preview-view:not(.kanban) ul>li:not(.task-list-item) {
-  margin-top: 0.2em;
+.markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item),
+.markdown-preview-view:not(.kanban) ul>li:not(.task-list-item) {
+  margin-top: calc(var(--margin-list) * 0.25em);
+  margin-bottom: calc(var(--margin-list) * 0.25em);
 }
 
 /*
@@ -9293,7 +9304,7 @@ body.list-vertical-line-three:not(.default-icons) .markdown-preview-view ul:not(
 body.list-vertical-line-three:not(.default-icons) .markdown-preview-view ol .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   content: "↓";
   font-size: 14px;
-  margin-left: 16px;
+  margin-left: 2px;
   font-weight: bold;
   font-family: 'Inter';
   color: var(--text-accent);
@@ -9302,7 +9313,7 @@ body.list-vertical-line-three:not(.default-icons) .markdown-preview-view ol .lis
 
 body.list-vertical-line-three:not(.default-icons) .markdown-preview-view ul:not(.contains-task-list) li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon,
 body.list-vertical-line-three:not(.default-icons) .markdown-preview-view ol li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon {
-  transform: translateX(5px) translateY(8px) rotate(-90deg);
+  transform: translateX(0px) translateY(0px) rotate(-90deg);
   opacity: 0.5;
 }
 
