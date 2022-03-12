@@ -2,6 +2,11 @@
 感谢@cumany制作的升级版示例库 https://github.com/cumany/Blue-topaz-examples
 
 # 更新日志
+### 20220312
+1. style settings “2.3.2 列表” 中增加“列表项间距”设置
+2. 列表样式优化
+3. 列表、标题样式部分问题修复
+
 ### 20220311
 1. 修复伪看板跟floating-toc插件冲突
 2. 列表（list）样式优化
