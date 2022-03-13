@@ -2,6 +2,10 @@
 感谢@cumany制作的升级版示例库 https://github.com/cumany/Blue-topaz-examples
 
 # 更新日志
+### 20220313
+1. 文件夹折叠箭头位置调整
+2. 修复某些情况下切换文件时出现的页面抖动
+
 ### 20220312
 1. style settings “2.3.2 列表” 中增加“列表项间距”设置
 2. 列表样式优化
