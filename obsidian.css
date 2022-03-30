@@ -1275,7 +1275,7 @@ settings:
         label: Vertical line 3 (1.1.1)
         value: list-vertical-line-three
       - 
-        label: Nothing
+        label: Using Ob Settings
         value: list-no-border
       - 
         label: Rainbow Outline
@@ -1286,16 +1286,13 @@ settings:
     title.zh: 编辑模式列表样式
     type: class-select
     allowEmpty: false
-    default: list-gray-line
+    default:  list-no-line-in-edit
     options:
-      - 
-        label: Gray Line
-        value: list-gray-line
       - 
         label: Rainbow Line
         value: rainbow-lines
       - 
-        label: Nothing
+        label: Using Ob Settings
         value: list-no-line-in-edit
   -
     id: rainbow-lines-head
@@ -1392,6 +1389,30 @@ settings:
             format: rgb-values
     default: '#cccecc'
   -
+    id: indentation-guides -lines-settings
+    title: 2.3.2.3 indentation guides Color setting
+    title.zh: 2.3.2.3 默认大纲线颜色设置
+    description: Settings for "Indentation guides" option
+    type: heading
+    level: 4
+    collapsed: true
+  - 
+        id: indentation-guide
+        title: Inactive indentation guide color
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-light: 'rgba(0, 0, 0, 0.06)'
+        default-dark: 'rgba(255, 255, 255, 0.08)'
+  - 
+        id: indentation-guide-active
+        title: Active indentation guide color
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-light: 'rgba(0, 0, 0, 0.14)'
+        default-dark: 'rgba(255, 255, 255, 0.17)'
+  -     
     id: folder-style-change-options-folder
     title: 2.3.3 Folder
     title.zh: 2.3.3 文件夹
@@ -7877,6 +7898,7 @@ span.obsidian-search-match-highlight {
 }
 
 .markdown-preview-view .task-list-item-checkbox {
+  float:left;
   top: 3px;
 }
 
@@ -8019,8 +8041,8 @@ span.cm-formatting-task.cm-property {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E") !important;
 }
 
-.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="x"]>input.task-list-item-checkbox:checked {
-  background-color: var(--checkbox-color-0) !important;
+body:not(.rainbow-checkbox) .markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="x"]>input.task-list-item-checkbox:checked {
+  background-color: var(--checkbox-color-0) ;
 }
 
 .markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="x"],
@@ -8043,7 +8065,7 @@ span.cm-formatting-task.cm-property {
   -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTAuNzA3IDE3LjcwNyAxNi40MTQgMTJsLTUuNzA3LTUuNzA3LTEuNDE0IDEuNDE0TDEzLjU4NiAxMmwtNC4yOTMgNC4yOTN6Ii8+PC9zdmc+) !important;
 }
 
-.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task=">"] input.task-list-item-checkbox,
+body:not(.rainbow-checkbox) .markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task=">"] input.task-list-item-checkbox,
 .markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task=">"] input.task-list-item-checkbox,
 .markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task=">"] {
   background-color: var(--checkbox-color-2) !important;
@@ -8873,10 +8895,10 @@ li.task-list-item>p {
   margin-bottom: 0.25em;
 }
 
-ul > li.task-list-item > *,
+/* ul > li.task-list-item > *,
 ul > li.task-list-item {
   text-indent: -1.1em;
-}
+} */
 
 ul,
 ol ul,
@@ -9025,6 +9047,13 @@ ol li {
   font-size: var(--font-size-list);
 }
 
+body.list-bracket-left-two .markdown-rendered.show-indentation-guide li:not(.task-list-item) > ul::before, 
+body.list-bracket-left-two .markdown-rendered.show-indentation-guide li:not(.task-list-item) > ol::before,
+body.list-bracket-left .markdown-rendered.show-indentation-guide li:not(.task-list-item)  > ul::before, 
+body.list-bracket-left .markdown-rendered.show-indentation-guide li:not(.task-list-item) > ol::before {
+border:none;
+}
+
 /*list-bracket-left-two*/
 body.list-bracket-left-two ol,
 body.list-bracket-left-two ol ol,
@@ -9035,6 +9064,7 @@ body.list-bracket-left-two ol ol ul ol,
 body.list-bracket-left-two ol ul ol ol {
   list-style: none;
 }
+
 
 body.list-bracket-left-two ol {
   counter-reset: niceBT;
@@ -9102,6 +9132,7 @@ body.list-vertical-line-one ul ol::before,
 body.list-vertical-line-one ol ol::before {
   content: '';
   border-left: 2px solid var(--background-modifier-border);
+  border-right: none!important;
   position: absolute;
   left: -0.9em;
   height: 100%;
@@ -9118,6 +9149,7 @@ body.list-vertical-line-one ul.contains-task-list ol::before,
 body.list-vertical-line-one ol.contains-task-list ol::before {
   content: ' ';
   border-left: 2px solid var(--background-modifier-border);
+  border-right: none;
   position: absolute;
   left: -1rem;
   top: 1px;
@@ -9161,6 +9193,7 @@ body.list-vertical-line-two ul ol::before,
 body.list-vertical-line-two ol ol::before {
   content: '';
   border-left: 2px solid var(--background-modifier-border);
+  border-right:none!important;
   position: absolute;
   left: -0.9em;
   height: 100%;
@@ -9269,24 +9302,28 @@ body.list-vertical-line-three ol ol {
   position: relative;
 }
 
-body.list-vertical-line-three ul ul::before,
+body.list-vertical-line-three  ul ul::before,
 body.list-vertical-line-three ol ul::before {
   content: '';
   border-left: 2px solid var(--background-modifier-border);
+  border-right:none!important;
   position: absolute;
   left: -1.1em;
   top: 0px;
   bottom: 0px;
 }
-body.list-vertical-line-three ul ol::before,
-body.list-vertical-line-three ol ol::before {
+body.list-vertical-line-three  ul ol::before,
+body.list-vertical-line-three   ol ol::before {
   content: '';
   border-left: 2px solid var(--background-modifier-border);
+  border-right:none!important;
   position: absolute;
-  left: 0.1em;
-  top: 0px;
-  bottom: 0px;
+  left: 0.1em!important;
+  top: 0px!important;
+  bottom: 0px!important;
 }
+
+
 
 body.list-vertical-line-three .kanban ul ul::before,
 body.list-vertical-line-three .kanban ol ul::before {
@@ -9349,6 +9386,8 @@ body.list-vertical-line-three:not(.default-icons) .markdown-preview-view ol li.i
 body:not(.list-no-line-in-edit):not(.rainbow-lines) .mod-cm6  .HyperMD-list-line.HyperMD-list-line-1.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before {
   content: none;
 }
+
+
 body:not(.list-no-line-in-edit):not(.rainbow-lines) .mod-cm6 .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before {
   content: '';
   font-family: var(--rb-indent-font-family) !important;
@@ -9432,6 +9471,11 @@ body:not(.list-no-line-in-edit) .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list
       --rb-color-count: 8;
       --rb-indent-bg-size: calc(var(--rb-color-count) * var(--rb-indent-width)) 1px;
 }
+
+body.rainbow-lines .mod-cm6 .HyperMD-list-line .cm-hmd-list-indent .cm-indent::before {
+  content: none;
+}
+
 body.rainbow-lines .mod-cm6 .cm-hmd-list-indent .cm-tab::before {
   display: none;
 }
@@ -9445,10 +9489,10 @@ body.rainbow-lines .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list-indent {
   font-size: var(--rb-indent-font-size) !important;
 }
 
-body.rainbow-lines .mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before {
+body.rainbow-lines .mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before { 
   content: none;
 }
-body.rainbow-lines .mod-cm6 .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before {
+body.rainbow-lines .mod-cm6 .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"])  .cm-hmd-list-indent::before {
   content: '';
   font-family: var(--rb-indent-font-family) !important;
   font-size: var(--rb-indent-font-size) !important;
@@ -9480,6 +9524,7 @@ body.rainbow-lines .mod-cm6 .HyperMD-list-line.cm-line:not([class*="quote"]):not
   background-size: var(--rb-indent-bg-size);
   left: var(--rb-left-offset);
 }
+
 body:not(.list-no-line-in-edit):not(.rainbow-lines) .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 2"] .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before,
 body.rainbow-lines .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 2"] .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before {
   --indent-use-default: 0.92ch;
@@ -9538,7 +9583,7 @@ body.rainbow-lines-reading ol ul::before,
 body.rainbow-lines-reading ul ol::before,
 body.rainbow-lines-reading ol ol::before {
   content: '';
-  border-left: 1.5px solid var(--background-modifier-border);
+  border-right: 1.5px solid var(--background-modifier-border);
   position: absolute;
   left: -1.1em;
   height: 100%;
@@ -9732,7 +9777,35 @@ body.rainbow-lines .CodeMirror-foldgutter-open.CodeMirror-guttermarker-subtle::a
 }
  
 /*预览模式*/ 
-/*无序列表*/
+/*无序列表 任务框*/
+
+body.rainbow-lines-reading ul li .task-list-item-checkbox {
+  border-color: rgba(var(--accent-1-rgb),0.7) ;
+ }
+ body.rainbow-lines-reading ul ul li .task-list-item-checkbox {
+  border-color: rgba(var(--accent-2-rgb),0.7) ;
+ }
+ body.rainbow-lines-reading ul ul ul li .task-list-item-checkbox {
+  border-color: rgba(var(--accent-3-rgb),0.7) ;
+ }
+ body.rainbow-lines-reading ul ul ul ul li .task-list-item-checkbox {
+  border-color: rgba(var(--accent-4-rgb),0.7) ;
+ }
+ body.rainbow-lines-reading ul ul ul ul ul  li .task-list-item-checkbox {
+  border-color: rgba(var(--accent-5-rgb),0.7) ;
+ }
+ body.rainbow-lines-reading ul ul ul ul ul ul li .task-list-item-checkbox {
+  border-color: rgba(var(--accent-6-rgb),0.7) ;
+ }
+ body.rainbow-lines-reading ul ul ul ul ul ul ul li .task-list-item-checkbox {
+  border-color: rgba(var(--accent-7-rgb),0.7) ;
+ }
+ body.rainbow-lines-reading ul ul ul ul ul ul ul ul li .task-list-item-checkbox {
+  border-color: rgba(var(--accent-7-rgb),0.7) ;
+ }
+
+/*无序列表 大纲线*/
+
 body.rainbow-lines-reading ul ul::before {
  border-color: rgba(var(--accent-1-rgb),0.7) !important;
 }
@@ -9761,7 +9834,7 @@ body.rainbow-lines-reading li ul ul ul ul ul ul ul ul ul::before {
   border-color: rgba(var(--accent-1-rgb),0.7) !important;
 }
 
-/*任务列表*/
+/*任务有序列表*/
 body.rainbow-lines-reading ol ol::before {
   border-color: rgba(var(--accent-1-rgb),0.7) !important;
 }
@@ -14316,9 +14389,7 @@ body.style-options-for-admonition-plugin .admonition-kanban ul ul li.task-list-i
   background-color: var(--p-kanban-card-color-1) !important;
 }
 
-body.style-options-for-admonition-plugin .admonition-kanban .task-list-item-checkbox {
-  border-color: var(--text-normal) !important;
-}
+
 
 /*blank ad分栏
 修改自 https://forum-zh.obsidian.md/t/topic/2081 */
@@ -14358,6 +14429,11 @@ body.style-options-for-admonition-plugin .admonition-kanban .admonition-col2>.ad
   margin:0;
   break-inside: avoid;
 }
+
+.admonition ul > li.task-list-item .task-list-item-checkbox {
+  margin-left: auto;
+}
+
 body.style-options-for-admonition-plugin .admonition-col2 .admonition-content {	
   overflow: visible ;
 }
@@ -15854,6 +15930,7 @@ body:not(.image-zoom) .view-content img[alt$="Right"]:not([class="emoji"]),
 body:not(.image-zoom) .view-content img[alt$="RIGHT"]:not([class="emoji"]),
 body:not(.image-zoom) .view-content img[alt$="R"]:not([class="emoji"]) {
   margin-right: 0 !important;
+  display: block;
 }
 
 img[alt$="inline"],
@@ -15911,7 +15988,7 @@ img[alt$="inlR"] {
   position: relative;
   float: left;
   margin-top: 0.5rem;
-  margin-right: 1rem;
+  margin-right: 2rem;
   margin-bottom: 0.5rem;
   clear: both;
   display: table;
@@ -18796,7 +18873,15 @@ body.layout-style-options-rectangle .workspace-split.mod-right-split>.workspace-
 body.layout-style-options-rectangle .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle:hover {
   height: 100%;
 }
+body.layout-style-options-rectangle  [aria-label] svg
+{ 
+width: 14px;
+height: 14px;
+}
 
+body.layout-style-options-rectangle .side-dock-ribbon-action {
+    padding: 1px 0 1px 0;
+}
 /*-------- Eisenhower Matrix start--- */
 /* Eisenhower Matrix from Spectrum themes */
 /* 
