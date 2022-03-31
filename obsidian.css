@@ -1721,8 +1721,8 @@ settings:
     collapsed: true
   -
     id: admonition-bg-color
-    title: Admontion codebock background
-    title.zh: 预览状态Admonition代码块背景色
+    title: Admontion codebock and Callout background
+    title.zh: Admonition 和 Callout背景色
     type: variable-themed-color
     opacity: true
     format: hex
@@ -19042,7 +19042,7 @@ body.loading-animation .progress-bar-message {
 }
 
 /* ================================== */
-/* ======= Popover editor======= */
+/* ======= Hover editor======= */
 /* ================================== */
 body.theme-light .popover.hover-popover:not(.is-loaded) {
   box-shadow:     0px 2.7px 3.1px rgba(0, 0, 0, 0.032),
@@ -19053,7 +19053,7 @@ body.theme-light .popover.hover-popover:not(.is-loaded) {
 
   body .popover.hover-popover:not(.is-loaded) .markdown-preview-view {
     padding: 5px 5px 0; }
-    
+
 
 body.theme-dark .popover.hover-popover:not(.is-loaded) {
       box-shadow:      0px 2.7px 3.1px rgba(0, 0, 0, 0.081),
@@ -19064,6 +19064,8 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 .popover.hover-popover {
         width: 400px;
         max-height: 40vh; }
+
+
 
 /* ================================== */
 /* ======= custom cssclass ======= */
@@ -19357,4 +19359,14 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 .is-mobile .community-theme {
   margin: 15px 0px;
   padding: 15px 0px;
+}
+
+
+/* ================================== */
+/* ======= Call out======= */
+/* ================================== */
+
+.callout
+{
+  background-color:var(--admonition-bg-color);
 }
