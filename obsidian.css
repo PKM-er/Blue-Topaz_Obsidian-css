@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.14.2。uid [20220320] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.14.2, uid [20220320] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.14.2。uid [20220331] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.14.2, uid [20220331] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -7898,7 +7898,6 @@ span.obsidian-search-match-highlight {
 }
 
 .markdown-preview-view .task-list-item-checkbox {
-  float:left;
   top: 3px;
 }
 
@@ -19041,6 +19040,31 @@ body.loading-animation .progress-bar-message {
 .markdown-preview-view img.banner-image.full-width{
   max-width: none;
 }
+
+/* ================================== */
+/* ======= Popover editor======= */
+/* ================================== */
+body.theme-light .popover.hover-popover:not(.is-loaded) {
+  box-shadow:     0px 2.7px 3.1px rgba(0, 0, 0, 0.032),
+  0px 5.9px 8.7px rgba(0, 0, 0, 0.052),
+  0px 10.4px 18.1px rgba(0, 0, 0, 0.071),
+  0px 20px 40px rgba(0, 0, 0, 0.11) ;  }
+
+
+  body .popover.hover-popover:not(.is-loaded) .markdown-preview-view {
+    padding: 5px 5px 0; }
+    
+
+body.theme-dark .popover.hover-popover:not(.is-loaded) {
+      box-shadow:      0px 2.7px 3.1px rgba(0, 0, 0, 0.081),
+      0px 5.9px 8.7px rgba(0, 0, 0, 0.131),
+      0px 10.4px 18.1px rgba(0, 0, 0, 0.18),
+      0px 20px 40px rgba(0, 0, 0, 0.28) ; }  
+ 
+.popover.hover-popover {
+        width: 400px;
+        max-height: 40vh; }
+
 /* ================================== */
 /* ======= custom cssclass ======= */
 /* ========fullwidth  noyaml noscroll================ */
@@ -19286,7 +19310,7 @@ body.loading-animation .progress-bar-message {
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220320";
+  content: "uid:20220331";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
