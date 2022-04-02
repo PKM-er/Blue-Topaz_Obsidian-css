@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.14.2。uid [20220331] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.14.2, uid [20220331] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.14.5。uid [20220402] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.14.5, uid [20220402] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -56,7 +56,7 @@ settings:
         label: Topaz-Nord
         value: color-scheme-options-topaz-nord
       - 
-        label: =↓👩😺 Created by Topaz Community 🐵🧑↓=
+        label: =↓😺 Created by Topaz Community 🐵↓=
         value: 
       -
         label: Flamingo (@Mouth on Cloud & @Rainbell)
@@ -682,6 +682,109 @@ settings:
     format: hex
     default-light: '#e9e9e9'
     default-dark: '#000000'
+  -
+    id: highlight-bg-color-folder
+    title: 2.1.5.1 Highlight Background Color
+    title.zh: 2.1.5.1 高亮背景颜色
+    type: heading
+    level: 4
+    collapsed: false
+  - 
+    id: text-highlight-bg-light-switch
+    title: Toggle Custom Highlight Background Color (Light Mode)
+    title.zh: 切换自定义高亮颜色（明亮模式）
+    type: class-toggle
+    default: false
+  - 
+    id: text-highlight-bg-h-light
+    title: Hue (Light mode)
+    description: To adjust Hue
+    description.zh: 调整颜色 明亮模式
+    type: variable-number-slider
+    default: 34
+    min: 0
+    max: 360
+    step: 5
+  -
+    id: text-highlight-bg-s-light
+    title: Saturation (Light mode)
+    description: To adjust Saturation
+    description.zh: 调整饱和度 明亮模式
+    type: variable-number-slider
+    default: 100
+    min: 0
+    max: 100
+    step: 5
+    format: "%"
+  -
+    id: text-highlight-bg-l-light
+    title: Lightness (Light mode)
+    description: To adjust Lightness
+    description.zh: 调整亮度 明亮模式
+    type: variable-number-slider
+    default: 80
+    min: 0
+    max: 100
+    step: 5
+    format: "%"
+  -
+    id: text-highlight-bg-a-light
+    title: Opacity (Light mode)
+    description: To adjust Alpha
+    description.zh: 调整透明度（Alpha） 明亮模式
+    type: variable-number-slider
+    default: 0.80
+    min: 0
+    max: 1
+    step: 0.05
+  - 
+    id: text-highlight-bg-dark-switch
+    title: Toggle Custom Highlight Background Color (Dark Mode)
+    title.zh: 切换自定义高亮颜色（黑暗模式）
+    type: class-toggle
+    default: false
+  - 
+    id: text-highlight-bg-h-dark
+    title: Hue (Dark mode)
+    description: To adjust Hue
+    description.zh: 调整颜色 黑暗模式
+    type: variable-number-slider
+    default: 57
+    min: 0
+    max: 360
+    step: 5
+  -
+    id: text-highlight-bg-s-dark
+    title: Saturation (Dark mode)
+    description: To adjust Saturation
+    description.zh: 调整饱和度 黑暗模式
+    type: variable-number-slider
+    default: 40
+    min: 0
+    max: 100
+    step: 5
+    format: "%"
+  -
+    id: text-highlight-bg-l-dark
+    title: Lightness (Dark mode)
+    description: To adjust Lightness
+    description.zh: 调整亮度 黑暗模式
+    type: variable-number-slider
+    default: 38
+    min: 0
+    max: 100
+    step: 5
+    format: "%"
+  -
+    id: text-highlight-bg-a-dark
+    title: Opacity (Dark mode)
+    description: To adjust Alpha
+    description.zh: 调整透明度（Alpha） 黑暗模式
+    type: variable-number-slider
+    default: 0.55
+    min: 0
+    max: 1
+    step: 0.05
   -
     id: font-settings
     title: 2.2 Typography
@@ -2117,7 +2220,6 @@ settings:
   --margin-list: 1;
 
   --line-width-readable: 45rem;
-
   --embed-content-height: 600px;
 
   --print-strong-color: var(--accent-strong);
@@ -2152,7 +2254,7 @@ settings:
   --nord12: #D08770;
   --nord13: #EBCB8B;
   --nord13-0: #e2b65e;
-  --nord13-1: #ebcb8b4b;
+  --nord13-1: #ebca894b;
   --nord14: #A3BE8C;
   --nord14-0: #95b677;
   --nord15: #B48EAD;
@@ -2222,8 +2324,11 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --search-text: #e0e0e0;
   --folder-title: #ffffff;
 
-  --text-highlight-bg: #89853b8a;/*edit*/
-  --mark-highlight: #89853b8a;/*preview*/
+  --text-highlight-bg-h-dark: 57;
+  --text-highlight-bg-s-dark: 40%;
+  --text-highlight-bg-l-dark: 38%;
+  --text-highlight-bg-a-dark: 0.541;
+  --text-highlight-bg: hsla(var(--text-highlight-bg-h-dark), var(--text-highlight-bg-s-dark), var(--text-highlight-bg-l-dark), var(--text-highlight-bg-a-dark));
   --mark-highlight-strong-em: #fff7603a;
   --strong-em-highlight-color: #a7b4ff;
   --text-search-highlight-bg: #bb4361;
@@ -2517,10 +2622,13 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --search-text: #000000;
   --folder-title: #000000;
 
-  --mark-highlight: #ffd298b4;/*preview*/
-  --mark-highlight-strong-em: #ff880049;
+  --text-highlight-bg-h-light: 34;
+  --text-highlight-bg-s-light: 100%;
+  --text-highlight-bg-l-light: 80%;
+  --text-highlight-bg-a-light: 0.847;
   --strong-em-highlight-color: #237add;
-  --text-highlight-bg: #ffd298d8;/*edit*/
+  --mark-highlight-strong-em: #ff880049;
+  --text-highlight-bg: hsla(var(--text-highlight-bg-h-light), var(--text-highlight-bg-s-light), var(--text-highlight-bg-l-light), var(--text-highlight-bg-a-light));
   --text-search-highlight-bg: #ffd1dd;
   --strong-em-color-1: #1048ff;
   --strong-em-color-2: #14c8ff;
@@ -2812,10 +2920,9 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --search-text: #000000;
   --folder-title: #000000;
 
-  --mark-highlight: #ecf56eb4;/*preview*/
-  --mark-highlight-strong-em: #dbe72849;
   --strong-em-highlight-color: #08ae84;
-  --text-highlight-bg: #ecf56ed8;/*edit*/
+  --mark-highlight-strong-em: #dbe72849;
+  --text-highlight-bg: #ecf56ed8;
   --text-search-highlight-bg: #ffd1dd;
   --strong-em-color-1: #08ae84;
   --strong-em-color-2: #01531d;
@@ -3030,8 +3137,7 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --interactive-accent-rgb: 50, 159, 86;
   --interactive-accent-hover: #0f892d;
 
-  --text-highlight-bg: #47893b8a;/*edit*/
-  --mark-highlight: #47893b8a;/*preview*/
+  --text-highlight-bg: #47893b8a;
   --mark-highlight-strong-em: #47893b7a;
   --strong-em-highlight-color: #9c8ce6;
   --text-search-highlight-bg: #bb4361;
@@ -3150,7 +3256,6 @@ body.color-scheme-options-avocado-topaz.theme-dark {
 body.color-scheme-options-monochrome-topaz.theme-dark {
   --text-accent: #e1e1e1;
   --text-accent-hover: #b8b8b8;
-
   --accent-em: #ffffff;
 
   --interactive-normal: #20242b;
@@ -3159,8 +3264,7 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --interactive-accent-rgb: 120, 120, 120;
   --interactive-accent-hover: #646464;
 
-  --text-highlight-bg: #89853b8a;/*edit*/
-  --mark-highlight: #89853b8a;/*preview*/
+  --text-highlight-bg: #89853b8a;
   --mark-highlight-strong-em: #fff7603a;
   --strong-em-highlight-color: #ffffff;
   --text-search-highlight-bg: #bb4361;
@@ -3305,10 +3409,9 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --interactive-accent: #4f4f4f;
   --interactive-accent-hover: #1d1d1d;
 
-  --mark-highlight: #ecf56eb4;/*preview*/
-  --mark-highlight-strong-em: #ecf56eb4;
   --strong-em-highlight-color: #000000;
-  --text-highlight-bg: #ecf56ed8;/*edit*/
+  --text-highlight-bg: #ecf56eb4;
+  --mark-highlight-strong-em: #ecf56eb4;
   --text-search-highlight-bg: #ffd1dd;
   --strong-em-color-1: #08ae84;
   --strong-em-color-2: #01531d;
@@ -3603,10 +3706,9 @@ body.color-scheme-options-pink-topaz.theme-light {
   --search-text: #000000;
   --folder-title: #000000;
 
-  --mark-highlight: #ffd0e99b;/*preview*/
-  --mark-highlight-strong-em: #ffd0e99b;
   --strong-em-highlight-color: #000000;
-  --text-highlight-bg: #ffd0e99b;/*edit*/
+  --mark-highlight-strong-em: #ffd0e99b;
+  --text-highlight-bg: #ffd0e99b;
   --text-search-highlight-bg: #ffd1dd;
 
   --background-search-result: #f3f3f3;
@@ -3622,7 +3724,7 @@ body.color-scheme-options-pink-topaz.theme-light {
   --background-modifier-border-hr: #585858;
   --background-secondary-alt-bg-4-bt-publish: #f6f6f6;
 
-  --scrollbar-thumb: #c6c6c6a8;
+  --scrollbar-thumb: #e2bdbd8d;
 
   --embed-color: #ffe1ea4f;
   --search-result-file-title-color: #cc437c;
@@ -3769,9 +3871,9 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --interactive-accent-rgb: 204, 97, 136;
   --interactive-accent-hover: #cb4375;
 
-  --text-highlight-bg: #de87a785;/*edit*/
-  --mark-highlight: #de87a785;/*preview*/
+  --text-highlight-bg: #de87a785;
   --mark-highlight-strong-em: #dc799e85;
+
   --strong-em-highlight-color: #d9afb3d1;
   --text-search-highlight-bg: #bb4361;
   --strong-em-color-1: #fc3b3b;
@@ -3790,6 +3892,7 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --background-modifier-border-hr: #7f7f7f;
 
   --background-transparent-blue: #003e759a;
+  --scrollbar-thumb: #8d69698d;
 
   --embed-color: #4639413d;
   --search-result-file-title-color: #c0689b;
@@ -3965,9 +4068,7 @@ body.color-scheme-options-topaz-nord.theme-dark {
   --accent-em: var(--nord14);
 
   --text-highlight-bg: var(--nord13-1);
-  --mark-highlight: var(--nord13-1);
   --mark-highlight-strong-em: var(--nord13-1);
-
   --text-selection: var(--nord9-2);
 
   --interactive-accent: var(--nord9);
@@ -4162,6 +4263,9 @@ body.color-scheme-options-topaz-nord.theme-light {
   --background-code: var(--nord6-2);
   --background-blockquote: var(--nord6-2);
 
+  --text-highlight-bg: var(--nord13-1);
+  --mark-highlight-strong-em: var(--nord13-1);
+
   --text-color-code: var(--nord8-0);
 
   --color-view-header-gradient-1: var(--background-primary-bg-4-bt);
@@ -4235,7 +4339,12 @@ body.color-scheme-options-flamingo.theme-light {
   --accent-strong: #37291a;
   --text-error: #f5a7a2;
   --text-error-hover: #fefcf9;
-  --text-highlight-bg: #f5a7a2;
+
+  --text-highlight-bg-h: 4;
+  --text-highlight-bg-s: 81%;
+  --text-highlight-bg-l: 80%;
+  --text-highlight-bg-a: 0.847;
+  --text-highlight-bg: hsla(var(--text-highlight-bg-h), var(--text-highlight-bg-s), var(--text-highlight-bg-l), var(--text-highlight-bg-a));
   --text-selection: #ffebec;
   --text-on-accent: #37291a;
   --interactive-normal: #f39ba0;
@@ -4246,7 +4355,6 @@ body.color-scheme-options-flamingo.theme-light {
   --panel-border-color: #fd355a;
   --search-text: #37291a;
   --folder-title: #37291a;
-  --mark-highlight: #fd355a;
   --background-search-result: #ffdece;
 
   --gray-1: #c4c4c4;
@@ -4343,6 +4451,7 @@ body.color-scheme-options-flamingo.theme-light {
 
   --table-color-calendar-2: rgb(214, 118, 146);
   --table-color-rgb: 214, 118, 146;
+  --scrollbar-thumb: #f39ba050;
 }
 
 body.color-scheme-options-flamingo.theme-dark {
@@ -4369,7 +4478,12 @@ body.color-scheme-options-flamingo.theme-dark {
   --text-em-color: #f93759;
   --text-error: #f93759;
   --text-error-hover: #f93759;
-  --text-highlight-bg: #f39ba0;
+
+  --text-highlight-bg-h: 357;
+  --text-highlight-bg-s: 79%;
+  --text-highlight-bg-l: 78%;
+  --text-highlight-bg-a: 0.847;
+  --text-highlight-bg: hsla(var(--text-highlight-bg-h), var(--text-highlight-bg-s), var(--text-highlight-bg-l), var(--text-highlight-bg-a));
   --text-selection: #e5c7a94a;
   --text-on-accent: #ffffff;
   --interactive-normal: #f39ba0;
@@ -4380,7 +4494,6 @@ body.color-scheme-options-flamingo.theme-dark {
   --panel-border-color: #f93759;
   --search-text: #fff;
   --folder-title: #fff;
-  --mark-highlight: #f93759;
   --background-search-result: #292929;
 
   --gray-1: #c9b0b0;
@@ -4476,6 +4589,7 @@ body.color-scheme-options-flamingo.theme-dark {
 
   --table-color-calendar-2: rgb(215, 86, 125);
   --table-color-rgb: 215, 86, 125;
+  --scrollbar-thumb: #e2bdbd50;
 }
 
 body.color-scheme-options-flamingo.theme-light #calendar-container {
@@ -4600,7 +4714,6 @@ body.color-scheme-options-flamingo.theme-light #calendar-container .week-num:hov
   background-color: var(--calendar-week-hover) !important;
 }
 
-
 /*比上面那个还菜鸟的人做的一些修改*/
 body.color-scheme-options-flamingo.theme-light .nav-folder.mod-root>.nav-folder-title {
   background-color: var(--background-secondary-alt-bg-4-bt)
@@ -4699,10 +4812,13 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --search-text: #000000;
   --folder-title: #000000;
 
-  --mark-highlight: #ffd298b4;/*preview*/
-  --mark-highlight-strong-em: #ff880049;
   --strong-em-highlight-color: var(--color11);
-  --text-highlight-bg: #ffd298d8;/*edit*/
+
+  --text-highlight-bg-h: 34;
+  --text-highlight-bg-s: 100%;
+  --text-highlight-bg-l: 80%;
+  --text-highlight-bg-a: 0.847;
+  --text-highlight-bg: hsla(var(--text-highlight-bg-h), var(--text-highlight-bg-s), var(--text-highlight-bg-l), var(--text-highlight-bg-a));
   --text-search-highlight-bg: var(--color2);
 
   --background-search-result: #f3f3f3;
@@ -4893,9 +5009,6 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
   --search-text: var(--color1);/*搜索结果文字颜色*/
   --folder-title: #ffffff;/*文件栏文件夹文字颜色*/
 
-  --text-highlight-bg: #89853b8a;/*==高亮== 编辑模式edit*/
-  --mark-highlight: #89853b8a;/*==高亮== 预览preview*/
-  --mark-highlight-strong-em: #fff7603a;/*==***高亮***== 背景颜色*/
   --strong-em-highlight-color: var(--color11);
   --text-search-highlight-bg: #bb4361;
 
@@ -5125,12 +5238,8 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --search-text: #000000;
   --folder-title: #000000;
 
-  --mark-highlight: #ffd298b4;
-  /*preview*/
-  --mark-highlight-strong-em: #ff880049;
   --strong-em-highlight-color: var(--color11);
-  --text-highlight-bg: #ffd298d8;
-  /*edit*/
+
   --text-search-highlight-bg: #ffd1dd;
 
   --background-search-result: #f3f3f3;
@@ -5323,9 +5432,6 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
   --search-text: #e0e0e0;/*搜索结果文字颜色*/
   --folder-title: #ffffff;/*文件栏文件夹文字颜色*/
 
-  --text-highlight-bg: #89853b8a;/*==高亮== 编辑模式edit*/
-  --mark-highlight: #89853b8a;/*==高亮== 预览preview*/
-  --mark-highlight-strong-em: #fff7603a;/*==***高亮***== 背景颜色*/
   --strong-em-highlight-color: var(--color11);
   --text-search-highlight-bg: #bb4361;
   --strong-em-color-1: #43d3ff;/*加粗斜体渐变色1*/
@@ -5529,10 +5635,7 @@ body.color-scheme-options-autumn-topaz.theme-light {
   --interactive-accent: var(--main-color);
   --interactive-accent-hover:  var(--low-color);
 
-  --mark-highlight: #ffd298b4;  /*preview*/
-  --mark-highlight-strong-em: #ff880049; 
   --strong-em-highlight-color: var(--color11);
-  --text-highlight-bg: #ffd298d8; /*edit*/
   --text-search-highlight-bg: #ffd1dd;
   
   --background-search-result: #f3f3f3;
@@ -6187,10 +6290,13 @@ body.color-scheme-options-lilac.theme-light {
   --search-text: #000000;
   --folder-title: #000000;
 
-  --mark-highlight: #a866dfb4;  /*preview*/
-  --mark-highlight-strong-em: #6b28e749; 
   --strong-em-highlight-color: #7908ae;
-  --text-highlight-bg: #a866dfb4; /*edit*/
+
+  --text-highlight-bg-h: 273;
+  --text-highlight-bg-s: 65%;
+  --text-highlight-bg-l: 75%;
+  --text-highlight-bg-a: 0.706;
+  --text-highlight-bg: hsla(var(--text-highlight-bg-h), var(--text-highlight-bg-s), var(--text-highlight-bg-l), var(--text-highlight-bg-a));
   --text-search-highlight-bg: #d1d2ff;
   --strong-em-color-1: #5008ae;
   --strong-em-color-2: #2e0153;
@@ -6424,10 +6530,13 @@ body.color-scheme-options-lilac.theme-dark {
   --search-text: #e0e0e0;
   --folder-title: #ffffff;
 
-  --mark-highlight: #773b898a; /*preview*/
-  --mark-highlight-strong-em: #47893b3a; 
   --strong-em-highlight-color: #9c8ce6;
-  --text-highlight-bg: #773b898a; /*edit*/
+
+  --text-highlight-bg-h: 286;
+  --text-highlight-bg-s: 40%;
+  --text-highlight-bg-l: 38%;
+  --text-highlight-bg-a: 0.541;
+  --text-highlight-bg: hsla(var(--text-highlight-bg-h), var(--text-highlight-bg-s), var(--text-highlight-bg-l), var(--text-highlight-bg-a));
   --text-search-highlight-bg: #bb4361;
   --strong-em-color-1: #9c8ce6;
   --strong-em-color-2: #23d05c;
@@ -7530,7 +7639,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-quote {
 
 /* highlight */
 .markdown-preview-view :not(em)>mark {
-  background-color: var(--mark-highlight);
+  background-color: var(--text-highlight-bg);
   padding: 1px 3px;
   color: var(--text-highlight);
   border-radius: var(--radius-xs);
@@ -7569,7 +7678,7 @@ span.cm-highlight.cm-inline-code {
   background-clip: initial;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
-  background-color: var(--mark-highlight);
+  background-color: var(--text-highlight-bg);
   color: var(--text-highlight);
 }
 
@@ -7577,20 +7686,12 @@ span.cm-highlight.cm-inline-code {
   padding: 0 1px 1px;
 }
 
-.theme-dark span.cm-strong.cm-em.cm-highlight {
+span.cm-strong.cm-em.cm-highlight {
   background-image: initial;
   background-clip: initial;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: var(--strong-em-highlight-color);
-  background-color: var(--mark-highlight);
-}
-
-.theme-light span.cm-strong.cm-em.cm-highlight {
-  background-image: initial;
-  background-clip: initial;
-  -webkit-background-clip: initial;
-  -webkit-text-fill-color: var(--strong-em-highlight-color);
-  background-color: var(--mark-highlight);
+  background-color: var(--text-highlight-bg);
 }
 
 /* outliner for the outline */
@@ -8960,9 +9061,7 @@ ul ul ul ol ul {
   font-size: 0.9em;
 }
 
-ul {
-  padding-inline-start: 32px;
-}
+ul,
 ol {
   padding-inline-start: 32px;
 }
@@ -9532,7 +9631,7 @@ body.rainbow-lines .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 2
 }
 body:not(.list-no-line-in-edit):not(.rainbow-lines) .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 3"] .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before,
 body.rainbow-lines .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 3"] .HyperMD-list-line.cm-line:not([class*="quote"]):not([class*="nobullet"]) .cm-hmd-list-indent::before {
-  --indent-use-default: 1.38ch;
+  --indent-use-default: 1.37ch;
   --indent-use-wide: 3ch;
   --rb-indent-width: var(--indent-use-default);
 }
@@ -9993,8 +10092,7 @@ span.cm-em.cm-highlight.cm-quote,
   font-family: var(--font-family-strong) !important;
 }
 
-.markdown-preview-view :not(font)>strong>em>mark,
-.markdown-preview-view :not(font)>em>mark {
+.markdown-preview-view :not(font)>strong>em>mark {
   background-color: var(--mark-highlight-strong-em);
   padding: 1px 3px;
   border-radius: var(--radius-xs);
@@ -10412,6 +10510,35 @@ body.table-style-three .markdown-source-view table tbody>tr {
 .popover mark {
   background-color: var(--text-highlight-bg);
   color: var(--text-normal);
+}
+
+body.text-highlight-bg-light-switch.theme-light .cm-s-obsidian span.cm-formatting-highlight, 
+body.text-highlight-bg-light-switch.theme-light .cm-s-obsidian span.cm-highlight,
+body.text-highlight-bg-light-switch.theme-light .markdown-rendered mark,
+body.text-highlight-bg-light-switch.theme-light .markdown-preview-view :not(em)>mark,
+body.text-highlight-bg-light-switch.theme-light .cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight,
+body.text-highlight-bg-light-switch.theme-light .popover mark,
+body.text-highlight-bg-light-switch.theme-light span.cm-strong.cm-em.cm-highlight {
+  background-color: hsla(var(--text-highlight-bg-h-light), var(--text-highlight-bg-s-light), var(--text-highlight-bg-l-light), var(--text-highlight-bg-a-light));
+}
+body.text-highlight-bg-dark-switch.theme-dark .cm-s-obsidian span.cm-formatting-highlight, 
+body.text-highlight-bg-dark-switch.theme-dark .cm-s-obsidian span.cm-highlight,
+body.text-highlight-bg-dark-switch.theme-dark .markdown-rendered mark,
+body.text-highlight-bg-dark-switch.theme-dark .markdown-preview-view :not(em)>mark,
+body.text-highlight-bg-dark-switch.theme-dark .cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight,
+body.text-highlight-bg-dark-switch.theme-dark .popover mark,
+body.text-highlight-bg-dark-switch.theme-dark span.cm-strong.cm-em.cm-highlight {
+  background-color: hsla(var(--text-highlight-bg-h-dark), var(--text-highlight-bg-s-dark), var(--text-highlight-bg-l-dark), var(--text-highlight-bg-a-dark));
+}
+
+body.text-highlight-bg-light-switch.theme-light .markdown-preview-view :not(font)>strong>em>mark {
+  background-color: hsla(var(--text-highlight-bg-h-light), calc(var(--text-highlight-bg-s-light)*1.5), calc(var(--text-highlight-bg-l-light)*0.6), calc(var(--text-highlight-bg-a-light)*0.28));
+  padding: 1px 3px;
+  border-radius: var(--radius-xs);
+}
+
+body.text-highlight-bg-dark-switch.theme-dark .markdown-preview-view :not(font)>strong>em>mark {
+  background-color: hsla(var(--text-highlight-bg-h-dark), calc(var(--text-highlight-bg-s-dark)*1.5), calc(var(--text-highlight-bg-l-dark)*1.1), calc(var(--text-highlight-bg-a-dark)*0.55));
 }
 
 .workspace-leaf.mod-active .view-header {
@@ -12689,7 +12816,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
   border: 3px solid transparent;
   border-width: 3px 2px 3px 3px;
   min-height: 65px;
-	background-color: rgba(157, 165, 183, 0.4);
+	background-color: var(--scrollbar-thumb);
 }
 
 body:not(.native-scrollbars) ::-webkit-scrollbar:vertical {
@@ -12698,7 +12825,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar:vertical {
 }
 
 body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
-  background: rgba(157, 165, 183, 0.7);
+  background: var(--scrollbar-thumb);
 }
 
 .workspace-split::-webkit-scrollbar:vertical {
@@ -14192,6 +14319,9 @@ aside>h2 {
 .tooltip.mod-right{
   color:var(--white);
   background-color:var(--interactive-accent);
+}
+.tooltip .tooltip-arrow{
+  border-bottom: 5px solid var(--interactive-accent);
 }
 .tooltip.mod-right .tooltip-arrow {
   border-right: 5px solid var(--interactive-accent);
@@ -16124,7 +16254,7 @@ body:not(.default-icons).is-mobile div.is-collapsed h2 div.heading-collapse-indi
 }
 
 .is-mobile .view-header-title {
-  line-height: 35px;
+  line-height: 37px;
 }
 
 .is-mobile .view-header-title-container,
@@ -16198,13 +16328,13 @@ body.style-options-for-buttons-plugin button.circle_btn {
 /* blank 透明按钮*/
 body.style-options-for-buttons-plugin button.blank{
   background: #fff0f000;
-  padding:  0px;
+  padding: 0px;
 }
 body.style-options-for-buttons-plugin button.blank:hover {
   animation: swing_image 0.8s linear 0s 1 normal;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
 }
-body.style-options-for-buttons-plugin .admonition-content button.grad_button{
+body.style-options-for-buttons-plugin .admonition-content button.grad_button {
   margin-top: 0px;
 }
 body.style-options-for-buttons-plugin .admonition-content span>button.grad_button{
@@ -16265,6 +16395,10 @@ body.style-options-for-buttons-plugin  button.g_yellow {
 
 .is-mobile .workspace-leaf-content[data-type='file-explorer'] .nav-buttons-container {
   margin: 0 0 5px 0;
+}
+
+.is-mobile .workspace-leaf-content .view-header-icon {
+  padding: 7px 3px 5px 8px;
 }
 
 .is-mobile .nav-action-button>svg {
@@ -16489,12 +16623,10 @@ and (min-width : 400px)
 }
 @media (max-width: 400pt)
 {
-  body.style-options-for-admonition-plugin .admonition-flex .admonition-content
-  {
+  body.style-options-for-admonition-plugin .admonition-flex .admonition-content {
    gap:15px;
   }
-  body.style-options-for-admonition-plugin .admonition-flex .admonition-content div
-  {
+  body.style-options-for-admonition-plugin .admonition-flex .admonition-content div {
     flex: 1 1 60%;
     margin: 0;
   }
@@ -16516,7 +16648,7 @@ and (min-width : 400px)
   .is-mobile .view-header-title {
     font-size: var(--font-size-file-header-title);
     letter-spacing: -0.015em;
-    line-height: 44px;
+    line-height: 43px;
   }
   /*伪看板优化显示*/
   .kanban ul>li:not(.task-list-item) {
@@ -16678,7 +16810,6 @@ body.dialogue-style-chat .dialogue-plugin-message-title {
   color: rgb(236, 236, 236);
   font-weight: bold;
 }
-
 
 /*===================================================*/
 /*=================   Live Preview   ================*/
@@ -19045,27 +19176,27 @@ body.loading-animation .progress-bar-message {
 /* ======= Hover editor======= */
 /* ================================== */
 body.theme-light .popover.hover-popover:not(.is-loaded) {
-  box-shadow:     0px 2.7px 3.1px rgba(0, 0, 0, 0.032),
-  0px 5.9px 8.7px rgba(0, 0, 0, 0.052),
-  0px 10.4px 18.1px rgba(0, 0, 0, 0.071),
-  0px 20px 40px rgba(0, 0, 0, 0.11) ;  }
+  box-shadow: 0px 2.7px 3.1px rgba(0, 0, 0, 0.032),
+    0px 5.9px 8.7px rgba(0, 0, 0, 0.052),
+    0px 10.4px 18.1px rgba(0, 0, 0, 0.071),
+    0px 20px 40px rgba(0, 0, 0, 0.11);
+}
 
-
-  body .popover.hover-popover:not(.is-loaded) .markdown-preview-view {
-    padding: 5px 5px 0; }
-
+body .popover.hover-popover:not(.is-loaded) .markdown-preview-view {
+  padding: 5px 5px 0; 
+}
 
 body.theme-dark .popover.hover-popover:not(.is-loaded) {
-      box-shadow:      0px 2.7px 3.1px rgba(0, 0, 0, 0.081),
-      0px 5.9px 8.7px rgba(0, 0, 0, 0.131),
-      0px 10.4px 18.1px rgba(0, 0, 0, 0.18),
-      0px 20px 40px rgba(0, 0, 0, 0.28) ; }  
+  box-shadow: 0px 2.7px 3.1px rgba(0, 0, 0, 0.081),
+    0px 5.9px 8.7px rgba(0, 0, 0, 0.131),
+    0px 10.4px 18.1px rgba(0, 0, 0, 0.18),
+    0px 20px 40px rgba(0, 0, 0, 0.28); 
+}  
  
 .popover.hover-popover {
-        width: 400px;
-        max-height: 40vh; }
-
-
+  width: 400px;
+  max-height: 40vh; 
+}
 
 /* ================================== */
 /* ======= custom cssclass ======= */
@@ -19312,7 +19443,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220331";
+  content: "uid:20220402";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
@@ -19361,12 +19492,9 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   padding: 15px 0px;
 }
 
-
 /* ================================== */
 /* ======= Call out======= */
 /* ================================== */
-
-.callout
-{
+.callout {
   background-color:var(--admonition-bg-color);
 }
