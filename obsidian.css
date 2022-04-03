@@ -14558,6 +14558,9 @@ body.style-options-for-admonition-plugin .admonition-kanban ul ul li.task-list-i
 
 /*blank ad分栏
 修改自 https://forum-zh.obsidian.md/t/topic/2081 */
+body.style-options-for-admonition-plugin .admonition  {	
+  break-inside: avoid;
+}
 body.style-options-for-admonition-plugin .admonition-col2 {
   box-shadow: none!important;
 }
@@ -14567,7 +14570,7 @@ body.style-options-for-admonition-plugin .admonition-col2 .admonition	{
   margin:0;
 }
 
-body.style-options-for-admonition-plugin .admonition-col2  .admonition-content {	
+body.style-options-for-admonition-plugin .admonition-col2>.admonition-content {	
   columns:150px 2;
   -moz-columns:150px 2;
   -webkit-columns:150px 2;
@@ -14634,7 +14637,7 @@ body.style-options-for-admonition-plugin .admonition-col3 .admonition	{
   margin:0;
 }
 
-body.style-options-for-admonition-plugin .admonition-col3 .admonition-content {	
+body.style-options-for-admonition-plugin .admonition-col3>.admonition-content {	
   columns:100px 3;
   -moz-columns:100px 3;
   -webkit-columns:100px 3;
@@ -14691,13 +14694,19 @@ body.style-options-for-admonition-plugin .admonition-col4 .admonition	{
   margin:0;
 }
 
-body.style-options-for-admonition-plugin .admonition-col4 .admonition-content {	
+body.style-options-for-admonition-plugin .admonition-col4>.admonition-content {	
   column-count: 4;
   column-gap: 1vw;
   overflow: visible ;
   margin:0;
   break-inside: avoid;
 }
+
+body.style-options-for-admonition-plugin .admonition-col4 .admonition-content {	
+  margin:0;
+  break-inside: avoid;
+}
+
 body.style-options-for-admonition-plugin .admonition-col4 .admonition-content ol,
 body.style-options-for-admonition-plugin .admonition-col4 .admonition-content ul {	
   margin-top: -0.25em;
@@ -14710,7 +14719,7 @@ body.style-options-for-admonition-plugin .admonition-kanban .admonition-col4 .ad
   margin:0;
   break-inside: avoid;
 }
-body.style-options-for-admonition-plugin .admonition-col4 .admonition-content {	
+body.style-options-for-admonition-plugin .admonition-col4>.admonition-content {	
   overflow: visible ;
 }
 
@@ -14758,10 +14767,15 @@ body.style-options-for-admonition-plugin .admonition-flex .admonition-content {
   margin: 0px;
   display: flex;
   flex-wrap: wrap;
+  border:none;
 }
 body.style-options-for-admonition-plugin .admonition-flex .admonition-content div{
   flex: 1;
   margin: 0 0.625rem;
+}
+
+body.style-options-for-admonition-plugin .callout.admonition-flex .admonition-content div{
+  margin: 0;
 }
 
 /*ad-table*/

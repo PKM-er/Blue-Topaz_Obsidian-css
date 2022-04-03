@@ -2,6 +2,9 @@
 感谢@cumany制作的升级版示例库 https://github.com/cumany/Blue-topaz-examples
 
 # 更新日志
+### 20220403
+1. 修复admonition 9.0 升级后分栏样式错位
+
 ### 20220402
 1. 兼容admonition 9.0 升级后分栏失效的问题
 2. 兼容callout 并内置众多自定义样式例如kanban hibox bookinfo  infobox等具体可以看示例库范例。
