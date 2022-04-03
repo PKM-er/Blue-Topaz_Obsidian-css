@@ -8,8 +8,6 @@
 
 ![5](https://user-images.githubusercontent.com/72023275/161413180-dfbd303b-c76d-44ed-87a6-b57cc9822775.gif)
 
-
-
 ### 20220402
 1. 兼容admonition 9.0 升级后分栏失效的问题
 2. 兼容callout 并内置众多自定义样式例如kanban hibox bookinfo  infobox等具体可以看示例库范例。
@@ -25,7 +23,7 @@
 ### 20220320
 1. 修复软件新版本中，导出pdf无法设置加粗、斜体颜色的问题
 
-### 20220314![5](https://user-images.githubusercontent.com/72023275/161413176-981b9299-085f-48b0-9422-ae167b29919d.gif)
+### 20220314
 
 1. 伪看板无法折叠列表修复
 2. 彩虹大纲线某些时候出现多余细线
