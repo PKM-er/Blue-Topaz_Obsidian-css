@@ -19583,6 +19583,11 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   .callout-content {
     padding-left: 10px;
   }
+  .callout img[alt*=circle] {
+    border-radius: 35px;
+    width:70px;
+    height:70px;
+  }
 /* ===编辑代码块按钮调整============ */
   .markdown-source-view.mod-cm6 .cm-embed-block {
     border: 0;
@@ -19605,6 +19610,33 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   display: none;
   }
   
+
+  
+/*全透明callout*/
+.callout.callout[data-callout*=blank] {
+  box-shadow:none;
+  max-width: 100%;
+  background: transparent;
+  border: 0;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  margin: 0;
+
+  }
+
+  .callout.callout[data-callout*=blank].is-collapsed .callout-fold {
+  border: 0;
+  padding: 5px 10px;
+}
+.callout.callout[data-callout*=blank] .callout-title, .callout.callout[data-callout*=blank] .callout-title :is(.callout-icon, .callout-title-inner) {
+  display: none;
+}
+.callout.callout[data-callout*=blank]  .callout-content {
+  overflow: visible;
+  margin: 0;
+  padding:0px;
+}
+
 /* ===段落自动缩进============ */
   /*支持两种写法
     > [!note|indent]
@@ -19994,6 +20026,7 @@ callout.callout:is([data-callout-metadata*='50%'],[data-callout*='50%']) {
   float: right;
 }
 .callout.callout[data-callout*=infobox] .callout-title {
+  background-color: transparent;
   padding: 0;
   justify-content: center;
 }
@@ -20001,12 +20034,11 @@ callout.callout:is([data-callout-metadata*='50%'],[data-callout*='50%']) {
   border: 1px solid var(--hr, var(--background-modifier-border));
   padding: 5px 10px;
 }
-.callout.callout[data-callout*=infobox]:not(:hover):not(.is-collapsed) .callout-title, .callout.callout[data-callout*=infobox] .callout-title :is(.callout-icon, .callout-title-inner) {
+.callout.callout[data-callout*=infobox]:not(:hover):not(.is-collapsible) .callout-title, .callout.callout[data-callout*=infobox]:not(.is-collapsible) .callout-title :is(.callout-icon, .callout-fold,.callout-title-inner) {
   display: none;
 }
 .callout.callout[data-callout*=infobox] .callout-content {
   padding: 1px;
-  border: 1px solid var(--table, var(--background-modifier-border));
   margin: 0;
   border-radius: var(--radius, var(--co-radius));
 }
@@ -20019,12 +20051,11 @@ callout.callout:is([data-callout-metadata*='50%'],[data-callout*='50%']) {
   margin: 0;
 }
 .callout.callout[data-callout*=infobox] :is(h1, h2, h3, h4, h5, h6) {
-  font-size: 20px;
+
   text-align: center;
   margin: 0;
   padding: 2px;
   color: var(--text-normal);
-  background: var(--outer-bar, var(--background-secondary));
 }
 .callout.callout[data-callout*=infobox] p, 
 .callout.callout[data-callout*=infobox] .internal-embed,
@@ -20033,11 +20064,7 @@ callout.callout:is([data-callout-metadata*='50%'],[data-callout*='50%']) {
   padding: auto;
   text-align: center;
 }
-.callout.callout[data-callout*=infobox] img[alt*=circle] {
-    border-radius: 35px;
-    width:70px;
-    height:70px;
-  }
+
 
 /******callout bookinfo*****/
 
