@@ -2,6 +2,11 @@
 感谢@cumany制作的升级版示例库 https://github.com/cumany/Blue-topaz-examples
 
 # 更新日志
+### 20220404
+1. 增加新的图片排列形式：带标题的行内图片，使用`#inl`控制
+<img src="https://user-images.githubusercontent.com/72023275/161512757-57b43b36-2a10-4e89-8a17-7e401c49827d.png" width="550"/>
+
+
 ### 20220403
 1. 修复admonition 9.0 升级后分栏样式错位
 2. 增加文本挖空、涂黑样式，语法分别为：`==~~xx~~==` `*==~~xxx~~==*`。只在阅读模式生效。建议使用插件进行格式刷设置，不建议手打。
