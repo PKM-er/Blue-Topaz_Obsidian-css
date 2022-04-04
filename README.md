@@ -8,10 +8,6 @@
 ![5](https://user-images.githubusercontent.com/72023275/161413180-dfbd303b-c76d-44ed-87a6-b57cc9822775.gif)
 3. 增加blank callout类型
 
-### 20220403
-1. 修复admonition 9.0 升级后分栏样式错位
-2. 增加callout 类型
-
 ### 20220402
 1. 兼容admonition 9.0 升级后分栏失效的问题
 2. 兼容callout 并内置众多自定义样式例如kanban hibox bookinfo  infobox等具体可以看示例库范例。
