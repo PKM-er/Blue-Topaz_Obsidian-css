@@ -123,7 +123,7 @@ settings:
     collapsed: true
   - 
     id: background-settings-workplace
-    title: 1.2.1 Workplace background image
+    title: 1.2.1 Workplace Background Image
     title.zh: 1.2.1 工作页面背景
     type: heading
     level: 3
@@ -136,7 +136,7 @@ settings:
     default: false
   - 
     id: blur-depth
-    title: blur depth
+    title: Blur Depth
     title.zh: 模糊程度
     description: To adjust the degree of blur
     description.zh: 调整背景壁纸模糊程度
@@ -238,6 +238,12 @@ settings:
     description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片  url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
     type: variable-text
     default: url("https://")
+  - 
+    id: transparent-panes
+    title: Transparent Panes for Sliding Panes Plugin
+    title.zh: 使用Sliding Panes插件时，透明化部分页面
+    type: class-toggle
+    default: false
   -
     id: background-settings-markdown-page
     title: 1.2.2 Note Page Background Image
@@ -7020,7 +7026,7 @@ div.markdown-source-view ul.floating-toc{
 .cm-s-obsidian:not([class="markdown-source-view cm-s-obsidian mod-cm6"]) span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-important:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  background-color: var(--stag1-bg) !important;
+  background-color: var(--stag1-bg);
   color: var(--white) !important;
   border: none;
   font-size: 0.95em;
@@ -7045,7 +7051,7 @@ div.markdown-source-view ul.floating-toc{
 .cm-s-obsidian:not([class="markdown-source-view cm-s-obsidian mod-cm6"]) span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-complete:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  background-color: var(--stag3-bg) !important;
+  background-color: var(--stag3-bg);
   color: var(--white) !important;
   border: none;
   font-size: 0.95em;
@@ -7070,7 +7076,7 @@ div.markdown-source-view ul.floating-toc{
 .cm-s-obsidian:not([class="markdown-source-view cm-s-obsidian mod-cm6"]) span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-inprogress:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  background-color: var(--stag2-bg) !important;
+  background-color: var(--stag2-bg);
   color: var(--white) !important;
   border: none;
   font-size: 0.95em;
@@ -7104,7 +7110,7 @@ div.markdown-source-view ul.floating-toc{
 .cm-s-obsidian:not([class="markdown-source-view cm-s-obsidian mod-cm6"]) span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-dailynote:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  background-color: var(--tag-dailynote-bg) !important;
+  background-color: var(--tag-dailynote-bg);
   color: var(--white) !important;
   border: none;
   font-size: 0.95em;
@@ -7130,7 +7136,7 @@ div.markdown-source-view ul.floating-toc{
 .cm-s-obsidian:not([class="markdown-source-view cm-s-obsidian mod-cm6"]) .cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-weeklynote:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  background-color: var(--tag-weeklynote-bg) !important;
+  background-color: var(--tag-weeklynote-bg);
   color: var(--white) !important;
   border: none;
   font-size: 0.95em;
@@ -7156,7 +7162,7 @@ div.markdown-source-view ul.floating-toc{
 .cm-s-obsidian:not([class="markdown-source-view cm-s-obsidian mod-cm6"]) span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-questions:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  background-color: var(--tag-questions-bg) !important;
+  background-color: var(--tag-questions-bg);
   color: var(--white) !important;
   border: none;
   font-size: 0.95em;
@@ -7180,7 +7186,7 @@ div.markdown-source-view ul.floating-toc{
 }
 
 .cm-s-obsidian:not([class="markdown-source-view cm-s-obsidian mod-cm6"]) span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-ideas:not(.cm-formatting-hashtag) {
-  background-color: var(--tag-ideas-bg) !important;
+  background-color: var(--tag-ideas-bg);
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
   color: var(--white) !important;
@@ -7189,29 +7195,29 @@ div.markdown-source-view ul.floating-toc{
 }
 
 .cm-s-obsidian:not([class="markdown-source-view cm-s-obsidian mod-cm6"]) .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-important {
-  background-color: var(--stag1-bg) !important;
+  background-color: var(--stag1-bg);
 }
 
 .cm-s-obsidian:not([class="markdown-source-view cm-s-obsidian mod-cm6"]) .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-weeklynote {
-  background-color: var(--tag-weeklynote-bg) !important;
+  background-color: var(--tag-weeklynote-bg);
 }
 
 .cm-s-obsidian:not([class="markdown-source-view cm-s-obsidian mod-cm6"]) .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-dailynote {
-  background-color: var(--tag-dailynote-bg) !important;
+  background-color: var(--tag-dailynote-bg);
 }
 
 .cm-s-obsidian:not([class="markdown-source-view cm-s-obsidian mod-cm6"]) .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-ideas {
-  background-color: var(--tag-ideas-bg) !important;
+  background-color: var(--tag-ideas-bg);
 }
 .cm-s-obsidian:not([class="markdown-source-view cm-s-obsidian mod-cm6"]) .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-inprogress {
-  background-color: var(--stag2-bg) !important;
+  background-color: var(--stag2-bg);
 }
 
 .cm-s-obsidian:not([class="markdown-source-view cm-s-obsidian mod-cm6"]) .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-questions {
-  background-color: var(--tag-questions-bg) !important;
+  background-color: var(--tag-questions-bg);
 }
 .cm-s-obsidian:not([class="markdown-source-view cm-s-obsidian mod-cm6"]) .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-complete {
-  background-color: var(--stag3-bg) !important;
+  background-color: var(--stag3-bg);
 }
 
 /*colorful tags*/
@@ -12877,10 +12883,10 @@ body:not(.native-scrollbars) ::-webkit-scrollbar:horizontal {
 }
 
 body.plugin-sliding-panes.theme-light .workspace-split.mod-vertical>.workspace-leaf {
-  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: -1px 0px 6px 2px rgba(0, 0, 0, 0.1) !important;
 }
 body.plugin-sliding-panes.theme-dark .workspace-split.mod-vertical>.workspace-leaf {
-  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: -1px 0px 8px 2px rgba(0, 0, 0, 0.3) !important;
 }
 
 body.plugin-sliding-panes .mod-root .workspace-leaf.mod-active .view-header {
@@ -12920,6 +12926,26 @@ body.plugin-sliding-panes-rotate-header .workspace>.mod-root>.workspace-leaf>.wo
 
 body.plugin-sliding-panes-rotate-header .workspace>.mod-root>.workspace-leaf>.workspace-leaf-content>.view-header .view-actions {
   padding: 0px 0px 5px 3px !important;
+}
+
+body.plugin-sliding-panes:not(.transparent-panes) .workspace-split.mod-root .workspace-leaf:not(:first-of-type) .workspace-leaf-content {
+  background-color: var(--background-4-sliding-pane);
+}
+
+body.plugin-sliding-panes.transparent-panes .workspace-leaf.mod-am-left-of-active .workspace-leaf-content .view-content,
+body.plugin-sliding-panes.transparent-panes .workspace-leaf.mod-am-left-of-active .workspace-leaf-content .view-content *,
+body.plugin-sliding-panes.transparent-panes .workspace-leaf.mod-am-left-of-active .workspace-leaf-content .view-content *::before,
+body.plugin-sliding-panes.transparent-panes .workspace-leaf.mod-am-left-of-active .workspace-leaf-content .view-content *::-webkit-scrollbar-thumb,
+body.plugin-sliding-panes.transparent-panes .workspace-leaf.mod-am-left-of-active .workspace-leaf-content .view-content *::-webkit-scrollbar {
+  color: transparent !important;
+  background: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+body.plugin-sliding-panes.transparent-panes .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle {
+  width: 0;
 }
 
 /*==========================*/
@@ -17054,10 +17080,6 @@ body {
   background-color: transparent;
 }
 
-body.plugin-sliding-panes .workspace-split.mod-root .workspace-leaf:not(:first-of-type) .workspace-leaf-content {
-  background-color: var(--background-4-sliding-pane);
-}
-
 body.folder-icons .nav-folder-children .nav-folder-title-content::before {
   position: relative;
   content: " ";
@@ -17113,8 +17135,7 @@ body.light-background-color-files:not(.remove-file-icons) .nav-file-title.is-act
   filter: hue-rotate(180deg);
 }
 
-body:not(.remove-file-icons) .nav-file-title.is-active .obsidian-icon-folder-icon + .nav-file-title-content::before
-{
+body:not(.remove-file-icons) .nav-file-title.is-active .obsidian-icon-folder-icon + .nav-file-title-content::before {
  display: none;
 }
 
@@ -19314,7 +19335,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 }
 /*隐藏滚动条*/
 .markdown-preview-view.noscroll::-webkit-scrollbar {
-  display:none;
+  display: none;
 }
 
 @media print {
@@ -19793,7 +19814,7 @@ callout.callout:is([data-callout-metadata*='50%'],[data-callout*='50%']) {
   padding: 0;
 }
 
-.callout.callout[data-callout*="kanban"] {
+.callout.callout[data-callout*="kanban"]  {
   overflow: visible;
   background-color: rgba(255, 255, 255, 0)!important;
   border-left:0px!important;
@@ -20065,7 +20086,6 @@ callout.callout:is([data-callout-metadata*='50%'],[data-callout*='50%']) {
   margin: 0;
 }
 .callout.callout[data-callout*=infobox] :is(h1, h2, h3, h4, h5, h6) {
-
   text-align: center;
   margin: 0;
   padding: 2px;
@@ -20083,7 +20103,7 @@ callout.callout:is([data-callout-metadata*='50%'],[data-callout*='50%']) {
 /******callout bookinfo*****/
 
 .callout.callout[data-callout*="bookinfo"] {
-  --callout-color: 64,201, 75;
+  --callout-color: 64, 201, 75;
   --callout-icon:'<svg t="1648743111717" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2202" ><path d="M559.936 144.064l0 745.344 42.112-51.84c6.4-7.872 18.112-9.216 26.176-3.008 1.152 0.896 2.112 1.856 3.008 3.008l0.064-0.128 38.016 46.656L669.312 115.392 559.936 144.064 559.936 144.064zM160.512 558.976C153.536 561.664 145.664 558.208 142.976 551.232 140.288 544.256 143.68 536.384 150.72 533.632c42.496-16.832 88.384-24.768 135.168-24.768 48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 557.696 431.104 561.6 424 559.168 378.368 544.128 331.52 536.064 285.888 536.064 242.24 536.064 199.872 543.424 160.512 558.976L160.512 558.976zM160.512 472.064C153.536 474.752 145.664 471.36 142.976 464.32 140.288 457.344 143.68 449.408 150.72 446.72c42.496-16.896 88.384-24.832 135.168-24.832 48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 470.784 431.104 474.688 424 472.32 378.368 457.216 331.52 449.152 285.888 449.152 242.24 449.152 199.872 456.448 160.512 472.064L160.512 472.064zM160.512 393.152C153.536 395.904 145.664 392.384 142.976 385.408 140.288 378.432 143.68 370.56 150.72 367.808c42.496-16.896 88.384-24.832 135.168-24.832 48.512 0 98.24 8.576 146.624 24.576 7.104 2.304 11.008 10.048 8.64 17.216C438.784 391.872 431.104 395.776 424 393.344 378.368 378.304 331.52 370.176 285.888 370.176 242.24 370.176 199.872 377.536 160.512 393.152L160.512 393.152zM160.512 310.08c-6.976 2.752-14.848-0.704-17.536-7.68C140.288 295.36 143.68 287.488 150.72 284.736c42.496-16.832 88.384-24.768 135.168-24.768 48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 308.864 431.104 312.704 424 310.336 378.368 295.296 331.52 287.232 285.888 287.232 242.24 287.232 199.872 294.528 160.512 310.08L160.512 310.08zM160.512 234.816c-6.976 2.688-14.848-0.704-17.536-7.68C140.288 220.16 143.68 212.224 150.72 209.472 193.216 192.64 239.104 184.704 285.888 184.704c48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 233.536 431.104 237.44 424 235.072 378.368 220.032 331.52 211.968 285.888 211.968 242.24 211.968 199.872 219.328 160.512 234.816L160.512 234.816zM983.36 202.56C1005.888 203.776 1024 222.08 1024 244.288l0 570.048c0 22.976-19.392 41.792-43.008 41.792l-274.24 0 0 80.128-0.064 0c0 5.248-2.432 10.624-7.04 14.144-8.128 6.336-19.84 4.992-26.24-2.88l-56.768-69.376-59.776 73.472C553.536 956.608 547.712 960 541.248 960c-10.368 0-18.752-8.256-18.752-18.24l0-85.632L43.008 856.128C19.392 856.128 0 837.312 0 814.336L0 244.288C0 223.36 16.064 205.824 36.8 202.944L36.8 147.008c0-11.904 7.232-22.208 17.728-26.752C135.552 80.448 214.976 62.848 293.12 64c73.984 1.152 146.112 19.072 216.704 50.88C586.944 78.848 662.656 62.912 737.28 64c78.336 1.216 154.624 21.248 229.12 56.64 10.752 5.12 17.024 15.552 17.024 26.368l0 0L983.424 202.56 983.36 202.56zM706.752 676.288c10.112-0.512 20.352-0.704 30.528-0.576 63.232 1.088 125.12 15.36 185.792 40.96l0-551.04c-61.504-27.008-123.776-42.176-186.816-43.2-9.792-0.128-19.648 0.064-29.504 0.64L706.752 676.288 706.752 676.288zM292.16 122.496C228.736 121.536 163.776 134.976 97.088 165.312l0 550.656c66.304-28.544 131.584-41.344 196.032-40.256 63.296 1.088 125.248 15.36 185.92 40.96l0-551.04C417.408 138.624 355.2 123.456 292.16 122.496z" p-id="2203" ></path></svg>';
   background: transparent;
   border: 0;
@@ -20092,7 +20112,7 @@ callout.callout:is([data-callout-metadata*='50%'],[data-callout*='50%']) {
 }
 
 .callout.callout[data-callout*=bookinfo]  .callout-title {
-  text-align:center;
+  text-align: center;
   margin-top: -10px;
   display: flex;
   justify-content: space-between;
