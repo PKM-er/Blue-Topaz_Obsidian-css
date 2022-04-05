@@ -965,6 +965,12 @@ settings:
     type: variable-text
     default: 0.9375em
   -
+    id: font-size-latex
+    title: Math Equation
+    title.zh: 数学公式字体大小
+    type: variable-text
+    default: 1.25em
+  -
     id: headering-settings
     title: 2.2.3 Headering
     title.zh: 2.2.3 文内标题（H1-H6）
@@ -15109,7 +15115,7 @@ body.rainbow-checklist .checklist-plugin-main.markdown-preview-view li:nth-of-ty
   position: fixed;
   border-right: 0px;
   margin: 0;
-  height: 40px;
+  height: 27px;
   overflow: visible;
   flex-basis: 0;
   bottom: 0;
@@ -15140,7 +15146,7 @@ body.rainbow-checklist .checklist-plugin-main.markdown-preview-view li:nth-of-ty
 
 .hider-ribbon .workspace-ribbon.mod-left .side-dock-ribbon-action {
   display: inline-block;
-  padding: 10px 5px 0 12px;
+  padding: 5px 5px 0 12px;
 }
 
 .hider-ribbon .workspace-ribbon.mod-left:hover {
