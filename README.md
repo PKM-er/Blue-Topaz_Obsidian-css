@@ -5,7 +5,7 @@
 ### 20220404
 1. 增加新的图片排列形式：带标题的行内图片，使用`#inl`控制
 <img src="https://user-images.githubusercontent.com/72023275/161512757-57b43b36-2a10-4e89-8a17-7e401c49827d.png" width="550"/>
-
+2. style settings 1.2.1中增加一个开关，可以在开启sliding panes插件时，让部分页边透明。
 
 ### 20220403
 1. 修复admonition 9.0 升级后分栏样式错位
