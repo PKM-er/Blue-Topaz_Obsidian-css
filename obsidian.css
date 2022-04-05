@@ -1204,6 +1204,18 @@ settings:
     type: class-toggle
     default: false
   -
+    id: reduce-bottom-padding
+    title: Reduce Padding Bottom of Pages
+    title.zh: 缩减笔记下方预留空白大小
+    type: class-toggle
+    default: false
+  -
+    id: bottom-padding-value
+    title: Adjust Padding Bottom of Pages
+    title.zh: 调整笔记下方预留空白大小
+    type: variable-text
+    default: 0em
+  -
     id: style-change-options
     title: 2.3 Element Styles
     title.zh: 2.3 其他样式设置
@@ -2233,6 +2245,8 @@ settings:
 
   --line-width-readable: 45rem;
   --embed-content-height: 600px;
+
+  --bottom-padding-value: 0em;
 
   --print-strong-color: var(--accent-strong);
   --print-em-color: var(--accent-em);
@@ -6779,6 +6793,11 @@ body.color-scheme-options-lilac.theme-light #calendar-container {
 .markdown-source-view .CodeMirror {
   max-width: 95%;
   margin: 0 auto;
+}
+
+body.reduce-bottom-padding .markdown-preview-view .markdown-preview-sizer,
+body.reduce-bottom-padding .cm-s-obsidian .cm-content {
+  padding-bottom: var(--bottom-padding-value) !important;
 }
 
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row),
