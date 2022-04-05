@@ -11046,7 +11046,7 @@ body.whole-code-wrap pre[class*='language-'] {
 .token.url,
 .language-css .token.string,
 .style .token.string,
-.markdown-source-view.cm-s-obsidian .cm-string {
+.markdown-source-view.cm-s-obsidian .cm-string:not([class*="url"]) {
   color: var(--aqua) !important;
 }
 .token.atrule,
