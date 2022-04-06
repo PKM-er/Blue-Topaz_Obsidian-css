@@ -22,7 +22,7 @@
 1. 兼容admonition 9.0 升级后分栏失效的问题
 2. 兼容callout 并内置众多自定义样式例如kanban hibox bookinfo  infobox等具体可以看示例库范例。
 3. style settings 
-2. 1.5中增加高亮背景颜色设置（==xx==）
+2. 2.1.5中增加高亮背景颜色设置（==xx==）
 
 
 ### 20220330
