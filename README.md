@@ -2,7 +2,13 @@
 感谢@cumany制作的升级版示例库 https://github.com/cumany/Blue-topaz-examples
 
 # 更新日志
+### 20220407
+
+1. 优化ad9.0 插件后分栏折叠失效并进一步优化分栏效果
+2. 修复 callout 位置标签失效
+
 ### 20220405
+
 1. 优化sliding panes透明化选项
 2. 优化小屏幕移动端折叠符合、文件标题位置
 
