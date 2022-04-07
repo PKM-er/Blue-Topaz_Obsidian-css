@@ -1,8 +1,16 @@
 # 示例 Demo vault
 感谢@cumany制作的升级版示例库 https://github.com/cumany/Blue-topaz-examples
 
+如果有问题或者建议 请加入Topaz社区[Topaz QQ群](https://jq.qq.com/?_wv=1027&k=TWGhXs40)  [Obsidian频道](https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=zHpby&from=246610&biz=ka)
+
 # 更新日志
+### 20220407
+
+1. 优化ad9.0 插件后分栏折叠失效并进一步优化分栏效果
+2. 修复 callout 位置标签失效
+
 ### 20220405
+
 1. 优化sliding panes透明化选项
 2. 优化小屏幕移动端折叠符合、文件标题位置
 
@@ -22,15 +30,7 @@
 1. 兼容admonition 9.0 升级后分栏失效的问题
 2. 兼容callout 并内置众多自定义样式例如kanban hibox bookinfo  infobox等具体可以看示例库范例。
 3. style settings 
-2. 1.5中增加高亮背景颜色设置（==xx==）
-
-
-### 20220330
-1. 添加默认大纲线颜色设置选项
-2. OB更新到14.2版本主题大纲线跟默认大纲线重影问题修复
-3. 修复预览模式彩虹任务框显示异常
-4. 修复ad代码块中任务列表溢出
-5. 修复图片跟任务列表混排，任务列表显示不全问题
+2. 2.1.5中增加高亮背景颜色设置（==xx==）
 
 
 ### 20220330
