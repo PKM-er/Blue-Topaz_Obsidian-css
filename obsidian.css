@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.14.5。uid [20220405] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.14.5, uid [20220405] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.14.5。uid [20220407] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.14.5, uid [20220407] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -610,90 +610,11 @@ settings:
     default-light: '#6ab607'
     default-dark: '#2244d8'
   -
-    id: other-color-settings
-    title: 2.1.5 Other Colors
-    title.zh: 2.1.5 其他颜色
+    id: highlight-bg-color-folder
+    title: 2.1.5 Highlight Background Color
+    title.zh: 2.1.5 高亮背景颜色
     type: heading
     level: 3
-    collapsed: true
-  - 
-    id: text-color-code
-    title: Inline Code Color
-    title.zh: 行内代码颜色
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#e95d00'
-    default-dark: '#d58000'
-  -
-    id: list-format-ul
-    title: Bullet Color of Unordered List
-    title.zh: 无序列表点颜色
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#0e0e0e'
-    default-dark: '#bdbdbd'
-  -
-    id: list-ol-number-color
-    title: Number Color of Ordered List
-    title.zh: 有序列表数字颜色
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#6196d6'
-    default-dark: '#2c7bd6'
-  -
-    id: accent-strong
-    title: Bold Type Color
-    title.zh: 加粗颜色
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#000000'
-    default-dark: '#f7f7f7'
-  -
-    id: accent-em
-    title: Italic Type Color
-    title.zh: 斜体颜色
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#099d4e'
-    default-dark: '#a4ca8e'
-  -
-    id: mjx-inline-math-color
-    title: Color of Mathematical Expressions (inline $x=0$)
-    title.zh: 数学表达式颜色(行内 $x=0$)
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#0e0e0e'
-    default-dark: '#bdbdbd'
-  -
-    id: mjx-math-color
-    title: Color of Mathematical Expressions ($$x=0$$)
-    title.zh: 数学表达式颜色($$x=0$$)
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#0e0e0e'
-    default-dark: '#bdbdbd'
-  -
-    id: background-leaf-resize-handle
-    title: Color of Leaf Resize Handle
-    title.zh: 页面大小调整条颜色
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#e9e9e9'
-    default-dark: '#000000'
-  -
-    id: highlight-bg-color-folder
-    title: 2.1.5.1 Highlight Background Color
-    title.zh: 2.1.5.1 高亮背景颜色
-    type: heading
-    level: 4
     collapsed: false
   - 
     id: text-highlight-bg-light-switch
@@ -791,6 +712,171 @@ settings:
     min: 0
     max: 1
     step: 0.05
+  -
+    id: colorful-highlight-bg
+    title: Toggle Colorful Highlight Background Color
+    title.zh: 切换多彩高亮颜色
+    description: To give *==xxx==*, **==xxx==** and ***==xxx==*** different background colors
+    description.zh: 赋予*==xxx==*, **==xxx==** and ***==xxx==*** 不同高亮背景色
+    type: class-toggle
+    default: false
+  -
+    id: bg-color-highlight-1
+    title: Highlight Background Color Plus 1 (*==xx==*)
+    title.zh: 高亮颜色 Plus 1 (*==xx==*)
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#ff000034'
+    default-dark: '#c865656f'
+  -
+    id: color-highlight-1
+    title: Highlight Text Color Plus 1 (*==xx==*)
+    title.zh: 高亮颜色 Plus 1 (*==xx==*)
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
+    id: font-weight-highlight-1
+    title: Font Weight of Highlight Text Plus 1 (*==xx==*)
+    title.zh: 字重 Plus 1 (*==xx==*)
+    description: Can type normal, bold, lighter or bolder to change the font weight
+    description.zh: 可以输入 normal, bold, lighter 或者 bolder 去改变字重
+    type: variable-text
+    default: normal
+  -
+    id: bg-color-highlight-2
+    title: Highlight Background Color Plus 2 (**==xx==**)
+    title.zh: 高亮颜色 Plus 2 (**==xx==**)
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#0fc41835'
+    default-dark: '#54b9476f'
+  -
+    id: color-highlight-2
+    title: Highlight Text Color Plus 2 (**==xx==**)
+    title.zh: 高亮颜色 Plus 2 (**==xx==**)
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
+    id: bg-color-highlight-3
+    title: Highlight Background Color Plus 3 (***==xx==***)
+    title.zh: 高亮颜色 Plus 3 (***==xx==***)
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#4ca6ff51'
+    default-dark: '#1e83d086'
+  -
+    id: font-weight-highlight-2
+    title: Font Weight of Highlight Text Plus 2 (**==xx==**)
+    title.zh: 字重 Plus 2 (**==xx==**)
+    description: Can type normal, bold, lighter or bolder to change the font weight
+    description.zh: 可以输入 normal, bold, lighter 或者 bolder 去改变字重
+    type: variable-text
+    default: normal
+  -
+    id: color-highlight-3
+    title: Highlight Text Color Plus 3 (***==xx==***)
+    title.zh: 高亮颜色 Plus 3 (***==xx==***)
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
+    id: font-weight-highlight-3
+    title: Font Weight of Highlight Text Plus 3 (***==xx==***)
+    title.zh: 字重 Plus 3 (***==xx==***)
+    description: Can type normal, bold, lighter or bolder to change the font weight
+    description.zh: 可以输入 normal, bold, lighter 或者 bolder 去改变字重
+    type: variable-text
+    default: normal
+  -
+    id: other-color-settings
+    title: 2.1.6 Other Colors
+    title.zh: 2.1.6 其他颜色
+    type: heading
+    level: 3
+    collapsed: true
+  - 
+    id: text-color-code
+    title: Inline Code Color
+    title.zh: 行内代码颜色
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#e95d00'
+    default-dark: '#d58000'
+  -
+    id: list-format-ul
+    title: Bullet Color of Unordered List
+    title.zh: 无序列表点颜色
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#0e0e0e'
+    default-dark: '#bdbdbd'
+  -
+    id: list-ol-number-color
+    title: Number Color of Ordered List
+    title.zh: 有序列表数字颜色
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#6196d6'
+    default-dark: '#2c7bd6'
+  -
+    id: accent-strong
+    title: Bold Type Color
+    title.zh: 加粗颜色
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#000000'
+    default-dark: '#f7f7f7'
+  -
+    id: accent-em
+    title: Italic Type Color
+    title.zh: 斜体颜色
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#099d4e'
+    default-dark: '#a4ca8e'
+  -
+    id: mjx-inline-math-color
+    title: Color of Mathematical Expressions (inline $x=0$)
+    title.zh: 数学表达式颜色(行内 $x=0$)
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#0e0e0e'
+    default-dark: '#bdbdbd'
+  -
+    id: mjx-math-color
+    title: Color of Mathematical Expressions ($$x=0$$)
+    title.zh: 数学表达式颜色($$x=0$$)
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#0e0e0e'
+    default-dark: '#bdbdbd'
+  -
+    id: background-leaf-resize-handle
+    title: Color of Leaf Resize Handle
+    title.zh: 页面大小调整条颜色
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#e9e9e9'
+    default-dark: '#000000'
   -
     id: font-settings
     title: 2.2 Typography
@@ -2251,6 +2337,10 @@ settings:
   --print-strong-color: var(--accent-strong);
   --print-em-color: var(--accent-em);
 
+  --font-weight-highlight-1: normal;
+  --font-weight-highlight-2: normal;
+  --font-weight-highlight-3: normal;
+
   --nord0: #2E3440;
   --nord1: #3B4252;
   --nord1-1: #3B425251;
@@ -2607,6 +2697,13 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --mjx-math-color: var(--text-normal);
   --background-leaf-resize-handle: var(--background-primary-alt-bg-4-bt);
   --text-folder-file-icon: var(--theme-color);
+
+  --color-highlight-1: var(--text-highlight);
+  --color-highlight-2: var(--text-highlight);
+  --color-highlight-3: var(--text-highlight);
+  --bg-color-highlight-1: #c865656f;
+  --bg-color-highlight-2: #54b9476f;
+  --bg-color-highlight-3: #1e83d086;
 }
 
 .theme-light {
@@ -2905,6 +3002,13 @@ body.font-family-change-to-default .cm-strong.cm-em {
   --mjx-math-color: var(--text-normal);
   --background-leaf-resize-handle: var(--background-primary-alt-bg-4-bt);
   --text-folder-file-icon: var(--theme-color);
+
+  --color-highlight-1: var(--text-highlight);
+  --color-highlight-2: var(--text-highlight);
+  --color-highlight-3: var(--text-highlight);
+  --bg-color-highlight-1: #ff000034;
+  --bg-color-highlight-2: #0fc41835;
+  --bg-color-highlight-3: #4ca6ff51;
 }
 
 body.color-scheme-options-avocado-topaz.theme-light {
@@ -10606,6 +10710,47 @@ body.text-highlight-bg-dark-switch.theme-dark .markdown-preview-view :not(font)>
   background-color: hsla(var(--text-highlight-bg-h-dark), calc(var(--text-highlight-bg-s-dark)*1.5), calc(var(--text-highlight-bg-l-dark)*1.1), calc(var(--text-highlight-bg-a-dark)*0.55));
 }
 
+body.colorful-highlight-bg .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight,
+body.colorful-highlight-bg .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight + .cm-em.cm-highlight:not([class*="strong"]),
+body.colorful-highlight-bg .markdown-preview-view :not(font):not(strong)>em>mark {
+  background-color: var(--bg-color-highlight-1);
+  color: var(--color-highlight-1);
+  font-style: normal;
+  padding: 1px 3px;
+  font-weight: var(--font-weight-highlight-1);
+}
+body.colorful-highlight-bg .markdown-preview-view :not(font):not(strong)>em>mark {
+  border-radius: var(--radius-xs);
+}
+
+body.colorful-highlight-bg .cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
+body.colorful-highlight-bg .cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-highlight.cm-strong:not([class*="em"]),
+body.colorful-highlight-bg .markdown-preview-view :not(font):not(em)>strong>mark {
+  background-color: var(--bg-color-highlight-2);
+  color: var(--color-highlight-2);
+  font-weight: var(--font-weight-highlight-2);
+}
+
+body.colorful-highlight-bg .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
+body.colorful-highlight-bg .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-em.cm-highlight.cm-strong,
+body.colorful-highlight-bg .markdown-preview-view :not(font)>strong>em>mark {
+  background-color: var(--bg-color-highlight-3);
+  color: var(--color-highlight-3) !important;
+  font-style: normal;
+  font-weight: var(--font-weight-highlight-3);
+  background-image: initial;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+}
+body.colorful-highlight-bg .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
+body.colorful-highlight-bg .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-em.cm-highlight.cm-strong,
+body.colorful-highlight-bg .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight,
+body.colorful-highlight-bg .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight + .cm-em.cm-highlight:not([class*="strong"]) {
+  padding: 1px 0px;
+}
+
+
 .workspace-leaf.mod-active .view-header {
   background-color: var(--background-primary);
   border-bottom: 3px solid var(--theme-color);
@@ -14407,11 +14552,11 @@ aside>h2 {
 
 /* ======== tooltip ========= */
 .tooltip, 
-.tooltip.mod-right{
+.tooltip.mod-right {
   color:var(--white);
   background-color:var(--interactive-accent);
 }
-.tooltip .tooltip-arrow{
+.tooltip .tooltip-arrow {
   border-bottom: 5px solid var(--interactive-accent);
 }
 .tooltip.mod-right .tooltip-arrow {
@@ -14439,8 +14584,27 @@ section.footnotes ol>li:not(.task-list-item) {
 /* ================================== */
 /* =========== admonition =========== */
 /* ================================== */
+
+body.style-options-for-admonition-plugin .admonition  {	
+  break-inside: avoid;
+}
+
+
 .admonition {
   background-color: var(--admonition-bg-color) !important;
+}
+
+.callout-title.admonition-title 
+{
+  background-color: rgba(var(--admonition-color),0.15) ;
+}
+.callout.admonition
+{
+  border-color: rgba(var(--admonition-color),0.15) ;
+}
+ .callout.admonition.admonition-plugin.is-collapsed
+{
+  overflow: hidden;
 }
 /* ad伪看板效果*/
 body.style-options-for-admonition-plugin .admonition-kanban {
@@ -14486,7 +14650,7 @@ body.style-options-for-admonition-plugin .admonition-kanban ul .list-collapse-in
 
 body.style-options-for-admonition-plugin .admonition-kanban ul .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   color: var(--text-accent);
-  transition: transform 10ms linear 0s
+  transition: transform 10ms linear 0s;
 }
 
 body.style-options-for-admonition-plugin .admonition-kanban ul>li:nth-of-type(8n+1) {
@@ -14609,13 +14773,63 @@ body.style-options-for-admonition-plugin .admonition-kanban ul ul li.task-list-i
   background-color: var(--p-kanban-card-color-1) !important;
 }
 
-
-
 /*blank ad分栏
 修改自 https://forum-zh.obsidian.md/t/topic/2081 */
-body.style-options-for-admonition-plugin .admonition  {	
-  break-inside: avoid;
+
+body.style-options-for-admonition-plugin .callout-content.admonition-content>* {
+  /* margin: 0px; */
 }
+body.style-options-for-admonition-plugin .is-live-preview .callout-content.admonition-content>p:not(:first-child):not(:last-child)
+{
+  margin-top: -1.5em;
+}
+body.style-options-for-admonition-plugin .admonition-kanban .admonition-title-icon, 
+body.style-options-for-admonition-plugin .admonition-flex .admonition-title-icon, 
+body.style-options-for-admonition-plugin .admonition-col2 .admonition-title-icon, 
+body.style-options-for-admonition-plugin .admonition-col3 .admonition-title-icon,
+body.style-options-for-admonition-plugin .admonition-col4 .admonition-title-icon {
+  display: none;
+}
+
+
+body.style-options-for-admonition-plugin .admonition-col2 .admonition-content  blockquote,
+body.style-options-for-admonition-plugin .admonition-col3  .admonition-content  blockquote,
+body.style-options-for-admonition-plugin .admonition-col4 .admonition-content  blockquote,
+body.style-options-for-admonition-plugin .admonition-flex  .admonition-content  blockquote {
+  flex: 100%;
+  border-left: none;
+  padding-left: 0;
+  margin-block-start: 0;
+  margin:0;
+  box-shadow:none;
+  background-color: transparent;
+  color: var(--text-muted);
+}
+body.style-options-for-admonition-plugin .admonition-col2 .admonition-content  blockquote p::before,
+body.style-options-for-admonition-plugin .admonition-col3 .admonition-content  blockquote p::before,
+body.style-options-for-admonition-plugin .admonition-col4 .admonition-content  blockquote p::before,
+body.style-options-for-admonition-plugin .admonition-flex .admonition-content  blockquote p::before {
+  display: none;
+}
+body.style-options-for-admonition-plugin .admonition-col2 .admonition-content  blockquote p,
+body.style-options-for-admonition-plugin .admonition-col3 .admonition-content  blockquote p,
+body.style-options-for-admonition-plugin .admonition-col4 .admonition-content  blockquote p,
+body.style-options-for-admonition-plugin .admonition-flex .admonition-content  blockquote p {
+  margin:0;
+}
+
+
+body.style-options-for-admonition-plugin .admonition-col2 .admonition-content  ul,
+body.style-options-for-admonition-plugin .admonition-col3 .admonition-content  ul,
+body.style-options-for-admonition-plugin .admonition-col4 .admonition-content  ul,
+body.style-options-for-admonition-plugin .admonition-flex .admonition-content  ul {
+  padding-inline-start: 20px !important;
+  margin-left: -20px;
+}
+
+
+
+
 body.style-options-for-admonition-plugin .admonition-col2 {
   box-shadow: none!important;
 }
@@ -14625,7 +14839,17 @@ body.style-options-for-admonition-plugin .admonition-col2 .admonition	{
   margin:0;
 }
 
-body.style-options-for-admonition-plugin .admonition-col2>.admonition-content {	
+body.style-options-for-admonition-plugin .admonition-col2>.admonition-content-holder> .admonition-content {	
+  columns:150px 2;
+  -moz-columns:150px 2;
+  -webkit-columns:150px 2;
+  column-gap: 2vw;
+  overflow: visible ;
+  margin:0;
+  /*分栏的分割线
+  column-rule: 1px solid #d4d2d2; */
+}
+body.style-options-for-admonition-plugin .callout.admonition-col2> .admonition-content {	
   columns:150px 2;
   -moz-columns:150px 2;
   -webkit-columns:150px 2;
@@ -14638,18 +14862,18 @@ body.style-options-for-admonition-plugin .admonition-col2>.admonition-content {
 body.style-options-for-admonition-plugin .admonition-col2 .admonition-content ol,
 body.style-options-for-admonition-plugin .admonition-col2 .admonition-content ul {	
   margin-top: -0.25em;
+  
 }
-body.style-options-for-admonition-plugin  .admonition-col2 .admonition-content h3,
-body.style-options-for-admonition-plugin  .admonition-col2 .admonition-content h4 {	
-  margin-top: -0.001em;
+body.style-options-for-admonition-plugin .markdown-preview-view .admonition-col2 .admonition-content :is(h3,h4) {	
+  margin-top: -0.001em!important;
 }
 body.style-options-for-admonition-plugin .admonition-kanban .admonition-col2 .admonition-content ol{	
-  margin:0;
+  margin: 0;
   break-inside: avoid;
 }
 
 body.style-options-for-admonition-plugin .admonition-kanban .admonition-col2 .admonition-content ul {	
-  margin:0;
+  margin: 0;
   break-inside: avoid;
 }
 
@@ -14661,18 +14885,19 @@ body.style-options-for-admonition-plugin .admonition-col2 .admonition-content {
   overflow: visible ;
 }
 
-body.style-options-for-admonition-plugin .admonition-col2 >.admonition-content-holder {
-  margin-top:0!important;
-  margin-bottom:0!important;
+body.style-options-for-admonition-plugin .admonition-col2 > .admonition-content-holder {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
-body.style-options-for-admonition-plugin .admonition-col2 p{
+body.style-options-for-admonition-plugin .admonition-col2 p {
   text-align: justify;
-  margin-top:0;
+  margin-top: 0;
   padding: 2px;
+
  /*  height:100%;
   overflow: auto; */
 }
-body.style-options-for-admonition-plugin .admonition-col2 p>img{
+body.style-options-for-admonition-plugin .admonition-col2 p > img{
   display: block;
   width: 100%;
   height: auto;
@@ -14689,10 +14914,20 @@ body.style-options-for-admonition-plugin .admonition-col3 {
   
 body.style-options-for-admonition-plugin .admonition-col3 .admonition	{
   overflow: visible ;
-  margin:0;
+  margin: 0;
 }
 
-body.style-options-for-admonition-plugin .admonition-col3>.admonition-content {	
+body.style-options-for-admonition-plugin .callout.admonition-col3>.admonition-content {	
+  columns: 100px 3;
+  -moz-columns: 100px 3;
+  -webkit-columns:100px 3;
+  column-gap: 1vw;
+  overflow: visible;
+  margin: 0;
+  break-inside: avoid;
+  column-rule: 1px solid #d4d2d2; 
+}
+body.style-options-for-admonition-plugin .admonition-col3>.admonition-content-holder>.admonition-content {	
   columns:100px 3;
   -moz-columns:100px 3;
   -webkit-columns:100px 3;
@@ -14715,7 +14950,7 @@ body.style-options-for-admonition-plugin .admonition-kanban .admonition-col3 .ad
   break-inside: avoid;
 }
 body.style-options-for-admonition-plugin .admonition-col3 .admonition-content {	
-  overflow: visible ;
+  overflow: visible;
 }
 
 body.style-options-for-admonition-plugin .admonition-col3 >.admonition-content-holder {
@@ -14738,25 +14973,33 @@ body.style-options-for-admonition-plugin .admonition-col3 p>img{
 body.style-options-for-admonition-plugin .admonition-col3-parent .admonition-col3 .admonition > .admonition-title.no-title + .admonition-content-holder {
   margin-top: 0;
 }
+
 /****col4 四栏*****/
+
 
 body.style-options-for-admonition-plugin .admonition-col4 {
   box-shadow: none!important;
 }
   
 body.style-options-for-admonition-plugin .admonition-col4 .admonition	{
-  overflow: visible ;
+  overflow: visible;
   margin:0;
 }
 
-body.style-options-for-admonition-plugin .admonition-col4>.admonition-content {	
+body.style-options-for-admonition-plugin .callout.admonition-col4 > .admonition-content {	
   column-count: 4;
   column-gap: 1vw;
-  overflow: visible ;
+  overflow: visible;
   margin:0;
   break-inside: avoid;
 }
-
+body.style-options-for-admonition-plugin .admonition-col4 > .admonition-content-holder>.admonition-content {	
+  column-count: 4;
+  column-gap: 1vw;
+  overflow: visible;
+  margin:0;
+  break-inside: avoid;
+}
 body.style-options-for-admonition-plugin .admonition-col4 .admonition-content {	
   margin:0;
   break-inside: avoid;
@@ -14774,15 +15017,15 @@ body.style-options-for-admonition-plugin .admonition-kanban .admonition-col4 .ad
   margin:0;
   break-inside: avoid;
 }
-body.style-options-for-admonition-plugin .admonition-col4>.admonition-content {	
-  overflow: visible ;
+body.style-options-for-admonition-plugin .admonition-col4 > .admonition-content {	
+  overflow: visible;
 }
 
-body.style-options-for-admonition-plugin .admonition-col4 >.admonition-content-holder {
+body.style-options-for-admonition-plugin .admonition-col4 > .admonition-content-holder {
   margin-top:0!important;
   margin-bottom:0!important;
 }
-body.style-options-for-admonition-plugin .admonition-col4 p{
+body.style-options-for-admonition-plugin .admonition-col4 p {
   text-align: justify;
   margin-top:0;
   padding: 2px;
@@ -14813,6 +15056,10 @@ body.style-options-for-admonition-plugin .admonition-flex {
   margin: auto;
   box-shadow:none;
 }
+
+  .callout-content.admonition-content >p {
+    margin-top: 0 !important;
+    }
 body.style-options-for-admonition-plugin .admonition-flex >.admonition-content-holder {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
@@ -14824,14 +15071,12 @@ body.style-options-for-admonition-plugin .admonition-flex .admonition-content {
   flex-wrap: wrap;
   border:none;
 }
-body.style-options-for-admonition-plugin .admonition-flex .admonition-content div{
+body.style-options-for-admonition-plugin .admonition-flex .admonition-content>div{
   flex: 1;
   margin: 0 0.625rem;
 }
 
-body.style-options-for-admonition-plugin .callout.admonition-flex .admonition-content div{
-  margin: 0;
-}
+
 
 /*ad-table*/
 body.style-options-for-admonition-plugin .admonition-table {
@@ -16486,9 +16731,7 @@ body.style-options-for-buttons-plugin button.blank:hover {
   animation: swing_image 0.8s linear 0s 1 normal;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
 }
-body.style-options-for-buttons-plugin .admonition-content button.grad_button {
-  margin-top: 0px;
-}
+
 body.style-options-for-buttons-plugin .admonition-content span>button.grad_button{
   margin:3px;
 }
@@ -19592,7 +19835,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220405";
+  content: "uid:20220407";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
@@ -19645,7 +19888,8 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 /* ======= Call out======= */
 /* ================================== */
 
-.callout {
+.callout
+{
   background-color:var(--admonition-bg-color);
 }
 .callout ul > li.task-list-item .task-list-item-checkbox {
@@ -19706,6 +19950,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   overflow: visible;
   margin: 0;
   padding:0px;
+  border: 0;
 }
 
 /* ===段落自动缩进============ */
@@ -19737,85 +19982,103 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
     > [!note right]
    */
 .callout.callout:is([data-callout-metadata*="left"], [data-callout*=left]) {
-  float: left;
+  float: left !important;
   margin: unset;
 }
 .callout.callout:is([data-callout-metadata*="right"], [data-callout*=right]) {
-  float: right;
+  float: right !important;
   margin: unset;
 }
 
 .callout.callout:is([data-callout-metadata*="center"], [data-callout*=center]) {
   display: block;
   margin: auto;
-  float: unset;
+  float: unset  !important ;
 }
    /* ===百分比宽度============ */
    /*支持两种写法
     > [!note|30%]
     > [!note 30%]
    */
-.callout.callout:is([data-callout-metadata*='100%'],[data-callout*='100%']) {
+.callout.callout:is([data-callout-metadata*='100%'],
+[data-callout*='100%']) {
   width: 100%;
 }
-.callout.callout:is([data-callout-metadata*='95%'],[data-callout*='95%']) {
+.callout.callout:is([data-callout-metadata*='95%'],
+[data-callout*='95%']) {
   width: 95%;
 }
-.callout.callout:is([data-callout-metadata*='90%'],[data-callout*='90%']) {
+.callout.callout:is([data-callout-metadata*='90%'],
+[data-callout*='90%']) {
   width: 90%;
 }
-.callout.callout:is([data-callout-metadata*='85%'],[data-callout*='85%']) {
+.callout.callout:is([data-callout-metadata*='85%'],
+[data-callout*='85%']) {
   width: 85%;
 }
-.callout.callout:is([data-callout-metadata*='80%'],[data-callout*='80%']) {
+.callout.callout:is([data-callout-metadata*='80%'],
+[data-callout*='80%']) {
   width: 80%;
 }
-.callout.callout:is([data-callout-metadata*='75%'],[data-callout*='75%']) {
+.callout.callout:is([data-callout-metadata*='75%'],
+[data-callout*='75%']) {
   width: 75%;
 }
-.callout.callout:is([data-callout-metadata*='70%'],[data-callout*='70%']) {
+.callout.callout:is([data-callout-metadata*='70%'],
+[data-callout*='70%']) {
   width: 70%;
 }
-.callout.callout:is([data-callout-metadata*='65%'],[data-callout*='65%']) {
+.callout.callout:is([data-callout-metadata*='65%'],
+[data-callout*='65%']) {
   width: 65%;
 }
-.callout.callout:is([data-callout-metadata*='60%'],[data-callout*='60%']) {
+.callout.callout:is([data-callout-metadata*='60%'],
+[data-callout*='60%']) {
   width: 60%;
 }
-.callout.callout:is([data-callout-metadata*='55%'],[data-callout*='55%']) {
+.callout.callout:is([data-callout-metadata*='55%'],
+[data-callout*='55%']) {
   width: 55%;
 }
-callout.callout:is([data-callout-metadata*='50%'],[data-callout*='50%']) {
+.callout.callout:is([data-callout-metadata*='50%'],
+[data-callout*='50%']) {
   width: 50%;
 }
-.callout.callout:is([data-callout-metadata*='45%'],[data-callout*='45%']) {
+.callout.callout:is([data-callout-metadata*='45%'],
+[data-callout*='45%']) {
   width: 45%;
 }
-.callout.callout:is([data-callout-metadata*='40%'],[data-callout*='40%']) {
+.callout.callout:is([data-callout-metadata*='40%'],
+[data-callout*='40%']) {
   width: 40%;
 }
-.callout.callout:is([data-callout-metadata*='35%'],[data-callout*='35%']) {
+.callout.callout:is([data-callout-metadata*='35%'],
+[data-callout*='35%']) {
   width: 35%;
 }
-.callout.callout:is([data-callout-metadata*='30%'],[data-callout*='30%']) {
+.callout.callout:is([data-callout-metadata*='30%'],
+[data-callout*='30%']) {
   width: 30%;
 }
-.callout.callout:is([data-callout-metadata*='25%'],[data-callout*='25%']) {
+.callout.callout:is([data-callout-metadata*='25%'],
+[data-callout*='25%']) {
   width: 25%;
 }
-.callout.callout:is([data-callout-metadata*='20%'],[data-callout*='20%']) {
+.callout.callout:is([data-callout-metadata*='20%'],
+[data-callout*='20%']) {
   width: 20%;
 }
-.callout.callout:is([data-callout-metadata*='15%'],[data-callout*='15%']) {
+.callout.callout:is([data-callout-metadata*='15%'],
+[data-callout*='15%']) {
   width: 15%;
 }
-.callout.callout:is([data-callout-metadata*='10%'],[data-callout*='10%']) {
+.callout.callout:is([data-callout-metadata*='10%'],
+[data-callout*='10%']) {
   width: 10%;
 }
 
 
 /* callout模糊文字效果*/
-
 .callout.callout[data-callout=cloze] {
   border-left-width: 0;
   filter: blur(4px);
@@ -19869,7 +20132,7 @@ callout.callout:is([data-callout-metadata*='50%'],[data-callout*='50%']) {
   flex-wrap: wrap;
 }
 
-.callout.callout[data-callout*="kanban"]  ul>li:not(.task-list-item) {
+.callout.callout[data-callout*="kanban"] ul>li:not(.task-list-item) {
   flex: 1 1 20%;
   padding: 0.1em 1em 0.1em 0.8em  !important;
   margin: 0 0.1em 0.3em 0  !important;
@@ -19881,50 +20144,50 @@ callout.callout:is([data-callout-metadata*='50%'],[data-callout*='50%']) {
   word-break: break-word;
 }
 
-.callout.callout[data-callout*="kanban"]  ul .list-collapse-indicator.collapse-indicator.collapse-icon {
+.callout.callout[data-callout*="kanban"] ul .list-collapse-indicator.collapse-indicator.collapse-icon {
   margin-left: -1.2em;
   position: absolute;
 }
 
-.callout.callout[data-callout*="kanban"]  ul .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+.callout.callout[data-callout*="kanban"] ul .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   color: var(--text-accent);
   transition: transform 10ms linear 0s
 }
 
-.callout.callout[data-callout*="kanban"]  ul>li:nth-of-type(8n+1) {
+.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+1) {
   background-color: var(--p-kanban-color-1);
   padding-left: 1em;
 }
-.callout.callout[data-callout*="kanban"]  ul>li:nth-of-type(8n+2) {
+.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+2) {
   background-color: var(--p-kanban-color-2);
   padding-left: 1em;
 }
-.callout.callout[data-callout*="kanban"]  ul>li:nth-of-type(8n+3) {
+.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+3) {
   background-color: var(--p-kanban-color-3);
   padding-left: 1em;
 }
-.callout.callout[data-callout*="kanban"]  ul>li:nth-of-type(8n+4) {
+.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+4) {
   background-color: var(--p-kanban-color-4);
   padding-left: 1em;
 }
-.callout.callout[data-callout*="kanban"]  ul>li:nth-of-type(8n+5) {
+.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+5) {
   background-color: var(--p-kanban-color-5);
   padding-left: 1em;
 }
-.callout.callout[data-callout*="kanban"]  ul>li:nth-of-type(8n+6) {
+.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+6) {
   background-color: var(--p-kanban-color-6);
   padding-left: 1em;
 }
-.callout.callout[data-callout*="kanban"]  ul>li:nth-of-type(8n+7) {
+.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+7) {
   background-color: var(--p-kanban-color-7);
   padding-left: 1em;
 }
-.callout.callout[data-callout*="kanban"]  ul>li:nth-of-type(8n) {
+.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n) {
   background-color: var(--p-kanban-color-8);
   padding-left: 1em;
 }
 
-.callout.callout[data-callout*="kanban"]  ul ul {
+.callout.callout[data-callout*="kanban"] ul ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19935,21 +20198,21 @@ callout.callout:is([data-callout-metadata*='50%'],[data-callout*='50%']) {
   background: none;
 }
 
-.callout.callout[data-callout*="kanban"]  ul ul li:not(.task-list-item) {
+.callout.callout[data-callout*="kanban"] ul ul li:not(.task-list-item) {
   width: 100%;
   display: block;
   background-color: var(--p-kanban-card-color-1) !important;
 }
 
-.callout.callout[data-callout*="kanban"]  ul ul li:nth-child(even) {
+.callout.callout[data-callout*="kanban"] ul ul li:nth-child(even) {
   background-color: var(--p-kanban-card-color-2) !important;
 }
 
-.callout.callout[data-callout*="kanban"]  ul>li:hover {
+.callout.callout[data-callout*="kanban"] ul>li:hover {
   border-color: var(--p-kanban-border-color) !important;
 }
 
-.callout.callout[data-callout*="kanban"]  ul ul li:hover {
+.callout.callout[data-callout*="kanban"] ul ul li:hover {
   background: transparent !important;
   border-color: var(--p-kanban-border-color) !important;
   border-left: 1px solid var(--p-kanban-border-color) !important;
@@ -19960,11 +20223,11 @@ callout.callout:is([data-callout-metadata*='50%'],[data-callout*='50%']) {
   border-left: 1px solid #696969e1 !important;
 }
 
-.callout.callout[data-callout*="kanban"]  ul ul li .task-list-item-checkbox {
+.callout.callout[data-callout*="kanban"] ul ul li .task-list-item-checkbox {
   margin-left: 1.5rem;
 }
 
-.callout.callout[data-callout*="kanban"]  ul ul ul {
+.callout.callout[data-callout*="kanban"] ul ul ul {
   margin-right: 0;
 }
 
@@ -20049,10 +20312,12 @@ callout.callout:is([data-callout-metadata*='50%'],[data-callout*='50%']) {
   border-color: inherit !important;
   background-color: initial !important;
 }
-.callout.callout[data-callout*="hibox"] .callout-content:hover .task-list-item-checkbox:checked {
+.callout.callout[data-callout*="hibox"]  .callout-content:hover .task-list-item-checkbox:checked
+{
   background-color: var(--interactive-accent) !important;
 }
-.callout.callout[data-callout*="hibox"] .callout-content:hover .task-list-item-checkbox:checked::before {
+.callout.callout[data-callout*="hibox"]  .callout-content:hover .task-list-item-checkbox:checked::before
+{
   background-color: white !important;
 }
 
