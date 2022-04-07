@@ -4,16 +4,17 @@
 如果有问题或者建议 请加入Topaz社区[Topaz QQ群](https://jq.qq.com/?_wv=1027&k=TWGhXs40)  [Obsidian频道](https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=zHpby&from=246610&biz=ka)
 
 # 更新日志
-### 20220407
 
+### 20220407
 1. 优化ad9.0 插件后分栏折叠失效并进一步优化分栏效果
 2. 修复 callout 位置标签失效
+3. style settings 2.1中增加新选项“高亮背景颜色”，取代之前的2.1.5 “其他颜色”，之前的2.1.5 “其他颜色” 现成为2.1.6
+4. style settings 2.1.5中增加“切换多彩高亮颜色”，可以在一篇笔记中使用四种高亮颜色
 
 ### 20220405
-
 1. 优化sliding panes透明化选项
 2. 优化小屏幕移动端折叠符合、文件标题位置
-
+3. style settings 2.2.4中增加选项“缩减笔记下方预留空白”、“调整笔记下方预留空白大小”
 
 ### 20220404
 1. 增加新的图片排列形式：带标题的行内图片，使用`#inl`控制
