@@ -1,6 +1,8 @@
 # 示例 Demo vault
 感谢@cumany制作的升级版示例库 https://github.com/cumany/Blue-topaz-examples
 
+如果有问题或者建议 请加入Topaz社区[Topaz QQ群](https://jq.qq.com/?_wv=1027&k=TWGhXs40)  [Obsidian频道](https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=zHpby&from=246610&biz=ka)
+
 # 更新日志
 ### 20220407
 
