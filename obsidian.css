@@ -14776,7 +14776,8 @@ body.style-options-for-admonition-plugin .admonition-kanban ul ul li.task-list-i
 /*blank ad分栏
 修改自 https://forum-zh.obsidian.md/t/topic/2081 */
 
-body.style-options-for-admonition-plugin .callout-content.admonition-content>* {
+body.style-options-for-admonition-plugin .callout-content.admonition-content>* 
+{
   /* margin: 0px; */
 }
 body.style-options-for-admonition-plugin .is-live-preview .callout-content.admonition-content>p:not(:first-child):not(:last-child)
@@ -14799,7 +14800,7 @@ body.style-options-for-admonition-plugin .admonition-flex  .admonition-content  
   flex: 100%;
   border-left: none;
   padding-left: 0;
-  margin-block-start: 0;
+  margin-block-start:0;
   margin:0;
   box-shadow:none;
   background-color: transparent;
@@ -14826,8 +14827,6 @@ body.style-options-for-admonition-plugin .admonition-flex .admonition-content  u
   padding-inline-start: 20px !important;
   margin-left: -20px;
 }
-
-
 
 
 body.style-options-for-admonition-plugin .admonition-col2 {
