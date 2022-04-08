@@ -191,6 +191,9 @@ settings:
         label: Leaf
         value: background-settings-workplace-theme-light-leaf
       - 
+        label: Random
+        value: background-settings-workplace-random-light
+      - 
         label: Custom
         value: background-settings-workplace-theme-light-custom-option
   -
@@ -229,6 +232,9 @@ settings:
         label: Hyacinth macaw
         value: background-settings-workplace-theme-dark-hyacinth-macaw
       - 
+        label: Random
+        value: background-settings-workplace-random-dark
+      - 
         label: Custom
         value: background-settings-workplace-theme-dark-custom-option
   -
@@ -238,6 +244,14 @@ settings:
     description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片  url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
     type: variable-text
     default: url("https://")
+  - 
+    id: background-settings-workplace-random
+    title: Random Background Images
+    title.zh: 随机背景
+    description: Images will be refreshed when Obsidian launches; Internet required
+    description.zh: 图片在Obsidian打开时刷新；需要联网 
+    type: class-toggle
+    default: false
   - 
     id: transparent-panes
     title: Transparent Panes for Sliding Panes Plugin
@@ -287,7 +301,7 @@ settings:
     id: background-image-settings-markdown-page-random
     title: Random Background Images
     title.zh: 随机背景
-    description: Images will be refreshed when Obsidian launches; network is needed
+    description: Images will be refreshed when Obsidian launches; nInternet connection required
     description.zh: 图片在Obsidian打开时刷新；需要联网 
     type: class-toggle
     default: false
@@ -763,7 +777,15 @@ settings:
     opacity: true
     format: hex
     default-light: '#'
-    default-dark: '#'
+    default-dark: '#'  
+  -
+    id: font-weight-highlight-2
+    title: Font Weight of Highlight Text Plus 2 (**==xx==**)
+    title.zh: 字重 Plus 2 (**==xx==**)
+    description: Can type normal, bold, lighter or bolder to change the font weight
+    description.zh: 可以输入 normal, bold, lighter 或者 bolder 去改变字重
+    type: variable-text
+    default: normal
   -
     id: bg-color-highlight-3
     title: Highlight Background Color Plus 3 (***==xx==***)
@@ -773,14 +795,6 @@ settings:
     format: hex
     default-light: '#4ca6ff51'
     default-dark: '#1e83d086'
-  -
-    id: font-weight-highlight-2
-    title: Font Weight of Highlight Text Plus 2 (**==xx==**)
-    title.zh: 字重 Plus 2 (**==xx==**)
-    description: Can type normal, bold, lighter or bolder to change the font weight
-    description.zh: 可以输入 normal, bold, lighter 或者 bolder 去改变字重
-    type: variable-text
-    default: normal
   -
     id: color-highlight-3
     title: Highlight Text Color Plus 3 (***==xx==***)
@@ -14776,8 +14790,7 @@ body.style-options-for-admonition-plugin .admonition-kanban ul ul li.task-list-i
 /*blank ad分栏
 修改自 https://forum-zh.obsidian.md/t/topic/2081 */
 
-body.style-options-for-admonition-plugin .callout-content.admonition-content>* 
-{
+body.style-options-for-admonition-plugin .callout-content.admonition-content>* {
   /* margin: 0px; */
 }
 body.style-options-for-admonition-plugin .is-live-preview .callout-content.admonition-content>p:not(:first-child):not(:last-child)
@@ -14800,7 +14813,7 @@ body.style-options-for-admonition-plugin .admonition-flex  .admonition-content  
   flex: 100%;
   border-left: none;
   padding-left: 0;
-  margin-block-start:0;
+  margin-block-start: 0;
   margin:0;
   box-shadow:none;
   background-color: transparent;
@@ -14827,6 +14840,8 @@ body.style-options-for-admonition-plugin .admonition-flex .admonition-content  u
   padding-inline-start: 20px !important;
   margin-left: -20px;
 }
+
+
 
 
 body.style-options-for-admonition-plugin .admonition-col2 {
@@ -19311,6 +19326,13 @@ body.background-settings-workplace-background-image.background-settings-workplac
   --theme-background: var(--hyacinth-macaw);
 }
 
+body.background-settings-workplace-background-image.background-settings-workplace-random-dark.theme-dark {
+  background-image: url("https://source.unsplash.com/random") !important;
+}
+body.background-settings-workplace-background-image.background-settings-workplace-random-light.theme-light {
+  background-image: url("https://source.unsplash.com/random?1") !important;
+}
+
 body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-container-before.is-before-active .workspace-tab-header-inner, 
 body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-container-after.is-after-active .workspace-tab-header-inner, body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-header.is-before-active .workspace-tab-header-inner, 
 body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-header.is-after-active .workspace-tab-header-inner,
@@ -20427,21 +20449,17 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 }
 
 /******callout timeline*****/
-
 .callout.callout[data-callout="timeline"] .callout-title {
  
 }
-
-.callout.callout[data-callout="timeline"]
-{
+.callout.callout[data-callout="timeline"] {
   --callout-color:31, 172, 139;
-   --callout-icon:'<svg t="1649346326592" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2210"><path d="M384 170.666667m42.666667 0l512 0q42.666667 0 42.666666 42.666666l0 0q0 42.666667-42.666666 42.666667l-512 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666666Z" p-id="2211"></path><path d="M384 469.333333m42.666667 0l512 0q42.666667 0 42.666666 42.666667l0 0q0 42.666667-42.666666 42.666667l-512 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666667Z" p-id="2212"></path><path d="M384 768m42.666667 0l512 0q42.666667 0 42.666666 42.666667l0 0q0 42.666667-42.666666 42.666666l-512 0q-42.666667 0-42.666667-42.666666l0 0q0-42.666667 42.666667-42.666667Z" p-id="2213"></path><path d="M239.835143 127.973411m15.084945 15.084944l60.339779 60.339779q15.084945 15.084945 0 30.169889l-60.339779 60.339779q-15.084945 15.084945-30.169889 0l-60.339779-60.339779q-15.084945-15.084945 0-30.169889l60.339779-60.339779q15.084945-15.084945 30.169889 0Z" p-id="2214"></path><path d="M239.831988 426.647696m15.084944 15.084945l60.339779 60.339778q15.084945 15.084945 0 30.16989l-60.339779 60.339778q-15.084945 15.084945-30.169889 0l-60.339779-60.339778q-15.084945-15.084945 0-30.16989l60.339779-60.339778q15.084945-15.084945 30.169889 0Z" p-id="2215"></path><path d="M239.828832 725.321982m15.084944 15.084944l60.339779 60.339779q15.084945 15.084945 0 30.169889l-60.339779 60.339779q-15.084945 15.084945-30.169889 0l-60.339779-60.339779q-15.084945-15.084945 0-30.169889l60.339779-60.339779q15.084945-15.084945 30.169889 0Z" p-id="2216"></path><path d="M213.333333 853.333333H85.333333a42.666667 42.666667 0 0 1-42.666666-42.666666V213.333333a42.666667 42.666667 0 0 1 42.666666-42.666666h128v85.333333H138.666667a10.709333 10.709333 0 0 0-10.666667 10.666667v192a10.709333 10.709333 0 0 0 10.666667 10.666666H213.333333v85.333334H138.666667a10.709333 10.709333 0 0 0-10.666667 10.666666v192a10.709333 10.709333 0 0 0 10.666667 10.666667H213.333333v85.333333z" p-id="2217"></path></svg>';
+  --callout-icon:'<svg t="1649346326592" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2210"><path d="M384 170.666667m42.666667 0l512 0q42.666667 0 42.666666 42.666666l0 0q0 42.666667-42.666666 42.666667l-512 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666666Z" p-id="2211"></path><path d="M384 469.333333m42.666667 0l512 0q42.666667 0 42.666666 42.666667l0 0q0 42.666667-42.666666 42.666667l-512 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666667Z" p-id="2212"></path><path d="M384 768m42.666667 0l512 0q42.666667 0 42.666666 42.666667l0 0q0 42.666667-42.666666 42.666666l-512 0q-42.666667 0-42.666667-42.666666l0 0q0-42.666667 42.666667-42.666667Z" p-id="2213"></path><path d="M239.835143 127.973411m15.084945 15.084944l60.339779 60.339779q15.084945 15.084945 0 30.169889l-60.339779 60.339779q-15.084945 15.084945-30.169889 0l-60.339779-60.339779q-15.084945-15.084945 0-30.169889l60.339779-60.339779q15.084945-15.084945 30.169889 0Z" p-id="2214"></path><path d="M239.831988 426.647696m15.084944 15.084945l60.339779 60.339778q15.084945 15.084945 0 30.16989l-60.339779 60.339778q-15.084945 15.084945-30.169889 0l-60.339779-60.339778q-15.084945-15.084945 0-30.16989l60.339779-60.339778q15.084945-15.084945 30.169889 0Z" p-id="2215"></path><path d="M239.828832 725.321982m15.084944 15.084944l60.339779 60.339779q15.084945 15.084945 0 30.169889l-60.339779 60.339779q-15.084945 15.084945-30.169889 0l-60.339779-60.339779q-15.084945-15.084945 0-30.169889l60.339779-60.339779q15.084945-15.084945 30.169889 0Z" p-id="2216"></path><path d="M213.333333 853.333333H85.333333a42.666667 42.666667 0 0 1-42.666666-42.666666V213.333333a42.666667 42.666667 0 0 1 42.666666-42.666666h128v85.333333H138.666667a10.709333 10.709333 0 0 0-10.666667 10.666667v192a10.709333 10.709333 0 0 0 10.666667 10.666666H213.333333v85.333334H138.666667a10.709333 10.709333 0 0 0-10.666667 10.666666v192a10.709333 10.709333 0 0 0 10.666667 10.666667H213.333333v85.333333z" p-id="2217"></path></svg>';
   border-left:none;
- background-color:transparent;
+  background-color:transparent;
 }
 
-
-.callout.callout[data-callout="timeline"] >.callout-content  {
+.callout.callout[data-callout="timeline"] >.callout-content {
   border-left:none;
   display: -ms-grid;
   display: grid;
@@ -20452,12 +20470,11 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   row-gap: 0.25rem;
   margin: 2.3rem 1rem 0 0;
   padding:0px;
-  
 }
-.callout.callout[data-callout="timeline"]  .callout-content hr::before {
+.callout.callout[data-callout="timeline"] .callout-content hr::before {
   display: none;
 }
-.callout.callout[data-callout="timeline"]  .callout-content hr {
+.callout.callout[data-callout="timeline"] .callout-content hr {
   height: 100%;
   width: 0.5rem;
   -ms-grid-column: 2;
@@ -20470,27 +20487,25 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   grid-row-end: 9;
   margin:auto;
   border: 0px;
-   overflow: hidden;
-   border-radius:10px;
-
+  overflow: hidden;
+  border-radius:10px;
 }
-
-.callout.callout[data-callout="timeline"]  .callout-content blockquote{
+.callout.callout[data-callout="timeline"] .callout-content blockquote {
   display: block;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1 / span 1;
-    position: relative;
-    -ms-flex-item-align: start;
-    -ms-grid-row-align: start;
-    align-self: start;
-    text-align: left;
-    margin:0px;
-    border:none;
-    padding: 0;
-    margin-inline-start:0;
-    margin-inline-end: 0px;
-    background-color: unset;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+  position: relative;
+  -ms-flex-item-align: start;
+  -ms-grid-row-align: start;
+  align-self: start;
+  text-align: left;
+  margin:0px;
+  border:none;
+  padding: 0;
+  margin-inline-start:0;
+  margin-inline-end: 0px;
+  background-color: unset;
 }
 .callout.callout[data-callout="timeline"]  .callout-content blockquote p::before{
   display: none;
@@ -20502,9 +20517,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   font-style: normal;
   padding:6px;
   border-radius: 5px;
- 
 }
-
 .callout.callout[data-callout="timeline"]  .callout-content>*:not(blockquote):not(hr) {
   position: relative;
   -ms-grid-column: 3;
@@ -20513,7 +20526,6 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   margin-block-start:0;
   margin-block-end: 0em;
 }
-.callout.callout[data-callout="timeline"] table
-{
+.callout.callout[data-callout="timeline"] table {
   font-size:13px;
 }
