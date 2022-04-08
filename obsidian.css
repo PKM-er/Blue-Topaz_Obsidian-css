@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.14.5。uid [20220407] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.14.5, uid [20220407] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.14.5。uid [20220408] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.14.5, uid [20220408] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -12579,7 +12579,7 @@ div.mermaidTooltip {
 .taskTextOutsideRight {
   fill: var(--text-normal) !important;
   text-anchor: start !important;
-  font-size: 9px !important;
+  font-size: 12px !important;
   font-family: var(--mermaid-font-family) !important;
 }
 
@@ -15101,6 +15101,9 @@ body.style-options-for-admonition-plugin .admonition-blank {
 body.style-options-for-admonition-plugin .admonition-blank .admonition-content {
   overflow: visible;
   margin: 0;
+}
+body.style-options-for-admonition-plugin .callout.admonition-blank .admonition-content {
+  overflow: hidden;
 }
 
 /* 感谢 围城 网友分享
@@ -19834,7 +19837,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220407";
+  content: "uid:20220408";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
@@ -20421,4 +20424,96 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 .callout.callout[data-callout*=bookinfo] .callout-content table {
   width: 68%;
   margin-left: 2%;
+}
+
+/******callout timeline*****/
+
+.callout.callout[data-callout="timeline"] .callout-title {
+ 
+}
+
+.callout.callout[data-callout="timeline"]
+{
+  --callout-color:31, 172, 139;
+   --callout-icon:'<svg t="1649346326592" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2210"><path d="M384 170.666667m42.666667 0l512 0q42.666667 0 42.666666 42.666666l0 0q0 42.666667-42.666666 42.666667l-512 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666666Z" p-id="2211"></path><path d="M384 469.333333m42.666667 0l512 0q42.666667 0 42.666666 42.666667l0 0q0 42.666667-42.666666 42.666667l-512 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666667Z" p-id="2212"></path><path d="M384 768m42.666667 0l512 0q42.666667 0 42.666666 42.666667l0 0q0 42.666667-42.666666 42.666666l-512 0q-42.666667 0-42.666667-42.666666l0 0q0-42.666667 42.666667-42.666667Z" p-id="2213"></path><path d="M239.835143 127.973411m15.084945 15.084944l60.339779 60.339779q15.084945 15.084945 0 30.169889l-60.339779 60.339779q-15.084945 15.084945-30.169889 0l-60.339779-60.339779q-15.084945-15.084945 0-30.169889l60.339779-60.339779q15.084945-15.084945 30.169889 0Z" p-id="2214"></path><path d="M239.831988 426.647696m15.084944 15.084945l60.339779 60.339778q15.084945 15.084945 0 30.16989l-60.339779 60.339778q-15.084945 15.084945-30.169889 0l-60.339779-60.339778q-15.084945-15.084945 0-30.16989l60.339779-60.339778q15.084945-15.084945 30.169889 0Z" p-id="2215"></path><path d="M239.828832 725.321982m15.084944 15.084944l60.339779 60.339779q15.084945 15.084945 0 30.169889l-60.339779 60.339779q-15.084945 15.084945-30.169889 0l-60.339779-60.339779q-15.084945-15.084945 0-30.169889l60.339779-60.339779q15.084945-15.084945 30.169889 0Z" p-id="2216"></path><path d="M213.333333 853.333333H85.333333a42.666667 42.666667 0 0 1-42.666666-42.666666V213.333333a42.666667 42.666667 0 0 1 42.666666-42.666666h128v85.333333H138.666667a10.709333 10.709333 0 0 0-10.666667 10.666667v192a10.709333 10.709333 0 0 0 10.666667 10.666666H213.333333v85.333334H138.666667a10.709333 10.709333 0 0 0-10.666667 10.666666v192a10.709333 10.709333 0 0 0 10.666667 10.666667H213.333333v85.333333z" p-id="2217"></path></svg>';
+  border-left:none;
+ background-color:transparent;
+}
+
+
+.callout.callout[data-callout="timeline"] >.callout-content  {
+  border-left:none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto 1fr;
+  grid-template-columns: 0.3fr auto 1fr;
+  -webkit-column-gap: 1.5rem;
+  column-gap: 1.5rem;
+  row-gap: 0.25rem;
+  margin: 2.3rem 1rem 0 0;
+  padding:0px;
+  
+}
+.callout.callout[data-callout="timeline"]  .callout-content hr::before {
+  display: none;
+}
+.callout.callout[data-callout="timeline"]  .callout-content hr {
+  height: 100%;
+  width: 0.5rem;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / span 1;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  background-color: var(--text-normal);
+  opacity: 0.1;
+  grid-row-end: 9;
+  margin:auto;
+  border: 0px;
+   overflow: hidden;
+   border-radius:10px;
+
+}
+
+.callout.callout[data-callout="timeline"]  .callout-content blockquote{
+  display: block;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / span 1;
+    position: relative;
+    -ms-flex-item-align: start;
+    -ms-grid-row-align: start;
+    align-self: start;
+    text-align: left;
+    margin:0px;
+    border:none;
+    padding: 0;
+    margin-inline-start:0;
+    margin-inline-end: 0px;
+    background-color: unset;
+}
+.callout.callout[data-callout="timeline"]  .callout-content blockquote p::before{
+  display: none;
+}
+.callout.callout[data-callout="timeline"]  .callout-content blockquote p{
+  display: block;
+  color: var(--time-font-color);
+  background-color: var(--time-color);
+  font-style: normal;
+  padding:6px;
+  border-radius: 5px;
+ 
+}
+
+.callout.callout[data-callout="timeline"]  .callout-content>*:not(blockquote):not(hr) {
+  position: relative;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / span 1;
+  margin-block-start:0;
+  margin-block-end: 0em;
+}
+.callout.callout[data-callout="timeline"] table
+{
+  font-size:13px;
 }

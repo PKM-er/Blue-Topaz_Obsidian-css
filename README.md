@@ -5,7 +5,14 @@
 
 # 更新日志
 
+
+
+### 20220408
+
+1. 增加timeline  callout语法 具体用法参考[BT示例库](https://github.com/cumany/Blue-topaz-examples)
+
 ### 20220407
+
 1. 优化ad9.0 插件后分栏折叠失效并进一步优化分栏效果
 2. 修复 callout 位置标签失效
 3. style settings 2.1中增加新选项“高亮背景颜色”，取代之前的2.1.5 “其他颜色”，之前的2.1.5 “其他颜色” 现成为2.1.6
