@@ -18252,7 +18252,7 @@ body:not(.background-image-settings-switch).background-image-settings-markdown-p
   background-color: var(--background-secondary-alt-bg-4-bt-publish);
 }
 
-.nav-view-outer .tree-item:not(:first-child) .tree-item-children {
+.nav-view-outer .tree-item .tree-item .tree-item-children {
   margin-left: 12px;
   padding-left: 0;
   border-left: 2px solid var(--background-modifier-border);
@@ -18260,7 +18260,7 @@ body:not(.background-image-settings-switch).background-image-settings-markdown-p
   transition: all 400ms ease-in;
 }
 
-.nav-view-outer .tree-item:not(:first-child) .tree-item-children:hover {
+.nav-view-outer .tree-item .tree-item .tree-item-children:hover {
   border-left-color: var(--theme-color);
 }
 
