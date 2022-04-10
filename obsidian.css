@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.14.5。uid [20220408] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.14.5, uid [20220408] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.14.5。uid [20220410] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.14.5, uid [20220410] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -267,7 +267,7 @@ settings:
     collapsed: true
   - 
     id: background-image-settings-switch
-    title: Switch off Background Images
+    title: Remove Background Images
     title.zh: 移除笔记背景
     type: class-toggle
     default: false
@@ -334,6 +334,88 @@ settings:
       - 
         label: Yellow and Orange
         value: background-image-settings-markdown-page-random-yellow-and-orange
+  -
+    id: background-settings-command-palette
+    title: 1.2.3 Images of Command Palette
+    title.zh: 1.2.3 命令面板背景
+    type: heading
+    level: 3
+    collapsed: true
+  - 
+    id: background-image-settings-command-palette-switch
+    title: Remove Images of Command Palette
+    title.zh: 移除命令面板背景
+    type: class-toggle
+    default: false
+  -
+    id: background-image-settings-command-palette-same-as-workplace
+    title: Consistent with Workplace Background Image
+    title.zh: 与工作页面背景保持一致
+    type: class-toggle
+    default: false
+  -
+    id: background-image-settings-command-palette-custom
+    title: Custom Background Image
+    title.zh: 自定义图片
+    type: class-toggle
+    default: false
+  -
+    id: background-command-palette-theme-light-custom
+    title: Custom Theme light (url)
+    description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片  url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
+    type: variable-text
+    default: url("https://") 
+  -
+    id: background-command-palette-theme-dark-custom
+    title: Custom Theme Dark (url)
+    description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片  url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
+    type: variable-text
+    default: url("https://")
+  - 
+    id: blur-depth-cp
+    title: Blur Depth
+    title.zh: 模糊程度
+    description: To adjust the degree of blur
+    description.zh: 调整背景壁纸模糊程度
+    type: variable-number-slider
+    default: 10
+    format: px
+    min: 0
+    max: 30
+    step: 1
+  - 
+    id: brightness-4-bg-cp
+    title: Brightness
+    title.zh: 图片亮度
+    description: To adjust the brightness
+    description.zh: 调整背景壁纸亮度
+    type: variable-number-slider
+    default: 0.9
+    min: 0.3
+    max: 1.5
+    step: 0.1
+  - 
+    id: saturate-4-bg-cp
+    title: Saturation
+    title.zh: 图片饱和度
+    description: To adjust the saturation
+    description.zh: 调整背景壁纸饱和度
+    type: variable-number-slider
+    default: 1
+    min: 0
+    max: 2
+    step: 0.1
+  - 
+    id: opacity-cp
+    title: Opacity
+    title.zh: 透明度
+    type: variable-number-slider
+    default: 0.25
+    min: 0
+    max: 1
+    step: 0.05
   - 
     id: layout-settings
     title: 1.3 Layout
@@ -746,7 +828,7 @@ settings:
   -
     id: color-highlight-1
     title: Highlight Text Color Plus 1 (*==xx==*)
-    title.zh: 高亮颜色 Plus 1 (*==xx==*)
+    title.zh: 高亮文字颜色 Plus 1 (*==xx==*)
     type: variable-themed-color
     opacity: true
     format: hex
@@ -772,7 +854,7 @@ settings:
   -
     id: color-highlight-2
     title: Highlight Text Color Plus 2 (**==xx==**)
-    title.zh: 高亮颜色 Plus 2 (**==xx==**)
+    title.zh: 高亮文字颜色 Plus 2 (**==xx==**)
     type: variable-themed-color
     opacity: true
     format: hex
@@ -798,7 +880,7 @@ settings:
   -
     id: color-highlight-3
     title: Highlight Text Color Plus 3 (***==xx==***)
-    title.zh: 高亮颜色 Plus 3 (***==xx==***)
+    title.zh: 高亮文字颜色 Plus 3 (***==xx==***)
     type: variable-themed-color
     opacity: true
     format: hex
@@ -2330,9 +2412,15 @@ settings:
 
   --background-settings-workplace-theme-light-custom: url("https://");
   --background-settings-workplace-theme-dark-custom: url("https://");
+  --background-command-palette-theme-light-custom: url("https://");
+  --background-command-palette-theme-dark-custom: url("https://");
   --blur-depth: 10px;
+  --blur-depth-cp: 10px;
   --saturate-4-bg: 1;
+  --saturate-4-bg-cp: 1;
   --brightness-4-bg: 0.9;
+  --brightness-4-bg-cp: 0.9;
+  --opacity-cp: 0.25;
 
   --fancy-hr-icon: '😀';
   --fancy-hr-rotate: 0deg;
@@ -10791,6 +10879,10 @@ body.bt-status-off .status-bar {
   max-height:26px;
   padding:2px 8px 6px 3px;
 }
+body.bt-status-off .document-search-container{
+  width: 72%;
+  background-color: var(--background-secondary-bg-4-bt);
+}
 
 .status-bar {
   --bar-vertical-padding: 4px;
@@ -17262,6 +17354,7 @@ body.dialogue-style-chat .dialogue-plugin-message-title {
   font-size: var(--font-size-code);
 }
 
+
 /* ============ */
 /* just for fun */
 /* ============ */
@@ -19180,13 +19273,7 @@ body.background-settings-workplace-style-high-transparency .side-dock-ribbon-act
   color: var(--text-normal);
 }
 
-/*blur*/
-body.background-settings-workplace-background-image.theme-light .workspace::before {
-  background-image: var(--theme-background);
-  background-size: cover;
-  filter: blur(var(--blur-depth)) brightness(var(--brightness-4-bg)) saturate(var(--saturate-4-bg));
-}
-
+body.background-settings-workplace-background-image.theme-light .workspace::before,
 body.background-settings-workplace-background-image.theme-dark .workspace::before {
   background-image: var(--theme-background);
   background-size: cover;
@@ -19333,6 +19420,35 @@ body.background-settings-workplace-background-image.background-settings-workplac
   background-image: url("https://source.unsplash.com/random?1") !important;
 }
 
+body:not(.background-image-settings-command-palette-switch) .modal-container .prompt::before {
+  background-size: cover;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+body:not(.background-image-settings-command-palette-switch):not(.background-image-settings-command-palette-same-as-workplace) .modal-container .prompt::before {
+  background-image: url("https://source.unsplash.com/random");
+  filter: blur(var(--blur-depth-cp)) brightness(var(--brightness-4-bg-cp)) saturate(var(--saturate-4-bg-cp));
+  opacity: var(--opacity-cp);
+}
+
+body.background-image-settings-command-palette-same-as-workplace:not(.background-image-settings-command-palette-switch) .modal-container .prompt::before {
+  background-image: var(--theme-background);
+  filter: blur(var(--blur-depth)) brightness(var(--brightness-4-bg)) saturate(var(--saturate-4-bg));
+  opacity: 0.25;
+}
+
+body.background-image-settings-command-palette-custom:not(.background-image-settings-command-palette-switch):not(.background-image-settings-command-palette-same-as-workplace).theme-light .modal-container .prompt::before {
+  background-image: var(--background-command-palette-theme-light-custom);
+}
+
+body.background-image-settings-command-palette-custom:not(.background-image-settings-command-palette-switch):not(.background-image-settings-command-palette-same-as-workplace).theme-dark .modal-container .prompt::before {
+  background-image: var(--background-command-palette-theme-dark-custom);
+}
+
 body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-container-before.is-before-active .workspace-tab-header-inner, 
 body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-container-after.is-after-active .workspace-tab-header-inner, body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-header.is-before-active .workspace-tab-header-inner, 
 body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-header.is-after-active .workspace-tab-header-inner,
@@ -19348,11 +19464,11 @@ body.layout-style-options-default.background-settings-workplace-background-image
 }
 
 body.background-settings-workplace-background-image.background-settings-workplace-theme-light-custom-option.theme-light {
-  --theme-background: var(--background-settings-workplace-theme-light-custom) ;
+  --theme-background: var(--background-settings-workplace-theme-light-custom);
 }
 
 body.background-settings-workplace-background-image.background-settings-workplace-theme-dark-custom-option.theme-dark {
-  --theme-background: var(--background-settings-workplace-theme-dark-custom) ;
+  --theme-background: var(--background-settings-workplace-theme-dark-custom);
 }
 
 /*rectangle*/
@@ -19859,7 +19975,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220408";
+  content: "uid:20220410";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
