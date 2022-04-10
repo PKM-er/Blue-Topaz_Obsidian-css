@@ -5,11 +5,14 @@
 
 # 更新日志
 
-
+### 20220410
+1. 增加style settings 1.2.3 命令面板背景
+2. 修复publish文件栏层级线第一级不显示的问题
 
 ### 20220408
 
 1. 增加timeline  callout语法 具体用法参考[BT示例库](https://github.com/cumany/Blue-topaz-examples)
+2. 增加1.2.1 工作页面背景选项“随机背景”，需要联网
 
 ### 20220407
 
