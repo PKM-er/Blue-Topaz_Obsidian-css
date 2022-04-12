@@ -5,7 +5,20 @@
 
 # 更新日志
 
+### 20220412
+
+1. 增加nowrap callout metadata属性，添加此属性元素不会自动换行。
+
+2. 目前支持callout  metadata的属性有
+| 属性名称            | 解释                          |
+| ------------------- | ----------------------------- |
+| xx%                 | callout宽度xx代表10-100的数值 |
+| right\|left\|center | callout布局位置               |
+| indent              | 全文自动缩进2字符             |
+| nowrap              | 元素不换行                    |
+
 ### 20220410
+
 1. 增加style settings 1.2.3 命令面板背景
 2. 修复publish文件栏层级线第一级不显示的问题
 
