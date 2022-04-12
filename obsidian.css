@@ -20135,11 +20135,25 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   margin: auto;
   float: unset  !important ;
 }
+  /* ===块内元素不换行============ */
+.callout.callout:is([data-callout-metadata*='nowrap'],
+[data-callout*='nowrap']) {
+ max-width: unset!important;
+ white-space: nowrap;
+ overflow: hidden;
+}
+.callout.callout:is([data-callout-metadata*='nowrap'],
+[data-callout*='nowrap']) img{
+ max-width: unset!important;
+}
+
+
    /* ===百分比宽度============ */
    /*支持两种写法
     > [!note|30%]
     > [!note 30%]
    */
+
 .callout.callout:is([data-callout-metadata*='100%'],
 [data-callout*='100%']) {
   width: 100%;
