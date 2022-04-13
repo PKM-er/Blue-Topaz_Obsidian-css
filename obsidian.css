@@ -994,43 +994,43 @@ settings:
     type: class-toggle
     default: false
   -
-    id: font-family-major
+    id: font-text-theme
     title: Main Font
     title.zh: 主体字体
     description: Fonts except from the code texts
     description.zh: 除代码框外字体
     type: variable-text
-    default: "Bookerly, Merriweather, 'LXGW WenKai', 'Segoe UI Emoji', var(--default-font)"
+    default: "Bookerly, Merriweather, 'LXGW WenKai', 'Segoe UI Emoji', var(--font-default)"
   - 
     id: font-family-h1
     title: Header 1
     type: variable-text
-    default: "var(--default-font)"
+    default: "var(--font-default)"
   - 
     id: font-family-h2
     title: Header 2 
     type: variable-text
-    default: "var(--default-font)"
+    default: "var(--font-default)"
   - 
     id: font-family-h3
     title: Header 3
     type: variable-text
-    default: "var(--default-font)"
+    default: "var(--font-default)"
   -
     id: font-family-h4
     title: Header 4
     type: variable-text
-    default: "var(--default-font)"
+    default: "var(--font-default)"
   - 
     id: font-family-h5
     title: Header 5
     type: variable-text
-    default: "Bookerly, Merriweather, 'LXGW WenKai', var(--default-font)"
+    default: "Bookerly, Merriweather, 'LXGW WenKai', var(--font-default)"
   - 
     id: font-family-h6
     title: Header 6
     type: variable-text
-    default: "Bookerly, Merriweather, 'LXGW WenKai', var(--default-font)"
+    default: "Bookerly, Merriweather, 'LXGW WenKai', var(--font-default)"
   - 
     id: font-family-folder-file-title
     title: Folder & File Title
@@ -1060,13 +1060,13 @@ settings:
     title: Bold Text
     title.zh: 加粗文字字体
     type: variable-text
-    default: "Bookerly, 'LXGW WenKai Screen R', 'LXGW WenKai UI', 'Segoe UI Emoji', var(--default-font)"
+    default: "Bookerly, 'LXGW WenKai Screen R', 'LXGW WenKai UI', 'Segoe UI Emoji', var(--font-default)"
   - 
     id: font-family-em
     title: Italic Text
     title.zh: 斜体文字字体
     type: variable-text
-    default: "var(--font-family-major)"
+    default: "var(--font-text-theme)"
   - 
     id: font-family-vault
     title: Vault Name
@@ -2353,7 +2353,7 @@ settings:
   font-display: swap;
 }
 
-:root {
+body {
   --font-size-obsidian-titlebar: 0.75em;
   --font-size-vault-name: 0.95em;/*左侧库名字体大小*/
   --font-size-file-header-title: 0.9375em;/*文件抬头标题，只在非Andy mode plugin时生效*/
@@ -2378,15 +2378,15 @@ settings:
   --font-size-latex: 1.25em;
   --font-size-cloze: 0.9375em;
   --font-size-better-footnote: 1.3em;
-  --font-size-checklist: 0.85em;/*checklist*/
+  --font-size-checklist: 0.85em;
 
   /*font family*/
   --font-family-list: ;/*列表字体*/
-  --font-family-major: Bookerly, Merriweather, "LXGW WenKai", "Segoe UI Emoji", var(--default-font);/*主体（包括列表）字体，除代码框等少数部分*/
-  --font-family-h1: var(--default-font);
-  --font-family-h2: var(--default-font);
-  --font-family-h3: var(--default-font);
-  --font-family-h4: var(--default-font);
+  --font-text-theme: Bookerly, "LXGW WenKai", "Segoe UI Emoji"; /*主体（包括列表）字体，除代码框等少数部分*/
+  --font-family-h1: var(--font-default);
+  --font-family-h2: var(--font-default);
+  --font-family-h3: var(--font-default);
+  --font-family-h4: var(--font-default);
   --font-family-h5: ;
   --font-family-h6: ;
   --font-family-title: ;/*文件抬头标题*/
@@ -2397,10 +2397,10 @@ settings:
   --font-family-vault: "Lucida Handwriting", "Segoe UI Emoji";/*左侧库名字体*/
   --font-family-special-tag: "Lucida Handwriting", "Segoe UI Emoji";
   --font-family-YAML: "Lucida Handwriting";
-  /*--font-monospace:                    Consolas, Monaco, "Microsoft Yahei Mono", monospace;*/
+  /*--font-monospace: Consolas, Monaco, "Microsoft Yahei Mono", monospace;*/
   --mermaid-font-family: Segoe UI, "Microsoft YaHei", "Segoe UI Emoji", "trebuchet ms", verdana, Arial, cursive;
   --font-family-better-footnote: Arlrdbd, "Source Han Sans", "Segoe UI Emoji";
-  --font-family-strong: Bookerly, "LXGW WenKai Screen", "LXGW WenKai Screen R", "Segoe UI Emoji", var(--default-font);
+  --font-family-strong: Bookerly, "LXGW WenKai Screen", "LXGW WenKai Screen R", "Segoe UI Emoji", var(--font-default);
   --font-family-em: ;
 
   /*radius*/
@@ -7491,7 +7491,7 @@ div.markdown-source-view ul.floating-toc{
 /*tag font size and font family*/
 a.tag {
   font-size: var(--font-size-tag);
-  font-family: var(--font-family-tag);
+  font-family: var(--font-family-tag) !important;
 }
 
 /* ====== Tag Pills ======== */
@@ -7511,11 +7511,9 @@ a.tag {
 }
 
 .cm-s-obsidian span.cm-hashtag {
-  font-family: var(--font-family-tag);
+  font-family: var(--font-family-tag) !important;
   font-size: var(--font-size-tag);
   text-decoration: none;
-  font-family: var(--font-family-tag);
-  font-size: var(--font-size-tag);
   color: var(--tag-text) !important;
 }
 
@@ -8601,7 +8599,7 @@ body.clutter-free-headings div:not(.cm-active).cm-line  span:not(.cm-formatting-
   border-radius: var(--radius-xs);
   color: var(--text-muted);
   overflow: visible;
-  font-family: var(--default-font);
+  font-family: var(--font-default);
   font-weight: normal !important;
 }
 
@@ -8664,7 +8662,7 @@ body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line.hmd-
   border-radius: var(--radius-xs);
   color: var(--text-muted);
   overflow: visible;
-  font-family: var(--default-font);
+  font-family: var(--font-default);
   font-weight: normal !important;
 }
 body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line:not(.hmd-inactive-line) span.cm-formatting-header::before {
@@ -8676,7 +8674,7 @@ body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line:not(
   border-radius: var(--radius-xs);
   color: var(--text-muted);
   overflow: visible;
-  font-family: var(--default-font);
+  font-family: var(--font-default);
   font-weight: normal !important;
 }
 
@@ -9085,7 +9083,7 @@ body:not(.font-family-change-to-default) .markdown-preview-view .markdown-previe
 body:not(.font-family-change-to-default) .markdown-source-view.mod-cm6 .cm-scroller,
 body:not(.font-family-change-to-default) .cm-s-obsidian.is-folding.is-readable-line-width .markdown-reading-view  {
   line-height: var(--line-height-main);
-  font-family: var(--font-family-major);
+  font-family: var(--font-text);
   letter-spacing: calc(var(--letter-space-main) * 0.03em);
   /*text-align: var();*/
   -webkit-font-smoothing: subpixel-antialiased;
@@ -9817,7 +9815,7 @@ body:not(.list-no-line-in-edit) .mod-cm6 .HyperMD-list-line.cm-line .cm-hmd-list
   --accent-7-rgb: 0,171,132;
   --accent-8-rgb: 0,163,224;
   /* default */
-      --font-use-default: var(--default-font);
+      --font-use-default: var(--font-default);
       --font-size-use-default: var(--editor-font-size);
       --indent-use-default: 1.84ch;
   
@@ -10921,55 +10919,47 @@ body.bt-status-off #scroll-controls {
 
 /** file name**/
 
-body.file-name-animation .nav-file-title-content:not(.is-being-renamed):hover
-{
+body.file-name-animation .nav-file-title-content:not(.is-being-renamed):hover {
   animation: filemove 1.5s 1 normal linear;
 }
 
-body.file-name-animation .nav-file-title-content:not(.is-being-renamed)
-{
+body.file-name-animation .nav-file-title-content:not(.is-being-renamed) {
   min-width: 200px;
   white-space: nowrap;
 }
-body.file-name-animation .nav-file
-{
+body.file-name-animation .nav-file {
   display: inline-block;
 }
 /** file folder name**/
-body.file-name-animation .obsidian-icon-folder-icon
-{
+body.file-name-animation .obsidian-icon-folder-icon {
   vertical-align: middle;
   display: inline;
 }
 
-body.file-name-animation .nav-folder-title
-{
+body.file-name-animation .nav-folder-title {
   display: inline-block;
   white-space: nowrap;
 }
 
-.nav-folder-title-content.is-being-renamed
-{
+.nav-folder-title-content.is-being-renamed {
   white-space: break-spaces;
 }
 
-body.file-name-animation .nav-folder-title-content:not(.is-being-renamed)
-{
+body.file-name-animation .nav-folder-title-content:not(.is-being-renamed) {
   min-width: 200px;
   white-space: nowrap;
 }
-body.file-name-animation .nav-folder-title-content:not(.is-being-renamed):hover
-{
+body.file-name-animation .nav-folder-title-content:not(.is-being-renamed):hover {
   animation: filemove 1.5s 1 normal linear;
 }
 
 @keyframes filemove {
   0% {
     transform: translate(0, 0);
-}
-100% {
+  }
+  100% {
     transform: translate(calc(-100% + 200px), 0);
-}
+  }
 }
 
 
@@ -11098,9 +11088,7 @@ code[class*="language-"] {
 }
 
 /*embedded*/
-body.naked-embed.theme-dark {
-  --embed-color: transparent !important;
-}
+body.naked-embed.theme-dark,
 body.naked-embed.theme-light {
   --embed-color: transparent !important;
 }
@@ -11148,11 +11136,12 @@ body.embed-hover.theme-dark .internal-embed .markdown-embed:hover {
   background-color: var(--embed-color);
   border: 1px solid var(--embed-color);
   border-radius: var(--radius-xs);
-  padding: 0px 0.2em;
+  padding: 0 0.2em;
   margin-bottom: 0;
   margin-top: 0;
 }
 
+.markdown-source-view .markdown-embed,
 .markdown-embed .markdown-preview-view {
   padding: 0.03em 0.375em !important;
 }
@@ -11170,6 +11159,11 @@ body.embed-hover.theme-dark .internal-embed .markdown-embed:hover {
 .markdown-embed:hover .markdown-embed-link,
 .markdown-embed:hover .file-embed-link {
   opacity: 1;
+}
+
+.markdown-source-view .markdown-embed {
+  border-color: transparent;
+  border-radius: var(--radius-xs);
 }
 
 .markdown-preview-view .file-embed {
@@ -11198,6 +11192,7 @@ body.embed-hover.theme-dark .internal-embed .markdown-embed:hover {
   margin-top: 0.25em;
 }
 
+.markdown-embed-content p:last-child,
 .markdown-preview-view .markdown-embed-content p:last-child {
   margin-bottom: 0.4em;
 }
@@ -11417,7 +11412,7 @@ pre.line-numbers>code {
 /*show language type in preview mode*/
 /*Thanks to elutao from https://snippets.cacher.io/snippet/018387c872dc39277996 */
 pre::before {
-  font-family: var(--default-font);
+  font-family: var(--font-default);
   color: #95a3b5;
   opacity: 0.7;
   font-size: 1em;
@@ -11643,8 +11638,8 @@ body.muted-activeline-bg .HyperMD-codeblock-bg.CodeMirror-activeline-background.
   border-style: solid;
   border-color: transparent;
   border-image: initial;
-  border-radius: 0px;
-  padding: 1px 5px 0px 16px;
+  border-radius: 0;
+  padding: 1px 5px 0 16px;
   color: var(--text-folder-file);
   display: flex;
   align-items: baseline;
@@ -11652,7 +11647,7 @@ body.muted-activeline-bg .HyperMD-codeblock-bg.CodeMirror-activeline-background.
 }
 
 .nav-file-title {
-  padding: 0px 5px 1px 4px;
+  padding: 0 5px 1px 4px;
 }
 
 .nav-folder-title {
@@ -11711,9 +11706,9 @@ body:not(.default-icons) .nav-folder.is-collapsed .nav-folder-collapse-indicator
 
 /*search icon 1*/
 body:not(.default-icons) .backlink-pane .search-result-container .collapse-icon {
-  left: 0px;
+  left: 0;
   top: 7px;
-  margin-top: 0px;
+  margin-top: 0;
   transition: transform 20ms linear 0s;
 }
 
@@ -11740,9 +11735,9 @@ body:not(.default-icons) .backlink-pane .search-result-container .tree-item.sear
 
 /* search panel icons */
 body:not(.default-icons) .workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon {
-  left: 0px;
+  left: 0;
   top: 7px;
-  margin-top: 0px;
+  margin-top: 0;
   transition: transform 20ms linear 0s;
 }
 
@@ -11886,13 +11881,13 @@ body:not(.default-icons) div.CodeMirror-foldgutter-folded::after {
 
 /*search icon 2*/
 body:not(.default-icons) span.collapse-icon {
-  margin-top: 0px;
+  margin-top: 0;
   transition: transform 20ms linear 0s;
 }
 
 body:not(.default-icons) span.collapse-icon::before {
   content: "↓";
-  margin-left: 0px;
+  margin-left: 0;
   font-size: 16px;
   font-weight: bold;
   font-family: 'Inter';
@@ -11918,7 +11913,7 @@ body:not(.default-icons) .outline .tree-item-self.is-clickable {
 }
 
 body:not(.default-icons) .outline .tree-item .collapse-icon {
-  padding: 0px;
+  padding: 0;
   transition: transform 20ms linear 0s;
 }
 
@@ -13619,7 +13614,7 @@ pre.frontmatter.language-yaml::before {
 /* ============= kanban ============= */
 /* ================================== */
 .kanban-plugin__markdown-preview-view {
-  font-family: var(--font-family-major) !important;
+  font-family: var(--font-text) !important;
 }
 /*body:not(.style-options-for-kanban-plugin-static-default)*/ 
 .workspace-leaf .kanban-plugin__lane {
@@ -15273,7 +15268,7 @@ body.style-options-for-admonition-plugin .admonition-lem *.admonition-title-cont
 body.style-options-for-admonition-plugin .admonition-cor *.admonition-title-content,
 body.style-options-for-admonition-plugin .admonition-pro *.admonition-title-content {
   color: white;
-  font-family:  "方正书宋_GBK", var(--font-family-major);
+  font-family:  "方正书宋_GBK", var(--font-text);
   font-size: 1.1em;
 }
 
@@ -15311,7 +15306,7 @@ body.style-options-for-admonition-plugin .admonition-lem p,
 body.style-options-for-admonition-plugin .admonition-cor p,
 body.style-options-for-admonition-plugin .admonition-pro p {
   text-indent: 0;
-  font-family: "方正楷体_GBK", var(--font-family-major) !important;
+  font-family: "方正楷体_GBK", var(--font-text) !important;
   font-size: 1.1em;
 }
 
@@ -16970,7 +16965,7 @@ body:not(.default-icons) .is-mobile .cm-gutterElement>span[title="Unfold line"]:
 }
 
 body:not(.font-family-change-to-default).is-mobile .markdown-source-view.mod-cm6 .cm-scroller {
-  font-family: var(--font-family-major);
+  font-family: var(--font-text);
 }
 
 .is-mobile #calendar-container {
@@ -19757,7 +19752,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 
 @media print {
   .markdown-preview-view {
-    font-family: var(--font-family-major) !important;
+    font-family: var(--font-text) !important;
   }
 
   .markdown-preview-view :not(font)>strong {
@@ -19838,7 +19833,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   body.export-pdf-style-default-all-dark .markdown-preview-view {
     background-color: var(--background-primary) !important;
     color: var(--text-normal) !important;
-    font-family: var(--font-family-major) !important;
+    font-family: var(--font-text) !important;
   }
 
   body.export-pdf-style-default-all-dark .markdown-preview-view mark {
@@ -19922,7 +19917,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 
   body.export-pdf-style-default-dark-codebox .markdown-preview-view {
     color: var(--text-normal) !important;
-    font-family: var(--font-family-major) !important;
+    font-family: var(--font-text) !important;
   }
 
   body.export-pdf-style-default-dark-codebox .markdown-preview-view :not(font)>strong {
