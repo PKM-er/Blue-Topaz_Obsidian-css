@@ -19415,9 +19415,11 @@ body.background-settings-workplace-background-image.background-settings-workplac
 
 body.background-settings-workplace-background-image.background-settings-workplace-random-dark.theme-dark {
   background-image: url("https://source.unsplash.com/random") !important;
+  background-size: cover;
 }
 body.background-settings-workplace-background-image.background-settings-workplace-random-light.theme-light {
   background-image: url("https://source.unsplash.com/random?1") !important;
+  background-size: cover;
 }
 
 body:not(.background-image-settings-command-palette-switch) .modal-container .prompt::before {
