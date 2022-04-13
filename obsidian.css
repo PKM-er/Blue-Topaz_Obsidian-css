@@ -11992,8 +11992,8 @@ ul.contains-task-list .list-collapse-indicator.collapse-indicator.collapse-icon:
 */
 
 /*tag collapse indicator*/
-.tag-container .tree-item-children .tree-item-self.tag-pane-tag.is-clickable {
-  margin-left: -10px;
+.tag-container .tree-item-children {
+  margin-left: 10px;
   border-left: 2px solid #94949433;
   border-radius: 0 3px 3px 0;
   transition: all 300ms ease-in-out;
@@ -12012,7 +12012,7 @@ ul.contains-task-list .list-collapse-indicator.collapse-indicator.collapse-icon:
   transition: transform 10ms linear 0s;
 }
 
-.tag-container .tree-item-children .tree-item-self.tag-pane-tag.is-clickable:hover {
+.tag-container .tree-item-children:hover {
   border-left-color: var(--theme-color);
 }
 
@@ -19543,14 +19543,9 @@ body.layout-style-options-rectangle .workspace-split.mod-right-split>.workspace-
 body.layout-style-options-rectangle .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle:hover {
   height: 100%;
 }
-body.layout-style-options-rectangle  [aria-label] svg
-{ 
-width: 14px;
-height: 14px;
-}
 
 body.layout-style-options-rectangle .side-dock-ribbon-action {
-    padding: 1px 0 1px 0;
+  padding: 1px 0 1px 0;
 }
 /*-------- Eisenhower Matrix start--- */
 /* Eisenhower Matrix from Spectrum themes */
