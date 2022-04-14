@@ -14904,6 +14904,14 @@ body.style-options-for-admonition-plugin .is-live-preview .callout-content.admon
 {
   margin-top: -1.5em;
 }
+
+
+body.style-options-for-admonition-plugin .is-live-preview .admonition-col2  .callout-content.admonition-content>div:nth-child(2), 
+body.style-options-for-admonition-plugin .is-live-preview .admonition-col3  .callout-content.admonition-content>div:nth-child(2), 
+body.style-options-for-admonition-plugin .is-live-preview .admonition-col4  .callout-content.admonition-content>div:nth-child(2)
+{
+  margin-top: -1.5em;
+}
 body.style-options-for-admonition-plugin .admonition-kanban .admonition-title-icon, 
 body.style-options-for-admonition-plugin .admonition-flex .admonition-title-icon, 
 body.style-options-for-admonition-plugin .admonition-col2 .admonition-title-icon, 
@@ -14920,6 +14928,7 @@ body.style-options-for-admonition-plugin .admonition-flex  .admonition-content  
   flex: 100%;
   border-left: none;
   padding-left: 0;
+  padding-right: 0;
   margin-block-start: 0;
   margin:0;
   box-shadow:none;
@@ -14937,6 +14946,7 @@ body.style-options-for-admonition-plugin .admonition-col3 .admonition-content  b
 body.style-options-for-admonition-plugin .admonition-col4 .admonition-content  blockquote p,
 body.style-options-for-admonition-plugin .admonition-flex .admonition-content  blockquote p {
   margin:0;
+  overflow-wrap: anywhere;
 }
 
 
@@ -14947,8 +14957,6 @@ body.style-options-for-admonition-plugin .admonition-flex .admonition-content  u
   padding-inline-start: 20px !important;
   margin-left: -20px;
 }
-
-
 
 
 body.style-options-for-admonition-plugin .admonition-col2 {
@@ -17117,10 +17125,10 @@ and (min-width : 400px) {
   {
    gap:24px;
   }
-  body.style-options-for-admonition-plugin .admonition-flex .admonition-content div
+ /*  body.style-options-for-admonition-plugin .admonition-flex .admonition-content div
   {
     flex: auto;
-  }
+  } */
   body.style-options-for-admonition-plugin .admonition-kanban ul > li.task-list-item {
     flex: 1 1 40%;
   }
@@ -17217,7 +17225,7 @@ body.dialogue-style-wechat .dialogue-plugin-comment-wrapper .dialogue-plugin-com
 }
 
 body.dialogue-style-wechat .dialogue-plugin-message .dialogue-plugin-message-title {
-  font-size: 24px;
+  font-size: 18px;
   height: 50px;
   background: #f1f1f1;
   border-radius: 8px;
@@ -17255,9 +17263,9 @@ body.dialogue-style-wechat .dialogue-plugin-message .dialogue-plugin-message-con
   padding: 12px 18px;
   font-size: large;
   border-radius: 8px;
-  margin-right: 55px;
+  margin-right: 4em;
   word-break: break-all;
-  margin-left: 55px;
+  margin-left: 4em;
   display: inline-block;
   position: relative;
   line-height: normal;
