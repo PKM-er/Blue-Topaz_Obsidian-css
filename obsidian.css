@@ -9169,6 +9169,10 @@ div.math.math-block mjx-math {
   background-color: var(--background-code-2);
 }
 
+.cm-s-obsidian .cm-inline-code.cm-strong {
+  color: var(--text-color-code) !important;
+}
+
 .theme-dark .cm-s-obsidian span.cm-variable-2 {
   color: #0072d0;
 }
