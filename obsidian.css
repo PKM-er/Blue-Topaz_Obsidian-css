@@ -2187,13 +2187,13 @@ settings:
     default: false
   -
     id: style-options-for-dialogue-plugin-heading
-    title: 3.7 Dialogue
+    title: 3.7 Dialogue&&Chatview
     type: heading
     level: 2
     collapsed: true
   -
     id: dialogue-style
-    title: dialogue Style
+    title: dialogue&&Chatview Style
     title.zh: 聊天框样式
     type: class-select
     allowEmpty: false
@@ -17198,33 +17198,22 @@ body.dialogue-style-wechat .dialogue-plugin-block-wrapper {
 }
 body.dialogue-style-wechat .dialogue-plugin-message {
   background-color:unset;
+  padding: 1px;
 }
 
-body.dialogue-style-wechat .dialogue-plugin-comment-wrapper::before {
-  content: "";
-  box-sizing: border-box;
-  width: 100%;
-  height: 1px;
-  background-color: #bfe2fb;
-  flex: 1;
-  margin: 20px 0;
-  text-align: center;
-}
-body.dialogue-style-wechat .dialogue-plugin-comment-wrapper::after {
-  content: "";
-  box-sizing: border-box;
-  width: 100%;
-  height: 1px;
-  background-color: #bfe2fb;
-  flex: 1;
-  margin: 20px 0;
-  text-align: center;
-}
+
 body.dialogue-style-wechat .dialogue-plugin-comment-wrapper .dialogue-plugin-comment {
   margin: 7px;
+  width: fit-content;
+    max-width: 75%;
+    margin: 24px auto;
+    line-height: 1.8;
+    text-align: center;
+  opacity: var(--opacity);
 }
 
 body.dialogue-style-wechat .dialogue-plugin-message .dialogue-plugin-message-title {
+  min-width: 6.8em;
   font-size: 18px;
   height: 50px;
   background: #f1f1f1;
@@ -17236,16 +17225,24 @@ body.dialogue-style-wechat .dialogue-plugin-message .dialogue-plugin-message-tit
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content:right;
   background-color:unset;
+
 }
 
 body.dialogue-style-wechat .dialogue-plugin-message-wrapper-right .dialogue-plugin-message-title {
+  justify-content:left;
+  margin-left: 2em;
   right: 0;
 }
 body.dialogue-style-wechat .dialogue-plugin-message-wrapper-left .dialogue-plugin-message .dialogue-plugin-message-content {
   margin-right: 0px;
+   
 }
+body.dialogue-style-wechat .dialogue-plugin-message-wrapper-left .dialogue-plugin-message-content:after {
+    box-shadow: -1px 2px 0px 0 rgb(178 178 178 / 23%)
+}
+
 body.dialogue-style-wechat .dialogue-plugin-message-wrapper-right .dialogue-plugin-message .dialogue-plugin-message-content {
   color: black;
   background: #98e970;
@@ -17263,13 +17260,15 @@ body.dialogue-style-wechat .dialogue-plugin-message .dialogue-plugin-message-con
   padding: 12px 18px;
   font-size: large;
   border-radius: 8px;
-  margin-right: 4em;
+  margin-right: 7em;
   word-break: break-all;
-  margin-left: 4em;
+  margin-left: 7em;
   display: inline-block;
   position: relative;
   line-height: normal;
   min-height: 50px;
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
 }
 .dialogue-style-wechat.theme-dark .dialogue-plugin-message .dialogue-plugin-message-content {
   background:#343434;
@@ -17289,6 +17288,143 @@ body.dialogue-style-wechat .dialogue-plugin-message .dialogue-plugin-message-con
 
 .dialogue-style-wechat.theme-dark .dialogue-plugin-message .dialogue-plugin-message-content:after {
   background: #343434;
+}
+
+/*chatview-style-wechat*/
+
+body.dialogue-style-wechat  div.chat-view-bubble {
+  background-color: transparent;
+  border: 0px;
+  
+}
+body.dialogue-style-wechat .chat-view-message .chat-view-header {
+  font-size: 18px;
+  height: 55px;
+  background: #f1f1f1;
+  border-radius: 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:unset;
+}
+
+body.dialogue-style-wechat .chat-view-align-right .chat-view-header {
+  text-align: right;
+  margin-right: 0.5em;
+}
+
+
+
+body.dialogue-style-wechat div.chat-view-align-left .chat-view-message  {
+  margin-right: 0px;
+  
+}
+body.dialogue-style-wechat .chat-view-align-right .chat-view-message  {
+  color: black;
+  background: #98e970;
+  float: right;
+}
+body.dialogue-style-wechat div.chat-view-align-center .chat-view-message {
+  background: #e4effc;
+  padding: 12px 18px;
+  font-size: large;
+  border-radius: 8px;
+  word-break: break-all;
+  display: inline-block;
+  position: relative;
+  line-height: normal;
+  min-height: 50px;
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+}
+body.dialogue-style-wechat div.chat-view-align-center .chat-view-message:after  {
+  content: '';
+  background: #e4effc;
+  width: 12px;
+  height: 12px;
+  border-bottom-left-radius: 2px;
+  top: -5px;
+  left:10%;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+body.dialogue-style-wechat div.chat-view-align-left .chat-view-message:after {
+  box-shadow: -1px 2px 0px 0 rgb(178 178 178 / 23%)
+}
+
+body.dialogue-style-wechat .chat-view-align-right .chat-view-message:after {
+  background: #98e970;
+  left: auto;
+  right: -5px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 0;
+}
+body.dialogue-style-wechat .chat-view-message  {
+  background: #fff;
+  padding: 12px 18px;
+  font-size: large;
+  border-radius: 8px;
+  word-break: break-all;
+  display: inline-block;
+  position: relative;
+  line-height: normal;
+  min-height: 50px;
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+}
+body.dialogue-style-wechat.theme-dark .chat-view-align-left .chat-view-message  {
+  background:#343434;
+}
+body.dialogue-style-wechat.theme-dark .chat-view-align-center .chat-view-message  {
+  background:#3cb676;
+  color:black;
+}
+body.dialogue-style-wechat.theme-dark .chat-view-align-center .chat-view-message:after  {
+  background:#3cb676;
+}
+
+body.dialogue-style-wechat .chat-view-message:after {
+  content: '';
+  background: #fff;
+  width: 12px;
+  height: 12px;
+  border-bottom-left-radius: 2px;
+  top: 20px;
+  left: -6px;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+body.dialogue-style-wechat.theme-dark  .chat-view-align-left .chat-view-message:after {
+  background: #343434;
+}
+
+body.dialogue-style-wechat .chat-view-bubble .chat-view-subtext
+{
+  display:inline-block;
+}
+body.dialogue-style-wechat .chat-view-align-right .chat-view-subtext
+{
+float: right;
+
+}
+body.dialogue-style-wechat div.chat-view-align-right {
+  overflow: hidden;
+}
+body.dialogue-style-wechat h4.chat-view-header {
+  margin-bottom: 2px;
+  margin-top:0px !important;
+
+}
+body.dialogue-style-wechat div.chat-view-align-center  h4.chat-view-header {
+  text-align: left;
+  margin-bottom: 8px;
 }
 
 /*dialogue-style-chat*/
