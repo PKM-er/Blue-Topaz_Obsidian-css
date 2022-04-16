@@ -19870,7 +19870,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220416";
+  content: "uid:20220416-";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
