@@ -9307,28 +9307,28 @@ ul ul ul ol ul {
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
   content: '\25E6';
-  left: -4px;
+  left: -0.2em;
   font-family: Inter;
 }
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line>span.cm-formatting:first-of-type .list-bullet::after {
   content: '\2022';
-  left: -4px;
+  left: -0.2em;
   font-family: Inter;
 }
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
   content: '\25E6';
-  left: -4px;
+  left: -0.2em;
   font-family: Inter;
 }
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
 .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
-  content: '\25FE';
-  left: -4px;
-  top: 2px;
+  content: '\25A0';
+  left: -0.2em;
+  top: 1em;
   font-family: Inter;
-  font-size: 0.8em;
+  font-size: 0.42em;
 }
 
 .markdown-preview-view ul>li:not(.task-list-item)::marker {
