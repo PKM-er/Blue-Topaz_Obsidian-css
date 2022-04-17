@@ -16824,8 +16824,8 @@ body.style-options-for-buttons-plugin  button.g_yellow {
 }
   
 /*buttons*/
-.is-mobile .workspace-leaf-content[data-type='file-explorer'] .nav-action-button {
-  padding: 3px 4px;
+.is-mobile .nav-action-button {
+  padding: 3px 8px;
 }
 
 .is-mobile .workspace-leaf-content[data-type='file-explorer'] .nav-buttons-container {
@@ -16837,8 +16837,8 @@ body.style-options-for-buttons-plugin  button.g_yellow {
 }
 
 .is-mobile .nav-buttons-container>.nav-action-button svg {
-  width: 2em;
-  height: 2em;
+  width: 1.7em;
+  height: 1.7em;
 }
 
 /* side bar button */
@@ -16875,7 +16875,7 @@ body.style-options-for-buttons-plugin  button.g_yellow {
 }
 
 .is-mobile .cm-lineNumbers .cm-gutterElement {
-  padding: 0 10px 0 10px;
+  padding: 0 10px;
   margin-left: -10px;
   font-size: 12px;
 }
