@@ -16836,7 +16836,7 @@ body.style-options-for-buttons-plugin  button.g_yellow {
   padding: 7px 3px 5px 8px;
 }
 
-.is-mobile .nav-buttons-container>.nav-action-button  {
+.is-mobile .nav-buttons-container>.nav-action-button svg {
   width: 1.5em;
   height: 1.5em;
 }
