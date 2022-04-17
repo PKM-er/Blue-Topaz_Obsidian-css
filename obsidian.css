@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.14.6。uid [20220416] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.14.6, uid [20220416] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.14.6。uid [20220417] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.14.6, uid [20220417] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -7211,11 +7211,15 @@ body.reduce-bottom-padding .cm-s-obsidian .cm-content {
 }
 
 .kanban ul ul li.task-list-item .list-collapse-indicator.collapse-indicator.collapse-icon {
-  text-indent: -2.04em;
+  text-indent: -1em;
 }
 
-body:not(.default-icons) .kanban li.task-list-item .task-list-item.is-collapsed .list-collapse-indicator.collapse-indicator.collapse-icon {
-  transform: translateX(-1.7em) translateY(-1.8em) rotate(-90deg);
+body:not(.default-icons) .kanban li.task-list-item .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+  margin-left: -0.2em;
+}
+
+body:not(.default-icons) .kanban li.task-list-item .task-list-item.is-collapsed .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+  transform: translateX(-0.9em) translateY(-1em) rotate(-90deg);
 }
 
 .kanban .task-list-item-checkbox {
@@ -9037,14 +9041,14 @@ body.fancy-hr-no-icon div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD
 .nav-files-container {
   flex-grow: 1;
   overflow-y: auto;
-  padding-left: 0px;
+  padding-left: 0;
   padding-bottom: 10px;
   overflow-x: hidden;
 }
 
 /* blockquote */
 .markdown-preview-view blockquote {
-  padding: 8px 8px 8px 10px;
+  padding: 0.5em 0.5em 0.5em 0.6em;
   border-right-width: 0;
   border-top-width: 0;
   border-bottom-width: 0;
@@ -9058,7 +9062,7 @@ body.fancy-hr-no-icon div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD
 
 .markdown-preview-view blockquote p {
   margin-left: 1px;
-  margin-right: 0px;
+  margin-right: 0;
   font-size: var(--font-size-preview-blockquote);
 }
 
@@ -9185,8 +9189,8 @@ div.math.math-block mjx-math {
 
 /*inline code*/
 .cm-s-obsidian.mod-cm6 .HyperMD-codeblock span.cm-inline-code {
-  display:inline-block;
-  padding:unset; 
+  display: inline-block;
+  padding: unset; 
 }
 
 .cm-s-obsidian span.cm-formatting-code.cm-inline-code {
@@ -11623,8 +11627,8 @@ body:not(.default-icons) .nav-folder-collapse-indicator::after {
   position: absolute;
   content: "↓";
   left: -3px;
-  top: 3px;
-  font-size: 15px;
+  top: 1px;
+  font-size: 14px;
   font-family: 'Inter';
   font-weight: bold;
   color: var(--text-accent);
@@ -11642,8 +11646,8 @@ body:not(.unmuted-collapsed-folder) .nav-folder.is-collapsed {
   opacity: 0.55;
 }
 
-body:not(.default-icons) .nav-folder.is-collapsed .nav-folder-collapse-indicator {
-  transform: translateX(-13px) translateY(7px) rotate(-90deg);
+body:not(.default-icons) .nav-folder.is-collapsed .nav-folder-collapse-indicator::after {
+  transform: rotate(-90deg);
   opacity: 0.7;
 }
 
@@ -11671,8 +11675,8 @@ body:not(.default-icons) .backlink-pane .search-result-container .collapse-icon 
   width: 7px;
 }
 
-body:not(.default-icons) .backlink-pane .search-result-container .tree-item.search-result.is-collapsed .collapse-icon {
-  transform: translateX(0px) translateY(0px) rotate(-90deg);
+body:not(.default-icons) .backlink-pane .search-result-container .tree-item.search-result.is-collapsed .collapse-icon::before {
+  transform: rotate(-90deg);
   opacity: 0.5;
 }
 
@@ -11701,8 +11705,8 @@ body:not(.default-icons) .workspace-leaf .search-result-container.mod-global-sea
   width: 7px;
 }
 
-body:not(.default-icons) .workspace-leaf .search-result-container.mod-global-search .tree-item.search-result.is-collapsed .collapse-icon {
-  transform: translateX(1px) translateY(1px) rotate(-90deg);
+body:not(.default-icons) .workspace-leaf .search-result-container.mod-global-search .tree-item.search-result.is-collapsed .collapse-icon::before {
+  transform: rotate(-90deg);
   opacity: 0.5;
 }
 
@@ -11771,8 +11775,8 @@ body:not(.default-icons) div.is-collapsed h2 div.heading-collapse-indicator.coll
   opacity: 0.5;
 }
 
-body:not(.default-icons) div.is-collapsed div.heading-collapse-indicator.collapse-indicator {
-  transform: translateX(-8px) translateY(20px) rotate(-90deg);
+body:not(.default-icons) div.is-collapsed div.heading-collapse-indicator.collapse-indicator::before {
+  transform: rotate(-90deg);
   opacity: 0.5;
 }
 
@@ -11840,13 +11844,10 @@ body:not(.default-icons) span.collapse-icon::before {
 
 body:not(.default-icons) span.collapse-icon svg {
   display: none;
-  color: var(--accent-strong);
-  height: 7px;
-  width: 7px;
 }
 
-body:not(.default-icons) div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
-  transform: translateX(0px) translateY(0px) rotate(-90deg);
+body:not(.default-icons) div.tree-item-self.is-clickable.is-collapsed span.collapse-icon::before {
+  transform: rotate(-90deg);
   opacity: 0.5;
 }
 
@@ -11876,8 +11877,8 @@ body:not(.default-icons) .outline .tree-item .collapse-icon svg {
   width: 7px;
 }
 
-body:not(.default-icons) .outline .tree-item.is-collapsed .collapse-icon {
-  transform: translateX(-1px) translateY(-1px) rotate(-90deg);
+body:not(.default-icons) .outline .tree-item.is-collapsed .collapse-icon::before {
+  transform: rotate(-90deg);
   opacity: 0.5;
 }
 
@@ -11898,29 +11899,30 @@ body.default-icons .outline .tree-item-children {
 }
 
 /* list collaspe icon */
-body:not(.default-icons) .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon {
-  padding-left: 5px;
-}
-
 body:not(.default-icons) .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   content: "↓";
-  font-size: 14px;
+  font-size: 0.7em;
+  position: absolute;
+  margin-left: -0.3rem;
+  margin-top: 0.4rem;
   font-weight: bold;
   font-family: 'Inter';
   color: var(--text-accent);
   transition: transform 10ms linear 0s;
+  opacity: 0.25;
+}
+
+body:not(.default-icons) .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon:hover::before {
+  opacity: 1;
 }
 
 body:not(.default-icons) .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon svg {
   display: none;
-  color: var(--accent-strong);
-  height: 7px;
-  width: 7px;
 }
 
-body:not(.default-icons) .markdown-preview-view li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon {
-  transform: translateX(-2px) translateY(-1px) rotate(-90deg);
-  opacity: 0.5;
+body:not(.default-icons) .markdown-preview-view li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon::before {
+  transform: rotate(-90deg);
+  opacity: 1;
 }
 
 /*
@@ -16654,26 +16656,10 @@ span[alt*="+grid"] {
 }
 
 /*collapse allows*/
-body:not(.default-icons).is-mobile .nav-folder.is-collapsed .nav-folder-collapse-indicator {
-  transform: translateX(-16px) translateY(10px) rotate(-90deg);
-}
-
-body:not(.default-icons).is-mobile .workspace-leaf .search-result-container.mod-global-search .tree-item.search-result.is-collapsed .collapse-icon {
-  transform: translateX(0px) translateY(0px) rotate(-90deg);
-}
-
-body:not(.default-icons).is-mobile .tree-item-self.is-clickable.is-collapsed span.collapse-icon {
-  transform: translateX(-1px) translateY(-1px) rotate(-90deg);
-}
-
 body:not(.default-icons).is-mobile h1 div.heading-collapse-indicator.collapse-indicator,
 body:not(.default-icons).is-mobile h2 div.heading-collapse-indicator.collapse-indicator,
 body:not(.default-icons).is-mobile div.heading-collapse-indicator.collapse-indicator {
   padding-left: 2px;
-}
-
-body:not(.default-icons).is-mobile div.is-collapsed div.heading-collapse-indicator.collapse-indicator {
-  transform: translateX(-11px) translateY(16px) rotate(-90deg);
 }
 
 body:not(.default-icons).is-mobile div.is-collapsed h1 div.heading-collapse-indicator.collapse-indicator,
@@ -19870,7 +19856,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220416";
+  content: "uid:20220417";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
