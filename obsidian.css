@@ -17090,10 +17090,8 @@ and (min-width : 400px) {
   .kanban ul>li.task-list-item {
     flex: 1 1 auto;
   }
-  .is-mobile .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content,
-  .is-mobile .nav-folder.mod-root > .nav-folder-title .nav-folder-collapse-indicator.collapse-icon {
+  .is-mobile .nav-folder.mod-root > .nav-folder-title {
     display: none;
-    background: transparent;
   }
 
   body:not(.default-icons).is-mobile .nav-folder-collapse-indicator::after {
@@ -17206,7 +17204,6 @@ body.dialogue-style-wechat .dialogue-plugin-message .dialogue-plugin-message-con
 body.dialogue-style-wechat  div.chat-view-bubble {
   background-color: transparent;
   border: 0px;
-  
 }
 body.dialogue-style-wechat .chat-view-message .chat-view-header {
   font-size: 18px;
@@ -17228,7 +17225,6 @@ body.dialogue-style-wechat .chat-view-align-right .chat-view-header {
   text-align: right;
   margin-right: 0.5em;
 }
-
 
 
 body.dialogue-style-wechat div.chat-view-align-left .chat-view-message  {
@@ -17253,7 +17249,7 @@ body.dialogue-style-wechat div.chat-view-align-center .chat-view-message {
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
 }
-body.dialogue-style-wechat div.chat-view-align-center .chat-view-message:after  {
+body.dialogue-style-wechat div.chat-view-align-center .chat-view-message:after {
   content: '';
   background: #e4effc;
   width: 12px;
@@ -17276,7 +17272,7 @@ body.dialogue-style-wechat .chat-view-align-right .chat-view-message:after {
   border-top-right-radius: 2px;
   border-bottom-left-radius: 0;
 }
-body.dialogue-style-wechat .chat-view-message  {
+body.dialogue-style-wechat .chat-view-message {
   background: #fff;
   padding: 12px 18px;
   font-size: large;
@@ -17289,15 +17285,15 @@ body.dialogue-style-wechat .chat-view-message  {
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
 }
-body.dialogue-style-wechat.theme-dark .chat-view-align-left .chat-view-message  {
+body.dialogue-style-wechat.theme-dark .chat-view-align-left .chat-view-message {
   background:#343434;
 }
-body.dialogue-style-wechat.theme-dark .chat-view-align-center .chat-view-message  {
-  background:#3cb676;
+body.dialogue-style-wechat.theme-dark .chat-view-align-center .chat-view-message {
+  background: #3cb676;
   color:black;
 }
-body.dialogue-style-wechat.theme-dark .chat-view-align-center .chat-view-message:after  {
-  background:#3cb676;
+body.dialogue-style-wechat.theme-dark .chat-view-align-center .chat-view-message:after {
+  background: #3cb676;
 }
 
 body.dialogue-style-wechat .chat-view-message:after {
@@ -17312,18 +17308,15 @@ body.dialogue-style-wechat .chat-view-message:after {
   transform: rotate(45deg);
 }
 
-body.dialogue-style-wechat.theme-dark  .chat-view-align-left .chat-view-message:after {
+body.dialogue-style-wechat.theme-dark .chat-view-align-left .chat-view-message:after {
   background: #343434;
 }
 
-body.dialogue-style-wechat .chat-view-bubble .chat-view-subtext
-{
+body.dialogue-style-wechat .chat-view-bubble .chat-view-subtext {
   display:inline-block;
 }
-body.dialogue-style-wechat .chat-view-align-right .chat-view-subtext
-{
-float: right;
-
+body.dialogue-style-wechat .chat-view-align-right .chat-view-subtext {
+  float: right;
 }
 body.dialogue-style-wechat div.chat-view-align-right {
   overflow: hidden;
@@ -17331,7 +17324,6 @@ body.dialogue-style-wechat div.chat-view-align-right {
 body.dialogue-style-wechat h4.chat-view-header {
   margin-bottom: 2px;
   margin-top:0px !important;
-
 }
 body.dialogue-style-wechat div.chat-view-align-center  h4.chat-view-header {
   text-align: left;
@@ -17339,17 +17331,16 @@ body.dialogue-style-wechat div.chat-view-align-center  h4.chat-view-header {
 }
 
 /*dialogue-style-chat*/
-
-.dialogue-style-chat.theme-dark .dialogue-plugin-message-wrapper-left .dialogue-plugin-message{
+.dialogue-style-chat.theme-dark .dialogue-plugin-message-wrapper-left .dialogue-plugin-message {
   color: #cccccc;
   background: #343434;
   box-shadow: 0px 2px 1px 0px #191818,0px 2px 1px 0px #343434;
 }
-.dialogue-style-chat.theme-dark .dialogue-plugin-message-wrapper-right .dialogue-plugin-message{
+.dialogue-style-chat.theme-dark .dialogue-plugin-message-wrapper-right .dialogue-plugin-message {
   color: #333333;
   background-image: -webkit-linear-gradient(left, #cccccc,#cccccc);
 }
-body.dialogue-style-chat .dialogue-plugin-message-wrapper-left .dialogue-plugin-message{
+body.dialogue-style-chat .dialogue-plugin-message-wrapper-left .dialogue-plugin-message {
   font-size: 15px;
   background: #f5f8ff;
   letter-spacing: 1.5px;
@@ -17362,7 +17353,7 @@ body.dialogue-style-chat .dialogue-plugin-message-wrapper-left .dialogue-plugin-
   align-self: flex-end;
 }
 
- body.dialogue-style-chat .dialogue-plugin-message-wrapper-right .dialogue-plugin-message{
+body.dialogue-style-chat .dialogue-plugin-message-wrapper-right .dialogue-plugin-message{
   font-size: 15px;
   letter-spacing: 1.5px;
   color: #333;
