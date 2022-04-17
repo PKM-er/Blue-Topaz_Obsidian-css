@@ -11775,8 +11775,8 @@ body:not(.default-icons) div.is-collapsed h2 div.heading-collapse-indicator.coll
   opacity: 0.5;
 }
 
-body:not(.default-icons) div.is-collapsed div.heading-collapse-indicator.collapse-indicator::before {
-  transform: rotate(-90deg);
+body:not(.default-icons) div.is-collapsed div.heading-collapse-indicator.collapse-indicator {
+  transform: translateX(-8px) translateY(20px) rotate(-90deg);
   opacity: 0.5;
 }
 
@@ -16660,6 +16660,10 @@ body:not(.default-icons).is-mobile h1 div.heading-collapse-indicator.collapse-in
 body:not(.default-icons).is-mobile h2 div.heading-collapse-indicator.collapse-indicator,
 body:not(.default-icons).is-mobile div.heading-collapse-indicator.collapse-indicator {
   padding-left: 2px;
+}
+
+body:not(.default-icons).is-mobile div.is-collapsed div.heading-collapse-indicator.collapse-indicator {
+  transform: translateX(-11px) translateY(16px) rotate(-90deg);
 }
 
 body:not(.default-icons).is-mobile div.is-collapsed h1 div.heading-collapse-indicator.collapse-indicator,
