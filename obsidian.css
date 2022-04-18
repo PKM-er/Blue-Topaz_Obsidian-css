@@ -9229,7 +9229,7 @@ div.math.math-block mjx-math {
 
 /*Add vertical lines of embedded lists*/
 /*thanks to loikein and death_au from forum and icr1001 from GitHub*/
-.cm-s-obsidian.mod-cm5 .cm-hmd-list-indent .cm-tab::before {
+.markdown-source-view.mod-cm5 .cm-hmd-list-indent .cm-tab::before {
   content: '';
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;
@@ -9237,7 +9237,7 @@ div.math.math-block mjx-math {
   margin-left: 3px;
 }
 
-.cm-s-obsidian.mod-cm5 .cm-hmd-list-indent {
+.markdown-source-view.mod-cm5 .cm-hmd-list-indent {
   padding-top: 0.4em;
   padding-bottom: 0.05em;
 }
@@ -10336,20 +10336,20 @@ strong>em>.internal-link,
   text-decoration: underline !important;
 }
 
-.cm-s-obsidian.mod-cm5 span.cm-formatting.cm-formatting-strong.cm-strong {
+.markdown-source-view.mod-cm5 span.cm-formatting.cm-formatting-strong.cm-strong {
   opacity: 0.2;
 }
 
-.cm-s-obsidian.mod-cm5 span.cm-formatting.cm-formatting-em.cm-em {
+.markdown-source-view.mod-cm5 span.cm-formatting.cm-formatting-em.cm-em {
   opacity: 0.2;
 }
 
-.theme-dark .cm-s-obsidian.mod-cm5 .cm-formatting.cm-formatting-strong.cm-em.cm-strong {
+.theme-dark .markdown-source-view.mod-cm5 .cm-formatting.cm-formatting-strong.cm-em.cm-strong {
   opacity: 0.2;
   -webkit-text-fill-color: var(--green);
 }
 
-.theme-light .cm-s-obsidian.mod-cm5 .cm-formatting.cm-formatting-strong.cm-em.cm-strong {
+.theme-light .markdown-source-view.mod-cm5 .cm-formatting.cm-formatting-strong.cm-em.cm-strong {
   opacity: 0.2;
   -webkit-text-fill-color: var(--orange);
 }
@@ -16122,7 +16122,7 @@ body.translucent-setting-panel .vertical-tab-nav-item {
 }
 
 /* ================================== */
-/* =========== RTL official ========= */
+/* =========== RTL support ========= */
 /* ================================== */
 .markdown-preview-view.rtl blockquote {
   border-right-width: 7px;
@@ -16156,9 +16156,51 @@ body.translucent-setting-panel .vertical-tab-nav-item {
   margin-right: -25px;
 }
 
-/* ================================== */
-/* =========== RTL support ========== */
-/* ================================== */
+body:not(.default-icons) .markdown-preview-view.rtl div.heading-collapse-indicator.collapse-indicator {
+  position: absolute;
+  right: -33px;
+  padding-left: 0;
+  transition: transform 20ms linear 0s;
+}
+
+body:not(.default-icons) .markdown-preview-view.rtl h1 div.heading-collapse-indicator.collapse-indicator,
+body:not(.default-icons) .markdown-preview-view.rtl h2 div.heading-collapse-indicator.collapse-indicator {
+  position: absolute;
+  right: -32px;
+  padding-left: 0;
+  margin-top: 11px;
+  transition: transform 20ms linear 0s;
+}
+
+body:not(.default-icons) .markdown-preview-view.rtl div.is-collapsed h1 div.heading-collapse-indicator.collapse-indicator,
+body:not(.default-icons) .markdown-preview-view.rtl div.is-collapsed h2 div.heading-collapse-indicator.collapse-indicator {
+  transform: translateX(-9px) translateY(18px) rotate(90deg);
+  opacity: 0.5;
+}
+
+body:not(.default-icons) .markdown-preview-view.rtl div.is-collapsed div.heading-collapse-indicator.collapse-indicator {
+  transform: translateX(-2px) translateY(25px) rotate(90deg);
+  opacity: 0.5;
+}
+
+body:not(.default-icons) .markdown-preview-view.rtl .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+  right: 0;
+}
+
+body:not(.default-icons) .markdown-preview-view.rtl div>ul>li>.list-collapse-indicator.collapse-indicator.collapse-icon::before,
+body:not(.default-icons) .markdown-preview-view.rtl div>ol>li>.list-collapse-indicator.collapse-indicator.collapse-icon::before {
+  margin-right: 48px;
+}
+
+body:not(.default-icons) .markdown-preview-view.rtl li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon::before {
+  transform: rotate(90deg);
+}
+
+.markdown-source-view.mod-cm6.is-live-preview.is-rtl .HyperMD-quote {
+  border: 0 solid var(--theme-color);
+  border-right-width: 5px;
+}
+
 .CodeMirror-code.CodeMirror-rtl span.cm-quote::before {
   content: "";
   border-right: 7px solid var(--theme-color);
@@ -16169,6 +16211,10 @@ body.translucent-setting-panel .vertical-tab-nav-item {
   position: absolute;
 }
 
+.markdown-source-view.mod-cm6.is-rtl .HyperMD-list-line:not([class*="quote"]) .cm-indent::before {
+  margin-right: 0.3rem;
+}
+
 .CodeMirror-code.CodeMirror-rtl span.cm-formatting-quote + *::before,
 .CodeMirror-code.CodeMirror-rtl span.cm-formatting-quote + span.cm-hmd-indent-in-quote + span.cm-quote:not(.cm-formatting-quote)::before,
 .CodeMirror-code.CodeMirror-rtl span.cm-inline-code + *::before,
@@ -16176,113 +16222,6 @@ body.translucent-setting-panel .vertical-tab-nav-item {
 .CodeMirror-code.CodeMirror-rtl span.cm-quote + *::before,
 .CodeMirror-code.CodeMirror-rtl span.cm-hmd-html-end + *::before {
   border-right: none;
-}
-
-div[dir="rtl"] blockquote {
-  border-left: none;
-  border-right: 7px solid var(--theme-color);
-}
-
-div[dir="rtl"] ul>li:not(.task-list-item) {
-  border-left: none;
-  border-right: 0.125em solid var(--list-ul-block-color);
-}
-
-div[dir="rtl"] ol:not(.contains-task-list)>li:not(.task-list-item) {
-  border-left: none;
-  border-right: 0.125em solid var(--list-ol-block-color);
-}
-
-div[dir="rtl"] code[class*="language-"], 
-div[dir="rtl"] pre[class*="language-"] {
-  text-align: right !important;
-}
-
-div[dir="rtl"] .markdown-preview-view {
-  padding: 15px 30px 20px 20px !important;
-}
-
-div[dir="rtl"] .heading-collapse-indicator.collapse-indicator {
-  padding: 0 2px;
-}
-
-div[dir="rtl"] .heading-collapse-indicator.collapse-indicator::before {
-  margin-right: -25px !important;
-  margin-left: 0;
-  margin-top: 0px;
-}
-
-div[dir="rtl"] h1 .heading-collapse-indicator.collapse-indicator::before,
-div[dir="rtl"] h2 .heading-collapse-indicator.collapse-indicator::before {
-  margin-right: -25px !important;
-  margin-left: 0;
-  margin-top: -5px;
-}
-
-body:not(.default-icons) div[dir="rtl"] .is-collapsed h1 div.heading-collapse-indicator.collapse-indicator,
-body:not(.default-icons) div[dir="rtl"] .is-collapsed h2 div.heading-collapse-indicator.collapse-indicator {
-  transform: translateX(20px) translateY(-10px) rotate(90deg);
-}
-
-body:not(.default-icons) div[dir="rtl"] .is-collapsed div.heading-collapse-indicator.collapse-indicator {
-  transform: translateX(28px) translateY(-5px) rotate(90deg);
-}
-
-div[dir="rtl"] .markdown-preview-view h1:hover::before,
-div[dir="rtl"] .markdown-preview-view h2:hover::before,
-div[dir="rtl"] .markdown-preview-view h3:hover::before,
-div[dir="rtl"] .markdown-preview-view h4:hover::before,
-div[dir="rtl"] .markdown-preview-view h5:hover::before,
-div[dir="rtl"] .markdown-preview-view h6:hover::before {
-  margin-right: -25px;
-}
-
-div[dir="rtl"] ul.contains-task-list ul::before, 
-div[dir="rtl"] ul.contains-task-list ol::before {
-  margin-right: -1.3em;
-}
-
-div[dir="rtl"] ol.contains-task-list ul::before, 
-div[dir="rtl"] ol.contains-task-list ol::before {
-  margin-right: -3.2em;
-}
-
-div[dir="rtl"] ol.contains-task-list ol li:not(.task-list-item) {
-  border-right: none;
-}
-
-div[dir="rtl"] .markdown-preview-view .collapse-indicator {
-  float: right;
-}
-
-div[dir="rtl"] .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon {
-  padding-top: 14px;
-  padding-left: 0px;
-}
-
-div[dir="rtl"] .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon::before {
-  margin-right: -42px;
-  margin-left: 0;
-  margin-top: 0px;
-}
-
-div[dir="rtl"] .markdown-preview-view .list-collapse-indicator.collapse-indicator.collapse-icon svg {
-  display: none;
-  color: var(--accent-strong);
-  height: 7px;
-  width: 7px;
-}
-
-body:not(.default-icons) div[dir="rtl"] .markdown-preview-view li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon {
-  transform: translateX(40px) translateY(-23px) rotate(90deg);
-}
-
-div[dir="rtl"] .mermaid svg {
-  width: 100%;
-}
-
-div[dir="rtl"] ol.contains-task-list>li.task-list-item {
-  padding-right: 0;
 }
 
 .CodeMirror-code.CodeMirror-rtl *:not(font)>em>strong,
@@ -16837,8 +16776,8 @@ body.style-options-for-buttons-plugin  button.g_yellow {
 }
 
 .is-mobile .nav-buttons-container>.nav-action-button svg {
-  width: 1.7em;
-  height: 1.7em;
+  width: 1.5em;
+  height: 1.5em;
 }
 
 /* side bar button */
