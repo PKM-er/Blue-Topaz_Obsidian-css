@@ -6,8 +6,6 @@
 # 更新内容
 [这里查看](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/changes.md)
 
-Go to [wiki](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/wiki) page to find update log and more (now Chinese verson only)
-
 # Blue-Topaz_Obsidian-css
 
 蓝色托帕石不是贵重的宝石，以契合“黑曜石”😜。另外蓝色托帕石一般由无色或浅色黄玉经过人工处理后得到——这个主题不是我从零开始做出来的，而是大量借鉴了他人的主题后，修改而成的，就像蓝色托帕石一样，是后天人造的。在此，感谢所有共享了css文件的人。另外，“无色或浅色黄玉”没有任何暗喻的意思，也没有和别人的主题做比较的意思。如果你能喜欢这个主题，那就很好！（更多片段请移步至QQ群：908688452）
