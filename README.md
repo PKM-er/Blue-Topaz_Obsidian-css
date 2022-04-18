@@ -6,7 +6,7 @@
 # Wiki
 包括更新内容，[wiki](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/wiki)查看
 
-Go to [wiki](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/wiki) page to find update log and more
+Go to [wiki](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/wiki) page to find update log and more (now Chinese verson only)
 
 # Blue-Topaz_Obsidian-css
 
