@@ -3,8 +3,8 @@
 
 如果有问题或者建议 请加入Topaz社区[Topaz QQ群](https://jq.qq.com/?_wv=1027&k=TWGhXs40)  [Obsidian频道](https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=zHpby&from=246610&biz=ka)
 
-# Wiki
-包括更新内容，[wiki](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/wiki)查看
+# 更新内容
+[这里查看](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/changes.md)
 
 Go to [wiki](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/wiki) page to find update log and more (now Chinese verson only)
 
