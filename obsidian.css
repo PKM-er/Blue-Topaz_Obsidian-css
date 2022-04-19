@@ -2028,7 +2028,7 @@ settings:
     id: cloze-bg-color
     title: Cloze background color
     title.zh: 涂黑背景颜色
-    description: Cloze Style One, i.e. ==~~your words~~==, hovering to find "your words"
+    description: Cloze Style One, i.e. ==~~your words~~==, hovering to find "your words", should declare 'cssclass: cloze' in the YAML area if you want to use them in the Live Preview mode
     type: variable-themed-color
     opacity: true
     format: hex
@@ -2037,13 +2037,13 @@ settings:
   -
     id: cloze-decoration
     title: Underline decoration style
-    description: Can type 'solid', 'dotted', 'dashed', 'wavy' or 'double' for Cloze Style One, i.e. ==~~your words~~==, hovering to find "your words"
+    description: Can type 'solid', 'dotted', 'dashed', 'wavy' or 'double' for Cloze Style One, i.e. ==~~your words~~==, hovering to find "your words", should declare 'cssclass: cloze' in the YAML area if you want to use them in the Live Preview mode
     type: variable-text
     default: none
   -
     id: cloze-decoration-color
     title: Underline decoration color
-    description: For Cloze Style One, i.e. ==~~your words~~==, hovering to find "your words"
+    description: For Cloze Style One, i.e. ==~~your words~~==, hovering to find "your words", should declare 'cssclass: cloze' in the YAML area if you want to use them in the Live Preview mode
     type: variable-themed-color
     opacity: false
     format: hex
@@ -2052,13 +2052,13 @@ settings:
   -
     id: cloze-decoration-2
     title: Underline decoration style for Cloze style TWO
-    description: Can type 'solid', 'dotted', 'dashed', 'wavy', 'double' or 'none' for Cloze Style TWO, i.e. *==~~your words~~==*, pressing down the primary mouse button to find "your words"
+    description: Can type 'solid', 'dotted', 'dashed', 'wavy', 'double' or 'none' for Cloze Style TWO, i.e. *==~~your words~~==*, pressing down the primary mouse button to find "your words", should declare 'cssclass: cloze' in the YAML area if you want to use them in the Live Preview mode
     type: variable-text
     default: dashed
   -
     id: cloze-decoration-color-2
     title: Underline decoration color for Cloze style TWO
-    description: For Cloze Style TWO, i.e. *==~~your words~~==*, pressing down the primary mouse button to find "your words"
+    description: For Cloze Style TWO, i.e. *==~~your words~~==*, pressing down the primary mouse button to find "your words", should declare 'cssclass: cloze' in the YAML area if you want to use them in the Live Preview mode
     type: variable-themed-color
     opacity: false
     format: hex
