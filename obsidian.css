@@ -2052,13 +2052,13 @@ settings:
   -
     id: cloze-decoration-2
     title: Underline decoration style for Cloze style TWO
-    description: Can type 'solid', 'dotted', 'dashed', 'wavy', 'double' or 'none' for Cloze Style TWO, i.e. *==~~your words~~==*, hovering to find "your words"
+    description: Can type 'solid', 'dotted', 'dashed', 'wavy', 'double' or 'none' for Cloze Style TWO, i.e. *==~~your words~~==*, pressing down the primary mouse button to find "your words"
     type: variable-text
     default: dashed
   -
     id: cloze-decoration-color-2
     title: Underline decoration color for Cloze style TWO
-    description: For Cloze Style TWO, i.e. *==~~your words~~==*, hovering to find "your words"
+    description: For Cloze Style TWO, i.e. *==~~your words~~==*, pressing down the primary mouse button to find "your words"
     type: variable-themed-color
     opacity: false
     format: hex
@@ -8053,8 +8053,6 @@ span.cm-highlight.cm-inline-code {
 .cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight+span.cm-formatting-strikethrough.cm-highlight.cm-strikethrough+span.cm-highlight.cm-strikethrough:not(.cm-em) {
   text-decoration: underline var(--cloze-decoration) var(--cloze-decoration-color);
 }
-
-
 
 .cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight+.cm-formatting.cm-formatting-strikethrough+span.cm-highlight.cm-strikethrough:not(.cm-em):hover {
   background-color: var(--text-highlight-bg);
