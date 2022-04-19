@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.14.6。uid [20220418] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.14.6, uid [20220418] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.14.6。uid [20220419] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.14.6, uid [20220419] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -574,7 +574,7 @@ settings:
     id: h1-color
     title: Header 1
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: '#08367c'
     default-dark: '#85bb1f'
@@ -582,7 +582,7 @@ settings:
     id: h2-color
     title: Header 2
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: '#004faa'
     default-dark: '#27b822'
@@ -590,7 +590,7 @@ settings:
     id: h3-color
     title: Header 3
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: '#0e64bb'
     default-dark: '#1bbbbb'
@@ -598,7 +598,7 @@ settings:
     id: h4-color
     title: Header 4
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: '#3481c5'
     default-dark: '#2f7fe9'
@@ -606,7 +606,7 @@ settings:
     id: h5-color
     title: Header 5
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: '#59a0e2'
     default-dark: '#a192f7'
@@ -614,7 +614,7 @@ settings:
     id: h6-color
     title: Header 6
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: '#88b8e6'
     default-dark: '#c173ee'
@@ -894,7 +894,7 @@ settings:
     title: Inline Code Color
     title.zh: 行内代码颜色
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: '#e95d00'
     default-dark: '#d58000'
@@ -903,7 +903,7 @@ settings:
     title: Bullet Color of Unordered List
     title.zh: 无序列表点颜色
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: '#0e0e0e'
     default-dark: '#bdbdbd'
@@ -912,7 +912,7 @@ settings:
     title: Number Color of Ordered List
     title.zh: 有序列表数字颜色
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: '#6196d6'
     default-dark: '#2c7bd6'
@@ -921,7 +921,7 @@ settings:
     title: Bold Type Color
     title.zh: 加粗颜色
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: '#000000'
     default-dark: '#f7f7f7'
@@ -930,7 +930,7 @@ settings:
     title: Italic Type Color
     title.zh: 斜体颜色
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: '#099d4e'
     default-dark: '#a4ca8e'
@@ -2018,6 +2018,53 @@ settings:
     type: class-toggle
     default: false
   -
+    id: cloze-style
+    title: 2.3.9 Cloze Style
+    title.zh: 2.3.9 挖空涂黑
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: cloze-bg-color
+    title: Cloze background color
+    title.zh: 涂黑背景颜色
+    description: Cloze Style One, i.e. ==~~your words~~==, hovering to find "your words"
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
+    id: cloze-decoration
+    title: Underline decoration style
+    description: Can type 'solid', 'dotted', 'dashed', 'wavy' or 'double' for Cloze Style One, i.e. ==~~your words~~==, hovering to find "your words"
+    type: variable-text
+    default: none
+  -
+    id: cloze-decoration-color
+    title: Underline decoration color
+    description: For Cloze Style One, i.e. ==~~your words~~==, hovering to find "your words"
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
+    id: cloze-decoration-2
+    title: Underline decoration style for Cloze style TWO
+    description: Can type 'solid', 'dotted', 'dashed', 'wavy', 'double' or 'none' for Cloze Style TWO, i.e. *==~~your words~~==*, hovering to find "your words"
+    type: variable-text
+    default: dashed
+  -
+    id: cloze-decoration-color-2
+    title: Underline decoration color for Cloze style TWO
+    description: For Cloze Style TWO, i.e. *==~~your words~~==*, hovering to find "your words"
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
     id: style-options-for-other-plugins
     title: 3. For Plugins
     title.zh: 3. 插件样式
@@ -2484,6 +2531,12 @@ body {
   --hr-color-2: var(--theme-color);
   --hr-color-3: var(--theme-color);
   --hr-color-4: var(--theme-color);
+
+  --cloze-bg-color: var(--accent-strong);
+  --cloze-decoration: none;
+  --cloze-decoration-color: red;
+  --cloze-decoration-2: dashed;
+  --cloze-decoration-color-2: var(--theme-color);
 
   --text-highlight-bg-h-dark: 57;
   --text-highlight-bg-s-dark: 40%;
@@ -4375,6 +4428,8 @@ body.color-scheme-options-topaz-nord.theme-dark {
   --graph-unresolved: var(--nord11);
   --link-unresolved-highlight: var(--nord11);
   --graph-arrow: var(--nord11);
+
+  --text-search-highlight-bg: var(--nord9-1);
 }
 
 body.color-scheme-options-topaz-nord.theme-dark .titlebar-text {
@@ -4540,6 +4595,8 @@ body.color-scheme-options-topaz-nord.theme-light {
   --graph-unresolved: var(--nord11);
   --link-unresolved-highlight: var(--nord11);
   --graph-arrow: var(--nord11);
+
+  --text-search-highlight-bg: var(--nord9-2);
 }
 
 /*@Lavi & @嘴 的Flamingo主题色（原Pink Topaz）*/
@@ -7255,6 +7312,47 @@ body:not(.default-icons) .kanban li.task-list-item .task-list-item.is-collapsed 
 .kanban .task-list-item-checkbox {
   border-color: var(--text-normal) !important;
 }
+
+/* cssclass: colorful-highlight */
+.markdown-source-view.is-live-preview.colorful-highlight .cm-em.cm-highlight.cm-strong {
+  background-color: var(--bg-color-highlight-3) !important;
+  color: var(--color-highlight-3) !important;
+  -webkit-text-fill-color: unset;
+  font-style: normal;
+  font-weight: var(--font-weight-highlight-3);
+}
+.markdown-source-view.is-live-preview.colorful-highlight .cm-highlight.cm-strong {
+  background-color: var(--bg-color-highlight-2) !important;
+  color: var(--color-highlight-2) !important;
+  font-weight: var(--font-weight-highlight-2);
+}
+.markdown-source-view.is-live-preview.colorful-highlight .cm-em.cm-highlight {
+  background-color: var(--bg-color-highlight-1) !important;
+  color: var(--color-highlight-1) !important;
+  font-style: normal;
+  font-weight: var(--font-weight-highlight-1);
+}
+
+/* cssclass: cloze */
+.markdown-source-view.is-live-preview.cloze .cm-highlight.cm-strikethrough:not([class*="formatting"]) {
+  background-color: var(--cloze-bg-color) !important;
+  color: var(--cloze-bg-color);
+  text-decoration: underline var(--cloze-decoration) var(--cloze-decoration-color);
+}
+
+.markdown-source-view.is-live-preview.cloze .cm-highlight.cm-strikethrough:hover {
+  background-color: transparent !important;
+  color: var(--text-normal) !important;
+  transition: all 400ms ease-in-out;
+}
+
+.markdown-source-view.is-live-preview.cloze .cm-em.cm-highlight.cm-strikethrough:not(.cm-formatting) {
+  color: transparent !important;
+  background-color: transparent !important;
+  padding: 0 2px;
+  text-decoration: underline var(--cloze-decoration-2) var(--cloze-decoration-color-2) !important;
+}
+
 /*========floating-toc===========*/
 
 div.markdown-source-view ul.floating-toc>li{
@@ -7945,17 +8043,28 @@ span.cm-highlight.cm-inline-code {
   padding: 0 1px 1px;
 }
 
+/*cloze*/
 .markdown-preview-view mark > del {
-  background-color: var(--accent-strong);
-  text-decoration: none;
+  background-color: var(--cloze-bg-color);
+  color: var(--cloze-bg-color);
+  text-decoration: underline var(--cloze-decoration) var(--cloze-decoration-color);
 }
 
-.cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight+span.cm-formatting-strikethrough.cm-highlight.cm-strikethrough+span.cm-highlight.cm-strikethrough {
-  text-decoration: none;
+.cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight+span.cm-formatting-strikethrough.cm-highlight.cm-strikethrough+span.cm-highlight.cm-strikethrough:not(.cm-em) {
+  text-decoration: underline var(--cloze-decoration) var(--cloze-decoration-color);
+}
+
+
+
+.cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight+.cm-formatting.cm-formatting-strikethrough+span.cm-highlight.cm-strikethrough:not(.cm-em):hover {
+  background-color: var(--text-highlight-bg);
+  color: var(--text-normal);
+  transition: all 400ms ease-in-out;
 }
 
 .markdown-preview-view mark > del:hover {
   background-color: transparent;
+  color: var(--text-normal);
   transition: all 400ms ease-in-out;
 }
 
@@ -7963,11 +8072,12 @@ span.cm-highlight.cm-inline-code {
   color: transparent;
   background-color: transparent;
   padding: 0 2px;
-  text-decoration: underline dashed var(--theme-color) !important;
+  text-decoration: underline var(--cloze-decoration-2) var(--cloze-decoration-color-2) !important;
 }
 
 .markdown-preview-view em > mark > del:hover {
   cursor: pointer;
+  color: transparent;
 }
 
 .markdown-preview-view em > mark > del:active {
@@ -7976,10 +8086,9 @@ span.cm-highlight.cm-inline-code {
   transition: all 400ms ease-in-out;
 }
 
-.markdown-preview-view em > mark > del {
-  color: transparent;
-  background-color: transparent;
-  text-decoration: none;
+.cm-s-obsidian .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em+.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight+.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough+span.cm-em.cm-highlight.cm-strikethrough {
+  color: var(--accent-strong) !important;
+  text-decoration: underline var(--cloze-decoration-2) var(--cloze-decoration-color-2) !important;
 }
 
 span.cm-strong.cm-em.cm-highlight {
@@ -9454,9 +9563,8 @@ ol li {
 }
 
 .HyperMD-list-line.HyperMD-list-line-nobullet.cm-line span[class^="cm-list-"]:not([class*="quote"]) {
-  margin-left: 0.155em;
+  margin-left: 0.17em;
 }
-
 
 
 body.list-bracket-left-two .markdown-rendered.show-indentation-guide li:not(.task-list-item) > ul::before, 
