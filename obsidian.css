@@ -20356,10 +20356,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 .callout .callout-content p img {
   display: block;
 }
-.is-live-preview .callout:not(.admonition) .callout-content p {
-  margin-top: 0p;
-  margin-bottom: 0;
-}
+
 
 .is-live-preview .callout:not(.admonition) .callout-content {
   padding-top: 0;
@@ -20465,7 +20462,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 [data-callout*=center]) {
   display: block;
   margin: auto;
-  float: unset !important ;
+  float: unset ;
   text-align:center;
 }
 /* ===块内元素不换行============ */
