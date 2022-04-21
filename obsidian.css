@@ -2027,8 +2027,8 @@ settings:
     default: false
   -
     id: cloze-style
-    title: 2.3.9 Cloze Style
-    title.zh: 2.3.9 挖空涂黑
+    title: 2.3.10 Cloze Style
+    title.zh: 2.3.10 挖空涂黑
     type: heading
     level: 3
     collapsed: true
@@ -2097,8 +2097,8 @@ settings:
     default-dark: '#'
   -
     id: cloze-style
-    title: 2.3.10 Links
-    title.zh: 2.3.10 链接
+    title: 2.3.11 Links
+    title.zh: 2.3.11 链接
     type: heading
     level: 3
     collapsed: true
