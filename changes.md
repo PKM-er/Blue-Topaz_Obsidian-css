@@ -2,6 +2,11 @@
 
 ### 20220420
 
+1. 涂黑挖空和多彩高亮效果支持 ad 和callout嵌入
+2. callout center 属性可以使文本居中
+
+### 20220420
+
 1. Sliding Panes 插件背景透明设置移到3.8
 
 2. 修复copy-code-button 和code block enhancer 插件跟banner不兼容的问题

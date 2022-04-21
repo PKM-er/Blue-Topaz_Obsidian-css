@@ -7436,6 +7436,7 @@ body:not(.default-icons) .kanban li.task-list-item .task-list-item.is-collapsed 
 }
 
 /* cssclass: colorful-highlight */
+
 .markdown-source-view.is-live-preview.colorful-highlight .cm-em.cm-highlight.cm-strong {
   background-color: var(--bg-color-highlight-3) !important;
   color: var(--color-highlight-3) !important;
@@ -8179,7 +8180,7 @@ span.cm-highlight.cm-inline-code {
 }
 
 /*cloze*/
-.markdown-preview-view mark > del {
+:is(.markdown-preview-view,.markdown-rendered)  mark > del {
   background-color: var(--cloze-bg-color);
   color: var(--cloze-bg-color);
   text-decoration: underline var(--cloze-decoration) var(--cloze-decoration-color);
@@ -8196,25 +8197,25 @@ span.cm-highlight.cm-inline-code {
   transition: all 400ms ease-in-out;
 }
 
-.markdown-preview-view mark > del:hover {
+:is(.markdown-preview-view,.markdown-rendered)  mark > del:hover {
   background-color: transparent;
   color: var(--text-normal);
   transition: all 400ms ease-in-out;
 }
 
-.markdown-preview-view em > mark > del {
+:is(.markdown-preview-view,.markdown-rendered)  em > mark > del {
   color: transparent;
   background-color: transparent;
   padding: 0 2px;
   text-decoration: underline var(--cloze-decoration-2) var(--cloze-decoration-color-2) !important;
 }
 
-.markdown-preview-view em > mark > del:hover {
+:is(.markdown-preview-view,.markdown-rendered)  em > mark > del:hover {
   cursor: pointer;
   color: transparent;
 }
 
-.markdown-preview-view em > mark > del:active {
+:is(.markdown-preview-view,.markdown-rendered)  em > mark > del:active {
   color: var(--accent-strong);
   background-color: transparent;
   transition: all 400ms ease-in-out;
@@ -8225,14 +8226,14 @@ span.cm-highlight.cm-inline-code {
   text-decoration: underline var(--cloze-decoration-2) var(--cloze-decoration-color-2) !important;
 }
 
-body.cloze-style-three .markdown-preview-view em > del {
+body.cloze-style-three :is(.markdown-preview-view,.markdown-rendered)  em > del {
   background-color: var(--cloze-bg-color-3);
   color: var(--cloze-bg-color-3);
   font-style: normal;
   text-decoration: underline var(--cloze-decoration-3) var(--cloze-decoration-color-3);
 }
 
-body.cloze-style-three .markdown-preview-view em > del:hover {
+body.cloze-style-three :is(.markdown-preview-view,.markdown-rendered)  em > del:hover {
   background-color: transparent;
   color: var(--text-normal);
   transition: all 400ms ease-in-out;
@@ -11109,7 +11110,7 @@ body.table-style-three .markdown-source-view table tbody>tr {
 
 .theme-light .cm-s-obsidian span.cm-formatting-highlight, 
 .theme-light .cm-s-obsidian span.cm-highlight:not([class*="code"]),
-.theme-light .markdown-preview-view mark,
+.theme-light :is(.markdown-preview-view,.markdown-rendered) mark,
 .theme-light .cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight,
 .theme-light .popover mark,
 .theme-light span.cm-strong.cm-em.cm-highlight {
@@ -11117,7 +11118,7 @@ body.table-style-three .markdown-source-view table tbody>tr {
 }
 .theme-dark .cm-s-obsidian span.cm-formatting-highlight, 
 .theme-dark .cm-s-obsidian span.cm-highlight:not([class*="code"]),
-.theme-dark .markdown-preview-view mark,
+.theme-dark  :is(.markdown-preview-view,.markdown-rendered)  mark,
 .theme-dark .cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight,
 .theme-dark .popover mark,
 .theme-dark span.cm-strong.cm-em.cm-highlight {
@@ -11134,20 +11135,20 @@ body.table-style-three .markdown-source-view table tbody>tr {
 
 body.colorful-highlight-bg .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight,
 body.colorful-highlight-bg .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight + .cm-em.cm-highlight:not([class*="strong"]),
-body.colorful-highlight-bg .markdown-preview-view :not(font):not(strong)>em>mark {
+body.colorful-highlight-bg :is(.markdown-preview-view,.markdown-rendered)  :not(font):not(strong)>em>mark {
   background-color: var(--bg-color-highlight-1);
   color: var(--color-highlight-1);
   font-style: normal;
   padding: 1px 3px;
   font-weight: var(--font-weight-highlight-1);
 }
-body.colorful-highlight-bg .markdown-preview-view :not(font):not(strong)>em>mark {
+body.colorful-highlight-bg :is(.markdown-preview-view,.markdown-rendered) :not(font):not(strong)>em>mark {
   border-radius: var(--radius-xs);
 }
 
 body.colorful-highlight-bg .cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
 body.colorful-highlight-bg .cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-highlight.cm-strong:not([class*="em"]),
-body.colorful-highlight-bg .markdown-preview-view :not(font):not(em)>strong>mark {
+body.colorful-highlight-bg :is(.markdown-preview-view,.markdown-rendered) :not(font):not(em)>strong>mark {
   background-color: var(--bg-color-highlight-2) !important;
   color: var(--color-highlight-2) !important;
   font-weight: var(--font-weight-highlight-2);
@@ -11155,7 +11156,7 @@ body.colorful-highlight-bg .markdown-preview-view :not(font):not(em)>strong>mark
 
 body.colorful-highlight-bg .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
 body.colorful-highlight-bg .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-em.cm-highlight.cm-strong,
-body.colorful-highlight-bg .markdown-preview-view :not(font)>strong>em>mark {
+body.colorful-highlight-bg :is(.markdown-preview-view,.markdown-rendered) :not(font)>strong>em>mark {
   background-color: var(--bg-color-highlight-3) !important;
   color: var(--color-highlight-3) !important;
   font-style: normal;
@@ -15505,7 +15506,7 @@ body.style-options-for-admonition-plugin .admonition-flex {
 }
 
   .callout-content.admonition-content >p {
-    margin-top: 0 !important;
+    /* margin-top: 0 !important; */
     }
 body.style-options-for-admonition-plugin .admonition-flex >.admonition-content-holder {
   margin-top: 0 !important;
@@ -20271,6 +20272,18 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 .callout .callout-content p img {
   display: block;
 }
+.is-live-preview .callout:not(.admonition) .callout-content p
+{
+  margin-top:0px;
+  margin-bottom:0px;
+}
+
+.is-live-preview .callout:not(.admonition) .callout-content 
+{
+  padding-top:0px;
+  padding-bottom:0px;
+  
+}
 .callout-content {
   padding-left: 10px;
 }
@@ -20374,6 +20387,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   display: block;
   margin: auto;
   float: unset !important ;
+  text-align:center;
 }
   /* ===块内元素不换行============ */
 .callout.callout:is([data-callout-metadata*='nowrap'],
