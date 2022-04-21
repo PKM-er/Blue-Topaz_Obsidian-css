@@ -1123,8 +1123,8 @@ settings:
     type: variable-text
     default: 1.25em
   -
-    id: headering-settings
-    title: 2.2.3 Headering
+    id: header-settings
+    title: 2.2.3 Headers
     title.zh: 2.2.3 文内标题（H1-H6）
     type: heading
     level: 3
@@ -1137,10 +1137,10 @@ settings:
     type: class-toggle
     default: false
   -
-    id: retain-heading-color 
-    title: Retain heading color 
+    id: retain-header-color 
+    title: Retain header color 
     title.zh: 保留标题颜色
-    description: Retain original color of headerings when using italic or bold italic within headerings
+    description: Retain original color of headers when using italic or bold italic within headers
     type: class-toggle
     default: false
   -
@@ -9110,58 +9110,58 @@ body.h6-text-align-end .markdown-preview-view h6 {
   text-align: end;
 }
 
-body.retain-heading-color .markdown-preview-view h1 em,
-body.retain-heading-color .markdown-preview-view h1 strong em,
-body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-1.cm-strong,
-body.retain-heading-color .markdown-preview-view h2 em,
-body.retain-heading-color .markdown-preview-view h2 strong em,
-body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-2.cm-strong,
-body.retain-heading-color .markdown-preview-view h3 em,
-body.retain-heading-color .markdown-preview-view h3 strong em,
-body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-3.cm-strong,
-body.retain-heading-color .markdown-preview-view h4 em,
-body.retain-heading-color .markdown-preview-view h4 strong em,
-body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-4.cm-strong,
-body.retain-heading-color .markdown-preview-view h5 em,
-body.retain-heading-color .markdown-preview-view h5 strong em,
-body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-5.cm-strong,
-body.retain-heading-color .markdown-preview-view h6 em,
-body.retain-heading-color .markdown-preview-view h6 strong em,
-body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-6.cm-strong {
+body.retain-header-color .markdown-preview-view h1 em,
+body.retain-header-color .markdown-preview-view h1 strong em,
+body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-1.cm-strong,
+body.retain-header-color .markdown-preview-view h2 em,
+body.retain-header-color .markdown-preview-view h2 strong em,
+body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-2.cm-strong,
+body.retain-header-color .markdown-preview-view h3 em,
+body.retain-header-color .markdown-preview-view h3 strong em,
+body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-3.cm-strong,
+body.retain-header-color .markdown-preview-view h4 em,
+body.retain-header-color .markdown-preview-view h4 strong em,
+body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-4.cm-strong,
+body.retain-header-color .markdown-preview-view h5 em,
+body.retain-header-color .markdown-preview-view h5 strong em,
+body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-5.cm-strong,
+body.retain-header-color .markdown-preview-view h6 em,
+body.retain-header-color .markdown-preview-view h6 strong em,
+body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-6.cm-strong {
   background-image: initial;
   background-clip: initial;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
   background-color: initial;
 }
-body.retain-heading-color .markdown-preview-view h1 em,
-body.retain-heading-color .markdown-preview-view h1 strong em,
-body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-1.cm-strong {
+body.retain-header-color .markdown-preview-view h1 em,
+body.retain-header-color .markdown-preview-view h1 strong em,
+body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-1.cm-strong {
   color: var(--h1-color) !important;
 }
-body.retain-heading-color .markdown-preview-view h2 em,
-body.retain-heading-color .markdown-preview-view h2 strong em,
-body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-2.cm-strong {
+body.retain-header-color .markdown-preview-view h2 em,
+body.retain-header-color .markdown-preview-view h2 strong em,
+body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-2.cm-strong {
   color: var(--h2-color) !important;
 }
-body.retain-heading-color .markdown-preview-view h3 em,
-body.retain-heading-color .markdown-preview-view h3 strong em,
-body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-3.cm-strong {
+body.retain-header-color .markdown-preview-view h3 em,
+body.retain-header-color .markdown-preview-view h3 strong em,
+body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-3.cm-strong {
   color: var(--h3-color) !important;
 }
-body.retain-heading-color .markdown-preview-view h4 em,
-body.retain-heading-color .markdown-preview-view h4 strong em,
-body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-4.cm-strong {
+body.retain-header-color .markdown-preview-view h4 em,
+body.retain-header-color .markdown-preview-view h4 strong em,
+body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-4.cm-strong {
   color: var(--h4-color) !important;
 }
-body.retain-heading-color .markdown-preview-view h5 em,
-body.retain-heading-color .markdown-preview-view h5 strong em,
-body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-5.cm-strong {
+body.retain-header-color .markdown-preview-view h5 em,
+body.retain-header-color .markdown-preview-view h5 strong em,
+body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-5.cm-strong {
   color: var(--h5-color) !important;
 }
-body.retain-heading-color .markdown-preview-view h6 em,
-body.retain-heading-color .markdown-preview-view h6 strong em,
-body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-6.cm-strong {
+body.retain-header-color .markdown-preview-view h6 em,
+body.retain-header-color .markdown-preview-view h6 strong em,
+body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-6.cm-strong {
   color: var(--h6-color) !important;
 }
 
@@ -12033,7 +12033,7 @@ body:not(.default-icons) .workspace-leaf .search-result-container.mod-global-sea
   opacity: 0.5;
 }
 
-/* headering collaspe indicators */
+/* header collaspe indicators */
 .markdown-preview-view div.is-collapsed h1::after,
 .markdown-preview-view div.is-collapsed h2::after,
 .markdown-preview-view div.is-collapsed h3::after,
@@ -12112,7 +12112,7 @@ body:not(.default-icons) h6:hover div.heading-collapse-indicator.collapse-indica
   opacity: 1;
 }
 
-/* headering collaspe indicators in edit */
+/* header collaspe indicators in edit */
 body:not(.default-icons) div.CodeMirror-foldgutter-open {
   left: 5px;
   position: absolute;
