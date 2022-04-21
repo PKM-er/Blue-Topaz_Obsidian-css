@@ -9463,7 +9463,7 @@ body:not(.default-split-style) .workspace>.workspace-split:not(.mod-root) .markd
   font-size: var(--font-size-split);
 }
 body:not(.default-split-style) .workspace>.workspace-split:not(.mod-root) .markdown-preview-view {
-  padding: 7px 0 7px 7px;
+  padding: 7px 0 7px 14px;
 }
 body:not(.default-split-style) .workspace>.workspace-split:not(.mod-root) .cm-scroller {
   padding: 7px;
