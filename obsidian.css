@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.14.6。uid [20220420] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.14.6, uid [20220420] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.14.6。uid [20220421] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.14.6, uid [20220421] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -132,6 +132,14 @@ settings:
     id: background-settings-workplace-background-image
     title:  Activate Image Background
     title.zh: 开启背景
+    type: class-toggle
+    default: false
+  - 
+    id: simple-titlebar
+    title:  Simple title bar
+    title.zh: 简单的Title bar
+    description: To remove the background image of title bar
+    description.zh: 移除title bar的背景图片
     type: class-toggle
     default: false
   - 
@@ -527,13 +535,21 @@ settings:
     title: Background Modifier Border
     type: variable-themed-color
     opacity: true
-    format: rgb
+    format: hex
     default-light: '#dddddd'
     default-dark: '#333333'
   -
+    id: custom-titlebar-bg
+    title: Title bar background color
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
     id: accent-color-settings
-    title: 2.1.2 Accent Colors
-    title.zh: 2.1.2 强调色设置
+    title: 2.1.2 Theme Colors
+    title.zh: 2.1.2 主题色设置
     type: heading
     level: 3
     collapsed: true
@@ -558,64 +574,9 @@ settings:
     default-light: '#007de4'
     default-dark: '#4695da'
   -
-    id: header-color-settings
-    title: 2.1.3 Header colors
-    title.zh: 2.1.3 标题颜色
-    type: heading
-    level: 3
-    collapsed: true
-  - 
-    id: h1-color
-    title: Header 1
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#08367c'
-    default-dark: '#85bb1f'
-  -
-    id: h2-color
-    title: Header 2
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#004faa'
-    default-dark: '#27b822'
-  -
-    id: h3-color
-    title: Header 3
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#0e64bb'
-    default-dark: '#1bbbbb'
-  -
-    id: h4-color
-    title: Header 4
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#3481c5'
-    default-dark: '#2f7fe9'
-  -
-    id: h5-color
-    title: Header 5
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#59a0e2'
-    default-dark: '#a192f7'
-  -
-    id: h6-color
-    title: Header 6
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#88b8e6'
-    default-dark: '#c173ee'
-  -
     id: tag-color-settings
-    title: 2.1.4 Tag Colors
-    title.zh: 2.1.4 标签颜色
+    title: 2.1.3 Tag Colors
+    title.zh: 2.1.3 标签颜色
     type: heading
     level: 3
     collapsed: true
@@ -701,8 +662,8 @@ settings:
     default-dark: '#2244d8'
   -
     id: highlight-bg-color-folder
-    title: 2.1.5 Highlight Background Color
-    title.zh: 2.1.5 高亮背景颜色
+    title: 2.1.4 Highlight Background Color
+    title.zh: 2.1.4 高亮背景颜色
     type: heading
     level: 3
     collapsed: true
@@ -878,8 +839,8 @@ settings:
     default: normal
   -
     id: other-color-settings
-    title: 2.1.6 Other Colors
-    title.zh: 2.1.6 其他颜色
+    title: 2.1.5 Other Colors
+    title.zh: 2.1.5 其他颜色
     type: heading
     level: 3
     collapsed: true
@@ -929,6 +890,24 @@ settings:
     default-light: '#099d4e'
     default-dark: '#a4ca8e'
   -
+    id: strong-em-color-1
+    title: Bold Italic Color 1
+    title.zh: 加粗斜体颜色 1
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
+    id: strong-em-color-2
+    title: Bold Italic Color 2
+    title.zh: 加粗斜体颜色 2
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
     id: mjx-inline-math-color
     title: Color of Mathematical Expressions (inline $x=0$)
     title.zh: 数学表达式颜色(行内 $x=0$)
@@ -955,21 +934,6 @@ settings:
     format: hex
     default-light: '#e9e9e9'
     default-dark: '#000000'
-  -
-    id: default-unresolved-link
-    title: Toggle default unresolved link color 
-    title.zh: 使用默认的未创建链接颜色
-    type: class-toggle
-    default: false
-  -
-    id: graph-unresolved
-    title: Color of unresolved link
-    title.zh: 未创建链接颜色
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#db4e4ecc'
-    default-dark: '#f08080de'
   -
     id: mjx-inline-math-color
     title: Color of Mathematical Expressions (inline $x=0$)
@@ -1173,11 +1137,26 @@ settings:
     type: class-toggle
     default: false
   -
+    id: retain-heading-color 
+    title: Retain heading color 
+    title.zh: 保留标题颜色
+    description: Retain original color of headerings when using italic or bold italic within headerings
+    type: class-toggle
+    default: false
+  -
     id: h1-settings
     title: 2.2.3.1 Header 1
     type: heading
     level: 4
     collapsed: true
+  - 
+    id: h1-color
+    title: Header 1
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#08367c'
+    default-dark: '#85bb1f'
   -
     id: h1-toggle-underline
     title: toggle h1 underline
@@ -1208,6 +1187,14 @@ settings:
     level: 4
     collapsed: true
   -
+    id: h2-color
+    title: Header 2
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#004faa'
+    default-dark: '#27b822'
+  -
     id: h2-toggle-underline
     title: toggle H2 underline
     title.zh: 切换H2下划线
@@ -1236,6 +1223,14 @@ settings:
     type: heading
     level: 4
     collapsed: true
+  -
+    id: h3-color
+    title: Header 3
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#0e64bb'
+    default-dark: '#1bbbbb'
   -
     id: h3-toggle-underline
     title: toggle H3 underline
@@ -1266,6 +1261,14 @@ settings:
     level: 4
     collapsed: true
   -
+    id: h4-color
+    title: Header 4
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#3481c5'
+    default-dark: '#2f7fe9'
+  -
     id: h4-toggle-underline
     title: toggle H4 underline
     title.zh: 切换H4下划线
@@ -1295,6 +1298,14 @@ settings:
     level: 4
     collapsed: true
   -
+    id: h5-color
+    title: Header 5
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#59a0e2'
+    default-dark: '#a192f7'
+  -
     id: h5-toggle-underline
     title: toggle H5 underline
     title.zh: 切换H5下划线
@@ -1323,6 +1334,14 @@ settings:
     type: heading
     level: 4
     collapsed: true
+  -
+    id: h6-color
+    title: Header 6
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#88b8e6'
+    default-dark: '#c173ee'
   -
     id: h6-toggle-underline
     title: toggle H6 underline
@@ -1436,12 +1455,6 @@ settings:
     type: class-toggle
     default: false
   -
-    id: link-underline
-    title: Remove underlines of external links
-    title.zh: 取消预览状态链接下划线
-    type: class-toggle
-    default: false
-  -
     id: loading-animation
     title: Animation on the Loading Page 
     title.zh: 加载页面的动画
@@ -1457,12 +1470,6 @@ settings:
     id: default-icons
     title: Remove Collapse Icons
     title.zh: 还原折叠图标
-    type: class-toggle
-    default: false
-  -
-    id: remove-underline-unresolved-link
-    title: Toggle underlines of unresolved link
-    title.zh: 切换未创建链接的下划线
     type: class-toggle
     default: false
   - 
@@ -1876,6 +1883,13 @@ settings:
     type: class-toggle
     default: false
   -
+    id: all-dark
+    title:  All dark
+    description: Export PDF with dark mode color scheme
+    description.zh: 导出黑暗配色的PDF
+    type: class-toggle
+    default: false
+  -
     id: show-url-after-link
     title: Print URL After Links
     title.zh: 显示地址超链接
@@ -2058,6 +2072,63 @@ settings:
     format: hex
     default-light: '#'
     default-dark: '#'
+  -
+    id: cloze-style-three
+    title: Toggle Cloze style three (*~~your words~~*)
+    title.zh: 开启Cloze样式三 (*~~your words~~*)
+    description: No background color, suitable for exported PDF
+    description.zh: 没有背景颜色，适合导出PDF，作为纸质填空题
+    type: class-toggle
+    default: false
+  -
+    id: cloze-decoration-3
+    title: Underline decoration style for Cloze style THREE
+    description: Can type 'solid', 'dotted', 'dashed', 'wavy', 'double' or 'none' for Cloze Style THREE, i.e. *~~your words~~*, pressing down the primary mouse button to find "your words", should declare 'cssclass：cloze' in the YAML area if you want to use them in the Live Preview mode
+    type: variable-text
+    default: dashed
+  -
+    id: cloze-decoration-color-3
+    title: Underline decoration color for Cloze style THREE
+    description: For Cloze Style THREE, i.e. *~~your words~~*, pressing down the primary mouse button to find "your words", should declare 'cssclass：cloze' in the YAML area if you want to use them in the Live Preview mode
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
+    id: cloze-style
+    title: 2.3.10 Links
+    title.zh: 2.3.10 链接
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: link-underline
+    title: Remove underlines of external links in Reading mode
+    title.zh: 取消阅读模式链接下划线
+    type: class-toggle
+    default: false
+  -
+    id: default-unresolved-link
+    title: Toggle default unresolved link color 
+    title.zh: 使用默认的未创建链接颜色
+    type: class-toggle
+    default: false
+  -
+    id: remove-underline-unresolved-link
+    title: Toggle underlines of unresolved link
+    title.zh: 去除未创建链接的下划线
+    type: class-toggle
+    default: false
+  -
+    id: graph-unresolved
+    title: Color of unresolved link
+    title.zh: 未创建链接颜色
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#db4e4ecc'
+    default-dark: '#f08080de'
   -
     id: style-options-for-other-plugins
     title: 3. For Plugins
@@ -2491,9 +2562,6 @@ body {
 
   --bottom-padding-value: 0em;
 
-  --print-strong-color: #000000;
-  --print-em-color: #000000;
-
   --font-weight-highlight-1: normal;
   --font-weight-highlight-2: normal;
   --font-weight-highlight-3: normal;
@@ -2543,6 +2611,11 @@ body {
   --cloze-decoration-color: red;
   --cloze-decoration-2: dashed;
   --cloze-decoration-color-2: var(--theme-color);
+  --cloze-bg-color-3: transparent;
+  --cloze-decoration-3: dashed;
+  --cloze-decoration-color-3: var(--theme-color);
+
+  --custom-titlebar-bg: var(--background-secondary-alt);
 
   --text-highlight-bg-h-dark: 57;
   --text-highlight-bg-s-dark: 40%;
@@ -2582,6 +2655,7 @@ body.font-family-change-to-default .markdown-preview-view code{
   font-family: 'Source Code Pro', monospace !important;
 }
 
+body.all-dark .print.theme-light,
 .theme-dark {
   --background-primary: #222222;
   --background-primary-alt: #444444;
@@ -2875,6 +2949,9 @@ body.font-family-change-to-default .markdown-preview-view code{
   --bg-color-highlight-1: #c865656f;
   --bg-color-highlight-2: #54b9476f;
   --bg-color-highlight-3: #1e83d086;
+
+  --print-strong-color: var(--accent-strong);
+  --print-em-color: var(--text-normal);
 }
 
 .theme-light {
@@ -3171,6 +3248,9 @@ body.font-family-change-to-default .markdown-preview-view code{
   --bg-color-highlight-1: #ff000034;
   --bg-color-highlight-2: #0fc41835;
   --bg-color-highlight-3: #4ca6ff51;
+
+  --print-strong-color: #000000;
+  --print-em-color: #000000;
 }
 
 body.color-scheme-options-avocado-topaz .theme-light,
@@ -3420,6 +3500,7 @@ body.color-scheme-options-avocado-topaz .workspace-leaf.mod-active .view-header-
   color: var(--h1-color);
 }
 
+body.color-scheme-options-avocado-topaz.all-dark .print.theme-light,
 body.color-scheme-options-avocado-topaz.theme-dark {
   --background-primary-alt: #000000;
 
@@ -3546,6 +3627,7 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --table-color-rgb: 5, 158, 5;
 }
 
+body.color-scheme-options-monochrome-topaz.all-dark .print.theme-light,
 body.color-scheme-options-monochrome-topaz.theme-dark {
   --text-accent: #e1e1e1;
   --text-accent-hover: #b8b8b8;
@@ -4151,7 +4233,7 @@ body.color-scheme-options-pink-topaz.theme-light {
   --table-color-rgb: 245, 214, 224;
 }
 
-
+body.color-scheme-options-pink-topaz.all-dark .print.theme-light,
 body.color-scheme-options-pink-topaz.theme-dark {
   --text-accent: #c874a5;
   --text-accent-hover: #bf5a95;
@@ -4338,6 +4420,7 @@ body.color-scheme-options-pink-topaz.theme-light .cm-strong.cm-em {
   background-color: initial;
 }
 
+body.color-scheme-options-topaz-nord.all-dark .print.theme-light,
 body.color-scheme-options-topaz-nord.theme-dark {
   --background-primary: var(--nord0);
   --background-primary-alt: var(--nord0);
@@ -4754,6 +4837,7 @@ body.color-scheme-options-flamingo.theme-light {
   --scrollbar-thumb: #f39ba050;
 }
 
+body.color-scheme-options-flamingo.all-dark .print.theme-light,
 body.color-scheme-options-flamingo.theme-dark {
   --background-primary: #212121;
   --background-primary-alt: #f937590d;
@@ -5267,6 +5351,7 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --table-color-rgb: 242, 235, 207;
 }
 
+body.color-scheme-options-honey-milk-topaz.all-dark .print.theme-light,
 body.color-scheme-options-honey-milk-topaz.theme-dark {
   /*蜂蜜牛奶 #f1b024*/
 
@@ -5682,6 +5767,7 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --table-color-rgb: 76, 52, 16;
 }
 
+body.color-scheme-options-chocolate-topaz.all-dark .print.theme-light,
 body.color-scheme-options-chocolate-topaz.theme-dark {
   /* 焦茶色 焦茶#6f4b3e */
   --color1: #f8d3a0;
@@ -6048,6 +6134,7 @@ body.color-scheme-options-autumn-topaz.theme-light {
   --table-color-rgb: 222, 236, 182;
 }
 
+body.color-scheme-options-autumn-topaz.all-dark .print.theme-light,
 body.color-scheme-options-autumn-topaz.theme-dark {
   /* 黄绿*/
   --color1: #ebe1cc;
@@ -6375,6 +6462,7 @@ body.color-scheme-options-lillimon-topaz.theme-light {
   --activeline-background: var(--bg-color2);
 }
 
+body.color-scheme-options-lillimon-topaz.all-dark .print.theme-light,
 body.color-scheme-options-lillimon-topaz.theme-dark {
   /*魔方深色*/
   /*魔方*/
@@ -6793,6 +6881,7 @@ body.color-scheme-options-lilac.theme-light {
   --table-color-rgb: 211, 161, 247;
 }
 
+body.color-scheme-options-lilac.all-dark .print.theme-light,
 body.color-scheme-options-lilac.theme-dark {
   --bg-color: #462058;
   --bg-color2: #b276c4;
@@ -7352,11 +7441,24 @@ body:not(.default-icons) .kanban li.task-list-item .task-list-item.is-collapsed 
   transition: all 400ms ease-in-out;
 }
 
-.markdown-source-view.is-live-preview.cloze .cm-em.cm-highlight.cm-strikethrough:not(.cm-formatting) {
+.markdown-source-view.is-live-preview.cloze .cm-em.cm-highlight.cm-strikethrough:not([class*="formatting"]) {
   color: transparent !important;
   background-color: transparent !important;
   padding: 0 2px;
   text-decoration: underline var(--cloze-decoration-2) var(--cloze-decoration-color-2) !important;
+}
+
+body.cloze-style-three .markdown-source-view.is-live-preview.cloze .cm-em.cm-strikethrough {
+  background-color: var(--cloze-bg-color-3);
+  color: var(--cloze-bg-color-3);
+  font-style: normal;
+  text-decoration: underline var(--cloze-decoration-3) var(--cloze-decoration-color-3);
+}
+
+body.cloze-style-three .markdown-source-view.is-live-preview.cloze .cm-em.cm-strikethrough:hover {
+  background-color: transparent !important;
+  color: var(--text-normal) !important;
+  transition: all 400ms ease-in-out;
 }
 
 /*========floating-toc===========*/
@@ -8058,6 +8160,7 @@ span.cm-highlight.cm-inline-code {
 
 .cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight+span.cm-formatting-strikethrough.cm-highlight.cm-strikethrough+span.cm-highlight.cm-strikethrough:not(.cm-em) {
   text-decoration: underline var(--cloze-decoration) var(--cloze-decoration-color);
+  background-color: transparent !important;
 }
 
 .cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight+.cm-formatting.cm-formatting-strikethrough+span.cm-highlight.cm-strikethrough:not(.cm-em):hover {
@@ -8093,6 +8196,23 @@ span.cm-highlight.cm-inline-code {
 .cm-s-obsidian .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em+.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight+.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough+span.cm-em.cm-highlight.cm-strikethrough {
   color: var(--accent-strong) !important;
   text-decoration: underline var(--cloze-decoration-2) var(--cloze-decoration-color-2) !important;
+}
+
+body.cloze-style-three .markdown-preview-view em > del {
+  background-color: var(--cloze-bg-color-3);
+  color: var(--cloze-bg-color-3);
+  font-style: normal;
+  text-decoration: underline var(--cloze-decoration-3) var(--cloze-decoration-color-3);
+}
+
+body.cloze-style-three .markdown-preview-view em > del:hover {
+  background-color: transparent;
+  color: var(--text-normal);
+  transition: all 400ms ease-in-out;
+}
+
+.cm-em.cm-formatting.cm-formatting-em+.cm-em.cm-formatting.cm-formatting-strikethrough.cm-strikethrough+span.cm-em.cm-strikethrough {
+  color: var(--accent-strong);
 }
 
 span.cm-strong.cm-em.cm-highlight {
@@ -8152,7 +8272,7 @@ body.hide-titlebar-text .titlebar-text {
 }
 
 .titlebar {
-  background-color: var(--background-secondary-alt);
+  background-color: var(--custom-titlebar-bg);
 }
 
 .titlebar-inner {
@@ -8988,6 +9108,61 @@ body.h4-text-align-end .markdown-preview-view h4,
 body.h5-text-align-end .markdown-preview-view h5,
 body.h6-text-align-end .markdown-preview-view h6 {
   text-align: end;
+}
+
+body.retain-heading-color .markdown-preview-view h1 em,
+body.retain-heading-color .markdown-preview-view h1 strong em,
+body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-1.cm-strong,
+body.retain-heading-color .markdown-preview-view h2 em,
+body.retain-heading-color .markdown-preview-view h2 strong em,
+body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-2.cm-strong,
+body.retain-heading-color .markdown-preview-view h3 em,
+body.retain-heading-color .markdown-preview-view h3 strong em,
+body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-3.cm-strong,
+body.retain-heading-color .markdown-preview-view h4 em,
+body.retain-heading-color .markdown-preview-view h4 strong em,
+body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-4.cm-strong,
+body.retain-heading-color .markdown-preview-view h5 em,
+body.retain-heading-color .markdown-preview-view h5 strong em,
+body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-5.cm-strong,
+body.retain-heading-color .markdown-preview-view h6 em,
+body.retain-heading-color .markdown-preview-view h6 strong em,
+body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-6.cm-strong {
+  background-image: initial;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-color: initial;
+}
+body.retain-heading-color .markdown-preview-view h1 em,
+body.retain-heading-color .markdown-preview-view h1 strong em,
+body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-1.cm-strong {
+  color: var(--h1-color) !important;
+}
+body.retain-heading-color .markdown-preview-view h2 em,
+body.retain-heading-color .markdown-preview-view h2 strong em,
+body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-2.cm-strong {
+  color: var(--h2-color) !important;
+}
+body.retain-heading-color .markdown-preview-view h3 em,
+body.retain-heading-color .markdown-preview-view h3 strong em,
+body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-3.cm-strong {
+  color: var(--h3-color) !important;
+}
+body.retain-heading-color .markdown-preview-view h4 em,
+body.retain-heading-color .markdown-preview-view h4 strong em,
+body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-4.cm-strong {
+  color: var(--h4-color) !important;
+}
+body.retain-heading-color .markdown-preview-view h5 em,
+body.retain-heading-color .markdown-preview-view h5 strong em,
+body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-5.cm-strong {
+  color: var(--h5-color) !important;
+}
+body.retain-heading-color .markdown-preview-view h6 em,
+body.retain-heading-color .markdown-preview-view h6 strong em,
+body.retain-heading-color .cm-s-obsidian .cm-em.cm-header.cm-header-6.cm-strong {
+  color: var(--h6-color) !important;
 }
 
 .markdown-preview-section:not(:first-child) h1,
@@ -11136,6 +11311,7 @@ a.external-link {
 body.link-underline a.external-link {
   text-decoration: none;
 }
+
 /*cm6 模式的下划线*/
 body.link-underline .markdown-source-view.mod-cm6 .cm-underline,
 body.link-underline a, 
@@ -19473,6 +19649,10 @@ body.background-settings-workplace-background-image.theme-dark .titlebar::before
   filter: brightness(0.35);
 }
 
+body.background-settings-workplace-background-image.simple-titlebar .titlebar::before {
+  display: none;
+}
+
 body.background-settings-workplace-background-image.theme-light {
   --background-primary-bg-4-bt: #ffffffb2;
   --background-secondary-bg-4-bt: #ffffff83;
@@ -19951,6 +20131,16 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   body.fancy-hr-no-icon .markdown-rendered hr {
     border-image: linear-gradient(to right, white 0%, var(--hr-color-1) 20%, var(--hr-color-2) 40%, var(--hr-color-3) 60%, var(--hr-color-4) 80%, white 100%) 1;
   }
+
+  .print .markdown-preview-view {
+    background-color: var(--background-primary) !important;
+  }
+  .print p {
+    color: var(--text-normal) !important;
+  }
+  .print .markdown-preview-view mark {
+    color: var(--text-highlight) !important;
+  }
 }
 
 /* ================================== */
@@ -19958,7 +20148,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220420";
+  content: "uid:20220421";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
