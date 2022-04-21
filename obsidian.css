@@ -1140,7 +1140,7 @@ settings:
     id: retain-header-color 
     title: Retain header color 
     title.zh: 保留标题颜色
-    description: Retain original color of headers when using italic or bold italic within headers
+    description: Retain original color of headers when using italic, bold or bold italic within headers
     type: class-toggle
     default: false
   -
@@ -9138,21 +9138,27 @@ body.h6-text-align-end .markdown-preview-view h6 {
 }
 
 body.retain-header-color .markdown-preview-view h1 em,
+body.retain-header-color .markdown-preview-view h1 strong,
 body.retain-header-color .markdown-preview-view h1 strong em,
 body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-1.cm-strong,
 body.retain-header-color .markdown-preview-view h2 em,
+body.retain-header-color .markdown-preview-view h2 strong,
 body.retain-header-color .markdown-preview-view h2 strong em,
 body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-2.cm-strong,
 body.retain-header-color .markdown-preview-view h3 em,
+body.retain-header-color .markdown-preview-view h3 strong,
 body.retain-header-color .markdown-preview-view h3 strong em,
 body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-3.cm-strong,
 body.retain-header-color .markdown-preview-view h4 em,
+body.retain-header-color .markdown-preview-view h4 strong,
 body.retain-header-color .markdown-preview-view h4 strong em,
 body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-4.cm-strong,
 body.retain-header-color .markdown-preview-view h5 em,
+body.retain-header-color .markdown-preview-view h5 strong,
 body.retain-header-color .markdown-preview-view h5 strong em,
 body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-5.cm-strong,
 body.retain-header-color .markdown-preview-view h6 em,
+body.retain-header-color .markdown-preview-view h6 strong,
 body.retain-header-color .markdown-preview-view h6 strong em,
 body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-6.cm-strong {
   background-image: initial;
@@ -9162,31 +9168,37 @@ body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-6.cm-strong {
   background-color: initial;
 }
 body.retain-header-color .markdown-preview-view h1 em,
+body.retain-header-color .markdown-preview-view h1 strong,
 body.retain-header-color .markdown-preview-view h1 strong em,
 body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-1.cm-strong {
   color: var(--h1-color) !important;
 }
 body.retain-header-color .markdown-preview-view h2 em,
+body.retain-header-color .markdown-preview-view h2 strong,
 body.retain-header-color .markdown-preview-view h2 strong em,
 body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-2.cm-strong {
   color: var(--h2-color) !important;
 }
 body.retain-header-color .markdown-preview-view h3 em,
+body.retain-header-color .markdown-preview-view h3 strong,
 body.retain-header-color .markdown-preview-view h3 strong em,
 body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-3.cm-strong {
   color: var(--h3-color) !important;
 }
 body.retain-header-color .markdown-preview-view h4 em,
+body.retain-header-color .markdown-preview-view h4 strong,
 body.retain-header-color .markdown-preview-view h4 strong em,
 body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-4.cm-strong {
   color: var(--h4-color) !important;
 }
 body.retain-header-color .markdown-preview-view h5 em,
+body.retain-header-color .markdown-preview-view h5 strong,
 body.retain-header-color .markdown-preview-view h5 strong em,
 body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-5.cm-strong {
   color: var(--h5-color) !important;
 }
 body.retain-header-color .markdown-preview-view h6 em,
+body.retain-header-color .markdown-preview-view h6 strong,
 body.retain-header-color .markdown-preview-view h6 strong em,
 body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-6.cm-strong {
   color: var(--h6-color) !important;
