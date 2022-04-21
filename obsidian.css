@@ -2154,6 +2154,58 @@ settings:
     format: hex
     default-light: '#db4e4ecc'
     default-dark: '#f08080de'
+  - 
+    id: cursor-style-folder
+    title: 2.3.12 Cursor
+    title.zh: 2.3.12 输入光标
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: cursor-color
+    title: Cursor color
+    title.zh: 光标颜色
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
+    id: fancy-cursor
+    title: Toggle fancy cursor
+    title.zh: 切换装饰性光标
+    type: class-toggle
+    default: false
+  -
+    id: fancy-cursor-color-1
+    title: Fancy cursor color 1
+    title.zh: 光标颜色 1
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
+    id: fancy-cursor-color-2
+    title: Fancy cursor color 2
+    title.zh: 光标颜色 2
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
+    id: fancy-cursor-width
+    title: Cursor width
+    title.zh: 光标宽度
+    type: variable-text
+    default: 2px
+  -
+    id: fancy-cursor-radius
+    title: Cursor radius
+    title.zh: 光标圆角
+    type: variable-text
+    default: 3px
   -
     id: style-options-for-other-plugins
     title: 3. For Plugins
@@ -2175,7 +2227,7 @@ settings:
     opacity: true
     format: hex
     default-light: '#ffffffa6'
-    default-dark: '#1111118f'  
+    default-dark: '#1111118f'
   -
     id: style-options-for-admonition-plugin
     title: Admonition special style support
@@ -2653,6 +2705,12 @@ body {
   --text-highlight-bg-s-light: 100%;
   --text-highlight-bg-l-light: 80%;
   --text-highlight-bg-a-light: 0.847;
+
+  --fancy-cursor-width: 2px;
+  --cursor-color: var(var(--text-normal));
+  --fancy-cursor-color-1: var(--theme-color);
+  --fancy-cursor-color-2: var(--theme-color);
+  --fancy-cursor-radius: 3px;
 }
 
 body.font-family-change-to-default .markdown-source-view,
@@ -17763,6 +17821,24 @@ body.dialogue-style-chat .dialogue-plugin-message-title {
 /* ============ */
 /* just for fun */
 /* ============ */
+
+/*cursor*/
+body.fancy-cursor .CodeMirror-cursor,
+body.fancy-cursor .cm-cursorLayer .cm-cursor {
+  width: var(--fancy-cursor-width);
+  border: none;
+  border-radius: var(--fancy-cursor-radius);
+  transition: 200ms;
+  transform: scale(1.1);
+  background: linear-gradient(to bottom left, var(--fancy-cursor-color-1) 0%, var(--fancy-cursor-color-2) 100%);
+}
+
+.CodeMirror-cursor,
+.cm-s-obsidian .cm-cursor,
+.cm-s-obsidian .cm-dropCursor {
+  border-left-color: var(--cursor-color);
+}
+
 .workspace-ribbon.side-dock-ribbon.mod-left,
 .workspace-ribbon.side-dock-ribbon.mod-right {
   background-color: var(--background-secondary-alt-bg-4-bt);
