@@ -2179,7 +2179,7 @@ settings:
   -
     id: fancy-cursor-color-1
     title: Fancy cursor color 1
-    title.zh: 光标颜色 1
+    title.zh: 装饰性光标颜色 1
     type: variable-themed-color
     opacity: true
     format: hex
@@ -2188,7 +2188,7 @@ settings:
   -
     id: fancy-cursor-color-2
     title: Fancy cursor color 2
-    title.zh: 光标颜色 2
+    title.zh: 装饰性光标颜色 2
     type: variable-themed-color
     opacity: true
     format: hex
@@ -2197,13 +2197,13 @@ settings:
   -
     id: fancy-cursor-width
     title: Cursor width
-    title.zh: 光标宽度
+    title.zh: 装饰性光标宽度
     type: variable-text
     default: 2px
   -
     id: fancy-cursor-radius
     title: Cursor radius
-    title.zh: 光标圆角
+    title.zh: 装饰性光标圆角
     type: variable-text
     default: 3px
   -
