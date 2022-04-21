@@ -15001,6 +15001,10 @@ section.footnotes ol>li:not(.task-list-item) {
   border-left: none !important;
 }
 
+.cm-s-obsidian span.cm-footref {
+  color: var(--text-accent);
+}
+
 /* ================================== */
 /* =========== admonition =========== */
 /* ================================== */
