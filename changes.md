@@ -1,20 +1,30 @@
 # 更新日志
 
-### 20220420
-
+### 20220421
 1. 涂黑挖空和多彩高亮效果支持 ad 和callout嵌入
 2. callout center 属性可以使文本居中
+3. style settings 1.2.1 里提供新选项，可以移除title bar的背景图片
+4. style settings 2.1.1 里提供新选项，可以设置title bar的颜色
+5. style settings 2.1.3 标题颜色移动至 2.2.3
+6. style settings 2.2.3 增加新选项，可以保留标题颜色（不受加粗、斜体颜色影响）
+7. style settings 2.3.5 增加新选项“All dark”，可以让黑暗模式导出的pdf保留黑暗配色
+8. style settings 2.3.10 增加新的cloze样式及设置，使用语法为`*~~xxx~~*`
+9. style settings 增加新选项 “2.3.11 链接”，可以设置内链和外链的一些样式
+10. 默认侧面面板中的md文件字体、行间距缩小。可以在style settings 增加新选项 “2.2.5 侧面拆分面板中的md文件”中调整
+11. 脚标符号颜色调整为主题色
+
 
 ### 20220420
-
 1. Sliding Panes 插件背景透明设置移到3.8
-
 2. 修复copy-code-button 和code block enhancer 插件跟banner不兼容的问题
 
-   
+### 20220419
+1. 提供挖空、涂黑的live preview模式适配，需要在开头yaml中键入`cssclass: cloze`
+2. 提供挖空、涂黑的style settings样式设置选项，2.3.9 挖空涂黑
+3. 提供多彩高亮的live preview模式适配`cssclass: colorful-highlight`
+4. 细节样式调整
 
 ### 20220418
-
 1. 修复使用传统编辑器时列表层级线消失的问题
 2. 调大了移动端新建文件/文件夹按钮的大小
 3. 优化rtl显示
