@@ -9141,27 +9141,23 @@ body.h6-text-align-end .markdown-preview-view h6 {
 body.retain-header-color .markdown-preview-view h1 em,
 body.retain-header-color .markdown-preview-view h1 strong,
 body.retain-header-color .markdown-preview-view h1 strong em,
-body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-1.cm-strong,
 body.retain-header-color .markdown-preview-view h2 em,
 body.retain-header-color .markdown-preview-view h2 strong,
 body.retain-header-color .markdown-preview-view h2 strong em,
-body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-2.cm-strong,
 body.retain-header-color .markdown-preview-view h3 em,
 body.retain-header-color .markdown-preview-view h3 strong,
 body.retain-header-color .markdown-preview-view h3 strong em,
-body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-3.cm-strong,
 body.retain-header-color .markdown-preview-view h4 em,
 body.retain-header-color .markdown-preview-view h4 strong,
 body.retain-header-color .markdown-preview-view h4 strong em,
-body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-4.cm-strong,
 body.retain-header-color .markdown-preview-view h5 em,
 body.retain-header-color .markdown-preview-view h5 strong,
 body.retain-header-color .markdown-preview-view h5 strong em,
-body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-5.cm-strong,
 body.retain-header-color .markdown-preview-view h6 em,
 body.retain-header-color .markdown-preview-view h6 strong,
 body.retain-header-color .markdown-preview-view h6 strong em,
-body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-6.cm-strong {
+body.retain-header-color .cm-s-obsidian .cm-header[class*="cm-em"],
+body.retain-header-color .cm-s-obsidian .cm-header[class*="cm-strong"] {
   background-image: initial;
   background-clip: initial;
   -webkit-background-clip: initial;
@@ -9171,38 +9167,50 @@ body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-6.cm-strong {
 body.retain-header-color .markdown-preview-view h1 em,
 body.retain-header-color .markdown-preview-view h1 strong,
 body.retain-header-color .markdown-preview-view h1 strong em,
-body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-1.cm-strong {
+body.retain-header-color .cm-s-obsidian .cm-header.cm-header-1[class*="cm-em"],
+body.retain-header-color .cm-s-obsidian .cm-header.cm-header-1[class*="cm-strong"] {
   color: var(--h1-color) !important;
+  font-family: var(--font-family-h1) !important;
 }
 body.retain-header-color .markdown-preview-view h2 em,
 body.retain-header-color .markdown-preview-view h2 strong,
 body.retain-header-color .markdown-preview-view h2 strong em,
-body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-2.cm-strong {
+body.retain-header-color .cm-s-obsidian .cm-header.cm-header-2[class*="cm-em"],
+body.retain-header-color .cm-s-obsidian .cm-header.cm-header-2[class*="cm-strong"]  {
   color: var(--h2-color) !important;
+  font-family: var(--font-family-h2) !important;
 }
 body.retain-header-color .markdown-preview-view h3 em,
 body.retain-header-color .markdown-preview-view h3 strong,
 body.retain-header-color .markdown-preview-view h3 strong em,
-body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-3.cm-strong {
+body.retain-header-color .cm-s-obsidian .cm-header.cm-header-3[class*="cm-em"],
+body.retain-header-color .cm-s-obsidian .cm-header.cm-header-3[class*="cm-strong"]  {
   color: var(--h3-color) !important;
+  font-family: var(--font-family-h3) !important;
 }
 body.retain-header-color .markdown-preview-view h4 em,
 body.retain-header-color .markdown-preview-view h4 strong,
 body.retain-header-color .markdown-preview-view h4 strong em,
-body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-4.cm-strong {
+body.retain-header-color .cm-s-obsidian .cm-header.cm-header-4[class*="cm-em"],
+body.retain-header-color .cm-s-obsidian .cm-header.cm-header-4[class*="cm-strong"]  {
   color: var(--h4-color) !important;
+  font-family: var(--font-family-h4) !important;
 }
 body.retain-header-color .markdown-preview-view h5 em,
 body.retain-header-color .markdown-preview-view h5 strong,
 body.retain-header-color .markdown-preview-view h5 strong em,
-body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-5.cm-strong {
+body.retain-header-color .cm-s-obsidian .cm-header.cm-header-5[class*="cm-em"],
+body.retain-header-color .cm-s-obsidian .cm-header.cm-header-5[class*="cm-strong"]  {
   color: var(--h5-color) !important;
+  font-family: var(--font-family-h5) !important;
 }
 body.retain-header-color .markdown-preview-view h6 em,
 body.retain-header-color .markdown-preview-view h6 strong,
 body.retain-header-color .markdown-preview-view h6 strong em,
-body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-6.cm-strong {
+body.retain-header-color .cm-s-obsidian .cm-header.cm-header-6[class*="cm-em"],
+body.retain-header-color .cm-s-obsidian .cm-header.cm-header-6[class*="cm-strong"]  {
   color: var(--h6-color) !important;
+  font-family: var(--font-family-h6) !important;
 }
 
 .markdown-preview-section:not(:first-child) h1,
@@ -9214,8 +9222,8 @@ body.retain-header-color .cm-s-obsidian .cm-em.cm-header.cm-header-6.cm-strong {
 }
 
 .markdown-preview-section:not(:first-child) h6 {
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 /*preview Header hover*/
@@ -19951,7 +19959,7 @@ body.layout-style-options-rectangle .side-dock-ribbon-action {
 
 /*-------- Eisenhower Matrix start--- */
 /* Eisenhower Matrix from Spectrum themes */
-/* 
+
 /*for Blue Topaz theme-表格四象图分布 Modified  by cuman 2021-11-29*/
 /* 用法 yaml区域声明
 cssclass: matrix
@@ -19984,7 +19992,7 @@ cssclass: matrix
 }
 .markdown-preview-view.matrix table th {
   background-color: transparent;
-  background-image:none;
+  background-image: none;
 }
 .markdown-preview-view.matrix table tbody>tr {
   background-color: transparent;
@@ -20272,17 +20280,14 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 .callout .callout-content p img {
   display: block;
 }
-.is-live-preview .callout:not(.admonition) .callout-content p
-{
-  margin-top:0px;
-  margin-bottom:0px;
+.is-live-preview .callout:not(.admonition) .callout-content p {
+  margin-top: 0p;
+  margin-bottom: 0;
 }
 
-.is-live-preview .callout:not(.admonition) .callout-content 
-{
-  padding-top:0px;
-  padding-bottom:0px;
-  
+.is-live-preview .callout:not(.admonition) .callout-content {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .callout-content {
   padding-left: 10px;
@@ -20295,12 +20300,12 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 /* ===编辑代码块按钮调整============ */
 .markdown-source-view.mod-cm6 .cm-embed-block {
   border: 0;
-  padding-top:9px;
+  padding-top: 9px;
 }
 .markdown-source-view.mod-cm6 .edit-block-button {
   padding: 0px;
   top: -1.5px;
-  border-radius:20px;
+  border-radius: 20px;
   right: 10px;
 }
 .markdown-source-view.mod-cm6 .edit-block-button::before {
@@ -20344,7 +20349,6 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
     > [!note|indent]
     > [!note indent]
    */
-
 .callout.callout:is([data-callout-metadata*="indent"], 
 [data-callout*=indent]) .callout-content p br {
   content: '';
@@ -20363,7 +20367,6 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 [data-callout*=indent]) .callout-content p br::after {
   content: '\A         ';
 }
-  
   
 
   /* ===支持 right left  center 语法============ */
@@ -20389,7 +20392,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   float: unset !important ;
   text-align:center;
 }
-  /* ===块内元素不换行============ */
+/* ===块内元素不换行============ */
 .callout.callout:is([data-callout-metadata*='nowrap'],
 [data-callout*='nowrap']) {
  max-width: unset !important;
@@ -20402,11 +20405,11 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 }
 
 
-   /* ===百分比宽度============ */
-   /*支持两种写法
-    > [!note|30%]
-    > [!note 30%]
-   */
+/* ===百分比宽度============ */
+/*支持两种写法
+  > [!note|30%]
+  > [!note 30%]
+*/
 
 .callout.callout:is([data-callout-metadata*='100%'],
 [data-callout*='100%']) {
@@ -20505,7 +20508,6 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 }
 
 /* callout伪看板效果*/
-
 .callout.callout[data-callout*="kanban"] {
   --callout-color: var(--text-normal);
   --callout-icon: layout-dashboard;
@@ -20519,9 +20521,9 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 .callout.callout[data-callout*="kanban"] {
   overflow: visible;
   background-color: rgba(255, 255, 255, 0)!important;
-  border-left:0px!important;
+  border-left: 0 !important;
   margin: auto;
-  box-shadow:none!important;
+  box-shadow: none!important;
 }
 .callout.callout[data-callout*="kanban"] .admonition-content {
   overflow: visible;
@@ -20542,8 +20544,8 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 
 .callout.callout[data-callout*="kanban"] ul>li:not(.task-list-item) {
   flex: 1 1 20%;
-  padding: 0.1em 1em 0.1em 0.8em  !important;
-  margin: 0 0.1em 0.3em 0  !important;
+  padding: 0.1em 1em 0.1em 0.8em !important;
+  margin: 0 0.1em 0.3em 0 !important;
   list-style: none;
   border: 1px solid var(--p-kanban-border-color);
   border-left: 1px solid var(--p-kanban-border-color) !important;
@@ -20684,7 +20686,6 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 
 
 /*callout hibox*/
-
 .callout.callout[data-callout*="hibox"] {
   background-color: transparent !important;
   box-shadow: none !important;
@@ -20812,14 +20813,14 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   padding: 0;
 }
 
-.callout.callout[data-callout*=bookinfo]  .callout-title {
+.callout.callout[data-callout*=bookinfo] .callout-title {
   text-align: center;
   margin-top: -10px;
   display: flex;
   justify-content: space-between;
 }
 
-.callout.callout[data-callout*=bookinfo]  .callout-content {
+.callout.callout[data-callout*=bookinfo] .callout-content {
   margin-top: -10px;
   display: flex;
   justify-content: space-between;
