@@ -261,12 +261,6 @@ settings:
     type: class-toggle
     default: false
   - 
-    id: transparent-panes
-    title: Transparent Panes for Sliding Panes Plugin
-    title.zh: 使用Sliding Panes插件时，透明化部分页面
-    type: class-toggle
-    default: false
-  -
     id: background-settings-markdown-page
     title: 1.2.2 Note Page Background Image
     title.zh: 1.2.2 笔记背景
@@ -2289,7 +2283,7 @@ settings:
         value: dataview-list-style-normal
   -
     id: style-options-for-dataview-table-plugin-heading
-    title: 3.6.1 Dataview Table
+    title: 3.6.2 Dataview Table
     type: heading
     level: 3
     collapsed: true
@@ -2330,6 +2324,18 @@ settings:
       - 
         label: Chat
         value: dialogue-style-chat
+  -
+    id: style-options-for-Sliding-Panes-plugin-heading
+    title: 3.8 Sliding Panes
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: transparent-panes
+    title: Transparent Panes for Sliding Panes Plugin
+    title.zh: 使用Sliding Panes插件时，透明化部分页面
+    type: class-toggle
+    default: false
   -
     id: build-in-style-folder
     title: 4. Built-in Style Intro
@@ -13769,6 +13775,11 @@ button.copy-code-button:hover {
   background-color: var(--theme-color-translucent-1);
 }
 
+.obsidian-banner-wrapper.has-copy-button
+{
+  position:unset;
+}
+
 /*=====================================*/
 /*frontmatter specification 同义词等声明*/
 /*=====================================*/
@@ -14952,6 +14963,9 @@ body.style-options-for-admonition-plugin .admonition  {
   break-inside: avoid;
 }
 
+body.style-options-for-admonition-plugin .callout.admonition .admonition-content {
+  overflow: hidden;
+}
 
 .admonition {
   background-color: var(--admonition-bg-color) !important;
@@ -15829,6 +15843,14 @@ h5.breadcrumbs-matrix-header {
 
 .breadcrumbs-matrix ol {
   margin-left: 8px !important;
+}
+
+/* ================================== */
+/* ============ code  block enhancer =========== */
+/* ================================== */
+.obsidian-banner-wrapper.code-block-wrap
+{
+position: unset;
 }
 
 /* ================================== */
