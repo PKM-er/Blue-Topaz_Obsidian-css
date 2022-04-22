@@ -2828,7 +2828,7 @@ body.all-dark .print.theme-light,
   --white: #ffffff;
 
   --embed-color: #1156a534;
-  --search-result-file-title-color: #96b7e4;
+  --search-result-file-title-color: var(--text-normal);
   --theme-color: var(--interactive-accent);
   --theme-color-translucent: #3187d388;
   --theme-color-translucent-1: #1982dd2c;
@@ -3128,7 +3128,7 @@ body.all-dark .print.theme-light,
   --white: #ffffff;
 
   --embed-color: #b6d6ff4f;
-  --search-result-file-title-color: #2f92e4;
+  --search-result-file-title-color: var(--text-normal);
   --theme-color: var(--interactive-accent);
   --theme-color-translucent: #3892dc7a;
   --theme-color-translucent-1: #2f93e426;
@@ -3403,7 +3403,7 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --scrollbar-thumb: #c6c6c6a8;
 
   --embed-color: #d6ebdc4f;
-  --search-result-file-title-color: #10a075;
+  --search-result-file-title-color: var(--text-normal);
   --theme-color: var(--interactive-accent);
   --theme-color-translucent: #bde4d47a;
   --theme-color-translucent-1: #7ce19b26;
@@ -3620,7 +3620,7 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --scrollbar-thumb: #8282827e;
 
   --embed-color: #4047424f;
-  --search-result-file-title-color: #5ac668;
+  --search-result-file-title-color: var(--text-normal);
   --theme-color: var(--interactive-accent);
   --theme-color-translucent: #637b717a;
   --theme-color-translucent-1: #53695f7a;
@@ -3738,7 +3738,7 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --background-secondary-alt-bg-4-bt: #000000;
 
   --embed-color: #45454534;
-  --search-result-file-title-color: #b3b3b3;
+  --search-result-file-title-color: var(--text-normal);
   --theme-color: var(--interactive-accent);
   --theme-color-translucent: #76767688;
   --theme-color-translucent-1: #8585852c;
@@ -3883,7 +3883,7 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --background-secondary-alt-bg-4-bt: #f5f5f5;
 
   --embed-color: #e7e7e74f;
-  --search-result-file-title-color: #a7a7a7;
+  --search-result-file-title-color: var(--text-normal);
   --theme-color: var(--interactive-accent);
   --theme-color-translucent: #cecece7a;
   --theme-color-translucent-1: #95959526;
@@ -8573,6 +8573,10 @@ input.search-input {
 .tree-item-self.is-clickable:hover {
   background-color: transparent;
   color: var(--search-result-file-title-color);
+}
+
+.tree-item-self.is-clickable.is-collapsed .tree-item-inner {
+  opacity: 0.6;
 }
 
 .tag-container .tree-item-self.tag-pane-tag.is-clickable:hover {
