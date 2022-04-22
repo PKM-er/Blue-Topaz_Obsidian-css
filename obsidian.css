@@ -1927,8 +1927,8 @@ settings:
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: '#000000'
-    default-dark: '#000000'
+    default-light: '#'
+    default-dark: '#'
   -
     id: print-em-color
     title: Italic Type Color
@@ -1936,8 +1936,8 @@ settings:
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: '#000000'
-    default-dark: '#000000'
+    default-light: '#'
+    default-dark: '#'
   -
     id: embed-folder
     title: 2.3.6 Embeds
@@ -10464,7 +10464,7 @@ body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(8n+2)::before {
   border-color: rgba(var(--accent-2-rgb),0.7);
 }
 body.rainbow-lines .mod-cm6 .HyperMD-list-line-2>span.list-bullet {
-  color: rgb(var(--accent-2-rgb)) ;
+  color: rgb(var(--accent-2-rgb));
 }
 
 body.rainbow-ordered-list .HyperMD-list-line-3 .cm-formatting-list {
@@ -10477,13 +10477,13 @@ body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-3 .task-list-item-checkbox:che
   background-color: rgba(var(--accent-3-rgb),0.7);
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-3 .task-list-item-checkbox {
-  border-color: rgba(var(--accent-3-rgb),0.7) ;
+  border-color: rgba(var(--accent-3-rgb),0.7);
 }
 body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(8n+3)::before {
   border-color: rgba(var(--accent-3-rgb),0.7);
 }
 body.rainbow-lines .mod-cm6 .HyperMD-list-line-3>span.list-bullet {
-  color: rgb(var(--accent-3-rgb)) ;
+  color: rgb(var(--accent-3-rgb));
 }
 
 body.rainbow-ordered-list .HyperMD-list-line-4 .cm-formatting-list {
@@ -10496,13 +10496,13 @@ body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-4 .task-list-item-checkbox:che
   background-color: rgba(var(--accent-4-rgb),0.7);
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-4 .task-list-item-checkbox {
-  border-color: rgba(var(--accent-4-rgb),0.7) ;
+  border-color: rgba(var(--accent-4-rgb),0.7);
 }
 body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(8n+4)::before {
-  border-color: rgba(var(--accent-4-rgb),0.7) ;
+  border-color: rgba(var(--accent-4-rgb),0.7);
 }
 body.rainbow-lines .mod-cm6 .HyperMD-list-line-4>span.list-bullet {
-  color: rgb(var(--accent-4-rgb)) ;
+  color: rgb(var(--accent-4-rgb));
 }
 
 body.rainbow-ordered-list .HyperMD-list-line-5 .cm-formatting-list{
@@ -10995,10 +10995,12 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   top: -1.1em;
 }
 
-
 .markdown-embed :is(h1, h2, h3, h4, h5, h6):hover::before,
 .callout-content :is(h1, h2, h3, h4, h5, h6):hover::before{
   margin-left: 0 !important;
+}
+.callout-content :is(h1, h2, h3, h4, h5, h6):hover::before {
+  top: -1.25em;
 }
 
 :is(.markdown-preview-section,.markdown-rendered) table:not(.dataview.table-view-table) {
@@ -20346,14 +20348,14 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
     border-image: linear-gradient(to right, white 0%, var(--hr-color-1) 20%, var(--hr-color-2) 40%, var(--hr-color-3) 60%, var(--hr-color-4) 80%, white 100%) 1;
   }
 
-  .print :is(.markdown-preview-view,.markdown-rendered) {
+  body.all-dark .print :is(.markdown-preview-view,.markdown-rendered) {
     background-color: var(--background-primary) !important;
   }
-  .print p {
-    color: var(--text-normal) !important;
-  }
-  .print :is(.markdown-preview-view,.markdown-rendered) mark {
+  body.all-dark .print :is(.markdown-preview-view,.markdown-rendered) mark {
     color: var(--text-highlight) !important;
+  }
+  body.all-dark .print .markdown-preview-view {
+    color: var(--text-normal) !important;
   }
 }
 
@@ -20491,7 +20493,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 .callout.callout[data-callout*=blank] .callout-content {
   overflow: visible;
   margin: 0;
-  padding:0px;
+  padding: 0;
   border: 0;
 }
 
@@ -20892,7 +20894,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   background-color: var(--background-blockquote) !important;
 }
 
-.callout.callout[data-callout*="hibox"]  .callout-content:hover {
+.callout.callout[data-callout*="hibox"] .callout-content:hover {
   border-color: var(--text-normal) !important;
 }
 
