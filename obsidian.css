@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.14.6。uid [20220421] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.14.6, uid [20220421] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.14.6。uid [20220422] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.14.6, uid [20220422] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -752,11 +752,11 @@ settings:
     max: 1
     step: 0.05
   -
-    id: colorful-highlight-bg
-    title: Toggle Colorful Highlight Background Color
-    title.zh: 切换多彩高亮颜色
-    description: To give *==xxx==*, **==xxx==** and ***==xxx==*** different background colors, should declare "cssclass：colorful-highlight" in the YAML area if you want to use them in the Live Preview mode
-    description.zh: 赋予*==xxx==*, **==xxx==** and ***==xxx==*** 不同高亮背景色, 如果需要在live preview模式使用, 需要在yaml区声明 "cssclass：colorful-highlight"
+    id: remove-colorful-highlight-bg
+    title: Cancel Colorful Highlight Background Color
+    title.zh: 取消多彩高亮颜色
+    description: In this theme, *==xxx==*, **==xxx==** and ***==xxx==*** possese different background colors by default, active this option to cancel it. Even with this option actived, you can still type "cssclass：colorful-highlight" into yaml to make the colorful-highlight style available to individual documents
+    description.zh: 当前主题下，*==xxx==*, **==xxx==** and ***==xxx==*** 默认情况下具有不同高亮背景色，激活该选项以取消。即使取消了该功能，你依旧可以在yaml中键入"cssclass：colorful-highlight"，使单个文档激活多彩高亮功能
     type: class-toggle
     default: false
   -
@@ -1909,7 +1909,7 @@ settings:
     default: false
   -
     id: all-dark
-    title:  All dark
+    title:  All dark (Experimental, may or may not be desirable)
     description: Export PDF with dark mode color scheme
     description.zh: 导出黑暗配色的PDF
     type: class-toggle
@@ -2058,6 +2058,14 @@ settings:
     level: 3
     collapsed: true
   -
+    id: remove-cloze-style
+    title: Cancel Cloze Style
+    title.zh: 取消挖空涂黑功能
+    description: In this theme, you can use ==~~your words~~==, *==~~your words~~==* and *~~your words~~* to obtain a cloze-style, active this option to cancel it
+    description.zh: 当前主题下，使用以下格式可以对文本进行涂黑或挖空 ==~~your words~~==, *==~~your words~~==* 或 *~~your words~~*，激活该选项以取消
+    type: class-toggle
+    default: false
+  -
     id: cloze-bg-color
     title: Cloze background color
     title.zh: 涂黑背景颜色
@@ -2098,16 +2106,8 @@ settings:
     default-light: '#'
     default-dark: '#'
   -
-    id: cloze-style-three
-    title: Toggle Cloze style three (*~~your words~~*)
-    title.zh: 开启Cloze样式三 (*~~your words~~*)
-    description: No background color, suitable for exported PDF
-    description.zh: 没有背景颜色，适合导出PDF，作为纸质填空题
-    type: class-toggle
-    default: false
-  -
     id: cloze-decoration-3
-    title: Underline decoration style for Cloze style THREE
+    title: Underline decoration style for Cloze style THREE (*~~your words~~*)
     description: Can type 'solid', 'dotted', 'dashed', 'wavy', 'double' or 'none' for Cloze Style THREE, i.e. *~~your words~~*, pressing down the primary mouse button to find "your words", should declare 'cssclass：cloze' in the YAML area if you want to use them in the Live Preview mode
     type: variable-text
     default: dashed
@@ -2121,7 +2121,7 @@ settings:
     default-light: '#'
     default-dark: '#'
   -
-    id: cloze-style
+    id: link-style
     title: 2.3.11 Links
     title.zh: 2.3.11 链接
     type: heading
@@ -7494,7 +7494,7 @@ body:not(.default-icons) .kanban li.task-list-item .task-list-item.is-collapsed 
 }
 
 /* cssclass: colorful-highlight */
-
+body:not(.remove-colorful-highlight-bg) .markdown-source-view.is-live-preview *:not([class*="cm-formatting-highlight"])~*:not([class*="cm-em"])~.cm-em.cm-highlight.cm-strong,
 .markdown-source-view.is-live-preview.colorful-highlight .cm-em.cm-highlight.cm-strong {
   background-color: var(--bg-color-highlight-3) !important;
   color: var(--color-highlight-3) !important;
@@ -7502,16 +7502,24 @@ body:not(.default-icons) .kanban li.task-list-item .task-list-item.is-collapsed 
   font-style: normal;
   font-weight: var(--font-weight-highlight-3);
 }
+body:not(.remove-colorful-highlight-bg) .markdown-source-view.is-live-preview *:not([class*="cm-formatting-highlight"])~*:not([class*="cm-strong"])~.cm-highlight.cm-strong,
 .markdown-source-view.is-live-preview.colorful-highlight .cm-highlight.cm-strong {
   background-color: var(--bg-color-highlight-2) !important;
   color: var(--color-highlight-2) !important;
   font-weight: var(--font-weight-highlight-2);
 }
+body:not(.remove-colorful-highlight-bg) .markdown-source-view.is-live-preview *:not([class*="cm-formatting-highlight"])~*:not([class*="cm-em"])~.cm-em.cm-highlight,
 .markdown-source-view.is-live-preview.colorful-highlight .cm-em.cm-highlight {
   background-color: var(--bg-color-highlight-1) !important;
   color: var(--color-highlight-1) !important;
   font-style: normal;
   font-weight: var(--font-weight-highlight-1);
+}
+.cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight~.cm-formatting.cm-highlight[class*="cm-em"]~span.cm-highlight[class*="cm-em"],
+.cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight~.cm-formatting.cm-highlight[class*="cm-strong"]~span.cm-highlight[class*="cm-strong"],
+.cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight~.cm-formatting.cm-highlight[class*="cm-em"]:not([class*="cm-formatting-highlight"]),
+.cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight~.cm-formatting.cm-highlight[class*="cm-strong"]:not([class*="cm-formatting-highlight"]) {
+  background-color: var(--text-highlight-bg) !important;
 }
 
 /* cssclass: cloze */
@@ -7534,18 +7542,7 @@ body:not(.default-icons) .kanban li.task-list-item .task-list-item.is-collapsed 
   text-decoration: underline var(--cloze-decoration-2) var(--cloze-decoration-color-2) !important;
 }
 
-body.cloze-style-three .markdown-source-view.is-live-preview.cloze .cm-em.cm-strikethrough {
-  background-color: var(--cloze-bg-color-3);
-  color: var(--cloze-bg-color-3);
-  font-style: normal;
-  text-decoration: underline var(--cloze-decoration-3) var(--cloze-decoration-color-3);
-}
 
-body.cloze-style-three .markdown-source-view.is-live-preview.cloze .cm-em.cm-strikethrough:hover {
-  background-color: transparent !important;
-  color: var(--text-normal) !important;
-  transition: all 400ms ease-in-out;
-}
 
 /*========floating-toc===========*/
 
@@ -8238,67 +8235,118 @@ span.cm-highlight.cm-inline-code {
 }
 
 /*cloze*/
-:is(.markdown-preview-view,.markdown-rendered)  mark > del {
+body:not(.remove-cloze-style) :is(.markdown-preview-view,.markdown-rendered) mark > del,
+:is(.markdown-preview-view,
+.markdown-rendered).cloze mark > del {
   background-color: var(--cloze-bg-color);
   color: var(--cloze-bg-color);
   text-decoration: underline var(--cloze-decoration) var(--cloze-decoration-color);
 }
 
-.cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight+span.cm-formatting-strikethrough.cm-highlight.cm-strikethrough+span.cm-highlight.cm-strikethrough:not(.cm-em) {
+body:not(.remove-cloze-style) .cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight~span.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-highlight.cm-strikethrough:not(.cm-em),
+body:not(.remove-cloze-style) .cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight~span.cm-formatting-strikethrough.cm-highlight.cm-strikethrough,
+.markdown-source-view.cloze .cm-formatting.cm-formatting-highlight.cm-highlight~span.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-highlight.cm-strikethrough:not(.cm-em),
+.markdown-source-view.cloze *:not([class*="cm-formatting-em"]).cm-formatting.cm-formatting-highlight.cm-highlight~span.cm-formatting-strikethrough.cm-highlight.cm-strikethrough {
   text-decoration: underline var(--cloze-decoration) var(--cloze-decoration-color);
   background-color: transparent !important;
 }
 
-.cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight+.cm-formatting.cm-formatting-strikethrough+span.cm-highlight.cm-strikethrough:not(.cm-em):hover {
+body:not(.remove-cloze-style) .cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight~.cm-formatting.cm-formatting-strikethrough~span.cm-highlight.cm-strikethrough:not(.cm-em):hover,
+.markdown-source-view.cloze .cm-formatting.cm-formatting-highlight.cm-highlight~.cm-formatting.cm-formatting-strikethrough~span.cm-highlight.cm-strikethrough:not(.cm-em):hover {
   background-color: var(--text-highlight-bg);
   color: var(--text-normal);
   transition: all 400ms ease-in-out;
 }
 
-:is(.markdown-preview-view,.markdown-rendered)  mark > del:hover {
+body:not(.remove-cloze-style) :is(.markdown-preview-view,
+.markdown-rendered) mark > del:hover,
+:is(.markdown-preview-view,
+.markdown-rendered).cloze mark > del:hover {
   background-color: transparent;
   color: var(--text-normal);
   transition: all 400ms ease-in-out;
 }
 
-:is(.markdown-preview-view,.markdown-rendered)  em > mark > del {
+body:not(.remove-cloze-style) :is(.markdown-preview-view,
+.markdown-rendered) em > mark > del,
+:is(.markdown-preview-view,
+.markdown-rendered).cloze em > mark > del {
   color: transparent;
   background-color: transparent;
   padding: 0 2px;
   text-decoration: underline var(--cloze-decoration-2) var(--cloze-decoration-color-2) !important;
 }
 
-:is(.markdown-preview-view,.markdown-rendered)  em > mark > del:hover {
+body:not(.remove-cloze-style) :is(.markdown-preview-view,
+.markdown-rendered) em > mark > del:hover,
+:is(.markdown-preview-view,
+.markdown-rendered).cloze em > mark > del:hover {
   cursor: pointer;
   color: transparent;
 }
 
-:is(.markdown-preview-view,.markdown-rendered)  em > mark > del:active {
+body:not(.remove-cloze-style) :is(.markdown-preview-view,
+.markdown-rendered) em > mark > del:active,
+:is(.markdown-preview-view,
+.markdown-rendered).cloze em > mark > del:active {
   color: var(--accent-strong);
   background-color: transparent;
   transition: all 400ms ease-in-out;
 }
 
-.cm-s-obsidian .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em+.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight+.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough+span.cm-em.cm-highlight.cm-strikethrough {
+body:not(.remove-cloze-style) .cm-s-obsidian .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-em.cm-highlight.cm-strikethrough,
+body:not(.remove-cloze-style) .cm-s-obsidian .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough,
+.markdown-source-view.cloze .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-em.cm-highlight.cm-strikethrough,
+.markdown-source-view.cloze .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough {
   color: var(--accent-strong) !important;
   text-decoration: underline var(--cloze-decoration-2) var(--cloze-decoration-color-2) !important;
 }
+.markdown-source-view:not([class*="cm5"]).colorful-highlight .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-em.cm-highlight.cm-strikethrough~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight {
+  background-color: var(--bg-color-highlight-1) !important;
+  color: var(--color-highlight-1);
+  font-style: normal;
+}
 
-body.cloze-style-three :is(.markdown-preview-view,.markdown-rendered)  em > del {
+body:not(.remove-cloze-style) :is(.markdown-preview-view,
+.markdown-rendered) em > del,
+:is(.markdown-preview-view,
+.markdown-rendered).cloze em > del {
   background-color: var(--cloze-bg-color-3);
   color: var(--cloze-bg-color-3);
   font-style: normal;
   text-decoration: underline var(--cloze-decoration-3) var(--cloze-decoration-color-3);
 }
 
-body.cloze-style-three :is(.markdown-preview-view,.markdown-rendered)  em > del:hover {
+body:not(.remove-cloze-style) :is(.markdown-preview-view,
+.markdown-rendered) em > del:hover,
+:is(.markdown-preview-view,
+.markdown-rendered).cloze em > del:hover {
   background-color: transparent;
   color: var(--text-normal);
   transition: all 400ms ease-in-out;
 }
 
-.cm-em.cm-formatting.cm-formatting-em+.cm-em.cm-formatting.cm-formatting-strikethrough.cm-strikethrough+span.cm-em.cm-strikethrough {
+body:not(.remove-cloze-style) .markdown-source-view.is-live-preview .cm-em.cm-strikethrough,
+.markdown-source-view.is-live-preview.cloze .cm-em.cm-strikethrough {
+  background-color: var(--cloze-bg-color-3);
+  color: var(--cloze-bg-color-3);
+  font-style: normal;
+  text-decoration: underline var(--cloze-decoration-3) var(--cloze-decoration-color-3);
+}
+
+body:not(.remove-cloze-style) .markdown-source-view.is-live-preview .cm-em.cm-strikethrough:hover,
+.markdown-source-view.is-live-preview.cloze .cm-em.cm-strikethrough:hover {
+  background-color: transparent !important;
+  color: var(--text-normal) !important;
+  transition: all 400ms ease-in-out;
+}
+
+body:not(.remove-cloze-style) .cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-strikethrough,
+body:not(.remove-cloze-style) .cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-strikethrough~span.cm-em.cm-strikethrough,
+.markdown-source-view.cloze .cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-strikethrough,
+.markdown-source-view.cloze .cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-strikethrough~span.cm-em.cm-strikethrough {
   color: var(--accent-strong);
+  text-decoration: none;
 }
 
 span.cm-strong.cm-em.cm-highlight {
@@ -10875,7 +10923,8 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   background: var(--background-primary);
 }
 .popover h1:hover::before,
-.markdown-embed h1:hover::before {
+.markdown-embed h1:hover::before,
+.markdown-preview-view .callout-content h1:hover::before {
   content: 'H1';
   position: absolute;
   font-size: 0.4em;
@@ -10886,7 +10935,8 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   top: -1.1em;
 }
 .popover h2:hover::before,
-.markdown-embed h2:hover::before {
+.markdown-embed h2:hover::before,
+.markdown-preview-view .callout-content h2:hover::before {
   content: 'H2';
   position: absolute;
   font-size: 0.45em;
@@ -10897,7 +10947,8 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   top: -1.1em;
 }
 .popover h3:hover::before,
-.markdown-embed h3:hover::before {
+.markdown-embed h3:hover::before,
+.markdown-preview-view .callout-content h3:hover::before {
   content: 'H3';
   position: absolute;
   font-size: 0.45em;
@@ -10908,7 +10959,8 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   top: -1.1em;
 }
 .popover h4:hover::before,
-.markdown-embed h4:hover::before {
+.markdown-embed h4:hover::before,
+.markdown-preview-view .callout-content h4:hover::before {
   content: 'H4';
   position: absolute;
   font-size: 0.5em;
@@ -10919,7 +10971,8 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   top: -1.1em;
 }
 .popover h5:hover::before,
-.markdown-embed h5:hover::before {
+.markdown-embed h5:hover::before,
+.markdown-preview-view .callout-content h5:hover::before {
   content: 'H5';
   position: absolute;
   font-size: 0.55em;
@@ -10930,7 +10983,8 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   top: -1.1em;
 }
 .popover h6:hover::before,
-.markdown-embed h6:hover::before {
+.markdown-embed h6:hover::before,
+.markdown-preview-view .callout-content h6:hover::before {
   content: 'H6';
   position: absolute;
   font-size: 0.6em;
@@ -10941,13 +10995,10 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   top: -1.1em;
 }
 
-.markdown-embed h1:hover::before,
-.markdown-embed h2:hover::before,
-.markdown-embed h3:hover::before,
-.markdown-embed h4:hover::before,
-.markdown-embed h5:hover::before,
-.markdown-embed h6:hover::before {
-  margin-left: 0px !important;
+
+.markdown-embed :is(h1, h2, h3, h4, h5, h6):hover::before,
+.callout-content :is(h1, h2, h3, h4, h5, h6):hover::before{
+  margin-left: 0 !important;
 }
 
 .markdown-preview-section table:not(.dataview.table-view-table) {
@@ -11032,21 +11083,17 @@ body.auto-serial-number-dvtable .markdown-preview-view:not(.cards) .dataview.tab
 body.auto-serial-number-dvtable .markdown-preview-view:not(.cards) .dataview.table-view-table> tbody > tr> td:first-child::before {
   counter-increment: section;
   content:counter(section) ". ";
-
 }
 
-body:not(.no-wrapped-dvtable) .markdown-preview-view .table-view-table>tbody>tr>td, 
-body:not(.no-wrapped-dvtable) .markdown-source-view.mod-cm6 .table-view-table>tbody>tr>td {
+body:not(.no-wrapped-dvtable) :is(.markdown-preview-view, .markdown-source-view.mod-cm6) .table-view-table>tbody>tr>td {
   max-width: 18em;
 }
 
-.markdown-preview-view table tbody>tr:nth-child(odd),
-.markdown-source-view table tbody>tr:nth-child(odd) {
+:is(.markdown-preview-view, .markdown-source-view) table tbody>tr:nth-child(odd) {
   background-color: var(--table-background-color-odd);
 }
 
-.markdown-preview-view table tbody>tr,
-.markdown-source-view table tbody>tr {
+:is(.markdown-preview-view, .markdown-source-view) table tbody>tr {
   background-color: var(--table-background-color);
 }
 
@@ -11056,26 +11103,22 @@ body:not(.no-wrapped-dvtable) .markdown-source-view.mod-cm6 .table-view-table>tb
   border: none;
 }
 
-.markdown-preview-view th,
-.markdown-source-view th {
+:is(.markdown-preview-view, .markdown-source-view) th {
   background-color: var(--table-thead-background-color);
   font-family: var(--font-family-strong);
 }
 
 /*table hover*/
-.markdown-preview-view td:hover,
-.markdown-source-view td:hover {
+:is(.markdown-preview-view, .markdown-source-view) td:hover {
   background-color: var(--table-hover-color);
 }
 
 /*table raw hover*/
-.markdown-preview-view table tbody>tr:hover,
-.markdown-source-view table tbody>tr:hover {
+:is(.markdown-preview-view, .markdown-source-view) table tbody>tr:hover {
   background-color: var(--table-hover-raw-color);
 }
 
-.markdown-preview-view th:hover,
-.markdown-source-view th:hover {
+:is(.markdown-preview-view, .markdown-source-view) th:hover {
   background-color: var(--table-hover-thead-color);
 }
 
@@ -11138,18 +11181,12 @@ body.table-style-two .markdown-preview-view td {
   border: none;
 }
 
-body.table-style-three .markdown-preview-view th,
-body.table-style-three .markdown-source-view th,
-body.table-style-three .markdown-preview-view th:hover,
-body.table-style-three .markdown-source-view th:hover,
-body.table-style-three .markdown-preview-view td:hover,
-body.table-style-three .markdown-source-view td:hover,
-body.table-style-three .markdown-preview-view table tbody>tr:hover,
-body.table-style-three .markdown-source-view table tbody>tr:hover,
-body.table-style-three .markdown-preview-view table tbody>tr:nth-child(odd),
-body.table-style-three .markdown-source-view table tbody>tr:nth-child(odd),
-body.table-style-three .markdown-preview-view table tbody>tr,
-body.table-style-three .markdown-source-view table tbody>tr {
+body.table-style-three :is(.markdown-preview-view, .markdown-source-view) th,
+body.table-style-three :is(.markdown-preview-view, .markdown-source-view) th:hover,
+body.table-style-three :is(.markdown-preview-view, .markdown-source-view) td:hover,
+body.table-style-three :is(.markdown-preview-view, .markdown-source-view) table tbody>tr:hover,
+body.table-style-three :is(.markdown-preview-view, .markdown-source-view) table tbody>tr:nth-child(odd),
+body.table-style-three :is(.markdown-preview-view, .markdown-source-view) table tbody>tr {
   background-color: transparent;
 }
 
@@ -11184,7 +11221,7 @@ body.table-style-three .markdown-source-view table tbody>tr {
 }
 .theme-dark .cm-s-obsidian span.cm-formatting-highlight, 
 .theme-dark .cm-s-obsidian span.cm-highlight:not([class*="code"]),
-.theme-dark  :is(.markdown-preview-view,.markdown-rendered)  mark,
+.theme-dark :is(.markdown-preview-view,.markdown-rendered) mark,
 .theme-dark .cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight,
 .theme-dark .popover mark,
 .theme-dark span.cm-strong.cm-em.cm-highlight {
@@ -11199,30 +11236,39 @@ body.table-style-three .markdown-source-view table tbody>tr {
   background-color: hsla(var(--text-highlight-bg-h-dark), calc(var(--text-highlight-bg-s-dark)*1.5), calc(var(--text-highlight-bg-l-dark)*1.1), calc(var(--text-highlight-bg-a-dark)*0.55));
 }
 
-body.colorful-highlight-bg .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight,
-body.colorful-highlight-bg .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight + .cm-em.cm-highlight:not([class*="strong"]),
-body.colorful-highlight-bg :is(.markdown-preview-view,.markdown-rendered)  :not(font):not(strong)>em>mark {
+body:not(.remove-colorful-highlight-bg) .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight,
+body:not(.remove-colorful-highlight-bg) .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight + .cm-em.cm-highlight:not([class*="strong"]),
+.markdown-source-view.colorful-highlight .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight,
+.markdown-source-view.colorful-highlight .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight + .cm-em.cm-highlight:not([class*="strong"]),
+body:not(.remove-colorful-highlight-bg) :is(.markdown-preview-view,.markdown-rendered) :not(font):not(strong)>em>mark,
+:is(.markdown-preview-view,.markdown-rendered).colorful-highlight :not(font):not(strong)>em>mark {
   background-color: var(--bg-color-highlight-1);
   color: var(--color-highlight-1);
   font-style: normal;
   padding: 1px 3px;
   font-weight: var(--font-weight-highlight-1);
 }
-body.colorful-highlight-bg :is(.markdown-preview-view,.markdown-rendered) :not(font):not(strong)>em>mark {
+body:not(.remove-colorful-highlight-bg) :is(.markdown-preview-view,.markdown-rendered) :not(font):not(strong)>em>mark {
   border-radius: var(--radius-xs);
 }
 
-body.colorful-highlight-bg .cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
-body.colorful-highlight-bg .cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-highlight.cm-strong:not([class*="em"]),
-body.colorful-highlight-bg :is(.markdown-preview-view,.markdown-rendered) :not(font):not(em)>strong>mark {
+body:not(.remove-colorful-highlight-bg) .cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
+body:not(.remove-colorful-highlight-bg) .cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-highlight.cm-strong:not([class*="em"]),
+.markdown-source-view.colorful-highlight .cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
+.markdown-source-view.colorful-highlight .cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-highlight.cm-strong:not([class*="em"]),
+body:not(.remove-colorful-highlight-bg) :is(.markdown-preview-view,.markdown-rendered) :not(font):not(em)>strong>mark,
+:is(.markdown-preview-view,.markdown-rendered).colorful-highlight :not(font):not(em)>strong>mark {
   background-color: var(--bg-color-highlight-2) !important;
   color: var(--color-highlight-2) !important;
   font-weight: var(--font-weight-highlight-2);
 }
 
-body.colorful-highlight-bg .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
-body.colorful-highlight-bg .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-em.cm-highlight.cm-strong,
-body.colorful-highlight-bg :is(.markdown-preview-view,.markdown-rendered) :not(font)>strong>em>mark {
+body:not(.remove-colorful-highlight-bg) .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
+body:not(.remove-colorful-highlight-bg) .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-em.cm-highlight.cm-strong,
+.markdown-source-view.colorful-highlight .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
+.markdown-source-view.colorful-highlight .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-em.cm-highlight.cm-strong,
+body:not(.remove-colorful-highlight-bg) :is(.markdown-preview-view,.markdown-rendered) :not(font)>strong>em>mark,
+:is(.markdown-preview-view,.markdown-rendered).colorful-highlight :not(font)>strong>em>mark {
   background-color: var(--bg-color-highlight-3) !important;
   color: var(--color-highlight-3) !important;
   font-style: normal;
@@ -11232,13 +11278,12 @@ body.colorful-highlight-bg :is(.markdown-preview-view,.markdown-rendered) :not(f
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
 }
-body.colorful-highlight-bg .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
-body.colorful-highlight-bg .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-em.cm-highlight.cm-strong,
-body.colorful-highlight-bg .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight,
-body.colorful-highlight-bg .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight + .cm-em.cm-highlight:not([class*="strong"]) {
+body:not(.remove-colorful-highlight-bg) .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong,
+body:not(.remove-colorful-highlight-bg) .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-em.cm-highlight.cm-strong,
+body:not(.remove-colorful-highlight-bg) .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight,
+body:not(.remove-colorful-highlight-bg) .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight + .cm-em.cm-highlight:not([class*="strong"]) {
   padding: 1px 0px;
 }
-
 
 .workspace-leaf.mod-active .view-header {
   background-color: var(--background-primary);
@@ -11254,17 +11299,17 @@ body.colorful-highlight-bg .cm-em.cm-formatting.cm-formatting-highlight.cm-highl
  /* ----状态栏透明开关----------- */
  /* Status bar */
 body.bt-status-off .status-bar {
-  background-color:var(--background-secondary-bg-4-bt);
-  z-index:30;
-  border-top-left-radius:5px;
-  width:auto;
-  position:absolute;
-  left:auto;
-  border:0;
-  bottom:0;
-  right:0;
-  max-height:26px;
-  padding:2px 8px 6px 3px;
+  background-color: var(--background-secondary-bg-4-bt);
+  z-index: 30;
+  border-top-left-radius: 5px;
+  width: auto;
+  position: absolute;
+  left: auto;
+  border: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 26px;
+  padding: 2px 8px 6px 3px;
 }
 body.bt-status-off .document-search-container{
   width: 72%;
@@ -20295,7 +20340,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220421";
+  content: "uid:20220422";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
