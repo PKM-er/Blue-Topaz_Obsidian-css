@@ -8589,11 +8589,6 @@ input.search-input {
   color: var(--text-normal);
 }
 
-.backlink-pane>.tree-item-self.is-clickable:hover {
-  background-color: var(--background-secondary-alt);
-  color: var(--text-normal);
-}
-
 .search-result-file-match:hover {
   background-color: var(--background-secondary-alt);
   color: var(--text-normal);
