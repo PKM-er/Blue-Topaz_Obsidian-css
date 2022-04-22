@@ -1,12 +1,13 @@
 # 更新日志
 
 ### 20220422
-
 1. 调整css使得ad callout 嵌入效果跟阅读模式一致
 2. ad 中嵌套 callout 段落间距调整
+3. 优化导出pdf的 all dark 选项
+4. 调整多彩高亮和涂黑挖空的开启方式：默认开启，style settings中提供关闭选项，同时支持yaml声明开启单文档的多彩高亮（cssclass: colorful-highlight）或涂黑挖空（cssclass: cloze）
+5. 部分细节调整
 
 ### 20220421
-
 1. 涂黑挖空和多彩高亮效果支持 ad 和callout嵌入
 2. callout center 属性可以使文本居中
 3. style settings 1.2.1 里提供新选项，可以移除title bar的背景图片
