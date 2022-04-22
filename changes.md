@@ -1,6 +1,11 @@
 # 更新日志
 
+### 20220422
+
+1. 调整css使得ad callout 嵌入效果跟阅读模式一致
+
 ### 20220421
+
 1. 涂黑挖空和多彩高亮效果支持 ad 和callout嵌入
 2. callout center 属性可以使文本居中
 3. style settings 1.2.1 里提供新选项，可以移除title bar的背景图片
