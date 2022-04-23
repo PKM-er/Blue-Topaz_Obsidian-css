@@ -425,16 +425,27 @@ settings:
     type: heading
     level: 2
     collapsed: true
+  -
+    id: left-ribbon-style
+    title: Left ribbon styles
+    title.zh: 左侧边栏样式选择
+    type: class-select
+    allowEmpty: false
+    default: default-left-ribbon-style
+    options:
+      - 
+        label: Default
+        value: default-left-ribbon-style
+      - 
+        label: Hide to left
+        value: hide-left-ribbon
+      - 
+        label: Hide to bottom
+        value: hide-left-ribbon-to-bottom
   - 
     id: fix-right-ribbon
     title: Fix Right Ribbon
     title.zh: 固定右侧边栏
-    type: class-toggle
-    default: false
-  -
-    id: hide-left-ribbon
-    title: Hide Left Ribbon
-    title.zh: 隐藏左侧边栏
     type: class-toggle
     default: false
   -
@@ -15949,15 +15960,15 @@ body.rainbow-checklist .checklist-plugin-main:is(.markdown-preview-view,.markdow
 /* ============== hider ============= */
 /* ================================== */
 /*adapted from minimal by @kepano*/
-.hider-ribbon .workspace-ribbon-collapse-btn {
+:is(body.hide-left-ribbon-to-bottom,.hider-ribbon) .workspace-ribbon-collapse-btn {
   display: none;
 }
 
-.hider-ribbon .workspace-ribbon.mod-right {
+:is(body.hide-left-ribbon-to-bottom,.hider-ribbon) .workspace-ribbon.mod-right {
   pointer-events: none;
 }
 
-.hider-ribbon .workspace-ribbon.mod-left {
+:is(body.hide-left-ribbon-to-bottom,.hider-ribbon) .workspace-ribbon.mod-left {
   position: fixed;
   border-right: 0px;
   margin: 0;
@@ -15974,15 +15985,15 @@ body.rainbow-checklist .checklist-plugin-main:is(.markdown-preview-view,.markdow
   transition: opacity 0.25s ease-in-out;
 }
 
-.hider-ribbon .side-dock-actions,
-.hider-ribbon .side-dock-settings {
+:is(body.hide-left-ribbon-to-bottom,.hider-ribbon) .side-dock-actions,
+:is(body.hide-left-ribbon-to-bottom,.hider-ribbon) .side-dock-settings {
   display: flex;
   border-top: var(--border-width) solid var(--background-modifier-border);
   background: var(--background-primary);
   margin: 0;
 }
 
-.hider-ribbon .workspace-ribbon.mod-left:after {
+:is(body.hide-left-ribbon-to-bottom,.hider-ribbon) .workspace-ribbon.mod-left:after {
   border-top: var(--border-width) solid var(--background-modifier-border);
   background: var(--background-primary);
   padding-right: 100vw;
@@ -15990,21 +16001,21 @@ body.rainbow-checklist .checklist-plugin-main:is(.markdown-preview-view,.markdow
   pointer-events: none;
 }
 
-.hider-ribbon .workspace-ribbon.mod-left .side-dock-ribbon-action {
+:is(body.hide-left-ribbon-to-bottom,.hider-ribbon) .workspace-ribbon.mod-left .side-dock-ribbon-action {
   display: inline-block;
   padding: 5px 5px 0 12px;
 }
 
-.hider-ribbon .workspace-ribbon.mod-left:hover {
+:is(body.hide-left-ribbon-to-bottom,.hider-ribbon) .workspace-ribbon.mod-left:hover {
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
 }
 
-.hider-ribbon .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
+:is(body.hide-left-ribbon-to-bottom,.hider-ribbon) .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
   border-top: 1px solid var(--background-modifier-border);
 }
 
-.hider-ribbon .workspace-split.mod-left-split {
+:is(body.hide-left-ribbon-to-bottom,.hider-ribbon) .workspace-split.mod-left-split {
   margin: 0;
 }
 
