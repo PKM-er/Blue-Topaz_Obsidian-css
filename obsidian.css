@@ -12103,6 +12103,11 @@ body.muted-activeline-bg .HyperMD-codeblock-bg.CodeMirror-activeline-background.
 /*linenumber*/
 .cm-s-obsidian .CodeMirror-linenumber {
   font-family: var(--font-monospace-theme);
+  font-size: 0.85em;
+}
+
+.cm-gutter.cm-lineNumbers {
+  font-family: var(--font-monospace-theme);
 }
 
 /*----file explorer smaller fonts & line height----*/
