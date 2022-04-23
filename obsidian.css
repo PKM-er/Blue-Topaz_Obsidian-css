@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.14.6。uid [20220422] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.14.6, uid [20220422] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.14.6。uid [20220423] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.14.6, uid [20220423] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -1829,7 +1829,7 @@ settings:
     title.zh: 2.3.3.1 多彩文件夹
     type: heading
     level: 4
-    collapsed: true
+    collapsed: false
   -
     id: folder-style-change-options-colorful
     title: Make Folder Colorful
@@ -7523,19 +7523,22 @@ body:not(.remove-colorful-highlight-bg) .markdown-source-view.is-live-preview *:
 }
 
 /* cssclass: cloze */
-.markdown-source-view.is-live-preview.cloze .cm-highlight.cm-strikethrough:not([class*="formatting"]) {
+.markdown-source-view.is-live-preview.cloze .cm-highlight.cm-strikethrough:not([class*="formatting"]),
+body:not(.remove-cloze-style) .markdown-source-view.is-live-preview .cm-highlight.cm-strikethrough:not([class*="formatting"]) {
   background-color: var(--cloze-bg-color) !important;
   color: var(--cloze-bg-color);
   text-decoration: underline var(--cloze-decoration) var(--cloze-decoration-color);
 }
 
-.markdown-source-view.is-live-preview.cloze .cm-highlight.cm-strikethrough:hover {
+.markdown-source-view.is-live-preview.cloze .cm-highlight.cm-strikethrough:hover,
+body:not(.remove-cloze-style) .markdown-source-view.is-live-preview .cm-highlight.cm-strikethrough:hover {
   background-color: transparent !important;
   color: var(--text-normal) !important;
   transition: all 400ms ease-in-out;
 }
 
-.markdown-source-view.is-live-preview.cloze .cm-em.cm-highlight.cm-strikethrough:not([class*="formatting"]) {
+.markdown-source-view.is-live-preview.cloze .cm-em.cm-highlight.cm-strikethrough:not([class*="formatting"]),
+body:not(.remove-cloze-style) .markdown-source-view.is-live-preview .cm-em.cm-highlight.cm-strikethrough:not([class*="formatting"]) {
   color: transparent !important;
   background-color: transparent !important;
   padding: 0 2px;
@@ -7543,9 +7546,7 @@ body:not(.remove-colorful-highlight-bg) .markdown-source-view.is-live-preview *:
 }
 
 
-
 /*========floating-toc===========*/
-
 div.markdown-source-view ul.floating-toc>li{
   flex:none;
   background-color: transparent;
@@ -8263,7 +8264,7 @@ body:not(.remove-cloze-style) :is(.markdown-preview-view,
 :is(.markdown-preview-view,
 .markdown-rendered).cloze mark > del:hover {
   background-color: transparent;
-  color: var(--text-normal);
+  color: var(--accent-strong);
   transition: all 400ms ease-in-out;
 }
 
@@ -8294,14 +8295,19 @@ body:not(.remove-cloze-style) :is(.markdown-preview-view,
   transition: all 400ms ease-in-out;
 }
 
-body:not(.remove-cloze-style) .cm-s-obsidian .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-em.cm-highlight.cm-strikethrough,
-body:not(.remove-cloze-style) .cm-s-obsidian .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough,
+body:not(.remove-cloze-style) .cm-s-obsidian .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-em.cm-highlight.cm-strikethrough:not([class*="formatting"]),
+body:not(.remove-cloze-style) .cm-s-obsidian .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough:not([class*="formatting"]),
 .markdown-source-view.cloze .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-em.cm-highlight.cm-strikethrough,
 .markdown-source-view.cloze .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough {
   color: var(--accent-strong) !important;
   text-decoration: underline var(--cloze-decoration-2) var(--cloze-decoration-color-2) !important;
 }
-.markdown-source-view:not([class*="cm5"]).colorful-highlight .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-em.cm-highlight.cm-strikethrough~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight {
+body:not(.remove-cloze-style) .cm-s-obsidian .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-em.cm-highlight.cm-strikethrough,
+body:not(.remove-cloze-style) .cm-s-obsidian .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough{
+  background-color: transparent !important;
+}
+body:not(.remove-cloze-style) .markdown-source-view:not([class*="cm5"]) .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-em.cm-highlight.cm-strikethrough~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight,
+.markdown-source-view:not([class*="cm5"]).cloze .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-em.cm-highlight.cm-strikethrough~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight {
   background-color: var(--bg-color-highlight-1) !important;
   color: var(--color-highlight-1);
   font-style: normal;
@@ -8342,11 +8348,15 @@ body:not(.remove-cloze-style) .markdown-source-view.is-live-preview .cm-em.cm-st
 }
 
 body:not(.remove-cloze-style) .cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-strikethrough,
-body:not(.remove-cloze-style) .cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-strikethrough~span.cm-em.cm-strikethrough,
-.markdown-source-view.cloze .cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-strikethrough,
-.markdown-source-view.cloze .cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-strikethrough~span.cm-em.cm-strikethrough {
+.markdown-source-view.cloze .cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-strikethrough {
   color: var(--accent-strong);
   text-decoration: none;
+}
+body:not(.remove-cloze-style) .cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-strikethrough~span.cm-em.cm-strikethrough:not([class*="formatting"]),
+.markdown-source-view.cloze .cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-strikethrough~span.cm-em.cm-strikethrough:not([class*="formatting"]) {
+  font-style: normal;
+  color: var(--accent-strong);
+  text-decoration: underline var(--cloze-decoration-3) var(--cloze-decoration-color-3);
 }
 
 span.cm-strong.cm-em.cm-highlight {
@@ -9965,8 +9975,8 @@ body.list-bracket-left-two ol.contains-task-list>li.task-list-item {
 body.list-bracket-left-two ol.contains-task-list ul::before,
 body.list-bracket-left-two ol.contains-task-list ol::before {
   left: 0.5em;
-  top: 0px;
-  bottom: 0px;
+  top: 0;
+  bottom: 0;
 }
 
 body.list-bracket-left-two:not(.default-icons) :is(.markdown-preview-view,.markdown-rendered) ol.contains-task-list .list-collapse-indicator.collapse-indicator.collapse-icon {
@@ -10073,7 +10083,7 @@ body.list-vertical-line-two.is-mobile ol ul::before,
 body.list-vertical-line-two.is-mobile ul ol::before,
 body.list-vertical-line-two.is-mobile ol ol::before {
   left: -1em;
-  top: 0px;
+  top: 0;
 }
 
 body.list-vertical-line-two .kanban ul ul::before,
@@ -10089,7 +10099,7 @@ body.list-vertical-line-two ol.contains-task-list ol::before {
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;
   left: -1.1em;
-  top: 0px;
+  top: 0;
   height: 100%;
 }
 body.list-vertical-line-two.is-mobile ul.contains-task-list ul::before,
@@ -10162,21 +10172,21 @@ body.list-vertical-line-three ul ul::before,
 body.list-vertical-line-three ol ul::before {
   content: '';
   border-left: 2px solid var(--background-modifier-border);
-  border-right:none!important;
+  border-right: none !important;
   position: absolute;
   left: -1.1em;
-  top: 0px;
-  bottom: 0px;
+  top: 0;
+  bottom: 0;
 }
 body.list-vertical-line-three ul ol::before,
 body.list-vertical-line-three ol ol::before {
   content: '';
   border-left: 2px solid var(--background-modifier-border);
-  border-right:none!important;
+  border-right: none !important;
   position: absolute;
-  left: 0.1em!important;
-  top: 0px!important;
-  bottom: 0px!important;
+  left: 0.1em !important;
+  top: 0 !important;
+  bottom: 0 !important;
 }
 
 body.list-vertical-line-three .kanban ul ul::before,
@@ -10200,9 +10210,9 @@ body.list-vertical-line-three ul.contains-task-list ol::before {
 }
 body.list-vertical-line-three ol.contains-task-list ul::before,
 body.list-vertical-line-three ol.contains-task-list ol::before {
-  left: 0em;
-  top: 0px;
-  bottom: 0px;
+  left: 0;
+  top: 0;
+  bottom: 0;
 }
 
 body.list-vertical-line-three.is-mobile ul.contains-task-list ul::before,
@@ -10428,10 +10438,10 @@ body.rainbow-lines-reading ol>li::marker {
 border-width:1.5px;;	
 } */
 
-body.rainbow-ordered-list .HyperMD-list-line-1 .cm-formatting-list{
+body.rainbow-ordered-list .HyperMD-list-line-1 .cm-formatting-list {
   color: rgb(var(--accent-1-rgb)) !important;
 }
-body.rainbow-checkbox .HyperMD-list-line-1 .cm-formatting-task{
+body.rainbow-checkbox .HyperMD-list-line-1 .cm-formatting-task {
   color: rgb(var(--accent-1-rgb)) !important;
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-1 .task-list-item-checkbox:checked {
@@ -10504,10 +10514,10 @@ body.rainbow-lines .mod-cm6 .HyperMD-list-line-4>span.list-bullet {
   color: rgb(var(--accent-4-rgb));
 }
 
-body.rainbow-ordered-list .HyperMD-list-line-5 .cm-formatting-list{
+body.rainbow-ordered-list .HyperMD-list-line-5 .cm-formatting-list {
   color: rgb(var(--accent-5-rgb))!important;
 }
-body.rainbow-checkbox .HyperMD-list-line-5 .cm-formatting-task{
+body.rainbow-checkbox .HyperMD-list-line-5 .cm-formatting-task {
   color: rgb(var(--accent-5-rgb))!important;
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-5 .task-list-item-checkbox:checked {
@@ -10523,10 +10533,10 @@ body.rainbow-lines .mod-cm6 .HyperMD-list-line-5>span.list-bullet {
   color: rgb(var(--accent-5-rgb));
 }
 
-body.rainbow-ordered-list .HyperMD-list-line-6 .cm-formatting-list{
+body.rainbow-ordered-list .HyperMD-list-line-6 .cm-formatting-list {
   color: rgb(var(--accent-6-rgb))!important;
 }
-body.rainbow-checkbox .HyperMD-list-line-6 .cm-formatting-task{
+body.rainbow-checkbox .HyperMD-list-line-6 .cm-formatting-task {
   color: rgb(var(--accent-6-rgb))!important;
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-6 .task-list-item-checkbox:checked {
@@ -10542,10 +10552,10 @@ body.rainbow-lines .mod-cm6 .HyperMD-list-line-6>span.list-bullet {
   color: rgb(var(--accent-6-rgb));
 }
 
-body.rainbow-ordered-list .HyperMD-list-line-7 .cm-formatting-list{
+body.rainbow-ordered-list .HyperMD-list-line-7 .cm-formatting-list {
   color: rgb(var(--accent-7-rgb))!important;
 }
-body.rainbow-checkbox .HyperMD-list-line-7 .cm-formatting-task{
+body.rainbow-checkbox .HyperMD-list-line-7 .cm-formatting-task {
   color: rgb(var(--accent-7-rgb))!important;
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-7 .task-list-item-checkbox:checked {
@@ -10561,10 +10571,10 @@ body.rainbow-lines .mod-cm6 .HyperMD-list-line-7>span.list-bullet {
   color: rgb(var(--accent-7-rgb));
 }
 
-body.rainbow-ordered-list .HyperMD-list-line-8 .cm-formatting-list{
+body.rainbow-ordered-list .HyperMD-list-line-8 .cm-formatting-list {
   color: rgb(var(--accent-8-rgb))!important;
 }
-body.rainbow-checkbox .HyperMD-list-line-8 .cm-formatting-task{
+body.rainbow-checkbox .HyperMD-list-line-8 .cm-formatting-task {
   color: rgb(var(--accent-8-rgb))!important;
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-8 .task-list-item-checkbox:checked {
@@ -10586,34 +10596,32 @@ body.rainbow-lines .CodeMirror-foldgutter-open.CodeMirror-guttermarker-subtle::a
  
 /*预览模式*/ 
 /*无序列表 任务框*/
-
 body.rainbow-lines-reading ul li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-1-rgb),0.7) ;
- }
- body.rainbow-lines-reading ul ul li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-2-rgb),0.7) ;
- }
- body.rainbow-lines-reading ul ul ul li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-3-rgb),0.7) ;
- }
- body.rainbow-lines-reading ul ul ul ul li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-4-rgb),0.7) ;
- }
- body.rainbow-lines-reading ul ul ul ul ul  li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-5-rgb),0.7) ;
- }
- body.rainbow-lines-reading ul ul ul ul ul ul li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-6-rgb),0.7) ;
- }
- body.rainbow-lines-reading ul ul ul ul ul ul ul li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-7-rgb),0.7) ;
- }
- body.rainbow-lines-reading ul ul ul ul ul ul ul ul li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-7-rgb),0.7) ;
- }
+  border-color: rgba(var(--accent-1-rgb),0.7);
+}
+body.rainbow-lines-reading ul ul li .task-list-item-checkbox {
+  border-color: rgba(var(--accent-2-rgb),0.7);
+}
+body.rainbow-lines-reading ul ul ul li .task-list-item-checkbox {
+  border-color: rgba(var(--accent-3-rgb),0.7);
+}
+body.rainbow-lines-reading ul ul ul ul li .task-list-item-checkbox {
+  border-color: rgba(var(--accent-4-rgb),0.7);
+}
+body.rainbow-lines-reading ul ul ul ul ul  li .task-list-item-checkbox {
+  border-color: rgba(var(--accent-5-rgb),0.7);
+}
+body.rainbow-lines-reading ul ul ul ul ul ul li .task-list-item-checkbox {
+  border-color: rgba(var(--accent-6-rgb),0.7);
+}
+body.rainbow-lines-reading ul ul ul ul ul ul ul li .task-list-item-checkbox {
+  border-color: rgba(var(--accent-7-rgb),0.7);
+}
+body.rainbow-lines-reading ul ul ul ul ul ul ul ul li .task-list-item-checkbox {
+  border-color: rgba(var(--accent-7-rgb),0.7);
+}
 
 /*无序列表 大纲线*/
-
 body.rainbow-lines-reading ul ul::before {
  border-color: rgba(var(--accent-1-rgb),0.7) !important;
 }
@@ -10904,7 +10912,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   font-size: var(--font-size-file-header-title);
   font-weight: 600;
   overflow: auto;
-  padding: 0px 6px 0px 0px;
+  padding: 0 6px 0 0;
   white-space: nowrap;
   top: 1px;
   border-top: 3px transparent;
@@ -10929,7 +10937,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   font-size: 0.4em;
   width: auto;
   border: 1px solid;
-  padding: 0px 2px;
+  padding: 0 2px;
   border-radius: var(--radius-xs);
   top: -1.1em;
 }
@@ -10941,7 +10949,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   font-size: 0.45em;
   width: auto;
   border: 1px solid;
-  padding: 0px 2px;
+  padding: 0 2px;
   border-radius: var(--radius-xs);
   top: -1.1em;
 }
@@ -10953,7 +10961,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   font-size: 0.45em;
   width: auto;
   border: 1px solid;
-  padding: 0px 2px;
+  padding: 0 2px;
   border-radius: var(--radius-xs);
   top: -1.1em;
 }
@@ -10965,7 +10973,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   font-size: 0.5em;
   width: auto;
   border: 1px solid;
-  padding: 0px 2px;
+  padding: 0 2px;
   border-radius: var(--radius-xs);
   top: -1.1em;
 }
@@ -10977,7 +10985,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   font-size: 0.55em;
   width: auto;
   border: 1px solid;
-  padding: 0px 2px;
+  padding: 0 2px;
   border-radius: var(--radius-xs);
   top: -1.1em;
 }
@@ -10989,7 +10997,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   font-size: 0.6em;
   width: auto;
   border: 1px solid;
-  padding: 0px 2px;
+  padding: 0 2px;
   border-radius: var(--radius-xs);
   top: -1.1em;
 }
@@ -11056,7 +11064,7 @@ body.no-wrapped-dvtable .block-language-dataview {
   white-space: nowrap;
 }
 body.no-wrapped-dvtable table.dataview th {
-  padding: 0px 20px;
+  padding: 0 20px;
   font-size: 1em;
 }
 
@@ -11297,7 +11305,7 @@ body:not(.remove-colorful-highlight-bg) .cm-em.cm-formatting.cm-formatting-highl
 body:not(.remove-colorful-highlight-bg) .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight.cm-strong + .cm-em.cm-highlight.cm-strong,
 body:not(.remove-colorful-highlight-bg) .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight,
 body:not(.remove-colorful-highlight-bg) .cm-em.cm-formatting.cm-formatting-highlight.cm-highlight + .cm-em.cm-highlight:not([class*="strong"]) {
-  padding: 1px 0px;
+  padding: 1px 0;
 }
 
 .workspace-leaf.mod-active .view-header {
@@ -12740,55 +12748,55 @@ pre.language-note-imp::before {
 .print code.language-note-gray,
 .popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-gray code.language-note-gray {
   color: var(--text-gray) !important;
-  background:unset !important;
+  background: unset !important;
 }
 .app-container :is(.markdown-preview-view,.markdown-rendered) pre.language-note-brown code.language-note-brown,
 .print code.language-note-brown,
 .popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-brown code.language-note-brown {
   color: var(--text-brown) !important;
-  background:unset !important;
+  background: unset !important;
 }
 .app-container :is(.markdown-preview-view,.markdown-rendered) pre.language-note-orange code.language-note-orange,
 .print code.language-note-orange,
 .popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-orange code.language-note-orange {
   color: var(--text-orange) !important;
-  background:unset !important;
+  background: unset !important;
 }
 .app-container :is(.markdown-preview-view,.markdown-rendered) pre.language-note-yellow code.language-note-yellow,
 .print code.language-note-yellow,
 .popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-yellow code.language-note-yellow {
   color: var(--text-yellow) !important;
-  background:unset !important;
+  background: unset !important;
 }
 .app-container :is(.markdown-preview-view,.markdown-rendered) pre.language-note-green code.language-note-green,
 .print code.language-note-green,
 .popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-green code.language-note-green {
   color: var(--text-green) !important;
-  background:unset !important;
+  background: unset !important;
 }
 .app-container :is(.markdown-preview-view,.markdown-rendered) pre.language-note-blue code.language-note-blue,
 .print code.language-note-blue,
 .popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-blue code.language-note-blue {
   color: var(--text-blue) !important;
-  background:unset !important;
+  background: unset !important;
 }
 .app-container :is(.markdown-preview-view,.markdown-rendered) pre.language-note-purple code.language-note-purple,
 .print code.language-note-purple,
 .popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-purple code.language-note-purple {
   color: var(--text-purple) !important;
-  background:unset !important;
+  background: unset !important;
 }
 .app-container :is(.markdown-preview-view,.markdown-rendered) pre.language-note-pink code.language-note-pink,
 .print code.language-note-pink,
 .popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-pink code.language-note-pink {
   color: var(--text-pink) !important;
-  background:unset !important;
+  background: unset !important;
 }
 .app-container :is(.markdown-preview-view,.markdown-rendered) pre.language-note-red code.language-note-red,
 .print code.language-note-red,
 .popover :is(.markdown-preview-view,.markdown-rendered) pre.language-note-red code.language-note-red {
   color: var(--text-red) !important;
-  background:unset !important;
+  background: unset !important;
 }
 
 /* cloze */
@@ -12880,10 +12888,12 @@ body.hide-left-ribbon .workspace-ribbon.side-dock-ribbon.mod-left:not(:hover) {
 /*======== optionnal mermaid style below ========*/
 div.mermaid svg {
   width: 100%;
+  height: auto;
 }
 
 .markdown-source-view.is-live-preview div.mermaid svg {
   width: 100%;
+  height: initial;
 }
 
 .mermaid .label {
@@ -15111,10 +15121,10 @@ aside>h2 {
 
 .comment-pannel-bubble {
   width: 90% !important;
-  padding: 0px 5px !important;
+  padding: 0 5px !important;
   text-decoration: none;
   display: inline-block;
-  margin-right: 0px !important;
+  margin-right: 0 !important;
 }
 
 /* ======== tooltip ========= */
@@ -15155,7 +15165,6 @@ section.footnotes ol>li:not(.task-list-item) {
 /* ================================== */
 /* =========== admonition =========== */
 /* ================================== */
-
 body.style-options-for-admonition-plugin .admonition  {	
   break-inside: avoid;
 }
@@ -15168,25 +15177,22 @@ body.style-options-for-admonition-plugin .callout.admonition .admonition-content
   background-color: var(--admonition-bg-color) !important;
 }
 
-.callout-title.admonition-title 
-{
+.callout-title.admonition-title {
   background-color: rgba(var(--admonition-color),0.15) ;
 }
-.callout.admonition
-{
+.callout.admonition {
   border-color: rgba(var(--admonition-color),0.15) ;
 }
- .callout.admonition.admonition-plugin.is-collapsed
-{
+ .callout.admonition.admonition-plugin.is-collapsed {
   overflow: hidden;
 }
 /* ad伪看板效果*/
 body.style-options-for-admonition-plugin .admonition-kanban {
   overflow: visible;
-  background-color: rgba(255, 255, 255, 0)!important;
-  border-left:0px!important;
+  background-color: rgba(255, 255, 255, 0) !important;
+  border-left: 0 !important;
   margin: auto;
-  box-shadow:none!important;
+  box-shadow: none !important;
 }
 body.style-options-for-admonition-plugin .admonition-kanban .admonition-content {
   overflow: visible;
@@ -19343,7 +19349,7 @@ body.folder-style-change-options-colorful.folder-colorful-five.theme-light {
 
 /* Set up explorer container margins */
 body.folder-style-change-options-colorful .nav-files-container {
-  margin: 0px 5px;
+  margin: 0 5px;
 }
 
 /* Remove collapse arrow from top level folders */
@@ -19357,7 +19363,7 @@ body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-child
   padding-left: 3px;
   margin-top: 7px;
   /* space between top level sections */
-  border-radius: 5px 5px 0px 0px;
+  border-radius: 5px 5px 0 0;
 }
 
 /* Rounded borders */
@@ -19370,7 +19376,7 @@ body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-child
   padding-left: 0;
   margin-left: 0;
   border-top: var(--FoldText) 1px solid;
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 0 0 5px 5px;
   padding-bottom: 12px;
   border-left: 0px solid;
 }
@@ -19414,7 +19420,7 @@ body.folder-style-change-options-colorful .nav-file-title.is-active::before {
   content: '';
   position: absolute;
   bottom: -1px;
-  left: 0px;
+  left: 0;
   height: 2px;
   width: 100%;
   background-image: linear-gradient(to right, var(--theme-color), transparent 90%);
@@ -19428,151 +19434,188 @@ body.unmuted-collapsed-folder.folder-style-change-options-colorful .nav-folder.i
 These are set for me by leading number/letter which also ensures they are in the correct order when sorted alphabetically
 You can change these to match your use case.
 */
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="0"] {
-  background-color: var(--Fold0);
-}
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="0"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="0"],
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="0"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="0"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--Fold0);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="1"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="1"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="1"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="1"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--Fold1);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="2"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="2"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="2"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="2"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--Fold2);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="3"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="3"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="3"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="3"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--Fold3);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="4"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="4"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="4"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="4"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--Fold4);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="5"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="5"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="5"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="5"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--Fold5);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="6"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="6"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="6"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="6"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--Fold6);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="7"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="7"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="7"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="7"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--Fold7);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="8"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="8"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="8"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="8"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--Fold8);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="9"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="9"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="9"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="9"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--Fold9);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="A"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="A"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="A"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="A"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldA);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="B"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="B"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="B"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="B"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldB);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="C"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="C"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="C"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="C"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldC);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="D"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="D"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="D"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="D"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldD);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="E"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="E"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="E"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="E"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldE);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="F"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="F"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="F"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="F"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldF);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="G"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="G"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="G"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="G"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldG);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="H"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="H"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="H"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="H"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldH);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="I"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="I"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="I"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="I"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldI);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="J"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="J"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="J"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="J"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldJ);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="K"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="K"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="K"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="K"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldK);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="L"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="L"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="L"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="L"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldL);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="M"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="M"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="M"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="M"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldM);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="N"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="N"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="N"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="N"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldN);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="O"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="O"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="O"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="O"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldO);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="P"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="P"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="P"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="P"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldP);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="Q"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="Q"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="Q"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="Q"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldQ);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="R"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="R"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="R"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="R"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldR);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="S"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="S"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="S"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="S"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldS);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="T"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="T"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="T"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="T"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldT);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="U"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="U"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="U"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="U"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldU);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="V"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="V"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="V"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="V"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldV);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="W"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="W"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="W"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="W"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldW);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="X"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="X"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="X"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="X"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldX);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="Y"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="Y"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="Y"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="Y"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldY);
 }
 body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="Z"],
-body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="Z"]+.nav-folder-children {
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="Z"]+.nav-folder-children,
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="Z"]+.nav-folder-children .nav-file-title.is-active {
   background-color: var(--FoldZ);
+}
+body.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children .nav-file-title.is-active {
+  filter: hue-rotate(110deg);
 }
 /* Scrollbars eliminated 
 body.folder-style-change-options-colorful .workspace-leaf-content[data-type='file-explorer'] ::-webkit-scrollbar {
@@ -19715,7 +19758,6 @@ body.blockquote-style-speech-bubble-two :is(.markdown-preview-view,.markdown-ren
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
-  font-family: Bookerly, 'Book Antiqua', 'Times New Roman', Times, serif;
   font-size: 1.2em;
 }
 
@@ -20363,7 +20405,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220422";
+  content: "uid:20220423";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
@@ -20416,13 +20458,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 /* ======= Call out======= */
 /* ================================== */
 
-.markdown-source-view.is-live-preview .admonition-content .callout-content h1,
-.markdown-source-view.is-live-preview .admonition-content .callout-content h2,
-.markdown-source-view.is-live-preview .admonition-content .callout-content h3,
-.markdown-source-view.is-live-preview .admonition-content .callout-content h4,
-.markdown-source-view.is-live-preview .admonition-content .callout-content h5,
-.markdown-source-view.is-live-preview .admonition-content .callout-content h6,
-.markdown-source-view.is-live-preview .admonition-content .callout-content p {
+.markdown-source-view.is-live-preview .admonition-content .callout-content :is(h1,h2,h3,h4,h5,h6,p) {
   margin: 0;
 }
 
@@ -20455,9 +20491,9 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   padding-top: 9px;
 }
 .markdown-source-view.mod-cm6 .edit-block-button {
-  padding: 0px;
-  top: -1.5px;
-  border-radius: 20px;
+  padding: 0;
+  top: 0;
+  border-radius: var(--radius-s);
   right: 10px;
 }
 .markdown-source-view.mod-cm6 .edit-block-button::before {
