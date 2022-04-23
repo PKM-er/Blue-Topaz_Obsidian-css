@@ -1,6 +1,12 @@
 # 更新日志
 
+### 20220423
+
+1. 增加noicon  notitle callout属性
+2. 优化dataview任务计数显示
+
 ### 20220422
+
 1. 调整css使得ad callout 嵌入效果跟阅读模式一致
 2. ad 中嵌套 callout 段落间距调整
 3. 优化导出pdf的 all dark 选项

@@ -11086,10 +11086,10 @@ body.auto-serial-number-dvtable .markdown-source-view:not(.cards) .dataview.tabl
   content:counter(sec) ". ";
 }
 
-body.auto-serial-number-dvtable :is(.markdown-preview-view,.markdown-rendered):not(.cards) .dataview.table-view-table {
+body.auto-serial-number-dvtable .markdown-preview-view:not(.cards) .dataview.table-view-table {
   counter-reset: section;
 }
-body.auto-serial-number-dvtable :is(.markdown-preview-view,.markdown-rendered):not(.cards) .dataview.table-view-table> tbody > tr> td:first-child::before {
+body.auto-serial-number-dvtable .markdown-preview-view:not(.cards) .dataview.table-view-table> tbody > tr> td:first-child::before {
   counter-increment: section;
   content:counter(section) ". ";
 }
@@ -16059,6 +16059,26 @@ position: unset;
 /* ================================== */
 /* ============ Dataview ============ */
 /* ================================== */
+
+span.dataview.small-text {
+  position: relative;
+font-size: 70%;
+line-height: 0;
+vertical-align: baseline;
+  top: -.5em;
+    color: var(--text-accent);
+    border-radius: 3px;
+    text-align: center;
+    padding: 0 0.2em;
+    margin: 0 1px;
+    font-variant-numeric: ordinal;
+    opacity: 0.6;
+}
+
+.dataview-container .internal-link {
+font-size:0.88em;
+}
+
 ul.dataview.list-view-ul>li:not(.task-list-item) {
   border-left: none !important;
   margin-left: -1em;
@@ -20458,6 +20478,19 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 /* ======= Call out======= */
 /* ================================== */
 
+
+
+
+.callout-title-inner.admonition-title-content svg{
+height:1em;
+align-self: center;
+width: 1em;
+};
+
+.callout-icon svg{
+height:1em;
+}
+
 .markdown-source-view.is-live-preview .admonition-content .callout-content :is(h1,h2,h3,h4,h5,h6,p) {
   margin: 0;
 }
@@ -20555,8 +20588,16 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 [data-callout*=indent]) .callout-content p br::after {
   content: '\A         ';
 }
-  
-
+    /* ===隐藏图标============ */
+    .callout.callout:is([data-callout-metadata*="noicon"], 
+    [data-callout*=noicon]) .callout-icon {
+  display:none;
+    }
+       /* ===隐藏标题============ */
+       .callout.callout:is([data-callout-metadata*="notitle"], 
+       [data-callout*=notitle]) .callout-title {
+     display:none;
+       }
   /* ===支持 right left  center 语法============ */
      /*支持两种写法
     > [!note|right]
@@ -20957,8 +20998,8 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   justify-content: center;
 }
 .callout.callout[data-callout*=infobox].is-collapsed .callout-fold {
-  border: 1px solid var(--hr, var(--background-modifier-border));
-  padding: 5px 10px;
+ 
+  padding: 3px 10px;
 }
 .callout.callout[data-callout*=infobox]:not(:hover):not(.is-collapsible) .callout-title, .callout.callout[data-callout*=infobox]:not(.is-collapsible) .callout-title :is(.callout-icon, .callout-fold,.callout-title-inner) {
   display: none;
