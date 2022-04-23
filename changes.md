@@ -12,6 +12,7 @@
 8. kanban插件滑动条修复
 9. 隐藏左侧边栏增加Hide to bottom选项
 10. 导出pdf的加粗、斜体颜色设置修复
+11. cm6编辑器行号字体修改为var(--font-monospace-theme)
 
 
 ### 20220422
