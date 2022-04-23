@@ -2722,6 +2722,9 @@ body {
   --fancy-cursor-color-1: var(--theme-color);
   --fancy-cursor-color-2: var(--theme-color);
   --fancy-cursor-radius: 3px;
+
+  --print-strong-color: var(--accent-strong);
+  --print-em-color: var(--accent-em);
 }
 
 body.font-family-change-to-default .markdown-source-view,
@@ -3045,9 +3048,6 @@ body.all-dark .print.theme-light,
   --bg-color-highlight-1: #c865656f;
   --bg-color-highlight-2: #54b9476f;
   --bg-color-highlight-3: #1e83d086;
-
-  --print-strong-color: var(--accent-strong);
-  --print-em-color: var(--text-normal);
 }
 
 .theme-light {
@@ -3344,9 +3344,6 @@ body.all-dark .print.theme-light,
   --bg-color-highlight-1: #ff000034;
   --bg-color-highlight-2: #0fc41835;
   --bg-color-highlight-3: #4ca6ff51;
-
-  --print-strong-color: #000000;
-  --print-em-color: #000000;
 }
 
 body.color-scheme-options-avocado-topaz .theme-light,
@@ -20385,13 +20382,12 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
     white-space: pre-wrap;
   }
 
-  :is(.markdown-preview-view,.markdown-rendered) :not(font)>strong {
+  .print :not(font)>strong {
     -webkit-print-color-adjust: exact;
     color: var(--print-strong-color) !important;
   }
 
-  :is(.markdown-preview-view,.markdown-rendered) :not(font):not(strong)>em,
-  :is(.markdown-preview-view,.markdown-rendered) em>mark {
+  .print :not(font):not(strong)>em {
     color: var(--print-em-color) !important;
   }
 
