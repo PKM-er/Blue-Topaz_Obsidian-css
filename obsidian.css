@@ -3067,7 +3067,7 @@ body.all-dark .print.theme-light,
   --text-error: #e75545;
   --text-error-hover: #f86959;
 
-  --text-selection: #66bbaa59;
+  --text-selection: #a9d1c859;
   --text-on-accent: #f2f2f2;
   --interactive-normal: #eaeaeb;
   --interactive-hover: #dbdbdc;
@@ -4813,7 +4813,7 @@ body.color-scheme-options-flamingo.theme-light {
   --text-highlight-bg-l: 80%;
   --text-highlight-bg-a: 0.847;
   --text-highlight-bg: hsla(var(--text-highlight-bg-h), var(--text-highlight-bg-s), var(--text-highlight-bg-l), var(--text-highlight-bg-a));
-  --text-selection: #ffebec;
+  --text-selection: #f39ba044;
   --text-on-accent: #37291a;
   --interactive-normal: #f39ba0;
   --interactive-hover: #ffdece;
