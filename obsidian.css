@@ -14098,12 +14098,6 @@ pre.frontmatter.language-yaml::before {
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
 }
 
-.kanban-plugin__lane ::-webkit-scrollbar-thumb:vertical {
-  background-color: var(--scrollbar-thumb);
-  background-clip: padding-box;
-  border: 5px solid transparent !important;
-}
-
 .kanban-plugin {
   background-color: var(--background-secondary-bg-4-bt) !important;
 }
@@ -14506,9 +14500,6 @@ body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin,
 body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin,
 body.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin {
   background-color: var(--background-secondary-alt-bg-4-bt) !important;
-  display: flex;
-  height: 100vh;
-  background: #000;
 }
 
 body.style-options-for-kanban-plugin-dynamic-neon-one.theme-dark .kanban-plugin__lane-header-wrapper,
