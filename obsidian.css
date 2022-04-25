@@ -17038,8 +17038,7 @@ img[alt$="inlR"] {
 .markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="center"]::after,
 .markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="centre"]::after {
   content: attr(alt);
-  /* padding: 0 1rem 0 1rem; */
-  margin-top: 0.5rem;
+  margin: 0.5rem 0;
   display: block;
   caption-side: bottom;
   text-align: center;
@@ -17102,7 +17101,7 @@ img[alt$="inlR"] {
 .markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="inl"]::after {
   content: attr(alt);
   padding: 0 0.7em; 
-  margin-top: 0.5em;
+  margin: 0.5rem 0;
   display: block;
   caption-side: bottom;
   text-align: center;
