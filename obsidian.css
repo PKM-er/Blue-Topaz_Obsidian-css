@@ -17484,8 +17484,7 @@ body:not(.font-family-change-to-default).is-mobile .markdown-source-view.mod-cm6
   font-size: calc(var(--font-size-folder-and-file) + 0.15em);
 }
 /*小屏幕特别优化*/
-@media (max-width: 800pt) 
-and (min-width : 400px) {
+@media screen and(min-width: 480px) and (max-width: 767px) {
   body.style-options-for-admonition-plugin .admonition-flex .admonition-content
   {
    gap:24px;
@@ -17507,7 +17506,8 @@ and (min-width : 400px) {
     flex: 1 1 40%;
   }
 }
-@media (max-width: 400pt) {
+
+@media screen and (max-width: 479px)  {
   body.style-options-for-admonition-plugin .admonition-flex .admonition-content {
     gap:15px;
   }
