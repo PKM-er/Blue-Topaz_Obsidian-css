@@ -1,28 +1,18 @@
 # 更新日志
-### 20220425
+### 20220426
 
 1. 修复code block enhanced 插件 代码块行号错位问题
-
 2. 调整cards 样式按钮大小
-
 3. 图片增加 blackground 属性，可以把图片设置为当前笔记背景。`![background](http://xxxxx.jpg)`
-
 4. 增加blackground cssclass属性，配合banner插件可以把当前banner设置为笔记背景。
-
 5. 增加一个新的按钮样式 tiny
-
 6. 美化tasks插件在short-mode下的链接图标
-
 7. 增加gridlist  cssclass 配合伪看板实现二级栏目分栏
-
 8.  新增callout   cards类型 提供卡片视图
-
 9. 新增callout   noicon 属性 隐藏图标
-
 10. 新增callout   noborder属性 隐藏侧边条
-
 11. 新增callout   banner属性 标题中使用图片可作为块banner
-
+12. 移动端适配参数调整
     
 
 ### 20220425
