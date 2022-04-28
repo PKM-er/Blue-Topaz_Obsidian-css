@@ -1820,12 +1820,6 @@ settings:
     type: class-toggle
     default: false
   - 
-    id: folder-icons
-    title: Activate Folder Icons
-    title.zh: 激活文件夹图标
-    type: class-toggle
-    default: false
-  - 
     id: text-folder-file-icon
     title: Color of File Icons
     title.zh: 文件前图标颜色
@@ -1834,6 +1828,18 @@ settings:
     format: hex
     default-light: '#272727'
     default-dark: '#b3b3b3'
+  - 
+    id: folder-icons
+    title: Activate Folder Icons
+    title.zh: 激活文件夹图标
+    type: class-toggle
+    default: false
+  - 
+    id: remove-arrow
+    title: Folder icons w/o arrows(collapse indicator)
+    title.zh: 文件夹图标开启后，移除箭头图标（折叠图标）
+    type: class-toggle
+    default: false
   -
     id: folder-style-change-options-colorful-folder
     title: 2.3.3.1 Colorful Folder
@@ -18041,15 +18047,24 @@ body.folder-icons .nav-folder-children .nav-folder.is-collapsed .nav-folder-titl
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5h-8.586L9.707 3.293A.997.997 0 0 0 9 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2zM4 19V7h16l.002 12H4z"></path></svg>');
 }
 
+body.folder-icons.remove-arrow:not(.default-icons) .nav-folder-collapse-indicator::after {
+  display: none;
+}
+body.folder-icons.remove-arrow:not(.default-icons) :is(.nav-folder-title,.nav-file-title) {
+  padding-left: 0;
+}
+body.folder-icons.remove-arrow:not(.default-icons) .nav-files-container {
+  padding-left: 7px;
+}
 
 body:not(.remove-file-icons) .nav-folder-children .nav-file-title-content:first-child::before {
   position: relative;
   content: " ";
   display: inline-block;
-  width: 1em;
+  width: 0.9rem;
   opacity: 0.9;
   top: 2px;
-  height: 1em;
+  height: 0.9rem;
   margin-right: 5px;
   background-size: contain;
   background-repeat: no-repeat;
