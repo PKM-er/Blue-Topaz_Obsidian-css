@@ -2443,6 +2443,76 @@ settings:
     description:  ❗cssclass：kanban❗ A kind of kanban-liked style for unordered lists. (Adapted from Spectrum theme by @Wiktoria Mielcarek)
     description.zh:  ❗cssclass：kanban❗ 实现类似看板样式并排显示，只对无序列表生效。改自Spectrum theme by @Wiktoria Mielcarek
   -
+    id: colorful-p-kanban
+    title: Colorful pseudo-kanban
+    title.zh: 多彩伪看板
+    type: class-toggle
+    default: false
+  - 
+    id: p-kanban-color-1
+    title: pseudo-kanban color 1
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#52aaf365'
+    default-dark: '#3496e652'
+  -
+    id: p-kanban-color-2
+    title: pseudo-kanban color 2
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#84ecec65'
+    default-dark: '#2ec4c452'
+  -
+    id: p-kanban-color-3
+    title: pseudo-kanban color 3
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#94ec8c65'
+    default-dark: '#38ce2a52'
+  -
+    id: p-kanban-color-4
+    title: pseudo-kanban color 4
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#dce28765'
+    default-dark: '#d2dd3852'
+  -
+    id: p-kanban-color-5
+    title: pseudo-kanban color 5
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#eeb36f65'
+    default-dark: '#eb973752'
+  -
+    id: p-kanban-color-6
+    title: pseudo-kanban color 6
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#f18e8e65'
+    default-dark: '#f3424252'
+  -
+    id: p-kanban-color-7
+    title: pseudo-kanban color 7
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#e677e065'
+    default-dark: '#e45bdd52'
+  -
+    id: p-kanban-color-8
+    title: pseudo-kanban color 8
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#ba8be165'
+    default-dark: '#b962ff52'
+  -
     id: built-in-style-code-wrap
     title:  Code Wrap
     title.zh: 代码行自动换行 code-wrap
@@ -3021,6 +3091,7 @@ body.all-dark .print.theme-light,
   --p-kanban-color-1: #3496e652;
   --p-kanban-color-8: #b962ff52;
   --p-kanban-color-7: #e45bdd52;
+  --p-kanban-color-simple: #9e9e9e41;
 
   /*style settings*/
   --background-secondary-translucent: #2c2c2c26;
@@ -3106,7 +3177,7 @@ body.all-dark .print.theme-light,
 
   --background-mobile-drawer-1: #ffffff;
   --background-mobile-drawer-2: #ffffff;
-  --background-modifier-border-hr: #585858;
+  --background-modifier-border-hr: #b9b9b9;
   --background-secondary-alt-bg-4-bt-publish: #f6f6f6;
 
   --background-transparent-black-or-white-1: #ffffffb0;
@@ -3310,13 +3381,7 @@ body.all-dark .print.theme-light,
   --p-kanban-color-8: #ba8be165;
   --p-kanban-color-7: #e677e065;
 
-  --p-kanban-checkbox-color-1: #f18e8e3d;
-  --p-kanban-checkbox-color-2: #eeb36f3d;
-  --p-kanban-checkbox-color-3: #dce2873d;
-  --p-kanban-checkbox-color-4: #94ec8c3b;
-  --p-kanban-checkbox-color-5: #84ecec42;
-  --p-kanban-checkbox-color-6: #52aaf332;
-  --p-kanban-checkbox-color-7: #ba8be134;
+  --p-kanban-color-simple: #d5d5d551;
 
   /*style settings*/
   --background-secondary-translucent: #ffffff3d;
@@ -7365,36 +7430,33 @@ body.reduce-bottom-padding .cm-s-obsidian .cm-content {
   transition: transform 10ms linear 0s
 }
 
-.kanban ul>li:nth-of-type(8n+1) {
+body.colorful-p-kanban .kanban ul>li:nth-of-type(8n+1) {
   background-color: var(--p-kanban-color-1);
-  padding-left: 1em;
 }
-.kanban ul>li:nth-of-type(8n+2) {
+body.colorful-p-kanban .kanban ul>li:nth-of-type(8n+2) {
   background-color: var(--p-kanban-color-2);
-  padding-left: 1em;
 }
-.kanban ul>li:nth-of-type(8n+3) {
+body.colorful-p-kanban .kanban ul>li:nth-of-type(8n+3) {
   background-color: var(--p-kanban-color-3);
-  padding-left: 1em;
 }
-.kanban ul>li:nth-of-type(8n+4) {
+body.colorful-p-kanban .kanban ul>li:nth-of-type(8n+4) {
   background-color: var(--p-kanban-color-4);
-  padding-left: 1em;
 }
-.kanban ul>li:nth-of-type(8n+5) {
+body.colorful-p-kanban .kanban ul>li:nth-of-type(8n+5) {
   background-color: var(--p-kanban-color-5);
-  padding-left: 1em;
 }
-.kanban ul>li:nth-of-type(8n+6) {
+body.colorful-p-kanban .kanban ul>li:nth-of-type(8n+6) {
   background-color: var(--p-kanban-color-6);
-  padding-left: 1em;
 }
-.kanban ul>li:nth-of-type(8n+7) {
+body.colorful-p-kanban .kanban ul>li:nth-of-type(8n+7) {
   background-color: var(--p-kanban-color-7);
-  padding-left: 1em;
 }
-.kanban ul>li:nth-of-type(8n) {
+body.colorful-p-kanban .kanban ul>li:nth-of-type(8n) {
   background-color: var(--p-kanban-color-8);
+}
+
+.kanban ul>li:nth-of-type(n) {
+  background-color: var(--p-kanban-color-simple);
   padding-left: 1em;
 }
 
@@ -14160,27 +14222,7 @@ button.kanban-plugin__new-item-button:hover {
   height: 15px;
   filter: hue-rotate(var(--theme-color)) !important;
 }
-/* 屏蔽看板的默认样式
-.theme-light .kanban-plugin__lane-wrapper:nth-child(5n+1) {
-  background-image: url("https://images.unsplash.com/photo-1487621167305-5d248087c724?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80");
-}
 
-.theme-light .kanban-plugin__lane-wrapper:nth-child(5n+2) {
-  background-image: url("https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80");
-}
-
-.theme-light .kanban-plugin__lane-wrapper:nth-child(5n+3) {
-  background-image: url("https://images.unsplash.com/photo-1488330890490-c291ecf62571?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
-}
-
-.theme-light .kanban-plugin__lane-wrapper:nth-child(5n+4) {
-  background-image: url("https://images.unsplash.com/photo-1528779794993-d2f7f51a53a4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
-}
-
-.theme-light .kanban-plugin__lane-wrapper:nth-child(5n+0) {
-  background-image: url("https://images.unsplash.com/photo-1553307236-8783cc0a3b9e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80");
-}
- */
 .theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+1) {
   background: linear-gradient(to bottom, var(--kanban-color-1) 60%, transparent);
 }
@@ -16032,40 +16074,9 @@ ul.dataview.dataview-ul.dataview-result-list-root-ul {
   border-radius: var(--radius-xs);
   border: 1px solid var(--embed-color);
 }
-body.rainbow-lines-reading table.dataview.table-view-table ul ul::before,
-body.rainbow-lines-reading table.dataview.table-view-table ol ul::before,
-body.rainbow-lines-reading table.dataview.table-view-table ul ol::before,
-body.rainbow-lines-reading table.dataview.table-view-table ol ol::before,
-body.list-vertical-line-one table.dataview.table-view-table ul ul::before,
-body.list-vertical-line-one table.dataview.table-view-table ol ul::before,
-body.list-vertical-line-one table.dataview.table-view-table ul ol::before,
-body.list-vertical-line-one table.dataview.table-view-table ol ol::before,
-body.list-vertical-line-two table.dataview.table-view-table ul ul::before,
-body.list-vertical-line-two table.dataview.table-view-table ol ul::before,
-body.list-vertical-line-two table.dataview.table-view-table ul ol::before,
-body.list-vertical-line-two table.dataview.table-view-table ol ol::before,
-body.list-vertical-line-three table.dataview.table-view-table ul ul::before,
-body.list-vertical-line-three table.dataview.table-view-table ol ul::before,
-body.list-vertical-line-three table.dataview.table-view-table ul ol::before,
-body.list-vertical-line-three table.dataview.table-view-table ol ol::before {
-  border-left: none;
-}
-body.rainbow-lines-reading .kanban-plugin__markdown-preview-view ul ul::before,
-body.rainbow-lines-reading .kanban-plugin__markdown-preview-view ol ul::before,
-body.rainbow-lines-reading .kanban-plugin__markdown-preview-view ul ol::before,
-body.rainbow-lines-reading .kanban-plugin__markdown-preview-view ol ol::before,
-body.list-vertical-line-one .kanban-plugin__markdown-preview-view ul ul::before,
-body.list-vertical-line-one .kanban-plugin__markdown-preview-view ol ul::before,
-body.list-vertical-line-one .kanban-plugin__markdown-preview-view ul ol::before,
-body.list-vertical-line-one .kanban-plugin__markdown-preview-view ol ol::before,
-body.list-vertical-line-two .kanban-plugin__markdown-preview-view ul ul::before,
-body.list-vertical-line-two .kanban-plugin__markdown-preview-view ol ul::before,
-body.list-vertical-line-two .kanban-plugin__markdown-preview-view ul ol::before,
-body.list-vertical-line-two .kanban-plugin__markdown-preview-view ol ol::before,
-body.list-vertical-line-three .kanban-plugin__markdown-preview-view ul ul::before,
-body.list-vertical-line-three .kanban-plugin__markdown-preview-view ol ul::before,
-body.list-vertical-line-three .kanban-plugin__markdown-preview-view ul ol::before,
-body.list-vertical-line-three .kanban-plugin__markdown-preview-view ol ol::before {
+
+body:is(.rainbow-lines-reading,.list-vertical-line-one,.list-vertical-line-two,.list-vertical-line-three) table.dataview.table-view-table :is(ol,ul) :is(ol,ul)::before,
+body:is(.rainbow-lines-reading,.list-vertical-line-one,.list-vertical-line-two,.list-vertical-line-three) .kanban-plugin__markdown-preview-view :is(ol,ul) :is(ol,ul)::before {
   border-left: none;
 }
 
@@ -16106,10 +16117,10 @@ img[alt^="bookcover"] {
 }
 
 .theme-light progress::-webkit-progress-bar { 
-background: #cccccc; 
+  background: #cccccc; 
 }
 .theme-dark progress::-webkit-progress-bar { 
-background: #1a1919; 
+  background: #1a1919; 
 }
 
 .cards progress{
