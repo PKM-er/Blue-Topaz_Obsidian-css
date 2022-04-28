@@ -3111,7 +3111,7 @@ body.all-dark .print.theme-light,
   --p-kanban-color-1: #3496e652;
   --p-kanban-color-8: #b962ff52;
   --p-kanban-color-7: #e45bdd52;
-  --p-kanban-color-simple: #9e9e9e41;
+  --p-kanban-color-simple: #8e8e8e41;
   --p-kanban-color-shadow: #0000004d;
 
   /*style settings*/
@@ -3391,7 +3391,7 @@ body.all-dark .print.theme-light,
   /*pseudo-kanban*/
   --p-kanban-bg-color: #d3d3d32d;
   --p-kanban-border-color: #a0a0a060;
-  --p-kanban-card-color-1: #ffffffc4;
+  --p-kanban-card-color-1: #f9f9f99b;
   --p-kanban-card-color-2: #ffffff;
   --p-kanban-color-6: #f18e8e65;
   --p-kanban-color-5: #eeb36f65;
@@ -3401,7 +3401,7 @@ body.all-dark .print.theme-light,
   --p-kanban-color-1: #52aaf365;
   --p-kanban-color-8: #ba8be165;
   --p-kanban-color-7: #e677e065;
-  --p-kanban-color-simple: #d5d5d551;
+  --p-kanban-color-simple: #cdcdcd2c;
   --p-kanban-color-shadow: #cfcfcf4d;
 
   /*style settings*/
@@ -7589,7 +7589,7 @@ body:not(.default-icons) .kanban li.task-list-item .task-list-item.is-collapsed 
   transform: translateX(-0.9em) translateY(-1em) rotate(-90deg);
 }
 
-.kanban .task-list-item-checkbox {
+body.colorful-p-kanban .kanban .task-list-item-checkbox {
   border-color: var(--text-normal) !important;
 }
 
