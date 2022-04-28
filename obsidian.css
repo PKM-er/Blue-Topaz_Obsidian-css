@@ -2650,7 +2650,7 @@ body {
   --font-size-file-header-title-andy-plugin: 1em;/*文件抬头标题for Andy mode plugin*/
   --font-size-embed-title-size: 1.3em;
   --font-size-embed-file: 1.25em;
-  --font-size-folder-and-file: 0.85em;/*左侧边栏文件字体大小*/
+  --font-size-folder-and-file: 0.88em;/*左侧边栏文件字体大小*/
   --font-size-edit-normal: 1em;/*编辑正文字体大小*/
   --font-size-preview-normal: 1em;/*预览正文字体大小*/
   --h1: 1.5625em;
@@ -18018,12 +18018,12 @@ body {
 
 body.folder-icons .nav-folder-children .nav-folder-title-content::before {
   position: relative;
-  content: " ";
+  content: "";
   display: inline-block;
   opacity: 0.9;
-  top: 1px;
-  width: 1em;
-  height: 1em;
+  top: 2px;
+  width: 1rem;
+  height: 1rem;
   margin-right: 5px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -18034,11 +18034,10 @@ body.folder-icons .nav-folder-children .nav-folder-title-content::before {
 }
 body.folder-icons .nav-folder-children .nav-folder.is-collapsed .nav-folder-title-content::before {
   position: relative;
-  content: " ";
+  content: "";
   display: inline-block;
-  width: 1em;
-  height: 1em;
-  margin-right: 5px;
+  width: 1rem;
+  height: 1rem;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
