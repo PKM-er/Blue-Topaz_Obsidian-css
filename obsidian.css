@@ -9906,11 +9906,6 @@ body.list-bracket-left-two:not(.default-icons) :is(.markdown-preview-view,.markd
   transition: transform 10ms linear 0s;
 }
 
-body.list-bracket-left-two:not(.default-icons) :is(.markdown-preview-view,.markdown-rendered) ol.contains-task-list li.is-collapsed div.list-collapse-indicator.collapse-indicator.collapse-icon {
-  transform: translateX(8px) translateY(8px) rotate(-90deg);
-  opacity: 0.5;
-}
-
 /*list-vertical-line-one*/
 body.list-vertical-line-one :is(ol,ul) :is(ol,ul) {
   position: relative;
