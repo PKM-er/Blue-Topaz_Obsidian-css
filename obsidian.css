@@ -9674,8 +9674,6 @@ div.math.math-block mjx-math {
 /* https://discord.com/channels/686053708261228577/702656734631821413/784922140465692712 */
 .cm-formatting.cm-formatting-list.cm-formatting-list-ol {
   color: var(--list-ol-number-color);
-  margin: 0 -0.3rem;
-  font-family: var(--font-monospace-theme);
 }
 
 ul>li::marker,
@@ -20357,7 +20355,7 @@ margin: 0px!important;
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220428";
+  content: "uid:20220430";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
