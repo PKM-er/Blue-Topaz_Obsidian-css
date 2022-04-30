@@ -12727,12 +12727,10 @@ body.hide-left-ribbon .workspace-ribbon.side-dock-ribbon.mod-left:not(:hover) {
 /*======== optionnal mermaid style below ========*/
 div.mermaid svg {
   width: 100%;
-  height: auto;
 }
 
 .markdown-source-view.is-live-preview div.mermaid svg {
   width: 100%;
-  height: initial;
 }
 
 .mermaid .label {
