@@ -2466,13 +2466,13 @@ settings:
     title: Simple pseudo-kanban
     title.zh: 单色伪看板
     description: Remove colors of pseudo-kanban
-    description.zh: 移除伪看板颜色
+    description.zh: 移除伪看板头部颜色
     type: class-toggle
     default: false
   -
     id: remove-shadow-p-kanban
     title: Remove shadow of pseudo-kanban
-    title.zh: 移除伪看板阴影
+    title.zh: 移除伪看板触发阴影
     type: class-toggle
     default: false
   -
@@ -2545,6 +2545,24 @@ settings:
     format: hex
     default-light: '#ba8be165'
     default-dark: '#b962ff52'
+  -
+    id: p-kanban-card-color-1
+    title: pseudo-kanban-card subitem color
+    title.zh: 伪看板子项背景色
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#f9f9f99b'
+    default-dark: '#0000003f'
+  -
+    id: p-kanban-border-color
+    title: pseudo-kanban-border color
+    title.zh: 伪看板边框颜色
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#a0a0a060'
+    default-dark: '#00000000'
   -
     id: built-in-style-code-wrap
     title:  Code Wrap
@@ -15030,35 +15048,35 @@ body.style-options-for-admonition-plugin .admonition-kanban ul .list-collapse-in
   transition: transform 10ms linear 0s;
 }
 
-body.style-options-for-admonition-plugin .admonition-kanban ul>li:nth-of-type(8n+1) {
+body.style-options-for-admonition-plugin.colorful-p-kanban .admonition-kanban ul>li:nth-of-type(8n+1) {
   background-color: var(--p-kanban-color-1);
   padding-left: 1em;
 }
-body.style-options-for-admonition-plugin .admonition-kanban ul>li:nth-of-type(8n+2) {
+body.style-options-for-admonition-plugin.colorful-p-kanban .admonition-kanban ul>li:nth-of-type(8n+2) {
   background-color: var(--p-kanban-color-2);
   padding-left: 1em;
 }
-body.style-options-for-admonition-plugin .admonition-kanban ul>li:nth-of-type(8n+3) {
+body.style-options-for-admonition-plugin.colorful-p-kanban .admonition-kanban ul>li:nth-of-type(8n+3) {
   background-color: var(--p-kanban-color-3);
   padding-left: 1em;
 }
-body.style-options-for-admonition-plugin .admonition-kanban ul>li:nth-of-type(8n+4) {
+body.style-options-for-admonition-plugin.colorful-p-kanban .admonition-kanban ul>li:nth-of-type(8n+4) {
   background-color: var(--p-kanban-color-4);
   padding-left: 1em;
 }
-body.style-options-for-admonition-plugin .admonition-kanban ul>li:nth-of-type(8n+5) {
+body.style-options-for-admonition-plugin.colorful-p-kanban .admonition-kanban ul>li:nth-of-type(8n+5) {
   background-color: var(--p-kanban-color-5);
   padding-left: 1em;
 }
-body.style-options-for-admonition-plugin .admonition-kanban ul>li:nth-of-type(8n+6) {
+body.style-options-for-admonition-plugin.colorful-p-kanban .admonition-kanban ul>li:nth-of-type(8n+6) {
   background-color: var(--p-kanban-color-6);
   padding-left: 1em;
 }
-body.style-options-for-admonition-plugin .admonition-kanban ul>li:nth-of-type(8n+7) {
+body.style-options-for-admonition-plugin.colorful-p-kanban .admonition-kanban ul>li:nth-of-type(8n+7) {
   background-color: var(--p-kanban-color-7);
   padding-left: 1em;
 }
-body.style-options-for-admonition-plugin .admonition-kanban ul>li:nth-of-type(8n) {
+body.style-options-for-admonition-plugin.colorful-p-kanban .admonition-kanban ul>li:nth-of-type(8n) {
   background-color: var(--p-kanban-color-8);
   padding-left: 1em;
 }
@@ -20130,6 +20148,7 @@ body.loading-animation .progress-bar-message {
  background-size:cover;
  z-index:-1;
  opacity: 0.8;
+ background-attachment:fixed;
 }
 
  .markdown-preview-view.background .obsidian-banner
@@ -20157,7 +20176,7 @@ position:absolute!important;
 }
 .is-live-preview.background .has-banner .obsidian-banner.cm6-banner
 {
-opacity: 0.25;
+opacity: 0.5;
 height:100%;
 
 }
@@ -20933,33 +20952,9 @@ padding: 0px;
 }
 
 /* callout伪看板效果*/
-.callout.callout[data-callout*="kanban"] {
-  --callout-color: var(--text-normal);
-  --callout-icon: layout-dashboard;
-  background: transparent;
-  box-shadow: none;
-  border: 0;
-  width: auto;
-  padding: 0;
-}
-
-.callout.callout[data-callout*="kanban"] {
-  overflow: visible;
-  background-color: rgba(255, 255, 255, 0)!important;
-  border-left: 0 !important;
-  margin: auto;
-  box-shadow: none!important;
-}
-.callout.callout[data-callout*="kanban"] .admonition-content {
-  overflow: visible;
-  margin: 0;
-}
-
-.callout.callout[data-callout*="kanban"] .is-mobile ul{ display: flex; }
 
 .callout.callout[data-callout*="kanban"] ul {
   display: flex;
-  margin: 0;
   flex-direction: row;
   border: 0px solid var(--p-kanban-border-color);
   padding: 0rem;
@@ -20967,10 +20962,10 @@ padding: 0px;
   flex-wrap: wrap;
 }
 
-.callout.callout[data-callout*="kanban"] ul>li:not(.task-list-item) {
+.callout.callout[data-callout*="kanban"] ul>li {
   flex: 1 1 20%;
-  padding: 0.1em 1em 0.1em 0.8em !important;
-  margin: 0 0.1em 0.3em 0 !important;
+  padding: 0.1em 1em 0.1em 0.8em;
+  margin: 0 0.3em 0.3em 0 !important;
   list-style: none;
   border: 1px solid var(--p-kanban-border-color);
   border-left: 1px solid var(--p-kanban-border-color) !important;
@@ -20979,9 +20974,12 @@ padding: 0px;
   word-break: break-word;
 }
 
+.callout.callout[data-callout*="kanban"] ul li.task-list-item .task-list-item-checkbox {
+  margin-left: auto;
+}
+
 .callout.callout[data-callout*="kanban"] ul .list-collapse-indicator.collapse-indicator.collapse-icon {
   margin-left: -1.2em;
-  position: absolute;
 }
 
 .callout.callout[data-callout*="kanban"] ul .list-collapse-indicator.collapse-indicator.collapse-icon::before {
@@ -20989,37 +20987,66 @@ padding: 0px;
   transition: transform 10ms linear 0s
 }
 
-.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+1) {
+body.colorful-p-kanban .callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+1) {
   background-color: var(--p-kanban-color-1);
-  padding-left: 1em;
 }
-.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+2) {
+body.colorful-p-kanban .callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+2) {
   background-color: var(--p-kanban-color-2);
-  padding-left: 1em;
 }
-.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+3) {
+body.colorful-p-kanban .callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+3) {
   background-color: var(--p-kanban-color-3);
-  padding-left: 1em;
 }
-.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+4) {
+body.colorful-p-kanban .callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+4) {
   background-color: var(--p-kanban-color-4);
-  padding-left: 1em;
 }
-.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+5) {
+body.colorful-p-kanban .callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+5) {
   background-color: var(--p-kanban-color-5);
-  padding-left: 1em;
 }
-.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+6) {
+body.colorful-p-kanban .callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+6) {
   background-color: var(--p-kanban-color-6);
-  padding-left: 1em;
 }
-.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+7) {
+body.colorful-p-kanban .callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+7) {
   background-color: var(--p-kanban-color-7);
+}
+body.colorful-p-kanban .callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n) {
+  background-color: var(--p-kanban-color-8);
+}
+
+.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(n) {
+  background-color: var(--p-kanban-color-simple);
   padding-left: 1em;
 }
-.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n) {
-  background-color: var(--p-kanban-color-8);
-  padding-left: 1em;
+.callout.callout[data-callout*="kanban"] .callout-content>ul:first-child>li:nth-of-type(8n+1) {
+  border-top: 6px solid var(--p-kanban-color-1) !important;
+}
+.callout.callout[data-callout*="kanban"] .callout-content>ul:first-child>li:nth-of-type(8n+2) {
+  border-top: 6px solid var(--p-kanban-color-2) !important;
+}
+.callout.callout[data-callout*="kanban"] .callout-content>ul:first-child>li:nth-of-type(8n+3) {
+  border-top: 6px solid var(--p-kanban-color-3) !important;
+}
+.callout.callout[data-callout*="kanban"] .callout-content>ul:first-child>li:nth-of-type(8n+4) {
+  border-top: 6px solid var(--p-kanban-color-4) !important;
+}
+.callout.callout[data-callout*="kanban"] .callout-content>ul:first-child>li:nth-of-type(8n+5) {
+  border-top: 6px solid var(--p-kanban-color-5) !important;
+}
+.callout.callout[data-callout*="kanban"] .callout-content>ul:first-child>li:nth-of-type(8n+6) {
+  border-top: 6px solid var(--p-kanban-color-6) !important;
+}
+.callout.callout[data-callout*="kanban"] .callout-content>ul:first-child>li:nth-of-type(8n+7) {
+  border-top: 6px solid var(--p-kanban-color-7) !important;
+}
+.callout.callout[data-callout*="kanban"] .callout-content>ul:first-child>li:nth-of-type(8n) {
+  border-top: 6px solid var(--p-kanban-color-8) !important;
+}
+body.simple-p-kanban .callout.callout[data-callout*="kanban"] ul:first-child>li:nth-of-type(n) {
+  border-top: none !important;
+}
+
+body:not(.remove-shadow-p-kanban) .callout.callout[data-callout*="kanban"] ul>li:hover {
+  transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1);
+  box-shadow: 0 3px 5px 0 var(--p-kanban-color-shadow), 0 3px 1px -3px var(--p-kanban-color-shadow), 2px 3px 3px 0 var(--p-kanban-color-shadow);
 }
 
 .callout.callout[data-callout*="kanban"] ul ul {
@@ -21039,27 +21066,19 @@ padding: 0px;
   background-color: var(--p-kanban-card-color-1) !important;
 }
 
-.callout.callout[data-callout*="kanban"] ul ul li:nth-child(even) {
-  background-color: var(--p-kanban-card-color-2) !important;
-}
-
-.callout.callout[data-callout*="kanban"] ul>li:hover {
-  border-color: var(--p-kanban-border-color) !important;
-}
-
-.callout.callout[data-callout*="kanban"] ul ul li:hover {
-  background: transparent !important;
+body.remove-shadow-p-kanban .callout.callout[data-callout*="kanban"] ul ul li:hover {
+  background: var(--p-kanban-card-color-2) !important;
   border-color: var(--p-kanban-border-color) !important;
   border-left: 1px solid var(--p-kanban-border-color) !important;
 }
 
-.theme-dark .callout.callout[data-callout*="kanban"] ul ul li:hover {
+body.remove-shadow-p-kanban.theme-dark .callout.callout[data-callout*="kanban"] ul ul li:hover {
   border-color: #696969e1 !important;
   border-left: 1px solid #696969e1 !important;
 }
 
 .callout.callout[data-callout*="kanban"] ul ul li .task-list-item-checkbox {
-  margin-left: 1.5rem;
+  margin-left: 1.5rem !important;
 }
 
 .callout.callout[data-callout*="kanban"] ul ul ul {
@@ -21068,7 +21087,7 @@ padding: 0px;
 
 .callout.callout[data-callout*="kanban"] ul ul::before {
   border-left: 0;
-  border-color: transparent!important;
+  border:0;
 }
 
 :is(.markdown-preview-view,.markdown-rendered).is-readable-line-width.callout.callout[data-callout*="kanban"] .markdown-preview-sizer>div>ul {
@@ -21086,28 +21105,43 @@ padding: 0px;
 .callout.callout[data-callout*="kanban"] ol.contains-task-list ul::before,
 .callout.callout[data-callout*="kanban"] ul.contains-task-list ol::before,
 .callout.callout[data-callout*="kanban"] ol.contains-task-list ol::before {
-  all: initial
+  all: initial;
 }
 
 .callout.callout[data-callout*="kanban"] ul > li.task-list-item {
   flex: 1 1 20%;
   padding: 0.1em 1em;
-  margin: 0 0.1em 0.3em 0;
   list-style: none;
   border: 1px solid var(--p-kanban-border-color);
   border-left: 1px solid var(--p-kanban-border-color) !important;
   border-radius: var(--radius-s);
   word-wrap: break-word;
   word-break: break-word;
-  text-indent: 0;
+  text-indent: 0.01em;
 }
 
 .callout.callout[data-callout*="kanban"] ul ul li.task-list-item {
   width: 100%;
   display: block;
   padding-left: 2em;
-  text-indent: -3.1em;
+  text-indent: -3em;
   background-color: var(--p-kanban-card-color-1) !important;
+}
+
+.callout.callout[data-callout*="kanban"] ul ul li.task-list-item .list-collapse-indicator.collapse-indicator.collapse-icon {
+  text-indent: -1em;
+}
+
+body:not(.default-icons) .callout.callout[data-callout*="kanban"] li.task-list-item .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+  margin-left: -0.2em;
+}
+
+body:not(.default-icons) .callout.callout[data-callout*="kanban"] li.task-list-item .task-list-item.is-collapsed .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+  transform: translateX(-0.9em) translateY(-1em) rotate(-90deg);
+}
+
+body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-checkbox {
+  border-color: var(--text-normal) !important;
 }
 
 
