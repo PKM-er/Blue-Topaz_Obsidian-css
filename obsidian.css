@@ -2346,8 +2346,8 @@ settings:
     default: 1rem
   -
     id: unmute-checkbox-animation
-    title: Circular Checkbox
-    title.zh: 圆形勾选框
+    title: Deactivate Checkbox Animation
+    title.zh: 取消勾选框摇摆动画
     type: class-toggle
     default: false
   -
