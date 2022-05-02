@@ -9648,7 +9648,7 @@ body.fancy-hr-number .markdown-source-view div:not(.CodeMirror-activeline) > .Hy
 }
 
 body.fancy-hr-number .cm-s-obsidian hr {
-  border-image: linear-gradient(to right, transparent 0%, var(--hr-color-numbers-line-1) 30%, var(--hr-color-numbers-line-2) 46%, transparent 46%, transparent 54%, var(--hr-color-numbers-line-3) 54%, var(--hr-color-numbers-line-4) 70%, transparent 100%);
+  border-image: linear-gradient(to right, transparent 0%, var(--hr-color-numbers-line-1) 30%, var(--hr-color-numbers-line-2) 46%, transparent 46%, transparent 54%, var(--hr-color-numbers-line-3) 54%, var(--hr-color-numbers-line-4) 70%, transparent 100%) 1;
   border-width: 2px;
   counter-increment: fancyhrno;
 }
