@@ -12167,6 +12167,7 @@ body.muted-activeline-bg .HyperMD-codeblock-bg.CodeMirror-activeline-background.
 
 .cm-lineNumbers .cm-active.cm-gutterElement {
   color: var(--theme-color);
+  font-weight: bold;
   background: var(--activeline-background);
 }
 
