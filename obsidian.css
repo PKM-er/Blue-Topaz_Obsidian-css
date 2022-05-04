@@ -15205,16 +15205,6 @@ body.style-options-for-admonition-plugin .callout.admonition .admonition-content
   overflow: hidden;
 }
 
-.admonition {
-  background-color: var(--admonition-bg-color) !important;
-}
-
-.callout-title.admonition-title {
-  background-color: rgba(var(--admonition-color),0.15) ;
-}
-.callout.admonition {
-  border-color: rgba(var(--admonition-color),0.15) ;
-}
  .callout.admonition.admonition-plugin.is-collapsed {
   overflow: hidden;
 }
