@@ -5232,6 +5232,10 @@ body.color-scheme-options-flamingo.theme-dark {
   --background-primary-alt: #f937590d;
   --background-secondary: #242424;
   --background-secondary-alt: #191919;
+  --background-primary-bg-4-bt: #212121;
+  --background-primary-alt-bg-4-bt: #f937590d;
+  --background-secondary-bg-4-bt: #242424;
+  --background-secondary-alt-bg-4-bt: #191919;
   --background-accent: #e4ba6c;
   --background-modifier-border: #191919;
   --background-modifier-form-field: #f39ba0;
@@ -16949,6 +16953,11 @@ div.mod-left-split  div[data-type='memos_view'] .search-bar-container > .quickly
   width:100%;
 }
 
+.mobile-view .memos-sidebar-wrapper,
+div[data-type='memos_view'].mobile-view .tags-wrapper {
+  background-color: var(--background-primary-bg-4-bt) !important;
+}
+
 .grass-light.theme-light
   div[data-type='memos_view']
   .usage-heat-map-wrapper
@@ -17008,7 +17017,6 @@ div.mod-left-split  div[data-type='memos_view'] .search-bar-container > .quickly
 }
 
 /*Frame*/
-
 .frame-light.theme-light
   div[data-type='memos_view']
   .usage-heat-map-wrapper
@@ -17068,7 +17076,6 @@ div.mod-left-split  div[data-type='memos_view'] .search-bar-container > .quickly
 }
 
 /*Olive*/
-
 .olive-light.theme-light
   div[data-type='memos_view']
   .usage-heat-map-wrapper
@@ -21906,12 +21913,12 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 /******callout icon*****/
 .callout.callout:is([data-callout-metadata^='icon'],
 [data-callout='icon']) {
-  flex:unset !important;
+  flex: unset !important;
   border-left: 0;
   background-color: transparent;
   box-shadow: none;
   float: left;
-  margin-top:-1em;
+  margin-top: -1em;
 }
 .callout.callout:is([data-callout-metadata^='icon'],
 [data-callout='icon']) .callout-title {
@@ -21926,7 +21933,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 [data-callout='icon']) > .callout-content {
   display: inline-flex;
   align-items: center;
-  padding:0 10px 0 10px;
+  padding: 0 10px 0 10px;
 }
 .callout.callout:is([data-callout-metadata^='icon'],
 [data-callout='icon']) > .callout-content>svg {
