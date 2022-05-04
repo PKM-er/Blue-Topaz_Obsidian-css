@@ -4989,6 +4989,12 @@ body.color-scheme-options-topaz-nord.theme-dark .token.hexcode.color {
   color: var(--nord8) !important;
 }
 
+body.color-scheme-options-topaz-nord.theme-dark #calendar-container,
+body.style-options-for-calendar-plugin-style-one.color-scheme-options-topaz-nord.theme-dark #calendar-container {
+  --color-tr: var(--nord0);
+  --color-calendar-weekends: var(--nord11);
+}
+
 body.color-scheme-options-topaz-nord .theme-light,
 body.color-scheme-options-topaz-nord.theme-light {
   --text-accent: var(--nord9);
@@ -13804,7 +13810,6 @@ body.plugin-sliding-panes.theme-dark .workspace-split.mod-vertical>.workspace-le
 .theme-dark #calendar-container {
   --color-tr: #11111166;
   --color-tr-odd: #1e1e1e93;
-
   --color-calendar-weekends: #cc8484;
   --color-calendar-weekends-2: #ff9f9f21;
   --calendar-today-background-color: #00b3005e;
@@ -13814,7 +13819,6 @@ body.plugin-sliding-panes.theme-dark .workspace-split.mod-vertical>.workspace-le
 .theme-light #calendar-container {
   --color-tr: #ffffff6a;
   --color-tr-odd: #eeeeeea2;
-
   --color-calendar-weekends: #c74a4a;
   --color-calendar-weekends-2: #fdadad21;
   --theme-color-translucent-3: #91c2eb80;
