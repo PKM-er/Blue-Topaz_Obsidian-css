@@ -3121,7 +3121,7 @@ body.all-dark .print.theme-light,
 
   --background-mobile-drawer-1: #1b1b1b;
   --background-mobile-drawer-2: #1b1b1b69;
-  --background-modifier-border-hr: #7f7f7f;
+  --background-modifier-border-hr: #3f3f3f;
 
   --background-transparent-black-or-white-1: #1b1b1b9a;
   --background-transparent-black-or-white-2: #1e1e1ebd;
@@ -7334,8 +7334,6 @@ body.color-scheme-options-lilac.theme-dark {
 
   --background-mobile-drawer-1: #1b1b1b;
   --background-mobile-drawer-2: #1b1b1b69;
-  --background-modifier-border-hr: #7f7f7f;
-
   --background-transparent-blue: #003e759a;
 
   --scrollbar-thumb: #603a81;
@@ -9543,7 +9541,7 @@ body.fancy-hr-icon .markdown-rendered hr {
   border-bottom: 2px solid;
   border-image-slice: 1;
   border-width: 2px;
-  border-image-source: linear-gradient(to right, transparent 0%, var(--hr-color-icon-1) 30%, var(--hr-color-icon-2) 46%, transparent 46%, transparent 54%, var(--hr-color-icon-3) 54%, var(--hr-color-icon-4) 70%, transparent 100%) 1;
+  border-image: linear-gradient(to right, transparent 0%, var(--hr-color-icon-1) 30%, var(--hr-color-icon-2) 46%, transparent 46%, transparent 54%, var(--hr-color-icon-3) 54%, var(--hr-color-icon-4) 70%, transparent 100%) 1;
 }
 
 body.fancy-hr-icon .markdown-rendered hr::after {
@@ -21913,12 +21911,12 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 /******callout icon*****/
 .callout.callout:is([data-callout-metadata^='icon'],
 [data-callout='icon']) {
-  flex: unset !important;
+  flex:unset !important;
   border-left: 0;
   background-color: transparent;
   box-shadow: none;
   float: left;
-  margin-top: -1em;
+  margin-top:-1em;
 }
 .callout.callout:is([data-callout-metadata^='icon'],
 [data-callout='icon']) .callout-title {
@@ -21933,7 +21931,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 [data-callout='icon']) > .callout-content {
   display: inline-flex;
   align-items: center;
-  padding: 0 10px 0 10px;
+  padding:0 10px 0 10px;
 }
 .callout.callout:is([data-callout-metadata^='icon'],
 [data-callout='icon']) > .callout-content>svg {
