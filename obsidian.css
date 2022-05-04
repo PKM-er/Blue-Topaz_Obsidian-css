@@ -3095,8 +3095,8 @@ body.all-dark .print.theme-light,
   --text-error-hover: #c9626a;
   --text-selection: #47a5914d;
   --text-on-accent: #dcddde;
-  --interactive-normal: #20242b;
-  --interactive-hover: #353b47;
+  --interactive-normal: #2b2b2b;
+  --interactive-hover: #373737;
   --interactive-accent: #2d82cc;
   --interactive-accent-rgb: 45, 130, 204;
   --interactive-accent-hover: #3e8de7;
@@ -4021,8 +4021,6 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --text-accent-hover: #b8b8b8;
   --accent-em: #ffffff;
 
-  --interactive-normal: #20242b;
-  --interactive-hover: #353b47;
   --interactive-accent: #787878;
   --interactive-accent-rgb: 120, 120, 120;
   --interactive-accent-hover: #646464;
@@ -4629,8 +4627,6 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --accent-em: #d9d4a6;
 
   --text-on-accent: #dcddde;
-  --interactive-normal: #20242b;
-  --interactive-hover: #353b47;
   --interactive-accent: #cc6188;
   --interactive-accent-rgb: 204, 97, 136;
   --interactive-accent-hover: #cb4375;
@@ -4819,7 +4815,8 @@ body.color-scheme-options-topaz-nord.theme-dark {
   --background-secondary-alt-bg-4-bt: var(--nord2);
 
   --background-black-or-white-1: var(--nord2);
-
+  --interactive-normal: var(--nord0);
+  --interactive-hover: var(--nord2);
   --text-normal: var(--nord4);
   --text-muted: var(--nord5);
   --text-faint: var(--nord6);
@@ -20634,7 +20631,7 @@ body.plain-file-title.theme-dark {
 
 /* the gif animation was created by @Jake Fleming https://dribbble.com/shots/9948351-kitty-wiggle */
 body.loading-animation .progress-bar-message::before {
-  content: "GIF author: Jake Fleming"; 
+  content: "GIF creator: Jake Fleming"; 
   display: block;
   background: no-repeat center/cover  url(https://cdn.dribbble.com/users/53712/screenshots/9948351/media/2397850c7727f8e70b0ec50b5a83fe76.gif);
   width: 800px; 
