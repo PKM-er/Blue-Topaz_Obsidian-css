@@ -15321,6 +15321,14 @@ body.style-options-for-admonition-plugin .callout.admonition .admonition-content
   overflow: hidden;
 }
 
+.admonition.callout {
+  border-color: rgba(var(--callout-color),0.15) ;
+}
+.callout-title.admonition-title {
+  background-color: rgba(var(--callout-color),0.15) ;
+}
+
+
  .callout.admonition.admonition-plugin.is-collapsed {
   overflow: hidden;
 }
@@ -15548,6 +15556,13 @@ body.style-options-for-admonition-plugin .admonition-col4 .admonition-content  u
 body.style-options-for-admonition-plugin .admonition-flex .admonition-content  ul {
   padding-inline-start: 20px !important;
   margin-left: -20px;
+}
+body.style-options-for-admonition-plugin .admonition-col2 .admonition-content  ul li .task-list-item-checkbox,
+body.style-options-for-admonition-plugin .admonition-col3 .admonition-content  ul li .task-list-item-checkbox,
+body.style-options-for-admonition-plugin .admonition-col4 .admonition-content  ul li .task-list-item-checkbox,
+body.style-options-for-admonition-plugin .admonition-flex .admonition-content  ul li .task-list-item-checkbox {
+
+  margin-left: auto;
 }
 :is(.admonition-col2,.admonition-col3,.admonition-col4,.admonition-flex) .callout-content ul.dataview.list-view-ul>li:not(.task-list-item) {
   margin-left: auto;
@@ -15780,6 +15795,7 @@ body.style-options-for-admonition-plugin .admonition-col4-parent .admonition-col
 body.style-options-for-admonition-plugin .admonition-flex {
   margin: auto;
   box-shadow:none;
+  border-left:0px;
 }
 
 .is-live-preview .callout-content.admonition-content >p {
@@ -15794,7 +15810,7 @@ body.style-options-for-admonition-plugin .admonition-flex .admonition-content {
   margin: 0px;
   display: flex;
   flex-wrap: wrap;
-  border:none;
+  border:none; 
 }
 body.style-options-for-admonition-plugin .admonition-flex .admonition-content>div{
   flex: 1;
@@ -21980,7 +21996,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 /******callout icon*****/
 .callout.callout:is([data-callout-metadata^='icon'],
 [data-callout='icon']) {
-  flex:unset !important;
+  flex:none !important;
   border-left: 0;
   background-color: transparent;
   box-shadow: none;
