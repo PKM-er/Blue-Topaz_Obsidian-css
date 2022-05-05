@@ -10145,10 +10145,7 @@ ol>li::marker {
   font-size: var(--font-size-list);
 }
 
-body.list-bracket-left-two .markdown-rendered.show-indentation-guide li:not(.task-list-item) > ul::before, 
-body.list-bracket-left-two .markdown-rendered.show-indentation-guide li:not(.task-list-item) > ol::before,
-body.list-bracket-left .markdown-rendered.show-indentation-guide li:not(.task-list-item)  > ul::before, 
-body.list-bracket-left .markdown-rendered.show-indentation-guide li:not(.task-list-item) > ol::before {
+body:not(.list-no-border) .markdown-rendered.show-indentation-guide li:not(.task-list-item) > :is(ol,ul)::before{
   border: none;
 }
 
