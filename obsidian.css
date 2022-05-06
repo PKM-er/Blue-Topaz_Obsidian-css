@@ -506,7 +506,7 @@ settings:
     title.zh: 2. 细节设置
     type: heading
     level: 1
-    collapsed: true
+    collapsed: false
   - 
     id: color-settings
     title: 2.1 Color Settings
