@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.14.7。uid [20220505] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.14.7, uid [20220505] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.14.7。uid [20220506] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.14.7, uid [20220506] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -1493,17 +1493,11 @@ settings:
     title.zh: 2.3 其他样式设置
     type: heading
     level: 2
-    collapsed: true
+    collapsed: false
   -
     id: muted-activeline-bg
     title: Mute Active Line
     title.zh: 取消所在行高亮
-    type: class-toggle
-    default: false
-  -
-    id: image-zoom
-    title: Deactivate image zooming
-    title.zh: 取消点击图片放大效果
     type: class-toggle
     default: false
   -
@@ -1517,18 +1511,6 @@ settings:
     id: loading-animation
     title: Animation on the Loading Page 
     title.zh: 加载页面的动画
-    type: class-toggle
-    default: false
-  -
-    id: remove-custom-svg-icons
-    title: Toggle Default Icons
-    title.zh: 还原默认图标
-    type: class-toggle
-    default: false
-  - 
-    id: default-icons
-    title: Toggle Default Collapse Icons
-    title.zh: 还原折叠图标
     type: class-toggle
     default: false
   - 
@@ -2355,7 +2337,7 @@ settings:
     type: variable-text
     default: 3px
   -
-    id: style-options-for-other-plugins
+    id: checkbox-style-folder
     title: 2.3.13 Checkbox
     title.zh: 2.3.13 勾选框
     type: heading
@@ -2379,6 +2361,65 @@ settings:
     title.zh: 取消勾选框摇摆动画
     type: class-toggle
     default: false
+  -
+    id: icons-style-folder
+    title: 2.3.14 Icons
+    title.zh: 2.3.14 图标
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: remove-custom-svg-icons
+    title: Toggle Default Icons
+    title.zh: 还原默认图标
+    type: class-toggle
+    default: false
+  - 
+    id: default-icons
+    title: Toggle Default Collapse Icons
+    title.zh: 还原折叠图标
+    type: class-toggle
+    default: false
+  -
+    id: icons-style-folder
+    title: 2.3.15 Images
+    title.zh: 2.3.15 图片
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: image-zoom
+    title: Deactivate image zooming
+    title.zh: 取消点击图片放大效果
+    type: class-toggle
+    default: false
+  -
+    id: icons-style-folder-1
+    title: Intro to Basic Image Position
+    title.zh: 基本图片位置简介
+    description: You can add 🔸|Left (can also use `left`, `LEFT` or `L` to replace the `Left` before)🔸, 🔸|Right (right/RIGHT/R)🔸 and 🔸|Inline (inline/INLINE/inl)🔸 into a image format to adjust the image position, e.g. ![[*.jpg|L]], ![[*.png|Right|200]] and ![|inl](...*.jpg)
+    description.zh: 在图片格式里添加 🔸|Left (can also use `left`, `LEFT` or `L` to replace the `Left` before)🔸, 🔸|Right (right/RIGHT/R)🔸 and 🔸|Inline (inline/INLINE/inl)🔸 来改变图片位置, e.g. ![[*.jpg|L]], ![[*.png|Right|200]] and ![|inl](...*.jpg)
+    type: heading
+    level: 4
+    collapsed: true
+  -
+    id: icons-style-folder-2
+    title: Intro to Image Caption
+    title.zh: 图片标题介绍
+    description: You can add 🔸#left|your captions🔸, 🔸#right|your captions🔸, 🔸#center/centre|your captions🔸 and 🔸#inl|your captions🔸 into a image format to adjust the image position with a image caption, e.g. ![[*.jpg#left|Figure 1]], ![[*.png#right|Figure 2|200]], ![[*.jpg#centre|Figure 3]] and ![[*.jpg#inl|Figure 4|100]]
+    description.zh: 在图片格式里添加 🔸#left|your captions🔸, 🔸#right|your captions🔸, 🔸#center/centre|your captions🔸 and 🔸#inl|your captions🔸 来改变图片位置，并添加图片标题, e.g. ![[*.jpg#left|Figure 1]], ![[*.png#right|Figure 2|200]], ![[*.jpg#centre|Figure 3]] and ![[*.jpg#inl|Figure 4|100]]
+    type: heading
+    level: 4
+    collapsed: true
+  -
+    id: icons-style-folder-3
+    title: Intro to Image Grid
+    title.zh: 图片横排介绍
+    description: You can add 🔸+grid🔸 into some images to grid these images in a line, e.g. ![[*.jpg+grid]]                                Or type ❗cssclass：img-grid❗ in YAML to make images arrange in a grid in the preview mode.
+    description.zh: 在图片格式里添加 🔸+grid🔸 使复数的图片排成一行, e.g. ![[*.jpg+grid]] 。或者在YAML种输入 ❗cssclass：img-grid❗
+    type: heading
+    level: 4
+    collapsed: true
   -
     id: style-options-for-other-plugins
     title: 3. For Plugins
@@ -2785,7 +2826,7 @@ settings:
     level: 2
     collapsed: true
     description.zh:  ❗cssclass：img-grid❗实现图片类似网格一样自适应横排显示。也可以使用类似格式单独调整![[obsidian_image.png|inl|100]]  (adapted from https://github.com/iEchoxu/obsidian_orange/blob/main/.obsidian/snippets/image-grid.css)
-    description: ❗cssclass：img-grid❗ To make images, which are not separated by line breaks, arrange in a grid in the preview mode. (adapted from https://github.com/iEchoxu/obsidian_orange/blob/main/.obsidian/snippets/image-grid.css)
+    description: ❗cssclass：img-grid❗ To make images arrange in a grid in the preview mode. (adapted from https://github.com/iEchoxu/obsidian_orange/blob/main/.obsidian/snippets/image-grid.css)
   -
     id: built-in-style-matrix
     title: Eisenhower Matrix
@@ -12993,7 +13034,7 @@ body.right-ribbon-hide-to-right .workspace-ribbon.side-dock-ribbon.mod-right:not
 }
 
 body.hide-left-ribbon .workspace-ribbon.side-dock-ribbon.mod-left:not(:hover) {
-  margin-left: -22px;
+  margin-left: -24px;
 }
 
 body:not(.right-ribbon-hide-to-right):not(.fix-right-ribbon) .workspace-ribbon.mod-right {
@@ -17413,20 +17454,16 @@ img[alt$="inlR"] {
 
 /* img captions */
 /* modified from Discordian theme by @radekkozak */
-:is(.markdown-preview-view,.markdown-rendered) .image-embed[src$="center"],
-:is(.markdown-preview-view,.markdown-rendered) .image-embed[src$="centre"],
-.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="center"],
-.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="centre"] {
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="center"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="centre"] {
   clear: both;
   margin: 0 auto !important;
   width: fit-content;
   display: block;
 }
 
-:is(.markdown-preview-view,.markdown-rendered) .image-embed[src$="center"]::after,
-:is(.markdown-preview-view,.markdown-rendered) .image-embed[src$="centre"]::after,
-.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="center"]::after,
-.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="centre"]::after {
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="center"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="centre"]::after {
   content: attr(alt);
   margin: 0.5rem 0;
   display: block;
@@ -17435,8 +17472,7 @@ img[alt$="inlR"] {
   font-size: 0.85rem;
 }
 
-:is(.markdown-preview-view,.markdown-rendered) .image-embed[src$="left"],
-.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="left"] {
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="left"] {
   position: relative;
   float: left;
   margin: 0.2rem 0.5rem;
@@ -17444,8 +17480,7 @@ img[alt$="inlR"] {
   display: table;
 }
 
-:is(.markdown-preview-view,.markdown-rendered) .image-embed[src$="left"]::after,
-.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="left"]::after  {
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="left"]::after {
   content: attr(alt);
   padding: 0 0.5rem;
   margin-top: 0.5rem;
@@ -17464,8 +17499,7 @@ img[alt$="inlR"] {
   display: table;
 }
 
-:is(.markdown-preview-view,.markdown-rendered) .image-embed[src$="right"]::after,
-.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="right"]::after {
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="right"]::after {
   content: attr(alt);
   padding: 0 0.5rem;
   margin-top: 0.5rem;
@@ -17475,20 +17509,14 @@ img[alt$="inlR"] {
   font-size: 0.85rem;
 }
 
-:is(.markdown-preview-view,.markdown-rendered) .image-embed[src$="inl"],
-:is(.markdown-preview-view,.markdown-rendered) .image-embed[src$="inl"],
-.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="inl"],
-.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="inl"] {
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="inl"] {
   clear: both;
   margin: 0 auto !important;
   width: fit-content;
   display: inline-table;
 }
 
-:is(.markdown-preview-view,.markdown-rendered) .image-embed[src$="inl"]::after,
-:is(.markdown-preview-view,.markdown-rendered) .image-embed[src$="inl"]::after,
-.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="inl"]::after,
-.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="inl"]::after {
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="inl"]::after {
   content: attr(alt);
   padding: 0 0.7em; 
   margin: 0.5rem 0;
@@ -17513,7 +17541,6 @@ span[alt*="+grid"] {
 }
 
 /* image-background */
-
 .markdown-preview-view  img[alt^="background"] {
   width: 100%;
   margin: 0px auto;
@@ -17595,13 +17622,7 @@ body:not(.default-icons).is-mobile div.is-collapsed h2 div.heading-collapse-indi
 }
 
 /*strong*/
-.is-mobile h1,
-.is-mobile h2,
-.is-mobile h3,
-.is-mobile h4,
-.is-mobile h5,
-.is-mobile h6,
-.is-mobile b,
+.is-mobile :is(h1,h2,h3,h4,h5,h6,b),
 .is-mobile .view-header-title {
   font-weight: bold;
 }
@@ -17664,7 +17685,7 @@ body:not(.image-zoom).is-mobile .markdown-reading-view img:not([class="emoji"]):
 }
 
 /*按钮颜色*/
-/* 图标按钮*/
+/*图标按钮*/
 body.style-options-for-buttons-plugin button.circle_btn {
   font-size: 12px;
   word-break: keep-all;
@@ -17679,7 +17700,7 @@ body.style-options-for-buttons-plugin button.circle_btn {
 	text-align: center;
 }
 /* blank 透明按钮*/
-body.style-options-for-buttons-plugin button.blank{
+body.style-options-for-buttons-plugin button.blank {
   background: #fff0f000;
   padding: 0px;
 }
@@ -17688,10 +17709,10 @@ body.style-options-for-buttons-plugin button.blank:hover {
 	box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
 }
 
-body.style-options-for-buttons-plugin .admonition-content span>button.grad_button{
+body.style-options-for-buttons-plugin .admonition-content span>button.grad_button {
   margin:3px;
 }
-body.style-options-for-buttons-plugin button.grad_button{
+body.style-options-for-buttons-plugin button.grad_button {
   margin:5PX;
   line-height: inherit;
   display: inline-flex;
@@ -17742,39 +17763,38 @@ body.style-options-for-buttons-plugin  button.g_yellow {
 
 button.tiny {
   font-size: 1em;
-   min-width:3.5em;
+  min-width:3.5em;
   cursor: pointer;
-      margin: 0;
-      padding:3px 6px;
-    background-color: transparent;
-    color: var(--text-normal);
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 35px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-  }
-  button.tiny:hover {
-    color: var(--text-on-accent);
-  }
+  margin: 0;
+  padding:3px 6px;
+  background-color: transparent;
+  color: var(--text-normal);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 35px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+button.tiny:hover {
+  color: var(--text-on-accent);
+}
 button.tiny::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    width: 1rem;
-    height: 1rem;
-    transform: translate3d(-50%,-50%,0) scale(0,0);
-    border-radius: 50%;
-    background-color: var(--interactive-accent-hover);
-    transform-origin: center;
-    transition: ease-in-out .5s;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  transform: translate3d(-50%,-50%,0) scale(0,0);
+  border-radius: 50%;
+  background-color: var(--interactive-accent-hover);
+  transform-origin: center;
+  transition: ease-in-out .5s;
 }
 
 button.tiny:hover::before {
-    transform: translate3d(-50%,-50%,0) scale(15,15);
+  transform: translate3d(-50%,-50%,0) scale(15,15);
 }
-
 
 
 /*buttons*/
@@ -18066,7 +18086,6 @@ body.dialogue-style-wechat .dialogue-plugin-message {
   padding: 1px;
 }
 
-
 body.dialogue-style-wechat .dialogue-plugin-comment-wrapper .dialogue-plugin-comment {
   margin: 7px;
   width: fit-content;
@@ -18154,7 +18173,6 @@ body.dialogue-style-wechat .dialogue-plugin-message .dialogue-plugin-message-con
 }
 
 /*chatview-style-wechat*/
-
 body.dialogue-style-wechat  div.chat-view-bubble {
   background-color: transparent;
   border: 0px;
@@ -18179,7 +18197,6 @@ body.dialogue-style-wechat .chat-view-align-right .chat-view-header {
   text-align: right;
   margin-right: 0.5em;
 }
-
 
 body.dialogue-style-wechat div.chat-view-align-left .chat-view-message  {
   margin-right: 0px;
@@ -18210,7 +18227,7 @@ body.dialogue-style-wechat div.chat-view-align-center .chat-view-message:after {
   height: 12px;
   border-bottom-left-radius: 2px;
   top: -5px;
-  left:10%;
+  left: 10%;
   position: absolute;
   transform: rotate(45deg);
 }
@@ -18240,7 +18257,7 @@ body.dialogue-style-wechat .chat-view-message {
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
 }
 body.dialogue-style-wechat.theme-dark .chat-view-align-left .chat-view-message {
-  background:#343434;
+  background: #343434;
 }
 body.dialogue-style-wechat.theme-dark .chat-view-align-center .chat-view-message {
   background: #3cb676;
@@ -18277,7 +18294,7 @@ body.dialogue-style-wechat div.chat-view-align-right {
 }
 body.dialogue-style-wechat h4.chat-view-header {
   margin-bottom: 2px;
-  margin-top:0px !important;
+  margin-top: 0 !important;
 }
 body.dialogue-style-wechat div.chat-view-align-center  h4.chat-view-header {
   text-align: left;
@@ -18368,7 +18385,6 @@ body.dialogue-style-chat .dialogue-plugin-message-title {
 /* ============ */
 /* just for fun */
 /* ============ */
-
 /*cursor*/
 body.fancy-cursor .CodeMirror-cursor,
 body.fancy-cursor .cm-cursorLayer .cm-cursor {
@@ -18547,7 +18563,7 @@ body:not(.remove-file-icons) .nav-folder-children .nav-file-title-content:first-
   background-color: var(--text-folder-file-icon);
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill=""><path d="M0 0h24v24H0V0z" fill="none"/><path d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>');
 }
-body:not(.remove-file-icons) .nav-file-title.is-active[data-path$=".md"]>.nav-file-title-content::before {
+body:not(.remove-file-icons):not(.folder-style-change-options-colorful) .nav-file-title.is-active[data-path$=".md"]>.nav-file-title-content::before {
   background-color: var(--white);
 }
 body.light-background-color-files:not(.remove-file-icons) .nav-file-title.is-active[data-path$=".md"]>.nav-file-title-content::before {
@@ -20628,13 +20644,7 @@ cssclass: matrix
 */
 
 :root,
-.theme-dark {
---matrix-1: var(--p-kanban-color-2);
---matrix-2: var(--p-kanban-color-3);
---matrix-4: var(--p-kanban-color-5);
---matrix-5: var(--p-kanban-color-6);
-}
-:root,
+.theme-dark,
 .theme-light {
   --matrix-1: var(--p-kanban-color-2);
   --matrix-2: var(--p-kanban-color-3);
@@ -20987,7 +20997,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220505";
+  content: "uid:20220506";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
@@ -21032,8 +21042,8 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   color: transparent;
 }
 .is-mobile .community-theme {
-  margin: 15px 0px;
-  padding: 15px 0px;
+  margin: 15px 0;
+  padding: 15px 0;
 }
 
 /* ================================== */
@@ -21070,7 +21080,6 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
 .callout .callout-content p img {
   display: block;
 }
-
 
 .is-live-preview .callout:not(.admonition) .callout-content {
   padding-top: 0;
@@ -21209,10 +21218,10 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   -o-object-fit: cover;
   object-fit: cover;
 }
-.callout.callout[data-callout*=cards] table.dataview tbody>tr>td:before{
+.callout.callout[data-callout*=cards] table.dataview tbody>tr>td:before {
   display:none;
 }
-.callout.callout[data-callout*=cards] table.dataview tbody>tr>td:first-child:after{
+.callout.callout[data-callout*=cards] table.dataview tbody>tr>td:first-child:after {
   content: "";
   position: absolute;
   top: 0;
@@ -21377,7 +21386,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
 /* ===隐藏图标============ */
 .callout.callout:is([data-callout-metadata^="noicon"], 
 [data-callout*=noicon]) .callout-icon {
-  display:none;
+  display: none;
 }
 
 /* ===隐藏边框============ */
@@ -21403,14 +21412,14 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
 .callout.callout[data-callout-metadata*="banner"] {
   border-left: 0;
   background-color: transparent;
-  box-shadow: none!important;
+  box-shadow: none !important;
 }
 .callout.callout[data-callout-metadata*="banner"] .callout-content{
-  overflow:visible;
+  overflow: visible;
 }
 .callout.callout[data-callout-metadata*="banner"] .callout-title {
-  background-color: transparent ;
-  display: inline ;
+  background-color: transparent;
+  display: inline;
 }
 /* nested callout note for culumns | image used as tittle + centered */
 .callout.callout[data-callout-metadata*="banner"] .callout-title img {
@@ -21419,10 +21428,10 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   display: block;
 }
 .callout.callout[data-callout-metadata*="banner"] .callout-fold {
-  display:none;
+  display: none;
 }
 .callout.callout[data-callout-metadata*="banner"] .callout-icon {
-  display:none;
+  display: none;
 }
 .callout.callout[data-callout-metadata*="banner"] .callout-title h3 {
   text-align: center;	
@@ -21570,7 +21579,6 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
 }
 
 /* callout伪看板效果*/
-
 .callout.callout[data-callout*="kanban"] ul {
   display: flex;
   flex-direction: row;
@@ -21712,17 +21720,11 @@ body.remove-shadow-p-kanban.theme-dark .callout.callout[data-callout*="kanban"] 
   max-width: 100%;
 }
 
-.callout.callout[data-callout*="kanban"] ul.contains-task-list ul,
-.callout.callout[data-callout*="kanban"] ol.contains-task-list ul,
-.callout.callout[data-callout*="kanban"] ul.contains-task-list ol,
-.callout.callout[data-callout*="kanban"] ol.contains-task-list ol {
+.callout.callout[data-callout*="kanban"] :is(ol,ul).contains-task-list :is(ol,ul){
   position: initial;
 }
 
-.callout.callout[data-callout*="kanban"] ul.contains-task-list ul::before,
-.callout.callout[data-callout*="kanban"] ol.contains-task-list ul::before,
-.callout.callout[data-callout*="kanban"] ul.contains-task-list ol::before,
-.callout.callout[data-callout*="kanban"] ol.contains-task-list ol::before {
+.callout.callout[data-callout*="kanban"] :is(ol,ul).contains-task-list :is(ol,ul)::before {
   all: initial;
 }
 
@@ -21761,7 +21763,6 @@ body:not(.default-icons) .callout.callout[data-callout*="kanban"] li.task-list-i
 body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-checkbox {
   border-color: var(--text-normal) !important;
 }
-
 
 /*callout hibox*/
 .callout.callout[data-callout*="hibox"] {
@@ -21813,7 +21814,6 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 }
 
 /* callout infobox效果*/
-
 /*Infobox from https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/S%20-%20Callouts.css*/
 :is(.is-mobile, .is-live-preview) .callout[data-callout*=infobox] {
   float: unset !important;
@@ -21864,7 +21864,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 }
 .callout.callout[data-callout*=infobox] p, 
 .callout.callout[data-callout*=infobox] .internal-embed,
- .callout.callout[data-callout*=infobox] img {
+.callout.callout[data-callout*=infobox] img {
   margin: auto;
   padding: auto;
   text-align: center;
@@ -21898,7 +21898,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
   margin-left: 2%;
   word-break: normal;
 }
-.callout.callout[data-callout*=bookinfo] .callout-content table  tr th{
+.callout.callout[data-callout*=bookinfo] .callout-content table  tr th {
   padding-right: 5px;;
 }
 .callout.callout[data-callout*=bookinfo] .callout-content td:nth-child(2) {
@@ -21908,9 +21908,6 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
   overflow: hidden;
 }
 /******callout timeline*****/
-.callout.callout[data-callout="timeline"] .callout-title {
- 
-}
 .callout.callout[data-callout="timeline"] {
   --callout-color:31, 172, 139;
   --callout-icon:'<svg t="1649346326592" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2210"><path d="M384 170.666667m42.666667 0l512 0q42.666667 0 42.666666 42.666666l0 0q0 42.666667-42.666666 42.666667l-512 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666666Z" p-id="2211"></path><path d="M384 469.333333m42.666667 0l512 0q42.666667 0 42.666666 42.666667l0 0q0 42.666667-42.666666 42.666667l-512 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666667Z" p-id="2212"></path><path d="M384 768m42.666667 0l512 0q42.666667 0 42.666666 42.666667l0 0q0 42.666667-42.666666 42.666666l-512 0q-42.666667 0-42.666667-42.666666l0 0q0-42.666667 42.666667-42.666667Z" p-id="2213"></path><path d="M239.835143 127.973411m15.084945 15.084944l60.339779 60.339779q15.084945 15.084945 0 30.169889l-60.339779 60.339779q-15.084945 15.084945-30.169889 0l-60.339779-60.339779q-15.084945-15.084945 0-30.169889l60.339779-60.339779q15.084945-15.084945 30.169889 0Z" p-id="2214"></path><path d="M239.831988 426.647696m15.084944 15.084945l60.339779 60.339778q15.084945 15.084945 0 30.16989l-60.339779 60.339778q-15.084945 15.084945-30.169889 0l-60.339779-60.339778q-15.084945-15.084945 0-30.16989l60.339779-60.339778q15.084945-15.084945 30.169889 0Z" p-id="2215"></path><path d="M239.828832 725.321982m15.084944 15.084944l60.339779 60.339779q15.084945 15.084945 0 30.169889l-60.339779 60.339779q-15.084945 15.084945-30.169889 0l-60.339779-60.339779q-15.084945-15.084945 0-30.169889l60.339779-60.339779q15.084945-15.084945 30.169889 0Z" p-id="2216"></path><path d="M213.333333 853.333333H85.333333a42.666667 42.666667 0 0 1-42.666666-42.666666V213.333333a42.666667 42.666667 0 0 1 42.666666-42.666666h128v85.333333H138.666667a10.709333 10.709333 0 0 0-10.666667 10.666667v192a10.709333 10.709333 0 0 0 10.666667 10.666666H213.333333v85.333334H138.666667a10.709333 10.709333 0 0 0-10.666667 10.666666v192a10.709333 10.709333 0 0 0 10.666667 10.666667H213.333333v85.333333z" p-id="2217"></path></svg>';
@@ -21966,10 +21963,10 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
   margin-inline-end: 0px;
   background-color: unset;
 }
-.callout.callout[data-callout="timeline"] .callout-content blockquote p::before{
+.callout.callout[data-callout="timeline"] .callout-content blockquote p::before {
   display: none;
 }
-.callout.callout[data-callout="timeline"] .callout-content blockquote p{
+.callout.callout[data-callout="timeline"] .callout-content blockquote p {
   display: block;
   color: var(--time-font-color);
   background-color: var(--time-color);
