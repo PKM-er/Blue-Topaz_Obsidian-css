@@ -3633,7 +3633,7 @@ body.all-dark .print.theme-light,
   /*pseudo-kanban*/
   --p-kanban-bg-color: #d3d3d32d;
   --p-kanban-border-color: #a0a0a060;
-  --p-kanban-card-color-1: #f9f9f99b;
+  --p-kanban-card-color-1: #ffffff80;
   --p-kanban-card-color-2: #ffffff;
   --p-kanban-color-6: #f18e8e65;
   --p-kanban-color-5: #eeb36f65;
