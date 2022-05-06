@@ -3952,10 +3952,8 @@ body.color-scheme-options-avocado-topaz .workspace-leaf.mod-active .view-header-
 body.color-scheme-options-avocado-topaz.all-dark .print.theme-light,
 body.color-scheme-options-avocado-topaz.theme-dark {
   --background-primary-alt: #000000;
-
   --text-accent: #25c648;
   --text-accent-hover: #0cb014;
-
   --interactive-accent: #329f56;
   --interactive-accent-rgb: 50, 159, 86;
   --interactive-accent-hover: #0f892d;
@@ -4222,7 +4220,6 @@ body.color-scheme-options-monochrome-topaz .theme-light,
 body.color-scheme-options-monochrome-topaz.theme-light {
   --text-accent: #4f4f4f;
   --text-accent-hover: #363636;
-
   --accent-strong: #000000;
   --accent-em: #000000;
 
@@ -4682,7 +4679,6 @@ body.color-scheme-options-pink-topaz.all-dark .print.theme-light,
 body.color-scheme-options-pink-topaz.theme-dark {
   --text-accent: #c874a5;
   --text-accent-hover: #bf5a95;
-
   --accent-strong: #f7f7f7;
   --accent-em: #d9d4a6;
 
@@ -4868,7 +4864,6 @@ body.color-scheme-options-topaz-nord.theme-dark {
   --background-primary-alt: var(--nord0);
   --background-secondary: var(--nord1);
   --background-secondary-alt: var(--nord2);
-
   --background-primary-bg-4-bt: var(--nord0);
   --background-primary-alt-bg-4-bt: var(--nord0);
   --background-secondary-bg-4-bt: var(--nord1);
@@ -15653,12 +15648,6 @@ body.style-options-for-admonition-plugin .admonition-kanban .admonition-col2 .ad
   break-inside: avoid;
 }
 
-/*
-.admonition ul > li.task-list-item .task-list-item-checkbox {
-  margin-left: auto;
-}
-*/
-
 body.style-options-for-admonition-plugin .admonition-col2 .admonition-content {	
   overflow: visible ;
 }
@@ -15671,7 +15660,6 @@ body.style-options-for-admonition-plugin .admonition-col2 p {
   text-align: justify;
   margin-top: 0;
   padding: 2px;
-
  /*  height:100%;
   overflow: auto; */
 }
@@ -15684,8 +15672,8 @@ body.style-options-for-admonition-plugin .admonition-col2 p > img{
 body.style-options-for-admonition-plugin .admonition-col2-parent .admonition-col2 .admonition > .admonition-title.no-title + .admonition-content-holder {
   margin-top: 0;
 }
-/****col3 三栏*****/
 
+/****col3 三栏*****/
 body.style-options-for-admonition-plugin .admonition-col3 {
   box-shadow: none!important;
 }
@@ -15753,8 +15741,6 @@ body.style-options-for-admonition-plugin .admonition-col3-parent .admonition-col
 }
 
 /****col4 四栏*****/
-
-
 body.style-options-for-admonition-plugin .admonition-col4 {
   box-shadow: none!important;
 }
@@ -15925,7 +15911,6 @@ body.style-options-for-admonition-plugin :is(.admonition-def,.admonition-thm,.ad
   width: fit-content;
 }
 
-
 body.style-options-for-admonition-plugin :is(.admonition-def,.admonition-thm,.admonition-lem,.admonition-cor,.admonition-pro) *.admonition-title-content {
   color: white;
   font-family:  "方正书宋_GBK", var(--font-text);
@@ -16017,8 +16002,6 @@ body.style-options-for-admonition-plugin .admonition-hibox:hover {
 body.style-options-for-admonition-plugin .admonition-hibox .admonition-title {
   display: none;
 }
-
-
 
 
 /* ======Notice================ */
@@ -16195,30 +16178,26 @@ h5.breadcrumbs-matrix-header {
 }
 
 /* ================================== */
-/* ============ code  block enhancer =========== */
+/* ===== code  block enhancer ======= */
 /* ================================== */
-.obsidian-banner-wrapper.code-block-wrap
-{
-position: unset;
+.obsidian-banner-wrapper.code-block-wrap {
+  position: unset;
 }
-.code-block-wrap .code-block-linenum-wrap
-{
+.code-block-wrap .code-block-linenum-wrap {
   top: 0.4em;
   background-color: transparent;
 }
-.code-block-wrap .code-block-lang-name 
-{
+.code-block-wrap .code-block-lang-name {
   top:4px;
   left:2px;
 }
-.code-block-wrap .code-block-lang-name + .code-block-linenum-wrap>.code-block-linenum:first-child::before
-{
-color: transparent;
+.code-block-wrap .code-block-lang-name + .code-block-linenum-wrap>.code-block-linenum:first-child::before {
+  color: transparent;
 }
+
 /* ================================== */
 /* ============ Dataview ============ */
 /* ================================== */
-
 span.dataview.small-text {
   position: relative;
   font-size: 70%;
@@ -16308,7 +16287,7 @@ body:is(.rainbow-lines-reading,.list-vertical-line-one,.list-vertical-line-two,.
 }
 
 /* ================================== */
-/* ============ Dataview Cards ============ */
+/* ======== Dataview Cards ========== */
 /* ================================== */
 
 /*********covercards***********/
@@ -21072,11 +21051,8 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
 .callout {
   background-color:var(--admonition-bg-color);
 }
-/*
-.callout ul > li.task-list-item .task-list-item-checkbox {
-  margin-left: auto;
-}
-*/
+
+
 .callout .callout-content p img {
   display: block;
 }
