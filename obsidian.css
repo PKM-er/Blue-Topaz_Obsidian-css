@@ -2397,8 +2397,8 @@ settings:
     id: icons-style-folder-1
     title: Intro to Basic Image Position
     title.zh: 基本图片位置简介
-    description: You can add 🔸|Left (can also use `left`, `LEFT` or `L` to replace the `Left` before)🔸, 🔸|Right (right/RIGHT/R)🔸 and 🔸|Inline (inline/INLINE/inl)🔸 into a image format to adjust the image position, e.g. ![[*.jpg|L]], ![[*.png|Right|200]] and ![|inl](...*.jpg)
-    description.zh: 在图片格式里添加 🔸|Left (can also use `left`, `LEFT` or `L` to replace the `Left` before)🔸, 🔸|Right (right/RIGHT/R)🔸 and 🔸|Inline (inline/INLINE/inl)🔸 来改变图片位置, e.g. ![[*.jpg|L]], ![[*.png|Right|200]] and ![|inl](...*.jpg)
+    description: You can add 🔸|Left (can also use `left`, `LEFT` or `L` to replace the `Left` before), 🔸|Right (right/RIGHT/R) and 🔸|Inline (inline/INLINE/inl) into a image format to adjust the image position, e.g. ![[*.jpg|L]], ![[*.png|Right|200]] and ![|inl](...*.jpg)
+    description.zh: 在图片格式里添加 🔸|Left (can also use `left`, `LEFT` or `L` to replace the `Left` before), 🔸|Right (right/RIGHT/R) and 🔸|Inline (inline/INLINE/inl) 来改变图片位置, e.g. ![[*.jpg|L]], ![[*.png|Right|200]] and ![|inl](...*.jpg)
     type: heading
     level: 4
     collapsed: true
@@ -2406,8 +2406,8 @@ settings:
     id: icons-style-folder-2
     title: Intro to Image Caption
     title.zh: 图片标题介绍
-    description: You can add 🔸#left|your captions🔸, 🔸#right|your captions🔸, 🔸#center/centre|your captions🔸 and 🔸#inl|your captions🔸 into a image format to adjust the image position with a image caption, e.g. ![[*.jpg#left|Figure 1]], ![[*.png#right|Figure 2|200]], ![[*.jpg#centre|Figure 3]] and ![[*.jpg#inl|Figure 4|100]]
-    description.zh: 在图片格式里添加 🔸#left|your captions🔸, 🔸#right|your captions🔸, 🔸#center/centre|your captions🔸 and 🔸#inl|your captions🔸 来改变图片位置，并添加图片标题, e.g. ![[*.jpg#left|Figure 1]], ![[*.png#right|Figure 2|200]], ![[*.jpg#centre|Figure 3]] and ![[*.jpg#inl|Figure 4|100]]
+    description: You can add 🔸#left|your captions, 🔸#right|your captions, 🔸#center/centre|your captions and 🔸#inl|your captions into a image format to adjust the image position with a image caption, e.g. ![[*.jpg#left|Figure 1]], ![[*.png#right|Figure 2|200]], ![[*.jpg#centre|Figure 3]] and ![[*.jpg#inl|Figure 4|100]]
+    description.zh: 在图片格式里添加 🔸#left|your captions, 🔸#right|your captions, 🔸#center/centre|your captions and 🔸#inl|your captions 来改变图片位置，并添加图片标题, e.g. ![[*.jpg#left|Figure 1]], ![[*.png#right|Figure 2|200]], ![[*.jpg#centre|Figure 3]] and ![[*.jpg#inl|Figure 4|100]]
     type: heading
     level: 4
     collapsed: true
@@ -2415,8 +2415,8 @@ settings:
     id: icons-style-folder-3
     title: Intro to Image Grid
     title.zh: 图片横排介绍
-    description: You can add 🔸+grid🔸 into some images to grid these images in a line, e.g. ![[*.jpg+grid]]                                Or type ❗cssclass：img-grid❗ in YAML to make images arrange in a grid in the preview mode.
-    description.zh: 在图片格式里添加 🔸+grid🔸 使复数的图片排成一行, e.g. ![[*.jpg+grid]] 。或者在YAML种输入 ❗cssclass：img-grid❗
+    description: You can add 🔸+grid into some images to grid these images in a line, e.g. ![[*.jpg+grid]]                                Or type ❗cssclass：img-grid❗ in YAML to make images arrange in a grid in the preview mode.
+    description.zh: 在图片格式里添加 🔸+grid 使复数的图片排成一行, e.g. ![[*.jpg+grid]] 。或者在YAML种输入 ❗cssclass：img-grid❗
     type: heading
     level: 4
     collapsed: true
