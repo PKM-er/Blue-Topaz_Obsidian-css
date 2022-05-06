@@ -12132,7 +12132,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
   margin-right: auto;
 }
 
-body:not(.image-zoom) .view-content img:not([class="emoji"]) {
+.view-content img:not([class="emoji"]) {
   cursor: zoom-in;
   display: block;
   margin-left: auto !important;
@@ -12168,7 +12168,7 @@ body:not(.image-zoom) .markdown-reading-view img:not([class="emoji"]):active,
 
 .markdown-source-view.mod-cm6 img:not([class="emoji"]) {
   display: block;
-  margin: auto;
+  margin: auto !important;
 }
 
 body.hide-vault-name .nav-folder.mod-root>.nav-folder-title {
