@@ -9689,10 +9689,12 @@ body.fancy-hr-number .markdown-rendered {
 }
 
 body.fancy-hr-number .markdown-rendered hr {
+  overflow: initial;
   margin-block-start: 2.5em;
   margin-block-end: 2.5em;
   border: none;
   height: 0;
+  min-height: 0.7em;
   border-bottom: 2px solid;
   border-image-slice: 1;
   border-width: 2px;
@@ -9705,9 +9707,9 @@ body.fancy-hr-number .markdown-rendered hr::after {
   display: inline-block;
   font-family: var(--font-monospace-theme);
   font-weight: bold;
-  position: absolute;
+  position: relative;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -0.2em);
   color: var(--hr-color-numbers-color);  
   background: var(--hr-color-numbers-bg-color);
   border-radius: 50%;
