@@ -9585,10 +9585,12 @@ body.retain-header-color .cm-s-obsidian .cm-header.cm-header-6[class*="cm-strong
 
 /* inspired by Obsidianite */
 body.fancy-hr-icon .markdown-rendered hr {
+  overflow: initial;
   margin-block-start: 2.5em;
   margin-block-end: 2.5em;
   border: none;
   height: 0;
+  min-height: 0.7em;
   border-bottom: 2px solid;
   border-image-slice: 1;
   border-width: 2px;
@@ -9598,10 +9600,10 @@ body.fancy-hr-icon .markdown-rendered hr {
 body.fancy-hr-icon .markdown-rendered hr::after {
   content: var(--fancy-hr-icon);
   display: inline-block;
-  position: absolute;
+  position: relative;
   left: 50%;
   font-size: 1em;
-  transform: translate(-50%, -50%)  rotate(var(--fancy-hr-rotate));
+  transform: translate(-50%, -0.35em)  rotate(var(--fancy-hr-rotate));
   transform-origin: 50% 50%;
   padding: 0.3rem;
   color: var(--theme-color);
@@ -9876,13 +9878,13 @@ body:not(.default-split-style) .workspace>.workspace-split:not(.mod-root) .cm-li
   padding: 0;
 }
 
-body:not(.default-split-style):is(.fancy-hr-icon,.fancy-hr-number) .workspace>.workspace-split:not(.mod-root) .markdown-rendered hr::after {
+/* body:not(.default-split-style):is(.fancy-hr-icon,.fancy-hr-number) .workspace>.workspace-split:not(.mod-root) .markdown-rendered hr::after {
   left: 52%;
 }
 body:not(.default-split-style):is(.fancy-hr-icon,.fancy-hr-number) .workspace>.workspace-split:not(.mod-root) .markdown-source-view.mod-cm6 .hr::after {
   left: 50.5%;
 }
-
+ */
 /* code */
 .cm-s-obsidian .hmd-fold-html-stub, 
 .cm-s-obsidian .hmd-fold-code-stub, 
