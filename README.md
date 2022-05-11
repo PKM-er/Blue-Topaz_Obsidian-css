@@ -48,10 +48,8 @@ Change the color palette
 ![image](https://user-images.githubusercontent.com/72023275/134859577-ca6bf35a-6a6a-45b1-ba0e-5aca7a4c4990.png)
 ![image](https://user-images.githubusercontent.com/72023275/134859584-ec868841-f237-4f8c-bea8-3e57cfecc3eb.png)
 
-# Support me
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/WhyI)
-
-If you think Blue Topaz is helpful, you can buy me a cup of coffee to support me. Thank you!
+# Support us
+If you think Blue Topaz is helpful, you may share and advertise this theme to your friends to support us!
 
 # Acknowledgements
 I appreciate the help and support from @boninall @成雙醬 @Cuman @Klaas @lillian-who @shaggyfeng @Thinkbond, and other cool guys who love Blue Topaz!
