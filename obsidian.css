@@ -3432,8 +3432,8 @@ body.all-dark .print.theme-light,
   --cursor-red: #ff3939;
   --cursor-yellow: #fff955;
   --cursor-green: #7dff7d;
-  --cursor-blue: #567dff;
-  --cursor-violet: #ff78ff;
+  --cursor-blue: #8ac7ff;
+  --cursor-violet: #bf76ff;
 }
 
 .theme-light {
@@ -12596,7 +12596,7 @@ body:not(.default-icons) .outline .tree-item.is-collapsed .collapse-icon::before
 
 /*vertical lines in outline page*/
 .outline .tree-item-children {
-  margin-left: 14px;
+  margin-left: 13px;
   border-left: 2px solid #94949433;
   border-radius: 0;
   transition: all 300ms ease-in-out;
@@ -12643,6 +12643,12 @@ ul.contains-task-list .list-collapse-indicator.collapse-indicator.collapse-icon:
 }
 */
 
+.tree-item-flair {
+  line-height: 18px;
+  padding-top: 3px;
+  height: 23px;
+}
+
 /*tag collapse indicator*/
 .tag-container .tree-item-children {
   margin-left: 10px;
@@ -12650,6 +12656,10 @@ ul.contains-task-list .list-collapse-indicator.collapse-indicator.collapse-icon:
   border-radius: 0 3px 3px 0;
   transition: all 300ms ease-in-out;
 }
+
+.tag-container .tree-item-children > div[style="width: 1px; height: 0.1px; margin-bottom: 0px;"] {
+  height: 0 !important;
+} 
 
 .tag-container .tree-item-self .tree-item-icon svg {
   display: none;
@@ -17100,18 +17110,18 @@ div[data-type='memos_view'].mobile-view .tags-wrapper {
 /* ============ */
 /*image position*/
 /* ============ */
-img[alt$="left"],
-img[alt$="Left"],
-img[alt$="LEFT"],
-img[alt$="L"],
-.markdown-source-view.mod-cm6 img[alt$="left"],
-.markdown-source-view.mod-cm6 img[alt$="Left"],
-.markdown-source-view.mod-cm6 img[alt$="LEFT"],
-.markdown-source-view.mod-cm6 img[alt$="L"],
-.internal-embed.image-embed.is-loaded[alt$="left"] img[alt$="left"],
-.internal-embed.image-embed.is-loaded[alt$="Left"] img[alt$="Left"],
-.internal-embed.image-embed.is-loaded[alt$="LEFT"] img[alt$="LEFT"],
-.internal-embed.image-embed.is-loaded[alt$="L"] img[alt$="L"],
+img[alt$="left"]:not([class*="emoji"]),
+img[alt$="Left"]:not([class*="emoji"]),
+img[alt$="LEFT"]:not([class*="emoji"]),
+img[alt$="L"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="left"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="Left"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="LEFT"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="L"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="left"] img[alt$="left"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="Left"] img[alt$="Left"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="LEFT"] img[alt$="LEFT"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="L"] img[alt$="L"]:not([class*="emoji"]),
 body:not(.image-zoom) .view-content img[alt$="left"]:not([class*="emoji"]),
 body:not(.image-zoom) .view-content img[alt$="Left"]:not([class*="emoji"]),
 body:not(.image-zoom) .view-content img[alt$="LEFT"]:not([class*="emoji"]),
@@ -17119,18 +17129,18 @@ body:not(.image-zoom) .view-content img[alt$="L"]:not([class*="emoji"]) {
   margin-left: 0 !important;
 }
 
-img[alt$="right"],
-img[alt$="Right"],
-img[alt$="RIGHT"],
-img[alt$="R"],
-.markdown-source-view.mod-cm6 img[alt$="right"],
-.markdown-source-view.mod-cm6 img[alt$="Right"],
-.markdown-source-view.mod-cm6 img[alt$="RIGHT"],
-.markdown-source-view.mod-cm6 img[alt$="R"],
-.internal-embed.image-embed.is-loaded[alt$="right"] img[alt$="right"],
-.internal-embed.image-embed.is-loaded[alt$="Right"] img[alt$="Right"],
-.internal-embed.image-embed.is-loaded[alt$="RIGHT"] img[alt$="RIGHT"],
-.internal-embed.image-embed.is-loaded[alt$="R"] img[alt$="R"],
+img[alt$="right"]:not([class*="emoji"]),
+img[alt$="Right"]:not([class*="emoji"]),
+img[alt$="RIGHT"]:not([class*="emoji"]),
+img[alt$="R"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="right"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="Right"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="RIGHT"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="R"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="right"] img[alt$="right"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="Right"] img[alt$="Right"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="RIGHT"] img[alt$="RIGHT"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="R"] img[alt$="R"]:not([class*="emoji"]),
 body:not(.image-zoom) .view-content img[alt$="right"]:not([class*="emoji"]),
 body:not(.image-zoom) .view-content img[alt$="Right"]:not([class*="emoji"]),
 body:not(.image-zoom) .view-content img[alt$="RIGHT"]:not([class*="emoji"]),
@@ -17139,27 +17149,27 @@ body:not(.image-zoom) .view-content img[alt$="R"]:not([class*="emoji"]) {
   display: block;
 }
 
-img[alt$="inline"],
-img[alt$="Inline"],
-img[alt$="INLINE"],
-img[alt$="inl"] {
+img[alt$="inline"]:not([class*="emoji"]),
+img[alt$="Inline"]:not([class*="emoji"]),
+img[alt$="INLINE"]:not([class*="emoji"]),
+img[alt$="inl"]:not([class*="emoji"]) {
   display: inline !important;
   padding: 0.05em 0.05em !important;
   vertical-align: bottom;
 }
 
-img[alt$="inlineL"],
-img[alt$="InlineL"],
-img[alt$="INLINEL"],
-img[alt$="inlL"] {
+img[alt$="inlineL"]:not([class*="emoji"]),
+img[alt$="InlineL"]:not([class*="emoji"]),
+img[alt$="INLINEL"]:not([class*="emoji"]),
+img[alt$="inlL"]:not([class*="emoji"]) {
   float: left;
   padding: 0 0.05em 0.05em 0 !important;
 }
 
-img[alt$="inlineR"],
-img[alt$="InlineR"],
-img[alt$="INLINER"],
-img[alt$="inlR"] {
+img[alt$="inlineR"]:not([class*="emoji"]),
+img[alt$="InlineR"]:not([class*="emoji"]),
+img[alt$="INLINER"]:not([class*="emoji"]),
+img[alt$="inlR"]:not([class*="emoji"]) {
   float: right;
   padding: 0 0 0.05em 0.05em !important;
 }
