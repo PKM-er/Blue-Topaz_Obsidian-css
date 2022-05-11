@@ -10636,7 +10636,7 @@ body.rainbow-ordered-list .HyperMD-list-line-1 .cm-formatting-list {
 body.rainbow-checkbox .HyperMD-list-line-1 .cm-formatting-task {
   color: rgb(var(--accent-1-rgb)) !important;
 }
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-1 .task-list-item-checkbox:checked {
+body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-1 .task-list-item-checkbox[data-task="x"]:checked {
   background-color: rgba(var(--accent-1-rgb),0.7);
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-1 .task-list-item-checkbox {
@@ -10655,7 +10655,7 @@ body.rainbow-ordered-list .HyperMD-list-line-2 .cm-formatting-list {
 body.rainbow-checkbox .HyperMD-list-line-2 .cm-formatting-task {
   color: rgb(var(--accent-2-rgb))!important;
 }
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-2 .task-list-item-checkbox:checked {
+body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-2 .task-list-item-checkbox[data-task="x"]:checked {
   background-color: rgba(var(--accent-2-rgb),0.7);
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-2 .task-list-item-checkbox {
@@ -10674,7 +10674,7 @@ body.rainbow-ordered-list .HyperMD-list-line-3 .cm-formatting-list {
 body.rainbow-checkbox  .HyperMD-list-line-3 .cm-formatting-task {
   color: rgb(var(--accent-3-rgb))!important;
 }
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-3 .task-list-item-checkbox:checked {
+body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-3 .task-list-item-checkbox[data-task="x"]:checked {
   background-color: rgba(var(--accent-3-rgb),0.7);
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-3 .task-list-item-checkbox {
@@ -10693,7 +10693,7 @@ body.rainbow-ordered-list .HyperMD-list-line-4 .cm-formatting-list {
 body.rainbow-checkbox .HyperMD-list-line-4 .cm-formatting-task {
   color: rgb(var(--accent-4-rgb))!important;
 }
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-4 .task-list-item-checkbox:checked {
+body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-4 .task-list-item-checkbox[data-task="x"]:checked {
   background-color: rgba(var(--accent-4-rgb),0.7);
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-4 .task-list-item-checkbox {
@@ -10712,7 +10712,7 @@ body.rainbow-ordered-list .HyperMD-list-line-5 .cm-formatting-list {
 body.rainbow-checkbox .HyperMD-list-line-5 .cm-formatting-task {
   color: rgb(var(--accent-5-rgb))!important;
 }
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-5 .task-list-item-checkbox:checked {
+body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-5 .task-list-item-checkbox[data-task="x"]:checked {
   background-color:  rgba(var(--accent-5-rgb),0.7);
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-5 .task-list-item-checkbox {
@@ -10731,7 +10731,7 @@ body.rainbow-ordered-list .HyperMD-list-line-6 .cm-formatting-list {
 body.rainbow-checkbox .HyperMD-list-line-6 .cm-formatting-task {
   color: rgb(var(--accent-6-rgb))!important;
 }
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-6 .task-list-item-checkbox:checked {
+body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-6 .task-list-item-checkbox[data-task="x"]:checked {
   background-color: rgba(var(--accent-6-rgb),0.7);
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-6 .task-list-item-checkbox {
@@ -10750,7 +10750,7 @@ body.rainbow-ordered-list .HyperMD-list-line-7 .cm-formatting-list {
 body.rainbow-checkbox .HyperMD-list-line-7 .cm-formatting-task {
   color: rgb(var(--accent-7-rgb))!important;
 }
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-7 .task-list-item-checkbox:checked {
+body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-7 .task-list-item-checkbox[data-task="x"]:checked {
   background-color: rgba(var(--accent-7-rgb),0.7);
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-7 .task-list-item-checkbox {
@@ -10769,7 +10769,7 @@ body.rainbow-ordered-list .HyperMD-list-line-8 .cm-formatting-list {
 body.rainbow-checkbox .HyperMD-list-line-8 .cm-formatting-task {
   color: rgb(var(--accent-8-rgb))!important;
 }
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-8 .task-list-item-checkbox:checked {
+body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-8 .task-list-item-checkbox[data-task="x"]:checked {
   background-color: rgba(var(--accent-8-rgb),0.7);
 }
 body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-8 .task-list-item-checkbox {
@@ -10872,31 +10872,29 @@ body.rainbow-lines-reading li ol ol ol ol ol ol ol ol::before {
 }
 
 /*任务有序列表 选择框*/
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li[data-task=" "]  .task-list-item-checkbox:checked{
-  background-color: rgb(var(--accent-1-rgb),0.7);
-  }
+
 body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li[data-task="x"] .task-list-item-checkbox:checked {
     background-color: rgb(var(--accent-1-rgb),0.7);
     }
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li .task-list-item-checkbox:checked {
+body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li[data-task="x"] .task-list-item-checkbox:checked {
   background-color: rgb(var(--accent-2-rgb),0.7)!important;
 }
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li .task-list-item-checkbox:checked {
+body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li[data-task="x"] .task-list-item-checkbox:checked {
   background-color: rgb(var(--accent-3-rgb),0.7)!important;
 }
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li .task-list-item-checkbox:checked {
+body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li[data-task="x"] .task-list-item-checkbox:checked {
   background-color: rgb(var(--accent-4-rgb),0.7)!important;
 }
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li li .task-list-item-checkbox:checked {
+body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li li[data-task="x"] .task-list-item-checkbox:checked {
   background-color: rgb(var(--accent-5-rgb),0.7)!important;
 }
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li li li .task-list-item-checkbox:checked {
+body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li li li[data-task="x"] .task-list-item-checkbox:checked {
   background-color: rgb(var(--accent-6-rgb),0.7)!important;
 }
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li li li li .task-list-item-checkbox:checked {
+body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li li li li[data-task="x"] .task-list-item-checkbox:checked {
   background-color: rgb(var(--accent-7-rgb),0.7)!important;
 }
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li li li li li .task-list-item-checkbox:checked {
+body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li li li li li[data-task="x"] .task-list-item-checkbox:checked {
   background-color: rgb(var(--accent-8-rgb),0.7)!important;
 }
 
@@ -15605,7 +15603,7 @@ line-height:1em;
   background-color: transparent;
   color: var(--text-muted);
 }
-body.style-options-for-admonition-plugin  :is(.admonition-col2, .admonition-col3, .admonition-col4, .admonition-flex) .admonition-content  blockquote::before {
+body.style-options-for-admonition-plugin  :is(.admonition-col2, .admonition-col3, .admonition-col4, .admonition-flex) .admonition-content  blockquote p::before {
   display: none;
 }
 body.style-options-for-admonition-plugin  :is(.admonition-col2, .admonition-col3, .admonition-col4, .admonition-flex) .admonition-content  blockquote p {
