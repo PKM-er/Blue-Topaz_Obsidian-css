@@ -1913,6 +1913,23 @@ settings:
     type: heading
     level: 3
     collapsed: true
+  - 
+    id: file-bg-shape-option
+    title: File Background Shape
+    title.zh: 文件背景形状
+    type: class-select
+    allowEmpty: false
+    default: file-shape-default
+    options:
+      -
+        label: Rectangle
+        value: file-shape-default
+      - 
+        label: Rounded Rectangle
+        value: file-bg-rounded-rectangle
+      - 
+        label: Pill
+        value: file-bg-pill
   -
     id: file-name-animation
     title: File Name Scrolling When Hovering
@@ -11612,6 +11629,20 @@ body.file-name-animation .nav-folder-title-content:not(.is-being-renamed):hover 
   }
 }
 
+body.file-bg-rounded-rectangle .nav-file-title.is-active,
+body.file-bg-rounded-rectangle .nav-folder-title.is-active, 
+body:not(.is-grabbing).file-bg-rounded-rectangle .nav-file-title:hover, 
+body:not(.is-grabbing).file-bg-rounded-rectangle .nav-folder-title:hover {
+  border-radius: var(--radius-m);
+}
+
+body.file-bg-pill .nav-file-title.is-active,
+body.file-bg-pill .nav-folder-title.is-active, 
+body:not(.is-grabbing).file-bg-pill .nav-file-title:hover, 
+body:not(.is-grabbing).file-bg-pill .nav-folder-title:hover {
+  border-radius: 12px;
+}
+
 body.light-background-color-files .nav-file-title.is-active {
   color: var(--accent-strong);
   background-color: var(--theme-color-translucent-1);
@@ -12762,7 +12793,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 
 /*change collapse icon position in left side*/
 .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
-  margin-top: 0px;
+  margin-top: 0;
   padding: 7px 6px 2px 6px;
 }
 
@@ -13088,6 +13119,10 @@ body.hide-left-ribbon-to-bottom .workspace-ribbon.mod-left .side-dock-ribbon-act
 body.hide-left-ribbon-to-bottom .workspace-ribbon.mod-left:hover {
   transition: all 500ms ease-in;
   opacity: 1;
+}
+
+body.hide-left-ribbon-to-bottom .nav-files-container {
+  margin-left: 2px;
 }
 
 body:not(.right-ribbon-hide-to-right):not(.fix-right-ribbon) .workspace-ribbon.mod-right {
