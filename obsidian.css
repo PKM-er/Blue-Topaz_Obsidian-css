@@ -3290,8 +3290,8 @@ body.all-dark .print.theme-light,
   --mermaid-seq-dia-color: #1371be;
 
   /*table*/
-  --table-background-color: #3e3e3e32;
-  --table-background-color-odd: #0000001c;
+  --table-background-color: #2f2f2f32;
+  --table-background-color-odd: #00000033;
   --table-border-color: #4a4a4a;
   --table-thead-background-color: #2e507863;
   --table-hover-raw-color: #08569a21;
@@ -3595,8 +3595,8 @@ body.all-dark .print.theme-light,
   --mermaid-seq-dia-color: #76c8ff;
 
   /*table*/
-  --table-background-color: #f1f1f1bb;
-  --table-background-color-odd: #ffffffaf;
+  --table-background-color: #f1f1f176;
+  --table-background-color-odd: #ffffff70;
   --table-border-color: #7d7d7d;
   --table-thead-background-color: #c2d3e1c7;
   --table-hover-raw-color: #85bfee2f;
@@ -3867,8 +3867,7 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --mermaid-seq-dia-color: #76c8ff;
 
   /*table*/
-  --table-background-color: #ebebebbb;
-  --table-background-color-odd: #ffffffaf;
+
   --table-border-color: #7d7d7d;
   --table-thead-background-color: #b3ccb7c7;
   --table-hover-raw-color: #85bfee2f;
@@ -4034,8 +4033,6 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --mermaid-seq-dia-color: #1371be;
 
   /*table*/
-  --table-background-color: #8a8a8a32;
-  --table-background-color-odd: #0000001c;
 
   --table-thead-background-color: #557f5c63;
   --table-hover-raw-color: #08569a21;
@@ -4183,8 +4180,6 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --mermaid-active-task-color: #187ef1;
   --mermaid-seq-dia-color: #1371be;
 
-  --table-background-color: #8a8a8a32;
-  --table-background-color-odd: #0000001c;
   --table-border-color: #878787;
   --table-thead-background-color: #b3b3b363;
   --table-hover-raw-color: #4040401c;
@@ -4327,8 +4322,7 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --mermaid-seq-dia-color: #76c8ff;
 
   /*table*/
-  --table-background-color: #ebebebbb;
-  --table-background-color-odd: #ffffffaf;
+
   --table-border-color: #7d7d7d;
   --table-thead-background-color: #bdbdbdc7;
   --table-hover-raw-color: #f0f0f063;
@@ -4630,8 +4624,7 @@ body.color-scheme-options-pink-topaz.theme-light {
   --mermaid-seq-dia-color: #76c8ff;
 
   /*table*/
-  --table-background-color: #ebebebbb;
-  --table-background-color-odd: #ffffffaf;
+
   --table-border-color: #7d7d7d;
   --table-thead-background-color: #f4d6e6c7;
   --table-hover-raw-color: #fad1e92f;
@@ -4796,8 +4789,6 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --mermaid-seq-dia-color: #1371be;
 
   /*table*/
-  --table-background-color: #8a8a8a32;
-  --table-background-color-odd: #0000001c;
 
   --table-thead-background-color: #a2718eab;
   --table-hover-raw-color: #a76c8f45;
@@ -13085,6 +13076,20 @@ body.hide-left-ribbon .workspace-ribbon.side-dock-ribbon.mod-left:not(:hover) {
   margin-left: -24px;
 }
 
+body.hide-left-ribbon-to-bottom .workspace-ribbon.mod-left .side-dock-actions,
+body.hide-left-ribbon-to-bottom .workspace-ribbon.mod-left .side-dock-settings {
+  display: flex;
+}
+
+body.hide-left-ribbon-to-bottom .workspace-ribbon.mod-left .side-dock-ribbon-action {
+  padding: 5px 5px 0 12px;
+}
+
+body.hide-left-ribbon-to-bottom .workspace-ribbon.mod-left:hover {
+  transition: all 500ms ease-in;
+  opacity: 1;
+}
+
 body:not(.right-ribbon-hide-to-right):not(.fix-right-ribbon) .workspace-ribbon.mod-right {
   margin-right: -22px;
 }
@@ -14447,9 +14452,6 @@ button.kanban-plugin__new-item-button:hover {
   padding: 4px !important;
 }
 
-.kanban-plugin__markdown-preview-view ol.contains-task-list .contains-task-list, .kanban-plugin__markdown-preview-view ul.contains-task-list .contains-task-list, .kanban-plugin__markdown-preview-view ul, .kanban-plugin__markdown-preview-view ol {
-  /* padding-inline-start: 19px; */
-}
 .kanban-plugin__markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item),
 .kanban-plugin__markdown-preview-view:not(.kanban) ul>li:not(.task-list-item) {
   margin-left: unset;
@@ -19940,7 +19942,6 @@ body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-previ
 /*speech bubble-1*/
 body.blockquote-style-speech-bubble-one :is(.markdown-preview-view,.markdown-rendered) blockquote {
   position: relative;
-  /* for pseudos */
   color: var(--theme-color);
   font-size: 1rem;
   font-weight: normal;
@@ -20414,7 +20415,7 @@ cssclass: matrix
 }
 :is(.markdown-preview-view,.markdown-rendered).matrix table tr th,
 :is(.markdown-preview-view,.markdown-rendered).matrix table tr td {
-  padding-right:0px;
+  padding-right: 0;
   border: 0px;
   width: 50%;
   display: flex;
@@ -20631,7 +20632,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
 /* ========fullwidth  noyaml noscroll================ */
 /*主页预览宽度*/
 :is(.markdown-preview-view,.markdown-rendered).fullwidth.is-readable-line-width .markdown-preview-sizer, .markdown-source-view.is-readable-line-width.fullwidth .CodeMirror, .is-readable-line-width.fullwidth :is(.markdown-preview-section,.markdown-rendered), .is-readable-line-width.fullwidth :is(.markdown-preview-section,.markdown-rendered) > div, :is(.markdown-preview-view,.markdown-rendered).is-readable-line-width.fullwidth :is(.markdown-preview-section,.markdown-rendered) {
-  width:100% !important;
+  width: 100% !important;
   max-width: 100%;
   /* margin: 0 auto; */
 }
@@ -20756,7 +20757,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::after {
   position: absolute;
   top: 4px;
-  left: 0px;
+  left: 0;
   width: 20px;
   height: 23px;
   content: "";
@@ -20883,10 +20884,10 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
 }
 
 .callout.callout[data-callout*=cards] table.dataview tbody {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(var(--cards-width),1fr));
-  grid-column-gap:1.2rem;
-  grid-row-gap:0.75rem;    
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(var(--cards-width),1fr));
+  grid-column-gap: 1.2rem;
+  grid-row-gap: 0.75rem;    
   justify-content: space-between;
   margin-top: 40px;
   margin-left: -25px;
@@ -20895,22 +20896,22 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
 
 @media (max-width:1120px) {
   .callout.callout[data-callout*=cards] table.dataview tbody {
-      margin-left: -40px;
-      padding: 0 40px
+    margin-left: -40px;
+    padding: 0 40px
   }
 }
 
 @media (max-width:960px) {
   .callout.callout[data-callout*=cards] table.dataview tbody {
-      margin-left: -30px;
-      padding: 0 30px
+    margin-left: -30px;
+    padding: 0 30px
   }
 }
 
 @media (max-width:460px) {
   .callout.callout[data-callout*=cards] table.dataview tbody {
-      padding: 0px;
-      margin-left: -20px;
+    padding: 0px;
+    margin-left: -20px;
   }
 }
 
