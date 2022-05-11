@@ -15575,13 +15575,6 @@ body.style-options-for-admonition-plugin .admonition-kanban ul ul li.task-list-i
 
 /*blank ad分栏
 修改自 https://forum-zh.obsidian.md/t/topic/2081 */
-body.style-options-for-admonition-plugin .callout-content.admonition-content>* {
-  /* margin: 0px; */
-}
-body.style-options-for-admonition-plugin .is-live-preview .callout-content.admonition-content>p:not(:first-child):not(:last-child)
-{
-  margin-top: -1.5em;
-}
 
 
 body.style-options-for-admonition-plugin .is-live-preview .admonition-col2  .callout-content.admonition-content>div:nth-child(2), 
@@ -15596,11 +15589,12 @@ body.style-options-for-admonition-plugin .admonition-col3 .admonition-title-icon
 body.style-options-for-admonition-plugin .admonition-col4 .admonition-title-icon {
   display: none;
 }
-
-body.style-options-for-admonition-plugin .admonition-col2 .admonition-content  blockquote,
-body.style-options-for-admonition-plugin .admonition-col3  .admonition-content  blockquote,
-body.style-options-for-admonition-plugin .admonition-col4 .admonition-content  blockquote,
-body.style-options-for-admonition-plugin .admonition-flex  .admonition-content  blockquote {
+body.style-options-for-admonition-plugin .is-live-preview  :is(.admonition-col2, .admonition-col3, .admonition-col4, .admonition-flex) .admonition-content  blockquote {
+padding:0;
+margin:0;
+line-height:1em;
+  }
+  body.style-options-for-admonition-plugin  :is(.admonition-col2, .admonition-col3, .admonition-col4, .admonition-flex) .admonition-content  blockquote {
   flex: 100%;
   border-left: none;
   padding-left: 0;
@@ -15611,16 +15605,10 @@ body.style-options-for-admonition-plugin .admonition-flex  .admonition-content  
   background-color: transparent;
   color: var(--text-muted);
 }
-body.style-options-for-admonition-plugin .admonition-col2 .admonition-content  blockquote p::before,
-body.style-options-for-admonition-plugin .admonition-col3 .admonition-content  blockquote p::before,
-body.style-options-for-admonition-plugin .admonition-col4 .admonition-content  blockquote p::before,
-body.style-options-for-admonition-plugin .admonition-flex .admonition-content  blockquote p::before {
+body.style-options-for-admonition-plugin  :is(.admonition-col2, .admonition-col3, .admonition-col4, .admonition-flex) .admonition-content  blockquote::before {
   display: none;
 }
-body.style-options-for-admonition-plugin .admonition-col2 .admonition-content  blockquote p,
-body.style-options-for-admonition-plugin .admonition-col3 .admonition-content  blockquote p,
-body.style-options-for-admonition-plugin .admonition-col4 .admonition-content  blockquote p,
-body.style-options-for-admonition-plugin .admonition-flex .admonition-content  blockquote p {
+body.style-options-for-admonition-plugin  :is(.admonition-col2, .admonition-col3, .admonition-col4, .admonition-flex) .admonition-content  blockquote p {
   margin:0;
   overflow-wrap: anywhere;
 }
