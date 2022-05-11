@@ -15743,7 +15743,6 @@ body.style-options-for-admonition-plugin .admonition-col2 p {
 }
 body.style-options-for-admonition-plugin .admonition-col2 p > img{
   display: block;
-  width: 100%;
   height: auto;
 }
 
@@ -15810,7 +15809,6 @@ body.style-options-for-admonition-plugin .admonition-col3 p{
 }
 body.style-options-for-admonition-plugin .admonition-col3 p>img{
   display: block;
-  width: 100%;
   height: auto;
 }
 
@@ -15874,7 +15872,6 @@ body.style-options-for-admonition-plugin .admonition-col4 p {
 }
 body.style-options-for-admonition-plugin .admonition-col4 p>img{
   display: block;
-  width: 100%;
   height: auto;
   -webkit-transition: -webkit-transform .3s ease;
   -moz-transition: -moz-transform .3s ease;
