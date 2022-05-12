@@ -2335,8 +2335,8 @@ settings:
     collapsed: true
   -
     id: cursor-color
-    title: Cursor color
-    title.zh: 光标颜色
+    title: Cursor color (for Obsidian v0.14.9 and above)
+    title.zh: 光标颜色 (适合软件v0.14.9及以上版本)
     type: variable-themed-color
     opacity: true
     format: hex
@@ -2344,10 +2344,61 @@ settings:
     default-dark: '#'
   -
     id: rainbow-cursor
-    title: Toggle Rainbow Cursor
-    title.zh: 切换彩虹光标
+    title: Toggle Rainbow Cursor (for Obsidian v0.14.9 and above)
+    title.zh: 切换彩虹光标 (适合软件v0.14.9及以上版本)
     type: class-toggle
     default: false
+  -
+    id: cursor-color-temp
+    title: Cursor color (for Obsidian v0.14.6)
+    title.zh: 光标颜色 (适合软件v0.14.6版本)
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
+    id: fancy-cursor
+    title: Toggle fancy cursor (for Obsidian v0.14.6)
+    title.zh: 切换装饰性光标 (适合软件v0.14.6版本)
+    type: class-toggle
+    default: false
+  -
+    id: fancy-cursor-color-1
+    title: Fancy Cursor Color 1
+    title.zh: 装饰性光标颜色 1
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
+    id: fancy-cursor-color-2
+    title: Fancy Cursor Color 2
+    title.zh: 装饰性光标颜色 2
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
+    id: fancy-cursor-width
+    title: Cursor Width
+    title.zh: 装饰性光标宽度
+    type: variable-text
+    default: 2px
+  -
+    id: fancy-cursor-radius
+    title: Cursor Radius
+    title.zh: 装饰性光标圆角
+    type: variable-text
+    default: 3px
+  -
+    id: fancy-cursor-transition
+    title: Cursor Transition Time
+    title.zh: 光标延迟时间
+    type: variable-text
+    default: 200ms
   -
     id: checkbox-style-folder
     title: 2.3.13 Checkbox
@@ -3115,6 +3166,13 @@ body {
   --text-highlight-bg-a-light: 0.847;
 
   --cursor-color: var(var(--text-normal));
+
+  --fancy-cursor-width: 2px;
+  --cursor-color-temp: var(var(--text-normal));
+  --fancy-cursor-color-1: var(--theme-color);
+  --fancy-cursor-color-2: var(--theme-color);
+  --fancy-cursor-radius: 3px;
+  --fancy-cursor-transition: 200ms;
 
   --print-strong-color: var(--accent-strong);
   --print-em-color: var(--accent-em);
@@ -18133,7 +18191,12 @@ body.dialogue-style-chat .dialogue-plugin-message-title {
 /* just for fun */
 /* ============ */
 /*cursor*/
-/*
+.CodeMirror-cursor,
+.cm-s-obsidian .cm-cursor,
+.cm-s-obsidian .cm-dropCursor {
+  border-left-color: var(--cursor-color-temp);
+}
+
 body.fancy-cursor .CodeMirror-cursor,
 body.fancy-cursor .cm-cursorLayer .cm-cursor {
   width: var(--fancy-cursor-width);
@@ -18143,7 +18206,7 @@ body.fancy-cursor .cm-cursorLayer .cm-cursor {
   transform: scale(1.1);
   background: linear-gradient(to bottom left, var(--fancy-cursor-color-1) 0%, var(--fancy-cursor-color-2) 100%);
 }
-*/
+
 body.rainbow-cursor .markdown-source-view.mod-cm6 .cm-content {
   animation: 5s infinite rainbow-cursor;
 }
@@ -21750,7 +21813,6 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 .callout.callout[data-callout="timeline"] table {
   font-size:13px;
 }
-
 
 /******callout icon*****/
 .callout.callout:is([data-callout-metadata^='icon'],
