@@ -2345,7 +2345,7 @@ settings:
   -
     id: rainbow-cursor
     title: Toggle Rainbow Cursor
-    title.zh: 切换装饰性光标
+    title.zh: 切换彩虹光标
     type: class-toggle
     default: false
   -
