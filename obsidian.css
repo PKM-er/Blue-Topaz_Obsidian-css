@@ -20025,7 +20025,6 @@ body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-previ
 body.blockquote-style-speech-bubble-one :is(.markdown-preview-view,.markdown-rendered) blockquote {
   position: relative;
   color: var(--theme-color);
-  font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
   margin-top: 2em;
@@ -20051,8 +20050,8 @@ body.blockquote-style-speech-bubble-one :is(.markdown-preview-view,.markdown-ren
   border-radius: 35px 0 0 0;
   width: 1.75rem;
   height: 3.45rem;
-  bottom: -58.5px;
-  left: 25px;
+  bottom: -3.65rem;
+  left: 1.8rem;
   border-bottom: none;
   border-left: none;
   border-right: none;
@@ -20074,8 +20073,8 @@ body.blockquote-style-speech-bubble-one :is(.markdown-preview-view,.markdown-ren
 body.blockquote-style-speech-bubble-two :is(.markdown-preview-view,.markdown-rendered) blockquote {
   position: relative;
   padding: 10px;
-  margin-top: 1.5em;
-  margin-bottom: 2em;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
   border: 4px solid var(--theme-color);
   text-align: center;
   background: var(--background-primary-bg-4-bt);
