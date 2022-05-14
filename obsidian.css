@@ -3235,7 +3235,7 @@ body.all-dark .print.theme-light,
   --text-muted: #8a8a8a;
   --text-faint: #797979;
   --text-folder-file: #b3b3b3;
-  --accent-strong: #f7f7f7;
+  --accent-strong: #e7e7e7;
   --accent-em: #a4ca8e;
   --text-error: #e16d76;
   --text-error-hover: #c9626a;
@@ -3839,7 +3839,6 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --text-highlight-2: #000000;
   --text-faint: #7f7f7f;
   --text-folder-file: #272727;
-  --accent-strong: #000000;
   --accent-em: #620ac6;
   --text-error: #e75545;
   --text-error-hover: #f86959;
@@ -4596,7 +4595,7 @@ body.color-scheme-options-pink-topaz.theme-light {
   --text-highlight-2: #000000;
   --text-faint: #7f7f7f;
   --text-folder-file: #272727;
-  --accent-strong: #000000;
+
   --accent-em: #000000;
   --text-error: #e75545;
   --text-error-hover: #f86959;
@@ -4764,7 +4763,6 @@ body.color-scheme-options-pink-topaz.all-dark .print.theme-light,
 body.color-scheme-options-pink-topaz.theme-dark {
   --text-accent: #c874a5;
   --text-accent-hover: #bf5a95;
-  --accent-strong: #f7f7f7;
   --accent-em: #d9d4a6;
 
   --text-on-accent: #dcddde;
@@ -4963,7 +4961,7 @@ body.color-scheme-options-topaz-nord.theme-dark {
   --text-accent-hover: var(--nord9);
 
   --text-folder-file: var(--nord4);
-  --accent-strong: #f7f7f7;
+
   --accent-em: var(--nord14);
 
   --text-highlight-bg: var(--nord13-1);
@@ -5710,7 +5708,7 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --text-highlight-2: #000000;
   --text-faint: #7f7f7f;
   --text-folder-file: #272727;
-  --accent-strong: #000000;
+
   --accent-em: #099d4e;
   --text-error: #e75545;
   --text-error-hover: #f86959;
@@ -6136,7 +6134,7 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --text-highlight-2: #000000;
   --text-faint: #7f7f7f;
   --text-folder-file: #272727;
-  --accent-strong: #000000;
+
   --accent-em: #099d4e;
   --text-error: #e75545;
   --text-error-hover: #f86959;
@@ -6336,7 +6334,7 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
   --text-muted: #8a8a8a;/*muted 文字颜色*/
   --text-faint: #797979;/*faint 文字颜色*/
   --text-folder-file: #b3b3b3;/*文件夹、文件 文字颜色*/
-  --accent-strong: #f7f7f7;/*加粗 文字颜色*/
+
   --accent-em: #a4ca8e;/*斜体 文字颜色*/
 
   --text-selection: #47a5914d;/*鼠标选择 文字背景颜色*/
@@ -7192,7 +7190,7 @@ body.color-scheme-options-lilac.theme-light {
   --text-highlight-2: #000000;
   --text-faint: #a23ac2;
   --text-folder-file: #272727;
-  --accent-strong: #000000;
+
   --accent-em: #620ac6;
   --text-error: #e75545;
   --text-error-hover: #f86959;
@@ -7434,7 +7432,7 @@ body.color-scheme-options-lilac.theme-dark {
   --text-muted: #c46ec4;  
   --text-faint: #b932e2;
   --text-folder-file: #b3b3b3;
-  --accent-strong: #f7f7f7;
+
   --accent-em: #ca91d8;
   --text-error: #e16d76;
   --text-error-hover: #c9626a;
@@ -9881,6 +9879,7 @@ body.fancy-hr-number .markdown-source-view.mod-cm6 .hr::after {
 :is(.markdown-preview-view,.markdown-rendered) blockquote {
   padding: 0.5em 0.5em 0.5em 0.6em;
   border-right-width: 0;
+  border-left: solid;
   border-top-width: 0;
   border-bottom-width: 0;
   border-left-width: 7px;
@@ -14494,6 +14493,11 @@ pre.frontmatter.language-yaml::before {
 
 .kanban-plugin .task-list-item-checkbox {
   margin: 0px 7px 0px 0;
+}
+
+.kanban-plugin__markdown-preview-view blockquote {
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 .kanban-plugin__lane-header-wrapper {
@@ -19775,7 +19779,7 @@ body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6.is-live-previ
 }
 
 /*speech bubble-1*/
-body.blockquote-style-speech-bubble-one :is(.markdown-preview-view,.markdown-rendered) blockquote {
+body.blockquote-style-speech-bubble-one :is(.markdown-preview-view,.markdown-rendered):not(.kanban-plugin__markdown-preview-view) blockquote {
   position: relative;
   color: var(--theme-color);
   font-weight: normal;
@@ -19788,15 +19792,15 @@ body.blockquote-style-speech-bubble-one :is(.markdown-preview-view,.markdown-ren
   background: var(--background-primary-bg-4-bt) !important;
 }
 
-body.blockquote-style-speech-bubble-one .theme-dark :is(.markdown-preview-view,.markdown-rendered) blockquote {
+body.blockquote-style-speech-bubble-one .theme-dark :is(.markdown-preview-view,.markdown-rendered):not(.kanban-plugin__markdown-preview-view) blockquote {
   background-color: var(--background-primary-bg-4-bt) !important;
 }
 
-body.blockquote-style-speech-bubble-one :is(.markdown-preview-view,.markdown-rendered) blockquote p {
+body.blockquote-style-speech-bubble-one :is(.markdown-preview-view,.markdown-rendered):not(.kanban-plugin__markdown-preview-view) blockquote p {
   color: var(--text-normal);
 }
 
-body.blockquote-style-speech-bubble-one :is(.markdown-preview-view,.markdown-rendered) blockquote:after {
+body.blockquote-style-speech-bubble-one :is(.markdown-preview-view,.markdown-rendered):not(.kanban-plugin__markdown-preview-view) blockquote:after {
   content: '';
   position: absolute;
   border: 2.5px solid var(--theme-color);
@@ -19811,7 +19815,7 @@ body.blockquote-style-speech-bubble-one :is(.markdown-preview-view,.markdown-ren
   z-index: 3;
 }
 
-body.blockquote-style-speech-bubble-one :is(.markdown-preview-view,.markdown-rendered) blockquote:before {
+body.blockquote-style-speech-bubble-one :is(.markdown-preview-view,.markdown-rendered):not(.kanban-plugin__markdown-preview-view) blockquote:before {
   content: '';
   position: absolute;
   width: 25px;
@@ -19823,7 +19827,7 @@ body.blockquote-style-speech-bubble-one :is(.markdown-preview-view,.markdown-ren
 
 /*speech bubble-2*/
 /*adapted from https://codepen.io/mchernin34/pen/ojXvLq*/
-body.blockquote-style-speech-bubble-two :is(.markdown-preview-view,.markdown-rendered) blockquote {
+body.blockquote-style-speech-bubble-two :is(.markdown-preview-view,.markdown-rendered):not(.kanban-plugin__markdown-preview-view) blockquote {
   position: relative;
   padding: 10px;
   margin-top: 1.5rem;
@@ -19837,21 +19841,21 @@ body.blockquote-style-speech-bubble-two :is(.markdown-preview-view,.markdown-ren
   font-size: 1.2em;
 }
 
-body.blockquote-style-speech-bubble-two .theme-dark :is(.markdown-preview-view,.markdown-rendered) blockquote {
+body.blockquote-style-speech-bubble-two .theme-dark :is(.markdown-preview-view,.markdown-rendered):not(.kanban-plugin__markdown-preview-view) blockquote {
   background-color: var(--background-primary-bg-4-bt) !important;
   border: 4px solid var(--theme-color);
 }
 
-body.blockquote-style-speech-bubble-two.theme-dark :is(.markdown-preview-view,.markdown-rendered) blockquote:before,
-body.blockquote-style-speech-bubble-two.theme-dark :is(.markdown-preview-view,.markdown-rendered) blockquote:after {
+body.blockquote-style-speech-bubble-two.theme-dark :is(.markdown-preview-view,.markdown-rendered):not(.kanban-plugin__markdown-preview-view) blockquote:before,
+body.blockquote-style-speech-bubble-two.theme-dark :is(.markdown-preview-view,.markdown-rendered):not(.kanban-plugin__markdown-preview-view) blockquote:after {
   border-color: var(--theme-color);
 }
 
-body.blockquote-style-speech-bubble-two.theme-dark :is(.markdown-preview-view,.markdown-rendered) blockquote> :first-child:before {
+body.blockquote-style-speech-bubble-two.theme-dark :is(.markdown-preview-view,.markdown-rendered):not(.kanban-plugin__markdown-preview-view) blockquote> :first-child:before {
   background: var(--theme-color);
 }
 
-body.blockquote-style-speech-bubble-two :is(.markdown-preview-view,.markdown-rendered) blockquote:before {
+body.blockquote-style-speech-bubble-two :is(.markdown-preview-view,.markdown-rendered):not(.kanban-plugin__markdown-preview-view) blockquote:before {
   content: '';
   position: absolute;
   z-index: 10;
@@ -19869,7 +19873,7 @@ body.blockquote-style-speech-bubble-two :is(.markdown-preview-view,.markdown-ren
   display: block;
 }
 
-body.blockquote-style-speech-bubble-two :is(.markdown-preview-view,.markdown-rendered) blockquote:after {
+body.blockquote-style-speech-bubble-two :is(.markdown-preview-view,.markdown-rendered):not(.kanban-plugin__markdown-preview-view) blockquote:after {
   content: '';
   position: absolute;
   z-index: 10;
@@ -19888,7 +19892,7 @@ body.blockquote-style-speech-bubble-two :is(.markdown-preview-view,.markdown-ren
 }
 
 /* creates a small circle to produce a rounded point where the two curves meet */
-body.blockquote-style-speech-bubble-two :is(.markdown-preview-view,.markdown-rendered) blockquote> :first-child:before {
+body.blockquote-style-speech-bubble-two :is(.markdown-preview-view,.markdown-rendered):not(.kanban-plugin__markdown-preview-view) blockquote> :first-child:before {
   content: '';
   position: absolute;
   bottom: -35px;
@@ -19902,7 +19906,7 @@ body.blockquote-style-speech-bubble-two :is(.markdown-preview-view,.markdown-ren
 }
 
 /* creates a white rectangle to cover part of the oval border*/
-body.blockquote-style-speech-bubble-two :is(.markdown-preview-view,.markdown-rendered) blockquote> :first-child:after {
+body.blockquote-style-speech-bubble-two :is(.markdown-preview-view,.markdown-rendered):not(.kanban-plugin__markdown-preview-view) blockquote> :first-child:after {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -19914,22 +19918,16 @@ body.blockquote-style-speech-bubble-two :is(.markdown-preview-view,.markdown-ren
 
 /*blockquote-style-outline*/
 body.blockquote-style-outline :is(.markdown-preview-view,.markdown-rendered) blockquote {
-  border: 3px solid;
-  border-color: var(--theme-color-translucent);
+  border: 3px solid var(--theme-color-translucent);
   background-color: transparent;
   border-radius: var(--radius-m);
-  margin-inline-start: 1.2em;
-  margin-inline-end: 1.2em;
 }
 
 /*blockquote-style-border-left*/
 body.blockquote-style-border-left :is(.markdown-preview-view,.markdown-rendered) blockquote {
-  border-left: 3px solid;
-  border-color: var(--theme-color-translucent);
+  border-left: 3px solid var(--theme-color-translucent);
   background-color: transparent;
   border-radius: 0;
-  margin-inline-start: 1.2em;
-  margin-inline-end: 1.2em;
 }
 
 /*==========*/
