@@ -2164,7 +2164,7 @@ settings:
     level: 3
     collapsed: true
   -
-    id: table-style-options
+    id: table-format-options
     title: Table Format
     title.zh: 表格格式
     type: class-select
@@ -2187,6 +2187,14 @@ settings:
     id: show-border-table
     title: Show Borders
     title.zh: 显示表格框线
+    type: class-toggle
+    default: false
+  -
+    id: full-width-table
+    title: Full-width table display
+    title.zh: md表格全宽显示
+    description: for Reading View, require Contextual Typography plugin 
+    description.zh: 阅读模式下，实现效果需要安装Contextual Typography插件
     type: class-toggle
     default: false
   -
@@ -2492,7 +2500,7 @@ settings:
     collapsed: true
   -
     id: style-options-for-admonition-plugin-header
-    title: 3.1 Admonition Style
+    title: 3.1 Admonition&Callout Style
     type: heading
     level: 2
     collapsed: true
@@ -2506,11 +2514,18 @@ settings:
     default-light: '#ffffffa6'
     default-dark: '#1111118f'
   -
+    id: full-width-callout
+    title: Full-width callout display
+    title.zh: callout全宽显示
+    description.zh: 不收缩减栏宽影响，全宽显示callout块
+    type: class-toggle
+    default: false
+  -
     id: style-options-for-admonition-plugin
     title: Admonition special style support
     title.zh: 是否开启Admonition特别样式支持
     type: class-toggle
-    default: false
+    default: true
     description : 目前支持ad类型：blank 全透明框🔸def definition🔸thm theorem🔸lem lemma🔸cor corollary🔸pro proposition 🔸hibox  自动隐藏框🔸col2 col3 col4内容分多栏🔸kanban 伪看板🔸table 表格单行全部显示❗使用方法❗下面以thm类型为例，在admonition插件的设置页面中，类型填 thm，标题填 定理，图标选择hand-point-right，颜色自己选比如浅绿色，添加成功后，在正文中使用代码块```ad-thm 即可激活。其他类型以此类推。  
   -
     id: style-options-for-calendar-plugin-header
@@ -2668,6 +2683,14 @@ settings:
     type: class-toggle
     default: false
   -
+    id: full-width-dvtable
+    title: Full-width dvtable display
+    title.zh: dataview表格全宽显示
+    description: for Reading View, require Contextual Typography plugin 
+    description.zh: 阅读模式下，实现效果需要安装Contextual Typography插件
+    type: class-toggle
+    default: false
+  -
     id: style-options-for-dialogue-plugin-heading
     title: 3.7 Dialogue & Chatview
     type: heading
@@ -2763,6 +2786,19 @@ settings:
       - 
         label: Magenta
         value: magenta-dark
+  -
+    id: style-options-for-backlinks-panel
+    title: 3.10 backlinks panel
+    title.zh: 3.10 反链面板
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: full-width-backlinks
+    title: Full-width backlinks panel display
+    title.zh: 笔记中的反链面板全宽度显示
+    type: class-toggle
+    default: false
   -
     id: build-in-style-folder
     title: 4. Built-in Style Intro
@@ -2919,6 +2955,15 @@ settings:
     collapsed: true
     description:  ❗cssclass：matrix❗ Usage https://forum.obsidian.md/t/theme-spectrum-version-1-0-0-and-resise-graphs-controls/12688/34 (Adapted from Spectrum theme by @Wiktoria Mielcarek)
     description.zh:  ❗cssclass：matrix❗ 实现N*2表格四象限分布。表格内容使用![[XXX]]引入 见 https://forum.obsidian.md/t/theme-spectrum-version-1-0-0-and-resise-graphs-controls/12688/34。改自Spectrum theme by @Wiktoria Mielcarek
+  -
+    id: built-in-style-full-width
+    title: full-width layout
+    title.zh: 全宽显示元素 (i.e. wide-dataview, wide-table, wide-callout and wide-backlinks) 
+    type: heading
+    level: 2
+    collapsed: true
+    description:  ❗cssclass：fullwidth  wide-dataview wide-table wide-callout  wide-backlinks❗ (Adapted from https://github.com/efemkay @ Faiz Khuzaimah)
+    description.zh:  ❗cssclass：fullwidth wide-dataview wide-table wide-callout  wide-backlinks❗ 分别实现整页，dv表格 md表格 callout  反链面板全宽度布局。改自https://github.com/efemkay @ Faiz Khuzaimah
   -
     id: topaz-community
     title: Supported by Topaz Community 😁
@@ -11497,6 +11542,94 @@ body.table-style-three .markdown-source-view table tbody>tr {
 .markdown-source-view th:hover {
   background-color: var(--table-hover-thead-color);
 }
+
+/*Full-width table dvtable callout backlinks layout*/
+/*modified from https://github.com/efemkay */
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content .cm-table-widget
+  { max-width: 100%; width: 100%;}
+
+  :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer, 
+  :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div
+  { max-width: 100%; margin-inline: auto; width: 100%;} 
+
+/*	Editing View -- set all divs back to normal width (ensuring specificity rule over some theme), then	expand to full-width for each selected css class */
+    :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) div.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div,
+    :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  div.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > .cm-line
+      {max-width: var(--line-width-readable); margin-inline: auto !important;} /* important for margin needed because app.css:2842 use it */
+ body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block:not(.admonition-parent), 
+  body.full-width-table .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div:is(.HyperMD-table-row, .cm-table-widget),
+  body.full-width-callout .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div:is(.cm-callout),
+  body.full-width-backlinks .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div:is(.embedded-backlinks) > div
+      { max-width: 100%; }
+  
+    body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block>div[class^="block-language"]:not(.block-language-dataview)
+    {
+      max-width: var(--line-width-readable); margin-inline: auto;
+    }
+
+  	/*	Reading View -- similar to Editing View, set all divs to normal-width and then selected divs to full-width, 
+		however, for Reading View, wide-dataview and wide-table will require Contextual Typography plugin */
+	div.markdown-preview-view:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .markdown-preview-sizer.markdown-preview-sizer > div
+  { max-width: var(--line-width-readable); margin-inline: auto; } /* important is for Atom theme */
+body.full-width-dvtable .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-lang-dataview),
+body.full-width-table .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-table),
+body.full-width-callout .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div[data-callout],
+body.full-width-backlinks .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.embedded-backlinks)
+  { max-width: 100%; }
+
+
+/*Full-width table dvtable callout backlinks layout*/
+/*modified from https://github.com/efemkay */
+
+	/*	Editing View -- set Readable Line Length (RLL) to wide (100%) for any css class with "wide" word
+		in it. / "width:100%" added for Blue Topaz / div.cm-content added to override Mado 11 */
+    div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer,
+    div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div,
+    div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content,
+    div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content .cm-table-widget
+      { max-width: 100%; width: 100%;}
+      
+    /*	Reading View -- similar to Editing View, set the RLL to 100% for any css class with "wide" word
+      in it. "width:100%" added for Blue Topaz */
+    div[class*="wide-"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer, 
+    div[class*="wide-"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div
+      { max-width: 100%; margin-inline: auto; width: 100%;} 
+    
+  
+  /* === Wide Dataview, Table & Backlink === */
+  
+    /*	Editing View -- set all divs back to normal width (ensuring specificity rule over some theme), then
+      expand to full-width for each selected css class (i.e. wide-dataview, wide-table and wide-backlinks) */
+    div.markdown-source-view.mod-cm6:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .cm-contentContainer.cm-contentContainer > div > div,
+    div.markdown-source-view.mod-cm6:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .cm-contentContainer.cm-contentContainer > div > .cm-line
+      {max-width: var(--line-width-readable); margin-inline: auto !important;} /* important for margin needed because app.css:2842 use it */
+    div[class*="-dataview"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block:not(.admonition-parent), 
+    div[class*="-table"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div:is(.HyperMD-table-row, .cm-table-widget),
+    div[class*="-callout"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div:is(.cm-callout),
+    div[class*="-backlinks"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div:is(.embedded-backlinks) > div
+      { max-width: 100%; }
+  
+    div[class*="-dataview"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block>div[class^="block-language"]:not(.block-language-dataview)
+    {
+      max-width: var(--line-width-readable); margin-inline: auto;
+    }
+
+    
+  
+    /*	Reading View -- similar to Editing View, set all divs to normal-width and then selected divs to full-width, 
+      however, for Reading View, wide-dataview and wide-table will require Contextual Typography plugin */
+    div.markdown-preview-view:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .markdown-preview-sizer.markdown-preview-sizer > div
+      { max-width: var(--line-width-readable); margin-inline: auto; } /* important is for Atom theme */
+    div[class*="-dataview"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-lang-dataview),
+    div[class*="-table"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-table),
+    div[class*="-callout"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div[data-callout],
+    div[class*="-backlinks"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.embedded-backlinks)
+      { max-width: 100%; }
+  
+/***end--Full-width table display--end****/
 
 .popover mark {
   color: var(--text-normal);
