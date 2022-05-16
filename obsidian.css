@@ -21051,8 +21051,53 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
  overflow: hidden;
 }
 .callout.callout:is([data-callout-metadata*='nowrap'],
-[data-callout*='nowrap']) img {
+[data-callout*='nowrap']) .callout-content 
+{
+  overflow-x: auto!important;
+}
+.callout.callout:is([data-callout-metadata*='nowrap'],
+[data-callout*='nowrap']) .callout-content p {
+  display: flex;
+  align-items: center;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.callout.callout:is([data-callout-metadata*='nowrap'],
+[data-callout*='nowrap'])  .callout-content img {
  max-width: unset !important;
+ display: table-cell;
+ vertical-align: middle;
+ padding: 1px;
+ max-height: 30vh;
+}
+
+/* ===块内元素网格布局============ */
+.callout.callout:is([data-callout-metadata*='grid'],
+[data-callout*='grid']) {
+ max-width: unset !important;
+ white-space: nowrap;
+ overflow: hidden;
+}
+.callout.callout:is([data-callout-metadata*='grid'],
+[data-callout*='grid']) .callout-content 
+{
+  overflow-x: auto!important;
+}
+.callout.callout:is([data-callout-metadata*='grid'],
+[data-callout*='grid']) .callout-content p {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, auto));
+  grid-gap: 2px;
+  margin: 0;
+  margin-top: 5px;
+}
+.callout.callout:is([data-callout-metadata*='grid'],
+[data-callout*='grid'])  .callout-content img {
+  display: flex;
+  flex: 1;
+  align-self: stretch;
+  object-fit: cover;
+  margin: unset !important;
 }
 
 
@@ -21531,6 +21576,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
   -ms-grid-row-align: start;
   align-self: start;
   text-align: left;
+  box-shadow: none;
   margin: 0;
   border: none;
   padding: 0;
@@ -21567,7 +21613,12 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
   background-color: transparent;
   box-shadow: none;
   float: left;
-  margin-top: -1em;
+  margin-top: -4.5em;
+  margin-bottom: 0px;
+}
+.is-live-preview .callout.callout:is([data-callout-metadata^='icon'],
+[data-callout='icon']) {
+  margin-top:-2em;
 }
 .callout.callout:is([data-callout-metadata^='icon'],
 [data-callout='icon']) .callout-title {
@@ -21580,9 +21631,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 }
 .callout.callout:is([data-callout-metadata^='icon'],
 [data-callout='icon']) > .callout-content {
-  display: inline-flex;
-  align-items: center;
-  padding: 0 10px;
+  padding:0;
 }
 .callout.callout:is([data-callout-metadata^='icon'],
 [data-callout='icon']) > .callout-content>svg {
