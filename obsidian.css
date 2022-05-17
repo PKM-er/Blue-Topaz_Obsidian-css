@@ -11722,8 +11722,10 @@ body.table-style-three .markdown-source-view table tbody>tr {
 
   	/*	Reading View -- similar to Editing View, set all divs to normal-width and then selected divs to full-width, 
 		however, for Reading View, wide-dataview and wide-table will require Contextual Typography plugin */
-	div.markdown-preview-view:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .markdown-preview-sizer.markdown-preview-sizer > div
+    :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)	div.markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:not(.obsidian-banner-wrapper)
   { max-width: var(--line-width-readable); margin-inline: auto; } /* important is for Atom theme */
+
+
 body.full-width-dvtable .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-lang-dataview),
 body.full-width-table .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-table),
 body.full-width-callout .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div[data-callout],
@@ -11880,7 +11882,7 @@ body.bt-status-off .status-bar {
   padding: 2px 8px 6px 3px;
 }
 body.bt-status-off .document-search-container{
-  width: 72%;
+  width: 80%;
   background-color: var(--background-secondary-bg-4-bt);
 }
 
@@ -12541,6 +12543,14 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
   margin-left: auto !important;
   margin-right: auto !important;
 }
+body:not(.image-zoom) .markdown-reading-view button img
+ {
+  pointer-events: none;
+  }
+  body:not(.image-zoom) .markdown-reading-view .callout-title-inner img
+  {
+   pointer-events: none;
+   }
 
 body:not(.image-zoom) .markdown-reading-view img:not([class*="emoji"]):active,
 .workspace-leaf-content[data-type="image"] img:active {
@@ -20970,7 +20980,10 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   max-width: 100%;
   /* margin: 0 auto; */
 }
-
+/*隐藏backlinks区域*/
+:is(.markdown-preview-view,.markdown-rendered).nobacklinks .embedded-backlinks {
+  display: none;
+}
 /*隐藏yaml区域*/
 :is(.markdown-preview-view,.markdown-rendered).noyaml div>.language-yaml {
   display: none;
