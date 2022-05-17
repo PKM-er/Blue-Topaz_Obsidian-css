@@ -21797,3 +21797,44 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 .cm-s-obsidian span.cm-link {
   pointer-events:none ;
 }
+
+
+/******启动ob时的动画效果******/
+
+/*加载画面的文字*/
+.progress-bar-message:before{
+content:"❀✿";
+}
+.progress-bar-message:after{
+content:"✿❀";
+}
+
+.progress-bar-message 
+{
+color: #D3959B; 
+animation: gradientChange 0.5s infinite alternate;
+animation: move 0.3s linear infinite alternate;
+
+} 
+
+@keyframes gradientChange 
+{ 100% { color: #BFE6BA; }
+}
+@keyframes move 
+{
+0% { transform: translateY(0); } 
+100% { transform: translateY(100%); } 
+}
+
+/*加载画面的进度条框*/
+
+.progress-bar-line {
+display:none;
+}
+
+/*加载画面的进度条*/
+.progress-bar-subline {
+display:none;
+}
+
+
