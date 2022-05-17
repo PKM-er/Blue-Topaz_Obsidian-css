@@ -20638,13 +20638,11 @@ body:not(.default-loading-page).theme-light .progress-bar {
 }
 
 @keyframes shape {
-  0% {background-color: transparent; left: -100px; top: -100px;border-radius: 50%;}
-  20% {background-color: var(--text-blue); left: -100px; top: -100px;}
-  35% {background-color: var(--text-green); left: 100px; top: -100px;border-radius: 10%;}
-  50% {background-color: var(--text-yellow); left: 100px; top: 100px;}
-  65% {background-color: var(--text-red); left: -100px; top: 100px;border-radius: 10%;}
-  80% {background-color: var(--text-blue); left: -100px; top: -100px;border-radius: 50%;}
-  100% {background-color: transparent; left: -100px; top: -100px;border-radius: 50%;}
+  0% {background-color: var(--text-blue); left: -100px; top: -100px; border-radius: 50%;}
+  25% {background-color: var(--text-green); left: 100px; top: -100px;border-radius: 10%;}
+  50% {background-color: var(--text-yellow); left: 100px; top: 100px; border-radius: 0;}
+  75% {background-color: var(--text-red); left: -100px; top: 100px;border-radius: 10%;}
+  100% {background-color: var(--text-blue); left: -100px; top: -100px;border-radius: 50%;}
 }
 
 /* the gif animation was created by @Jake Fleming https://dribbble.com/shots/9948351-kitty-wiggle */
