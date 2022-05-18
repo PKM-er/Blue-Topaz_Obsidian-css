@@ -12536,7 +12536,9 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
   margin-left: auto;
   margin-right: auto;
 }
-
+.print :is(.markdown-preview-view,.markdown-rendered)  img:not([class*="emoji"]) {
+  display: block;
+}
 .view-content img:not([class*="emoji"]) {
   cursor: zoom-in;
   display: block;
@@ -16336,9 +16338,9 @@ body.style-options-for-admonition-plugin .callout.admonition-blank .admonition-c
 body.style-options-for-admonition-plugin :is(.admonition-def,.admonition-thm,.admonition-lem,.admonition-cor,.admonition-pro) {
   margin: 1.5625em 0 !important;
   overflow: visible !important;
-  border: 1px solid rgb(var(--admonition-color)) !important;
+  border: 1px solid rgb(var(--callout-color)) !important;
   border-radius: 0.3em !important;
-  background-color: rgba(var(--admonition-color),0.05) !important;
+  background-color: rgba(var(--callout-color),0.05) !important;
   box-shadow: 0 0 0 !important;
 }
 
@@ -16347,7 +16349,7 @@ body.style-options-for-admonition-plugin :is(.admonition-def,.admonition-thm,.ad
   top: -0.9em;
   left: 1.5em;
   padding: 1px 8px !important;
-  background-color: rgb(var(--admonition-color)) !important;
+  background-color: rgb(var(--callout-color)) !important;
   border-radius: 0.2em;
 }
 
@@ -16356,7 +16358,7 @@ body.style-options-for-admonition-plugin :is(.admonition-def,.admonition-thm,.ad
   top: unset;
   left: 1.5em;
   padding: 1px 8px !important;
-  background-color: rgb(var(--admonition-color)) !important;
+  background-color: rgb(var(--callout-color)) !important;
   border-radius: 0.2em;
   position: relative;
   width: fit-content;
@@ -16371,7 +16373,7 @@ body.style-options-for-admonition-plugin :is(.admonition-def,.admonition-thm,.ad
 body.style-options-for-admonition-plugin :is(.admonition-def,.admonition-thm,.admonition-lem,.admonition-cor,.admonition-pro) *.admonition-title-icon {
 	/* display: none !important; */
   color: white;
-  background-color: rgb(var(--admonition-color));
+  background-color: rgb(var(--callout-color));
   margin: 0.2em;
 }
 
@@ -16411,7 +16413,7 @@ body.style-options-for-admonition-plugin .admonition-hibox {
   height: auto;
   overflow: hidden;
   border-radius: var(--radius-s) !important;
-  background: radial-gradient(circle at 0px 0px, rgba(var(--admonition-color), 0.2) 0, rgba(var(--admonition-color), 0.2) var(--hibox), transparent var(--hibox), transparent 0);
+  background: radial-gradient(circle at 0px 0px, rgba(var(--callout-color), 0.2) 0, rgba(var(--callout-color), 0.2) var(--hibox), transparent var(--hibox), transparent 0);
   transition: --hibox 0.6s linear;
   border-left: none !important;
 }
@@ -20899,9 +20901,6 @@ body:not(.default-loading-page) .progress-bar-subline {
   height: 100%;
 }
 
-.obsidian-banner-wrapper {
-  margin-top: calc(var(--banner-height) + 10px)!important;
-}
 :is(.markdown-preview-view,.markdown-rendered) img.banner-image.full-width{
   max-width: none;
 }
@@ -21080,6 +21079,17 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   body.all-dark .print .markdown-preview-view {
     color: var(--text-normal) !important;
   }
+
+  .print .markdown-preview-view .callout.callout[data-callout="timeline"] >.callout-content
+  {
+    display: grid !important;
+  }
+  .print .markdown-preview-view .callout.callout[data-callout="timeline"] .callout-content hr {
+    visibility: visible;
+  }
+  .print .markdown-preview-view .admonition-flex .admonition-content {
+    display: flex !important;
+    } 
 }
 
 /* ================================== */
@@ -22108,8 +22118,8 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 }
 .callout.callout[data-callout="timeline"] .callout-content blockquote p {
   display: block;
-  color: var(--time-font-color);
-  background-color: var(--time-color);
+  color: var(--text-on-accent);
+  background-color: var(--interactive-accent);
   font-style: normal;
   padding:6px;
   border-radius: 5px;
@@ -22134,7 +22144,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
   background-color: transparent;
   box-shadow: none;
   float: left;
-  margin-top: -4.5em;
+  margin-top: -4em;
   margin-bottom: 0px;
 }
 .is-live-preview .callout.callout:is([data-callout-metadata^='icon'],
