@@ -17127,16 +17127,16 @@ div[data-type="memos_view"] .usage-heat-map-wrapper > .usage-heat-map > .stat-co
   background-color: var(--background-transparent-black-or-white-4) !important;
 }
 div[data-type="memos_view"] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L1-bg {
-  background-color: rgba(var(--interactive-accent-rgb), 0.3) !important;
+  background-color: rgba(var(--interactive-accent-rgb), 0.4) !important;
 }
 div[data-type="memos_view"] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L2-bg {
-  background-color: rgba(var(--interactive-accent-rgb), 0.5) !important;
+  background-color: rgba(var(--interactive-accent-rgb), 0.6) !important;
 }
 div[data-type="memos_view"] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L3-bg {
-  background-color: rgba(var(--interactive-accent-rgb), 0.7) !important;
+  background-color: rgba(var(--interactive-accent-rgb), 0.8) !important;
 }
 div[data-type="memos_view"] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L4-bg {
-  background-color: rgba(var(--interactive-accent-rgb), 0.9) !important;
+  background-color: rgba(var(--interactive-accent-rgb), 1) !important;
 }
 
 div[data-type="memos_view"] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.today {
@@ -17200,7 +17200,6 @@ div[data-type='memos_view'].mobile-view .tags-wrapper {
   background-color: var(--background-primary-bg-4-bt) !important;
 }
 
-
 body:is(.grass-light.theme-light,.grass-dark.theme-dark) {
   --stat-day-L1: #9be9a8;
   --stat-day-L2: #40c463;
@@ -17231,16 +17230,16 @@ body:is(.magenta-light.theme-light,.magenta-dark.theme-dark) {
   --stat-day-L3: #ae017e;
   --stat-day-L4: #610070;
 }
-div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L1-bg {
+body:not(.default-light):not(.default-dark) div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L1-bg {
   background-color: var(--stat-day-L1) !important;
 }
-div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L2-bg {
+body:not(.default-light):not(.default-dark)div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L2-bg {
   background-color: var(--stat-day-L2) !important;
 }
-div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L3-bg {
+body:not(.default-light):not(.default-dark)div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L3-bg {
   background-color: var(--stat-day-L3) !important;
 }
-div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L4-bg {
+body:not(.default-light):not(.default-dark)div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L4-bg {
   background-color: var(--stat-day-L4) !important;
 }
 
