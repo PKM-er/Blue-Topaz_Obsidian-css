@@ -18295,6 +18295,10 @@ body.asymmetric-split-left .workspace-split.mod-left-split .workspace-tab-contai
   border-radius: 0;
 }
 
+body.asymmetric-split-left .workspace-split.mod-left-split .workspace-tab-header-container {
+  padding: 4px 0;
+}
+
 .workspace-split.mod-left-split .workspace-tab-header-container {
   border-bottom: 1px solid var(--background-modifier-border-asymm);
 }
