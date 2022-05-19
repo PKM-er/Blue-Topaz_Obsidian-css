@@ -482,6 +482,9 @@ settings:
       - 
         label: Rectangle
         value: layout-style-options-rectangle
+      - 
+        label: Asymmetric Style of Split Panes
+        value: asymmetric-split-left
   -
     id: hide-titlebar-text
     title: Hide text in Title Bar
@@ -1924,12 +1927,23 @@ settings:
       - 
         label: Pill
         value: file-bg-pill
-  -
-    id: file-name-animation
-    title: File Name Scrolling When Hovering
-    title.zh: 文件名自动滚动效果
-    type: class-toggle
-    default: false
+  - 
+    id: file-name-style-option
+    title: File Name Style
+    title.zh: 文件名样式
+    type: class-select
+    allowEmpty: false
+    default: file-name-wrapped
+    options:
+      -
+        label: Wrapped
+        value: file-name-wrapped
+      - 
+        label: Non-wrapped
+        value: file-name-non-wrapped
+      - 
+        label: File Name Scrolling When Hovering
+        value: file-name-animation
   -
     id: light-background-color-files
     title: Light File Background
@@ -3458,10 +3472,12 @@ body.all-dark .print.theme-light,
   --background-primary-alt-bg-4-bt: #000000;
   --background-secondary-bg-4-bt: #1e1e1e;
   --background-secondary-alt-bg-4-bt: #000000;
+  --background-asymm-split-left: var(--background-secondary-alt-bg-4-bt);
 
   --background-mobile-drawer-1: #1b1b1b;
   --background-mobile-drawer-2: #1b1b1b69;
   --background-modifier-border-hr: #3f3f3f;
+  --background-modifier-border-asymm: #343434;
 
   --background-transparent-black-or-white-1: #1b1b1b9a;
   --background-transparent-black-or-white-2: #1e1e1ebd;
@@ -3764,10 +3780,12 @@ body.all-dark .print.theme-light,
   --background-primary-alt-bg-4-bt: #e9e9e9;
   --background-secondary-bg-4-bt: #fcfcfc;
   --background-secondary-alt-bg-4-bt: #eeeeee;
+  --background-asymm-split-left: var(--background-secondary-alt-bg-4-bt);
 
   --background-mobile-drawer-1: #ffffff;
   --background-mobile-drawer-2: #ffffff;
   --background-modifier-border-hr: #b9b9b9;
+  --background-modifier-border-asymm: #d8d8d8;
   --background-secondary-alt-bg-4-bt-publish: #f6f6f6;
 
   --background-transparent-black-or-white-1: #ffffffb0;
@@ -11669,88 +11687,101 @@ body.table-style-three .markdown-source-view table tbody>tr {
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer,
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div,
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content,
-:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content .cm-table-widget
-  { max-width: 100%; width: 100%;}
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content .cm-table-widge { 
+  max-width: 100%; 
+  width: 100%;
+}
 
-  :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer, 
-  :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div
-  { max-width: 100%; margin-inline: auto; width: 100%;} 
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer, 
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div { 
+  max-width: 100%; 
+  margin-inline: auto; 
+  width: 100%;
+} 
 
 /*	Editing View -- set all divs back to normal width (ensuring specificity rule over some theme), then	expand to full-width for each selected css class */
-    :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) div.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div,
-    :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  div.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > .cm-line
-      {max-width: var(--line-width-readable); margin-inline: auto !important;} /* important for margin needed because app.css:2842 use it */
- body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block:not(.admonition-parent), 
-  body.full-width-table .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div:is(.HyperMD-table-row, .cm-table-widget),
-  body.full-width-callout .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div:is(.cm-callout),
-  body.full-width-backlinks .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div:is(.embedded-backlinks) > div
-      { max-width: 100%; }
-  
-    body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block>div[class^="block-language"]:not(.block-language-dataview)
-    {
-      max-width: var(--line-width-readable); margin-inline: auto;
-    }
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) div.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  div.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > .cm-line {
+  max-width: var(--line-width-readable); 
+  margin-inline: auto !important;
+} /* important for margin needed because app.css:2842 use it */
 
-  	/*	Reading View -- similar to Editing View, set all divs to normal-width and then selected divs to full-width, 
+body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block:not(.admonition-parent), 
+body.full-width-table .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div:is(.HyperMD-table-row, .cm-table-widget),
+body.full-width-callout .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div:is(.cm-callout),
+body.full-width-backlinks .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div:is(.embedded-backlinks) > div { 
+  max-width: 100%; 
+}
+  
+body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block>div[class^="block-language"]:not(.block-language-dataview) {
+  max-width: var(--line-width-readable); 
+  margin-inline: auto;
+}
+
+/*	Reading View -- similar to Editing View, set all divs to normal-width and then selected divs to full-width, 
 		however, for Reading View, wide-dataview and wide-table will require Contextual Typography plugin */
-    :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)	div.markdown-preview-view:not(.fullwidth) .markdown-preview-sizer.markdown-preview-sizer > div:not(.obsidian-banner-wrapper)
-  { max-width: var(--line-width-readable); margin-inline: auto; } /* important is for Atom theme */
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)	div.markdown-preview-view:not(.fullwidth) .markdown-preview-sizer.markdown-preview-sizer > div:not(.obsidian-banner-wrapper) { 
+  max-width: var(--line-width-readable); 
+  margin-inline: auto; 
+} /* important is for Atom theme */
 
 
 body.full-width-dvtable .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-lang-dataview),
 body.full-width-table .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-table),
 body.full-width-callout .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div[data-callout],
-body.full-width-backlinks .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.embedded-backlinks)
-  { max-width: 100%!important; }
-
+body.full-width-backlinks .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.embedded-backlinks) { 
+  max-width: 100%!important; 
+}
 
 /*Full-width table dvtable callout backlinks layout*/
 /*modified from https://github.com/efemkay */
 
-	/*	Editing View -- set Readable Line Length (RLL) to wide (100%) for any css class with "wide" word
-		in it. / "width:100%" added for Blue Topaz / div.cm-content added to override Mado 11 */
-    div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer,
-    div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div,
-    div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content,
-    div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content .cm-table-widget
-      { max-width: 100%; width: 100%;}
+/*	Editing View -- set Readable Line Length (RLL) to wide (100%) for any css class with "wide" word in it. / "width:100%" added for Blue Topaz / div.cm-content added to override Mado 11 */
+div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer,
+div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div,
+div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content,
+div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content .cm-table-widget { 
+  max-width: 100%; 
+  width: 100%;
+}
       
-    /*	Reading View -- similar to Editing View, set the RLL to 100% for any css class with "wide" word
-      in it. "width:100%" added for Blue Topaz */
-    div[class*="wide-"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer, 
-    div[class*="wide-"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div
-      { max-width: 100%; margin-inline: auto; width: 100%;} 
+/*	Reading View -- similar to Editing View, set the RLL to 100% for any css class with "wide" word in it. "width:100%" added for Blue Topaz */
+div[class*="wide-"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer, 
+div[class*="wide-"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div { 
+  max-width: 100%; 
+  margin-inline: auto; width: 100%;
+} 
     
+/* === Wide Dataview, Table & Backlink === */
+/*	Editing View -- set all divs back to normal width (ensuring specificity rule over some theme), then expand to full-width for each selected css class (i.e. wide-dataview, wide-table and wide-backlinks) */
+div.markdown-source-view.mod-cm6:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .cm-contentContainer.cm-contentContainer > div > div,
+div.markdown-source-view.mod-cm6:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .cm-contentContainer.cm-contentContainer > div > .cm-line {
+  max-width: var(--line-width-readable); 
+  margin-inline: auto !important;
+} /* important for margin needed because app.css:2842 use it */
+div[class*="-dataview"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block:not(.admonition-parent), 
+div[class*="-table"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div:is(.HyperMD-table-row, .cm-table-widget),
+div[class*="-callout"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div:is(.cm-callout),
+div[class*="-backlinks"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div:is(.embedded-backlinks) > div { 
+  max-width: 100%; 
+}
   
-  /* === Wide Dataview, Table & Backlink === */
-  
-    /*	Editing View -- set all divs back to normal width (ensuring specificity rule over some theme), then
-      expand to full-width for each selected css class (i.e. wide-dataview, wide-table and wide-backlinks) */
-    div.markdown-source-view.mod-cm6:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .cm-contentContainer.cm-contentContainer > div > div,
-    div.markdown-source-view.mod-cm6:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .cm-contentContainer.cm-contentContainer > div > .cm-line
-      {max-width: var(--line-width-readable); margin-inline: auto !important;} /* important for margin needed because app.css:2842 use it */
-    div[class*="-dataview"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block:not(.admonition-parent), 
-    div[class*="-table"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div:is(.HyperMD-table-row, .cm-table-widget),
-    div[class*="-callout"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div:is(.cm-callout),
-    div[class*="-backlinks"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div:is(.embedded-backlinks) > div
-      { max-width: 100%; }
-  
-    div[class*="-dataview"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block>div[class^="block-language"]:not(.block-language-dataview)
-    {
-      max-width: var(--line-width-readable); margin-inline: auto;
-    }
+div[class*="-dataview"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block>div[class^="block-language"]:not(.block-language-dataview) {
+  max-width: var(--line-width-readable); 
+  margin-inline: auto;
+}
 
-    
-  
-    /*	Reading View -- similar to Editing View, set all divs to normal-width and then selected divs to full-width, 
-      however, for Reading View, wide-dataview and wide-table will require Contextual Typography plugin */
-    div.markdown-preview-view:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .markdown-preview-sizer.markdown-preview-sizer > div
-      { max-width: var(--line-width-readable); margin-inline: auto; } /* important is for Atom theme */
-    div[class*="-dataview"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-lang-dataview),
-    div[class*="-table"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-table),
-    div[class*="-callout"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div[data-callout],
-    div[class*="-backlinks"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.embedded-backlinks)
-      { max-width: 100%!important; }
+/*	Reading View -- similar to Editing View, set all divs to normal-width and then selected divs to full-width, however, for Reading View, wide-dataview and wide-table will require Contextual Typography plugin */
+div.markdown-preview-view:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .markdown-preview-sizer.markdown-preview-sizer > div {
+  max-width: var(--line-width-readable); 
+  margin-inline: auto; 
+} /* important is for Atom theme */
+div[class*="-dataview"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-lang-dataview),
+div[class*="-table"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-table),
+div[class*="-callout"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div[data-callout],
+div[class*="-backlinks"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.embedded-backlinks) { 
+  max-width: 100%!important; 
+}
   
 /***end--Full-width table display--end****/
 
@@ -11852,7 +11883,7 @@ body.bt-status-off .status-bar {
   max-height: 26px;
   padding: 2px 8px 6px 3px;
 }
-body.bt-status-off .document-search-container{
+body.bt-status-off .document-search-container {
   width: 80%;
   background-color: var(--background-secondary-bg-4-bt);
 }
@@ -11893,8 +11924,7 @@ body.bt-status-off #scroll-controls {
 }
 
 /** file name**/
-body.file-name-animation  .nav-files-container
-{
+body.file-name-animation .nav-files-container {
   overflow-x: auto;
 }
 body.file-name-animation .nav-file-title-content:not(.is-being-renamed):hover {
@@ -11947,7 +11977,27 @@ body.file-bg-pill .nav-file-title.is-active,
 body.file-bg-pill .nav-folder-title.is-active, 
 body:not(.is-grabbing).file-bg-pill .nav-file-title:hover, 
 body:not(.is-grabbing).file-bg-pill .nav-folder-title:hover {
-  border-radius: 12px;
+  border-radius: 15px;
+}
+
+body.file-bg-pill .nav-files-container {
+  padding: 0 3px 0 2px;
+}
+
+body.file-bg-pill .nav-folder.mod-root>.nav-folder-title {
+  margin-left: -2px;
+}
+
+.item-list {
+  padding: 0;
+}
+
+body.file-bg-pill .item-list {
+  padding: 0 4px 0 1px;
+}
+
+.item-list .nav-file-icon {
+  margin-left: 2px;
 }
 
 body.light-background-color-files .nav-file-title.is-active {
@@ -12498,12 +12548,12 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
 }
 
 /* images : reduce displayed size of embedded files, zoom on hover */
-:is(.markdown-preview-view,.markdown-rendered) img:not([class*="emoji"]){
+:is(.markdown-preview-view,.markdown-rendered) img:not([class*="emoji"]) {
   max-width: min(100%, 800px);
   margin-left: auto;
   margin-right: auto;
 }
-.print :is(.markdown-preview-view,.markdown-rendered)  img:not([class*="emoji"]) {
+.print :is(.markdown-preview-view,.markdown-rendered) img:not([class*="emoji"]) {
   display: block;
 }
 .view-content img:not([class*="emoji"]) {
@@ -12512,14 +12562,12 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
   margin-left: auto !important;
   margin-right: auto !important;
 }
-body:not(.image-zoom) .markdown-reading-view button img
- {
+body:not(.image-zoom) .markdown-reading-view button img {
   pointer-events: none;
-  }
-  body:not(.image-zoom) .markdown-reading-view .callout-title-inner img
-  {
-   pointer-events: none;
-   }
+}
+body:not(.image-zoom) .markdown-reading-view .callout-title-inner img {
+  pointer-events: none;
+}
 
 body:not(.image-zoom) .markdown-reading-view img:not([class*="emoji"]):active,
 .workspace-leaf-content[data-type="image"] img:active {
@@ -12544,7 +12592,10 @@ body:not(.image-zoom) .markdown-reading-view img:not([class*="emoji"]):active,
   display: block;
 }
 
-.internal-embed[alt$="inline"], .internal-embed[alt$="Inline"], .internal-embed[alt$="INLINE"], .internal-embed[alt$="inl"] {
+.internal-embed[alt$="inline"], 
+.internal-embed[alt$="Inline"], 
+.internal-embed[alt$="INLINE"], 
+.internal-embed[alt$="inl"] {
   display: inline ;
 }
 
@@ -12563,6 +12614,13 @@ body.hide-vault-name .nav-folder.mod-root>.nav-folder-title {
 .nav-folder-title {
   white-space: normal;
   width: auto;
+}
+
+body.file-name-non-wrapped .nav-file-title,
+body.file-name-non-wrapped .nav-folder-title {
+  white-space: nowrap;
+  width: max-content;
+  min-width: 100%;
 }
 
 /* file explorer : Indent wrapped nav text */
@@ -18208,6 +18266,39 @@ body.rainbow-cursor .markdown-source-view.mod-cm6 .cm-content {
 }
 
 /*==== separators =====*/
+body.asymmetric-split-left .workspace-split.mod-horizontal.mod-left-split .workspace-leaf {
+  background-color: var(--background-asymm-split-left);
+}
+
+body.asymmetric-split-left .workspace-ribbon.mod-left {
+  border-right: 1px solid var(--background-modifier-border-asymm);
+}
+
+body.asymmetric-split-left .titlebar {
+  border-bottom: 1px solid var(--background-modifier-border-asymm);
+}
+
+body.asymmetric-split-left .workspace-split.mod-left-split .workspace-tabs{
+  border-bottom: 1px solid var(--background-modifier-border-asymm);
+}
+
+body.asymmetric-split-left .workspace-split.mod-left-split .workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
+body.asymmetric-split-left .workspace-split.mod-left-split .workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
+body.asymmetric-split-left .workspace-split.mod-left-split .workspace-tab-header.is-before-active .workspace-tab-header-inner,
+body.asymmetric-split-left .workspace-split.mod-left-split .workspace-tab-header.is-after-active .workspace-tab-header-inner,
+body.asymmetric-split-left .workspace-split.mod-left-split .workspace-tab-header,
+body.asymmetric-split-left .workspace-split.mod-left-split .workspace-tab-header-inner,
+body.asymmetric-split-left .workspace-split.mod-left-split .workspace-tab-header.is-after-active,
+body.asymmetric-split-left .workspace-split.mod-left-split .workspace-tab-header.is-before-active,
+body.asymmetric-split-left .workspace-split.mod-left-split .workspace-tab-container-before.is-before-active .workspace-tab-header-inner {
+  background-color: var(--background-asymm-split-left);
+  border-radius: 0;
+}
+
+.workspace-split.mod-left-split .workspace-tab-header-container {
+  border-bottom: 1px solid var(--background-modifier-border-asymm);
+}
+
 .workspace-split.mod-vertical>.workspace-leaf,
 .workspace-split.mod-root .workspace-split.mod-vertical .workspace-leaf-content,
 .workspace-split.mod-vertical>.workspace-split {
@@ -18220,7 +18311,7 @@ body.rainbow-cursor .markdown-source-view.mod-cm6 .cm-content {
 
 .workspace-split.mod-left-split>.workspace-leaf-resize-handle,
 .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
-  height: 95.9%;
+  height: 100%;
   width: 2px;
 }
 
@@ -18252,7 +18343,7 @@ body.rainbow-cursor .markdown-source-view.mod-cm6 .cm-content {
 
 .workspace-tab-header-container {
   background-color: var(--background-secondary-alt-bg-4-bt);
-  flex: 0.005 0 auto;
+  flex: 0.004 0 auto;
   padding: 5px 0 0;
 }
 
