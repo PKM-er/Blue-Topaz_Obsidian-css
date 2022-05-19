@@ -2951,7 +2951,7 @@ settings:
     title.zh: 伪看板 kanban
     type: heading
     level: 2
-    collapsed: true
+    collapsed: false
     description:  ❗cssclass：kanban❗ A kind of kanban-liked style for unordered lists. (Adapted from Spectrum theme by @Wiktoria Mielcarek)
     description.zh:  ❗cssclass：kanban❗ 实现类似看板样式并排显示，只对无序列表生效。改自Spectrum theme by @Wiktoria Mielcarek
   -
