@@ -3242,7 +3242,7 @@ body {
   --font-family-better-footnote: Arlrdbd, "Source Han Sans", "Segoe UI Emoji";
   --font-family-strong: Bookerly, "LXGW Zhenkai", "LXGW WenKai Screen", "LXGW WenKai Screen R", "Segoe UI Emoji", var(--font-default);
   --font-family-em: ;
-  --font-loading-text: Arial;
+  --font-loading-text: var(--font-monospace-theme);
 
   /*radius*/
   --radius-xs: 0.1875em;/*3px*/
@@ -20651,10 +20651,8 @@ body:not(.default-loading-page).loading-custom-text .progress-bar-message::befor
 body:not(.default-loading-page).loading-custom-text.loading-text-typing-style .progress-bar-message::before {
   overflow: hidden;
   white-space: nowrap;
-  border-right: 0.1em solid;
-  margin: 2em 1em;
-  width: 26ch;
-  animation: typing-style 3s steps(26, end),
+  border-right: 0.07em solid;
+  animation: typing-style 3s steps(23, end),
     cursor-blink 0.3s step-end infinite alternate;
 }
 
@@ -20664,7 +20662,7 @@ body:not(.default-loading-page).loading-custom-text.loading-text-typing-style .p
 
 @keyframes typing-style {
   0% {width: 0;}
-  100% {width: 26ch;}
+  100% {width: 42ch;}
 }
 
 body:not(.default-loading-page).loading-custom-text.loading-text-moving-style .progress-bar-message::before {
