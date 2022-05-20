@@ -2545,13 +2545,13 @@ settings:
     title: Custom Text
     title.zh: 自定义文字
     type: variable-text
-    default: "'快乐摸鱼又一天，人生还剩多少天？'"
+    default: "快乐摸鱼又一天，人生还剩多少天？"
   -
     id: font-loading-text
     title: Font Family of Custom Text 
     title.zh: 字体
     type: variable-text
-    default: "Arial"
+    default: var(--font-monospace-theme)
   -
     id: font-size-loading-diy-text
     title: Font Size
@@ -3298,7 +3298,7 @@ body {
 
   --checkbox-size: 1rem;
 
-  --loading-diy-text: '快乐摸鱼又一天，人生还剩多少天？';
+  --loading-diy-text: "快乐摸鱼又一天，人生还剩多少天？";
   --loading-diy-text-color: var(--text-normal);
   --loading-page-custom-gif-caption: " ";
   --loading-page-custom-gif-url: url(https://);
