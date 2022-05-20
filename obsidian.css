@@ -11723,7 +11723,7 @@ body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer.cm-co
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)	div.markdown-preview-view:not(.fullwidth) .markdown-preview-sizer.markdown-preview-sizer > div:not(.obsidian-banner-wrapper) { 
   max-width: var(--line-width-readable); 
   margin-inline: auto; 
-} /* important is for Atom theme */
+} 
 
 
 body.full-width-dvtable .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-lang-dataview),
@@ -11775,7 +11775,7 @@ div[class*="-dataview"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-con
 div.markdown-preview-view:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .markdown-preview-sizer.markdown-preview-sizer > div {
   max-width: var(--line-width-readable); 
   margin-inline: auto; 
-} /* important is for Atom theme */
+} 
 div[class*="-dataview"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-lang-dataview),
 div[class*="-table"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-table),
 div[class*="-callout"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div[data-callout],
@@ -16871,7 +16871,6 @@ body.translucent-setting-panel .vertical-tab-nav-item {
 .setting-item-info {
   word-wrap: break-word;
   word-break: break-word;
-  white-space: pre-wrap;
 }
 
 .style-settings-heading {
