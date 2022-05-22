@@ -12007,10 +12007,6 @@ body:not(.is-grabbing).file-bg-pill .nav-folder-title:hover {
   border-radius: 15px;
 }
 
-body.file-bg-pill .nav-files-container {
-  padding: 0 3px 0 2px;
-}
-
 body.file-bg-pill .nav-folder.mod-root>.nav-folder-title {
   margin-left: -2px;
 }
@@ -18325,7 +18321,7 @@ body.asymmetric-split-left .workspace-split.mod-left-split .workspace-tab-header
   padding: 4px 0;
 }
 
-.workspace-split.mod-left-split .workspace-tab-header-container {
+body.asymmetric-split-left .workspace-split.mod-left-split .workspace-tab-header-container {
   border-bottom: 1px solid var(--background-modifier-border-asymm);
 }
 
