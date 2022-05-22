@@ -426,9 +426,9 @@ settings:
     level: 3
     collapsed: true
   - 
-    id: remove-bg-file-page
-    title: Remove Background Image
-    title.zh: 移除文件栏背景
+    id: toggle-bg-file-page
+    title: Toggle Background Image
+    title.zh: 激活文件栏背景
     type: class-toggle
     default: false
   - 
@@ -18716,7 +18716,7 @@ body:not(.remove-custom-svg-icons) .workspace-leaf-content .view-action svg.brok
   border: none;
 }
 
-body:not(.remove-bg-file-page).theme-dark .nav-files-container::before {
+body.toggle-bg-file-page.theme-dark .nav-files-container::before {
   content: '';
   display: block;
   position: fixed;
@@ -18730,7 +18730,7 @@ body:not(.remove-bg-file-page).theme-dark .nav-files-container::before {
 }
 
 /*
-body:not(.remove-bg-file-page).theme-light .nav-files-container::before {
+body.toggle-bg-file-page.theme-light .nav-files-container::before {
   content: '';
   display: block;
   position: fixed;
