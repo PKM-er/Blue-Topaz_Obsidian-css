@@ -14849,7 +14849,7 @@ pre.frontmatter.language-yaml::before {
 }
 
 .kanban-plugin__item-title ol:not(.contains-task-list)>li:not(.task-list-item),
-.kanban-plugin__item-title ul>li:not(.task-list-item) {
+.kanban-plugin__item-title ul:not(.contains-task-list)>li:not(.task-list-item) {
   border-left: none;
   padding: 0 1px;
   margin-left: 0px;
