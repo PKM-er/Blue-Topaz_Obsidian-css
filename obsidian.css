@@ -12308,6 +12308,8 @@ body.adjustable-embed-content-height :is(.markdown-preview-view,.markdown-render
   font-size: var(--font-size-embed-title-size);
   line-height: inherit;
   height: unset;
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .file-embed-title {
