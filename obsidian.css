@@ -10209,7 +10209,7 @@ body:not(.default-split-style) .workspace>.workspace-split:not(.mod-root) .cm-li
   font-family: var(--font-monospace);
 }
 
-mjx-container[jax='CHTML'] {
+.math.math-block mjx-container[jax='CHTML'] {
   outline: none;
   font-size: var(--font-size-latex);
 }
