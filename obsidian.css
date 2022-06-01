@@ -12816,8 +12816,8 @@ body:not(.default-icons) .nav-folder-collapse-indicator svg {
   width: 7px;
 }
 
-body:not(.unmuted-collapsed-folder) .nav-folder.is-collapsed {
-  opacity: 0.55;
+body:not(.unmuted-collapsed-folder) .nav-folder.is-collapsed *:not(.is-being-renamed) {
+  opacity: 0.75;
 }
 
 body:not(.default-icons) .nav-folder.is-collapsed .nav-folder-collapse-indicator::after {
