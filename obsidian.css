@@ -18485,9 +18485,6 @@ body.folder-icons.remove-arrow:not(.default-icons) .nav-folder-collapse-indicato
 body.folder-icons.remove-arrow:not(.default-icons) :is(.nav-folder-title,.nav-file-title) {
   padding-left: 0;
 }
-body.folder-icons.remove-arrow:not(.default-icons) .nav-files-container {
-  padding-left: 7px;
-}
 
 body:not(.remove-file-icons) .nav-folder-children .nav-file-title-content:first-child::before {
   position: relative;
