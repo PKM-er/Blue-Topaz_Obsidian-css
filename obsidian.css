@@ -12061,7 +12061,7 @@ body.light-background-color-files .nav-file-title.is-active {
 
 .nav-file:not(.is-active):hover .nav-file-title,
 .nav-folder:hover .nav-folder-content {
-  background-color: var(--theme-color-translucent);
+  background-color: var(--theme-color-translucent-1);
   font-weight: 500;
 }
 
