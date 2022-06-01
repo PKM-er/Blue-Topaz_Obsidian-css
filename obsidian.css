@@ -17266,13 +17266,13 @@ body:is(.magenta-light.theme-light,.magenta-dark.theme-dark) {
 body:not(.default-light):not(.default-dark) div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L1-bg {
   background-color: var(--stat-day-L1) !important;
 }
-body:not(.default-light):not(.default-dark)div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L2-bg {
+body:not(.default-light):not(.default-dark) div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L2-bg {
   background-color: var(--stat-day-L2) !important;
 }
-body:not(.default-light):not(.default-dark)div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L3-bg {
+body:not(.default-light):not(.default-dark) div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L3-bg {
   background-color: var(--stat-day-L3) !important;
 }
-body:not(.default-light):not(.default-dark)div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L4-bg {
+body:not(.default-light):not(.default-dark) div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L4-bg {
   background-color: var(--stat-day-L4) !important;
 }
 
