@@ -10334,9 +10334,11 @@ ul>li::marker,
   color: var(--list-format-ul);
 }
 
+/*
 div.HyperMD-list-line.cm-line:not(.HyperMD-table-row) {
   word-break: break-all;
 }
+*/
 
 pre.HyperMD-list-line.HyperMD-list-line {
   text-align: start;
