@@ -5877,7 +5877,6 @@ body.color-scheme-options-flamingo.theme-light #calendar-container .year {
 
 /*星期数 week*/
 body.color-scheme-options-flamingo.theme-light #calendar-container .week-num {
-  /*border-right: 2px solid var(--green) !important;*/
   background-color: var(--calendar-week-background-color);
   font-weight: 600;
 }
@@ -9082,7 +9081,7 @@ span.cm-strong.cm-em.cm-highlight {
 .nav-folder-children .nav-folder-children {
   margin-left: 0.71875rem;
   padding-left: 0;
-  border-left: 2px solid var(--background-modifier-border);
+  border-left: 1px solid var(--background-modifier-border);
   border-radius: 0;
   transition: all 400ms ease-in;
 }
@@ -9372,14 +9371,14 @@ input[type=checkbox] {
   -webkit-appearance: none;
   appearance: none;
   border-radius: var(--radius-xs);
-  border: 2px solid var(--background-modifier-border);
+  border: 1px solid var(--background-modifier-border);
   padding: 0;
   margin:  0 7px 2px 3px;
   width: var(--checkbox-size);
   height: var(--checkbox-size);
 }
 input[type=checkbox]:hover {
-  border: 2px solid var(--theme-color);
+  border: 1px solid var(--theme-color);
 }
 
 :is(.markdown-preview-view,.markdown-rendered)  ul>li.task-list-item.is-checked, 
@@ -10312,7 +10311,7 @@ div.math.math-block mjx-math {
 /*thanks to loikein and death_au from forum and icr1001 from GitHub*/
 .markdown-source-view.mod-cm5 .cm-hmd-list-indent .cm-tab::before {
   content: '';
-  border-left: 2px solid var(--background-modifier-border);
+  border-left: 1px solid var(--background-modifier-border);
   position: absolute;
   height: 100%;
   margin-left: 3px;
@@ -10565,7 +10564,7 @@ body.list-vertical-line-one :is(ol,ul) :is(ol,ul) {
 
 body.list-vertical-line-one :is(ol,ul) :is(ol,ul)::before {
   content: '';
-  border-left: 2px solid var(--background-modifier-border);
+  border-left: 1px solid var(--background-modifier-border);
   border-right: none!important;
   position: absolute;
   left: -0.9em;
@@ -10578,7 +10577,7 @@ body.list-vertical-line-one .kanban :is(ol,ul) ul::before {
 
 body.list-vertical-line-one .markdown-rendered.show-indentation-guide li > :is(ol,ul)::before {
   content: ' ';
-  border-left: 2px solid var(--background-modifier-border);
+  border-left: 1px solid var(--background-modifier-border);
   border-right: none;
   position: absolute;
   left: -1.1rem;
@@ -10611,7 +10610,7 @@ body.list-vertical-line-two :is(ol,ul) :is(ol,ul) {
 
 body.list-vertical-line-two .markdown-rendered.show-indentation-guide li > :is(ol,ul)::before {
   content: '';
-  border-left: 2px solid var(--background-modifier-border);
+  border-left: 1px solid var(--background-modifier-border);
   border-right: none !important;
   position: absolute;
   left: -1.1em !important;
@@ -10627,7 +10626,7 @@ body.list-vertical-line-two .kanban :is(ol,ul) ul::before {
 
 body.list-vertical-line-two :is(ol,ul).contains-task-list :is(ol,ul)::before {
   content: ' ';
-  border-left: 2px solid var(--background-modifier-border);
+  border-left: 1px solid var(--background-modifier-border);
   position: absolute;
   left: -0.85em;
   top: 0;
@@ -10723,7 +10722,7 @@ body.list-vertical-line-three .kanban ol.contains-task-list :is(ol,ul)::before {
 
 body.list-vertical-line-three ul.contains-task-list :is(ol,ul)::before {
   content: ' ';
-  border-left: 2px solid var(--background-modifier-border);
+  border-left: 1px solid var(--background-modifier-border);
   position: absolute;
   left: -1.2em;
   top: 1px;
@@ -13046,7 +13045,7 @@ body:not(.default-icons) .outline .tree-item.is-collapsed .collapse-icon::before
 /*vertical lines in outline page*/
 .outline .tree-item-children {
   margin-left: 13px;
-  border-left: 2px solid #94949433;
+  border-left: 1px solid #94949433;
   border-radius: 0;
   transition: all 300ms ease-in-out;
 }
@@ -13101,7 +13100,7 @@ ul.contains-task-list .list-collapse-indicator.collapse-indicator.collapse-icon:
 /*tag collapse indicator*/
 .tag-container .tree-item-children {
   margin-left: 10px;
-  border-left: 2px solid #94949433;
+  border-left: 1px solid #94949433;
   border-radius: 0 3px 3px 0;
   transition: all 300ms ease-in-out;
 }
@@ -19278,7 +19277,7 @@ body:not(.background-image-settings-switch).background-image-settings-markdown-p
 .nav-view-outer .tree-item .tree-item .tree-item-children {
   margin-left: 12px;
   padding-left: 0;
-  border-left: 2px solid var(--background-modifier-border);
+  border-left: 1px solid var(--background-modifier-border);
   border-radius: 0;
   transition: all 400ms ease-in;
 }
@@ -19335,7 +19334,7 @@ body:not(.default-icons) .nav-view-outer .tree-item.is-collapsed .tree-item-icon
 .outline-view-outer .tree-item .tree-item-children {
   margin-left: 12px;
   padding-left: 0;
-  border-left: 2px solid var(--background-modifier-border);
+  border-left: 1px solid var(--background-modifier-border);
   border-radius: 0;
   transition: all 400ms ease-in;
 }
@@ -19871,7 +19870,7 @@ body.folder-style-change-options-colorful.is-mobile .nav-folder-title {
 }
 
 body.folder-style-change-options-colorful .nav-folder-children .nav-folder-children {
-  border-left: 2px solid var(--text-muted);
+  border-left: 1px solid var(--text-muted);
 }
 
 body.folder-style-change-options-colorful.is-mobile .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-children {
