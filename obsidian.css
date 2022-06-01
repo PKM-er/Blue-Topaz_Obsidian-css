@@ -22180,10 +22180,16 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
   padding-right: 5px;;
 }
 .callout.callout[data-callout*=bookinfo] .callout-content td:nth-child(2) {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  display: table-cell;
   overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .callout.callout[data-callout*=bookinfo] .callout-content table {
+    width: 100%;
+}
+.callout.callout[data-callout*=bookinfo] .callout-content {
+  display: grid;
+}
 }
 /******callout timeline*****/
 .callout.callout[data-callout="timeline"] {
@@ -22442,7 +22448,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
   width: max(180px, 30%);
   max-width: 235px;
 	min-height: 235px;
-	padding: 30px 10px 10px 10px; 
+	padding-top: 1.5em; 
   font-family:  Arial;
   margin-top:20px;
   margin-right:  25px;
@@ -22455,7 +22461,10 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
   color: black;
   font-family: var(--font-family-vault);
 }
-.callout[data-callout="stickies3"] >.callout-content p { 
+div.is-live-preview .callout[data-callout="stickies3"] >.callout-content { 
+	padding: 20px 15px 10px 15px; 
+}
+.markdown-preview-view .callout[data-callout="stickies3"] >.callout-content p { 
 margin-block-start: 0.5em;
 margin-block-end: 0.5em;
 }
