@@ -3721,7 +3721,7 @@ body.all-dark .print.theme-light,
   --checkbox-color-6: #5f5f5f;
   --text-checked-checkbox: #8e8e8e;
 
-  --activeline-background: #468eeb1f;
+  --activeline-background: #468eeb15;
 
   /*pseudo-kanban*/
   --p-kanban-bg-color: #6c6c6c42;
@@ -3939,7 +3939,7 @@ body.all-dark .print.theme-light,
   --table-background-color: #f1f1f176;
   --table-background-color-odd: #ffffff70;
   --table-border-color: #7d7d7d;
-  --table-thead-background-color: #c2d3e1c7;
+  --table-thead-background-color: #dee6efd8;
   --table-hover-raw-color: #85bfee2f;
   --table-hover-color: #5dacec34;
   --table-hover-thead-color: #ddefff;
@@ -4021,7 +4021,7 @@ body.all-dark .print.theme-light,
   --checkbox-color-6: #5f5f5f;
   --text-checked-checkbox: #9b9b9b;
 
-  --activeline-background: #79b3ff21;
+  --activeline-background: #79b3ff15;
 
   /*pseudo-kanban*/
   --p-kanban-bg-color: #d3d3d32d;
@@ -4208,10 +4208,10 @@ body.color-scheme-options-avocado-topaz.theme-light {
 
   /*table*/
   --table-border-color: #7d7d7d;
-  --table-thead-background-color: #b3ccb7c7;
-  --table-hover-raw-color: #85bfee2f;
-  --table-hover-color: #5dacec34;
-  --table-hover-thead-color: #ddefff;
+  --table-thead-background-color: #dbe4dac7;
+  --table-hover-raw-color: #dbe4da57;
+  --table-hover-color: #dbe4da37;
+  --table-hover-thead-color: #dbe4da;
 
   /*calendar*/
   --calendar-week-color: #48b432;
@@ -4372,10 +4372,10 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --mermaid-seq-dia-color: #1371be;
 
   /*table*/
-  --table-thead-background-color: #557f5c63;
-  --table-hover-raw-color: #08569a21;
-  --table-hover-color: #1f65a221;
-  --table-hover-thead-color: #298c54c7;
+  --table-thead-background-color: #557f5c43;
+  --table-hover-raw-color: #557f5c23;
+  --table-hover-color: #557f5c23;
+  --table-hover-thead-color: #557f5c53;
 
   /*calendar*/
   --calendar-week-color: #a2df94;
@@ -4963,10 +4963,10 @@ body.color-scheme-options-pink-topaz.theme-light {
   /*table*/
 
   --table-border-color: #7d7d7d;
-  --table-thead-background-color: #f4d6e6c7;
+  --table-thead-background-color: #fad1e96f;
   --table-hover-raw-color: #fad1e92f;
-  --table-hover-color: #e4a9bb34;
-  --table-hover-thead-color: #c8a7bc66;
+  --table-hover-color: #fad1e92f;
+  --table-hover-thead-color: #fad1e98f;
 
   /*calendar*/
   --calendar-week-color: #b884a5c7;
@@ -5126,10 +5126,10 @@ body.color-scheme-options-pink-topaz.theme-dark {
 
   /*table*/
 
-  --table-thead-background-color: #a2718eab;
-  --table-hover-raw-color: #a76c8f45;
-  --table-hover-color: #a76c8f3b;
-  --table-hover-thead-color: #a75284ab;
+  --table-thead-background-color: #a76c8f45;
+  --table-hover-raw-color: #a76c8f25;
+  --table-hover-color: #a76c8f2b;
+  --table-hover-thead-color: #a76c8f35;
 
   /*calendar*/
   --calendar-week-color: #bb6396e6;
@@ -5620,6 +5620,7 @@ body.color-scheme-options-flamingo.theme-light {
   --table-color-calendar-2: rgb(214, 118, 146);
   --table-color-rgb: 214, 118, 146;
   --scrollbar-thumb: #f39ba050;
+  --activeline-background: #f39ba020;
 }
 
 body.color-scheme-options-flamingo.all-dark .print.theme-light,
@@ -5763,6 +5764,8 @@ body.color-scheme-options-flamingo.theme-dark {
   --table-color-calendar-2: rgb(215, 86, 125);
   --table-color-rgb: 215, 86, 125;
   --scrollbar-thumb: #e2bdbd50;
+
+  --activeline-background: #f39ba010;
 }
 
 body.color-scheme-options-flamingo.theme-light #calendar-container {
@@ -21199,8 +21202,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
     color: var(--text-normal) !important;
   }
 
-  .print .markdown-preview-view .callout.callout[data-callout="timeline"] >.callout-content
-  {
+  .print .markdown-preview-view .callout.callout[data-callout="timeline"] >.callout-content {
     display: grid !important;
   }
   .print .markdown-preview-view .callout.callout[data-callout="timeline"] .callout-content hr {
@@ -21208,7 +21210,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   }
   .print .markdown-preview-view .admonition-flex .admonition-content {
     display: flex !important;
-    } 
+  }
 }
 
 /* ================================== */
