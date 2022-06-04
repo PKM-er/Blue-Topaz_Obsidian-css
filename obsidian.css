@@ -13151,7 +13151,7 @@ body:not(.default-icons) .nav-folder-collapse-indicator svg {
 }
 
 body:not(.unmuted-collapsed-folder) .nav-folder.is-collapsed *:not(.is-being-renamed) {
-  opacity: 0.75;
+  opacity: 0.7;
 }
 
 body:not(.default-icons) .nav-folder.is-collapsed .nav-folder-collapse-indicator::after {
@@ -17892,6 +17892,14 @@ body:not(.image-zoom).is-mobile .markdown-reading-view img:not([class*="emoji"])
   background-image: initial;
   margin: initial;
   max-width: 100%;
+}
+
+.is-mobile .workspace-drawer-active-tab-container {
+  padding: 0;
+}
+
+.is-mobile .workspace-leaf-content[data-type="file-explorer"] .nav-folder.mod-root>.nav-folder-children {
+  padding-left: 6px;
 }
 
 /*=======================
