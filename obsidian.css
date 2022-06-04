@@ -430,6 +430,36 @@ settings:
     title.zh: 激活文件栏背景
     type: class-toggle
     default: false
+  -
+    id: bg-file-page-option
+    title: Image Picking (Dark mode)
+    title.zh: 图片选择
+    type: class-select
+    allowEmpty: false
+    default: file-page-bg-theme-dark-sea
+    options:
+      - 
+        label: Sea
+        value: file-page-bg-theme-dark-sea
+      - 
+        label: Plant
+        value: file-page-bg-theme-dark-plant
+      - 
+        label: Curves
+        value: file-page-bg-theme-dark-curves
+      - 
+        label: Random
+        value: file-page-bg-theme-dark-random
+      - 
+        label: Custom
+        value: file-page-bg-theme-dark-custom
+  -
+    id: background-file-page-theme-dark-custom
+    title: Custom Image (Dark mode)
+    description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片  url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
+    type: variable-text
+    default: url("https://") 
   - 
     id: layout-settings
     title: 1.3 Layout
@@ -3358,6 +3388,7 @@ body {
   --background-settings-workplace-theme-dark-custom: url("https://");
   --background-command-palette-theme-light-custom: url("https://");
   --background-command-palette-theme-dark-custom: url("https://");
+  --background-file-page-theme-dark-custom: url("https://");
   --blur-depth: 10px;
   --blur-depth-cp: 10px;
   --saturate-4-bg: 1;
@@ -13160,7 +13191,7 @@ body:not(.default-icons) .nav-folder.is-collapsed .nav-folder-collapse-indicator
 }
 
 body:not(.default-icons) .is-mobile .nav-folder.is-collapsed {
-  opacity: 0.65;
+  opacity: 0.6;
 }
 
 /*search icon 1*/
@@ -19079,8 +19110,24 @@ body.toggle-bg-file-page.theme-dark .nav-files-container::before {
   bottom: 0;
   left: 0;
   opacity: 0.2;
-  background: no-repeat center/cover url(https://images.unsplash.com/photo-1612434995720-89c1537a3009?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170);
+  background: no-repeat center/cover var(--file-page-background-url-theme);
   z-index: -1;
+}
+
+body.toggle-bg-file-page.file-page-bg-theme-dark-plant.theme-dark {
+  --file-page-background-url-theme: url(https://images.unsplash.com/photo-1538641351053-b85bffeb9b7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80);
+}
+body.toggle-bg-file-page.file-page-bg-theme-dark-curves.theme-dark {
+  --file-page-background-url-theme: url(https://images.unsplash.com/photo-1637946175559-22c4fe13fc54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80);
+}
+body.toggle-bg-file-page.file-page-bg-theme-dark-sea.theme-dark {
+  --file-page-background-url-theme: url(https://images.unsplash.com/photo-1612434995720-89c1537a3009?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170);
+}
+body.toggle-bg-file-page.file-page-bg-theme-dark-random.theme-dark {
+  --file-page-background-url-theme: url(https://source.unsplash.com/random?dark);
+}
+body.toggle-bg-file-page.file-page-bg-theme-dark-custom.theme-dark {
+  --file-page-background-url-theme: var(--background-file-page-theme-dark-custom);
 }
 
 /*
