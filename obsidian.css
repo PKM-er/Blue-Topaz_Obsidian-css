@@ -13159,6 +13159,10 @@ body:not(.default-icons) .nav-folder.is-collapsed .nav-folder-collapse-indicator
   opacity: 0.65;
 }
 
+body:not(.default-icons) .is-mobile .nav-folder.is-collapsed {
+  opacity: 0.65;
+}
+
 /*search icon 1*/
 body:not(.default-icons) .backlink-pane .search-result-container .collapse-icon {
   left: 0;
