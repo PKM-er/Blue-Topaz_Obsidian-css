@@ -13150,13 +13150,13 @@ body:not(.default-icons) .nav-folder-collapse-indicator svg {
   width: 7px;
 }
 
-body:not(.unmuted-collapsed-folder) .nav-folder.is-collapsed *:not(.is-being-renamed) {
-  opacity: 0.7;
+body:not(.unmuted-collapsed-folder) .nav-folder.is-collapsed .nav-folder-title-content:not(.is-being-renamed) {
+  opacity: 0.65;
 }
 
 body:not(.default-icons) .nav-folder.is-collapsed .nav-folder-collapse-indicator::after {
   transform: rotate(-90deg);
-  opacity: 0.7;
+  opacity: 0.65;
 }
 
 /*search icon 1*/
@@ -17896,10 +17896,6 @@ body:not(.image-zoom).is-mobile .markdown-reading-view img:not([class*="emoji"])
 
 .is-mobile .workspace-drawer-active-tab-container {
   padding: 0;
-}
-
-.is-mobile .workspace-leaf-content[data-type="file-explorer"] .nav-folder.mod-root>.nav-folder-children {
-  padding-left: 6px;
 }
 
 /*=======================
