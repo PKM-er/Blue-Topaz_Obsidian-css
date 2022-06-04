@@ -7995,7 +7995,7 @@ body.color-scheme-options-lilac.theme-light #calendar-container {
 }
 
 body.reduce-bottom-padding :is(.markdown-preview-view,.markdown-rendered) .markdown-preview-sizer,
-body.reduce-bottom-padding .cm-s-obsidian .cm-content {
+body.reduce-bottom-padding:not(.plugin-cm-typewriter-scroll) .cm-s-obsidian .cm-content {
   padding-bottom: var(--bottom-padding-value) !important;
 }
 
@@ -22870,5 +22870,5 @@ content: "";
 }
 /*禁用点击超链接跳转 需要跳转 按ctrl+超链接即可*/
 body.link-click .cm-s-obsidian span.cm-link {
-  pointer-events:none ;
+  pointer-events: none;
 }
