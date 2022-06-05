@@ -3604,7 +3604,7 @@ body.all-dark .print.theme-light,
   --background-mobile-drawer-2: #1b1b1b69;
   --background-modifier-border-hr: #3f3f3f;
   --background-modifier-border-asymm: #343434;
-
+  --background-modifier-border-checkbox: #7b7b7b;
   --background-transparent-black-or-white-1: #1b1b1b9a;
   --background-transparent-black-or-white-2: #1e1e1ebd;
   --background-transparent-black-or-white-3: #2f2f2f6c;
@@ -3859,7 +3859,7 @@ body.all-dark .print.theme-light,
   --background-secondary: #fcfcfc;
   --background-secondary-alt: #eeeeee;
   --background-accent: #fff;
-  --background-modifier-border: #dadada;
+  --background-modifier-border: #dddddd;
   --background-modifier-form-field: #fff;
   --background-modifier-form-field-highlighted: #fff;
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.08);
@@ -3910,8 +3910,9 @@ body.all-dark .print.theme-light,
 
   --background-mobile-drawer-1: #ffffff;
   --background-mobile-drawer-2: #ffffff;
-  --background-modifier-border-hr: #b9b9b9;
+  --background-modifier-border-hr: #bfbfbf;
   --background-modifier-border-asymm: #d8d8d8;
+  --background-modifier-border-checkbox: #9c9c9c;
   --background-secondary-alt-bg-4-bt-publish: #f6f6f6;
 
   --background-transparent-black-or-white-1: #ffffffb0;
@@ -9736,7 +9737,7 @@ input[type=checkbox] {
   -webkit-appearance: none;
   appearance: none;
   border-radius: var(--radius-xs);
-  border: 1px solid var(--background-modifier-border);
+  border: 1px solid var(--background-modifier-border-checkbox);
   padding: 0;
   margin:  0 7px 2px 3px;
   width: var(--checkbox-size);
