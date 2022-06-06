@@ -2768,6 +2768,14 @@ settings:
     type: variable-text
     default: 1px
   -
+    id: tag-click
+    title: Cancel click the tag to trigger auto-jump
+    title.zh: 取消实时预览模式下点击标签自动跳转
+    type: class-toggle
+    default: false
+    description: You can jump by clicking on the # marks in the tags
+    description.zh: 可以通过点击标签中的#号跳转
+  -
     id: style-options-for-other-plugins
     title: 3. For Plugins
     title.zh: 3. 插件样式
@@ -22926,5 +22934,11 @@ content: "";
 }
 /*禁用点击超链接跳转 需要跳转 按ctrl+超链接即可*/
 body.link-click .cm-s-obsidian span.cm-link {
+  pointer-events: none;
+}
+
+/*禁用实时预览点击标签跳转 需要跳转 点击#号即可*/
+
+body.tag-click .cm-line span.cm-hashtag:not(.cm-formatting) {
   pointer-events: none;
 }
