@@ -21375,6 +21375,8 @@ body:not(.default-loading-page).loading-custom-text.loading-text-shinning-style.
     color-changing-style 3s infinite;
 }
 
+/* the mario animation was created by @B.C.Rikko https://bcrikko.github.io/css-collection/other/mario/index.html */
+
 body:not(.default-loading-page).loading-page-style-mario .progress-bar-message:before {
 content: "";
   position: relative;
