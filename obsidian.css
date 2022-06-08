@@ -1430,6 +1430,8 @@ settings:
     id: text-indentation-two-em
     title: Slight Indentation of the First Line in Preview Mode
     title.zh: 段落首行缩进（预览模式）
+    description.zh: 需要安装Contextual Typography插件
+    description: Contextual Typography plugin needs to be installed
     type: class-toggle
     default: false
   -
@@ -9256,9 +9258,36 @@ p {
   margin-block-end: calc(var(--paragraph-spacing)*1em);
 }
 
-body.text-indentation-two-em *:not(blockquote) > p {
+
+
+:is(.markdown-preview-view,.markdown-rendered) p>br {
+  content:" ";
+  margin-top: calc((var(--paragraph-spacing) - 1)*1em);
+  display: block;
+}
+
+
+.markdown-source-view.mod-cm6 div.cm-line {
+  padding-bottom: calc((var(--paragraph-spacing) - 1)*1em)!important;
+}
+body.text-indentation-two-em .markdown-source-view.mod-cm6 div.cm-line:not(.HyperMD-header) {
   text-indent: 2em;
 }
+
+body.text-indentation-two-em [data-type="markdown"] div[class="el-p"]:not(blockquote) > p {
+  text-indent: 2em;
+}
+body.text-indentation-two-em [data-type="markdown"] div[class="el-p"]:not(blockquote) > p>br {
+  content: ' ';
+  white-space: pre;
+  line-height: calc((var(--paragraph-spacing) + 0.3)*1em);
+  display:unset;
+}
+body.text-indentation-two-em [data-type="markdown"] div[class="el-p"]:not(blockquote) > p>br::after {
+  content: '\A         ';
+}
+
+
 
 /*edit mode blockquote font size*/
 .cm-s-obsidian span.cm-quote {
@@ -11946,6 +11975,12 @@ body:not(.remove-heading-indicator) .callout-content :is(h1, h2, h3, h4, h5, h6)
   overflow: hidden;
   margin-top: 20px;
   resize: both !important;
+}
+
+body .markdown-preview-view th,
+body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th,
+body .table-view-table>thead>tr>th {
+    background-image: none
 }
 /*修复Itinerary插件显示问题*/
 :is(.markdown-preview-view,.markdown-rendered) :is(.markdown-preview-section,.markdown-rendered) .block-language-itinerary.fc table {
@@ -22700,6 +22735,8 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
 [data-callout*=indent]) .callout-content p br {
   content: '';
   white-space: pre;
+  line-height: calc((var(--paragraph-spacing) + 0.3)*1em);
+  display:unset;
 }
 .callout.callout:is([data-callout-metadata*="indent"], 
 [data-callout*=indent]) .callout-content>p {
