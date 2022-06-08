@@ -3913,7 +3913,9 @@ body.all-dark .print.theme-light,
   --cursor-green: #7dff7d;
   --cursor-blue: #8ac7ff;
   --cursor-violet: #bf76ff;
-
+  
+  --bg-color-settings-0: #69696938;
+  --bg-color-settings-0-1: #ffffff00;
   --bg-color-settings-1: #a7a7a722;
   --bg-color-settings-2: #1717174c;
   --bg-color-settings-3: #141414be;
@@ -3989,6 +3991,11 @@ body.all-dark .print.theme-light,
   --background-black-or-white-1: #e4e4e4;
   --background-modifier-border-1: #e1dfdf;
   --background-transparent-blue: #c6e5ffde;
+  --bg-color-settings-0: #6e6e6e4f;
+  --bg-color-settings-0-1: #ffffff44;
+  --bg-color-settings-1: #ffffff17;
+  --bg-color-settings-2: #cdcdcd4c;
+  --bg-color-settings-3: #ffffffda;
 
   --scrollbar-thumb: #c6c6c6a8;
 
@@ -4123,7 +4130,6 @@ body.all-dark .print.theme-light,
   --text-purple: #5d1fb9;
   --text-pink: #c40075;
   --text-red: #ff4343;
-
   --background-gray: #ebeced;
   --background-brown: #e9e5e3;
   --background-orange: #faebdd;
@@ -4197,10 +4203,6 @@ body.all-dark .print.theme-light,
   --checklist-color-5: #ffe0b2ab;
   --checklist-color-6: #ffcdd2ab;
   --checklist-color-7: #e1bee7ab;
-
-  --bg-color-settings-1: #ffffff17;
-  --bg-color-settings-2: #cdcdcd4c;
-  --bg-color-settings-3: #ffffffda;
 
   --table-color-calendar-2: rgb(167, 223, 251);
   --table-color-rgb: 167, 223, 251;
@@ -17369,12 +17371,16 @@ body.transparent-setting-panel .vertical-tab-header {
   backdrop-filter: blur(0) !important;	
 }
 
+.prompt {
+  background-color: var(--bg-color-settings-1);
+}
+
 .modal-bg {
+  background-color: var(--bg-color-settings-0);  
   backdrop-filter: blur(5px);	
 }
-.modal-bg,
 .modal.mod-settings {
-  background-color: transparent;
+  background-color: var(--bg-color-settings-0-1);
 }
 .modal.mod-settings {
   border: none;
