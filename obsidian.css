@@ -2515,6 +2515,10 @@ settings:
       - 
         label: Animation with Position Changing
         value: loading-shape-with-custom-gif
+      - 
+        label: Jumping Mario
+        value: loading-page-style-mario
+
   -
     id: loading-custom-text-folder
     title: 2.3.16.1 Custom Text
@@ -3442,7 +3446,11 @@ body {
   --loading-text-after: "✿❀";
   --loading-add-text-color: #d47e86;
   --loading-add-text-color-alt: #a4e39c;
-  
+  --pixel: 20px;
+  --c-1: #da2400;
+  --c-2: #ffb623;
+  --c-3: #8c6e22;
+
   --nord0: #2E3440;
   --nord1: #3B4252;
   --nord1-1: #3B425251;
@@ -21365,6 +21373,613 @@ body:not(.default-loading-page).loading-custom-text.loading-text-shinning-style.
     shinning-style 3s infinite,
     color-changing-style 3s infinite;
 }
+
+body:not(.default-loading-page).loading-page-style-mario .progress-bar-message:before {
+content: "";
+  position: relative;
+  visibility: visible !important;
+  display: block;
+  top: calc(var(--pixel) * -1);
+  left: calc(var(--pixel) * -1);
+  width: var(--pixel);
+  height: var(--pixel);
+  background: transparent;
+  animation: sprite 0.618s infinite, jump 0.618s infinite;
+}
+
+@keyframes jump {
+  from, 25%, 75%, to {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(calc(var(--pixel) * -8));
+  }
+}
+
+@keyframes sprite {
+  from, 24%, 74%, to {
+    box-shadow:
+      /* r:1 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 1) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 1) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 1) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 1) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 1) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 13) calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 14) calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 1) 0 transparent,
+      
+      /* r:2 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 2) 0 transparent,
+      
+      /* r:3 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 3) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 3) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 3) 0 var(--c-3),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 3) 0 var(--c-2),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 3) 0 var(--c-2),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 3) 0 var(--c-3),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 3) 0 var(--c-2),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 14) calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 3) 0 transparent,
+      
+      /* r:4 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 4) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 4) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 4) 0 var(--c-3),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 4) 0 transparent,
+      
+      /* r:5 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 5) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 5) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 5) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 5) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 5) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 5) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 5) 0 var(--c-3),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 5) 0 var(--c-3),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 5) 0 transparent,
+      
+      /* r:6 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 6) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 6) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 6) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 6) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 6) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 6) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 6) 0 var(--c-3),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 6) 0 var(--c-3),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 6) 0 var(--c-3),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 6) 0 var(--c-3),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 6) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 6) 0 transparent,
+      
+      /* r:7 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 7) 0 transparent,
+      
+      /* r:8 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 8) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 8) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 8) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 8) 0 var(--c-3),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 8) 0 var(--c-3),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 8) 0 var(--c-3),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 13) calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 14) calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 8) 0 transparent,
+      
+      /* r:9 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 9) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 9) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 9) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 9) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 9) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 9) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 9) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 9) 0 transparent,
+      
+      /* r:10 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 10) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 10) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 10) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 10) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 10) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 10) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 10) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 10) 0 transparent,
+      
+      /* r:11 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 11) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 11) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 11) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 11) 0 var(--c-2),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 11) 0 var(--c-2),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 11) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 11) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 11) 0 var(--c-2),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 11) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 11) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 11) 0 var(--c-2),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 11) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 11) 0 var(--c-3),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 11) 0 var(--c-2),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 11) 0 var(--c-2),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 11) 0 transparent,
+      
+      /* r:12 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 12) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 12) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 12) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 12) 0 transparent,
+      
+      /* r:13 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 13) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 13) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 13) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 13) 0 var(--c-2),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 13) 0 var(--c-2),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 13) 0 var(--c-2),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 13) 0 var(--c-2),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 13) 0 transparent,
+      
+      /* r:14 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 10) calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 11) calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 14) 0 transparent,
+      
+      /* r:15 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 15) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 15) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 15) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 10) calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 11) calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 12) calc(var(--pixel) * 15) 0 var(--c-3),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 15) 0 var(--c-3),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 15) 0 var(--c-3),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 15) 0 transparent,
+
+      /* r:16 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 16) 0 var(--c-3),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 16) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 16) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 16) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 10) calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 11) calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 12) calc(var(--pixel) * 16) 0 var(--c-3),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 16) 0 var(--c-3),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 16) 0 var(--c-3),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 16) 0 var(--c-3),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 16) 0 transparent;
+  }
+
+  25%, 75% {
+    box-shadow:
+      /* r:1 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 10) calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 11) calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 12) calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 13) calc(var(--pixel) * 1) 0 transparent,
+      calc(var(--pixel) * 14) calc(var(--pixel) * 1) 0 var(--c-2),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 1) 0 var(--c-2),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 1) 0 var(--c-2),
+
+      /* r:2 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 2) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 13) calc(var(--pixel) * 2) 0 transparent,
+      calc(var(--pixel) * 14) calc(var(--pixel) * 2) 0 var(--c-2),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 2) 0 var(--c-2),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 2) 0 var(--c-2),
+      
+      /* r:3 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 3) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 3) 0 var(--c-1),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 3) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 3) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 3) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 3) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 3) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 3) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 3) 0 var(--c-1),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 3) 0 var(--c-1),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 3) 0 var(--c-2),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 3) 0 var(--c-2),
+      
+      /* r:4 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 4) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 4) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 4) 0 var(--c-3),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 4) 0 var(--c-3),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 4) 0 transparent,
+      calc(var(--pixel) * 14) calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 4) 0 var(--c-2),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 4) 0 var(--c-2),
+      
+      /* r:5 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 5) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 5) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 5) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 5) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 5) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 5) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 5) 0 var(--c-3),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 5) 0 var(--c-2),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 5) 0 var(--c-3),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 5) 0 var(--c-3),
+      
+      /* r:6 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 6) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 6) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 6) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 6) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 6) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 6) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 6) 0 var(--c-3),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 6) 0 var(--c-3),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 6) 0 var(--c-2),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 6) 0 var(--c-3),
+      
+      /* r:7 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 7) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 7) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 7) 0 var(--c-2),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 7) 0 var(--c-3),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 7) 0 var(--c-3),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 7) 0 var(--c-3),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 7) 0 var(--c-3),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 7) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 7) 0 transparent,
+      
+      /* r:8 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 8) 0 var(--c-2),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 8) 0 var(--c-2),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 8) 0 var(--c-2),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 8) 0 var(--c-2),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 8) 0 var(--c-2),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 8) 0 var(--c-2),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 8) 0 var(--c-2),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 8) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 8) 0 transparent,
+      
+      /* r:9 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 9) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 9) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 9) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 9) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 9) 0 var(--c-3),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 9) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 9) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 9) 0 transparent,
+      
+      /* r:10 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 10) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 10) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 10) 0 var(--c-3),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 10) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 10) 0 transparent,
+      calc(var(--pixel) * 14) calc(var(--pixel) * 10) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 10) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 10) 0 var(--c-3),
+      
+      /* r:11 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 11) 0 var(--c-2),
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 11) 0 var(--c-2),
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 11) 0 var(--c-3),
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 11) 0 var(--c-3),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 11) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 11) 0 var(--c-3),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 11) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 11) 0 var(--c-3),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 11) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 11) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 11) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 11) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 11) 0 var(--c-1),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 11) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 11) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 11) 0 var(--c-3),
+      
+      /* r:12 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 12) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 12) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 12) 0 var(--c-3),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 12) 0 var(--c-2),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 12) 0 var(--c-1),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 12) 0 var(--c-3),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 12) 0 var(--c-3),
+      
+      /* r:13 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 13) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 13) 0 var(--c-2),
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 13) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 13) 0 var(--c-3),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 13) 0 transparent,
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 13) 0 var(--c-1),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 13) 0 var(--c-3),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 13) 0 var(--c-3),
+      
+      /* r:14 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 14) 0 transparent,
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 14) 0 var(--c-3),
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 14) 0 var(--c-3),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 14) 0 var(--c-3),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 14) calc(var(--pixel) * 14) 0 var(--c-1),
+      calc(var(--pixel) * 15) calc(var(--pixel) * 14) 0 var(--c-3),
+      calc(var(--pixel) * 16) calc(var(--pixel) * 14) 0 var(--c-3),
+      
+      /* r:15 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 15) 0 var(--c-3),
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 15) 0 var(--c-3),
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 15) 0 var(--c-3),
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 15) 0 var(--c-1),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 15) 0 var(--c-1),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 15) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 15) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 15) 0 var(--c-1),
+      calc(var(--pixel) * 10) calc(var(--pixel) * 15) 0 var(--c-1),
+      calc(var(--pixel) * 11) calc(var(--pixel) * 15) 0 var(--c-1),
+      calc(var(--pixel) * 12) calc(var(--pixel) * 15) 0 var(--c-1),
+      calc(var(--pixel) * 13) calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 14) calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 15) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 15) 0 transparent,
+      
+      /* r:16 */ 
+      calc(var(--pixel) * 1)  calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 2)  calc(var(--pixel) * 16) 0 var(--c-3),
+      calc(var(--pixel) * 3)  calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 4)  calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 5)  calc(var(--pixel) * 16) 0 var(--c-1),
+      calc(var(--pixel) * 6)  calc(var(--pixel) * 16) 0 var(--c-1),
+      calc(var(--pixel) * 7)  calc(var(--pixel) * 16) 0 var(--c-1),
+      calc(var(--pixel) * 8)  calc(var(--pixel) * 16) 0 var(--c-1),
+      calc(var(--pixel) * 9)  calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 10) calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 11) calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 12) calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 13) calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 14) calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 15) calc(var(--pixel) * 16) 0 transparent,
+      calc(var(--pixel) * 16) calc(var(--pixel) * 16) 0 transparent;
+  }
+}
+
 
 /*加载画面的进度条框*/
 body:not(.default-loading-page) .progress-bar-line {
