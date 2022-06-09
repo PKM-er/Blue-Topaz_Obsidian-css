@@ -10,12 +10,6 @@ name: Blue Topaz Theme
 id: blue-topaz-theme
 settings:
   - 
-    id: translucent-setting-panel
-    title: Translucent Setting Panel
-    title.zh: 半透明窗口
-    type: class-toggle
-    default: false
-  - 
     id: transparent-setting-panel
     title: Translucent Setting Panel
     title.zh: 透明窗口
@@ -2346,8 +2340,8 @@ settings:
     default: false
   -
     id: cursor-color-temp
-    title: Cursor color (for Obsidian v0.14.6)
-    title.zh: 光标颜色 (适合软件v0.14.6版本)
+    title: Cursor color (Only for Obsidian version below 0.14.6)
+    title.zh: 光标颜色 (只适合软件v0.14.6以下版本)
     type: variable-themed-color
     opacity: true
     format: hex
@@ -2355,8 +2349,8 @@ settings:
     default-dark: '#'
   -
     id: fancy-cursor
-    title: Toggle fancy cursor (for Obsidian v0.14.6)
-    title.zh: 切换装饰性光标 (适合软件v0.14.6版本)
+    title: Toggle fancy cursor (Only for Obsidian version below 0.14.6)
+    title.zh: 切换装饰性光标 (只适合软件v0.14.6以下版本)
     type: class-toggle
     default: false
   -
@@ -2781,6 +2775,29 @@ settings:
     title.zh: 标签边框宽度
     type: variable-text
     default: 1px
+  -
+    id: tag-color-settings
+    title: 2.3.18 Setting, Menu, Option panes
+    title.zh: 2.3.18 设置、菜单、选项面板
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: setting-etc-pane-style
+    title: Pane Style
+    type: class-select
+    allowEmpty: false
+    default: setting-default-frosted-glass
+    options:
+      - 
+        label: Frosted Glass
+        value: setting-default-frosted-glass
+      - 
+        label: Traditional
+        value: setting-style-traditional
+      - 
+        label: Translucent (only for setting panel)
+        value: translucent-setting-panel
   -
     id: style-options-for-other-plugins
     title: 3. For Plugins
@@ -3579,34 +3596,6 @@ body {
   --paragraph-spacing: 1;
 }
 
-body.font-family-change-to-default .markdown-source-view,
-body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered),
-body.font-family-change-to-default .markdown-source-view.mod-cm6 .cm-scroller,
-body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) h5,
-body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) h6,
-body.font-family-change-to-default .nav-file-title,
-body.font-family-change-to-default .nav-folder-title,
-body.font-family-change-to-default a.tag,
-body.font-family-change-to-default .cm-s-obsidian span.cm-hashtag,
-body.font-family-change-to-default .nav-folder.mod-root>.nav-folder-title,
-body.font-family-change-to-default pre.frontmatter.language-yaml::before,
-body.font-family-change-to-default span.cm-strong,
-body.font-family-change-to-default :not(font)>strong,
-body.font-family-change-to-default a,
-body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) .internal-link,
-body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) th,
-body.font-family-change-to-default *:not(font)>em>strong,
-body.font-family-change-to-default *:not(font)>strong>em,
-body.font-family-change-to-default .cm-strong.cm-em {
-  font-family: unset !important;
-}
-
-body.font-family-change-to-default .cm-s-obsidian .cm-hmd-frontmatter,
-body.font-family-change-to-default .markdown-rendered code,
-body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) code{
-  font-family: 'Source Code Pro', monospace !important;
-}
-
 body.all-dark .print.theme-light,
 .theme-dark {
   --background-primary: #222222;
@@ -3883,6 +3872,7 @@ body.all-dark .print.theme-light,
 
   /*style settings*/
   --background-secondary-translucent: #2c2c2c26;
+  --background-secondary-translucent-1: #2c2c2c26;
 
   /*rainbow-checklist*/
   --checklist-color-1: #005aa486;
@@ -3916,11 +3906,12 @@ body.all-dark .print.theme-light,
   --cursor-blue: #8ac7ff;
   --cursor-violet: #bf76ff;
   
-  --bg-color-settings-0: #69696938;
+  --bg-color-settings-0: #21212125;
   --bg-color-settings-0-1: #ffffff00;
   --bg-color-settings-1: #a7a7a722;
   --bg-color-settings-2: #1717174c;
   --bg-color-settings-3: #141414be;
+  --bg-color-settings-4: #6565656c;
 }
 
 .theme-light {
@@ -3993,11 +3984,12 @@ body.all-dark .print.theme-light,
   --background-black-or-white-1: #e4e4e4;
   --background-modifier-border-1: #e1dfdf;
   --background-transparent-blue: #c6e5ffde;
-  --bg-color-settings-0: #6e6e6e4f;
-  --bg-color-settings-0-1: #ffffff44;
+  --bg-color-settings-0: #7d7d7d6b;
+  --bg-color-settings-0-1: #ffffff77;
   --bg-color-settings-1: #ffffff17;
-  --bg-color-settings-2: #cdcdcd4c;
+  --bg-color-settings-2: #ffffff42;
   --bg-color-settings-3: #ffffffda;
+  --bg-color-settings-4: #ffffffd2;
 
   --scrollbar-thumb: #c6c6c6a8;
 
@@ -4196,6 +4188,7 @@ body.all-dark .print.theme-light,
 
   /*style settings*/
   --background-secondary-translucent: #ffffff3d;
+  --background-secondary-translucent-1: #ffffff5d;
 
   /*rainbow-checklist*/
   --checklist-color-1: #bbdefbab;
@@ -4446,9 +4439,6 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --text-checked-checkbox: #9b9b9b;
 
   --activeline-background: #d1f0e521;
-
-  /*style settings*/
-  --background-secondary-translucent: #ffffff3d;
 
   --table-color-calendar-2: rgb(182, 221, 191);
   --table-color-rgb: 182, 221, 191;
@@ -7817,9 +7807,6 @@ body.color-scheme-options-lilac.theme-light {
 
   --interactive-hover: #dbdbdc;
 
-  /*style settings*/
-  --background-secondary-translucent: #ffffff3d;
-
   --table-color-calendar-2: rgb(211, 161, 247);
   --table-color-rgb: 211, 161, 247;
 }
@@ -8038,9 +8025,6 @@ body.color-scheme-options-lilac.theme-dark {
 
   --interactive-hover: #dbdbdc;
 
-  /*style settings*/
-  --background-secondary-translucent: #2c2c2c26;
-
   --table-color-calendar-2: rgb(98, 36, 143);
   --table-color-rgb: 98, 36, 143;
 }
@@ -8091,10 +8075,36 @@ body.color-scheme-options-lilac.theme-dark #calendar-container {
 body.color-scheme-options-lilac.theme-light #calendar-container {
   --theme-color-translucent-3: #dccaffb0;
 }
-
 /*======@awyugan--end========*/
 
-/*===========*/
+body.font-family-change-to-default .markdown-source-view,
+body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered),
+body.font-family-change-to-default .markdown-source-view.mod-cm6 .cm-scroller,
+body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) h5,
+body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) h6,
+body.font-family-change-to-default .nav-file-title,
+body.font-family-change-to-default .nav-folder-title,
+body.font-family-change-to-default a.tag,
+body.font-family-change-to-default .cm-s-obsidian span.cm-hashtag,
+body.font-family-change-to-default .nav-folder.mod-root>.nav-folder-title,
+body.font-family-change-to-default pre.frontmatter.language-yaml::before,
+body.font-family-change-to-default span.cm-strong,
+body.font-family-change-to-default :not(font)>strong,
+body.font-family-change-to-default a,
+body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) .internal-link,
+body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) th,
+body.font-family-change-to-default *:not(font)>em>strong,
+body.font-family-change-to-default *:not(font)>strong>em,
+body.font-family-change-to-default .cm-strong.cm-em {
+  font-family: unset !important;
+}
+
+body.font-family-change-to-default .cm-s-obsidian .cm-hmd-frontmatter,
+body.font-family-change-to-default .markdown-rendered code,
+body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) code{
+  font-family: 'Source Code Pro', monospace !important;
+}
+
 /* page-size in edit mode*/
 :is(.markdown-preview-view,.markdown-rendered) .markdown-preview-sizer,
 .markdown-source-view .CodeMirror {
@@ -17385,13 +17395,8 @@ span.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight.hmd-hidd
 }
 
 /*translucent setting panel*/
-body.translucent-setting-panel .modal.mod-settings .vertical-tab-content-container {
-  background-color: var(--background-secondary-translucent) !important;
-}
-
-body.translucent-setting-panel .modal-bg,
-body.translucent-setting-panel .vertical-tab-header {
-  background-color: var(--background-secondary-translucent) !important;
+body.translucent-setting-panel .modal-bg {
+  background-color: var(--background-secondary-translucent-1);
 }
 
 body.transparent-setting-panel .modal.mod-settings .vertical-tab-content-container,
@@ -17401,56 +17406,65 @@ body.transparent-setting-panel .vertical-tab-content {
 }
 
 body.transparent-setting-panel .modal-bg,
-body.transparent-setting-panel .vertical-tab-header {
+body.transparent-setting-panel .modal.mod-settings {
   background-color: var(--background-secondary-translucent) !important;
   backdrop-filter: blur(0) !important;	
 }
 
-.prompt {
-  background-color: var(--bg-color-settings-1);
+body:not(.setting-style-traditional) .prompt {
+  background-color: var(--bg-color-settings-4);
+  backdrop-filter: blur(3px);	
 }
 
-.modal-bg {
-  background-color: var(--bg-color-settings-0);  
-  backdrop-filter: blur(5px);	
-}
-.modal.mod-settings {
-  background-color: var(--bg-color-settings-0-1);
-}
-.modal.mod-settings {
-  border: none;
-}
-.vertical-tab-header {
-  background-color: var(--bg-color-settings-1);
+body:not(.setting-style-traditional).theme-dark .prompt {
   backdrop-filter: blur(8px);	
 }
 
-.horizontal-tab-nav-item, 
-.vertical-tab-nav-item {
+body:not(.setting-style-traditional) .modal-bg {
+  background-color: var(--bg-color-settings-0);  
+  backdrop-filter: blur(5px);	
+}
+body:not(.setting-style-traditional) .modal.mod-settings {
+  background-color: var(--bg-color-settings-0-1);
+  backdrop-filter: blur(3px);	
+}
+body:not(.setting-style-traditional) .modal.mod-settings {
+  border: none;
+}
+body:not(.setting-style-traditional) .vertical-tab-header {
+  background-color: var(--bg-color-settings-1);
+}
+
+body:not(.setting-style-traditional) .horizontal-tab-nav-item, 
+body:not(.setting-style-traditional) .vertical-tab-nav-item {
   background-color: transparent;
 }
 
-.horizontal-tab-nav-item:hover, 
-.vertical-tab-nav-item:hover,
-.horizontal-tab-nav-item.is-active, 
-.vertical-tab-nav-item.is-active {
+body:not(.setting-style-traditional) .horizontal-tab-nav-item:hover, 
+body:not(.setting-style-traditional) .vertical-tab-nav-item:hover,
+body:not(.setting-style-traditional) .horizontal-tab-nav-item.is-active, 
+body:not(.setting-style-traditional) .vertical-tab-nav-item.is-active {
   background-color: var(--bg-color-settings-2);
 }
 
-.horizontal-tab-content, 
-.vertical-tab-content {
+body:not(.setting-style-traditional) .horizontal-tab-content, 
+body:not(.setting-style-traditional) .vertical-tab-content {
   background-color: var(--bg-color-settings-3);
 }
 
-body:is(.transparent-setting-panel,.translucent-setting-panel) .modal,
-body:is(.transparent-setting-panel,.translucent-setting-panel) .modal.mod-settings,
-body:is(.transparent-setting-panel,.translucent-setting-panel) .vertical-tab-content {
+body.translucent-setting-panel .vertical-tab-content {
+  background-color: var(--bg-color-settings-1);
+}
+
+body.transparent-setting-panel .modal,
+body.transparent-setting-panel .modal.mod-settings,
+body.transparent-setting-panel .vertical-tab-content {
   background-color: transparent !important;
 }
 
-body:is(.transparent-setting-panel,.translucent-setting-panel) .vertical-tab-header,
-body:is(.transparent-setting-panel,.translucent-setting-panel) .horizontal-tab-nav-item, 
-body:is(.transparent-setting-panel,.translucent-setting-panel) .vertical-tab-nav-item {
+body.transparent-setting-panel .vertical-tab-header,
+body.transparent-setting-panel .horizontal-tab-nav-item, 
+body.transparent-setting-panel .vertical-tab-nav-item {
   background-color: var(--background-secondary-translucent) !important;
 }
 
