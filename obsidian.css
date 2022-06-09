@@ -18210,6 +18210,10 @@ body.style-options-for-buttons-plugin  button.g_yellow {
 }
 
 button.tiny {
+  border-radius: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1em;
   min-width:3.5em;
   cursor: pointer;
@@ -18220,7 +18224,7 @@ button.tiny {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 35px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 35px, rgba(0, 0, 0, 0.05) 0px 5px 5px;
 }
 button.tiny:hover {
   color: var(--text-on-accent);
@@ -22401,6 +22405,20 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   .print .markdown-preview-view .admonition-flex .admonition-content {
     display: flex !important;
   }
+
+  body.text-indentation-two-em  .print *:not(blockquote) > p {
+    text-indent: 2em;
+  }
+  body.text-indentation-two-em   .print *:not(blockquote) > p>br {
+    content: ' ';
+    white-space: pre;
+    line-height: calc((var(--paragraph-spacing) + 0.3)*1em);
+    display:unset;
+  }
+  body.text-indentation-two-em   .print *:not(blockquote) > p>br::after {
+    content: '\A         ';
+  }
+  
 }
 
 /* ================================== */
