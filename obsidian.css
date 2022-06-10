@@ -3909,7 +3909,7 @@ body.all-dark .print.theme-light,
   --bg-color-settings-0: #07070747;
   --bg-color-settings-0-1: #ffffff00;
   --bg-color-settings-1: #7c7c7c6d;
-  --bg-color-settings-2: #2a2a2a30;
+  --bg-color-settings-2: #1f1f1f52;
   --bg-color-settings-3: #141414be;
   --bg-color-settings-4: #6565656c;
 }
@@ -3987,7 +3987,7 @@ body.all-dark .print.theme-light,
   --bg-color-settings-0: #7d7d7d6b;
   --bg-color-settings-0-1: #ffffff77;
   --bg-color-settings-1: #ffffff17;
-  --bg-color-settings-2: #ffffff42;
+  --bg-color-settings-2: #ffffff5a;
   --bg-color-settings-3: #ffffffda;
   --bg-color-settings-4: #ffffffd2;
 
@@ -13647,6 +13647,93 @@ ul.contains-task-list .list-collapse-indicator.collapse-indicator.collapse-icon:
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iMTI4MC4wMDAwMDBwdCIgaGVpZ2h0PSI2NDAuMDAwMDAwcHQiIHZpZXdCb3g9IjAgMCAxMjgwLjAwMDAwMCA2NDAuMDAwMDAwIgogcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgbWVldCI+CjxtZXRhZGF0YT4KQ3JlYXRlZCBieSBwb3RyYWNlIDEuMTUsIHdyaXR0ZW4gYnkgUGV0ZXIgU2VsaW5nZXIgMjAwMS0yMDE3CjwvbWV0YWRhdGE+CjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLDY0MC4wMDAwMDApIHNjYWxlKDAuMTAwMDAwLC0wLjEwMDAwMCkiCmZpbGw9IiMyMTk2ZjMiIHN0cm9rZT0ibm9uZSI+CjxwYXRoIGQ9Ik0xMCA2MzkyIGMwIC00IDE0MzggLTE0NDUgMzE5NSAtMzIwMiBsMzE5NSAtMzE5NCAzMTk1IDMxOTQgYzE3NTcKMTc1NyAzMTk1IDMxOTggMzE5NSAzMjAyIDAgNSAtMjg3NSA4IC02MzkwIDggLTM1MTUgMCAtNjM5MCAtMyAtNjM5MCAtOHoiLz4KPC9nPgo8L3N2Zz4K);
 }
 
+/*translucent setting panel*/
+body.translucent-setting-panel .modal-bg {
+  background-color: var(--background-secondary-translucent-1);
+}
+
+body.transparent-setting-panel .modal.mod-settings .vertical-tab-content-container,
+body.transparent-setting-panel .horizontal-tab-content, 
+body.transparent-setting-panel .vertical-tab-content {
+  background-color: var(--background-secondary-translucent) !important;
+}
+
+body.transparent-setting-panel .modal-bg,
+body.transparent-setting-panel .modal.mod-settings {
+  background-color: var(--background-secondary-translucent) !important;
+  backdrop-filter: blur(0) !important;	
+}
+
+body:not(.setting-style-traditional) .prompt {
+  background-color: var(--bg-color-settings-4);
+  backdrop-filter: blur(3px);	
+}
+
+body:not(.setting-style-traditional).theme-dark .prompt {
+  backdrop-filter: blur(8px);	
+}
+
+body:not(.setting-style-traditional) .vertical-tab-header-group-title {
+  color: var(--text-normal);
+  border-top: 1px dashed var(--text-muted);
+}
+
+body:not(.setting-style-traditional) .modal-bg {
+  background-color: var(--bg-color-settings-0);  
+  backdrop-filter: blur(5px);	
+}
+body:not(.setting-style-traditional) .modal.mod-settings {
+  background-color: var(--bg-color-settings-0-1);
+  backdrop-filter: blur(3px);	
+}
+body:not(.setting-style-traditional) .modal.mod-settings {
+  border: none;
+}
+body:not(.setting-style-traditional) .vertical-tab-header {
+  background-color: var(--bg-color-settings-1);
+}
+
+body:not(.setting-style-traditional) .horizontal-tab-nav-item, 
+body:not(.setting-style-traditional) .vertical-tab-nav-item {
+  background-color: transparent;
+}
+
+body:not(.setting-style-traditional) .horizontal-tab-nav-item:hover, 
+body:not(.setting-style-traditional) .vertical-tab-nav-item:hover,
+body:not(.setting-style-traditional) .horizontal-tab-nav-item.is-active, 
+body:not(.setting-style-traditional) .vertical-tab-nav-item.is-active {
+  background-color: var(--bg-color-settings-2);
+}
+
+body:not(.setting-style-traditional) .horizontal-tab-content, 
+body:not(.setting-style-traditional) .vertical-tab-content {
+  background-color: var(--bg-color-settings-3);
+}
+
+body.translucent-setting-panel .vertical-tab-content {
+  background-color: var(--bg-color-settings-1);
+}
+
+body.transparent-setting-panel .modal,
+body.transparent-setting-panel .modal.mod-settings,
+body.transparent-setting-panel .vertical-tab-content {
+  background-color: transparent !important;
+}
+
+body.transparent-setting-panel .vertical-tab-header,
+body.transparent-setting-panel .horizontal-tab-nav-item, 
+body.transparent-setting-panel .vertical-tab-nav-item {
+  background-color: var(--background-secondary-translucent) !important;
+}
+
+.modal.mod-settings .vertical-tab-header {
+  padding: 0;
+}
+
+body:not(.setting-style-traditional) .vertical-tab-header-group-title {
+  border: none;
+}
+
 /* ======= graph view ==============*/
 .workspace-leaf-content[data-type="graph"] .graph-controls {
   background-color: var(--graph-control-bg);
@@ -17393,85 +17480,6 @@ span.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight.hmd-hidd
   padding-left: 20px;
 }
 
-/*translucent setting panel*/
-body.translucent-setting-panel .modal-bg {
-  background-color: var(--background-secondary-translucent-1);
-}
-
-body.transparent-setting-panel .modal.mod-settings .vertical-tab-content-container,
-body.transparent-setting-panel .horizontal-tab-content, 
-body.transparent-setting-panel .vertical-tab-content {
-  background-color: var(--background-secondary-translucent) !important;
-}
-
-body.transparent-setting-panel .modal-bg,
-body.transparent-setting-panel .modal.mod-settings {
-  background-color: var(--background-secondary-translucent) !important;
-  backdrop-filter: blur(0) !important;	
-}
-
-body:not(.setting-style-traditional) .prompt {
-  background-color: var(--bg-color-settings-4);
-  backdrop-filter: blur(3px);	
-}
-
-body:not(.setting-style-traditional).theme-dark .prompt {
-  backdrop-filter: blur(8px);	
-}
-
-body:not(.setting-style-traditional) .vertical-tab-header-group-title {
-  color: var(--text-normal);
-  border-top: 1px dashed var(--text-muted);
-}
-
-body:not(.setting-style-traditional) .modal-bg {
-  background-color: var(--bg-color-settings-0);  
-  backdrop-filter: blur(5px);	
-}
-body:not(.setting-style-traditional) .modal.mod-settings {
-  background-color: var(--bg-color-settings-0-1);
-  backdrop-filter: blur(3px);	
-}
-body:not(.setting-style-traditional) .modal.mod-settings {
-  border: none;
-}
-body:not(.setting-style-traditional) .vertical-tab-header {
-  background-color: var(--bg-color-settings-1);
-}
-
-body:not(.setting-style-traditional) .horizontal-tab-nav-item, 
-body:not(.setting-style-traditional) .vertical-tab-nav-item {
-  background-color: transparent;
-}
-
-body:not(.setting-style-traditional) .horizontal-tab-nav-item:hover, 
-body:not(.setting-style-traditional) .vertical-tab-nav-item:hover,
-body:not(.setting-style-traditional) .horizontal-tab-nav-item.is-active, 
-body:not(.setting-style-traditional) .vertical-tab-nav-item.is-active {
-  background-color: var(--bg-color-settings-2);
-}
-
-body:not(.setting-style-traditional) .horizontal-tab-content, 
-body:not(.setting-style-traditional) .vertical-tab-content {
-  background-color: var(--bg-color-settings-3);
-}
-
-body.translucent-setting-panel .vertical-tab-content {
-  background-color: var(--bg-color-settings-1);
-}
-
-body.transparent-setting-panel .modal,
-body.transparent-setting-panel .modal.mod-settings,
-body.transparent-setting-panel .vertical-tab-content {
-  background-color: transparent !important;
-}
-
-body.transparent-setting-panel .vertical-tab-header,
-body.transparent-setting-panel .horizontal-tab-nav-item, 
-body.transparent-setting-panel .vertical-tab-nav-item {
-  background-color: var(--background-secondary-translucent) !important;
-}
-
 .setting-item-description,
 .setting-item-info {
   word-wrap: break-word;
@@ -19286,7 +19294,7 @@ body:not(.remove-custom-svg-icons) .workspace-leaf-content .view-action svg.brok
   margin-right: 1px;
 }
 
-.menu {
+body:not(.setting-style-traditional) .menu {
   border: none;
   backdrop-filter: blur(15px);
   background-color: transparent;
