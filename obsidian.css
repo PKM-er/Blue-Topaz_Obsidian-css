@@ -18232,6 +18232,34 @@ body.style-options-for-buttons-plugin  button.g_yellow {
   color: #836f20;
   background: linear-gradient(135deg, #fcd539, #ffeb9b);
 }
+body.style-options-for-buttons-plugin.theme-dark  button.g_yellow {
+  color:  #e4cb58;
+  background: none;
+  border: 1px solid;
+}
+body.style-options-for-buttons-plugin.theme-dark  button.g_green {
+  color:  #19bc8b;
+  background: none;
+  border: 1px solid;
+}
+body.style-options-for-buttons-plugin.theme-dark  button.g_lightgreen {
+  color:  #8fc866;
+  background: none;
+  border: 1px solid;
+}
+body.style-options-for-buttons-plugin.theme-dark  button.g_purple {
+  color:  #ffa260;
+  background: none;
+  border: 1px solid;
+}
+body.style-options-for-buttons-plugin.theme-dark  button.g_blue {
+  color:  #739df9;
+  background: none;
+  border: 1px solid;
+}
+body.style-options-for-buttons-plugin.theme-dark .grad_button:hover { 
+  color: var(--text-accent)
+}
 
 button.tiny {
   border-radius: 10px;
