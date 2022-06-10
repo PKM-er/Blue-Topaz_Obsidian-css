@@ -3912,6 +3912,7 @@ body.all-dark .print.theme-light,
   --bg-color-settings-2: #1f1f1f52;
   --bg-color-settings-3: #141414be;
   --bg-color-settings-4: #6565656c;
+  --bg-color-settings-5: #69696951;
 }
 
 .theme-light {
@@ -3990,6 +3991,7 @@ body.all-dark .print.theme-light,
   --bg-color-settings-2: #ffffff5a;
   --bg-color-settings-3: #ffffffda;
   --bg-color-settings-4: #ffffffd2;
+  --bg-color-settings-5: #d4d4d464;
 
   --scrollbar-thumb: #c6c6c6a8;
 
@@ -19296,12 +19298,12 @@ body:not(.remove-custom-svg-icons) .workspace-leaf-content .view-action svg.brok
 
 body:not(.setting-style-traditional) .menu {
   border: none;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(10px);
   background-color: transparent;
 }
 
 .menu-item.selected:not(.is-disabled):not(.is-label) {
-  background-color: var(--bg-color-settings-2);
+  background-color: var(--bg-color-settings-5);
 }
 
 body.toggle-bg-file-page.theme-dark .nav-files-container::before {
