@@ -528,6 +528,20 @@ settings:
         label: Asymmetric Style of Split Panes
         value: asymmetric-split-left
   -
+    id: titlebar-close-button
+    title: Titlebar close button
+    title.zh: Ob标题栏关闭按钮
+    type: class-select
+    allowEmpty: false
+    default: default-titlebar
+    options:
+      - 
+        label: Default
+        value: default-titlebar
+      - 
+        label: Reversal
+        value: reversal-titlebar
+  -
     id: hide-titlebar-text
     title: Hide text in Title Bar
     title.zh: 隐藏Obsidian标题栏中的文字
@@ -23754,4 +23768,8 @@ body.link-click .cm-s-obsidian span.cm-link {
 /*禁用实时预览点击标签跳转 需要跳转 点击#号即可*/
 body.tag-click .cm-line span.cm-hashtag:not(.cm-formatting) {
   pointer-events: none;
+}
+/*ob关闭按钮顺序调整*/
+body.reversal-titlebar .titlebar-button-container.mod-right {
+  direction: rtl;
 }
