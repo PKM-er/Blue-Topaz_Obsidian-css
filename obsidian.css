@@ -10821,11 +10821,11 @@ ul>li::marker,
   color: var(--list-format-ul);
 }
 
-/*
-div.HyperMD-list-line.cm-line:not(.HyperMD-table-row) {
-  word-break: break-all;
+
+.cm-s-obsidian .HyperMD-table-row.HyperMD-table-row.HyperMD-table-row {
+  min-width: min-content;
+  white-space: pre-wrap;
 }
-*/
 
 pre.HyperMD-list-line.HyperMD-list-line {
   text-align: start;
