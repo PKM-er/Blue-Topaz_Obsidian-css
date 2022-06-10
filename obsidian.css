@@ -1408,6 +1408,13 @@ settings:
     type: variable-number
     default: 1.5
   -
+    id: toggle-paragraph-spacing
+    title: Toggle  paragraph spacing in Reading Mode
+    title.zh: 开启阅读模式段间距
+    description.zh: 开启后对多个<br>标记不再生效
+    type: class-toggle
+    default: false
+  -
     id: paragraph-spacing
     title: Paragraph Spacing
     title.zh: 段间距
@@ -1436,8 +1443,8 @@ settings:
     step: 0.1
   -
     id: text-indentation-two-em
-    title: Slight Indentation of the First Line in Preview Mode
-    title.zh: 段落首行缩进（预览模式）
+    title: Slight Indentation of the First Line 
+    title.zh: 段落首行缩进
     description.zh: 需要安装Contextual Typography插件
     description: Contextual Typography plugin needs to be installed
     type: class-toggle
@@ -9308,8 +9315,7 @@ p {
 }
 
 
-
-:is(.markdown-preview-view,.markdown-rendered) p>br {
+body.toggle-paragraph-spacing :is(.markdown-preview-view,.markdown-rendered) p>br {
   content:" ";
   margin-top: calc((var(--paragraph-spacing) - 1)*1em);
   display: block;
