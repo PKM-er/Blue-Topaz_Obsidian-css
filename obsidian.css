@@ -4180,8 +4180,8 @@ body.all-dark .print.theme-light,
   --checklist-bg: #dfdfdf8e;
   --checklist-bg-hover: #ffffffcc;
 
-  --color-view-header-gradient-1: #eff8ff8f;
-  --color-view-header-gradient-2: #f8fffe86;
+  --color-view-header-gradient-1: #ffffffce;
+  --color-view-header-gradient-2: #ffffffce;
 
   /*checkbox*/
   --checkbox-color-0: #2f92e4;
