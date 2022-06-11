@@ -3932,9 +3932,9 @@ body.all-dark .print.theme-light,
   --bg-color-settings-1: #7c7c7c6d;
   --bg-color-settings-2: #1f1f1f52;
   --bg-color-settings-3: #141414be;
-  --bg-color-settings-4: #6565656c;
+  --bg-color-settings-4: #2e2e2e9d;
   --bg-color-settings-5: #424242aa;
-  --bg-color-settings-6: #191919a1;
+  --bg-color-settings-6: #191919c7;
 }
 
 .theme-light {
@@ -13690,7 +13690,7 @@ body.transparent-setting-panel .modal.mod-settings {
 
 body:not(.setting-style-traditional) .prompt {
   background-color: var(--bg-color-settings-4);
-  backdrop-filter: blur(3px);	
+  backdrop-filter: blur(3px);
 }
 
 body:not(.setting-style-traditional).theme-dark .prompt {
@@ -13709,6 +13709,7 @@ body:not(.setting-style-traditional) .modal-bg {
 body:not(.setting-style-traditional) .modal.mod-settings {
   background-color: var(--bg-color-settings-0-1);
   backdrop-filter: blur(3px);	
+  box-shadow: 0 0 20px var(--bg-color-settings-1);
 }
 body:not(.setting-style-traditional) .modal.mod-settings {
   border: none;
@@ -19350,6 +19351,7 @@ body:not(.setting-style-traditional) .menu {
   border: none;
   backdrop-filter: blur(8px);
   background-color: var(--bg-color-settings-6);
+  box-shadow: 0 0 8px var(--bg-color-settings-5);
 }
 
 .menu-item.selected:not(.is-disabled):not(.is-label) {
