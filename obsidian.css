@@ -528,6 +528,20 @@ settings:
         label: Asymmetric Style of Split Panes
         value: asymmetric-split-left
   -
+    id: titlebar-close-button
+    title: Titlebar close button
+    title.zh: Ob标题栏关闭按钮
+    type: class-select
+    allowEmpty: false
+    default: default-titlebar
+    options:
+      - 
+        label: Default
+        value: default-titlebar
+      - 
+        label: Reversal
+        value: reversal-titlebar
+  -
     id: hide-titlebar-text
     title: Hide text in Title Bar
     title.zh: 隐藏Obsidian标题栏中的文字
@@ -1394,6 +1408,13 @@ settings:
     type: variable-number
     default: 1.5
   -
+    id: toggle-paragraph-spacing
+    title: Toggle  paragraph spacing in Reading Mode
+    title.zh: 开启阅读模式段间距
+    description.zh: 开启后对多个<br>标记不再生效
+    type: class-toggle
+    default: false
+  -
     id: paragraph-spacing
     title: Paragraph Spacing
     title.zh: 段间距
@@ -1422,8 +1443,8 @@ settings:
     step: 0.1
   -
     id: text-indentation-two-em
-    title: Slight Indentation of the First Line in Preview Mode
-    title.zh: 段落首行缩进（预览模式）
+    title: Slight Indentation of the First Line 
+    title.zh: 段落首行缩进
     description.zh: 需要安装Contextual Typography插件
     description: Contextual Typography plugin needs to be installed
     type: class-toggle
@@ -9296,8 +9317,7 @@ p {
 }
 
 
-
-:is(.markdown-preview-view,.markdown-rendered) p>br {
+body.toggle-paragraph-spacing :is(.markdown-preview-view,.markdown-rendered) p>br {
   content:" ";
   margin-top: calc((var(--paragraph-spacing) - 1)*1em);
   display: block;
@@ -10811,11 +10831,11 @@ ul>li::marker,
   color: var(--list-format-ul);
 }
 
-/*
-div.HyperMD-list-line.cm-line:not(.HyperMD-table-row) {
-  word-break: break-all;
+
+.cm-s-obsidian .HyperMD-table-row.HyperMD-table-row.HyperMD-table-row {
+  min-width: min-content;
+  white-space: pre-wrap;
 }
-*/
 
 pre.HyperMD-list-line.HyperMD-list-line {
   text-align: start;
@@ -18220,6 +18240,34 @@ body.style-options-for-buttons-plugin  button.g_yellow {
   color: #836f20;
   background: linear-gradient(135deg, #fcd539, #ffeb9b);
 }
+body.style-options-for-buttons-plugin.theme-dark  button.g_yellow {
+  color:  #e4cb58;
+  background: none;
+  border: 1px solid;
+}
+body.style-options-for-buttons-plugin.theme-dark  button.g_green {
+  color:  #19bc8b;
+  background: none;
+  border: 1px solid;
+}
+body.style-options-for-buttons-plugin.theme-dark  button.g_lightgreen {
+  color:  #8fc866;
+  background: none;
+  border: 1px solid;
+}
+body.style-options-for-buttons-plugin.theme-dark  button.g_purple {
+  color:  #ffa260;
+  background: none;
+  border: 1px solid;
+}
+body.style-options-for-buttons-plugin.theme-dark  button.g_blue {
+  color:  #739df9;
+  background: none;
+  border: 1px solid;
+}
+body.style-options-for-buttons-plugin.theme-dark .grad_button:hover { 
+  color: var(--text-accent)
+}
 
 button.tiny {
   border-radius: 10px;
@@ -23666,7 +23714,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
   width: max(180px, 30%);
   max-width: 235px;
 	min-height: 235px;
-	padding-top: 1.5em; 
+	padding-top: 2.5em; 
   font-family:  Arial;
   margin-top:20px;
   margin-right:  25px;
@@ -23722,6 +23770,34 @@ div.callout[data-callout="stickies3"] >.callout-content ul {
 .callout[data-callout="stickies3"] >.callout-content a::before {
 content: "";
 }
+
+
+.markdown-preview-view .callout[data-callout="stickies3"] >.callout-content span { 
+  font-size: smaller;
+}
+
+.markdown-preview-view .callout[data-callout="stickies3"] >.callout-content img { 
+ max-height: 205px;
+ margin-top:-2.5em;
+}
+.markdown-preview-view .callout[data-callout="stickies3"] >.callout-content  { 
+  font-size: smaller;
+}
+.theme-dark .markdown-preview-view .callout[data-callout="stickies3"] >.callout-content blockquote { 
+  color: var(--interactive-normal);
+}
+.theme-dark .markdown-preview-view .callout[data-callout="stickies3"] >.callout-content em { 
+  color: var(--interactive-accent);
+  -webkit-text-fill-color:unset;
+}
+.theme-dark .markdown-preview-view .callout[data-callout="stickies3"] >.callout-content strong { 
+  color: var(--interactive-accent)!important;
+
+}
+.markdown-preview-view .callout[data-callout="stickies3"] >.callout-content .block-language-dataviewjs p { 
+  max-height: 195px;
+ }
+
 .callout:is([data-callout-metadata='yellow']) {
   background: #F7E999;
   -webkit-transform: rotate(2deg);
@@ -23765,4 +23841,8 @@ body.link-click .cm-s-obsidian span.cm-link {
 /*禁用实时预览点击标签跳转 需要跳转 点击#号即可*/
 body.tag-click .cm-line span.cm-hashtag:not(.cm-formatting) {
   pointer-events: none;
+}
+/*ob关闭按钮顺序调整*/
+body.reversal-titlebar .titlebar-button-container.mod-right {
+  direction: rtl;
 }
