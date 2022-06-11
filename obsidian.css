@@ -21620,7 +21620,7 @@ content: "";
   visibility: visible !important;
   display: block;
   top: calc(var(--pixel) * -6);
-  left: calc(var(--pixel) * -7);
+  left: calc(var(--pixel) * -6.5);
   width: var(--pixel);
   height: var(--pixel);
   background: transparent;
