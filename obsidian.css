@@ -13322,12 +13322,12 @@ body:not(.default-icons) .nav-folder-collapse-indicator svg {
 }
 
 body:not(.unmuted-collapsed-folder) .nav-folder.is-collapsed .nav-folder-title-content:not(.is-being-renamed) {
-  opacity: 0.65;
+  opacity: 0.55;
 }
 
 body:not(.default-icons) .nav-folder.is-collapsed .nav-folder-collapse-indicator::after {
   transform: rotate(-90deg);
-  opacity: 0.65;
+  opacity: 0.55;
 }
 
 body:not(.default-icons) .is-mobile .nav-folder.is-collapsed {
