@@ -17953,7 +17953,7 @@ img[alt$="inlR"]:not([class*="emoji"]) {
 :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="left"] {
   position: relative;
   float: left;
-  margin: 0.2rem 0.5rem;
+  margin: 0.5rem 1rem 0.5rem 0 !important;
   clear: both;
   display: table;
 }
@@ -17961,7 +17961,7 @@ img[alt$="inlR"]:not([class*="emoji"]) {
 :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="left"]::after {
   content: attr(alt);
   padding: 0 0.5rem;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0 1rem;
   display: table-caption;
   caption-side: bottom;
   text-align: center;
@@ -17972,7 +17972,7 @@ img[alt$="inlR"]:not([class*="emoji"]) {
 .markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="right"] {
   position: relative;
   float: right;
-  margin: 0.2rem 0.5rem;
+  margin: 0.5rem 0 0.5rem 1rem !important;
   clear: both;
   display: table;
 }
@@ -17980,7 +17980,7 @@ img[alt$="inlR"]:not([class*="emoji"]) {
 :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="right"]::after {
   content: attr(alt);
   padding: 0 0.5rem;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0 1rem;
   display: table-caption;
   caption-side: bottom;
   text-align: center;
