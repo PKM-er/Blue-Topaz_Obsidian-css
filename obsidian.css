@@ -12190,6 +12190,23 @@ body:not(.no-wrapped-dvtable) .markdown-source-view.mod-cm6 .table-view-table>tb
   background-color: var(--table-hover-thead-color);
 }
 
+
+tbody tr:nth-child(odd):hover,
+tbody tr:hover{
+background: var(--table-hover-raw-color);
+transform: scale(1.03);
+transition: 
+transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33) ;
+
+}
+
+tbody td:hover{
+background: var(--table-hover-color);
+transform: scale(1.05);
+transition: 
+transform 0.2s cubic-bezier(0.22, 0.66, 0.46, 0.66) ;
+}
+
 body.show-border-table :is(.markdown-preview-view,.markdown-rendered) :is(th,td) {
   border: 1px solid var(--table-border-color);
 }
