@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.14.15。uid [20220611] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.14.15, uid [20220611] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.14.15。uid [20220613] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.14.15, uid [20220613] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -432,8 +432,41 @@ settings:
     default: false
   -
     id: bg-file-page-option
+    title: Image Picking (Light mode)
+    title.zh: 图片选择 (Light mode)
+    type: class-select
+    allowEmpty: false
+    default: file-page-bg-theme-ligt-curve
+    options:
+      - 
+        label: Curve
+        value: file-page-bg-theme-light-curve
+      - 
+        label: Wall
+        value: file-page-bg-theme-light-wall
+      - 
+        label: Brick
+        value: file-page-bg-theme-light-brick
+      - 
+        label: Cloud
+        value: file-page-bg-theme-light-cloud
+      - 
+        label: Random
+        value: file-page-bg-theme-light-random
+      - 
+        label: Custom
+        value: file-page-bg-theme-light-custom
+  -
+    id: background-file-page-theme-light-custom
+    title: Custom Image (Light mode)
+    description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片 url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
+    type: variable-text
+    default: url("https://") 
+  -
+    id: bg-file-page-option
     title: Image Picking (Dark mode)
-    title.zh: 图片选择
+    title.zh: 图片选择 (Dark mode)
     type: class-select
     allowEmpty: false
     default: file-page-bg-theme-dark-sea
@@ -448,6 +481,9 @@ settings:
         label: Curves
         value: file-page-bg-theme-dark-curves
       - 
+        label: Bulb
+        value: file-page-bg-theme-dark-bulb
+      - 
         label: Random
         value: file-page-bg-theme-dark-random
       - 
@@ -457,7 +493,7 @@ settings:
     id: background-file-page-theme-dark-custom
     title: Custom Image (Dark mode)
     description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
-    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片  url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片 url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
     type: variable-text
     default: url("https://") 
   - 
@@ -19358,7 +19394,7 @@ body:not(.setting-style-traditional) .menu {
   background-color: var(--bg-color-settings-5);
 }
 
-body.toggle-bg-file-page.theme-dark .nav-files-container::before {
+body.toggle-bg-file-page .nav-files-container::before {
   content: '';
   display: block;
   position: fixed;
@@ -19366,9 +19402,16 @@ body.toggle-bg-file-page.theme-dark .nav-files-container::before {
   right: 0;
   bottom: 0;
   left: 0;
-  opacity: 0.2;
   background: no-repeat center/cover var(--file-page-background-url-theme);
   z-index: -1;
+}
+
+body.toggle-bg-file-page.theme-dark .nav-files-container::before {
+  opacity: 0.2;
+}
+
+body.toggle-bg-file-page.theme-light .nav-files-container::before {
+  opacity: 0.25;
 }
 
 body.toggle-bg-file-page.file-page-bg-theme-dark-plant.theme-dark {
@@ -19380,6 +19423,9 @@ body.toggle-bg-file-page.file-page-bg-theme-dark-curves.theme-dark {
 body.toggle-bg-file-page.file-page-bg-theme-dark-sea.theme-dark {
   --file-page-background-url-theme: url(https://images.unsplash.com/photo-1612434995720-89c1537a3009?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170);
 }
+body.toggle-bg-file-page.file-page-bg-theme-dark-bulb.theme-dark {
+  --file-page-background-url-theme: url(https://images.unsplash.com/photo-1448745799564-e2c1ed534c94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
 body.toggle-bg-file-page.file-page-bg-theme-dark-random.theme-dark {
   --file-page-background-url-theme: url(https://source.unsplash.com/random?dark);
 }
@@ -19387,6 +19433,21 @@ body.toggle-bg-file-page.file-page-bg-theme-dark-custom.theme-dark {
   --file-page-background-url-theme: var(--background-file-page-theme-dark-custom);
 }
 
+body.toggle-bg-file-page.file-page-bg-theme-light-curve.theme-light {
+  --file-page-background-url-theme: url(https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+body.toggle-bg-file-page.file-page-bg-theme-light-wall.theme-light {
+  --file-page-background-url-theme: url(https://images.unsplash.com/photo-1617713964959-d9a36bbc7b52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+body.toggle-bg-file-page.file-page-bg-theme-light-brick.theme-light {
+  --file-page-background-url-theme: url(https://images.unsplash.com/photo-1515549832467-8783363e19b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80);
+}
+body.toggle-bg-file-page.file-page-bg-theme-light-cloud.theme-light {
+  --file-page-background-url-theme: url(https://images.unsplash.com/photo-1596367407372-96cb88503db6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+body.toggle-bg-file-page.file-page-bg-theme-light-random.theme-light {
+  --file-page-background-url-theme: url(https://source.unsplash.com/random?white);
+}
 /*
 body.toggle-bg-file-page.theme-light .nav-files-container::before {
   content: '';
@@ -22487,7 +22548,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220611";
+  content: "uid:20220613";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
