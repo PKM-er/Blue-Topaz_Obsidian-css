@@ -55,6 +55,9 @@ settings:
         label: Topaz-Nord
         value: color-scheme-options-topaz-nord
       - 
+        label: Topaz-Monet (Comeing soon)
+        value: 
+      - 
         label: =↓😺 Created by Topaz Community 🐵↓=
         value: 
       -
@@ -2194,6 +2197,12 @@ settings:
     type: heading
     level: 3
     collapsed: true
+  - 
+    id: remove-table-transition
+    title: Remove Table Zoom Effect
+    title.zh: 移除表格悬浮放大效果
+    type: class-toggle
+    default: false
   -
     id: table-format-options
     title: Table Format
@@ -3653,6 +3662,214 @@ body {
   --paragraph-spacing: 1;
 }
 
+body.color-scheme-options-monet-topaz .theme-light,
+body.color-scheme-options-monet-topaz.theme-light {
+  --background-primary: #ffffff;
+  --background-primary-alt: #ffffff;
+  --background-secondary: #ffffff;
+  --background-secondary-alt: #ffffff;
+  --background-accent: #fff;
+  --background-modifier-border: #e1dfdf;
+  --background-modifier-form-field: #fff;
+  --background-modifier-form-field-highlighted: #fff;
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+
+  --background-modifier-cover: rgba(0, 0, 0, 0.8);
+  --text-accent: #6F7A88;
+  --text-accent-hover: #607085;
+
+  --text-folder-file: #272727;
+  --accent-em: #938E84;
+
+  --text-selection: #C2CBCA22;
+  --text-on-accent: #f2f2f2;
+  --interactive-normal: #eaeaeb;
+  --interactive-hover: #dbdbdc;
+  --interactive-accent-rgb: 122, 189, 148;
+  --interactive-accent: #7abd94;
+  --interactive-accent-hover: #5e9674;
+  --panel-border-color: #dbdbdc;
+  --search-text: #000000;
+  --folder-title: #000000;
+
+  --strong-em-highlight-color: #08ae84;
+  --mark-highlight-strong-em: #dbe72849;
+  --text-highlight-bg: #ecf56ed8;
+  --text-search-highlight-bg: #ffd1dd;
+  --strong-em-color-1: #08ae84;
+  --strong-em-color-2: #01531d;
+
+  --background-search-result: #f3f3f3;
+
+  --background-primary-bg-4-bt: #ffffff;
+  --background-primary-alt-bg-4-bt: #ffffff;
+  --background-secondary-bg-4-bt: #ffffff;
+  --background-secondary-alt-bg-4-bt: #ffffff;
+
+  --background-mobile-drawer-1: #ffffff;
+  --background-mobile-drawer-2: #ffffff;
+  --background-secondary-alt-bg-4-bt-publish: #f6f6f6;
+
+
+  --embed-color: #d6ebdc4f;
+  --search-result-file-title-color: var(--text-normal);
+  --theme-color: var(--interactive-accent);
+  --theme-color-translucent: #bde4d47a;
+  --theme-color-translucent-1: #7ce19b26;
+  --color-specification: #00bb50;
+  --allow-1: #ec9a3c;
+  --background-blockquote: #b6b6b62c;
+  --background-code: #ebebeb71;
+  --background-code-2: #cccccc62;
+  --text-color-code: #e95d00;
+
+  --internal-link-color-in-highlight: #03a240;
+
+  --list-ul-block-color: #b9751b;
+  --list-ul-disc-color: #f39c55;
+  --green-1: #3dc730;
+  --list-ul-hover: #dd922f;
+  --list-ol-block-color: #35a569;
+  --list-ol-number-color: #429a71;
+  --list-ol-hover: #31b870;
+
+  --tag-text: #54595f;
+  --stag1: #fa8787;
+  --stag1-bg: #eb2727;
+  --stag2: #fdbd5c;
+  --stag2-bg: #ee9002;
+  --stag3: #50ce3a;
+  --stag3-bg: #22ac09;
+  --tag1: #c2cbca9e;
+  --tag2: #c2cbca9e;
+  --tag3: #c2cbca9e;
+  --tag4: #c2cbca9e;
+  --tag5: #c2cbca9e;
+  --tag6: #c2cbca9e;
+  --tag7: #c2cbca9e;
+  --tag8: #c2cbca9e;
+  --tag9: #c2cbca9e;
+  --tag-dailynote: #0077ff;
+  --tag-dailynote-bg: #277CDD;
+  --tag-weeklynote: #4b9fff;
+  --tag-weeklynote-bg: #6aafff;
+  --tag-questions: #b68fff;
+  --tag-questions-bg: #b085ff;
+  --tag-ideas: #ceb900;
+  --tag-ideas-bg: #444444d8;
+
+  --h1-color: var(--print-h1-color,#52687b);
+  --h2-color: var(--print-h2-color,#6d7ca3);
+  --h3-color: var(--print-h3-color,#698c95);
+  --h4-color: var(--print-h4-color,#94a981);
+  --h5-color: var(--print-h5-color,#938263);
+  --h6-color: var(--print-h6-color,#887493);
+
+  /*graph*/
+  --graph-text-color: #696969;
+  --graphtag: #da9ee2cc;
+  --graph-attach: #88b0d6cc;
+  --graph-circle: #6fbf8ecc;
+  --graph-line: #b1b1b1;
+  --graph-unresolved: #db4e4ecc;
+  --link-unresolved-highlight: #df4747;
+  --graph-arrow: #e25300;
+  --graph-control-bg: #ffffff9a;
+
+  /*mermaid*/
+  --mermaid-active-task-color: #44bbff;
+  --mermaid-seq-dia-color: #76c8ff;
+
+  /*table*/
+  --table-border-color: #7d7d7d;
+  --table-thead-background-color: #dbe4dac7;
+  --table-hover-raw-color: #dbe4da57;
+  --table-hover-color: #dbe4da37;
+  --table-hover-thead-color: #dbe4da;
+
+  /*calendar*/
+  --calendar-week-color: #48b432;
+  --calendar-week-hover: #e9ffe3;
+  --calendar-week-background-color: #d6e6bf;
+  --calendar-today-background-color: #aaeec6;
+
+  /*day planner*/
+  --day-planner-pie: #eca95c;
+  --day-planner-timeline: #d62f2f;
+  --day-planner-line: #ffd900;
+  --day-planner-dot: #ffd900;
+  --day-planner-item-hover: #5ca35c;
+  --event-item-color1: #7c9f14;
+  --event-item-color2: #659f14;
+  --event-item-color3: #529f14;
+  --event-item-color4: #3d9f14;
+  --event-item-color5: #2d9f14;
+  --event-item-color6: #1d9f14;
+  --event-item-color7: #149f1f;
+  --event-item-color8: #149f2d;
+  --event-item-color9: #149f39;
+  --event-item-color10: #149f44;
+
+  /*colourful notes*/
+  --text-gray: #37352f99;
+  --text-brown: #855a46;
+  --text-orange: #d9730d;
+  --text-yellow: #d4a300;
+  --text-yellow-2: #a78000;
+  --text-green: #00927f;
+  --text-blue: #0083bb;
+  --text-purple: #5d1fb9;
+  --text-pink: #c40075;
+  --text-red: #ff4343;
+
+  --background-gray: #ebeced;
+  --background-brown: #e9e5e3;
+  --background-orange: #faebdd;
+  --background-yellow: #fbf3db;
+  --background-green: #ddedea;
+  --background-blue: #ddebf1;
+  --background-purple: #eae4f2;
+  --background-pink: #f4dfeb;
+  --background-red: #ffe3e3;
+
+  --note-important: #fd4141;
+  --note-cloze: #000000;
+
+  /* stickies */
+  --stickies-color-1: #b3e2b3;
+  --stickies-color-2: #e9c6f1;
+  --tape-color: #acacac65;
+
+  /*Sliding panes*/
+  --sliding-panes-header-color: #02401f;
+  --background-4-sliding-pane: #ffffffef;
+
+  /*admonition*/
+  --admonition-bg-color: #ffffffa6;
+
+  /*checklist*/
+  --checklist-bg: #dfdfdf8e;
+  --checklist-bg-hover: #ffffffcc;
+
+  --color-view-header-gradient-1: #d9f7d9ef;
+  --color-view-header-gradient-2: #e9f3edef;
+
+  /*checkbox*/
+  --checkbox-color-0: #4cb385;
+  --checkbox-color-1: #c4c116;
+  --checkbox-color-2: #4077bf;
+  --checkbox-color-3: #ffe9e9;
+  --checkbox-color-4: #fffbd4;
+  --checkbox-color-5: #ad7fbf;
+  --checkbox-color-6: #5f5f5f;
+  --text-checked-checkbox: #9b9b9b;
+
+  --activeline-background: #d1f0e521;
+
+  --table-color-calendar-2: rgb(182, 221, 191);
+  --table-color-rgb: 182, 221, 191;
+}
+
 body.all-dark .print.theme-light,
 .theme-dark {
   --background-primary: #222222;
@@ -4294,10 +4511,7 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --background-modifier-form-field: #fff;
   --background-modifier-form-field-highlighted: #fff;
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
-  --background-modifier-success: #A4E7C3;
-  --background-modifier-error: #e68787;
-  --background-modifier-error-rgb: 230, 135, 135;
-  --background-modifier-error-hover: #FF9494;
+
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
   --text-accent: #4cb385;
   --text-accent-hover: #249562;
@@ -4529,12 +4743,9 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --background-primary-alt-bg-4-bt: #000000;
   --background-secondary-bg-4-bt: #181818;
   --background-secondary-alt-bg-4-bt: #000000;
-
   --background-mobile-drawer-1: #1b1b1b;
   --background-mobile-drawer-2: #1b1b1b69;
-
   --background-transparent-blue: #003e759a;
-
   --scrollbar-thumb: #8282827e;
 
   --embed-color: #4047424f;
@@ -4621,7 +4832,6 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --text-checked-checkbox: #8e8e8e;
 
   --activeline-background: #004d132c;
-
   --table-color-calendar-2: rgb(5, 158, 5);
   --table-color-rgb: 5, 158, 5;
 }
@@ -4631,39 +4841,31 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --text-accent: #e1e1e1;
   --text-accent-hover: #b8b8b8;
   --accent-em: #ffffff;
-
   --interactive-accent: #787878;
   --interactive-accent-rgb: 120, 120, 120;
   --interactive-accent-hover: #646464;
-
   --text-highlight-bg: #89853b8a;
   --mark-highlight-strong-em: #fff7603a;
   --strong-em-highlight-color: #ffffff;
   --text-search-highlight-bg: #bb4361;
-
   --background-search-result: #313131;
-
   --background-primary-bg-4-bt: #1e1e1e;
   --background-primary-alt-bg-4-bt: #000000;
   --background-secondary-bg-4-bt: #1e1e1e;
   --background-secondary-alt-bg-4-bt: #000000;
-
   --embed-color: #45454534;
   --search-result-file-title-color: var(--text-normal);
   --theme-color: var(--interactive-accent);
   --theme-color-translucent: #76767688;
   --theme-color-translucent-1: #8585852c;
   --color-specification: #3ce252;
-
   --allow-1: #d18828;
   --background-blockquote: #9191911c;
   --background-code: #1111118c;
   --background-code-2: #4c4c4cb0;
   --text-color-code: #d58000;
-
   --internal-link-color-in-highlight: #3197eb;
   --internal-link-color: #3197eb;
-
   --list-ul-block-color: #d0d0d0a9;
   --list-ul-disc-color: #eb9563;
   --green-1: #79c142;
@@ -4671,7 +4873,6 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --list-ol-block-color: #878787b4;
   --list-ol-number-color: #bdbdbd;
   --list-ol-hover: #2c7bd6;
-
   --tag-text: #e4e4e4;
   --stag1: #f08383;
   --stag1-bg: #bd1919;
@@ -4770,24 +4971,20 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --text-accent-hover: #363636;
   --accent-strong: #000000;
   --accent-em: #000000;
-
   --text-selection: #c6c6c659;
   --interactive-accent-rgb: 79, 79, 79;
   --interactive-accent: #4f4f4f;
   --interactive-accent-hover: #1d1d1d;
-
   --strong-em-highlight-color: #000000;
   --text-highlight-bg: #ecf56eb4;
   --mark-highlight-strong-em: #ecf56eb4;
   --text-search-highlight-bg: #ffd1dd;
   --strong-em-color-1: #08ae84;
   --strong-em-color-2: #01531d;
-
   --background-primary-bg-4-bt: #ffffff;
   --background-primary-alt-bg-4-bt: #e9e9e9;
   --background-secondary-bg-4-bt: #ffffff;
   --background-secondary-alt-bg-4-bt: #f5f5f5;
-
   --embed-color: #e7e7e74f;
   --search-result-file-title-color: var(--text-normal);
   --theme-color: var(--interactive-accent);
@@ -4799,7 +4996,6 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --background-code: #ebebeb71;
   --background-code-2: #cccccc62;
   --text-color-code: #e95d00;
-
   --internal-link-color-in-highlight: #0040ff;
   --internal-link-color: #0040ff;
 
@@ -4860,7 +5056,6 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --mermaid-seq-dia-color: #76c8ff;
 
   /*table*/
-
   --table-border-color: #7d7d7d;
   --table-thead-background-color: #bdbdbdc7;
   --table-hover-raw-color: #f0f0f063;
@@ -12061,7 +12256,7 @@ body:not(.remove-heading-indicator) .callout-content :is(h1, h2, h3, h4, h5, h6)
 :is(.markdown-preview-section,.markdown-rendered) table:not(.dataview.table-view-table) {
   width: 100%;
   border-collapse: collapse;
-  overflow: hidden;
+  overflow: auto;
   margin-top: 20px;
   resize: both !important;
 }
@@ -12069,7 +12264,7 @@ body:not(.remove-heading-indicator) .callout-content :is(h1, h2, h3, h4, h5, h6)
 body .markdown-preview-view th,
 body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th,
 body .table-view-table>thead>tr>th {
-    background-image: none
+  background-image: none;
 }
 /*修复Itinerary插件显示问题*/
 :is(.markdown-preview-view,.markdown-rendered) :is(.markdown-preview-section,.markdown-rendered) .block-language-itinerary.fc table {
@@ -12190,21 +12385,17 @@ body:not(.no-wrapped-dvtable) .markdown-source-view.mod-cm6 .table-view-table>tb
   background-color: var(--table-hover-thead-color);
 }
 
-
-tbody tr:nth-child(odd):hover,
-tbody tr:hover{
-background: var(--table-hover-raw-color);
-transform: scale(1.03);
-transition: 
-transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33) ;
-
+body:not(.remove-table-transition) tbody tr:nth-child(odd):hover,
+body:not(.remove-table-transition) tbody tr:hover{
+  background: var(--table-hover-raw-color);
+  transform: scale(1.03);
+  transition: transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33);
 }
 
-tbody td:hover{
-background: var(--table-hover-color);
-transform: scale(1.05);
-transition: 
-transform 0.2s cubic-bezier(0.22, 0.66, 0.46, 0.66) ;
+body:not(.remove-table-transition) tbody td:hover{
+  background: var(--table-hover-color);
+  transform: scale(1.05);
+  transition: transform 0.2s cubic-bezier(0.22, 0.66, 0.46, 0.66);
 }
 
 body.show-border-table :is(.markdown-preview-view,.markdown-rendered) :is(th,td) {
@@ -13355,7 +13546,7 @@ body:not(.default-icons) .nav-folder-collapse-indicator::after {
   position: absolute;
   content: "↓";
   left: -3px;
-  top: 1px;
+  top: 2px;
   font-size: 1em;
   font-family: 'Inter';
   font-weight: bold;
