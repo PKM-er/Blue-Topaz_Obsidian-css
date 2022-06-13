@@ -4229,7 +4229,7 @@ body.all-dark .print.theme-light,
   --checkbox-color-6: #5f5f5f;
   --text-checked-checkbox: #9b9b9b;
 
-  --activeline-background: #79b3ff15;
+  --activeline-background: #aed8ff15;
 
   /*pseudo-kanban*/
   --p-kanban-bg-color: #d3d3d32d;
@@ -4311,7 +4311,7 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --text-error: #e75545;
   --text-error-hover: #f86959;
 
-  --text-selection: #66bbaa59;
+  --text-selection: #7fbffe59;
   --text-on-accent: #f2f2f2;
   --interactive-normal: #eaeaeb;
   --interactive-hover: #dbdbdc;
@@ -4515,7 +4515,7 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --interactive-accent: #329f56;
   --interactive-accent-rgb: 50, 159, 86;
   --interactive-accent-hover: #0f892d;
-
+  --text-selection: #0080ff59;
   --text-highlight-bg: #47893b8a;
   --mark-highlight-strong-em: #47893b7a;
   --strong-em-highlight-color: #9c8ce6;
