@@ -3728,18 +3728,18 @@ body.all-dark .print.theme-light,
 
   --gray-1: #5C6370;
   --gray-2: #abb2bf;
-  --red: #e06c75;
+  --red: #db7c84;
   --red-1: #d05a63;
-  --orange: #d19a66;
+  --orange: #d1945b;
   --orange-1: #da904b;
-  --green: #b6e296;
-  --darkgreen: #399a58;
-  --aqua: #19b3c7;
-  --purple: #c678dd;
-  --blue: #9dcffc;
-  --darkblue: #4889df;
-  --yellow: #e4ba6c;
-  --light-yellow: #dfda91;
+  --green: #abd58e;
+  --darkgreen: #568060;
+  --aqua: #35bed0;
+  --purple: #c594d4;
+  --blue: #a0c7e9;
+  --darkblue: #478fee;
+  --yellow: #d6b87f;
+  --light-yellow: #cac685;
   --white: #ffffff;
 
   --embed-color: #1156a534;
@@ -3754,7 +3754,7 @@ body.all-dark .print.theme-light,
   --background-code: #1111118c;
   --background-code-2: #4c4c4cb0;
   --text-color-code: #d58000;
-  --text-color-code-normal: #e7e7e7;
+  --text-color-code-normal: #d0d0d0;
 
   --internal-link-color-in-highlight: #39adfb;
 
@@ -4080,7 +4080,7 @@ body.all-dark .print.theme-light,
   --color-specification: #0084ff;
   --allow-1: #ec9a3c;
   --background-blockquote: #b6b6b62c;
-  --background-code: #ebebeb71;
+  --background-code: #f1f1f171;
   --background-code-2: #cccccc62;
   --text-color-code: #e95d00;
   --text-color-code-normal: #000000;
@@ -4355,7 +4355,6 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --background-code: #ebebeb71;
   --background-code-2: #cccccc62;
   --text-color-code: #e95d00;
-  --text-color-code-normal: #000000;
 
   --internal-link-color-in-highlight: #03a240;
 
@@ -4550,7 +4549,6 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --background-code: #1111118c;
   --background-code-2: #4c4c4cb0;
   --text-color-code: #d58000;
-  --text-color-code-normal: #e7e7e7;
 
   --internal-link-color-in-highlight: #60da74;
 
@@ -4662,7 +4660,6 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --background-code: #1111118c;
   --background-code-2: #4c4c4cb0;
   --text-color-code: #d58000;
-  --text-color-code-normal: #e7e7e7;
 
   --internal-link-color-in-highlight: #3197eb;
   --internal-link-color: #3197eb;
@@ -4802,7 +4799,6 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --background-code: #ebebeb71;
   --background-code-2: #cccccc62;
   --text-color-code: #e95d00;
-  --text-color-code-normal: #000000;
 
   --internal-link-color-in-highlight: #0040ff;
   --internal-link-color: #0040ff;
@@ -5105,7 +5101,6 @@ body.color-scheme-options-pink-topaz.theme-light {
   --background-code: #fae4ee4d;
   --background-code-2: #d5d5d562;
   --text-color-code: #e95d00;
-  --text-color-code-normal: #000000;
 
   --internal-link-color-in-highlight: #f15ad1;
 
@@ -5268,7 +5263,6 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --background-code: #1111118c;
   --background-code-2: #4c4c4cb0;
   --text-color-code: #d58000;
-  --text-color-code-normal: #e7e7e7;
 
   --internal-link-color-in-highlight: #c86aa9eb;
 
@@ -6228,7 +6222,6 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --background-code: #ebebeb71;
   --background-code-2: #cccccc62;
   --text-color-code: #e95d00;
-  --text-color-code-normal: #000000;
 
   --internal-link-color-in-highlight: var(--main-color);
 
@@ -6649,7 +6642,6 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --background-code: #ebebeb71;
   --background-code-2: #cccccc62;
   --text-color-code: #e95d00;
-  --text-color-code-normal: #000000;
 
   --internal-link-color-in-highlight: var(--main-color);
 
@@ -7732,7 +7724,6 @@ body.color-scheme-options-lilac.theme-light {
   --background-code: #ebebeb71;
   --background-code-2: #cccccc62;
   --text-color-code: #e95d00;
-  --text-color-code-normal: #000000;
 
   --internal-link-color: #6203a2;
 
@@ -7966,7 +7957,6 @@ body.color-scheme-options-lilac.theme-dark {
   --background-code: #1111118c;
   --background-code-2: #4c4c4cb0;
   --text-color-code: #d58000;
-  --text-color-code-normal: #e7e7e7;
 
   --internal-link-color: #a360da;
   --internal-link-color-in-highlight: #a360da;
@@ -13612,10 +13602,10 @@ body.default-icons .outline .tree-item-children {
 /* list collaspe icon */
 body:not(.default-icons) :is(.markdown-preview-view,.markdown-rendered) .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   content: "↓";
-  font-size: 0.7em;
+  font-size: 0.85em;
   position: absolute;
   margin-left: -0.3rem;
-  margin-top: 0.4rem;
+  margin-top: 0.3em;
   font-weight: bold;
   font-family: 'Inter';
   color: var(--text-accent);
@@ -22759,20 +22749,20 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
 
 @media (max-width:1120px) {
   .callout.callout[data-callout*=cards] table.dataview>tbody>tr {
-    margin-left: 40px
+    margin-left: 40px;
   }
 }
 
 @media (max-width:960px) {
   .callout.callout[data-callout*=cards] table.dataview>tbody>tr {
-    margin-left: 30px
+    margin-left: 30px;
   }
 }
 
 @media (max-width:460px) {
   .callout.callout[data-callout*=cards] table.dataview>tbody>tr {
     margin-left: 20px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
   }
 }
 
@@ -22915,14 +22905,14 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   box-shadow: none;
   max-width: 100%;
   background: transparent;
-  border: 0;
+  border: none;
   background-color: transparent !important;
   box-shadow: none !important;
   margin: 0;
 }
 
 .callout.callout[data-callout*=blank].is-collapsed .callout-fold {
-  border: 0;
+  border: none;
   padding: 5px 10px;
 }
 .callout.callout[data-callout*=blank] .callout-title, 
@@ -22933,7 +22923,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   overflow: visible;
   margin: 0;
   padding: 0;
-  border: 0;
+  border: none;
 }
 
 /* ===段落自动缩进============ */
@@ -22970,13 +22960,13 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
 /* ===隐藏边框============ */
 .callout.callout:is([data-callout-metadata*="noborder"], 
 [data-callout*=noborder]) {
-  border-left: 0;
+  border-left: none;
   background-color: transparent;
   box-shadow: none;
 }
 .callout.callout:is([data-callout-metadata*="noborder"], 
   [data-callout*=noborder]) .callout-content {
-  border-left: 0;
+  border-left: none;
   background-color: transparent;
   box-shadow: none;
   border:none;
@@ -23202,7 +23192,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   display: flex;
   flex-direction: row;
   border: 0px solid var(--p-kanban-border-color);
-  padding: 0rem;
+  padding: 0;
   border-radius: var(--radius-m);
   flex-wrap: wrap;
 }
@@ -23566,9 +23556,9 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
   opacity: 0.1;
   grid-row-end: 9;
   margin:auto;
-  border: 0px;
+  border: none;
   overflow: hidden;
-  border-radius:10px;
+  border-radius: 10px;
 }
 .callout.callout[data-callout="timeline"] .callout-content blockquote {
   display: block;
@@ -23603,7 +23593,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
   color: var(--text-on-accent);
   background-color: var(--interactive-accent);
   font-style: normal;
-  padding:6px;
+  padding: 6px;
   border-radius: 5px;
 }
 .callout.callout[data-callout="timeline"] .callout-content>*:not(blockquote):not(hr) {
@@ -23658,7 +23648,6 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 
 /***Sticky notes  便签效果**/
 .callout[data-callout="stickies"] { 
-
   box-shadow:none;
   border-left:0px;
 }
@@ -23729,8 +23718,8 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 }
 
 .callout[data-callout="stickies2"] { 
-  box-shadow:none;
-  border-left:0px;
+  box-shadow: none;
+  border-left: none;
 }
 .callout[data-callout="stickies2"] >.callout-title { 
   display: none;
@@ -23773,10 +23762,9 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 }
 
 .callout[data-callout="stickies3"] { 
-
   box-shadow:none;
   border-left:0px;
-  margin: 20px auto 0 auto!important; 
+  margin: 20px auto 0 auto !important; 
 }
 .callout[data-callout="stickies3"] >.callout-title { 
   display: none;
@@ -23788,9 +23776,9 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
   max-width: 235px;
 	min-height: 235px;
 	padding-top: 2.5em; 
-  font-family:  Arial;
-  margin-top:20px;
-  margin-right:  25px;
+  font-family: Arial;
+  margin-top: 20px;
+  margin-right: 25px;
   position: relative;
   vertical-align: top;
   display: inline-block;
@@ -23851,7 +23839,7 @@ content: "";
 
 .markdown-preview-view .callout[data-callout="stickies3"] >.callout-content img { 
  max-height: 205px;
- margin-top:-2.5em;
+ margin-top: -2.5em;
 }
 .markdown-preview-view .callout[data-callout="stickies3"] >.callout-content  { 
   font-size: smaller;
