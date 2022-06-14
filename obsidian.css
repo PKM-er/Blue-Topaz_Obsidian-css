@@ -3312,6 +3312,15 @@ settings:
     type: class-toggle
     default: false
   - 
+    id: blur-p-kanban-frosted-glass
+    title: Blur Radius (For Frosted Glass Style)
+    title.zh: 模糊程度 (毛玻璃效果)
+    type: variable-number-slider
+    default: 2
+    min: 0
+    max: 8
+    step: 1
+  - 
     id: p-kanban-color-1
     title: pseudo-kanban color 1
     type: variable-themed-color
@@ -3726,6 +3735,7 @@ body {
   --tag-border-width: 1px;
   --paragraph-spacing: 1;
   --blur-codebox-frosted-glass: 2;
+  --blur-p-kanban-frosted-glass: 5;
 }
 
 body.color-scheme-options-monet-topaz .theme-light,
@@ -8560,6 +8570,7 @@ body.colorful-p-kanban .kanban ul>li:nth-of-type(8n) {
 .kanban ul>li:nth-of-type(n) {
   background-color: var(--p-kanban-color-simple);
   padding-left: 1em;
+  backdrop-filter: blur(calc(var(--blur-p-kanban-frosted-glass)*2px));
 }
 .kanban ul:first-child>li:nth-of-type(8n+1) {
   border-top: 6px solid var(--p-kanban-color-1) !important;
@@ -22819,7 +22830,6 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   body.text-indentation-two-em   .print *:not(blockquote) > p>br::after {
     content: '\A         ';
   }
-  
 }
 
 /* ================================== */
