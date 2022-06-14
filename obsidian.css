@@ -10174,7 +10174,7 @@ input[type=checkbox] {
   border-radius: var(--radius-xs);
   border: 1px solid var(--background-modifier-border-checkbox);
   padding: 0;
-  margin:  0 5px 2px -6px;
+  margin: 0 4px 2px 2px;
   width: var(--checkbox-size);
   height: var(--checkbox-size);
 }
@@ -19180,10 +19180,6 @@ body.dialogue-style-chat .dialogue-plugin-message-title {
 
 .markdown-source-view.mod-cm6 .cm-gutters {
   background-color: transparent !important;
-}
-
-body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
-  padding-right: 8px;
 }
 
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
