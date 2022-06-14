@@ -14034,7 +14034,6 @@ body:not(.setting-style-traditional) .modal-bg {
 }
 body:not(.setting-style-traditional) .modal.mod-settings {
   background-color: var(--bg-color-settings-0-1);
-  backdrop-filter: blur(3px);	
   box-shadow: 0 0 20px var(--bg-color-settings-1);
 }
 body:not(.setting-style-traditional) .modal.mod-settings {
