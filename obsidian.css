@@ -12385,14 +12385,14 @@ body:not(.no-wrapped-dvtable) .markdown-source-view.mod-cm6 .table-view-table>tb
   background-color: var(--table-hover-thead-color);
 }
 
-body:not(.remove-table-transition) tbody tr:nth-child(odd):hover,
-body:not(.remove-table-transition) tbody tr:hover{
+body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover,
+body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:hover{
   background: var(--table-hover-raw-color);
   transform: scale(1.03);
   transition: transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33);
 }
 
-body:not(.remove-table-transition) tbody td:hover{
+body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody td:hover{
   background: var(--table-hover-color);
   transform: scale(1.05);
   transition: transform 0.2s cubic-bezier(0.22, 0.66, 0.46, 0.66);
