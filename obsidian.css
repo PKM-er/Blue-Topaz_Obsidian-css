@@ -9245,6 +9245,16 @@ body.tag-pill-outlined .cm-s-obsidian span.cm-hashtag-begin:nth-child(9n)+span.c
   background-color: transparent !important;
 }
 
+body.tag-pill-outlined .cm-s-obsidian span.cm-hashtag-begin:nth-child(n)+span.cm-hashtag:not([class*="-end"]),
+body.tag-pill-outlined .cm-s-obsidian span.cm-hashtag-begin:nth-child(n)+.cm-hashtag.cm-meta:not([class*="-end"]) {
+  border-left: none;
+  border-right: none;
+}
+
+body.tag-pill-outlined .cm-s-obsidian span.cm-hashtag-begin:nth-child(n)+span.cm-hashtag.cm-meta+span.cm-hashtag.cm-hashtag-end {
+  border-left: none;
+}
+
 body.tag-clear-style .tag:not(.token):nth-child(n) {
   background-color: transparent;
   border: none;
