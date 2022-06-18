@@ -21002,6 +21002,7 @@ body:not(.default-loading-page) .progress-bar-message:before {
   display: block;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
+  will-change: transform;
 }
 
 body:not(.default-loading-page).theme-light .progress-bar {
