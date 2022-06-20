@@ -590,6 +590,20 @@ settings:
     type: class-toggle
     default: false
   -
+    id: search-bar-style-option
+    title: Search Bar Style
+    title.zh: 文件内搜索栏位置
+    type: class-select
+    allowEmpty: false
+    default: default-search-bar
+    options:
+      - 
+        label: Default
+        value: default-search-bar
+      - 
+        label: Top
+        value: bt-search-bar-top
+  -
     id: bt-status-off
     title: Reduced Status Bar
     title.zh: 缩减状态栏宽度
@@ -12164,8 +12178,20 @@ body.bt-status-off .status-bar {
   padding: 2px 8px 6px 3px;
 }
 body.bt-status-off .document-search-container {
-  width: 80%;
+  margin-bottom: 26px;
   background-color: var(--background-secondary-bg-4-bt);
+}
+
+body.bt-search-bar-top .document-search-container {
+  width: 60%;
+  top: 27px;
+  position: absolute;
+  resize: both !important;
+  overflow: hidden;
+}
+
+body.bt-search-bar-top :is(.markdown-preview-view,.markdown-rendered) {
+  padding-top: 33px;
 }
 
 .status-bar {
