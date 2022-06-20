@@ -12184,14 +12184,14 @@ body.bt-status-off .document-search-container {
 
 body.bt-search-bar-top .document-search-container {
   width: 60%;
-  top: 27px;
+  top: 31px;
   position: absolute;
   resize: both !important;
   overflow: hidden;
 }
 
 body.bt-search-bar-top :is(.markdown-preview-view,.markdown-rendered) {
-  padding-top: 33px;
+  padding-top: 35px;
 }
 
 .status-bar {
