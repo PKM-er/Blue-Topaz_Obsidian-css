@@ -1783,8 +1783,8 @@ settings:
     default-dark: '#2c7bd6'
   -
     id: list-style-change-options
-    title: List Style
-    title.zh: 列表样式
+    title: List Style in reading view
+    title.zh: 阅读视图列表样式
     type: class-select
     allowEmpty: false
     default: list-bracket-left
@@ -1807,6 +1807,9 @@ settings:
       - 
         label: Using Ob Settings
         value: list-no-border
+      - 
+        label: Rainbow Outline
+        value: rainbow-lines-reading
   -
     id: list-style-change-options-edit
     title: List Style in Edit Mode
@@ -1818,6 +1821,100 @@ settings:
       - 
         label: Using Ob Settings
         value: list-no-line-in-edit
+  -
+    id: rainbow-lines-head
+    title:  2.3.2.1 Rainbow Outline Style Settings
+    title.zh: 2.3.2.1 彩虹列表设置
+    description: Settings for "Rainbow Outlines" option
+    type: heading
+    level: 4
+    collapsed: true
+  -
+    id: rainbow-ordered-list
+    title:  Enable rainbow outline list order
+    title.zh: 开启彩虹列表序号
+    type: class-toggle
+    default: false
+  -
+    id: rainbow-checkbox
+    title:  Enable rainbow outline checkbox
+    title.zh: 开启彩虹任务选择框
+    type: class-toggle
+    default: false
+  -
+    id: rainbow-lines-color-settings
+    title: 2.3.2.2 Rainbow Lines Colors Settings
+    title.zh: 2.3.2.2 彩虹线颜色设置
+    description: Settings for "Rainbow Outlines" option
+    type: heading
+    level: 4
+    collapsed: true
+  - 
+    id: accent-1
+    title: Outline level 1
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+      -
+        id: accent-1-rgb
+        format: rgb-values
+    default: '#38558b'
+  -
+    id: accent-2
+    title: Outline level 2
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+      -
+        id: accent-2-rgb
+        format: rgb-values
+    default: '#5f388b'
+  -
+    id: accent-3
+    title: Outline level 3
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+      -
+        id: accent-3-rgb
+        format: rgb-values
+    default: '#8b3884'
+  -
+    id: accent-4
+    title: Outline level 4
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+      -
+        id: accent-4-rgb
+        format: rgb-values
+    default: '#388b38'
+  -
+    id: accent-5
+    title: Outline level 5
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+      -
+        id: accent-5-rgb
+        format: rgb-values
+    default: '#e08e13'
+  -
+    id: accent-6
+    title: Outline level 6
+    type: variable-color
+    opacity: false
+    format: hex
+    alt-format:
+      -
+        id: accent-6-rgb
+        format: rgb-values
+    default: '#cccecc'
   -
     id: indentation-guides-lines-settings
     title: 2.3.2.3 Color Settings of Default Relationship Lines
@@ -10736,7 +10833,7 @@ ol>li::marker {
   font-size: var(--font-size-list);
 }
 
-body:not(.list-no-border) .markdown-rendered.show-indentation-guide li:not(.task-list-item) > :is(ol,ul)::before{
+body:not(.list-no-border):not(.rainbow-lines-reading) .markdown-rendered.show-indentation-guide li:not(.task-list-item) > :is(ol,ul)::before{
   border: none;
 }
 
@@ -10997,7 +11094,7 @@ body.list-vertical-line-three:not(.default-icons) :is(.markdown-preview-view,.ma
 
 /********彩虹大纲线片段********/
 /* RAINBOW INDENT COLORS from https://gist.github.com/GitMurf/5122c0c8405ffa36a03049d9f4434bf4 */ 
-/*
+
 :root {
   --list-padding: 24px;
   --accent-1-rgb: 56,85,139;
@@ -11033,8 +11130,8 @@ body.list-vertical-line-three:not(.default-icons) :is(.markdown-preview-view,.ma
       --rb-line-width: 2px;
       --rb-color-count: 8;
       --rb-indent-bg-size: calc(var(--rb-color-count) * var(--rb-indent-width)) 1px;
+  */
 }
-*/
 /*
 body.rainbow-lines .mod-cm6 .HyperMD-list-line .cm-hmd-list-indent .cm-indent::before {
   content: none;
@@ -11135,7 +11232,7 @@ body.rainbow-lines .mod-cm6 .cm-contentContainer .cm-content[style*="tab-size: 8
 }
 
 /*rainbow-lines*/
-/*
+
 body.rainbow-lines-reading :is(ol,ul) :is(ol,ul) {
   position: relative;
 }
@@ -11178,7 +11275,7 @@ body.rainbow-lines-reading ol>li::marker {
 border-width:1.5px;;	
 } */
 
-/*
+
 body.rainbow-ordered-list .HyperMD-list-line-1 .cm-formatting-list {
   color: rgb(var(--accent-1-rgb)) !important;
 }
@@ -11336,7 +11433,7 @@ body.rainbow-lines .CodeMirror-foldgutter-open.CodeMirror-guttermarker-subtle::a
 }
  
 /*预览模式
-/*无序列表 任务框
+/*无序列表 任务框*/
 body.rainbow-lines-reading ul li .task-list-item-checkbox {
   border-color: rgba(var(--accent-1-rgb),0.7);
 }
@@ -11362,7 +11459,7 @@ body.rainbow-checkbox  ul ul ul ul ul ul ul ul li .task-list-item-checkbox {
   border-color: rgba(var(--accent-7-rgb),0.7);
 }
 
-/*无序列表 大纲线
+/*无序列表 大纲线*/
 body.rainbow-lines-reading ul ul::before {
  border-color: rgba(var(--accent-1-rgb),0.7) !important;
 }
@@ -11391,7 +11488,7 @@ body.rainbow-lines-reading li ul ul ul ul ul ul ul ul ul::before {
   border-color: rgba(var(--accent-1-rgb),0.7) !important;
 }
 
-/*任务有序列表 大纲线
+/*任务有序列表 大纲线*/
 body.rainbow-lines-reading ol ol::before {
   border-color: rgba(var(--accent-1-rgb),0.7) !important;
 }
@@ -11420,7 +11517,7 @@ body.rainbow-lines-reading li ol ol ol ol ol ol ol ol::before {
   border-color: rgba(var(--accent-1-rgb),0.7) !important;
 }
 
-/*任务有序列表 选择框
+/*任务有序列表 选择框*/
 body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li[data-task="x"] .task-list-item-checkbox:checked {
     background-color: rgb(var(--accent-1-rgb),0.7);
     }
@@ -11446,7 +11543,7 @@ body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li
   background-color: rgb(var(--accent-8-rgb),0.7)!important;
 }
 
-/*任务有序列表 选择框未选择
+/*任务有序列表 选择框未选择*/
 body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li .task-list-item-checkbox {
   border-color: rgba(var(--accent-1-rgb),0.7) !important;
   }
@@ -11529,7 +11626,7 @@ body.rainbow-ordered-list :is(.markdown-preview-view,.markdown-rendered) ul>li u
 body.rainbow-ordered-list :is(.markdown-preview-view,.markdown-rendered) ol>li ol>li ol>li ol>li ol>li ol>li ol>li ol>li::marker {
   color: rgb(var(--accent-8-rgb));
 }
-*/
+
 
 /*===========*/
 :is(h1,h2,h3,h4,h5,h6,b,strong),
