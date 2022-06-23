@@ -2551,18 +2551,15 @@ settings:
     level: 3
     collapsed: true
   -
-    id: default-loading-page
-    title: Toggle Default Loading Page
-    title.zh: 还原默认加载页面
-    type: class-toggle
-    default: false
-  -
     id: loading-page-style-option
     title: Loading Page Style
     type: class-select
     allowEmpty: false
-    default: loading-page-style-default
+    default: default-loading-page
     options:
+      - 
+        label: Default Loading Page
+        value: default-loading-page
       - 
         label: Shapes
         value: loading-page-style-default
@@ -21154,7 +21151,7 @@ body:not(.default-loading-page) .progress-bar-message {
   visibility: hidden;
 }
 
-body:not(.default-loading-page) .progress-bar-message:before {
+body:not(.default-loading-page).loading-page-style-default .progress-bar-message:before {
   content: "";
   width: 80px;
   height: 80px;
