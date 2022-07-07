@@ -19161,7 +19161,10 @@ body:not(.setting-style-traditional) [class="menu"] {
 .menu-item.selected:not(.is-disabled):not(.is-label) {
   background-color: var(--bg-color-settings-5);
 }
-
+.menu-item:hover:not(.is-disabled):not(.is-label)
+{
+ background-color: var(--bg-color-settings-5);
+}
 body.toggle-bg-file-page .nav-files-container::before {
   content: '';
   display: block;
