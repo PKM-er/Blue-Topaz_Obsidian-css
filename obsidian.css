@@ -22891,6 +22891,12 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
 .callout.callout:is([data-callout-metadata*='grid'],
 [data-callout*='grid']) .callout-content ul li {
   WHITE-SPACE: normal;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+.callout.callout:is([data-callout-metadata*='grid'],
+[data-callout*='grid']) .callout-content ul li::before {
+  content: ' '!important;
 }
 .callout.callout:is([data-callout-metadata*='grid'],
 [data-callout*='grid']) .callout-content img {
