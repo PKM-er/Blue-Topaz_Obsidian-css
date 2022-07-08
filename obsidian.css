@@ -2294,7 +2294,7 @@ settings:
     title: Code Wrap
     title.zh: 代码换行
     type: class-toggle
-    default: false
+    default: true
   -
     id: letter-space-code
     title: Letter Spacing for Code
@@ -22881,6 +22881,22 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(0, auto));
   grid-gap: 2px;
+}
+.callout.callout:is([data-callout-metadata*='grid'],
+[data-callout*='grid']) .callout-content ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, auto));
+  grid-gap:0 10px;
+}
+.callout.callout:is([data-callout-metadata*='grid'],
+[data-callout*='grid']) .callout-content ul li {
+  WHITE-SPACE: normal;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+.callout.callout:is([data-callout-metadata*='grid'],
+[data-callout*='grid']) .callout-content ul li::before {
+  content: ' '!important;
 }
 .callout.callout:is([data-callout-metadata*='grid'],
 [data-callout*='grid']) .callout-content img {
