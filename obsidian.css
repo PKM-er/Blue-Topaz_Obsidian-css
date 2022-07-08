@@ -2998,6 +2998,12 @@ settings:
     type: class-toggle
     default: false
   -
+    id: toggle-calendar-transparent
+    title:  Transparent calendar background
+    title.zh: 日历背景透明
+    type: class-toggle
+    default: false
+  -
     id: style-options-for-calendar-plugin
     title: Calendar
     type: class-select
@@ -5587,6 +5593,13 @@ body.color-scheme-options-topaz-nord.theme-dark .cm-tag {
 body.color-scheme-options-topaz-nord.theme-dark .token.color,
 body.color-scheme-options-topaz-nord.theme-dark .token.hexcode.color {
   color: var(--nord8) !important;
+}
+
+body.toggle-calendar-transparent  #calendar-container .calendar {
+  background-color: transparent;
+}
+body.toggle-calendar-transparent  #calendar-container .calendar tr {
+  background-color: transparent;
 }
 
 body.color-scheme-options-topaz-nord.theme-dark #calendar-container,
