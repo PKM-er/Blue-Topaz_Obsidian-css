@@ -18026,13 +18026,13 @@ body.style-options-for-buttons-plugin button.circle_btn {
   word-break: keep-all;
 	margin: 4px;
 	padding: 0px;
-  width: 50px;
   height: 50px;
   /* border-radius:50%; */
 	position: relative;
 	border: 0;
-	display: inline-block;
+	display: inline-grid;
 	text-align: center;
+  justify-items: center;
 }
 /* blank 透明按钮*/
 body.style-options-for-buttons-plugin button.blank {
