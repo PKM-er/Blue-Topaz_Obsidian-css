@@ -2628,11 +2628,17 @@ settings:
     type: class-toggle
     default: false
   -
+    id: obsidian-default-image
+    title: Obsidian Default Image Position
+    title.zh: Obsidian默认图片位置
+    type: class-toggle
+    default: false
+  -
     id: icons-style-folder-1
     title: Intro to Basic Image Position
     title.zh: 基本图片位置简介
-    description: You can add 🔸|Left (can also use `left`, `LEFT` or `L` to replace the `Left` before), 🔸|Right (right/RIGHT/R) and 🔸|Inline (inline/INLINE/inl/INL/Inl) into a image format to adjust the image position, e.g. ![[*.jpg|L]], ![[*.png|Right|200]] and ![|inl](...*.jpg)
-    description.zh: 在图片格式里添加 🔸|Left (can also use `left`, `LEFT` or `L` to replace the `Left` before), 🔸|Right (right/RIGHT/R) and 🔸|Inline (inline/INLINE/inl/INL/Inl) 来改变图片位置, e.g. ![[*.jpg|L]], ![[*.png|Right|200]] and ![|inl](...*.jpg)
+    description: You can add 🔸|Left (can also use `left`, `LEFT` or `L` to replace the `Left` before), 🔸|Right (right/RIGHT/R) and 🔸|Inline (inline/INLINE/inl/INL/Inl) 🔸|Centre/Center (CENTRE/CENTER/centre/center/C) (the “centre” one is for the “Obsidian Default Image Position above only, because Topaz's default image position is in the centre) into a image format to adjust the image position, e.g. ![[*.jpg|L]], ![[*.png|Right|200]] and ![|inl](...*.jpg)
+    description.zh: 在图片格式里添加 🔸|Left (can also use `left`, `LEFT` or `L` to replace the `Left` before), 🔸|Right (right/RIGHT/R) and 🔸|Inline (inline/INLINE/inl/INL/Inl) 🔸|Centre/Center (CENTRE/CENTER/centre/center/C) (这个选项只在开启 “Obsidian默认图片位置” 后生效，因为Topaz默认图片位置就是居中) 来改变图片位置, e.g. ![[*.jpg|L]], ![[*.png|Right|200]] and ![|inl](...*.jpg)
     type: heading
     level: 4
     collapsed: true
@@ -12992,15 +12998,15 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
 }
 
 /* images : reduce displayed size of embedded files, zoom on hover */
-:is(.markdown-preview-view,.markdown-rendered) img:not([class*="emoji"]) {
+body:not(.obsidian-default-image) :is(.markdown-preview-view,.markdown-rendered) img:not([class*="emoji"]) {
   max-width: min(100%, 800px);
   margin-left: auto;
   margin-right: auto;
 }
-.print :is(.markdown-preview-view,.markdown-rendered) img:not([class*="emoji"]) {
+body:not(.obsidian-default-image) .print :is(.markdown-preview-view,.markdown-rendered) img:not([class*="emoji"]) {
   display: block;
 }
-.view-content img:not([class*="emoji"]) {
+body:not(.obsidian-default-image) .view-content img:not([class*="emoji"]) {
   cursor: zoom-in;
   display: block;
   margin-left: auto !important;
@@ -13031,7 +13037,7 @@ body:not(.image-zoom) .markdown-reading-view img:not([class*="emoji"]):active,
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iMCAwIDgwIDgwIj4KICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjRjJGNEY2Ii8+CiAgICA8ZyBmaWxsPSIjRkZGIj4KICAgICAgPHJlY3Qgd2lkdGg9IjIiIGhlaWdodD0iNzkiIHg9Ijc4Ii8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iMzkiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjU5Ii8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iMjAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSIyMCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjIwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iNDAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSI0MCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjQwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iNjAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSI2MCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjYwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSI3OSIgaGVpZ2h0PSIxIiB5PSIxOSIvPgogICAgICA8cmVjdCB3aWR0aD0iNzkiIGhlaWdodD0iMSIgeT0iMzkiLz4KICAgICAgPHJlY3Qgd2lkdGg9Ijc5IiBoZWlnaHQ9IjEiIHk9IjU5Ii8+CiAgICA8L2c+CiAgICA8cmVjdCB3aWR0aD0iODAiIGhlaWdodD0iMiIgeT0iNzgiIGZpbGw9IiNGRkYiLz4KICA8L2c+Cjwvc3ZnPgo=");
 }
 
-.internal-embed.image-embed.is-loaded img:not([class*="emoji"]) {
+body:not(.obsidian-default-image) .internal-embed.image-embed.is-loaded img:not([class*="emoji"]) {
   margin: 3px auto;
   display: block;
 }
@@ -13043,7 +13049,7 @@ body:not(.image-zoom) .markdown-reading-view img:not([class*="emoji"]):active,
   display: inline ;
 }
 
-.markdown-source-view.mod-cm6 img:not([class*="emoji"]) {
+body:not(.obsidian-default-image) .markdown-source-view.mod-cm6 img:not([class*="emoji"]) {
   display: block;
   margin: auto !important;
   cursor: help;
@@ -17683,7 +17689,9 @@ body:not(.image-zoom) .view-content img[alt$="left"]:not([class*="emoji"]),
 body:not(.image-zoom) .view-content img[alt$="Left"]:not([class*="emoji"]),
 body:not(.image-zoom) .view-content img[alt$="LEFT"]:not([class*="emoji"]),
 body:not(.image-zoom) .view-content img[alt$="L"]:not([class*="emoji"]) {
+  margin: auto !important;
   margin-left: 0 !important;
+  display: block;
 }
 
 img[alt$="right"]:not([class*="emoji"]),
@@ -17702,7 +17710,40 @@ body:not(.image-zoom) .view-content img[alt$="right"]:not([class*="emoji"]),
 body:not(.image-zoom) .view-content img[alt$="Right"]:not([class*="emoji"]),
 body:not(.image-zoom) .view-content img[alt$="RIGHT"]:not([class*="emoji"]),
 body:not(.image-zoom) .view-content img[alt$="R"]:not([class*="emoji"]) {
+  margin: auto !important;
   margin-right: 0 !important;
+  display: block;
+}
+
+img[alt$="centre"]:not([class*="emoji"]),
+img[alt$="center"]:not([class*="emoji"]),
+img[alt$="CENTRE"]:not([class*="emoji"]),
+img[alt$="CENTER"]:not([class*="emoji"]),
+img[alt$="Center"]:not([class*="emoji"]),
+img[alt$="Centre"]:not([class*="emoji"]),
+img[alt$="C"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="centre"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="center"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="Centre"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="Center"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="CENTRE"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="CENTER"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="C"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="centre"] img[alt$="right"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="center"] img[alt$="Right"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="Centre"] img[alt$="RIGHT"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="Center"] img[alt$="R"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="CENTRE"] img[alt$="Right"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="CENTER"] img[alt$="RIGHT"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="C"] img[alt$="R"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="centre"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="center"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="Centre"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="Center"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="CENTRE"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="CENTER"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="C"]:not([class*="emoji"]) {
+  margin: auto !important;
   display: block;
 }
 
