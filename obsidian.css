@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.15.6。uid [20220713] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.15.6, uid [20220713] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.15.6。uid [20220714] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.15.6, uid [20220714] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -2631,8 +2631,8 @@ settings:
     id: icons-style-folder-1
     title: Intro to Basic Image Position
     title.zh: 基本图片位置简介
-    description: You can add 🔸|Left (can also use `left`, `LEFT` or `L` to replace the `Left` before), 🔸|Right (right/RIGHT/R) and 🔸|Inline (inline/INLINE/inl) into a image format to adjust the image position, e.g. ![[*.jpg|L]], ![[*.png|Right|200]] and ![|inl](...*.jpg)
-    description.zh: 在图片格式里添加 🔸|Left (can also use `left`, `LEFT` or `L` to replace the `Left` before), 🔸|Right (right/RIGHT/R) and 🔸|Inline (inline/INLINE/inl) 来改变图片位置, e.g. ![[*.jpg|L]], ![[*.png|Right|200]] and ![|inl](...*.jpg)
+    description: You can add 🔸|Left (can also use `left`, `LEFT` or `L` to replace the `Left` before), 🔸|Right (right/RIGHT/R) and 🔸|Inline (inline/INLINE/inl/INL/Inl) into a image format to adjust the image position, e.g. ![[*.jpg|L]], ![[*.png|Right|200]] and ![|inl](...*.jpg)
+    description.zh: 在图片格式里添加 🔸|Left (can also use `left`, `LEFT` or `L` to replace the `Left` before), 🔸|Right (right/RIGHT/R) and 🔸|Inline (inline/INLINE/inl/INL/Inl) 来改变图片位置, e.g. ![[*.jpg|L]], ![[*.png|Right|200]] and ![|inl](...*.jpg)
     type: heading
     level: 4
     collapsed: true
@@ -2640,8 +2640,8 @@ settings:
     id: icons-style-folder-2
     title: Intro to Image Caption
     title.zh: 图片标题介绍
-    description: You can add 🔸#left|your captions, 🔸#right|your captions, 🔸#center/centre|your captions and 🔸#inl|your captions into a image format to adjust the image position with a image caption, e.g. ![[*.jpg#left|Figure 1]], ![[*.png#right|Figure 2|200]], ![[*.jpg#centre|Figure 3]] and ![[*.jpg#inl|Figure 4|100]]
-    description.zh: 在图片格式里添加 🔸#left|your captions, 🔸#right|your captions, 🔸#center/centre|your captions and 🔸#inl|your captions 来改变图片位置，并添加图片标题, e.g. ![[*.jpg#left|Figure 1]], ![[*.png#right|Figure 2|200]], ![[*.jpg#centre|Figure 3]] and ![[*.jpg#inl|Figure 4|100]]
+    description: You can add 🔸#Left|your captions (can also use `left`, `LEFT` or `L` to replace the `Left`), 🔸#Right (or right/RIGHT/R)|your captions, 🔸#center/centre (CENTRE/CENTER/Center/Centre/C) |your captions and 🔸#inl (Inline/INLINE/inline/INL/Inl) |your captions into a image format to adjust the image position with a image caption, e.g. ![[*.jpg#left|Figure 1]], ![[*.png#right|Figure 2|200]], ![[*.jpg#centre|Figure 3]] and ![[*.jpg#inl|Figure 4|100]]
+    description.zh: 在图片格式里添加 🔸#left (can also use `left`, `LEFT` or `L` to replace the `Left`) |your captions, 🔸#right (or right/RIGHT/R) |your captions, 🔸#center/centre (CENTRE/CENTER/Center/Centre/C) |your captions and 🔸#inl (Inline/INLINE/inline/INL/Inl) |your captions 来改变图片位置，并添加图片标题, e.g. ![[*.jpg#left|Figure 1]], ![[*.png#right|Figure 2|200]], ![[*.jpg#C|Figure 3]] and ![[*.jpg#inl|Figure 4|100]]
     type: heading
     level: 4
     collapsed: true
@@ -2649,8 +2649,8 @@ settings:
     id: icons-style-folder-3
     title: Intro to Image Grid
     title.zh: 图片横排介绍
-    description: You can add 🔸+grid into some images to grid these images in a line, e.g. ![[*.jpg+grid]]                                Or type ❗cssclass：img-grid❗ in YAML to make images arrange in a grid in the preview mode.
-    description.zh: 在图片格式里添加 🔸+grid 使复数的图片排成一行, e.g. ![[*.jpg+grid]] 。或者在YAML种输入 ❗cssclass：img-grid❗
+    description: You can add 🔸|+grid into some images to grid these images in a line, e.g. ![[*.jpg|+grid]] Or type ❗cssclass：img-grid❗ in YAML to make images arrange in a grid in the preview mode.
+    description.zh: 在图片格式里添加 🔸|+grid 使复数的图片排成一行, e.g. ![[*.jpg|+grid]] 。或者在YAML种输入 ❗cssclass：img-grid❗
     type: heading
     level: 4
     collapsed: true
@@ -14148,10 +14148,7 @@ div.mermaid svg {
   fill: var(--text-faint) !important;
 }
 
-.mermaid .edgePath .path {
-  stroke: var(--text-faint) !important;
-}
-
+.mermaid .edgePath .path,
 .mermaid .flowchart-link {
   stroke: var(--text-faint) !important;
 }
@@ -14212,7 +14209,8 @@ div.mermaidTooltip {
   stroke: var(--text-muted) !important;
 }
 
-.mermaid #arrowhead path {
+.mermaid #arrowhead path,
+.mermaid #crosshead path {
   fill: var(--text-muted) !important;
   stroke: var(--text-muted) !important;
 }
@@ -14221,15 +14219,7 @@ div.mermaidTooltip {
   fill: var(--background-primary) !important;
 }
 
-.mermaid #sequencenumber {
-  fill: var(--text-muted) !important;
-}
-
-.mermaid #crosshead path {
-  fill: var(--text-muted) !important;
-  stroke: var(--text-muted) !important;
-}
-
+.mermaid #sequencenumber,
 .mermaid .messageText {
   fill: var(--text-muted) !important;
 }
@@ -14240,11 +14230,7 @@ div.mermaidTooltip {
 }
 
 .mermaid .labelText,
-.mermaid .labelText>tspan {
-  fill: var(--text-muted) !important;
-  stroke: none !important;
-}
-
+.mermaid .labelText>tspan,
 .mermaid .loopText,
 .mermaid .loopText>tspan {
   fill: var(--text-muted) !important;
@@ -14269,16 +14255,8 @@ div.mermaidTooltip {
 }
 
 /* Gantt chart variables */
-.mermaid .activation0 {
-  fill: var(--background-secondary) !important;
-  stroke: var(--text-accent) !important;
-}
-
-.mermaid .activation1 {
-  fill: var(--background-secondary) !important;
-  stroke: var(--text-accent) !important;
-}
-
+.mermaid .activation0,
+.mermaid .activation1,
 .mermaid .activation2 {
   fill: var(--background-secondary) !important;
   stroke: var(--text-accent) !important;
@@ -14308,18 +14286,9 @@ div.mermaidTooltip {
   opacity: 0.15 !important;
 }
 
-.mermaid .sectionTitle0 {
-  fill: var(--text-normal) !important;
-}
-
-.mermaid .sectionTitle1 {
-  fill: var(--text-normal) !important;
-}
-
-.mermaid .sectionTitle2 {
-  fill: var(--text-normal) !important;
-}
-
+.mermaid .sectionTitle0,
+.mermaid .sectionTitle1,
+.mermaid .sectionTitle2,
 .mermaid .sectionTitle3 {
   fill: var(--text-normal) !important;
 }
@@ -14361,11 +14330,6 @@ div.mermaidTooltip {
 .task {
   stroke-width: 0.5px !important;
 }
-
-/*.taskText {
-  text-anchor: middle !important;
-  font-family: var(--mermaid-font-family) !important;
-}*/
 
 .taskText:not([font-size]) {
   font-size: 9px !important;
@@ -14425,10 +14389,7 @@ div.mermaidTooltip {
 }
 
 .taskTextOutside0,
-.taskTextOutside2 {
-  fill: var(--text-muted) !important;
-}
-
+.taskTextOutside2,
 .taskTextOutside1,
 .taskTextOutside3 {
   fill: var(--text-muted) !important;
@@ -14504,10 +14465,7 @@ div.mermaidTooltip {
 .doneCritText0,
 .doneCritText1,
 .doneCritText2,
-.doneCritText3 {
-  fill: var(--text-normal) !important;
-}
-
+.doneCritText3,
 .activeCritText0,
 .activeCritText1,
 .activeCritText2,
@@ -14567,43 +14525,19 @@ g.classGroup line {
   stroke-dasharray: 3 !important;
 }
 
-#compositionStart {
-  fill: var(--text-accent) !important;
-  stroke: var(--text-accent) !important;
-}
-
-#compositionEnd {
-  fill: var(--text-accent) !important;
-  stroke: var(--text-accent) !important;
-}
-
-#aggregationStart {
-  fill: var(--background-secondary-alt) !important;
-  stroke: var(--text-accent) !important;
-}
-
-#aggregationEnd {
-  fill: var(--background-secondary-alt) !important;
-  stroke: var(--text-accent) !important;
-}
-
-#dependencyStart {
-  fill: var(--text-accent) !important;
-  stroke: var(--text-accent) !important;
-}
-
-#dependencyEnd {
-  fill: var(--text-accent) !important;
-  stroke: var(--text-accent) !important;
-}
-
-#extensionStart {
-  fill: var(--text-accent) !important;
-  stroke: var(--text-accent) !important;
-}
-
+#compositionStart,
+#compositionEnd,
+#dependencyStart,
+#dependencyEnd,
+#extensionStart,
 #extensionEnd {
   fill: var(--text-accent) !important;
+  stroke: var(--text-accent) !important;
+}
+
+#aggregationStart,
+#aggregationEnd {
+  fill: var(--background-secondary-alt) !important;
   stroke: var(--text-accent) !important;
 }
 
@@ -14649,10 +14583,7 @@ g.stateGroup rect {
   stroke: var(--background-secondary-alt) !important;
 }
 
-g.stateGroup line {
-  stroke: var(--text-accent) !important;
-}
-
+g.stateGroup line,
 .transition {
   stroke: var(--text-accent) !important;
 }
@@ -14711,18 +14642,15 @@ g.stateGroup line {
   fill: var(--background-secondary-alt) !important;
 }
 
-.statediagram-cluster rect.outer {
+.statediagram-cluster rect.outer,
+.statediagram-state .title-state,
+.statediagram-state rect.basic {
   rx: 5px !important;
   ry: 5px !important;
 }
 
 .statediagram-state .divider {
   stroke: var(--text-accent) !important;
-}
-
-.statediagram-state .title-state {
-  rx: 5px !important;
-  ry: 5px !important;
 }
 
 .statediagram-cluster.statediagram-cluster .inner {
@@ -14736,11 +14664,6 @@ g.stateGroup line {
 .statediagram-cluster .inner {
   rx: 0 !important;
   ry: 0 !important;
-}
-
-.statediagram-state rect.basic {
-  rx: 5px !important;
-  ry: 5px !important;
 }
 
 .statediagram-state rect.divider {
@@ -14800,16 +14723,13 @@ g.stateGroup line {
 }
 
 /*emoji🙂*/
-.mermaid g>g>circle {
+.mermaid g>g>circle,
+.mermaid g>circle {
   stroke: #000000 !important;
 }
 
 .mermaid line.task-line {
   stroke: #6e6e6e !important;
-}
-
-.mermaid g>circle {
-  stroke: #000000 !important;
 }
 
 /* scrollbar*/
@@ -14830,8 +14750,8 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
   background: var(--scrollbar-thumb);
 }
 
-body.remove-scrollbars ::-webkit-scrollbar-thumb:not(:hover),
-body.hover-scrollbars ::-webkit-scrollbar-thumb:not(:hover) {
+body.remove-scrollbars ::-webkit-scrollbar-thumb,
+body.hover-scrollbars ::-webkit-scrollbar-thumb {
   display: none;
 }
 
@@ -17789,7 +17709,9 @@ body:not(.image-zoom) .view-content img[alt$="R"]:not([class*="emoji"]) {
 img[alt$="inline"]:not([class*="emoji"]),
 img[alt$="Inline"]:not([class*="emoji"]),
 img[alt$="INLINE"]:not([class*="emoji"]),
-img[alt$="inl"]:not([class*="emoji"]) {
+img[alt$="inl"]:not([class*="emoji"]),
+img[alt$="INL"]:not([class*="emoji"]),
+img[alt$="Inl"]:not([class*="emoji"]) {
   display: inline !important;
   padding: 0.05em 0.05em !important;
   vertical-align: bottom;
@@ -17798,7 +17720,9 @@ img[alt$="inl"]:not([class*="emoji"]) {
 img[alt$="inlineL"]:not([class*="emoji"]),
 img[alt$="InlineL"]:not([class*="emoji"]),
 img[alt$="INLINEL"]:not([class*="emoji"]),
-img[alt$="inlL"]:not([class*="emoji"]) {
+img[alt$="inlL"]:not([class*="emoji"]),
+img[alt$="INLL"]:not([class*="emoji"]),
+img[alt$="InlL"]:not([class*="emoji"]) {
   float: left;
   padding: 0 0.05em 0.05em 0 !important;
 }
@@ -17806,7 +17730,9 @@ img[alt$="inlL"]:not([class*="emoji"]) {
 img[alt$="inlineR"]:not([class*="emoji"]),
 img[alt$="InlineR"]:not([class*="emoji"]),
 img[alt$="INLINER"]:not([class*="emoji"]),
-img[alt$="inlR"]:not([class*="emoji"]) {
+img[alt$="inlR"]:not([class*="emoji"]),
+img[alt$="INLR"]:not([class*="emoji"]),
+img[alt$="InlR"]:not([class*="emoji"]) {
   float: right;
   padding: 0 0 0.05em 0.05em !important;
 }
@@ -17814,7 +17740,12 @@ img[alt$="inlR"]:not([class*="emoji"]) {
 /* img captions */
 /* modified from Discordian theme by @radekkozak */
 :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="center"],
-:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="centre"] {
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="centre"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="Centre"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="Center"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="CENTRE"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="CENTER"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="C"] {
   clear: both;
   margin: 0 auto !important;
   width: fit-content;
@@ -17822,7 +17753,8 @@ img[alt$="inlR"]:not([class*="emoji"]) {
 }
 
 :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="center"]::after,
-:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="centre"]::after {
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="centre"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="C"] {
   content: attr(alt);
   margin: 0.5rem 0;
   display: block;
@@ -17831,7 +17763,10 @@ img[alt$="inlR"]:not([class*="emoji"]) {
   font-size: 0.85rem;
 }
 
-:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="left"] {
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="left"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="LEFT"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="Left"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="L"] {
   position: relative;
   float: left;
   margin: 0.5rem 1rem 0.5rem 0 !important;
@@ -17839,7 +17774,10 @@ img[alt$="inlR"]:not([class*="emoji"]) {
   display: table;
 }
 
-:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="left"]::after {
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="left"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="LEFT"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="Left"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="L"]::after {
   content: attr(alt);
   padding: 0 0.5rem;
   margin: 0.5rem 0 1rem;
@@ -17849,8 +17787,10 @@ img[alt$="inlR"]:not([class*="emoji"]) {
   font-size: 0.85rem;
 }
 
-:is(.markdown-preview-view,.markdown-rendered) .image-embed[src$="right"],
-.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="right"] {
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="right"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="RIGHT"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="Right"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="R"] {
   position: relative;
   float: right;
   margin: 0.5rem 0 0.5rem 1rem !important;
@@ -17858,7 +17798,10 @@ img[alt$="inlR"]:not([class*="emoji"]) {
   display: table;
 }
 
-:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="right"]::after {
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="right"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="RIGHT"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="Right"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="R"]::after  {
   content: attr(alt);
   padding: 0 0.5rem;
   margin: 0.5rem 0 1rem;
@@ -17868,14 +17811,21 @@ img[alt$="inlR"]:not([class*="emoji"]) {
   font-size: 0.85rem;
 }
 
-:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="inl"] {
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="inline"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="Inline"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="INLINE"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="inl"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="INL"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="Inl"] {
   clear: both;
   margin: 0 auto !important;
   width: fit-content;
   display: inline-table;
 }
 
-:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="inl"]::after {
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="inl"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="INL"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="Inl"]::after {
   content: attr(alt);
   padding: 0 0.7em; 
   margin: 0.5rem 0;
@@ -22392,7 +22342,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220713";
+  content: "uid:20220714";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
@@ -23672,7 +23622,7 @@ div.callout[data-callout="stickies3"] >.callout-content ul {
   background: transparent;
 }
 .callout[data-callout="stickies3"] >.callout-content a::before {
-content: "";
+  content: "";
 }
 
 .markdown-preview-view .callout[data-callout="stickies3"] >.callout-content span { 
@@ -23680,8 +23630,8 @@ content: "";
 }
 
 .markdown-preview-view .callout[data-callout="stickies3"] >.callout-content img { 
- max-height: 205px;
- margin-top: -2.5em;
+  max-height: 205px;
+  margin-top: -2.5em;
 }
 .markdown-preview-view .callout[data-callout="stickies3"] >.callout-content  { 
   font-size: smaller;
