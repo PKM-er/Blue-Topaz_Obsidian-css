@@ -8025,7 +8025,11 @@ body.color-scheme-options-lilac.theme-light #calendar-container {
 }
 /*======@awyugan--end========*/
 
+/* 平滑滚动 */
+body {
 
+  scroll-behavior: smooth;
+}
 /*======@cuman--start========*/
 /*modified from https://github.com/hydescarf/Obsidian-Theme-Mado-Miniflow*/
 :root {
@@ -8156,6 +8160,10 @@ body.color-scheme-options-simplicity-topaz.theme-light {
     --custom-titlebar-bg: var(--background-secondary-bg-4-bt);
     --background-code-2: var(--simple-tran);
 	--scrollbar-bg: transparent;
+  --background-transparent-black-or-white-1: var(--simple-white-2) !important;
+  --background-transparent-black-or-white-2: var(--bg-color-settings-1) !important;
+  --background-transparent-black-or-white-3: var(--bg-color-settings-1) !important;
+  
 }
 
 
@@ -8257,10 +8265,11 @@ body.color-scheme-options-simplicity-topaz .titlebar-button-container.mod-right:
 }
 
 
-
-body.color-scheme-options-simplicity-topaz .markdown-preview-view{
-	padding-inline:63px;
+body.color-scheme-options-simplicity-topaz .nav-action-button.is-active {
+  background-color: var(--simple-blue-2);
+ 
 }
+
 body.color-scheme-options-simplicity-topaz .markdown-source-view .cm-content{
 	padding-inline:13px;
 }
@@ -8307,35 +8316,79 @@ body.color-scheme-options-simplicity-topaz [class="menu"]
 	100% { transform:scale(100%); opacity:1; }
 }
 /* Left dock navigation (new note, new folder, reorder) */
-body.color-scheme-options-simplicity-topaz .workspace-tab-header-container:hover + .workspace-leaf .workspace-leaf-content[data-type="file-explorer"] .nav-header{
+body.color-scheme-options-simplicity-topaz .workspace-tab-header-container:hover + .workspace-leaf .workspace-leaf-content .nav-header{
     margin-top: 0px;
 transition: all 0.3s linear;
 }
-body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-leaf .workspace-leaf-content[data-type="file-explorer"] .nav-header:hover{
+body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-leaf .workspace-leaf-content .nav-header:hover{
     margin-top: 0px;
     }
-body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-leaf .workspace-leaf-content[data-type="file-explorer"] .nav-header{
+body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-leaf .workspace-leaf-content .nav-header{
     margin-top: -30px;
     transition: all 0.6s linear;
     }
- 
 
+    body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-leaf .workspace-leaf-content[data-type="file-tree-view"] 
+    .view-content .file-tree-header-fixed
+    {
+      position: relative;
+      margin-top: -30px;
+      transition: all 0.6s linear;
+    }
+    body.color-scheme-options-simplicity-topaz .workspace-tab-header-container:hover + .workspace-leaf .workspace-leaf-content[data-type="file-tree-view"]    .view-content .file-tree-header-fixed{
+      margin-top: 0px;
+  transition: all 0.3s linear;
+  }
+  body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-leaf .workspace-leaf-content[data-type="file-tree-view"]    .view-content .file-tree-header-fixed:hover{
+    margin-top: 0px;
+    }
+
+    body.color-scheme-options-simplicity-topaz .oz-folders-tree-wrapper .oz-folder-contents
+{
+  border-left: 1px solid var(--background-modifier-border);
+}
+body.color-scheme-options-simplicity-topaz .oz-flex-container {
+  justify-content: start;
+}
+body.color-scheme-options-simplicity-topaz .oz-nav-action-button
+{
+    color: var(--text-faint);
+    opacity: 0.3;
+}
+body.hide-left-ribbon-button.color-scheme-options-simplicity-topaz .workspace-ribbon.side-dock-ribbon.mod-left:hover
+{
+  background-color:	var(--simple-white-6);
+}
 /* Remove style for border-on-active */
 body.color-scheme-options-simplicity-topaz .workspace-tabs .workspace-leaf,
 body.color-scheme-options-simplicity-topaz .workspace-tabs .workspace-leaf.mod-active{
 	border:none;
 }
 
+body.color-scheme-options-simplicity-topaz .horizontal-main-container
+{
+  overflow: visible;
+}
+body.color-scheme-options-simplicity-topaz .workspace {
 
+  overflow: visible; 
+}
+body.color-scheme-options-simplicity-topaz .workspace>.workspace-split.mod-vertical {
+  /* z-index: 2; */
+  top: -11.5px;
+  height:102%;
+}
 /*
 --------------------------- 
 	Note Title
 ---------------------------
 */
+
+
 body.color-scheme-options-simplicity-topaz .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header,
 body.color-scheme-options-simplicity-topaz .workspace-split.mod-horizontal > .workspace-leaf .view-header,
 body.color-scheme-options-simplicity-topaz .workspace-split.mod-vertical > .workspace-leaf .view-header{
-	height:auto;
+ 
 	display:flex;
 	align-items:center;
 	border:none;
@@ -8351,7 +8404,7 @@ body.color-scheme-options-simplicity-topaz.theme-dark .workspace-split.mod-verti
 body.color-scheme-options-simplicity-topaz .view-header-title{
 	font-size:1rem;
 	border-radius:var(--button-radius);
-	padding:2px 10px;
+	padding:0px 10px;
 	margin-left:0px;
 	border:1px solid transparent;
 	transition:border 0.2s, background 0.2s;
@@ -8422,8 +8475,7 @@ body.color-scheme-options-simplicity-topaz .workspace-split.mod-horizonta.mod-le
 body.color-scheme-options-simplicity-topaz .workspace-split.mod-vertical.mod-root .workspace-leaf{
 
 	border-radius:15px;
-	border-bottom-right-radius: 0;
-	border-bottom-left-radius: 0;
+
 }
 body.color-scheme-options-simplicity-topaz .workspace-split.mod-vertical.mod-root .workspace-split.mod-vertical:not(:first-child):last-child .workspace-leaf{
 	border-bottom-right-radius: 0;
@@ -8451,6 +8503,7 @@ body.color-scheme-options-simplicity-topaz .workspace-split.mod-root > .workspac
 }
  
 
+  
 /* Remove sttles on button-on-active, but not during right-click-menu as that is alright */
 body.color-scheme-options-simplicity-topaz .nav-folder-title,
 body.color-scheme-options-simplicity-topaz .nav-file{
@@ -8490,7 +8543,7 @@ body.color-scheme-options-simplicity-topaz :is(.markdown-preview-view,.markdown-
 body.color-scheme-options-simplicity-topaz  .nav-files-container ,
 body.color-scheme-options-simplicity-topaz .workspace-split .view-content
 {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 body.color-scheme-options-simplicity-topaz .nav-folder-children,
@@ -10119,7 +10172,7 @@ body.hide-titlebar-text .titlebar-text {
 
 /*reduce space of header buttons*/
 div.nav-header {
-  padding: 3px 5px;
+  padding: 3px 2px;
   line-height: 1;
 }
 
@@ -10140,10 +10193,11 @@ input.search-input {
   margin: 0px 5px 0px 5px !important;
 }
 
+
 /*tag page button*/
 .nav-buttons-container>.nav-action-button,
 .nav-buttons-container>.nav-action-button.is-active {
-  padding: 3px 4px 1px;
+  padding: 3px 2px 1px;
 }
 
 .titlebar-text {
@@ -19572,8 +19626,8 @@ body:not(.remove-custom-svg-icons) .nav-action-button svg.star-list {
   background-color: currentColor;
 }
 body:not(.remove-custom-svg-icons) .nav-action-button svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
