@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.15.9。uid [20220807] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.15.9, uid [20220807] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.15.9。uid [20220809] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.15.9, uid [20220809] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -657,6 +657,12 @@ settings:
       - 
         label: Obsidian default
         value: native-scrollbars
+  -
+    id: view-button-front
+    title: The view status button is placed in front of the header
+    title.zh: 视图切换按钮放置在文章标题前面
+    type: class-toggle
+    default: false
   -
     id: background-settings
     title: 2. Detail Settings
@@ -3162,7 +3168,7 @@ settings:
     title: Buttons special style support
     title.zh: 是否开启Buttons特别样式支持
     type: class-toggle
-    default: false
+    default: true
     description : 目前内置class：🔸circle_btn 圆形按钮🔸blank 透明按钮🔸grad_button渐变按钮🟣g_purple 紫色🔵g_blue蓝色🟢g_green 绿色💚g_lightgreen 浅绿🟡g_yellow黄色
   -
     id: style-options-for-buttons-plugin-heading
@@ -8251,28 +8257,45 @@ body.color-scheme-options-simplicity-topaz.theme-dark {
 	Title Bar
 ---------------------------
 */
-body.color-scheme-options-simplicity-topaz .view-header .view-actions,
+body.color-scheme-options-simplicity-topaz .view-header .view-actions  .view-action,
 body.color-scheme-options-simplicity-topaz  .titlebar-button-container.mod-right{
 	opacity:0;
 	z-index:1;	
     transition: all 0.6s linear;
 }
-body.color-scheme-options-simplicity-topaz .view-header .view-actions:hover,
+body.color-scheme-options-simplicity-topaz .view-header:hover .view-actions .view-action,
 body.color-scheme-options-simplicity-topaz .titlebar-button-container.mod-left:hover,
 body.color-scheme-options-simplicity-topaz .titlebar-button-container.mod-right:hover{
-	opacity:1;
+	opacity:0.8;
     transition: all 0.6s linear;
 }
 
+body.color-scheme-options-simplicity-topaz.view-button-front .workspace-leaf-content[data-mode='source'] .view-header .view-actions>.view-action:nth-last-child(5)
+{
+  opacity: 0.8;
+  position: absolute;
+  left:5px;
+  top: 5px;
+}
+body.color-scheme-options-simplicity-topaz.view-button-front .workspace-leaf-content[data-mode='preview'] .view-header .view-actions>.view-action:nth-last-child(5)
+{
+  opacity: 0;
+  position: absolute;
+  left:5px;
+  top: 5px;
+}
+body.color-scheme-options-simplicity-topaz.view-button-front .workspace-leaf-content[data-mode='preview'] .view-header:hover .view-actions>.view-action:nth-last-child(5)
+{
+  opacity: 1;
+ 
+}
 
 body.color-scheme-options-simplicity-topaz .nav-action-button.is-active {
   background-color: var(--simple-blue-2);
  
 }
 
-body.color-scheme-options-simplicity-topaz .markdown-source-view .cm-content{
-	padding-inline:13px;
-}
+
 
 /* Hide dock's tab menu, and show them when hovered  */
 body.color-scheme-options-simplicity-topaz   .workspace-tab-header-container{
@@ -8404,7 +8427,7 @@ body.color-scheme-options-simplicity-topaz.theme-dark .workspace-split.mod-verti
 body.color-scheme-options-simplicity-topaz .view-header-title{
 	font-size:1rem;
 	border-radius:var(--button-radius);
-	padding:0px 10px;
+	padding:0px 13px;
 	margin-left:0px;
 	border:1px solid transparent;
 	transition:border 0.2s, background 0.2s;
@@ -10690,6 +10713,9 @@ body.h6-toggle-underline .markdown-source-view.is-live-preview .HyperMD-header.H
   position: relative;
   font-family: var(--font-family-h6);
   color: var(--h6-color);
+}
+.cm-contentContainer :is(.cm-header-1,.cm-header-2,.cm-header-3,.cm-header-4) {
+  line-height: calc(var(--paragraph-spacing) + 0.5);
 }
 .markdown-source-view.mod-cm5 .HyperMD-header-1 {
   font-size: var(--h1) !important;
@@ -13735,6 +13761,7 @@ body.muted-activeline-bg .HyperMD-codeblock-bg.CodeMirror-activeline-background.
 
 .cm-gutter.cm-lineNumbers {
   font-family: var(--font-monospace-theme);
+  margin-top: 1.5px;
 }
 
 .cm-lineNumbers .cm-active.cm-gutterElement {
@@ -19801,6 +19828,40 @@ body:not(.remove-custom-svg-icons) .workspace-leaf-content .view-action svg.brok
   background-color: var(--red);
 }
 
+
+body.view-button-front .workspace-leaf-content:is([data-mode="preview"],[data-mode="source"]) .view-header .view-actions>.view-action:nth-last-child(5)
+{
+  opacity: 0.8;
+  position: absolute;
+  left:5px;
+  top: 6px;
+}
+body.view-button-front .view-header-title-container {
+   
+  padding-left: 25px;
+ 
+}
+
+body.view-button-front  .workspace-leaf-content[data-mode='source'] .view-content .markdown-source-view:not(.is-live-preview)::before {
+  content: "";
+  background-image:url("data:image/svg+xml,%3Csvg width='' height='' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M84.8 468.8H43.2C17.6 468.8 0 486.4 0 512s17.6 43.2 43.2 43.2h43.2C110.4 555.2 128 537.6 128 512s-17.6-43.2-43.2-43.2zM384 468.8h-43.2c-25.6 0-43.2 17.6-43.2 43.2s17.6 43.2 43.2 43.2H384c25.6 0 43.2-17.6 43.2-43.2s-17.6-43.2-43.2-43.2zM683.2 468.8H640c-25.6 0-43.2 17.6-43.2 43.2s17.6 43.2 43.2 43.2h43.2c25.6 0 43.2-17.6 43.2-43.2-1.6-25.6-17.6-43.2-43.2-43.2zM980.8 468.8h-43.2c-25.6 0-43.2 17.6-43.2 43.2s17.6 43.2 43.2 43.2h43.2c25.6 0 43.2-17.6 43.2-43.2s-17.6-43.2-43.2-43.2z' fill='%23666666'/%3E%3C/svg%3E");
+  background-size: 14px 16px;
+  background-repeat: no-repeat;
+  height: 12px;
+  width: 15px;
+  position: absolute;
+  z-index: 1;
+  top: 18px;
+  left: 16px;
+  opacity: 0.5;
+}
+
+body.view-button-front:not(.remove-custom-svg-icons) .workspace-leaf-content .view-action svg.reading-glasses {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='' height='' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M114.18 936.37c-7.08-0.01-13.88-2.83-18.90-7.84-7.13-7.13-9.73-17.60-6.78-27.24 0.58-1.89 58.08-190.17 69.57-232.60 1.24-4.57 3.65-8.73 6.99-12.08 0 0 509.13-509.34 524.08-524.12 27.32-27.32 63.92-43.31 102.51-44.84 35.84 0.81 69.89 15.79 94.70 41.66 32.72 31.43 49.66 65.07 50.34 100.03 0.52 35.39-15.64 70.37-48.22 103.97C856.96 365.85 382.08 835.45 361.87 855.42c-3.13 3.09-6.97 5.37-11.19 6.62-31.98 9.53-226.32 72.36-228.29 72.99C119.75 935.90 116.98 936.35 114.18 936.37zM207.99 690.03c-10.01 35.62-39.82 125.58-56.68 181.06 55.85-17.99 146.82-49.51 177.65-59.01 50.76-50.21 491.57-486.20 521.11-516.63 22.12-22.85 33.24-44.76 32.85-65.12-0.40-19.87-11.67-40.69-33.65-61.74-14.94-16.13-35.63-25.74-57.60-26.73-24.42 1.73-47.44 12.11-64.90 29.28-14.10 13.90-465.93 465.95-518.84 518.88L207.99 690.03zM350.36 853.71c-13.57-0.06-24.98-10.20-26.63-23.68-6.27-30.87-21.46-59.22-43.70-81.52-22.46-24.48-52.04-41.30-84.56-48.09-14.71-1.90-25.17-15.27-23.48-30.01 1.53-14.70 14.70-25.39 29.40-23.85 0.01 0 0.03 0 0.05 0 88.93 17.85 158.30 87.60 175.66 176.62 1.91 14.80-8.50 28.34-23.28 30.29-1.16 0.15-2.33 0.22-3.51 0.22L350.36 853.71zM828.88 369.14c-13.58-0.05-24.99-10.20-26.62-23.68-14.30-64.29-64.20-114.68-128.34-129.60-14.70-1.94-25.13-15.30-23.45-30.03 1.51-14.67 14.63-25.35 29.31-23.85 0.03 0.01 0.06 0.01 0.10 0.01 44.72 8.07 85.64 30.37 116.68 63.57 30.72 30.78 51.32 70.19 59.05 112.99 2.02 14.73-8.28 28.31-23.02 30.33-1.25 0.18-2.52 0.26-3.80 0.26L828.88 369.14z' fill='%23666666'/%3E%3C/svg%3E");
+}
+
+
+
 .nav-file-icon {
   top: 3px;
   margin-right: 1px;
@@ -21455,6 +21516,16 @@ body.background-settings-workplace-background-image.theme-dark .workspace::befor
   background-size: cover;
   filter: blur(var(--blur-depth)) brightness(var(--brightness-4-bg)) saturate(var(--saturate-4-bg));
 }
+
+
+body.background-settings-workplace-background-image:is(.background-settings-workplace-waves-light,.background-settings-workplace-waves2-light).theme-light .workspace
+{
+  
+  background: var(--simple-white-2);
+  
+}
+
+
 /****from https://www.shapedivider.app/*****/
 body.background-settings-workplace-background-image.background-settings-workplace-waves-light.theme-light .workspace:before,
 body.background-settings-workplace-background-image.background-settings-workplace-waves.theme-dark .workspace:before
@@ -23077,7 +23148,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220807";
+  content: "uid:20220809";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
