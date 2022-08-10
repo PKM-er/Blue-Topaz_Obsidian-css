@@ -695,6 +695,7 @@ settings:
   - 
     id: background-primary-bg-4-bt
     title: Background Primary
+    description: background-primary-bg-4-bt
     type: variable-themed-color
     opacity: true
     format: hex
@@ -703,6 +704,7 @@ settings:
   -
     id: background-primary-alt-bg-4-bt
     title: Background Primary (alt)
+    description: background-primary-alt-bg-4-bt
     type: variable-themed-color
     opacity: true
     format: hex
@@ -711,6 +713,7 @@ settings:
   -
     id: background-secondary-bg-4-bt
     title: Background Secondary
+    description: background-secondary-bg-4-bt
     type: variable-themed-color
     opacity: true
     format: hex
@@ -719,6 +722,7 @@ settings:
   -
     id: background-secondary-alt-bg-4-bt
     title: Background Secondary (alt)
+    description: background-secondary-alt-bg-4-bt
     type: variable-themed-color
     opacity: true
     format: hex
@@ -735,6 +739,7 @@ settings:
   -
     id: custom-titlebar-bg
     title: Title bar background color
+    description: custom-titlebar-bg
     type: variable-themed-color
     opacity: true
     format: hex
@@ -8485,12 +8490,14 @@ body.color-scheme-options-simplicity-topaz .workspace-split .workspace-leaf-resi
 	background:var(--simple-gray-2);
 }
 
-body.theme-light.color-scheme-options-simplicity-topaz:not(.background-image-settings-switch.background-image-settings-markdown-page-transparent) .workspace-split.mod-root .view-content,
-body.theme-light.color-scheme-options-simplicity-topaz:not(.background-settings-workplace-background-image) .workspace-split.mod-root .view-content
+body.color-scheme-options-simplicity-topaz:not(.background-image-settings-switch) .workspace-split.mod-root .view-content,
+body.color-scheme-options-simplicity-topaz:not(.background-settings-workplace-background-image) .workspace-split.mod-root .view-content
 {
-  background-color: var(--simple-white-1)!important;
+  background-color: var(--background-primary);
 
 }
+
+
 
 
 /*
