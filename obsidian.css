@@ -3876,7 +3876,7 @@ body {
   --blur-codebox-frosted-glass: 2;
   --blur-p-kanban-frosted-glass: 5;
 
-  --status-bar-bg: ;
+  --status-bar-bg: var(--background-secondary-alt-bg-4-bt);
   --status-bar-text-color: var(--text-muted);
 }
 
@@ -4519,7 +4519,6 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --interactive-accent-rgb: 122, 189, 148;
   --interactive-accent: #7abd94;
   --interactive-accent-hover: #5e9674;
-  --panel-border-color: #dbdbdc;
   --search-text: #000000;
   --folder-title: #000000;
 
@@ -5199,7 +5198,6 @@ body.color-scheme-options-pink-topaz.theme-light {
   --interactive-accent-rgb: 243, 148, 203;
   --interactive-accent: #f394cb;
   --interactive-accent-hover: #d57aaf;
-  --panel-border-color: #dbdbdc;
   --search-text: #000000;
   --folder-title: #000000;
 
@@ -6307,8 +6305,6 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --interactive-accent-rgb: 215, 178, 88;
   --interactive-accent: var(--main-color);
   --interactive-accent-hover: var(--low-color);
-
-  --panel-border-color: #dbdbdc;
   --search-text: #000000;
   --folder-title: #000000;
 
@@ -13023,7 +13019,7 @@ body:not(.remove-colorful-highlight-bg) .cm-em.cm-formatting.cm-formatting-highl
  /* ----状态栏透明开关----------- */
  /* Status bar */
 body.bt-status-off .status-bar {
-  background-color: var(--status-bar-bg, var(--background-secondary-bg-4-bt));
+  background-color: var(--status-bar-bg);
   z-index: 30;
   border-top-left-radius: 5px;
   width: auto;
@@ -13062,8 +13058,8 @@ body.bt-search-bar-top :is(.markdown-preview-view,.markdown-rendered) {
   min-height: var(--bar-height);
   overflow: hidden;
   color: var(--status-bar-text-color);
-  border: none;
-  background-color: var(--status-bar-bg,var(--background-primary));
+  border-top: 1px solid var(--panel-border-color);
+  background-color: var(--status-bar-bg);
 }
 
 body.bt-status-off #scroll-controls {
@@ -20031,7 +20027,7 @@ body.asymmetric-split-left .workspace-split.mod-left-split .workspace-tab-header
 .workspace-tab-header-container {
   background-color: var(--background-secondary-alt-bg-4-bt);
   flex: 0 0 auto;
-  padding: 3px 0 0;
+  padding: 5px 0 0;
   height: 33px;
 }
 
