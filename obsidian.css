@@ -15858,11 +15858,6 @@ pre.frontmatter.language-yaml::before {
   margin-top: 3px !important;
 }
 
-.status-bar-item>* {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
 .progress-pie.day-planner {
   background-color: var(--day-planner-pie);
   float: left;
