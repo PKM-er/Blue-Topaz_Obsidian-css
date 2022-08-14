@@ -22516,8 +22516,8 @@ body.background-settings-workplace-background-image.background-settings-workplac
 body.background-settings-workplace-background-image.background-settings-workplace-waves.theme-dark .workspace:before
 {
 	content:"";
-	position:absolute;
-	height:300px;
+	position:fixed;
+  height:auto;
 	width: 300%;
   transform: rotate(180deg);
   top: 75%;
@@ -22533,8 +22533,8 @@ body.background-settings-workplace-background-image.background-settings-workplac
 body.background-settings-workplace-background-image.background-settings-workplace-waves2-light.theme-light .workspace::before,
 body.background-settings-workplace-background-image.background-settings-workplace-waves2.theme-dark .workspace:before{
 	content:"";
-	position:absolute;
-  height:300px;
+	position:fixed;
+  height:auto;
 	width: 300%;
   top: 75%;
 	left:-25%;
