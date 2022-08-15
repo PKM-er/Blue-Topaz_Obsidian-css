@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.15.9。uid [20220812] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.15.9, uid [20220812] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.15.9。uid [20220815] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.15.9, uid [20220815] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -18793,6 +18793,39 @@ min-width: 220px;
 
 
 
+/* ============ */
+/*table-generatorn*/
+/* ============ */
+
+
+.table-generator {
+  animation:0.2s popup forwards;
+	border-radius:10px;
+  width: auto!important;
+box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.table-generator-view {
+  
+  border: none!important;
+  
+}
+.input-table-generator
+{
+font-size: small;
+}
+.input-table-generator input
+{
+  outline-style: none ;
+  border: 1px solid var(--background-modifier-border)!important ;
+  border-radius: 3px;
+}
+.table-generator button {
+  border: 1px solid var(--background-modifier-border)!important ;
+  border-radius: 3px;
+}
 
 /* ============ */
 /*image position*/
@@ -24143,7 +24176,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220812";
+  content: "uid:20220815";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
@@ -25505,37 +25538,55 @@ body.reversal-titlebar .titlebar-button-container.mod-right {
 from discord @sailKite https://cdn.discordapp.com/attachments/702656734631821413/1007258862606352424/FunnyHeaderAnimLP.css
 */
 
-body.funny-header-anim .cm-line > :is(.cm-header, .cm-widgetBuffer) + .cm-header {
+body.funny-header-anim .is-live-preview .cm-line > :is(.cm-header, .cm-widgetBuffer) + .cm-header,
+body.funny-header-anim.clutter-free-headings  .cm-line > :is(.cm-header, .cm-widgetBuffer) + .cm-header
+
+{
   display: inline-block;
   
 }
-body.funny-header-anim .cm-line:not(.cm-active) :is(.cm-header, .cm-widgetBuffer) + .cm-header {
+body.funny-header-anim  .is-live-preview .cm-line:not(.cm-active) :is(.cm-header, .cm-widgetBuffer) + .cm-header,
+body.funny-header-anim.clutter-free-headings  .cm-line:not(.cm-active) :is(.cm-header, .cm-widgetBuffer) + .cm-header
+{
   transform: translateX(0ch);
   transition: transform 333ms;
 }
-body.funny-header-anim .cm-active :is(.cm-header, .cm-widgetBuffer) + .cm-header {
+body.funny-header-anim  .is-live-preview .cm-active :is(.cm-header, .cm-widgetBuffer) + .cm-header, 
+body.funny-header-anim.clutter-free-headings  :is(.cm-header, .cm-widgetBuffer) + .cm-header
+{
   transition: transform 333ms;
   transform: translateX(30px);
 }
-body.funny-header-anim .cm-active :is(.cm-header, .cm-widgetBuffer) + .cm-html-embed {
+body.funny-header-anim  .is-live-preview .cm-active :is(.cm-header, .cm-widgetBuffer) + .cm-html-embed,
+body.funny-header-anim.clutter-free-headings  :is(.cm-header, .cm-widgetBuffer) + .cm-html-embed
+{
   margin-left: 30px;
 }
-body.funny-header-anim .cm-active :is(.cm-header, .cm-widgetBuffer) + .cm-bracket {
+body.funny-header-anim  .is-live-preview .cm-active :is(.cm-header, .cm-widgetBuffer) + .cm-bracket, 
+body.funny-header-anim.clutter-free-headings  .cm-active :is(.cm-header, .cm-widgetBuffer) + .cm-bracket
+{
   margin-left: 30px;
 }
-body.funny-header-anim .cm-line:not(.cm-active) .cm-header:first-of-type {
+body.funny-header-anim  .is-live-preview .cm-line:not(.cm-active) .cm-header:first-of-type,
+body.funny-header-anim.clutter-free-headings   .cm-line:not(.cm-active) .cm-header:first-of-type
+
+{
   display: none;
   opacity: 0;
 }
 
-body.funny-header-anim .cm-active  .cm-formatting-header + .cm-header {
+body.funny-header-anim  .is-live-preview .cm-active  .cm-formatting-header + .cm-header,
+body.funny-header-anim.clutter-free-headings   .cm-active  .cm-formatting-header + .cm-header{
   margin-left: -30px;
 }
 
-body.funny-header-anim .cm-active .cm-header:first-of-type {
+body.funny-header-anim  .is-live-preview .cm-active .cm-header:first-of-type,
+body.funny-header-anim.clutter-free-headings  .cm-active .cm-header:first-of-type
+{
   transform: translateX(0ch);
   animation: opac 333ms;
 }
+
 
 @keyframes opac {
   from {
