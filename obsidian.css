@@ -1607,7 +1607,7 @@ settings:
     title.zh: 2.3 其他样式设置
     type: heading
     level: 2
-    collapsed: false
+    collapsed: true
   -
     id: muted-activeline-bg
     title: Mute Active Line
@@ -3411,6 +3411,19 @@ settings:
     title.zh: 笔记中的反链面板全宽度显示
     type: class-toggle
     default: false
+  -
+    id: style-options-for-quiet-outline
+    title: 3.11 Quiet outline
+    title.zh: 3.11 Quiet Outline
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: quiet-outline
+    title: Optimize  quiet-outline plugin
+    title.zh: 美化 quiet-outline 插件
+    type: class-toggle
+    default: true
   -
     id: build-in-style-folder
     title: 4. Built-in Style Intro
@@ -18670,96 +18683,96 @@ min-width: 220px;
 /* ================================== */
 
 /**quiet outline**/
-.workspace-leaf-content[data-type=quiet-outline] .view-content {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .view-content {
   padding: unset;
 }
-.workspace-leaf-content[data-type=quiet-outline] .n-slider .n-slider-rail {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .n-slider .n-slider-rail {
   background-color: var(--background-secondary-alt);
   
   box-shadow: var(--background-modifier-box-shadow);
 }
-.workspace-leaf-content[data-type=quiet-outline] .n-slider .n-slider-rail .n-slider-rail__fill {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .n-slider .n-slider-rail .n-slider-rail__fill {
   background-color: var(--background-modifier-border);
 }
-.workspace-leaf-content[data-type=quiet-outline] .n-slider .n-slider-dots .n-slider-dot {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .n-slider .n-slider-dots .n-slider-dot {
   background-color: var(--background-primary);
   border: 2px solid var(--background-modifier-border);
 }
-.workspace-leaf-content[data-type=quiet-outline] .n-slider .n-slider-dots .n-slider-dot.n-slider-dot--active {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .n-slider .n-slider-dots .n-slider-dot.n-slider-dot--active {
   border: 2px solid var(--interactive-accent);
 }
  
  
-.workspace-leaf-content[data-type=quiet-outline] .n-button {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .n-button {
   width: 32px;
   height: 32px;
   background-color: var(--background-secondary-alt-bg-4-bt);
   border: 0px;
   border-radius: var(--radius-l);
 }
-.workspace-leaf-content[data-type=quiet-outline] .n-button .n-button__icon svg {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .n-button .n-button__icon svg {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.workspace-leaf-content[data-type=quiet-outline] .n-button .n-button__border,
-.workspace-leaf-content[data-type=quiet-outline] .n-button .n-button__state-border {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .n-button .n-button__border,
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .n-button .n-button__state-border {
   display: none;
 }
 
-.workspace-leaf-content[data-type=quiet-outline] .quiet-outline .n-tree-node-content__text p {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .quiet-outline .n-tree-node-content__text p {
   color:var(--text-normal);
 }
  
 
-.workspace-leaf-content[data-type=quiet-outline] .quiet-outline {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .quiet-outline {
   padding-top: 10px;
   padding-bottom: 28px;
   margin-bottom: 5px;
   border-radius: var(--radius-l);
 }
  
-.workspace-leaf-content[data-type=quiet-outline] .quiet-outline .function-bar > :first-child {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .quiet-outline .function-bar > :first-child {
   margin-right: 8px;
 }
-.workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-2 .n-tree-node-indent,
-.workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-3 .n-tree-node-indent:first-child,
-.workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-4 .n-tree-node-indent:first-child,
-.workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-5 .n-tree-node-indent:first-child,
-.workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-6 .n-tree-node-indent:first-child {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-2 .n-tree-node-indent,
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-3 .n-tree-node-indent:first-child,
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-4 .n-tree-node-indent:first-child,
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-5 .n-tree-node-indent:first-child,
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-6 .n-tree-node-indent:first-child {
   border-right: 1px solid rgb(var(--accent-1-rgb),0.5) ;
 }
-.workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-3 .n-tree-node-indent,
-.workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-4 .n-tree-node-indent:nth-child(2),
-.workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-5 .n-tree-node-indent:nth-child(2),
-.workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-6 .n-tree-node-indent:nth-child(2) {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-3 .n-tree-node-indent,
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-4 .n-tree-node-indent:nth-child(2),
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-5 .n-tree-node-indent:nth-child(2),
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-6 .n-tree-node-indent:nth-child(2) {
   border-right: 1px solid rgb(var(--accent-2-rgb),0.5) ;
 }
-.workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-4 .n-tree-node-indent,
-.workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-5 .n-tree-node-indent:nth-child(3),
-.workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-6 .n-tree-node-indent:nth-child(3) {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-4 .n-tree-node-indent,
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-5 .n-tree-node-indent:nth-child(3),
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-6 .n-tree-node-indent:nth-child(3) {
   border-right: 1px solid rgb(var(--accent-3-rgb),0.5) ;
 }
-.workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-5 .n-tree-node-indent,
-.workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-6 .n-tree-node-indent:nth-child(4) {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-5 .n-tree-node-indent,
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-6 .n-tree-node-indent:nth-child(4) {
   border-right: 1px solid rgb(var(--accent-4-rgb),0.5) ;
 }
-.workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-6 .n-tree-node-indent {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .quiet-outline .level-6 .n-tree-node-indent {
   border-right: 1px solid rgb(var(--accent-5-rgb),0.5) ;
 }
-.workspace-leaf-content[data-type=quiet-outline] .n-tree.n-tree--block-line .n-tree-node:not(.n-tree-node--disabled):hover {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .n-tree.n-tree--block-line .n-tree-node:not(.n-tree-node--disabled):hover {
   background-color: rgba(var(--interactive-accent-rgb), 0.2);
 }
-.workspace-leaf-content[data-type=quiet-outline] .n-tree.n-tree--block-line .n-tree-node:not(.n-tree-node--disabled):hover p {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .n-tree.n-tree--block-line .n-tree-node:not(.n-tree-node--disabled):hover p {
   color: var(--text-accent-hover);
 }
 
-.workspace-leaf-content[data-type=quiet-outline] .quiet-outline .n-tree-node--selectable.located p
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .quiet-outline .n-tree-node--selectable.located p
 {
   color: var(--text-accent-hover);
 
 }
-.workspace-leaf-content[data-type=quiet-outline] .quiet-outline .n-tree-node--selected p
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .quiet-outline .n-tree-node--selected p
 {
   color: var(--text-accent-hover);
   font-weight: 600;
@@ -18768,25 +18781,26 @@ min-width: 220px;
 
 
 
-.workspace-leaf-content[data-type=quiet-outline] .n-input {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .n-input {
   height: 32px;
   background-color: var(--background-primary);
   border-radius: var(--radius-l);
 }
-.workspace-leaf-content[data-type=quiet-outline] .n-input .n-input__border {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .n-input .n-input__border {
   border: 0;
 }
-.workspace-leaf-content[data-type=quiet-outline] .n-input:not(.n-input--disabled):hover .n-input__state-border, .workspace-leaf-content[data-type=quiet-outline] .n-input:not(.n-input--disabled).n-input--focus .n-input__state-border {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .n-input:not(.n-input--disabled):hover .n-input__state-border, 
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .n-input:not(.n-input--disabled).n-input--focus .n-input__state-border {
   border: 0;
   box-shadow: unset;
 }
-.workspace-leaf-content[data-type=quiet-outline] .n-input .n-input__placeholder {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .n-input .n-input__placeholder {
   display: none;
 }
-.workspace-leaf-content[data-type=quiet-outline] .n-input .n-input__input input {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .n-input .n-input__input input {
   caret-color: var(--interactive-accent);
 }
-.workspace-leaf-content[data-type=quiet-outline] .n-input .n-input__input input::placeholder {
+body.quiet-outline .workspace-leaf-content[data-type=quiet-outline] .n-input .n-input__input input::placeholder {
   color: var(--text-faint);
 }
 /* #end quiet outline */
