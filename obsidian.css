@@ -22675,7 +22675,11 @@ body.background-settings-workplace-background-image.theme-dark .titlebar-text {
   right: -15px;
   bottom: 0px;
   left: -15px;
+}  
+body.background-settings-workplace-background-image:not(.simple-titlebar).theme-dark  .titlebar::before {
+  filter: blur(var(--titlebar-blur-depth)) brightness(calc(var(--titlebar-brightness) - 0.5)) opacity(0.5);
 }
+
 
 body:not(.simple-titlebar).background-settings-workplace-waves-light.theme-light  .titlebar::before {
   content: '';
