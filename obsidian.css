@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.15.9。uid [20220815] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.15.9, uid [20220815] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.15.9。uid [20220816] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.15.9, uid [20220816] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -2899,6 +2899,13 @@ settings:
     default: false
     description: You can jump by clicking on the # marks in the tags
     description.zh: 可以通过点击标签中的#号跳转
+  -  
+    id: head-tag-style
+    title: Label superscript in the header
+    title.zh: 标题中的标签上标样式
+    type: class-toggle
+    default: false
+    description.zh: 标题出现标签自动上标，也可以用<sup></sup> 或者<sub></sub>包裹实现不一样的样式。
   -
     id: tag-style-option
     title: Tag Style
@@ -9059,11 +9066,12 @@ body.tag-pill-outlined .cm-s-obsidian:not([class="markdown-source-view cm-s-obsi
 }
 
 
-.tag[href^="#important"]:not(.token) {
+
+body:not(.tag-pill-outlined) .tag[href ^="#important"]:not(.token) {
   background-color: var(--stag1-bg) !important;
   font-weight: 600;
   font-family: var(--font-family-special-tag) !important;
-  color: var(--white) !important;
+  color: var(--white) ;
   border: none;
 }
 
@@ -9071,24 +9079,24 @@ body.tag-pill-outlined .cm-s-obsidian:not([class="markdown-source-view cm-s-obsi
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
   background-color: var(--stag1-bg);
-  color: var(--white) !important;
+  color: var(--white) ;
   border: none;
   font-size: 0.95em;
 }
 
-.tag[href^="#重要"]:not(.token) {
+body:not(.tag-pill-outlined)  .tag[href^="#重要"]:not(.token) {
   background-color: var(--stag1-bg) !important;
   font-weight: 600;
   font-family: Webdings, 'Microsoft YaHei';
-  color: var(--white) !important;
+  color: var(--white) ;
   border: none;
 }
 
-.tag[href^="#complete"]:not(.token) {
+body:not(.tag-pill-outlined) .tag[href^="#complete"]:not(.token) {
   background-color: var(--stag3-bg) !important;
   font-weight: 600;
   font-family: var(--font-family-special-tag) !important;
-  color: var(--white) !important;
+  color: var(--white) ;
   border: none;
 }
 
@@ -9096,24 +9104,24 @@ body.tag-pill-outlined .cm-s-obsidian:not([class="markdown-source-view cm-s-obsi
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
   background-color: var(--stag3-bg);
-  color: var(--white) !important;
+  color: var(--white) ;
   border: none;
   font-size: 0.95em;
 }
 
-.tag[href^="#完成"]:not(.token) {
+body:not(.tag-pill-outlined)  .tag[href^="#完成"]:not(.token) {
   background-color: var(--stag3-bg) !important;
   font-family: Origin, 'Microsoft YaHei';
   font-weight: 600;
-  color: var(--white) !important;
+  color: var(--white) ;
   border: none;
 }
 
-.tag[href^="#inprogress"]:not(.token) {
+body:not(.tag-pill-outlined) .tag[href ^="#inprogress"]:not(.token) {
   background-color: var(--stag2-bg) !important;
   font-weight: 600;
   font-family: var(--font-family-special-tag) !important;
-  color: var(--white) !important;
+  color: var(--white) ;
   border: none;
 }
 
@@ -9121,28 +9129,28 @@ body.tag-pill-outlined .cm-s-obsidian:not([class="markdown-source-view cm-s-obsi
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
   background-color: var(--stag2-bg);
-  color: var(--white) !important;
+  color: var(--white) ;
   border: none;
   font-size: 0.95em;
 }
 
-.tag[href^="#进行中"]:not(.token) {
+body:not(.tag-pill-outlined) .tag[href ^="#进行中"]:not(.token) {
   background-color: var(--stag2-bg) !important;
   font-weight: 600;
   font-family: Wingdings, 'Microsoft YaHei';
-  color: var(--white) !important;
+  color: var(--white) ;
   border: none;
 }
 
-.tag[href^="#dailynote"]:not(.token) {
+body:not(.tag-pill-outlined) .tag[href ^="#dailynote"]:not(.token) {
   background-color: var(--tag-dailynote-bg) !important;
   font-weight: 600;
   font-family: var(--font-family-special-tag) !important;
-  color: var(--white) !important;
+  color: var(--white) ;
   border: none;
 }
 
-.tag[href^="#dailynote"]::after {
+body:not(.tag-pill-outlined) .tag[href ^="#dailynote"]::after {
   content: ' 🐈';
   font-size: var(--font-size-emoji-after-tag);
 }
@@ -9155,16 +9163,16 @@ body.tag-pill-outlined .cm-s-obsidian:not([class="markdown-source-view cm-s-obsi
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
   background-color: var(--tag-dailynote-bg);
-  color: var(--white) !important;
+  color: var(--white) ;
   border: none;
   font-size: 0.95em;
 }
 
-.tag[href^="#weeklynote"]:not(.token) {
+body:not(.tag-pill-outlined) .tag[href ^="#weeklynote"]:not(.token) {
   background-color: var(--tag-weeklynote-bg) !important;
   font-weight: 600;
   font-family: var(--font-family-special-tag) !important;
-  color: var(--white) !important;
+  color: var(--white) ;
   border: none;
 }
 
@@ -9181,16 +9189,16 @@ body.tag-pill-outlined .cm-s-obsidian:not([class="markdown-source-view cm-s-obsi
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
   background-color: var(--tag-weeklynote-bg);
-  color: var(--white) !important;
+  color: var(--white) ;
   border: none;
   font-size: 0.95em;
 }
 
-.tag[href^="#questions"]:not(.token) {
+body:not(.tag-pill-outlined) .tag[href ^="#questions"]:not(.token) {
   background-color: var(--tag-questions-bg) !important;
   font-weight: 600;
   font-family: var(--font-family-special-tag) !important;
-  color: var(--white) !important;
+  color: var(--white) ;
   border: none;
 }
 
@@ -9207,16 +9215,16 @@ body.tag-pill-outlined .cm-s-obsidian:not([class="markdown-source-view cm-s-obsi
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
   background-color: var(--tag-questions-bg);
-  color: var(--white) !important;
+  color: var(--white) ;
   border: none;
   font-size: 0.95em;
 }
 
-.tag[href^="#ideas"]:not(.token) {
+body:not(.tag-pill-outlined) .tag[href ^="#ideas"]:not(.token) {
   background-color: var(--tag-ideas-bg) !important;
   font-weight: 600;
   font-family: var(--font-family-special-tag) !important;
-  color: var(--white) !important;
+  color: var(--white) ;
   border: none;
 }
 
@@ -9233,7 +9241,7 @@ body.tag-pill-outlined .cm-s-obsidian:not([class="markdown-source-view cm-s-obsi
   background-color: var(--tag-ideas-bg);
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  color: var(--white) !important;
+  color: var(--white) ;
   border: none;
   font-size: 0.95em;
 }
@@ -9325,7 +9333,7 @@ a.tag:not(.token) {
 
 .cm-s-obsidian span.cm-hashtag {
   font-family: var(--font-family-tag) !important;
-  font-size: var(--font-size-tag);
+  font-size: var(--font-size-tag)!important;
   text-decoration: none;
   color: var(--tag-text) !important;
 }
@@ -9672,7 +9680,7 @@ body.tag-clear-style .cm-s-obsidian span.cm-hashtag-begin+span.cm-hashtag.cm-met
   font-family: var(--font-family-special-tag) !important;
   display: inline;
   font-size: 0.95em;
-  color: var(--white) !important;
+  color: var(--white) ;
 }
 
 .cm-s-obsidian span.cm-hashtag-begin:nth-child(9n+1),
@@ -24274,7 +24282,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20220815";
+  content: "uid:20220816";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
@@ -25655,14 +25663,16 @@ body.funny-header-anim.clutter-free-headings  :is(.cm-header, .cm-widgetBuffer) 
   transition: transform 333ms;
   transform: translateX(30px);
 }
-body.funny-header-anim  .is-live-preview .cm-active :is(.cm-header, .cm-widgetBuffer) + .cm-html-embed,
-body.funny-header-anim.clutter-free-headings  :is(.cm-header, .cm-widgetBuffer) + .cm-html-embed
+body.funny-header-anim  .is-live-preview .cm-active :is(.cm-header) +.cm-widgetBuffer + .cm-html-embed,
+body.funny-header-anim.clutter-free-headings .cm-active  :is(.cm-header) + .cm-widgetBuffer + .cm-html-embed
 {
+  transition:  margin-left 500ms;
   margin-left: 30px;
 }
 body.funny-header-anim  .is-live-preview .cm-active :is(.cm-header, .cm-widgetBuffer) + .cm-bracket, 
 body.funny-header-anim.clutter-free-headings  .cm-active :is(.cm-header, .cm-widgetBuffer) + .cm-bracket
 {
+  transition:  margin-left 333ms;
   margin-left: 30px;
 }
 body.funny-header-anim  .is-live-preview .cm-line:not(.cm-active) .cm-header:first-of-type,
@@ -25695,3 +25705,85 @@ body.funny-header-anim.clutter-free-headings  .cm-active .cm-header:first-of-typ
   }
 }
 
+/* head-tag-style*/
+
+:is(.cm-header) +.cm-widgetBuffer + .cm-html-embed>sup {
+  background-color: var(--text-accent-hover);
+  color: #fff;
+  vertical-align: top;
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-size: 12px;
+  line-height: calc(var(--paragraph-spacing) + 0.7);
+  margin-left: 0.5em;
+  letter-spacing: .1em;
+  font-family:  var(--font-default);
+}
+:is(.cm-header) +.cm-widgetBuffer + .cm-html-embed>sub {
+  background-color: var( --simple-orange);
+  color: #fff;
+  vertical-align: top;
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-size: 12px;
+  line-height: calc(var(--paragraph-spacing) + 0.7);
+  margin-left: 0.5em;
+  letter-spacing: .1em;
+  font-family:  var(--font-default);
+}
+
+
+:is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) sup {
+  background-color: var(--text-accent-hover);
+  color: #fff;
+  vertical-align: top;
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-size: 12px;
+  margin-left: 0.5em;
+  letter-spacing: .1em;
+ margin-top: -0.2em;
+ line-height: calc(var(--line-height-main) - 0.7);
+}
+
+:is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) sub {
+  background-color: var( --simple-orange);
+  color: #fff;
+  vertical-align: top;
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-size: 12px;
+  margin-left: 0.5em;
+  letter-spacing: .1em;
+ margin-top: -0.2em;
+ line-height: calc(var(--line-height-main) - 0.7);
+}
+body.head-tag-style :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) :is(sub,sup)>.tag:not(.token)  {
+  padding:0;
+  background-color:transparent;
+}
+
+body.head-tag-style .cm-s-obsidian .cm-header ~  span.cm-hashtag
+{
+ font-size: calc(var(--font-size-tag) - 0.3em)!important;
+ vertical-align: top;
+}
+
+
+body.head-tag-style :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) >.tag:not(.token)  {
+ 
+  font-size: calc(var(--font-size-tag) - 0.3em);
+  vertical-align: top;
+}
+ .cm-s-obsidian .cm-header ~  span.cm-hashtag
+{
+ font-size: calc(var(--font-size-tag) - 0.3em)!important;
+ vertical-align: middle;
+margin-top: -0.3em;
+}
+
+ :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) >.tag:not(.token)  {
+ 
+  font-size: calc(var(--font-size-tag) - 0.2em);
+  vertical-align: middle;
+}
