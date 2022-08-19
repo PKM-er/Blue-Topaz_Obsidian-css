@@ -14011,7 +14011,6 @@ body.muted-activeline-bg .HyperMD-codeblock-bg.CodeMirror-activeline-background.
 
 .cm-gutter.cm-lineNumbers {
   font-family: var(--font-monospace-theme);
-  margin-top: 1.5px;
 }
 
 .cm-lineNumbers .cm-active.cm-gutterElement {
