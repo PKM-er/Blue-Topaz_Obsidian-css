@@ -17746,7 +17746,7 @@ body.rainbow-checklist .checklist-plugin-main:is(.markdown-preview-view,.markdow
 /* ============== sync ============== */
 /* ================================== */
 .status-bar-item.plugin-sync {
-  margin-top: 3px
+  margin-top: -1px
 }
 
 /* ================================== */
