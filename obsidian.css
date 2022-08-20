@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v0.15.9。uid [20220819] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.15.9, uid [20220819] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.15.9。uid [20220820] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.15.9, uid [20220820] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -1030,6 +1030,12 @@ settings:
     default-light: '#'
     default-dark: '#'
   -
+    id: remove-selectionbackground
+    title: Toggle Selection Background (Non-text Part)
+    title.zh: 还原鼠标划选时非文字部分背景颜色
+    type: class-toggle
+    default: false
+  -
     id: status-bar-bg
     title: Status Bar Background
     title.zh: 状态栏颜色
@@ -1387,13 +1393,27 @@ settings:
     default-dark: '#'
   -
     id: h1-toggle-underline
-    title: toggle h1 underline
+    title: Toggle h1 Underline
     title.zh: 切换h1下划线
     type: class-toggle
     default: false
   -
+    id: header-1-background
+    title: Toggle h1 Background
+    title.zh: 切换h1背景颜色
+    type: class-toggle
+    default: false
+  - 
+    id: h1-bg-color
+    title: H1 bg
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
     id: h1-text-align-settings
-    title: H1 text-align
+    title: H1 Text-align
     title.zh: H1 位置
     type: class-select
     allowEmpty: false
@@ -1428,6 +1448,20 @@ settings:
     title.zh: 切换H2下划线
     type: class-toggle
     default: false
+  -
+    id: header-2-background
+    title: Toggle h2 Background
+    title.zh: 切换h2背景颜色
+    type: class-toggle
+    default: false
+  - 
+    id: h2-bg-color
+    title: H2 bg
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
   -
     id: h2-text-align-settings
     title: H2 text-align
@@ -1466,6 +1500,20 @@ settings:
     type: class-toggle
     default: false
   -
+    id: header-3-background
+    title: Toggle h3 Background
+    title.zh: 切换h3背景颜色
+    type: class-toggle
+    default: false
+  - 
+    id: h3-bg-color
+    title: H3 bg
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
     id: h3-text-align-settings
     title: H3 text-align
     title.zh: H3 位置
@@ -1502,6 +1550,20 @@ settings:
     title.zh: 切换H4下划线
     type: class-toggle
     default: false
+  -
+    id: header-4-background
+    title: Toggle h4 Background
+    title.zh: 切换h4背景颜色
+    type: class-toggle
+    default: false
+  - 
+    id: h4-bg-color
+    title: H4 bg
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
   -
     id: h4-text-align-settings
     title: H4 text-align
@@ -1540,6 +1602,20 @@ settings:
     type: class-toggle
     default: false
   -
+    id: header-5-background
+    title: Toggle h5 Background
+    title.zh: 切换h5背景颜色
+    type: class-toggle
+    default: false
+  - 
+    id: h5-bg-color
+    title: H5 bg
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
     id: h5-text-align-settings
     title: H5 text-align
     title.zh: H5 位置
@@ -1576,6 +1652,20 @@ settings:
     title.zh: 切换H6下划线
     type: class-toggle
     default: false
+  -
+    id: header-6-background
+    title: Toggle h6 Background
+    title.zh: 切换h6背景颜色
+    type: class-toggle
+    default: false
+  - 
+    id: h6-bg-color
+    title: H6 bg
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
   -
     id: h6-text-align-settings
     title: H6 text-align
@@ -2553,8 +2643,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#e95d00'
-    default-dark: '#d58000'
+    default-light: '#'
+    default-dark: '#'
   -
     id: font-weight-inline-code
     title: Font Weight of Inline Code
@@ -2639,11 +2729,47 @@ settings:
     level: 3
     collapsed: true
   -
-    id: link-underline
-    title: Remove underlines of external links in Reading mode
-    title.zh: 取消阅读模式链接下划线
+    id: link-underline-internal
+    title: Toggle Internal Link Underline
+    title.zh: 切换内部链接下划线（默认：无）
     type: class-toggle
     default: false
+  -
+    id: link-underline-external
+    title: Toggle External Link Underline
+    title.zh: 切换外部链接下划线（默认：有）
+    type: class-toggle
+    default: false
+  -
+    id: link-underline-unresolved
+    title: Toggle Unresolved Link Underline 
+    title.zh: 切换未创建链接下划线（默认：有）
+    type: class-toggle
+    default: false
+  -
+    id: internal-link-color
+    title: Internal Link Color
+    title.zh: 内链颜色
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
+    id: remove-external-link-icon
+    title: Toggle Icon after External Link 
+    title.zh: 去除外部链接后面的图标
+    type: class-toggle
+    default: false
+  -
+    id: external-link-color
+    title: External Link Color
+    title.zh: 外链颜色
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
   -
     id: default-unresolved-link
     title: Toggle default unresolved link color 
@@ -2651,20 +2777,14 @@ settings:
     type: class-toggle
     default: false
   -
-    id: remove-underline-unresolved-link
-    title: Toggle underlines of unresolved link
-    title.zh: 去除未创建链接的下划线
-    type: class-toggle
-    default: false
-  -
-    id: graph-unresolved
-    title: Color of unresolved link
+    id: unresolved-link
+    title: Unresolved Link Color
     title.zh: 未创建链接颜色
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#db4e4ecc'
-    default-dark: '#f08080de'
+    default-light: '#'
+    default-dark: '#'
   - 
     id: link-click
     title: Cancel click the link to trigger auto-jump
@@ -2803,6 +2923,12 @@ settings:
     title.zh: Obsidian默认图片位置
     type: class-toggle
     default: false
+  -
+    id: image-max-width
+    title: Image Max-width
+    title.zh: 图片最大宽度
+    type: variable-text
+    default: 100%
   -
     id: icons-style-folder-1
     title: Intro to Basic Image Position
@@ -3950,6 +4076,7 @@ body {
   --font-weight-highlight-2: normal;
   --font-weight-highlight-3: normal;
   --font-weight-inline-code: bold;
+  --image-max-width: 100%;
 
   --checkbox-size: 1rem;
 
@@ -4085,7 +4212,7 @@ body.all-dark .print.theme-light,
   --accent-em: #a4ca8e;
   --text-error: #e16d76;
   --text-error-hover: #c9626a;
-  --text-selection: #47a5914d;
+  --text-selection: #3b767160;
   --text-on-accent: #e4e4e4;
   --interactive-normal: #2b2b2b;
   --interactive-hover: #373737;
@@ -4153,7 +4280,6 @@ body.all-dark .print.theme-light,
   --background-code-2: #4c4c4cb0;
   --text-color-code: #d58000;
   --text-color-code-normal: #d0d0d0;
-  --internal-link-color-in-highlight: #39adfb;
   --list-ul-block-color: #e19742a9;
   --list-ul-disc-color: #eb9563;
   --green-1: #79c142;
@@ -4189,12 +4315,19 @@ body.all-dark .print.theme-light,
   --tag-ideas: #fcfcc0;
   --tag-ideas-bg: #565656d8;
 
-  --h1-color: var(--print-h1-color,#85bb1f);
-  --h2-color: var(--print-h2-color,#27b822);
-  --h3-color: var(--print-h3-color,#1bbbbb);
-  --h4-color: var(--print-h4-color,#2f7fe9);
-  --h5-color: var(--print-h5-color,#a192f7);
-  --h6-color: var(--print-h6-color,#c173ee);
+  --h1-color: var(--print-h1-color,hsl(78, 62%, 47%));
+  --h2-color: var(--print-h2-color,hsl(118, 42%, 49%));
+  --h3-color: var(--print-h3-color,hsl(180, 53%, 48%));
+  --h4-color: var(--print-h4-color,hsl(216, 69%, 68%));
+  --h5-color: var(--print-h5-color,hsl(258, 79%, 77%));
+  --h6-color: var(--print-h6-color,hsl(290, 85%, 81%));
+
+  --h1-bg-color: hsl(from var(--h1-color) / .15);
+  --h2-bg-color: hsl(from var(--h2-color) / .15);
+  --h3-bg-color: hsl(from var(--h3-color) / .15);
+  --h4-bg-color: hsl(from var(--h4-color) / .15);
+  --h5-bg-color: hsl(from var(--h5-color) / .15);
+  --h6-bg-color: hsl(from var(--h6-color) / .15);
 
   --graph-text-color: #B5B5B5;
   --graph-tag: #88d842bb;
@@ -4202,13 +4335,16 @@ body.all-dark .print.theme-light,
   --graph-circle: #55a2d6bb;
   --graph-line: #8c8c8c;
   --graph-unresolved: #f08080de;
-  --link-unresolved-highlight: #ffa6a6;
   --graph-arrow: #c23917;
   --graph-control-bg: #00000080;
   --graph-circle-outline: transparent;
   --graph-canvas-bg: var(--background-primary-bg-4-bt);
   --graph-circle-fill-highlight: var(--interactive-accent);
   --graph-line-fill-highlight: rgb(var(--interactive-accent-rgb));
+
+  --unresolved-link: var(--graph-unresolved);
+  --internal-link-color: var(--text-accent);
+  --external-link-color: var(--internal-link-color);
 
   /*mermaid*/
   --mermaid-active-task-color: #187ef1;
@@ -4486,8 +4622,6 @@ body.all-dark .print.theme-light,
   --text-color-code: #e95d00;
   --text-color-code-normal: #000000;
 
-  --internal-link-color-in-highlight: #007fd3;
-
   --list-ul-block-color: #b9751b;
   --list-ul-disc-color: #f39c55;
   --green-1: #3dc730;
@@ -4529,19 +4663,29 @@ body.all-dark .print.theme-light,
   --h5-color: var(--print-h5-color,#59a0e2);
   --h6-color: var(--print-h6-color,#88b8e6);
 
+  --h1-bg-color: hsl(from var(--h1-color) / .15);
+  --h2-bg-color: hsl(from var(--h2-color) / .15);
+  --h3-bg-color: hsl(from var(--h3-color) / .15);
+  --h4-bg-color: hsl(from var(--h4-color) / .15);
+  --h5-bg-color: hsl(from var(--h5-color) / .15);
+  --h6-bg-color: hsl(from var(--h6-color) / .15);
+
   --graph-text-color: #696969;
   --graph-tag: #77d425cc;
   --graph-attach: #afcfe0cc;
   --graph-circle: #1f78b4cc;
   --graph-line: #b1b1b1;
   --graph-unresolved: #db4e4ecc;
-  --link-unresolved-highlight: #df4747;
   --graph-arrow: #e25300;
   --graph-control-bg: #ffffff9a;
   --graph-circle-outline: transparent;
   --graph-canvas-bg: var(--background-primary-bg-4-bt);
   --graph-circle-fill-highlight: var(--interactive-accent);
   --graph-line-fill-highlight: rgb(var(--interactive-accent-rgb));
+
+  --unresolved-link: var(--graph-unresolved);
+  --internal-link-color: var(--text-accent);
+  --external-link-color: var(--internal-link-color);
 
   /*mermaid*/
   --mermaid-active-task-color: #44bbff;
@@ -4745,8 +4889,6 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --background-code-2: #cccccc62;
   --text-color-code: #e95d00;
 
-  --internal-link-color-in-highlight: #03a240;
-
   --list-ul-block-color: #b9751b;
   --list-ul-disc-color: #f39c55;
   --green-1: #3dc730;
@@ -4794,7 +4936,6 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --graph-circle: #6fbf8ecc;
   --graph-line: #b1b1b1;
   --graph-unresolved: #db4e4ecc;
-  --link-unresolved-highlight: #df4747;
   --graph-arrow: #e25300;
   --graph-control-bg: #ffffff9a;
 
@@ -4897,8 +5038,6 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --background-code-2: #4c4c4cb0;
   --text-color-code: #d58000;
 
-  --internal-link-color-in-highlight: #60da74;
-
   --list-ul-block-color: #e19742a9;
   --list-ul-disc-color: #eb9563;
   --green-1: #79c142;
@@ -4913,7 +5052,6 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --graph-circle: #44d07ebb;
   --graph-line: #8c8c8c;
   --graph-unresolved: #f08080de;
-  --link-unresolved-highlight: #ffa6a6;
   --graph-arrow: #c23917;
   --graph-control-bg: #00000080;
 
@@ -4999,7 +5137,7 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --background-code: #1111118c;
   --background-code-2: #4c4c4cb0;
   --text-color-code: #d58000;
-  --internal-link-color-in-highlight: #3197eb;
+
   --internal-link-color: #3197eb;
   --list-ul-block-color: #d0d0d0a9;
   --list-ul-disc-color: #eb9563;
@@ -5047,7 +5185,6 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --graph-circle: #ebebebb9;
   --graph-line: #8c8c8c;
   --graph-unresolved: #f08080de;
-  --link-unresolved-highlight: #ffa6a6;
   --graph-arrow: #c23917;
   --graph-control-bg: #00000080;
 
@@ -5131,7 +5268,7 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --background-code: #ebebeb71;
   --background-code-2: #cccccc62;
   --text-color-code: #e95d00;
-  --internal-link-color-in-highlight: #0040ff;
+
   --internal-link-color: #0040ff;
 
   /*list*/
@@ -5182,7 +5319,6 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --graph-circle: #6a6a6acc;
   --graph-line: #b1b1b1;
   --graph-unresolved: #db4e4ecc;
-  --link-unresolved-highlight: #df4747;
   --graph-arrow: #e25300;
   --graph-control-bg: #ffffff9a;
 
@@ -5231,12 +5367,6 @@ body.color-scheme-options-monochrome-topaz.theme-light {
 
   --table-color-calendar-2: rgb(212, 212, 212);
   --table-color-rgb: 212, 212, 212;
-}
-
-body.color-scheme-options-monochrome-topaz .cm-s-obsidian span.cm-link,
-body.color-scheme-options-monochrome-topaz .cm-s-obsidian span.cm-hmd-internal-link,
-body.color-scheme-options-monochrome-topaz :is(.markdown-preview-view,.markdown-rendered) .internal-link {
-  color: var(--internal-link-color) !important;
 }
 
 body.color-scheme-options-monochrome-topaz :is(.markdown-preview-view,.markdown-rendered) h1,
@@ -5421,8 +5551,6 @@ body.color-scheme-options-pink-topaz.theme-light {
   --background-code-2: #d5d5d562;
   --text-color-code: #e95d00;
 
-  --internal-link-color-in-highlight: #f15ad1;
-
   --list-ul-block-color: #c7c947;
   --list-ul-disc-color: #f39c55;
   --green-1: #3dc730;
@@ -5470,7 +5598,6 @@ body.color-scheme-options-pink-topaz.theme-light {
   --graph-circle: #f596bbcc;
   --graph-line: #e6b0c9;
   --graph-unresolved: #db4e4ecc;
-  --link-unresolved-highlight: #df4747;
   --graph-arrow: #e25300;
   --graph-control-bg: #ffffff9a;
 
@@ -5583,8 +5710,6 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --background-code-2: #4c4c4cb0;
   --text-color-code: #d58000;
 
-  --internal-link-color-in-highlight: #c86aa9eb;
-
   /*list*/
   --list-ul-block-color: #b27b7b;
   --list-ul-disc-color: #af5a5a;
@@ -5633,7 +5758,6 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --graph-circle: #d67a8dc7;
   --graph-line: #ad7b8dc7;
   --graph-unresolved: #cf3a3ac7;
-  --link-unresolved-highlight: #ffa6a6;
   --graph-arrow: #c23917;
   --graph-control-bg: #00000080;
 
@@ -5784,8 +5908,6 @@ body.color-scheme-options-topaz-nord.theme-dark {
   --strong-em-color-2: var(--accent-strong);
   --strong-em-highlight-color: var(--accent-strong);
 
-  --internal-link-color-in-highlight: var(--nord10);
-
   --embed-color: var(--nord1-1);
 
   --activeline-background: #4C566A1a;
@@ -5811,7 +5933,6 @@ body.color-scheme-options-topaz-nord.theme-dark {
   --graph-circle: var(--nord9);
   --graph-line: var(--nord6);
   --graph-unresolved: var(--nord11);
-  --link-unresolved-highlight: var(--nord11);
   --graph-arrow: var(--nord11);
 
   --text-search-highlight-bg: var(--nord9-1);
@@ -5964,8 +6085,6 @@ body.color-scheme-options-topaz-nord.theme-light {
   --strong-em-color-2: var(--accent-strong);
   --strong-em-highlight-color: var(--accent-strong);
 
-  --internal-link-color-in-highlight: var(--nord10);
-
   --embed-color: var(--nord6-2);
 
   --activeline-background: var(--nord5-1);
@@ -5991,7 +6110,6 @@ body.color-scheme-options-topaz-nord.theme-light {
   --graph-circle: var(--nord9);
   --graph-line: var(--nord3-1);
   --graph-unresolved: var(--nord11);
-  --link-unresolved-highlight: var(--nord11);
   --graph-arrow: var(--nord11);
 
   --text-search-highlight-bg: var(--nord9-2);
@@ -6525,8 +6643,6 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --theme-color-translucent-1: var(--color1);
   --color-specification: var(--high-color);
 
-  --internal-link-color-in-highlight: var(--main-color);
-
   --list-ul-block-color: var(--color6);
   --list-ul-disc-color: var(--main-color);
   --green-1: #3dc730;
@@ -6549,7 +6665,6 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --graph-circle: var(--color3);
   --graph-line: #b1b1b1;
   --graph-unresolved: #db4e4ecc;
-  --link-unresolved-highlight: #df4747;
   --graph-arrow: #e25300;
   --graph-control-bg: var(--bg-color);
 
@@ -6697,8 +6812,6 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
   --background-code-2: #4c4c4cb0;
   --text-color-code: #d58000;/*代码框文字颜色*/
 
-  --internal-link-color-in-highlight: var(--main-color);/*==[[]]==双链文字颜色*/
-
   --list-ul-block-color: var(--deep-color);
   --list-ul-disc-color: var(--main-color);
   --green-1: #3dc730;
@@ -6721,7 +6834,6 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
   --graph-circle: var(--color8);/*图谱普通点颜色*/
   --graph-line: #8c8c8c;/*图谱线颜色*/
   --graph-unresolved: #f08080de;/*图谱未创建点颜色，兼未创建双链颜色*/
-  --link-unresolved-highlight: #ffa6a6;/*未创建双链颜色加高亮==[[]]==文字颜色*/
   --graph-arrow: #c23917;/*图谱箭头颜色*/
   --graph-control-bg: #00000080;/*图谱控制窗背景颜色*/
 
@@ -6871,8 +6983,6 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --background-code-2: #cccccc62;
   --text-color-code: #e95d00;
 
-  --internal-link-color-in-highlight: var(--main-color);
-
   --list-ul-block-color: var(--color5);
   --list-ul-disc-color: var(--main-color);
   --green-1: #3dc730;
@@ -6920,7 +7030,6 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --graph-circle: var(--color3);
   --graph-line: #b1b1b1;
   --graph-unresolved: #db4e4ecc;
-  --link-unresolved-highlight: #df4747;
   --graph-arrow: #e25300;
   --graph-control-bg: var(--bg-color);
 
@@ -7062,8 +7171,6 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
   --background-code-2: #4c4c4cb0;
   --text-color-code: #d58000;/*代码框文字颜色*/
 
-  --internal-link-color-in-highlight: var(--color3);/*==[[]]==双链文字颜色*/
-
   --list-ul-block-color: var(--color6);
   --list-ul-disc-color: var(--main-color);
   --green-1: #3dc730;
@@ -7113,7 +7220,6 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
   --graph-circle: var(--color8);
   --graph-line: #8c8c8c;
   --graph-unresolved: #f08080de;
-  --link-unresolved-highlight: #ffa6a6;
   --graph-arrow: #c23917;
   --graph-control-bg: #00000080;
 
@@ -7251,8 +7357,6 @@ body.color-scheme-options-autumn-topaz.theme-light {
   --theme-color-translucent: var(--low-color);  /*鼠标经过时文件夹背景色*/
   --theme-color-translucent-1: var(--color1);
   --color-specification: var(--high-color);
-  
-  --internal-link-color-in-highlight: var(--main-color);
 
   --list-ul-block-color: var(--color5);
   --list-ul-disc-color: var(--main-color);
@@ -7409,8 +7513,6 @@ body.color-scheme-options-autumn-topaz.theme-dark {
   --theme-color-translucent-1: var(--deep-color);
   --color-specification: var(--high-color);
 
-  --internal-link-color-in-highlight: var(--color4); /*==[[]]==双链文字颜色*/
-
   --list-ul-block-color: var(--color6);
   --list-ul-disc-color: var(--main-color);
   --green-1: #3dc730;
@@ -7450,7 +7552,6 @@ body.color-scheme-options-autumn-topaz.theme-dark {
   --graph-circle: var(--color8); /*图谱普通点颜色*/
   --graph-line: #8c8c8c;  /*图谱线颜色*/
   --graph-unresolved: #f08080de; /*图谱未创建点颜色，兼未创建双链颜色*/
-  --link-unresolved-highlight: #ffa6a6; /*未创建双链颜色加高亮==[[]]==文字颜色*/
   --graph-arrow: #c23917; /*图谱箭头颜色*/
   --graph-control-bg: #00000080; /*图谱控制窗背景颜色*/
 
@@ -7590,8 +7691,6 @@ body.color-scheme-options-lillimon-topaz.theme-light {
   --theme-color-translucent-1: var(--color1);
   --color-specification: var(--high-color);
 
-  --internal-link-color-in-highlight: var(--magic-main-color);
-
   --list-ul-block-color: var(--color5);
   --list-ul-disc-color: var(--magic-main-color);
   --green-1: #3dc730;
@@ -7730,9 +7829,6 @@ body.color-scheme-options-lillimon-topaz.theme-dark {
   --theme-color-translucent: var(--magic-deep-color);
   --theme-color-translucent-1: var(--magic-deep-color);
   --color-specification: var(--high-color);
-
-  --internal-link-color-in-highlight: var(--magic-main-color);
-  /*==[[]]==双链文字颜色*/
 
   --list-ul-block-color: var(--color6);
   --list-ul-disc-color: var(--magic-main-color);
@@ -7904,8 +8000,6 @@ body.color-scheme-options-lilac.theme-light {
 
   --internal-link-color: #6203a2;
 
-  --internal-link-color-in-highlight: #6203a2;
-
   --list-ul: #ffffff;
   --list-ul-block-color: #7f1bb9;
   --list-ul-disc-color: #d955f3;
@@ -7957,7 +8051,6 @@ body.color-scheme-options-lilac.theme-light {
   --graph-circle: #ac6fbfcc;
   --graph-line: #b1b1b1;
   --graph-unresolved: #db4e4ecc; 
-  --link-unresolved-highlight: #df4747;
   --graph-arrow: #e25300; 
   --graph-control-bg: #ffffff9a;
 
@@ -8096,7 +8189,6 @@ body.color-scheme-options-lilac.theme-dark {
   --text-color-code: #d58000;
 
   --internal-link-color: #a360da;
-  --internal-link-color-in-highlight: #a360da;
 
   --list-ul: #f1a8f8;
   --list-ul-block-color: #e142d9a9;
@@ -10927,6 +11019,31 @@ body.h6-toggle-underline .markdown-source-view.is-live-preview .HyperMD-header.H
   color: var(--h6-color);
 }
 
+body.header-1-background .cm-header-1,
+body.header-1-background :is(.markdown-preview-view,.markdown-rendered) h1 {
+  background-color: var(--h1-bg-color);
+}
+body.header-2-background .cm-header-2,
+body.header-2-background :is(.markdown-preview-view,.markdown-rendered) h2 {
+  background-color: var(--h2-bg-color);
+}
+body.header-3-background .cm-header-3,
+body.header-3-background :is(.markdown-preview-view,.markdown-rendered) h3 {
+  background-color: var(--h3-bg-color);
+}
+body.header-4-background .cm-header-4,
+body.header-4-background :is(.markdown-preview-view,.markdown-rendered) h4 {
+  background-color: var(--h4-bg-color);
+}
+body.header-5-background .cm-header-5,
+body.header-5-background :is(.markdown-preview-view,.markdown-rendered) h5 {
+  background-color: var(--h5-bg-color);
+}
+body.header-6-background .cm-header-6,
+body.header-6-background :is(.markdown-preview-view,.markdown-rendered) h6 {
+  background-color: var(--h6-bg-color);
+}
+
 .cm-header-1 {
   font-size: var(--h1);
   position: relative;
@@ -12648,6 +12765,10 @@ a.external-link>em {
   color: var(--text-accent);
 }
 
+body.remove-external-link-icon a.external-link {
+  background-image: none;
+}
+
 /*link format [[]]*/
 .cm-formatting-link.cm-strong.cm-em {
   -webkit-text-fill-color: var(--text-faint);
@@ -13377,21 +13498,14 @@ body.light-background-color-files .nav-file-title.is-active {
 }
 
 /*link*/
-a,
 :is(.markdown-preview-view,.markdown-rendered) .internal-link {
-  text-decoration: none;
   font-family: var(--font-family-strong) !important;
-}
-
-a:hover,
-:is(.markdown-preview-view,.markdown-rendered) .internal-link:hover {
-  text-decoration: underline;
 }
 
 body:not(.default-unresolved-link) :is(.markdown-preview-view,.markdown-rendered) .internal-link.is-unresolved>*,
 body:not(.default-unresolved-link) *>.internal-link.is-unresolved,
 body:not(.default-unresolved-link) .markdown-source-view.mod-cm6 .cm-hmd-internal-link .is-unresolved {
-  color: var(--graph-unresolved) !important;
+  color: var(--unresolved-link) !important;
 }
 
 body:not(.default-unresolved-link) .markdown-source-view.mod-cm6 .is-unresolved,
@@ -13399,17 +13513,17 @@ body:not(.default-unresolved-link) :is(.markdown-preview-view,.markdown-rendered
   opacity: 0.7;
 }
 
-body:not(.remove-underline-unresolved-link) :is(.markdown-preview-view,.markdown-rendered) .internal-link.is-unresolved>*,
-body:not(.remove-underline-unresolved-link) *>.internal-link.is-unresolved,
-body:not(.remove-underline-unresolved-link) .markdown-source-view.mod-cm6 .cm-hmd-internal-link .is-unresolved ,
-body:not(.remove-underline-unresolved-link) .markdown-source-view.mod-cm6 .is-unresolved,
-body:not(.remove-underline-unresolved-link) :is(.markdown-preview-view,.markdown-rendered) .internal-link.is-unresolved {
-  text-decoration: underline !important;
+body.link-underline-unresolved :is(.markdown-preview-view,.markdown-rendered) .internal-link.is-unresolved>*,
+body.link-underline-unresolved *>.internal-link.is-unresolved,
+body.link-underline-unresolved .markdown-source-view.mod-cm6 .cm-hmd-internal-link .is-unresolved,
+body.link-underline-unresolved .markdown-source-view.mod-cm6 .is-unresolved,
+body.link-underline-unresolved :is(.markdown-preview-view,.markdown-rendered) .internal-link.is-unresolved,
+body.link-underline-unresolved .cm-hmd-internal-link .is-unresolved .cm-underline {
+  text-decoration: none !important;
 }
 
 body:not(.default-unresolved-link) :is(.markdown-preview-view,.markdown-rendered) mark .internal-link.is-unresolved {
-  color: var(--link-unresolved-highlight) !important;
-  opacity: 0.75;
+  opacity: 0.9;
 }
 
 :is(.markdown-preview-view,.markdown-rendered) .internal-link.is-unresolved:hover {
@@ -13418,14 +13532,15 @@ body:not(.default-unresolved-link) :is(.markdown-preview-view,.markdown-rendered
 
 .cm-s-obsidian span.cm-link, 
 .cm-s-obsidian span.cm-hmd-internal-link {
-  color: var(--text-accent) !important;
+  color: var(--internal-link-color) !important;
 }
 
-/* internal link in highlight */
+/* internal link in highlight 
 .cm-highlight.cm-hmd-internal-link,
 :is(.markdown-preview-view,.markdown-rendered) mark .internal-link:not(.is-unresolved) {
   color: var(--internal-link-color-in-highlight) !important;
 }
+*/
 
 :is(.markdown-preview-view,.markdown-rendered) a:hover {
   color: var(--text-accent);
@@ -13437,16 +13552,16 @@ body:not(.default-unresolved-link) :is(.markdown-preview-view,.markdown-rendered
 
 a.external-link {
   text-decoration: underline;
+  color: var(--external-link-color);
 }
-body.link-underline a.external-link {
+body.link-underline-external a.external-link,
+body.link-underline-internal .markdown-source-view.mod-cm6 .cm-underline {
   text-decoration: none;
 }
 
 /*cm6 模式的下划线*/
-body.link-underline .markdown-source-view.mod-cm6 .cm-underline,
-body.link-underline a, 
-body.link-underline :is(.markdown-preview-view,.markdown-rendered) .internal-link {
-  text-decoration: none !important;
+body.link-underline-internal :is(.markdown-preview-view,.markdown-rendered) .internal-link {
+  text-decoration: none;
 }
 
 .cm-url:hover {
@@ -13873,7 +13988,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
 
 /* images : reduce displayed size of embedded files, zoom on hover */
 body:not(.obsidian-default-image) :is(.markdown-preview-view,.markdown-rendered) img:not([class*="emoji"]):not(.banner-image.full-width)  {
-  max-width: min(100%, 800px);
+  max-width: var(--image-max-width);
   margin-left: auto;
   margin-right: auto;
 }
@@ -13910,6 +14025,7 @@ body:not(.image-zoom) .markdown-reading-view img:not([class*="emoji"]):active,
 }
 
 body:not(.obsidian-default-image) .internal-embed.image-embed.is-loaded img:not([class*="emoji"]) {
+  max-width: var(--image-max-width);
   margin: 3px auto;
   display: block;
 }
@@ -17937,7 +18053,7 @@ span.dataview.small-text {
 }
 
 .dataview-container .internal-link {
-font-size:0.88em;
+  font-size:0.88em;
 }
 
 ul.dataview.list-view-ul>li:not(.task-list-item) {
@@ -26075,4 +26191,9 @@ body.head-tag-style :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,
   font-size: 0px;
   padding:0;
   border-radius: 0px;
+}
+
+
+body:not(.remove-selectionbackground) .markdown-source-view.mod-cm6 .cm-editor .cm-selectionBackground {
+  background: transparent;
 }
