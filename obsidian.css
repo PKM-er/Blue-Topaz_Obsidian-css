@@ -4481,7 +4481,7 @@ body.all-dark .print.theme-light,
 
   --mjx-inline-math-color: var(--text-normal);
   --mjx-math-color: var(--text-normal);
-  --background-leaf-resize-handle: var(--background-primary-alt-bg-4-bt);
+  --background-leaf-resize-handle: var(--background-secondary-alt-bg-4-bt);
   --text-folder-file-icon: var(--theme-color);
 
   --color-highlight-1: var(--text-highlight);
@@ -4813,7 +4813,7 @@ body.all-dark .print.theme-light,
 
   --mjx-inline-math-color: var(--text-normal);
   --mjx-math-color: var(--text-normal);
-  --background-leaf-resize-handle: var(--background-primary-alt-bg-4-bt);
+  --background-leaf-resize-handle: var(--background-secondary-alt-bg-4-bt);
   --text-folder-file-icon: var(--theme-color);
 
   --color-highlight-1: var(--text-highlight);
@@ -23128,7 +23128,8 @@ body.background-settings-workplace-background-image.theme-light {
   --background-secondary-alt-bg-4-bt: #ffffff69;
   --background-primary-alt-bg-4-bt: #ffffffbe;
   --background-code: #fafafa94;
-  --background-leaf-resize-handle: #ebebeba6;
+  /*
+  --background-leaf-resize-handle: #ebebeba6;*/
   --text-folder-file: #292929;
   --background-modifier-border: #bfbfbf;
 }
@@ -23169,7 +23170,8 @@ body.background-settings-workplace-background-image.theme-dark {
   --background-secondary-alt-bg-4-bt: #16161670;
   --background-primary-alt-bg-4-bt: #2a2a2a91;
   --background-code: #16161667;
-  --background-leaf-resize-handle: #40404077;
+  /*
+  --background-leaf-resize-handle: #40404077;*/
   --text-normal: #cccccc;
 }
 
