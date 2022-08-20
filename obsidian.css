@@ -13555,12 +13555,8 @@ a.external-link {
   color: var(--external-link-color);
 }
 body.link-underline-external a.external-link,
-body.link-underline-internal .markdown-source-view.mod-cm6 .cm-underline {
-  text-decoration: none;
-}
-
-/*cm6 模式的下划线*/
-body.link-underline-internal :is(.markdown-preview-view,.markdown-rendered) .internal-link {
+body:not(.link-underline-internal) .markdown-source-view.mod-cm6 .cm-hmd-internal-link >*:not(.is-unresolved).cm-underline,
+body:not(.link-underline-internal) :is(.markdown-preview-view,.markdown-rendered) .internal-link:not(.is-unresolved) {
   text-decoration: none;
 }
 
