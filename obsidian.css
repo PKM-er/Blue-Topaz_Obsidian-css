@@ -3638,6 +3638,12 @@ settings:
     type: heading
     level: 2
     collapsed: true
+  -
+    id: memos-inputbox
+    title: Put input box to bottom
+    title.zh: PC端memos输入框置于页面底部
+    type: class-toggle
+    default: false
   - 
     id: heatmap-light
     title: Heatmap in Light mode
@@ -13393,10 +13399,15 @@ body.bt-status-off #scroll-controls {
   margin: auto 0;
 }
 
-.status-bar-item>* {
+.status-bar-item>*:not(svg) {
   padding-top: var(--bar-vertical-padding) !important;
   padding-bottom: var(--bar-vertical-padding) !important;
   margin-top: calc(-1*var(--bar-vertical-padding));
+}
+.status-bar-item>svg {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-top: -1px;
 }
 
 .nav-file-title.is-active {
@@ -18970,9 +18981,33 @@ body:not(.is-mobile).mobile-show-sidebar  .mobile-view #page-wrapper > .memos-si
     padding-right: 0;
   }
   
-  body.mod-windows div[data-type='memos_view'] #page-wrapper > .content-wrapper {
-    width:auto;
-  }
+  body.mod-windows div[data-type='memos_view'] #page-wrapper > .content-wrapper
+{
+  width:auto;
+}
+
+}
+
+
+/**memos 输入框移到下方***/
+body.memos-inputbox div[data-type='memos_view']:not(.mobile-view) #page-wrapper  .memo-editor-wrapper {
+  bottom: 0;
+  margin-bottom: -145px;
+  position: absolute;
+  padding:8px;
+ 
+}
+body.memos-inputbox div[data-type='memos_view']:not(.mobile-view) .memolist-wrapper.completed
+{
+  padding-bottom: 40px;
+}
+body.memos-inputbox div[data-type='memos_view']:not(.mobile-view) #page-wrapper > .content-wrapper {
+    height: calc(100% - 150px);
+}
+
+body.memos-inputbox div[data-type='memos_view']:not(.mobile-view)  .memolist-wrapper
+{
+  flex-direction: column-reverse;
 }
 
 
