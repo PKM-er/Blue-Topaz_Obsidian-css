@@ -17495,6 +17495,11 @@ body.style-options-for-admonition-plugin .admonition-flex .admonition-content ul
   padding-inline-start: 20px !important;
   margin-left: -20px;
 }
+ 
+body.style-options-for-admonition-plugin :is(.admonition-flex,.admonition-col2,.admonition-col3,.admonition-col4) .admonition-content .admonition-content ul li{
+  list-style-type: none;
+}
+
 body.style-options-for-admonition-plugin .admonition-col2 .admonition-content ul li .task-list-item-checkbox,
 body.style-options-for-admonition-plugin .admonition-col3 .admonition-content ul li .task-list-item-checkbox,
 body.style-options-for-admonition-plugin .admonition-col4 .admonition-content ul li .task-list-item-checkbox,
