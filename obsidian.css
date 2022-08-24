@@ -10214,7 +10214,7 @@ body.text-indentation-two-em [data-type="markdown"] div[class="el-p"]:not(blockq
 }
 body.text-indentation-two-em [data-type="markdown"] div[class="el-p"]:not(blockquote) > p>br::after,
 [data-type="markdown"] :is(.markdown-preview-view,.markdown-rendered).indent div[class="el-p"]:not(blockquote) >p>br::after {
-  content: '\A         ';
+  content: '\A\0009\0009';
 }
 
 
@@ -18861,13 +18861,12 @@ fill:none;
   color: unset;
 }
 
-
-body:not(.is-mobile).mobile-show-sidebar  .mobile-view #page-wrapper > .memos-sidebar-wrapper:hover {
+body.is-popout-window   .memos-sidebar-wrapper:hover {
   transform: translateX(0);
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-body:not(.is-mobile).mobile-show-sidebar  .mobile-view #page-wrapper > .memos-sidebar-wrapper {
+body.is-popout-window   .memos-sidebar-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -18883,30 +18882,14 @@ body:not(.is-mobile).mobile-show-sidebar  .mobile-view #page-wrapper > .memos-si
   transition: all 1.2s ease-in-out;
   transform: translateX(-320px);
 }
+body.is-popout-window  div[data-type='memos_view'] .memos-header-container > .title-text > .action-btn {
+
+  display: none!important;
+}
 
 @media only screen and (max-width: 875px) {
  
-  body.is-popout-window   .memos-sidebar-wrapper:hover {
-      transform: translateX(0);
-      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
-  }
-   
-  body.is-popout-window   .memos-sidebar-wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      z-index: 99;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 320px;
-      height: 100%;
-      padding: 0;
-      background-color: var(--background-secondary);
-      transition: all 1.2s ease-in-out;
-      transform: translateX(-320px);
-    }
+
   body.is-popout-window  .memos-sidebar-wrapper > * {
       width: 320px;
       max-width: 95%;
@@ -24512,6 +24495,13 @@ body:not(.default-loading-page) .progress-bar-subline {
 :is(.markdown-preview-view,.markdown-rendered) img.banner-image.full-width{
   max-width: none;
 }
+/* ==修复新弹出窗口banner位置错位===================== */
+body.is-popout-window {
+  --banner-height: 300px;
+  --banner-internal-embed-height: 200px;
+  --banner-preview-embed-height: 120px;
+  }
+
 
 /* ================================== */
 /* =======Tasks======= */
@@ -24712,7 +24702,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
     display:unset;
   }
   body.text-indentation-two-em   .print *:not(blockquote) > p>br::after {
-    content: '\A         ';
+    content: '\A\0009\0009';
   }
 }
 
@@ -25109,7 +25099,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   
 .callout.callout:is([data-callout-metadata*="indent"], 
 [data-callout*=indent]) .callout-content p br::after {
-  content: '\A         ';
+  content: '\A\0009\0009';
 }
 /* ===隐藏图标============ */
 .callout.callout:is([data-callout-metadata^="noicon"], 
