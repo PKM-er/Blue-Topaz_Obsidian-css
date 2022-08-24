@@ -10137,7 +10137,7 @@ div[class="markdown-source-view cm-s-obsidian mod-cm6"] span.cm-hashtag-begin+.c
   background-color: var(--theme-color-translucent-1);
 }
 
-body:not(.is-popout-windows) :is(.markdown-preview-view,.markdown-rendered) {
+ :is(.markdown-preview-view,.markdown-rendered) {
   padding: 10px 30px 10px;
   width: 100%;
   height: 100%;
