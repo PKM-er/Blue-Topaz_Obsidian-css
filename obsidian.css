@@ -26237,10 +26237,10 @@ body:not(.remove-selectionbackground) .markdown-source-view.mod-cm6 .cm-editor .
   background: transparent;
 }
 
-/*iphone 底部横条覆盖问题*/
-@media only screen and (device-height: 812px){
-  html,body{min-height: 812px;}	/* 812是iphonex的物理高度，可设置成任意比屏幕高的px */
-}
-@media only screen and (device-height: 896px){
-  html,body{min-height: 896px;}
+ 
+body.is-mobile{
+padding-top: env(safe-area-inset-top);
+padding-right: env(safe-area-inset-right);
+padding-bottom: env(safe-area-inset-bottom);
+padding-left: env(safe-area-inset-left);
 }
