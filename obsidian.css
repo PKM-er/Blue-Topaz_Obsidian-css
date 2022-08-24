@@ -26236,3 +26236,16 @@ body.head-tag-style :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,
 body:not(.remove-selectionbackground) .markdown-source-view.mod-cm6 .cm-editor .cm-selectionBackground {
   background: transparent;
 }
+
+//*iphone 底部横条覆盖问题*/
+@supports (bottom: constant(safe-area-inset-bottom)) or (bottom: env(safe-area-inset-bottom)) {
+
+  .workspace {
+  
+  margin-bottom: constant(safe-area-inset-bottom);
+  
+  margin-bottom: env(safe-area-inset-bottom);
+  
+  }
+  
+  }
