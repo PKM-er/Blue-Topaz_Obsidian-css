@@ -20153,6 +20153,21 @@ body.dialogue-style-wechat .dialogue-plugin-message {
   padding: 1px;
 }
 
+body.dialogue-style-wechat.is-mobile  .dialogue-plugin-message {
+  max-width: calc(100% - 2em) !important;
+}
+body.dialogue-style-wechat.is-mobile .dialogue-plugin-message .dialogue-plugin-message-content {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+ 
+body.dialogue-style-wechat.is-mobile .dialogue-plugin-message .dialogue-plugin-message-title
+{
+  min-width:unset;
+  margin-left: -1em;
+  margin-right: -1em;
+}
+
 body.dialogue-style-wechat .dialogue-plugin-comment-wrapper .dialogue-plugin-comment {
   margin: 7px;
   width: fit-content;
@@ -26236,12 +26251,7 @@ body.head-tag-style :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,
 body:not(.remove-selectionbackground) .markdown-source-view.mod-cm6 .cm-editor .cm-selectionBackground {
   background: transparent;
 }
-
- 
-.is-mobile.is-ios .safe-area-top-cover {
-  background-color: transparent;
-}
-
-.is-mobile .safe-area-top-cover {
-  background-color: transparent;
+/***修复iphone 底部横条暴露的问题***/
+body.is-mobile {
+  padding: 0 !important;
 }
