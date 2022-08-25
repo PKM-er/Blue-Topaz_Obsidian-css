@@ -26236,12 +26236,7 @@ body.head-tag-style :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,
 body:not(.remove-selectionbackground) .markdown-source-view.mod-cm6 .cm-editor .cm-selectionBackground {
   background: transparent;
 }
-
- 
-.is-mobile.is-ios .safe-area-top-cover {
-  background-color: transparent;
-}
-
-.is-mobile .safe-area-top-cover {
-  background-color: transparent;
+/***修复iphone 底部横条暴露的问题***/
+body.is-mobile {
+  padding: 0 !important;
 }
