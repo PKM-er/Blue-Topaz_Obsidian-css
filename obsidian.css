@@ -10460,9 +10460,8 @@ span.cm-strong.cm-em.cm-highlight {
   border-left-color: var(--theme-color);
 }
 
-.view-header-title-container
-{
-  flex-grow:unset;
+.view-header-title-container {
+  flex-grow: unset;
 }
 /*标题后阴影*/
 .view-header-title-container:after {
@@ -10498,7 +10497,6 @@ span.cm-strong.cm-em.cm-highlight {
 body.hide-titlebar-text .titlebar-text {
   display: none
 }
-
 
 
 .titlebar-left {
@@ -12829,7 +12827,6 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   border-bottom: 3px transparent;
   background-color: transparent;
   position: relative;
-  text-overflow: ellipsis;
 }
 
 .popover.hover-popover {
@@ -17502,7 +17499,6 @@ body.style-options-for-admonition-plugin .admonition-col2 .admonition-content ul
 body.style-options-for-admonition-plugin .admonition-col3 .admonition-content ul li .task-list-item-checkbox,
 body.style-options-for-admonition-plugin .admonition-col4 .admonition-content ul li .task-list-item-checkbox,
 body.style-options-for-admonition-plugin .admonition-flex .admonition-content ul li .task-list-item-checkbox {
-
   margin-left: auto;
 }
 :is(.admonition-col2,.admonition-col3,.admonition-col4,.admonition-flex) .callout-content ul.dataview.list-view-ul>li:not(.task-list-item) {
@@ -17514,7 +17510,7 @@ body.style-options-for-admonition-plugin .admonition-col2 {
 }
   
 body.style-options-for-admonition-plugin .admonition-col2 .admonition	{
-  overflow: visible ;
+  overflow: visible;
   margin:0;
 }
 
@@ -17586,7 +17582,7 @@ body.style-options-for-admonition-plugin .admonition-col3 {
 }
   
 body.style-options-for-admonition-plugin .admonition-col3 .admonition	{
-  overflow: visible ;
+  overflow: visible;
   margin: 0;
 }
 
@@ -17648,7 +17644,7 @@ body.style-options-for-admonition-plugin .admonition-col3-parent .admonition-col
 
 /****col4 四栏*****/
 body.style-options-for-admonition-plugin .admonition-col4 {
-  box-shadow: none!important;
+  box-shadow: none !important;
 }
   
 body.style-options-for-admonition-plugin .admonition-col4 .admonition	{
@@ -17812,7 +17808,7 @@ body.style-options-for-admonition-plugin :is(.admonition-def,.admonition-thm,.ad
   border-radius: 0.2em;
 }
 
-body.style-options-for-admonition-plugin :is(.admonition-def,.admonition-thm,.admonition-lem,.admonition-cor,.admonition-pro) *.callout-title.admonition-title  {
+body.style-options-for-admonition-plugin :is(.admonition-def,.admonition-thm,.admonition-lem,.admonition-cor,.admonition-pro) *.callout-title.admonition-title {
   display: flex;
   top: unset;
   left: 1.5em;
@@ -18037,8 +18033,8 @@ h5.breadcrumbs-matrix-header {
   background-color: transparent;
 }
 .code-block-wrap .code-block-lang-name {
-  top:4px;
-  left:2px;
+  top: 4px;
+  left: 2px;
 }
 .code-block-wrap .code-block-lang-name + .code-block-linenum-wrap>.code-block-linenum:first-child::before {
   color: transparent;
