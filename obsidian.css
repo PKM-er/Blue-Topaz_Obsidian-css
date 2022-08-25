@@ -26238,9 +26238,10 @@ body:not(.remove-selectionbackground) .markdown-source-view.mod-cm6 .cm-editor .
 }
 
  
-body.is-mobile{
-padding-top: env(safe-area-inset-top);
-padding-right: env(safe-area-inset-right);
-padding-bottom: env(safe-area-inset-bottom);
-padding-left: env(safe-area-inset-left);
+.is-mobile.is-ios .safe-area-top-cover {
+  background-color: transparent;
+}
+
+.is-mobile .safe-area-top-cover {
+  background-color: transparent;
 }
