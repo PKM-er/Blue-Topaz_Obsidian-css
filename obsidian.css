@@ -26255,3 +26255,13 @@ body:not(.remove-selectionbackground) .markdown-source-view.mod-cm6 .cm-editor .
 body.is-mobile {
   padding: 0 !important;
 }
+
+.is-ios .mod-root .workspace-leaf {
+  padding-top: 20px;
+}
+.is-ios
+  .mod-root
+  .workspace-split.mod-horizontal
+  .workspace-leaf:not(:first-of-type) {
+  padding-top: 0;
+}
