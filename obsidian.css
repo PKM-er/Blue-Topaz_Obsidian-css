@@ -8695,6 +8695,11 @@ body.color-scheme-options-simplicity-topaz .workspace {
   overflow: visible; 
 }
 
+body.color-scheme-options-simplicity-topaz:not(.simple-titlebar) .titlebar
+{
+  background-color:var(--simple-white-2) !important;
+}
+
 /*
 --------------------------- 
 	Note Title
