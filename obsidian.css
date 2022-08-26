@@ -11727,7 +11727,7 @@ ul>li::marker,
 
 
 .cm-s-obsidian .HyperMD-table-row.HyperMD-table-row.HyperMD-table-row {
-  min-width: min-content;
+  min-width: max-content;
   white-space: pre-wrap;
 }
 
