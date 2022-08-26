@@ -655,8 +655,8 @@ settings:
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: '#0e0e0e'
-    default-dark: '#bdbdbd'
+    default-light: '#'
+    default-dark: '#'
   -
     id: background-color-settings
     title: 2.1.1 Background Colors
@@ -671,8 +671,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#ffffff'
-    default-dark: '#222222'
+    default-light: '#'
+    default-dark: '#'
   -
     id: background-primary-alt-bg-4-bt
     title: Background Primary (alt)
@@ -680,8 +680,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#e9e9e9'
-    default-dark: '#444444'
+    default-light: '#'
+    default-dark: '#'
   -
     id: background-secondary-bg-4-bt
     title: Background Secondary
@@ -689,8 +689,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#fcfcfc'
-    default-dark: '#2c2c2c'
+    default-light: '#'
+    default-dark: '#'
   -
     id: background-secondary-alt-bg-4-bt
     title: Background Secondary (alt)
@@ -698,16 +698,16 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#eeeeee'
-    default-dark: '#000000'
+    default-light: '#'
+    default-dark: '#'
   -
     id: background-modifier-border
     title: Background Modifier Border
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#dddddd'
-    default-dark: '#333333'
+    default-light: '#'
+    default-dark: '#'
   -
     id: accent-color-settings
     title: 2.1.2 Theme Colors
@@ -4242,7 +4242,7 @@ body.all-dark .print.theme-light,
   --strong-em-color-1: #43d3ff;
   --strong-em-color-2: #baaaff;
 
-  --background-search-result: #313131;
+  --background-search-result: var(--background-secondary-bg-4-bt);
   --search-result-file-matched-bg: #005fac;
   --background-primary-bg-4-bt: #1e1e1e;
   --background-primary-alt-bg-4-bt: #000000;
@@ -4568,7 +4568,7 @@ body.all-dark .print.theme-light,
   --strong-em-color-1: #1048ff;
   --strong-em-color-2: #14c8ff;
 
-  --background-search-result: #f3f3f3;
+  --background-search-result: var(--background-secondary-bg-4-bt);
   --search-result-file-matched-bg: #ffc3c3;
 
   --background-primary-bg-4-bt: #ffffff;
@@ -4874,8 +4874,6 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --strong-em-color-1: #08ae84;
   --strong-em-color-2: #01531d;
 
-  --background-search-result: #f3f3f3;
-
   --background-primary-bg-4-bt: #ffffff;
   --background-primary-alt-bg-4-bt: #e9e9e9;
   --background-secondary-bg-4-bt: #ffffff;
@@ -5026,8 +5024,6 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --strong-em-color-1: #9c8ce6;
   --strong-em-color-2: #23d05c;
 
-  --background-search-result: #363636;
-
   --background-primary-bg-4-bt: #181818;
   --background-primary-alt-bg-4-bt: #000000;
   --background-secondary-bg-4-bt: #181818;
@@ -5133,7 +5129,6 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --mark-highlight-strong-em: #fff7603a;
   --strong-em-highlight-color: #ffffff;
   --text-search-highlight-bg: #bb4361;
-  --background-search-result: #313131;
   --background-primary-bg-4-bt: #1e1e1e;
   --background-primary-alt-bg-4-bt: #000000;
   --background-secondary-bg-4-bt: #1e1e1e;
@@ -5536,8 +5531,6 @@ body.color-scheme-options-pink-topaz.theme-light {
   --mark-highlight-strong-em: #ffd0e99b;
   --text-highlight-bg: #ffd0e99b;
   --text-search-highlight-bg: #ffd1dd;
-
-  --background-search-result: #f3f3f3;
   --search-result-file-matched-bg: #ffc3c3;
 
   --background-primary-bg-4-bt: #fffaf0;
@@ -5694,8 +5687,6 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --text-search-highlight-bg: #bb4361;
   --strong-em-color-1: #fc3b3b;
   --strong-em-color-2: #f5c414;
-
-  --background-search-result: #363636;
   --search-result-file-matched-bg: #a9672dc9;
 
   --background-primary-bg-4-bt: #0f0f0fd1;
@@ -6177,7 +6168,6 @@ body.color-scheme-options-flamingo.theme-light {
   --panel-border-color: #fd355a;
   --search-text: #37291a;
   --folder-title: #37291a;
-  --background-search-result: #ffdece;
 
   --gray-1: #c4c4c4;
   --gray-2: #7c8595;
@@ -6324,7 +6314,6 @@ body.color-scheme-options-flamingo.theme-dark {
   --panel-border-color: #f93759;
   --search-text: #fff;
   --folder-title: #fff;
-  --background-search-result: #292929;
 
   --gray-1: #c9b0b0;
   --gray-2: #b4b1c6;
@@ -6635,8 +6624,6 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --text-highlight-bg-a: 0.847;
   --text-highlight-bg: hsla(var(--text-highlight-bg-h), var(--text-highlight-bg-s), var(--text-highlight-bg-l), var(--text-highlight-bg-a));
   --text-search-highlight-bg: var(--color2);
-
-  --background-search-result: #f3f3f3;
   --search-result-file-matched-bg: var(--low-color);
 
   --background-primary-bg-4-bt: var(--bg-color);
@@ -6795,8 +6782,6 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
 
   --strong-em-color-1: #43d3ff;/*加粗斜体渐变色1*/
   --strong-em-color-2: #baaaff;/*加粗斜体渐变色2*/
-
-  --background-search-result: #313131;/* 搜索结果背景颜色 */
   --search-result-file-matched-bg: var(--color9);/* 搜索结果文字高亮颜色 */
 
   --background-primary-bg-4-bt: var(--bg-color);
@@ -6970,8 +6955,6 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --strong-em-highlight-color: var(--color11);
 
   --text-search-highlight-bg: #ffd1dd;
-
-  --background-search-result: #f3f3f3;
   --search-result-file-matched-bg: var(--low-color);
 
   --background-primary-bg-4-bt: var(--bg-color);
@@ -7154,8 +7137,6 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
   --text-search-highlight-bg: #bb4361;
   --strong-em-color-1: #43d3ff;/*加粗斜体渐变色1*/
   --strong-em-color-2: #baaaff;/*加粗斜体渐变色2*/
-
-  --background-search-result: #313131;/* 搜索结果背景颜色 */
   --search-result-file-matched-bg: var(--color9);/* 搜索结果文字高亮颜色 */
 
   --background-primary-bg-4-bt: var(--bg-color);
@@ -7351,8 +7332,6 @@ body.color-scheme-options-autumn-topaz.theme-light {
 
   --strong-em-highlight-color: var(--color11);
   --text-search-highlight-bg: #ffd1dd;
-  
-  --background-search-result: #f3f3f3;
   --search-result-file-matched-bg: var(--low-color);
 
   --background-primary-bg-4-bt: var(--bg-color); 
@@ -7985,8 +7964,6 @@ body.color-scheme-options-lilac.theme-light {
   --text-search-highlight-bg: #d1d2ff;
   --strong-em-color-1: #5008ae;
   --strong-em-color-2: #2e0153;
-  
-  --background-search-result: #f3f3f3;
   --search-result-file-matched-bg: #ffc3c3;
 
   --background-primary-bg-4-bt: #ffffff; 
@@ -8173,8 +8150,6 @@ body.color-scheme-options-lilac.theme-dark {
   --text-search-highlight-bg: #bb4361;
   --strong-em-color-1: #9c8ce6;
   --strong-em-color-2: #23d05c;
-
-  --background-search-result: #363636;
 
   --background-primary-bg-4-bt: #291333; 
   --background-primary-alt-bg-4-bt: #462058;
@@ -10637,6 +10612,7 @@ input.search-input {
   background: var(--background-search-result);
   color: var(--text-normal);
   border-radius: var(--radius-s);
+  border: 1px solid var(--background-modifier-border);
 }
 
 .workspace-leaf-content[data-type="outgoing-link"] .search-result-file-match {
@@ -18439,7 +18415,7 @@ div.workspace-leaf-content[data-type="style-settings"] .view-content .style-sett
 }
 
 div.workspace-leaf-content[data-type="style-settings"] .setting-item-description {
-  font-size:12px;
+  font-size: 12px;
 }
 
 div.workspace-leaf-content[data-type="style-settings"]  div.setting-item,
@@ -18807,7 +18783,7 @@ div[data-type='memos_view'] .tags-wrapper > .title-text,
 }
 .mod-left-split div[data-type="memos_view"] .view-content,
 .mod-right-split div[data-type="memos_view"] .view-content {
-  padding:0;
+  padding: 0;
 }
 .mod-left-split div[data-type="memos_view"] .view-content .title-text span,
 .mod-right-split div[data-type="memos_view"] .view-content .title-text span {
@@ -18819,8 +18795,10 @@ div[data-type="memos_view"] .search-bar-container > .search-bar-inputer,
 div[data-type="memos_view"] .search-bar-container > .search-bar-inputer {
   border: 0 !important;
 }
-.mod-left-split div[data-type="memos_view"] .memo-editor-wrapper, div[data-type="memos_view"] .search-bar-container > .search-bar-inputer input,
-.mod-right-split div[data-type="memos_view"] .memo-editor-wrapper, div[data-type="memos_view"] .search-bar-container > .search-bar-inputer input { 
+.mod-left-split div[data-type="memos_view"] .memo-editor-wrapper, 
+div[data-type="memos_view"] .search-bar-container > .search-bar-inputer input,
+.mod-right-split div[data-type="memos_view"] .memo-editor-wrapper, 
+div[data-type="memos_view"] .search-bar-container > .search-bar-inputer input { 
   border: none;
   border-bottom: 1px solid #ccc;
   border-radius: 0;
@@ -18983,7 +18961,7 @@ body.memos-inputbox div[data-type='memos_view']:not(.mobile-view) #page-wrapper 
   bottom: 0;
   margin-bottom: -145px;
   position: absolute;
-  padding:8px;
+  padding: 8px;
 }
 body.memos-inputbox div[data-type='memos_view']:not(.mobile-view) .memolist-wrapper.completed {
   padding-bottom: 40px;
@@ -19165,7 +19143,6 @@ body.quiet-outline-optimize .workspace-leaf-content[data-type=quiet-outline] .vi
 }
 body.quiet-outline-optimize .workspace-leaf-content[data-type=quiet-outline] .n-slider .n-slider-rail {
   background-color: var(--background-secondary-alt);
-  
   box-shadow: var(--background-modifier-box-shadow);
 }
 body.quiet-outline-optimize .workspace-leaf-content[data-type=quiet-outline] .n-slider .n-slider-rail .n-slider-rail__fill {
@@ -20398,7 +20375,7 @@ body.dialogue-style-wechat.theme-dark .chat-view-align-left .chat-view-message:a
 }
 
 body.dialogue-style-wechat .chat-view-bubble .chat-view-subtext {
-  display:block;
+  display: block;
 }
 body.dialogue-style-wechat .chat-view-align-right .chat-view-subtext {
   float: right;
@@ -20915,7 +20892,7 @@ body:not(.remove-custom-svg-icons) .workspace-leaf-content .view-action svg.brok
 body.view-button-front .workspace-leaf-content:is([data-mode="preview"],[data-mode="source"]) .view-header .view-actions>.view-action:nth-last-child(5) {
   opacity: 0.8;
   position: absolute;
-  left:5px;
+  left: 5px;
   top: 6px;
 }
 body.view-button-front .view-header-title-container {
@@ -21293,13 +21270,9 @@ body.background-image-settings-switch.background-image-settings-markdown-page-ra
 }
 
 
-
-body.background-image-settings-switch.background-image-settings-markdown-page-transparent .workspace-split.mod-root .view-content
-{
+body.background-image-settings-switch.background-image-settings-markdown-page-transparent .workspace-split.mod-root .view-content {
   background-color: var(--background-secondary-alt-bg-4-bt);
-
 }
-
 
 body.background-image-settings-switch.background-image-settings-markdown-page-sea-and-sky .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
   content: '';
@@ -21637,8 +21610,7 @@ body:is(.folder-style-change-options-colorful,.folder-style-change-options-color
 
 /*color scheme-1, high transparency*/
 body:is(.folder-style-change-options-colorful,.folder-style-change-options-colorful-order).folder-colorful-one.theme-dark,
-body.folder-style-change-options-colorful-title.folder-colorful-one.theme-light
-{
+body.folder-style-change-options-colorful-title.folder-colorful-one.theme-light {
   --Fold0: #ff40403d;
   --Fold1: #f31f7448;
   --Fold2: #be25ff49;
@@ -23057,14 +23029,14 @@ body.background-settings-workplace-background-image:is(.background-settings-work
 /****from https://www.shapedivider.app/*****/
 body.background-settings-workplace-background-image.background-settings-workplace-waves-light.theme-light .workspace:before,
 body.background-settings-workplace-background-image.background-settings-workplace-waves.theme-dark .workspace:before {
-	content:"";
-	position:fixed;
-  height:auto;
+	content: "";
+	position: fixed;
+  height: auto;
 	width: 300%;
   transform: rotate(180deg);
   top: 75%;
-	left:-25%;
-  background-image:unset;
+	left: -25%;
+  background-image: unset;
   -webkit-mask-image: var(--theme-background);
   background-size:100% 100%;
 	opacity:0.7;
@@ -23074,16 +23046,16 @@ body.background-settings-workplace-background-image.background-settings-workplac
  /**from https://svgwave.in/*/
 body.background-settings-workplace-background-image.background-settings-workplace-waves2-light.theme-light .workspace::before,
 body.background-settings-workplace-background-image.background-settings-workplace-waves2.theme-dark .workspace:before {
-	content:"";
-	position:fixed;
-  height:auto;
+	content: "";
+	position: fixed;
+  height: auto;
 	width: 300%;
   top: 75%;
-	left:-25%;
-  background-image:unset;
+	left: -25%;
+  background-image: unset;
   -webkit-mask-image: var(--theme-background);
-  background-size:100% 100%;
-	opacity:0.7;
+  background-size: 100% 100%;
+	opacity: 0.7;
   filter: blur(var(--blur-depth)) brightness(var(--brightness-4-bg)) saturate(var(--saturate-4-bg));
   background-color: var(--wave2-background-color);
 }
@@ -23128,12 +23100,12 @@ body:not(.simple-titlebar).background-settings-workplace-waves-light.theme-light
   content: '';
   display: block;
   position: absolute;
-  height:40px;
+  height: 40px;
 	width: 120%;
-  background-image:unset;
+  background-image: unset;
   -webkit-mask-image: var(--theme-background);
-  background-size:100% 100%;
-	opacity:0.5;
+  background-size: 100% 100%;
+	opacity: 0.5;
   background-color: var(--wave-background-color);
 } 
 body.background-settings-workplace-background-image:not(.simple-titlebar) .titlebar {
@@ -23306,9 +23278,7 @@ body.background-image-settings-command-palette-same-as-workplace.background-imag
 }
 
 body.theme-light.background-image-settings-command-palette-same-as-workplace.background-image-settings-command-palette-switch.background-settings-workplace-waves-light .modal-container .prompt::before,
-body.background-image-settings-command-palette-same-as-workplace.background-image-settings-command-palette-switch.background-settings-workplace-background-image.background-settings-workplace-waves.theme-dark .prompt:before
-{
- 
+body.background-image-settings-command-palette-same-as-workplace.background-image-settings-command-palette-switch.background-settings-workplace-background-image.background-settings-workplace-waves.theme-dark .prompt:before {
   transform: rotate(180deg);
   top: 75%;
   background-image:unset;
@@ -23849,7 +23819,7 @@ body:not(.default-loading-page).loading-custom-text.loading-text-shinning-style.
 /* the mario animation was created by @B.C.Rikko https://bcrikko.github.io/css-collection/other/mario/index.html */
 
 body:not(.default-loading-page).loading-page-style-mario .progress-bar-message:before {
-content: "";
+  content: "";
   position: relative;
   visibility: visible !important;
   display: block;
