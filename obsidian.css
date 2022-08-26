@@ -18417,7 +18417,7 @@ div.style-settings-container[data-level="0"] {
 
 div.style-settings-container[data-level] {
   padding-bottom: 0;
-  margin-left: 1em;
+  margin-left: 0.5em;
 }
 
 .setting-item.setting-item-heading.style-settings-heading .setting-item-name {
@@ -20042,6 +20042,53 @@ body:not(.font-family-change-to-default).is-mobile .markdown-source-view.mod-cm6
   position: relative !important;
   border-bottom: none;
 } */
+
+/***修复iphone 底部横条不透明的问题***/
+body.is-mobile {
+  padding-bottom: 0 !important;
+}
+/***设置body背景 iphone标题栏背景***/
+
+
+body.is-mobile:not(.background-settings-workplace-background-image) {
+
+  background-color: var(--background-primary-bg-4-bt);
+    
+  }
+  body.is-mobile.background-settings-workplace-background-image
+  {
+    background-image: var(--theme-background);
+    background-size: cover;
+    opacity: 0.8;
+ 
+  }
+   /***调整工作区背景跟body背景重合***/
+  body.is-mobile.background-settings-workplace-background-image .workspace::before {
+    top: -35pt;
+    right:0;
+    left: 0pt;
+}
+  
+  body.is-mobile.background-settings-workplace-background-image:is(.background-settings-workplace-waves-light,.background-settings-workplace-waves2-light).theme-light  {
+    background: var(--simple-white-2);
+  }
+ 
+ /*** iphone标题栏上方遮罩***/
+ body.is-mobile .safe-area-top-cover {
+  background-color: var(--background-primary-bg-4-bt);
+}
+/*** iphone标题栏上方遮罩 设置背景色后遮罩颜色跟工作区保持一致***/
+body.is-mobile.background-settings-workplace-background-image .safe-area-top-cover {
+background-color: var(--background-primary-bg-4-bt);
+}
+
+body.is-mobile.background-settings-workplace-background-image .workspace::before{
+  filter:none!important
+}
+body.is-mobile.background-settings-workplace-background-image .workspace-split.mod-root {
+  background-color: transparent;
+}
+
 /*侧边栏区域填满*/
 .is-mobile .workspace-drawer:not(.is-pinned) {
   width: 100vw;
@@ -26198,18 +26245,4 @@ body.head-tag-style :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,
 
 body:not(.remove-selectionbackground) .markdown-source-view.mod-cm6 .cm-editor .cm-selectionBackground {
   background: transparent;
-}
-/***修复iphone 底部横条暴露的问题***/
-body.is-mobile {
-  padding: 0 !important;
-}
-
-.is-ios .mod-root .workspace-leaf {
-  padding-top: 20px;
-}
-.is-ios
-  .mod-root
-  .workspace-split.mod-horizontal
-  .workspace-leaf:not(:first-of-type) {
-  padding-top: 0;
 }
