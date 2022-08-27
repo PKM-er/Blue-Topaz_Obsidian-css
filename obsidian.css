@@ -8791,7 +8791,7 @@ body:not(.is-mobile).color-scheme-options-simplicity-topaz .workspace-split.mod-
 	border-radius:15px;
 }
 
-body.color-scheme-options-simplicity-topaz.theme-dark .view-content {
+body:not(.is-mobile).color-scheme-options-simplicity-topaz.theme-dark .view-content {
 	border-radius:20px;
 }
 body.color-scheme-options-simplicity-topaz .workspace-split.mod-vertical.mod-root .workspace-split.mod-vertical:not(:first-child):last-child .workspace-leaf{
@@ -8890,12 +8890,13 @@ body.color-scheme-options-simplicity-topaz .cm-s-obsidian :is(.cm-header-3,.cm-h
   font-weight: 500;
 }
                                                                         
-body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image.theme-light {
+body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image.theme-light:is(.background-settings-workplace-waves-light,.background-settings-workplace-waves2-light)  {
   --background-primary-bg-4-bt:  var(--simple-tran);
   --background-primary-alt-bg-4-bt: var(--simple-tran);
   --background-secondary-bg-4-bt:  var(--simple-tran);
   --background-secondary-alt-bg-4-bt: var(--simple-tran);
 }
+
 body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image.theme-dark {
   --background-primary-alt-bg-4-bt: var(--simple-tran);
   --background-secondary-bg-4-bt:  var(--simple-tran);
@@ -20059,10 +20060,10 @@ body.is-mobile.background-settings-workplace-background-image .safe-area-top-cov
 background-color: var(--background-primary-bg-4-bt);
 }
 
-body.is-mobile.background-settings-workplace-background-image .workspace::before{
+/* body.is-mobile.background-settings-workplace-background-image .workspace::before{
   filter:none!important
-}
-body.is-mobile.background-settings-workplace-background-image .workspace-split.mod-root {
+} */
+body.mod-macos.is-mobile.background-settings-workplace-background-image .workspace-split.mod-root {
   background-color: transparent;
 }
 
