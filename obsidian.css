@@ -8578,19 +8578,19 @@ body.color-scheme-options-simplicity-topaz .titlebar-button-container.mod-right:
   transition: all 0.6s linear;
 }
 
-body.color-scheme-options-simplicity-topaz.view-button-front .workspace-leaf-content[data-mode='source'] .view-header .view-actions>.view-action:nth-last-child(5) {
+body.color-scheme-options-simplicity-topaz.view-button-front .workspace-leaf-content[data-mode='source'] .view-header .view-actions>:is([aria-label^="该面板处于编辑视图中"],[aria-label^="Current view: editing"]) {
   opacity: 0.8;
   position: absolute;
   left:5px;
   top: 5px;
 }
-body.color-scheme-options-simplicity-topaz.view-button-front .workspace-leaf-content[data-mode='preview'] .view-header .view-actions>.view-action:nth-last-child(5) {
+body.color-scheme-options-simplicity-topaz.view-button-front .workspace-leaf-content[data-mode='preview'] .view-header .view-actions>:is([aria-label^="该面板处于阅读视图中"],[aria-label^="Current view: reading"]) {
   opacity: 0;
   position: absolute;
   left:5px;
   top: 5px;
 }
-body.color-scheme-options-simplicity-topaz.view-button-front .workspace-leaf-content[data-mode='preview'] .view-header:hover .view-actions>.view-action:nth-last-child(5) {
+body.color-scheme-options-simplicity-topaz.view-button-front .workspace-leaf-content[data-mode='preview'] .view-header:hover .view-actions>:is([aria-label^="该面板处于阅读视图中"],[aria-label^="Current view: reading"]) {
   opacity: 1;
 }
 
@@ -18299,11 +18299,6 @@ span.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight.hmd-hidd
   padding-left: 20px;
 }
 
-.setting-item-description,
-.setting-item-info {
-  word-wrap: break-word;
-  word-break: break-word;
-}
 
 .style-settings-heading {
   margin-bottom: 5px !important;
@@ -20894,12 +20889,22 @@ body:not(.remove-custom-svg-icons) .workspace-leaf-content .view-action svg.brok
 }
 
 
-body.view-button-front .workspace-leaf-content:is([data-mode="preview"],[data-mode="source"]) .view-header .view-actions>.view-action:nth-last-child(5) {
+body.view-button-front .workspace-leaf-content:is([data-mode="preview"],[data-mode="source"]) .view-header .view-actions>:is([aria-label^="该面板处于编辑视图中"],[aria-label^="Current view: editing"]) {
   opacity: 0.8;
   position: absolute;
   left: 5px;
   top: 6px;
 }
+body.view-button-front .workspace-leaf-content[data-mode='preview'] .view-header .view-actions>:is([aria-label^="该面板处于阅读视图中"],[aria-label^="Current view: reading"]) {
+  opacity: 0.8;
+  position: absolute;
+  left:5px;
+  top: 5px;
+}
+body.view-button-front .workspace-leaf-content[data-mode='preview'] .view-header:hover .view-actions>:is([aria-label^="该面板处于阅读视图中"],[aria-label^="Current view: reading"]) {
+  opacity: 1;
+}
+
 body.view-button-front .view-header-title-container {
   padding-left: 25px;
 }
