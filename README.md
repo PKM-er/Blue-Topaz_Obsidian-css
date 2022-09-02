@@ -1,3 +1,13 @@
+Thank you for your support!
+
+Yet, currently, **I don’t plan to update the theme for Obsidian v0.16**. I cannot accept this scenario - one theme creator updates the default theme and others remake their themes to cater. We spent a lot of time on the theme, and suddenly we found the announcement telling us to remake themes, otherwise, they may not work well.
+
+It happened, and could happen again. Hopefully obsidian will be better, but for me, I don’t want to spend my time and effort anymore. However, I won’t archive or delete the Blue Topaz repository, and if someone else pulls requests, I can merge them.
+
+Thank you again for your support over the past two years!
+
+---
+
 # 示例 Demo vault
 感谢[@cumany](https://github.com/cumany) 制作的升级版示例库 https://github.com/cumany/Blue-topaz-examples
 
