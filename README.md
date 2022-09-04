@@ -1,15 +1,3 @@
-# 弃坑声明
-
-主题作者未获得Obsidian官方应有的尊重。
-
-1. 找个主题作者改完默认主题，发个公告让别人改，期间没有任何通知，只有最后通牒；
-2. 不用BT，论坛的回复说：“没多少地方要改”；
-3. 无告知，ban主题下载。
-
-最后，感谢各位的使用。
-
----
-
 # 示例 Demo vault
 感谢[@cumany](https://github.com/cumany) 制作的升级版示例库 https://github.com/cumany/Blue-topaz-examples
 
