@@ -401,8 +401,16 @@ settings:
     default-light: '#'
     default-dark: '#'
   - 
-    id: grid-notebook-line-color
+    id: grid-notebook-line-color-1
     title: Grid notebook line color
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  - 
+    id: grid-notebook-line-color-2
+    title: Grid notebook line color for 'Grid 2'
     type: variable-themed-color
     opacity: true
     format: hex
@@ -19929,7 +19937,7 @@ body.toggle-nonoverlapping-bg .workspace-split.mod-root .view-content {
 body.background-image-settings-switch.background-image-settings-markdown-page-grid-notebook-1 .markdown-reading-view,
 body.background-image-settings-switch.background-image-settings-markdown-page-grid-notebook-1 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--bg-color-notebook);
-  background: linear-gradient(90deg, var(--grid-notebook-line-color-1) 3%, transparent 0), linear-gradient(var(--grid-notebook-line-color-1) 3%, transparent 0);
+  background-image: linear-gradient(90deg, var(--grid-notebook-line-color-1) 3%, transparent 0), linear-gradient(var(--grid-notebook-line-color-1) 3%, transparent 0);
   background-size: 20px 20px;
   background-attachment: local !important;
 }
@@ -19958,6 +19966,7 @@ body.background-image-settings-switch.background-image-settings-markdown-page-do
 /*https://www.jianshu.com/p/2b713844cfe9*/
 body.background-image-settings-switch.background-image-settings-markdown-page-grid-notebook-2 .markdown-reading-view,
 body.background-image-settings-switch.background-image-settings-markdown-page-grid-notebook-2 .markdown-source-view.mod-cm6 .cm-scroller {
+  background: var(--bg-color-notebook);
   background-image:
      linear-gradient(var(--grid-notebook-line-color-2) 1px, transparent 0),
      linear-gradient(90deg, var(--grid-notebook-line-color-2) 1px,transparent 0),
