@@ -18086,10 +18086,10 @@ body:is(.magenta-light.theme-light,.magenta-dark.theme-dark) {
 
 .theme-dark,
 .theme-light {
-  --stat-day-L1: hsla(var(--interactive-accent-hsl),0.35)
-  --stat-day-L2: hsla(var(--interactive-accent-hsl),0.6)
-  --stat-day-L3: hsla(var(--interactive-accent-hsl),0.8)
-  --stat-day-L4: hsla(var(--interactive-accent-hsl),1)
+  --stat-day-L1: hsla(var(--interactive-accent-hsl),0.35);
+  --stat-day-L2: hsla(var(--interactive-accent-hsl),0.6);
+  --stat-day-L3: hsla(var(--interactive-accent-hsl),0.8);
+  --stat-day-L4: hsla(var(--interactive-accent-hsl),1);
 }
 
 div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-container.stat-day-L1-bg {
