@@ -324,24 +324,6 @@ settings:
       - 
         label: Transparent
         value: background-image-settings-markdown-page-transparent
-      - 
-        label: Grid notebook 1 (@CZ-15/YZ-10)
-        value: background-image-settings-markdown-page-grid-notebook-1
-      - 
-        label: Grid notebook 2
-        value: background-image-settings-markdown-page-grid-notebook-2
-      - 
-        label: Dotted notebook 1
-        value: background-image-settings-markdown-page-dotted-notebook-1
-      - 
-        label: Dotted notebook 2
-        value: background-image-settings-markdown-page-dotted-notebook-2
-      - 
-        label: Stripe notebook 1
-        value: background-image-settings-markdown-page-stripe-notebook-1
-      - 
-        label: Stripe notebook 2
-        value: background-image-settings-markdown-page-stripe-notebook-2
   -
     id: background-image-settings-markdown-page-random
     title: Random background
@@ -379,6 +361,35 @@ settings:
       - 
         label: Yellow and Orange
         value: background-image-settings-markdown-page-random-yellow-and-orange
+  - 
+    id: notebook-liked-markdown-page-options
+    title: Notebook-liked Background
+    title.zh: 类笔记背景
+    type: class-select
+    allowEmpty: false
+    default: non-notebook-bg
+    options:
+      - 
+        label: Non
+        value: non-notebook-bg
+      - 
+        label: Grid notebook 1 (@CZ-15/YZ-10)
+        value: background-image-settings-markdown-page-grid-notebook-1
+      - 
+        label: Grid notebook 2
+        value: background-image-settings-markdown-page-grid-notebook-2
+      - 
+        label: Dotted notebook 1
+        value: background-image-settings-markdown-page-dotted-notebook-1
+      - 
+        label: Dotted notebook 2
+        value: background-image-settings-markdown-page-dotted-notebook-2
+      - 
+        label: Stripe notebook 1
+        value: background-image-settings-markdown-page-stripe-notebook-1
+      - 
+        label: Stripe notebook 2
+        value: background-image-settings-markdown-page-stripe-notebook-2
   - 
     id: background-settings-markdown-page
     title: 1.2.2.1 Notebook-liked background options
