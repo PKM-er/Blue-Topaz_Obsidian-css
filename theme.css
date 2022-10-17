@@ -4182,7 +4182,7 @@ settings:
 body {
   --font-size-obsidian-titlebar: 13px;
   --font-size-vault-name: 1em;/*左侧库名字体大小*/
-  --font-size-file-header-title: 0.9375em;/*文件抬头标题，只在非Andy mode plugin时生效*/
+  --font-size-file-header-title: 0.9em;/*文件抬头标题，只在非Andy mode plugin时生效*/
   --font-size-file-header-title-andy-plugin: 1em;/*文件抬头标题for Andy mode plugin*/
   --font-size-embed-title-size: 1.3em;
   --font-size-embed-file: 1.25em;
@@ -12154,13 +12154,6 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
 /*smaller header title*/
 .view-header-title {
   font-size: var(--font-size-file-header-title);
-  padding: 0 6px 0 0;
-  white-space: nowrap;
-  top: 1px;
-  border-top: 3px transparent;
-  border-bottom: 3px transparent;
-  background-color: transparent;
-  position: relative;
 }
 
 .popover.hover-popover {
@@ -25533,7 +25526,7 @@ body:not(.default-list-marker) .markdown-rendered .list-bullet::after {
   transition: all 0.15s ease;
 }
 
-body:not(.default-list-marker) .markdown-source-view.mod-cm6 .list-bullet::after {
+body:not(.default-list-marker) .list-bullet::after {
   content: '\2022';
   font-size: var(--list-ul-marker-size);
   font-family: Inter;
