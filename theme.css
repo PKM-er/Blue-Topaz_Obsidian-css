@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v1.0。uid [20221016] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.0, uid [20221016] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.0。uid [20221017] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.0, uid [20221017] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -1802,7 +1802,7 @@ settings:
     level: 3
     collapsed: true
   -
-    id: line-width-readable
+    id: file-line-width
     title: Line Width (in the mode of 'Readable line length')
     title.zh: 行宽（缩减栏宽模式下）
     description: The maximum line width in rem units (1rem = Body font size)
@@ -3602,8 +3602,14 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#ffffffa6'
-    default-dark: '#1111118f'
+    default-light: '#FFFFFF00'
+    default-dark: '#11111100'
+  -
+    id: admonition-bg-color-same
+    title:  The same as the title color
+    title.zh: 背景色与标题色一致
+    type: class-toggle
+    default: false
   -
     id: full-width-callout
     title: Full-width layout for callout & admonition
@@ -4260,7 +4266,7 @@ body {
   --letter-space-main: 1;
   --letter-space-code: 0;
 
-  --line-width-readable: 45rem;
+  --file-line-width: 45rem;
   --embed-content-height: 600px;
 
   --bottom-padding-value: 0em;
@@ -4648,7 +4654,7 @@ body.all-dark .print.theme-light,
   --bg-sliding-pane-leaf: #0f0f0f36;
 
   /*admonition*/
-  --admonition-bg-color: #1111118f;
+  --admonition-bg-color: #11111100;
 
   /*checklist*/
   --checklist-bg: #1d1d1d96;
@@ -4997,7 +5003,7 @@ body.all-dark .print.theme-light,
   --bg-sliding-pane-leaf: #ffffff88;
 
   /*admonition*/
-  --admonition-bg-color: #ffffff96;
+  --admonition-bg-color: #FFFFFF00;
 
   /*checklist*/
   --checklist-bg: #dfdfdf8e;
@@ -5452,8 +5458,7 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --sliding-panes-header-color: #ebebeb;
   --background-4-sliding-pane: #252525ed;
 
-  /*admonition*/
-  --admonition-bg-color: #1111118f;
+
 
   --color-view-header-gradient-1: #000000de;
   --color-view-header-gradient-2: #000000c0;
@@ -6698,8 +6703,7 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --sliding-panes-header-color: var(--deep-color);
   --background-4-sliding-pane: var(--bg-color);
 
-  /*admonition*/
-  --admonition-bg-color: #ffffffa6;
+
 
   /*checklist*/
   --checklist-bg: #dfdfdf8e;
@@ -8427,19 +8431,19 @@ body.color-scheme-options-simplicity-topaz.theme-dark  .workspace-split.mod-root
 body.color-scheme-options-simplicity-topaz.theme-dark .workspace-split.mod-root .workspace-tab-header.is-active::after {
   box-shadow: none;
 }
-body.color-scheme-options-simplicity-topaz.view-button-front .workspace-leaf-content[data-mode='source'] .view-header .view-actions>.view-action:nth-last-child(5) {
+body.color-scheme-options-simplicity-topaz.view-button-front .workspace-leaf-content[data-mode='source'] .view-header .view-actions>:is([aria-label^="该面板处于编辑视图中"],[aria-label^="Current view: editing"]) {
   opacity: 0.8;
   position: absolute;
-  left: 5px;
-  top: 5px;
+  left:10px;
+  top: 3px;
 }
-body.color-scheme-options-simplicity-topaz.view-button-front .workspace-leaf-content[data-mode='preview'] .view-header .view-actions>.view-action:nth-last-child(5) {
+body.color-scheme-options-simplicity-topaz.view-button-front .workspace-leaf-content[data-mode='preview'] .view-header .view-actions>:is([aria-label^="该面板处于阅读视图中"],[aria-label^="Current view: reading"]) {
   opacity: 0;
   position: absolute;
-  left: 5px;
-  top: 5px;
+  left:10px;
+  top: 3px;
 }
-body.color-scheme-options-simplicity-topaz.view-button-front .workspace-leaf-content[data-mode='preview'] .view-header:hover .view-actions>.view-action:nth-last-child(5) {
+body.color-scheme-options-simplicity-topaz.view-button-front .workspace-leaf-content[data-mode='preview'] .view-header:hover .view-actions>:is([aria-label^="该面板处于阅读视图中"],[aria-label^="Current view: reading"]) {
   opacity: 1;
 }
 
@@ -8781,14 +8785,17 @@ body.color-scheme-options-simplicity-topaz .workspace-leaf-content .view-header 
   opacity: 1;
 }
 
-body.color-scheme-options-simplicity-topaz .workspace-leaf-content .view-header .view-header-nav-buttons {
+body.color-scheme-options-simplicity-topaz:not(.view-button-front) .workspace-leaf-content .view-header .view-header-nav-buttons {
   margin-left: -15px;
 }
 
 body:not(.is-mobile).color-scheme-options-simplicity-topaz .workspace-split.mod-vertical.mod-root .workspace-leaf {
   border-radius: 6px;
 }
-
+body.color-scheme-options-simplicity-topaz .workspace-leaf-content .view-header .view-header-icon svg {
+ 
+  opacity: 0;
+}
 /*==============*/
 /*==============*/
 /*======@cuman--end========*/
@@ -11315,17 +11322,17 @@ body:not(.font-family-change-to-default) .markdown-source-view {
 :is(.markdown-preview-view,.markdown-rendered):not(.matrix) .is-readable-line-width :is(.markdown-preview-section,.markdown-rendered),
 :is(.markdown-preview-view,.markdown-rendered):not(.matrix) .is-readable-line-width :is(.markdown-preview-section,.markdown-rendered) > div,
 :is(.markdown-preview-view,.markdown-rendered).is-readable-line-width:not(.matrix) :is(.markdown-preview-section,.markdown-rendered) {
-  width: var(--line-width-readable);
+  width: var(--file-line-width);
   max-width: 100%;
   margin: 0 auto;
 }
 
 .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer {
-  max-width: var(--line-width-readable);
+  max-width: var(--file-line-width);
 }
 
 .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-content {
-  width: var(--line-width-readable);
+  width: var(--file-line-width);
   max-width: 100%;
   margin: 0 auto;
 }
@@ -12099,7 +12106,10 @@ a.external-link>em {
 body.remove-external-link-icon a.external-link {
   background-image: none;
 }
-
+body.remove-external-link-icon span.external-link
+{
+  background-image:none;
+}
 /*link format [[]]*/
 .cm-formatting-link.cm-strong.cm-em {
   -webkit-text-fill-color: var(--text-faint);
@@ -12500,7 +12510,7 @@ body.table-style-three .markdown-source-view table tbody>tr {
 /*	Editing View -- set all divs back to normal width (ensuring specificity rule over some theme), then	expand to full-width for each selected css class */
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) div.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div,
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  div.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > .cm-line {
-  max-width: var(--line-width-readable); 
+  max-width: var(--file-line-width); 
   margin-inline: auto !important;
 } /* important for margin needed because app.css:2842 use it */
 
@@ -12512,14 +12522,14 @@ body.full-width-backlinks .markdown-source-view.mod-cm6 .cm-contentContainer.cm-
 }
   
 body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block>div[class^="block-language"]:not(.block-language-dataview) {
-  max-width: var(--line-width-readable); 
+  max-width: var(--file-line-width); 
   margin-inline: auto;
 }
 
 /*	Reading View -- similar to Editing View, set all divs to normal-width and then selected divs to full-width, 
 		however, for Reading View, wide-dataview and wide-table will require Contextual Typography plugin */
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)	div.markdown-preview-view:not(.fullwidth) .markdown-preview-sizer.markdown-preview-sizer > div:not(.obsidian-banner-wrapper) { 
-  max-width: var(--line-width-readable); 
+  max-width: var(--file-line-width); 
   margin-inline: auto; 
 } 
 
@@ -12540,7 +12550,7 @@ div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-content
 div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content,
 div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content .cm-table-widget { 
   max-width: 100%; 
-  width: 100%;
+  /* width: 100%;  ob1.0*/
 }
 
 /*	Reading View -- similar to Editing View, set the RLL to 100% for any css class with "wide" word in it. "width:100%" added for Blue Topaz */
@@ -12555,7 +12565,7 @@ div[class*="wide-"].markdown-preview-view .markdown-preview-sizer.markdown-previ
 /*	Editing View -- set all divs back to normal width (ensuring specificity rule over some theme), then expand to full-width for each selected css class (i.e. wide-dataview, wide-table and wide-backlinks) */
 div.markdown-source-view.mod-cm6:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .cm-contentContainer.cm-contentContainer > div > div,
 div.markdown-source-view.mod-cm6:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .cm-contentContainer.cm-contentContainer > div > .cm-line {
-  max-width: var(--line-width-readable); 
+  max-width: var(--file-line-width); 
   margin-inline: auto !important;
 } /* important for margin needed because app.css:2842 use it */
 div[class*="-dataview"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block:not(.admonition-parent), 
@@ -12566,13 +12576,13 @@ div[class*="-backlinks"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-co
 }
   
 div[class*="-dataview"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block>div[class^="block-language"]:not(.block-language-dataview) {
-  max-width: var(--line-width-readable); 
+  max-width: var(--file-line-width); 
   margin-inline: auto;
 }
 
 /*	Reading View -- similar to Editing View, set all divs to normal-width and then selected divs to full-width, however, for Reading View, wide-dataview and wide-table will require Contextual Typography plugin */
 div.markdown-preview-view:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .markdown-preview-sizer.markdown-preview-sizer > div {
-  max-width: var(--line-width-readable); 
+  max-width: var(--file-line-width); 
   margin-inline: auto; 
 } 
 div[class*="-dataview"].markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-lang-dataview),
@@ -12888,10 +12898,14 @@ a.external-link {
   text-decoration: underline;
   color: var(--external-link-color);
 }
-body.link-underline-external a.external-link,
+ 
+
+body.link-underline-external .markdown-source-view.mod-cm6 .cm-link .cm-underline,
+body.link-underline-externa .markdown-source-view.mod-cm6 .cm-url .cm-underline,
+body.link-underline-external  a.external-link,
 body:not(.link-underline-internal) .markdown-source-view.mod-cm6 .cm-hmd-internal-link >*:not(.is-unresolved).cm-underline,
 body:not(.link-underline-internal) :is(.markdown-preview-view,.markdown-rendered) .internal-link:not(.is-unresolved) {
-  text-decoration: none;
+  text-decoration-line:none;
 }
 
 .cm-url:hover {
@@ -16553,10 +16567,12 @@ body.style-options-for-admonition-plugin .admonition-col4 .admonition-content ul
 body.style-options-for-admonition-plugin .admonition-flex .admonition-content ul {
   padding-inline-start: 20px !important;
   margin-left: -20px;
+  margin-block-start:0;
 }
  
 body.style-options-for-admonition-plugin :is(.admonition-flex,.admonition-col2,.admonition-col3,.admonition-col4) .admonition-content .admonition-content ul li{
   list-style-type: none;
+  padding:0;
 }
 
 body.style-options-for-admonition-plugin .admonition-col2 .admonition-content ul li .task-list-item-checkbox,
@@ -17344,8 +17360,14 @@ span.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight.hmd-hidd
   padding-bottom: 4em;
 }
 
-.modal-container .modal-content textarea {
+.modal-container .modal-content textarea:not(.rename-textarea) {
   height: 18rem !important;
+}
+
+.suggestion-container
+{
+  background-color: var(--bg-color-settings-4);
+  backdrop-filter: blur(3px);
 }
 
 /* ================================== */
@@ -18134,22 +18156,18 @@ div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-co
 .database-plugin__cell_size_normal .database-plugin__tr .data-input {
   padding: 0;
   flex: 0;
-  font-size: 0.8rem;
+  font-size: 0.9em;
 }
 .database-plugin__cell_size_normal .database-plugin__tr .data-input .markdown-preview-view {
   padding:0px;
-  font-size: 0.8rem;
+ 
 }
 .database-plugin__cell_size_normal .database-plugin__tr .database-plugin__td .database-plugin__md_cell {
 padding: 0; 
 }
-
-.database-plugin__cell_size_normal .database-plugin__tr {
-  font-size: 0.8rem;
-}
-
-.database-plugin__md_cell .database-plugin__markdown-preview-view {
-  font-size: 0.8rem;
+.database-plugin__cell_size_normal .data-input > *
+{
+  height:auto;
 }
 
 .data-input.database-plugin__calendar {
@@ -18195,13 +18213,7 @@ div.react-datepicker-wrapper {
   transform: scale(0); 
 }
  
-
-div.dbfolder-table-container {
-  padding-bottom: 10em;
-}
-.database-plugin__td div[class$="-control"] {
-min-width: 220px;
-} 
+ 
 /* =============folder tree===================== */
 
 .oz-folders-tree-wrapper .oz-folder-contents {
@@ -19206,6 +19218,39 @@ body.is-mobile.background-settings-workplace-background-image .workspace-split.m
 }
 
 /*=======================
+===  projects  by cuman====
+========================*/
+.projects-container [role='row']:hover {
+  background-color:  hsla(var(--color-accent-hsl), 0.1);
+  }
+  
+  .projects-container [role='row'] {
+    position: relative;
+    font-size: var(--font-ui-small);
+    }
+   .projects-container a {
+      font-size: var(--font-ui-small);
+      text-decoration-line:none;
+    }
+  
+  .projects-container [role='row']  [role='gridcell']{
+    background-color: transparent;
+    }
+  
+   .projects-container [role='row']  [role='gridcell'][aria-selected="true"]::before {
+    content: " ";
+    position:absolute;
+    left: 0;
+    min-height: 30px;
+    background-color:  hsla(var(--color-accent-hsl), 0.2);
+    width: 100%;
+      }
+  
+  .projects-container [role='row']  [role='gridcell'].selected
+      {
+        box-shadow: 0 0 0 1px var(--interactive-accent);
+      }
+/*=======================
 ===  dialogue by cuman====
 ========================*/
 body.dialogue-style-wechat .dialogue-plugin-block-wrapper {
@@ -19712,6 +19757,55 @@ body.color-scheme-options-lillimon-topaz .view-header {
 .markdown-source-view {
   background-color: transparent;
 }
+
+
+
+body.view-button-front .workspace-leaf-content:is([data-mode="preview"],[data-mode="source"]) .view-header .view-actions>:is([aria-label^="该面板处于编辑视图中"],[aria-label^="Current view: editing"]) {
+  opacity: 0.8;
+  position: absolute;
+  left:10px;
+  top: 3px;
+}
+body.view-button-front .workspace-leaf-content[data-mode='preview'] .view-header .view-actions>:is([aria-label^="该面板处于阅读视图中"],[aria-label^="Current view: reading"]) {
+  opacity: 0.8;
+  position: absolute;
+  left:10px;
+  top: 3px;
+}
+body.view-button-front .workspace-leaf-content[data-mode='preview'] .view-header:hover .view-actions>:is([aria-label^="该面板处于阅读视图中"],[aria-label^="Current view: reading"]) {
+  opacity: 1;
+}
+
+body.view-button-front:not(.color-scheme-options-simplicity-topaz) .workspace-leaf-content .view-header .view-header-nav-buttons {
+  margin-left: 25px;
+}
+
+body.view-button-front  .workspace-leaf-content[data-mode='source'] .view-content .markdown-source-view:not(.is-live-preview)::before {
+  content: "";
+  background-image:url("data:image/svg+xml,%3Csvg width='' height='' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M84.8 468.8H43.2C17.6 468.8 0 486.4 0 512s17.6 43.2 43.2 43.2h43.2C110.4 555.2 128 537.6 128 512s-17.6-43.2-43.2-43.2zM384 468.8h-43.2c-25.6 0-43.2 17.6-43.2 43.2s17.6 43.2 43.2 43.2H384c25.6 0 43.2-17.6 43.2-43.2s-17.6-43.2-43.2-43.2zM683.2 468.8H640c-25.6 0-43.2 17.6-43.2 43.2s17.6 43.2 43.2 43.2h43.2c25.6 0 43.2-17.6 43.2-43.2-1.6-25.6-17.6-43.2-43.2-43.2zM980.8 468.8h-43.2c-25.6 0-43.2 17.6-43.2 43.2s17.6 43.2 43.2 43.2h43.2c25.6 0 43.2-17.6 43.2-43.2s-17.6-43.2-43.2-43.2z' fill='%23666666'/%3E%3C/svg%3E");
+  background-size: 14px 16px;
+  background-repeat: no-repeat;
+  height: 12px;
+  width: 15px;
+  position: absolute;
+  z-index: 1;
+  top: 17px;
+  left: 16px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+body.view-button-front:not(.remove-custom-svg-icons) .workspace-leaf-content .view-header .view-actions svg.svg-icon.lucide-book-open {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='' height='' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M114.18 936.37c-7.08-0.01-13.88-2.83-18.90-7.84-7.13-7.13-9.73-17.60-6.78-27.24 0.58-1.89 58.08-190.17 69.57-232.60 1.24-4.57 3.65-8.73 6.99-12.08 0 0 509.13-509.34 524.08-524.12 27.32-27.32 63.92-43.31 102.51-44.84 35.84 0.81 69.89 15.79 94.70 41.66 32.72 31.43 49.66 65.07 50.34 100.03 0.52 35.39-15.64 70.37-48.22 103.97C856.96 365.85 382.08 835.45 361.87 855.42c-3.13 3.09-6.97 5.37-11.19 6.62-31.98 9.53-226.32 72.36-228.29 72.99C119.75 935.90 116.98 936.35 114.18 936.37zM207.99 690.03c-10.01 35.62-39.82 125.58-56.68 181.06 55.85-17.99 146.82-49.51 177.65-59.01 50.76-50.21 491.57-486.20 521.11-516.63 22.12-22.85 33.24-44.76 32.85-65.12-0.40-19.87-11.67-40.69-33.65-61.74-14.94-16.13-35.63-25.74-57.60-26.73-24.42 1.73-47.44 12.11-64.90 29.28-14.10 13.90-465.93 465.95-518.84 518.88L207.99 690.03zM350.36 853.71c-13.57-0.06-24.98-10.20-26.63-23.68-6.27-30.87-21.46-59.22-43.70-81.52-22.46-24.48-52.04-41.30-84.56-48.09-14.71-1.90-25.17-15.27-23.48-30.01 1.53-14.70 14.70-25.39 29.40-23.85 0.01 0 0.03 0 0.05 0 88.93 17.85 158.30 87.60 175.66 176.62 1.91 14.80-8.50 28.34-23.28 30.29-1.16 0.15-2.33 0.22-3.51 0.22L350.36 853.71zM828.88 369.14c-13.58-0.05-24.99-10.20-26.62-23.68-14.30-64.29-64.20-114.68-128.34-129.60-14.70-1.94-25.13-15.30-23.45-30.03 1.51-14.67 14.63-25.35 29.31-23.85 0.03 0.01 0.06 0.01 0.10 0.01 44.72 8.07 85.64 30.37 116.68 63.57 30.72 30.78 51.32 70.19 59.05 112.99 2.02 14.73-8.28 28.31-23.02 30.33-1.25 0.18-2.52 0.26-3.80 0.26L828.88 369.14z' fill='%23666666'/%3E%3C/svg%3E");
+  opacity:0.6;
+}
+ 
+body:not(.remove-custom-svg-icons) .workspace-leaf-content[data-type="markdown"] .view-header-icon:hover::before
+{
+content:"👆🏻";
+opacity: 0.6;
+margin-left:-12px;
+}
+
 
 body.folder-icons .nav-folder-children .nav-folder-title-content::before {
   position: relative;
@@ -23802,7 +23896,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
   max-width: 290px;
 }
 .community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20221016";
+  content: "uid:20221017";
   font-family: var(--font-family-inline-code);
   font-size: 12px;
   font-weight: normal;
@@ -23839,9 +23933,23 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
 /* ================================== */
 /* ======= Call out======= */
 /* ================================== */
-
+body.admonition-bg-color-same .callout
+{
+  background-color: rgba(var(--callout-color), 0.1);
+  border-width: var(--callout-border-width);
+}
+ 
+body:not(.admonition-bg-color-same) .callout-title
+{
+  background-color: rgba(var(--callout-color), 0.15);
+}
+.callout-title-inner {
+  flex: 1 1 auto;
+}
 .callout {
   padding: 0;
+  border-left: 4px solid rgba(var(--callout-color),0.15);
+  background-color:var(--admonition-bg-color);
 }
 
 .callout-content {
@@ -24759,7 +24867,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 .callout.callout[data-callout*="bookinfo"] {
   --callout-color: 64, 201, 75;
   --callout-icon: '<svg t="1648743111717" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2202" ><path d="M559.936 144.064l0 745.344 42.112-51.84c6.4-7.872 18.112-9.216 26.176-3.008 1.152 0.896 2.112 1.856 3.008 3.008l0.064-0.128 38.016 46.656L669.312 115.392 559.936 144.064 559.936 144.064zM160.512 558.976C153.536 561.664 145.664 558.208 142.976 551.232 140.288 544.256 143.68 536.384 150.72 533.632c42.496-16.832 88.384-24.768 135.168-24.768 48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 557.696 431.104 561.6 424 559.168 378.368 544.128 331.52 536.064 285.888 536.064 242.24 536.064 199.872 543.424 160.512 558.976L160.512 558.976zM160.512 472.064C153.536 474.752 145.664 471.36 142.976 464.32 140.288 457.344 143.68 449.408 150.72 446.72c42.496-16.896 88.384-24.832 135.168-24.832 48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 470.784 431.104 474.688 424 472.32 378.368 457.216 331.52 449.152 285.888 449.152 242.24 449.152 199.872 456.448 160.512 472.064L160.512 472.064zM160.512 393.152C153.536 395.904 145.664 392.384 142.976 385.408 140.288 378.432 143.68 370.56 150.72 367.808c42.496-16.896 88.384-24.832 135.168-24.832 48.512 0 98.24 8.576 146.624 24.576 7.104 2.304 11.008 10.048 8.64 17.216C438.784 391.872 431.104 395.776 424 393.344 378.368 378.304 331.52 370.176 285.888 370.176 242.24 370.176 199.872 377.536 160.512 393.152L160.512 393.152zM160.512 310.08c-6.976 2.752-14.848-0.704-17.536-7.68C140.288 295.36 143.68 287.488 150.72 284.736c42.496-16.832 88.384-24.768 135.168-24.768 48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 308.864 431.104 312.704 424 310.336 378.368 295.296 331.52 287.232 285.888 287.232 242.24 287.232 199.872 294.528 160.512 310.08L160.512 310.08zM160.512 234.816c-6.976 2.688-14.848-0.704-17.536-7.68C140.288 220.16 143.68 212.224 150.72 209.472 193.216 192.64 239.104 184.704 285.888 184.704c48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 233.536 431.104 237.44 424 235.072 378.368 220.032 331.52 211.968 285.888 211.968 242.24 211.968 199.872 219.328 160.512 234.816L160.512 234.816zM983.36 202.56C1005.888 203.776 1024 222.08 1024 244.288l0 570.048c0 22.976-19.392 41.792-43.008 41.792l-274.24 0 0 80.128-0.064 0c0 5.248-2.432 10.624-7.04 14.144-8.128 6.336-19.84 4.992-26.24-2.88l-56.768-69.376-59.776 73.472C553.536 956.608 547.712 960 541.248 960c-10.368 0-18.752-8.256-18.752-18.24l0-85.632L43.008 856.128C19.392 856.128 0 837.312 0 814.336L0 244.288C0 223.36 16.064 205.824 36.8 202.944L36.8 147.008c0-11.904 7.232-22.208 17.728-26.752C135.552 80.448 214.976 62.848 293.12 64c73.984 1.152 146.112 19.072 216.704 50.88C586.944 78.848 662.656 62.912 737.28 64c78.336 1.216 154.624 21.248 229.12 56.64 10.752 5.12 17.024 15.552 17.024 26.368l0 0L983.424 202.56 983.36 202.56zM706.752 676.288c10.112-0.512 20.352-0.704 30.528-0.576 63.232 1.088 125.12 15.36 185.792 40.96l0-551.04c-61.504-27.008-123.776-42.176-186.816-43.2-9.792-0.128-19.648 0.064-29.504 0.64L706.752 676.288 706.752 676.288zM292.16 122.496C228.736 121.536 163.776 134.976 97.088 165.312l0 550.656c66.304-28.544 131.584-41.344 196.032-40.256 63.296 1.088 125.248 15.36 185.92 40.96l0-551.04C417.408 138.624 355.2 123.456 292.16 122.496z" p-id="2203" ></path></svg>';
-  background: transparent;
+
   border: 0;
   width: auto;
   padding: 0;
@@ -24894,7 +25002,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 }
 .is-live-preview .callout.callout:is([data-callout-metadata^='icon'],
 [data-callout='icon']) {
-  margin-top: -2em;
+  margin-top: -1.6em;
 }
 .callout.callout:is([data-callout-metadata^='icon'],
 [data-callout='icon']) .callout-title {
@@ -24917,6 +25025,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
   pointer-events: initial;
   transition: ease .2s background;
   font-size: 4em;
+  margin-bottom: 0px;
 }
 
 /***Sticky notes  便签效果**/
