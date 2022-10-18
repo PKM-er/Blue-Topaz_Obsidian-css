@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v1.0。uid [20221017] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.0, uid [20221017] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.0。uid [20221018] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.0, uid [20221018] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -23889,33 +23889,7 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
 .community-theme {
   max-width: 290px;
 }
-.community-theme-container .theme-list .community-theme.is-selected .community-theme-title::before {
-  content: "uid:20221017";
-  font-family: var(--font-family-inline-code);
-  font-size: 12px;
-  font-weight: normal;
-  color: var(--text-tag);
-  box-shadow: inset 1px 1px 2px rgba(10, 10, 10, 0.2), inset -1px -1px 2px rgba(220, 220, 220, 0.5);
-  position: absolute;
-  padding: 0 3px;
-  top: 3px;
-  left: 3px;
-  border-radius: 5px;
-}
 
-.community-theme-container .theme-list .community-theme.is-selected .clickable-icon:not([class*="u-muted"])::after {
-  content: "Get Demo Vault";
-  color: white;
-  font-weight: bold;
-  box-shadow: 2px 2px 2px rgba(10, 10, 10, 0.2), -1px -1px 2px rgba(220, 220, 220, 0.5);
-  border-radius: 3px;
-  padding: 3px 5px;
-  margin-left: -15px;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(120deg, #b0ffd5 10%, #ffedb0 100%);
-}
 .community-theme-container .theme-list .community-theme.is-selected .clickable-icon:not([class*="u-muted"]) {
   color: transparent;
 }
@@ -23933,8 +23907,7 @@ body.admonition-bg-color-same .callout
   border-width: var(--callout-border-width);
 }
  
-body:not(.admonition-bg-color-same) .callout-title
-{
+body:not(.admonition-bg-color-same) .callout-title {
   background-color: rgba(var(--callout-color), 0.15);
 }
 .callout-title-inner {
@@ -25395,8 +25368,7 @@ body.head-tag-style .cm-s-obsidian .cm-header ~  span.cm-hashtag {
  vertical-align: top;
 }
 body.head-tag-style .cm-s-obsidian .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-header, 
-body.head-tag-style .cm-s-obsidian .cm-hashtag.cm-header
-{
+body.head-tag-style .cm-s-obsidian .cm-hashtag.cm-header {
   vertical-align: top;
 }
 
@@ -25422,8 +25394,7 @@ body.head-tag-style :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,
  
 
 body.head-tag-style .cm-s-obsidian .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-header, 
-body.head-tag-style .cm-s-obsidian .cm-hashtag.cm-header
-{
+body.head-tag-style .cm-s-obsidian .cm-hashtag.cm-header {
   vertical-align: top;
 }
 
