@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v1.0。uid [20221018] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.0, uid [20221018] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.0。uid [20221017] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.0, uid [20221017] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -4189,12 +4189,12 @@ body {
   --font-size-folder-and-file: 0.9em;/*左侧边栏文件字体大小*/
   --font-size-edit-normal: 1em;/*编辑正文字体大小*/
   --font-size-preview-normal: 1em;/*预览正文字体大小*/
-  --h1: 1.5625em;
-  --h2: 1.4375em;
-  --h3: 1.3125em;
-  --h4: 1.1875em;
-  --h5: 1.0625em;
-  --h6: 0.9375em;
+  --h1-size: 1.5625em;
+  --h2-size: 1.4375em;
+  --h3-size: 1.3125em;
+  --h4-size: 1.1875em;
+  --h5-size: 1.0625em;
+  --h6-size: 0.9375em;
   --font-size-tag: 0.85em;
   --font-size-emoji-after-tag: 1.5625em;
   --font-size-list: 1em;
@@ -10642,31 +10642,31 @@ body.clutter-free-headings div.mod-cm6.is-live-preview div:not(.cm-active).cm-li
 
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-1::before {
   content: 'H1';
-  margin-top: calc(var(--h1) - 0.1em);
+  margin-top: calc(var(--h1-size) - 0.1em);
 }
 
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-2::before {
   content: 'H2';
-  margin-top: calc(var(--h2) - 0.2em);
+  margin-top: calc(var(--h2-size) - 0.2em);
 }
 
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-3::before {
   content: 'H3';
-  margin-top: calc(var(--h3) - 0.2em);
+  margin-top: calc(var(--h3-size) - 0.2em);
 }
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-4::before {
   content: 'H4';
-  margin-top: calc(var(--h4) - 0.3em);
+  margin-top: calc(var(--h4-size) - 0.3em);
 }
 
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-5::before {
   content: 'H5';
-  margin-top: calc(var(--h5) - 0.4em);
+  margin-top: calc(var(--h5-size) - 0.4em);
 }
 
 body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-6::before {
   content: 'H6';
-  margin-top: calc(var(--h6) - 0.4em);
+  margin-top: calc(var(--h6-size) - 0.4em);
 }
 
 /*适配source mode 模式*/
@@ -10729,7 +10729,7 @@ body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line span
 }
 
 :is(.markdown-preview-view,.markdown-rendered) h1 {
-  font-size: var(--h1);
+  font-size: var(--h1-size);
   line-height: 1.2;
   padding-bottom: 1px;
   font-family: var(--font-family-h1);
@@ -10737,7 +10737,7 @@ body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line span
 }
 
 :is(.markdown-preview-view,.markdown-rendered) h2 {
-  font-size: var(--h2);
+  font-size: var(--h2-size);
   line-height: 1.2;
   padding-bottom: 1px;
   font-family: var(--font-family-h2);
@@ -10785,22 +10785,22 @@ body.h6-toggle-short-underline .markdown-source-view.is-live-preview .HyperMD-he
 }
 
 :is(.markdown-preview-view,.markdown-rendered) h3 {
-  font-size: var(--h3);
+  font-size: var(--h3-size);
   font-family: var(--font-family-h3);
   color: var(--h3-color);
 }
 :is(.markdown-preview-view,.markdown-rendered) h4 {
-  font-size: var(--h4);
+  font-size: var(--h4-size);
   font-family: var(--font-family-h4);
   color: var(--h4-color);
 }
 :is(.markdown-preview-view,.markdown-rendered) h5 {
-  font-size: var(--h5);
+  font-size: var(--h5-size);
   font-family: var(--font-family-h5);
   color: var(--h5-color);
 }
 :is(.markdown-preview-view,.markdown-rendered) h6 {
-  font-size: var(--h6);
+  font-size: var(--h6-size);
   font-family: var(--font-family-h6);
   color: var(--h6-color);
 }
@@ -10831,61 +10831,61 @@ body.header-6-background :is(.markdown-preview-view,.markdown-rendered) h6 {
 }
 
 .cm-header-1 {
-  font-size: var(--h1);
+  font-size: var(--h1-size) !important;
   position: relative;
-  font-family: var(--font-family-h1);
+  font-family: var(--font-family-h1) !important;
   color: var(--h1-color);
 }
 .cm-header-2 {
-  font-size: var(--h2);
+  font-size: var(--h2-size) !important;
   position: relative;
-  font-family: var(--font-family-h2);
+  font-family: var(--font-family-h2) !important;
   color: var(--h2-color);
 }
 .cm-header-3 {
-  font-size: var(--h3);
+  font-size: var(--h3-size) !important;
   position: relative;
-  font-family: var(--font-family-h3);
+  font-family: var(--font-family-h3) !important;
   color: var(--h3-color);
 }
 .cm-header-4 {
-  font-size: var(--h4);
+  font-size: var(--h4-size) !important;
   position: relative;
-  font-family: var(--font-family-h4);
+  font-family: var(--font-family-h4) !important;
   color: var(--h4-color);
 }
 .cm-header-5 {
-  font-size: var(--h5);
+  font-size: var(--h5-size) !important;
   position: relative;
-  font-family: var(--font-family-h5);
+  font-family: var(--font-family-h5) !important;
   color: var(--h5-color);
 }
 .cm-header-6 {
-  font-size: var(--h6);
+  font-size: var(--h6-size) !important;
   position: relative;
-  font-family: var(--font-family-h6);
+  font-family: var(--font-family-h6) !important;
   color: var(--h6-color);
 }
 .cm-contentContainer :is(.cm-header-1,.cm-header-2,.cm-header-3,.cm-header-4) {
   line-height: calc(var(--paragraph-spacing) + 0.5);
 }
 .markdown-source-view.mod-cm5 .HyperMD-header-1 {
-  font-size: var(--h1) !important;
+  font-size: var(--h1-size) !important;
 }
 .markdown-source-view.mod-cm5 .HyperMD-header-2 {
-  font-size: var(--h2) !important;
+  font-size: var(--h2-size) !important;
 }
 .markdown-source-view.mod-cm5 .HyperMD-header-3 {
-  font-size: var(--h3) !important;
+  font-size: var(--h3-size) !important;
 }
 .markdown-source-view.mod-cm5 .HyperMD-header-4 {
-  font-size: var(--h4) !important;
+  font-size: var(--h4-size) !important;
 }
 .markdown-source-view.mod-cm5 .HyperMD-header-5 {
-  font-size: var(--h5) !important;
+  font-size: var(--h5-size) !important;
 }
 .markdown-source-view.mod-cm5 .HyperMD-header-6 {
-  font-size: var(--h6) !important;
+  font-size: var(--h6-size) !important;
 }
 
 body.h1-text-align-center .HyperMD-header.HyperMD-header-1.cm-line,
@@ -11377,8 +11377,7 @@ body:not(.default-split-style) .workspace>.workspace-split:not(.mod-root) .cm-li
 .cm-s-obsidian .hmd-fold-html kbd {
   font-family: var(--font-monospace);
 }
-.is-live-preview .admonition-content .math-block>mjx-container
-{
+.is-live-preview .admonition-content .math-block>mjx-container {
   padding: 0.3em 0;
 }
 
@@ -13467,7 +13466,7 @@ body.muted-activeline-bg .HyperMD-codeblock-bg.CodeMirror-activeline-background.
 /*----file explorer smaller fonts & line height----*/
 .nav-file-title,
 .nav-folder-title {
-  font-size: var(--font-size-folder-and-file);
+  font-size: calc(var(--font-size-folder-and-file) + 0.1em);
   font-family: var(--font-family-folder-file-title);
   cursor: pointer;
   position: relative;
