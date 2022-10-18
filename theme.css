@@ -13466,7 +13466,7 @@ body.muted-activeline-bg .HyperMD-codeblock-bg.CodeMirror-activeline-background.
 /*----file explorer smaller fonts & line height----*/
 .nav-file-title,
 .nav-folder-title {
-  font-size: calc(var(--font-size-folder-and-file) + 0.1em);
+  font-size: var(--font-size-folder-and-file);
   font-family: var(--font-family-folder-file-title);
   cursor: pointer;
   position: relative;
@@ -19135,9 +19135,9 @@ body.is-mobile.background-settings-workplace-background-image .workspace-split.m
 
 /*侧边栏文件列表字体大小*/
 .is-mobile .nav-file-title, .is-mobile .nav-folder-title, .is-mobile .outline, .is-mobile .tree-item-self, .is-mobile .tag-container, .is-mobile .tag-pane-tag {
-  font-size: calc(var(--font-size-folder-and-file) + 0.1em);
+  font-size: calc(var(--font-size-folder-and-file) + 0.2em);
   line-height: 1.5;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 /*侧边栏工作区标题*/
 .is-mobile .workspace-drawer-tab-option-item-title, .is-mobile .workspace-drawer-active-tab-title {
