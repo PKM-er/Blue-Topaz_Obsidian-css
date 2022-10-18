@@ -12876,7 +12876,7 @@ a.internal-link,
   text-decoration: none !important;
   transition: all 0.4s ease-in-out;
 }
-
+/*
 body.colorful-link-animation :is(.markdown-preview-view,.markdown-rendered) a:hover {
   animation: 2s colorful-link infinite;
 }
@@ -12885,7 +12885,7 @@ body.colorful-link-animation :is(.markdown-preview-view,.markdown-rendered) a:ho
 	0% { filter: hue-rotate(0deg); }
 	100% { filter: hue-rotate(360deg); }
 }
-
+*/
 a.external-link {
   text-decoration: underline;
   color: var(--external-link-color);
