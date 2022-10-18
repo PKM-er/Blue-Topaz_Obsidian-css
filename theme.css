@@ -23732,11 +23732,6 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
     0px 10.4px 18.1px rgba(0, 0, 0, 0.18),
     0px 20px 40px rgba(0, 0, 0, 0.28); 
 }  
- 
-.popover.hover-popover {
-  width: 400px;
-  max-height: 40vh; 
-}
 
 .popover.hover-popover:not(.is-loaded) .markdown-source-view .cm-scroller,
 .popover.hover-popover:not(.is-loaded) .markdown-source-view .cm-gutters,
