@@ -19126,16 +19126,17 @@ body.is-mobile.background-settings-workplace-background-image .workspace-split.m
   background-color: transparent;
 }
 
-/*侧边栏区域填满*/
+/*侧边栏区域填满
 .is-mobile .workspace-drawer:not(.is-pinned) {
   width: 100vw;
   max-width: 360pt;
   border: none;
   box-shadow: 0 5px 50px 5px rgba(0,0,0,0.05);
 }
+
 /*侧边栏文件列表字体大小*/
 .is-mobile .nav-file-title, .is-mobile .nav-folder-title, .is-mobile .outline, .is-mobile .tree-item-self, .is-mobile .tag-container, .is-mobile .tag-pane-tag {
-  font-size: var(--font-size-folder-and-file);
+  font-size: calc(var(--font-size-folder-and-file) + 0.1em);
   line-height: 1.5;
   margin-bottom: 4px;
 }
