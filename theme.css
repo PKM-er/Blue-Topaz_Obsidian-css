@@ -619,6 +619,9 @@ settings:
       - 
         label: Hide to left
         value: hide-left-ribbon
+      - 
+        label: Hide to the left retention drawer
+        value: hide-left-ribbon-retention-drawer
   -
     id: layout-style-options
     title: Layout Styles
@@ -12729,9 +12732,7 @@ body.dark-background-file .nav-file-title.is-active {
 }
 
 /** file name**/
-body.file-name-animation .nav-files-container {
-  overflow-x: auto;
-}
+ 
 body.file-name-animation .nav-file-title-content:not(.is-being-renamed):hover {
   animation: filemove 1.5s 1 normal linear;
 }
@@ -12750,7 +12751,7 @@ body.file-name-animation .obsidian-icon-folder-icon {
 }
 
 body.file-name-animation .nav-folder-title {
-  display: inline-block;
+ 
   white-space: nowrap;
 }
 
@@ -21971,7 +21972,6 @@ body:is(.folder-style-change-options-colorful,.folder-style-change-options-color
 
 body:is(.folder-style-change-options-colorful,.folder-style-change-options-colorful-order) .nav-folder.mod-root>.nav-folder-title {
   background-color: initial;
-  font-size: 1.3em;
 }
 
 /*style settings blockquote quotation marks*/
@@ -26685,6 +26685,32 @@ body.hide-left-ribbon .workspace-ribbon.side-dock-ribbon.mod-left {
   transition: all 350ms ease-in-out;
 }
 
+
+body.hide-left-ribbon-retention-drawer.hide-titlebar-close-btn.is-hidden-frameless .titlebar-button.mod-logo {
+  display: none;
+}
+
+body.hide-left-ribbon-retention-drawer.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.mod-left .sidebar-toggle-button
+{
+  padding-top: var(--size-4-2);
+}
+body.hide-left-ribbon-retention-drawer .workspace-ribbon.mod-left:not(:hover) ~ .workspace-split .workspace-tabs.mod-top .workspace-tab-header-container
+{
+  margin-left: 28px;
+  transition: all 350ms ease-in-out;
+}
+body.hide-left-ribbon-retention-drawer  .workspace-ribbon.mod-left:not(:hover):before,
+body.hide-left-ribbon-retention-drawer .workspace-ribbon.side-dock-ribbon.mod-left:not(:hover) {
+  margin-left: -40px;
+}
+
+body.hide-left-ribbon-retention-drawer .workspace-ribbon.side-dock-ribbon.mod-left .sidebar-toggle-button.mod-left,
+body.hide-left-ribbon-retention-drawer  .workspace-ribbon.mod-left:before,
+body.hide-left-ribbon-retention-drawer .workspace-ribbon.side-dock-ribbon.mod-left,
+body.hide-left-ribbon-retention-drawer .workspace-ribbon.mod-left:hover ~ .workspace-split .workspace-tabs.mod-top .workspace-tab-header-container {
+  transition: all 350ms ease-in-out;
+}
+
 body.stack-tab-text-ori-mixed .workspace-tab-header-inner-title {
   text-orientation: mixed;
 } 
@@ -26698,6 +26724,7 @@ body.tab-title-bar-position .workspace-tabs:not(.mod-stacked) .view-header
   writing-mode: vertical-rl;
  position: absolute;
  padding:0;
+ background:transparent;
 }
 
 body.tab-title-bar-position .workspace-tabs:not(.mod-stacked)  .view-header-nav-buttons
