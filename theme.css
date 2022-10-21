@@ -2712,21 +2712,6 @@ settings:
     type: class-toggle
     default: false
   -
-    id: custom-modal-windows
-    title: 2.3.7 Custom Modal Windows
-    title.zh: 2.3.7 个性化弹窗
-    type: heading
-    level: 3
-    collapsed: true
-  -
-    id: modal-title-icon
-    title: Modal Title Icon
-    title.zh: 弹窗标题自定义
-    description: Do not remove the quotes
-    description.zh: 保留引号
-    type: variable-text
-    default: "'  '"
-  -   
     id: table-styles
     title: 2.3.8 Table
     title.zh: 2.3.8 表格
@@ -3601,10 +3586,10 @@ settings:
   - 
     id: stack-tabs-text-ori-options
     title: Text orientation styles
-    title.zh: 提示框唤出样式
+    title.zh: stack 模式汉字竖排
     type: class-select
     allowEmpty: false
-    default: default-stack-text-ori-style
+    default: stack-tab-text-ori-mixed
     options:
       - 
         label: Default
@@ -4289,7 +4274,6 @@ body {
 
   --fancy-hr-icon: '😀';
   --fancy-hr-rotate: 0deg;
-  --modal-title-icon:'  ';
   --line-height-main: 1.5;
   --line-height-list: 1.4;
 
@@ -17383,11 +17367,6 @@ span.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight.hmd-hidd
 .HyperMD-quote.CodeMirror-line .CodeMirror-widget + span.cm-quote::before {
   border-left: none;
 }
-/*全局modal模块加文字*/
-.modal-container .modal .modal-title::before {
-  font-family: var(--font-family-strong);
-  content: var(--modal-title-icon);
-}
 
 .vertical-tab-content {
   padding-bottom: 4em;
@@ -26804,9 +26783,12 @@ body.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.side-dock-rib
 }
 
 body.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.mod-left .sidebar-toggle-button {
-  padding-top: 44px;
+  padding-top: 52px;
  }
-
+ body.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.mod-left .side-dock-actions
+ {
+  padding-top: 12px;
+ }
  body.hide-titlebar-close-btn.is-hidden-frameless .titlebar-button-container.mod-right:not(:hover)
  {
 
@@ -26830,13 +26812,8 @@ body.hide-titlebar-close-btn.is-hidden-frameless .titlebar-inner:hover  .titleba
   transform:unset;
   opacity: 0.8;
  }
-/***stack 模式 汉字竖排**/
- .workspace-tab-header-inner-title
-{
-  text-orientation: mixed;
-}
+ 
 
- /* ====web-browser==== */
 .view-header-title-container.web-browser-header-bar .view-header-title-parent:before {
   content: ' ';
   margin-left: 10px;
@@ -26847,7 +26824,7 @@ body.hide-titlebar-close-btn.is-hidden-frameless .titlebar-inner:hover  .titleba
  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-search'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
 
 }
-
+ /* ====web-browser==== */
 .view-header-title-container.web-browser-header-bar  +  .view-actions .view-action
 {
   opacity: 1!important;
