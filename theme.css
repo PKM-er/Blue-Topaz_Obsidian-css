@@ -3638,6 +3638,7 @@ settings:
     id: admonition-bg-color-same
     title:  The same as the title color
     title.zh: 背景色与标题色一致
+    description.zh: Obsidian 默认callout样式
     type: class-toggle
     default: false
   -
@@ -8534,14 +8535,15 @@ body.color-scheme-options-simplicity-topaz [class="menu"] {
 	100% { transform:scale(100%); opacity:1; }
 }
 /* Left dock navigation (new note, new folder, reorder) */
-body.color-scheme-options-simplicity-topaz .workspace-tab-header-container:hover + .workspace-tab-container .workspace-leaf .workspace-leaf-content .nav-header {
+body.color-scheme-options-simplicity-topaz .workspace-tab-header-container:hover + .workspace-tab-container .workspace-leaf .workspace-leaf-content>.nav-header {
   margin-top: 0;
-  transition: all 0.3s linear;
+  transition: all 0.1s linear;
 }
-body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-tab-container .workspace-leaf .workspace-leaf-content .nav-header:hover {
+body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-tab-container .workspace-leaf .workspace-leaf-content>.nav-header:hover {
   margin-top: 0;
+  transition: all 0.6s linear;
 }
-body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-tab-container .workspace-leaf .workspace-leaf-content .nav-header {
+body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-tab-container .workspace-leaf .workspace-leaf-content>.nav-header {
   margin-top: -30px;
   transition: all 0.6s linear;
 }
@@ -16830,7 +16832,10 @@ body.style-options-for-admonition-plugin .admonition-flex {
   box-shadow: none;
   border-left: none;
 }
-
+body.admonition-bg-color-same.style-options-for-admonition-plugin .admonition-flex
+{
+  margin: 1em 0;
+}
 .is-live-preview .callout-content.admonition-content >p {
   margin-top: 0; 
 }
@@ -23946,13 +23951,17 @@ body:not(.admonition-bg-color-same) .callout-title {
 }
 
 .callout-content {
-  padding-bottom: 12px;
+  padding: 5px 15px; 
 }
 .is-live-preview .admonition-content>* br {
   display: unset;
 }
+body.admonition-bg-color-same .callout-title {
+  color: rgb(var(--callout-color));
+}
 .callout-title {
   padding: 12px 0 12px 12px;
+  color: unset;
 }
  
 
@@ -26827,4 +26836,36 @@ body.hide-titlebar-close-btn.is-hidden-frameless .titlebar-inner:hover  .titleba
   text-orientation: mixed;
 }
 
- 
+ /* ====web-browser==== */
+.view-header-title-container.web-browser-header-bar .view-header-title-parent:before {
+  content: ' ';
+  margin-left: 10px;
+  color: var(--text-faint);
+  width:12px;
+  height: 8px;
+  background-color: var(--text-muted);
+ -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-search'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+
+}
+
+.view-header-title-container.web-browser-header-bar  +  .view-actions .view-action
+{
+  opacity: 1!important;
+}
+.view-header-title-container.web-browser-header-bar  +  .view-actions .view-action[aria-label="切换视图"]
+{
+  display: none;
+}
+
+.view-header-title-container.web-browser-header-bar input {
+  padding: 0 10px 0 19px;
+  border: 0;
+  outline: none;
+}
+
+.view-header-title-container.web-browser-header-bar:hover {
+  border: var(--input-border-width) solid;
+  color: var(--interactive-accent-hover);
+  border-radius: 6px;
+}
+ /* ====web-browser==== */
