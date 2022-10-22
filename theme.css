@@ -619,9 +619,6 @@ settings:
       - 
         label: Hide to left
         value: hide-left-ribbon
-      - 
-        label: Hide to the left retention drawer
-        value: hide-left-ribbon-retention-drawer
   -
     id: layout-style-options
     title: Layout Styles
@@ -2718,6 +2715,21 @@ settings:
     type: class-toggle
     default: false
   -
+    id: custom-modal-windows
+    title: 2.3.7 Custom Modal Windows
+    title.zh: 2.3.7 个性化弹窗
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: modal-title-icon
+    title: Modal Title Icon
+    title.zh: 弹窗标题自定义
+    description: Do not remove the quotes
+    description.zh: 保留引号
+    type: variable-text
+    default: "'  '"
+  -   
     id: table-styles
     title: 2.3.8 Table
     title.zh: 2.3.8 表格
@@ -3592,10 +3604,10 @@ settings:
   - 
     id: stack-tabs-text-ori-options
     title: Text orientation styles
-    title.zh: stack 模式汉字竖排
+    title.zh: 提示框唤出样式
     type: class-select
     allowEmpty: false
-    default: stack-tab-text-ori-mixed
+    default: default-stack-text-ori-style
     options:
       - 
         label: Default
@@ -3629,7 +3641,6 @@ settings:
     id: admonition-bg-color-same
     title:  The same as the title color
     title.zh: 背景色与标题色一致
-    description.zh: Obsidian 默认callout样式
     type: class-toggle
     default: false
   -
@@ -4280,6 +4291,7 @@ body {
 
   --fancy-hr-icon: '😀';
   --fancy-hr-rotate: 0deg;
+  --modal-title-icon:'  ';
   --line-height-main: 1.5;
   --line-height-list: 1.4;
 
@@ -8525,17 +8537,14 @@ body.color-scheme-options-simplicity-topaz [class="menu"] {
 	100% { transform:scale(100%); opacity:1; }
 }
 /* Left dock navigation (new note, new folder, reorder) */
- 
-body.color-scheme-options-simplicity-topaz .workspace-tab-header-container:hover + .workspace-tab-container .workspace-leaf .workspace-leaf-content>.nav-header {
+body.color-scheme-options-simplicity-topaz .workspace-tab-header-container:hover + .workspace-tab-container .workspace-leaf .workspace-leaf-content .nav-header {
   margin-top: 0;
-  transition: all 0.1s linear;
+  transition: all 0.3s linear;
 }
-
-body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-tab-container .workspace-leaf .workspace-leaf-content>.nav-header:hover {
+body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-tab-container .workspace-leaf .workspace-leaf-content .nav-header:hover {
   margin-top: 0;
-  transition: all 0.6s linear;
 }
-body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-tab-container .workspace-leaf .workspace-leaf-content>.nav-header {
+body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-tab-container .workspace-leaf .workspace-leaf-content .nav-header {
   margin-top: -30px;
   transition: all 0.6s linear;
 }
@@ -12726,7 +12735,9 @@ body.dark-background-file .nav-file-title.is-active {
 }
 
 /** file name**/
- 
+body.file-name-animation .nav-files-container {
+  overflow-x: auto;
+}
 body.file-name-animation .nav-file-title-content:not(.is-being-renamed):hover {
   animation: filemove 1.5s 1 normal linear;
 }
@@ -12745,7 +12756,7 @@ body.file-name-animation .obsidian-icon-folder-icon {
 }
 
 body.file-name-animation .nav-folder-title {
- 
+  display: inline-block;
   white-space: nowrap;
 }
 
@@ -16824,10 +16835,7 @@ body.style-options-for-admonition-plugin .admonition-flex {
   box-shadow: none;
   border-left: none;
 }
-body.admonition-bg-color-same.style-options-for-admonition-plugin .admonition-flex
-{
-  margin: 1em 0;
-}
+
 .is-live-preview .callout-content.admonition-content >p {
   margin-top: 0; 
 }
@@ -17374,6 +17382,11 @@ span.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight.hmd-hidd
 
 .HyperMD-quote.CodeMirror-line .CodeMirror-widget + span.cm-quote::before {
   border-left: none;
+}
+/*全局modal模块加文字*/
+.modal-container .modal .modal-title::before {
+  font-family: var(--font-family-strong);
+  content: var(--modal-title-icon);
 }
 
 .vertical-tab-content {
@@ -21956,6 +21969,7 @@ body:is(.folder-style-change-options-colorful,.folder-style-change-options-color
 
 body:is(.folder-style-change-options-colorful,.folder-style-change-options-colorful-order) .nav-folder.mod-root>.nav-folder-title {
   background-color: initial;
+  font-size: 1.3em;
 }
 
 /*style settings blockquote quotation marks*/
@@ -23935,17 +23949,13 @@ body:not(.admonition-bg-color-same) .callout-title {
 }
 
 .callout-content {
-  padding: 5px 15px; 
+  padding-bottom: 12px;
 }
 .is-live-preview .admonition-content>* br {
   display: unset;
 }
-body.admonition-bg-color-same .callout-title {
-  color: rgb(var(--callout-color));
-}
 .callout-title {
   padding: 12px 0 12px 12px;
-  color: unset;
 }
  
 
@@ -26687,32 +26697,6 @@ body.hide-left-ribbon .workspace-ribbon.side-dock-ribbon.mod-left {
   transition: all 350ms ease-in-out;
 }
 
-
-body.hide-left-ribbon-retention-drawer.hide-titlebar-close-btn.is-hidden-frameless .titlebar-button.mod-logo {
-  display: none;
-}
-
-body.hide-left-ribbon-retention-drawer.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.mod-left .sidebar-toggle-button
-{
-  padding-top: var(--size-4-2);
-}
-body.hide-left-ribbon-retention-drawer .workspace-ribbon.mod-left:not(:hover) ~ .workspace-split .workspace-tabs.mod-top .workspace-tab-header-container
-{
-  margin-left: 28px;
-  transition: all 350ms ease-in-out;
-}
-body.hide-left-ribbon-retention-drawer  .workspace-ribbon.mod-left:not(:hover):before,
-body.hide-left-ribbon-retention-drawer .workspace-ribbon.side-dock-ribbon.mod-left:not(:hover) {
-  margin-left: -40px;
-}
-
-body.hide-left-ribbon-retention-drawer .workspace-ribbon.side-dock-ribbon.mod-left .sidebar-toggle-button.mod-left,
-body.hide-left-ribbon-retention-drawer  .workspace-ribbon.mod-left:before,
-body.hide-left-ribbon-retention-drawer .workspace-ribbon.side-dock-ribbon.mod-left,
-body.hide-left-ribbon-retention-drawer .workspace-ribbon.mod-left:hover ~ .workspace-split .workspace-tabs.mod-top .workspace-tab-header-container {
-  transition: all 350ms ease-in-out;
-}
-
 body.stack-tab-text-ori-mixed .workspace-tab-header-inner-title {
   text-orientation: mixed;
 } 
@@ -26726,7 +26710,6 @@ body.tab-title-bar-position .workspace-tabs:not(.mod-stacked) .view-header
   writing-mode: vertical-rl;
  position: absolute;
  padding:0;
- background:transparent;
 }
 
 body.tab-title-bar-position .workspace-tabs:not(.mod-stacked)  .view-header-nav-buttons
@@ -26797,12 +26780,9 @@ body.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.side-dock-rib
 }
 
 body.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.mod-left .sidebar-toggle-button {
-  padding-top: 52px;
+  padding-top: 44px;
  }
- body.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.mod-left .side-dock-actions
- {
-  padding-top: 12px;
- }
+
  body.hide-titlebar-close-btn.is-hidden-frameless .titlebar-button-container.mod-right:not(:hover)
  {
 transform: translateY(calc( -1 * var(--header-height) + 6px));
@@ -26826,93 +26806,10 @@ body.hide-titlebar-close-btn.is-hidden-frameless .titlebar-inner:hover  .titleba
   background: var(--titlebar-background-focused);
   opacity: 0.8;
  }
- body.hide-titlebar-close-btn.is-hidden-frameless.mod-linux .titlebar-button, 
- body.hide-titlebar-close-btn.is-hidden-frameless.mod-windows .titlebar-button
- {
-  padding-bottom: 6px;
-  align-items: flex-end;
- }
-
-.view-header-title-container.web-browser-header-bar .view-header-title-parent:before {
-  content: ' ';
-  margin-left: 10px;
-  color: var(--text-faint);
-  width:10px;
-  height: 8px;
-  background-color: var(--text-muted);
- -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-search'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
-
-}
- /* ====web-browser==== */
-.view-header-title-container.web-browser-header-bar  +  .view-actions .view-action
+/***stack 模式 汉字竖排**/
+ .workspace-tab-header-inner-title
 {
-  opacity: 1!important;
-}
-.view-header-title-container.web-browser-header-bar  +  .view-actions .view-action[aria-label="切换视图"]
-{
-  display: none;
+  text-orientation: mixed;
 }
 
-.view-header-title-container.web-browser-header-bar input {
-  padding: 0 10px 0 19px;
-  border: 0;
-  outline: none;
-  background: transparent;
-}
-
-.view-header-title-container.web-browser-header-bar:hover {
-  border: var(--input-border-width) solid;
-  color: var(--interactive-accent-hover);
-  border-radius: 6px;
-}
- /* ====web-browser==== */
-
- /* ====new styler==== */
  
-body.background-settings-workplace-background-image.workspace > .workspace-leaf, .workspace > .workspace-split {
-  background-color: transparent;
-}
-
-body.background-settings-workplace-background-image .workspace-tab-container-before.is-before-active, 
-body.background-settings-workplace-background-image .workspace-tab-container-after.is-after-active, 
-body.background-settings-workplace-background-image .workspace-tab-header.is-before-active,
-body.background-settings-workplace-background-image .workspace-tab-header.is-after-active,
-body.background-settings-workplace-background-image .workspace-split.mod-right-split .workspace-tabs .workspace-leaf,
-body.background-settings-workplace-background-image   .workspace-split.mod-left-split .workspace-tabs .workspace-leaf,
-body.background-settings-workplace-background-image   .workspace-tab-header-container,
-body.background-settings-workplace-background-image .workspace-leaf-resize-handle {
-  background-color: transparent;
-}
-
-body.background-settings-workplace-background-image .workspace-split.mod-horizontal:is(.mod-left-split,.mod-right-split)  .workspace-tab-header.is-active {
-  background-color:transparent;
-}
-
-body.is-frameless.background-settings-workplace-background-image .workspace-split .workspace-tab-header-container {
-  border-bottom-color: var(--divider-color);
-}
-body:not(.show-view-header) .workspace-tabs .workspace-leaf .view-content,
-body.show-view-header .view-header{
-  --page-border-bottom: transparent;
-  border-top-left-radius:var(--radius-m);
-  border-top-right-radius: var(--radius-m);
-
-}
-.workspace-split.mod-root .workspace-tab-header-container-inner .workspace-tab-header:first-child {
-  margin-left: 1rem;
-}
-
-.workspace-split.mod-root  .workspace-tab-header.is-active.mod-active {
-  border-color: var(--background-modifier-border);
-  border-style: solid;
-  background-image: linear-gradient(to right, var(--background-secondary), var(--background-secondary));
-  border: none;
-}
-body.theme-dark:not(.background-settings-workplace-background-image) .workspace-split.mod-horizontal:is(.mod-left-split,.mod-right-split) .workspace-tabs .workspace-leaf-resize-handle {
-  --divider-color: var(--background-primary);
-}
-.workspace-tabs:not(.mod-top) .workspace-tab-header-container {
-  background-color:transparent;
-}
-
- /* ====r==== */
