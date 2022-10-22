@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v1.0。uid [20221017] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.0, uid [20221017] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.0。uid [20221022] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.0, uid [20221022] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -619,6 +619,9 @@ settings:
       - 
         label: Hide to left
         value: hide-left-ribbon
+      - 
+        label: Hide to the left retention drawer
+        value: hide-left-ribbon-retention-drawer
   -
     id: layout-style-options
     title: Layout Styles
@@ -1377,37 +1380,37 @@ settings:
     type: variable-text
     default: 1em
   -
-    id: h1
+    id: h1-size
     title: Header 1
     title.zh: 标题 1
     type: variable-text
     default: 1.5625em
   -
-    id: h2
+    id: h2-size
     title: Header 2
     title.zh: 标题 2
     type: variable-text
     default: 1.4375em
   -
-    id: h3
+    id: h3-size
     title: Header 3
     title.zh: 标题 3
     type: variable-text
     default: 1.3125em
   -
-    id: h4
+    id: h4-size
     title: Header 4
     title.zh: 标题 4
     type: variable-text
     default: 1.1875em
   -
-    id: h5
+    id: h5-size
     title: Header 5
     title.zh: 标题 5
     type: variable-text
     default: 1.0625em
   -
-    id: h6
+    id: h6-size
     title: Header 6
     title.zh: 标题 6
     type: variable-text
@@ -1920,6 +1923,12 @@ settings:
     title: Remove Colorful Background of Active File Title
     title.zh: 取消激活文件标题的彩色背景
     description: Make it austere
+    type: class-toggle
+    default: false
+  -
+    id: title-justify-start
+    title: Toggle title position to left
+    title.zh: 文件标题位置居左
     type: class-toggle
     default: false
   - 
@@ -2709,21 +2718,6 @@ settings:
     type: class-toggle
     default: false
   -
-    id: custom-modal-windows
-    title: 2.3.7 Custom Modal Windows
-    title.zh: 2.3.7 个性化弹窗
-    type: heading
-    level: 3
-    collapsed: true
-  -
-    id: modal-title-icon
-    title: Modal Title Icon
-    title.zh: 弹窗标题自定义
-    description: Do not remove the quotes
-    description.zh: 保留引号
-    type: variable-text
-    default: "'  '"
-  -   
     id: table-styles
     title: 2.3.8 Table
     title.zh: 2.3.8 表格
@@ -3598,10 +3592,10 @@ settings:
   - 
     id: stack-tabs-text-ori-options
     title: Text orientation styles
-    title.zh: 提示框唤出样式
+    title.zh: stack 模式汉字竖排
     type: class-select
     allowEmpty: false
-    default: default-stack-text-ori-style
+    default: stack-tab-text-ori-mixed
     options:
       - 
         label: Default
@@ -3635,6 +3629,7 @@ settings:
     id: admonition-bg-color-same
     title:  The same as the title color
     title.zh: 背景色与标题色一致
+    description.zh: Obsidian 默认callout样式
     type: class-toggle
     default: false
   -
@@ -4285,7 +4280,6 @@ body {
 
   --fancy-hr-icon: '😀';
   --fancy-hr-rotate: 0deg;
-  --modal-title-icon:'  ';
   --line-height-main: 1.5;
   --line-height-list: 1.4;
 
@@ -8531,14 +8525,17 @@ body.color-scheme-options-simplicity-topaz [class="menu"] {
 	100% { transform:scale(100%); opacity:1; }
 }
 /* Left dock navigation (new note, new folder, reorder) */
-body.color-scheme-options-simplicity-topaz .workspace-tab-header-container:hover + .workspace-tab-container .workspace-leaf .workspace-leaf-content .nav-header {
+ 
+body.color-scheme-options-simplicity-topaz .workspace-tab-header-container:hover + .workspace-tab-container .workspace-leaf .workspace-leaf-content>.nav-header {
   margin-top: 0;
-  transition: all 0.3s linear;
+  transition: all 0.1s linear;
 }
-body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-tab-container .workspace-leaf .workspace-leaf-content .nav-header:hover {
+
+body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-tab-container .workspace-leaf .workspace-leaf-content>.nav-header:hover {
   margin-top: 0;
+  transition: all 0.6s linear;
 }
-body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-tab-container .workspace-leaf .workspace-leaf-content .nav-header {
+body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-tab-container .workspace-leaf .workspace-leaf-content>.nav-header {
   margin-top: -30px;
   transition: all 0.6s linear;
 }
@@ -10487,7 +10484,7 @@ span.obsidian-search-match-highlight {
 .search-result-file-match:after {
   display: none;
 }
-
+ 
 .search-input {
   display: block;
   margin: 0 auto 10px auto;
@@ -12729,9 +12726,7 @@ body.dark-background-file .nav-file-title.is-active {
 }
 
 /** file name**/
-body.file-name-animation .nav-files-container {
-  overflow-x: auto;
-}
+ 
 body.file-name-animation .nav-file-title-content:not(.is-being-renamed):hover {
   animation: filemove 1.5s 1 normal linear;
 }
@@ -12750,7 +12745,7 @@ body.file-name-animation .obsidian-icon-folder-icon {
 }
 
 body.file-name-animation .nav-folder-title {
-  display: inline-block;
+ 
   white-space: nowrap;
 }
 
@@ -12898,10 +12893,10 @@ a.internal-link,
 
 :is(.markdown-preview-view,.markdown-rendered) a:hover {
   color: var(--text-accent);
-  background: var(--theme-color-translucent-015);
   border-radius: var(--radius-xs);
   text-decoration: none !important;
   transition: all 0.4s ease-in-out;
+text-shadow: var(--window-shadow-hover);
 }
 /*
 body.colorful-link-animation :is(.markdown-preview-view,.markdown-rendered) a:hover {
@@ -16829,7 +16824,10 @@ body.style-options-for-admonition-plugin .admonition-flex {
   box-shadow: none;
   border-left: none;
 }
-
+body.admonition-bg-color-same.style-options-for-admonition-plugin .admonition-flex
+{
+  margin: 1em 0;
+}
 .is-live-preview .callout-content.admonition-content >p {
   margin-top: 0; 
 }
@@ -17376,11 +17374,6 @@ span.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight.hmd-hidd
 
 .HyperMD-quote.CodeMirror-line .CodeMirror-widget + span.cm-quote::before {
   border-left: none;
-}
-/*全局modal模块加文字*/
-.modal-container .modal .modal-title::before {
-  font-family: var(--font-family-strong);
-  content: var(--modal-title-icon);
 }
 
 .vertical-tab-content {
@@ -19710,9 +19703,6 @@ body.background-settings-workplace-background-image .workspace-tab-header-contai
   background: var(--background-secondary);
 }
 
-body.background-settings-workplace-background-image .workspace-ribbon.mod-left:before {
-  border-bottom: none;
-}
 body.background-settings-workplace-background-image .workspace-ribbon {
   border-right: none;
 }
@@ -19769,9 +19759,7 @@ body:not(.is-focused):not(.is-frameless) .workspace-split.mod-root .workspace-ta
   background-color: var(--background-secondary);
 }
 
-.workspace-tab-header.is-active.mod-active {
-  background-color: var(--background-primary);
-}
+
 
 .view-header {
   border-top: none;
@@ -20444,17 +20432,14 @@ body.background-image-settings-switch.background-image-settings-markdown-page-ra
 }
 
 
-body.background-image-settings-switch.background-image-settings-markdown-page-transparent .workspace-split.mod-root .view-content {
-  background-color: var(--background-secondary-alt);
+body.background-image-settings-switch.background-image-settings-markdown-page-transparent .workspace-split.mod-root  {
+  --background-primary: var(--background-secondary);
+  --tab-outline-color:var(--background-secondary);
 }
 body.background-image-settings-switch.background-image-settings-markdown-page-transparent .mod-root .workspace-tabs .workspace-leaf {
   background-color: unset;
 }
-body.background-image-settings-switch.background-image-settings-markdown-page-transparent .workspace-split.mod-root .view-content {
  
-  background-color: var(--background-secondary-bg-4-bt);
-}
-
 
 body.background-image-settings-switch.background-image-settings-markdown-page-sea-and-sky .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
   content: '';
@@ -21971,7 +21956,6 @@ body:is(.folder-style-change-options-colorful,.folder-style-change-options-color
 
 body:is(.folder-style-change-options-colorful,.folder-style-change-options-colorful-order) .nav-folder.mod-root>.nav-folder-title {
   background-color: initial;
-  font-size: 1.3em;
 }
 
 /*style settings blockquote quotation marks*/
@@ -22337,6 +22321,7 @@ body.background-settings-workplace-background-image:not(.simple-titlebar):not(.i
   filter: blur(var(--titlebar-blur-depth)) brightness(calc(var(--titlebar-brightness) - 0.5)) opacity(0.5);
 }
 
+
 body:not(.simple-titlebar).background-settings-workplace-waves-light.theme-light .titlebar::before {
   content: '';
   display: block;
@@ -22349,7 +22334,7 @@ body:not(.simple-titlebar).background-settings-workplace-waves-light.theme-light
 	opacity:0.5;
   background-color: var(--wave-background-color);
 } 
-body.background-settings-workplace-background-image:not(.simple-titlebar) .titlebar {
+body.background-settings-workplace-background-image:not(.simple-titlebar):not(.is-hidden-frameless) .titlebar {
   --custom-titlebar-bg: var(--background-secondary);
   background-color:  var(--custom-titlebar-bg);
   border: none;
@@ -23784,6 +23769,8 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   max-width: 100% !important;
   /* margin: 0 auto; */
 }
+
+ 
 /*隐藏backlinks区域*/
 :is(.markdown-preview-view,.markdown-rendered).nobacklinks .embedded-backlinks {
   display: none;
@@ -23925,8 +23912,10 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 }
 
 /* ================================== */
-/* ======= Call out======= */
+/* ======= Callout======= */
 /* ================================== */
+
+
 body.admonition-bg-color-same .callout
 {
   background-color: rgba(var(--callout-color), 0.1);
@@ -23946,13 +23935,17 @@ body:not(.admonition-bg-color-same) .callout-title {
 }
 
 .callout-content {
-  padding-bottom: 12px;
+  padding: 5px 15px; 
 }
 .is-live-preview .admonition-content>* br {
   display: unset;
 }
+body.admonition-bg-color-same .callout-title {
+  color: rgb(var(--callout-color));
+}
 .callout-title {
   padding: 12px 0 12px 12px;
+  color: unset;
 }
  
 
@@ -25281,7 +25274,10 @@ body.tag-click .cm-line span.cm-hashtag:not(.cm-formatting) {
 body.reversal-titlebar .titlebar-button-container.mod-right {
   direction: rtl;
 }
-
+body.is-hidden-frameless:not(.is-fullscreen ).is-focused .titlebar-button-container.mod-right {
+  background-color:transparent;
+  }
+  
 
 /* funny LP headers animation 开启标题动画 ===
 from discord @sailKite https://cdn.discordapp.com/attachments/702656734631821413/1007258862606352424/FunnyHeaderAnimLP.css
@@ -26473,7 +26469,10 @@ body:not(.toggle-icon-anima) .clickable-icon:hover:after {
 }
 
 /**ob 1.0 **/
-
+.is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right:hover 
+  {
+    background-color: var(--titlebar-background-focused);
+  }
 .is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right {
   background-color: transparent;
 }
@@ -26486,13 +26485,16 @@ body:not(.toggle-icon-anima) .clickable-icon:hover:after {
   vertical-align:top;
 }
 
-.view-header-title-container {
+body.title-justify-start .view-header-title-container {
   justify-content: flex-start;
 }
 
 .search-input-container input {
   border: none;
-  box-shadow: none;
+  background: var(--background-secondary);
+}
+.search-input-container input:hover {
+  box-shadow: var(--window-shadow-hover);
 }
 .menu{
   background-color:var(--color-base-10);
@@ -26685,6 +26687,32 @@ body.hide-left-ribbon .workspace-ribbon.side-dock-ribbon.mod-left {
   transition: all 350ms ease-in-out;
 }
 
+
+body.hide-left-ribbon-retention-drawer.hide-titlebar-close-btn.is-hidden-frameless .titlebar-button.mod-logo {
+  display: none;
+}
+
+body.hide-left-ribbon-retention-drawer.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.mod-left .sidebar-toggle-button
+{
+  padding-top: var(--size-4-2);
+}
+body.hide-left-ribbon-retention-drawer .workspace-ribbon.mod-left:not(:hover) ~ .workspace-split .workspace-tabs.mod-top .workspace-tab-header-container
+{
+  margin-left: 28px;
+  transition: all 350ms ease-in-out;
+}
+body.hide-left-ribbon-retention-drawer  .workspace-ribbon.mod-left:not(:hover):before,
+body.hide-left-ribbon-retention-drawer .workspace-ribbon.side-dock-ribbon.mod-left:not(:hover) {
+  margin-left: -40px;
+}
+
+body.hide-left-ribbon-retention-drawer .workspace-ribbon.side-dock-ribbon.mod-left .sidebar-toggle-button.mod-left,
+body.hide-left-ribbon-retention-drawer  .workspace-ribbon.mod-left:before,
+body.hide-left-ribbon-retention-drawer .workspace-ribbon.side-dock-ribbon.mod-left,
+body.hide-left-ribbon-retention-drawer .workspace-ribbon.mod-left:hover ~ .workspace-split .workspace-tabs.mod-top .workspace-tab-header-container {
+  transition: all 350ms ease-in-out;
+}
+
 body.stack-tab-text-ori-mixed .workspace-tab-header-inner-title {
   text-orientation: mixed;
 } 
@@ -26698,6 +26726,7 @@ body.tab-title-bar-position .workspace-tabs:not(.mod-stacked) .view-header
   writing-mode: vertical-rl;
  position: absolute;
  padding:0;
+ background:transparent;
 }
 
 body.tab-title-bar-position .workspace-tabs:not(.mod-stacked)  .view-header-nav-buttons
@@ -26768,13 +26797,15 @@ body.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.side-dock-rib
 }
 
 body.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.mod-left .sidebar-toggle-button {
-  padding-top: 44px;
+  padding-top: 52px;
  }
-
+ body.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.mod-left .side-dock-actions
+ {
+  padding-top: 12px;
+ }
  body.hide-titlebar-close-btn.is-hidden-frameless .titlebar-button-container.mod-right:not(:hover)
  {
-
-transform: translateY(-25px);
+transform: translateY(calc( -1 * var(--header-height) + 6px));
 transition: all 0.6s linear;
  }
 
@@ -26791,13 +26822,97 @@ transition: all 0.6s linear;
 body.hide-titlebar-close-btn.is-hidden-frameless .titlebar-inner:hover  .titlebar-button-container.mod-right
  {
   transition: all 0.1s linear;
-  transform:unset;
+  transform:translateY(-15px);
+  background: var(--titlebar-background-focused);
   opacity: 0.8;
  }
-/***stack 模式 汉字竖排**/
- .workspace-tab-header-inner-title
+ body.hide-titlebar-close-btn.is-hidden-frameless.mod-linux .titlebar-button, 
+ body.hide-titlebar-close-btn.is-hidden-frameless.mod-windows .titlebar-button
+ {
+  padding-bottom: 6px;
+  align-items: flex-end;
+ }
+
+.view-header-title-container.web-browser-header-bar .view-header-title-parent:before {
+  content: ' ';
+  margin-left: 10px;
+  color: var(--text-faint);
+  width:10px;
+  height: 8px;
+  background-color: var(--text-muted);
+ -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-search'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+
+}
+ /* ====web-browser==== */
+.view-header-title-container.web-browser-header-bar  +  .view-actions .view-action
 {
-  text-orientation: mixed;
+  opacity: 1!important;
+}
+.view-header-title-container.web-browser-header-bar  +  .view-actions .view-action[aria-label="切换视图"]
+{
+  display: none;
 }
 
+.view-header-title-container.web-browser-header-bar input {
+  padding: 0 10px 0 19px;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.view-header-title-container.web-browser-header-bar:hover {
+  border: var(--input-border-width) solid;
+  color: var(--interactive-accent-hover);
+  border-radius: 6px;
+}
+ /* ====web-browser==== */
+
+ /* ====new styler==== */
  
+body.background-settings-workplace-background-image.workspace > .workspace-leaf, .workspace > .workspace-split {
+  background-color: transparent;
+}
+
+body.background-settings-workplace-background-image .workspace-tab-container-before.is-before-active, 
+body.background-settings-workplace-background-image .workspace-tab-container-after.is-after-active, 
+body.background-settings-workplace-background-image .workspace-tab-header.is-before-active,
+body.background-settings-workplace-background-image .workspace-tab-header.is-after-active,
+body.background-settings-workplace-background-image .workspace-split.mod-right-split .workspace-tabs .workspace-leaf,
+body.background-settings-workplace-background-image   .workspace-split.mod-left-split .workspace-tabs .workspace-leaf,
+body.background-settings-workplace-background-image   .workspace-tab-header-container,
+body.background-settings-workplace-background-image .workspace-leaf-resize-handle {
+  background-color: transparent;
+}
+
+body.background-settings-workplace-background-image .workspace-split.mod-horizontal:is(.mod-left-split,.mod-right-split)  .workspace-tab-header.is-active {
+  background-color:transparent;
+}
+
+body.is-frameless.background-settings-workplace-background-image .workspace-split .workspace-tab-header-container {
+  border-bottom-color: var(--divider-color);
+}
+body:not(.show-view-header) .workspace-tabs .workspace-leaf .view-content,
+body.show-view-header .view-header{
+  --page-border-bottom: transparent;
+  border-top-left-radius:var(--radius-m);
+  border-top-right-radius: var(--radius-m);
+
+}
+.workspace-split.mod-root .workspace-tab-header-container-inner .workspace-tab-header:first-child {
+  margin-left: 1rem;
+}
+
+.workspace-split.mod-root  .workspace-tab-header.is-active.mod-active {
+  border-color: var(--background-modifier-border);
+  border-style: solid;
+  background-image: linear-gradient(to right, var(--background-secondary), var(--background-secondary));
+  border: none;
+}
+body.theme-dark:not(.background-settings-workplace-background-image) .workspace-split.mod-horizontal:is(.mod-left-split,.mod-right-split) .workspace-tabs .workspace-leaf-resize-handle {
+  --divider-color: var(--background-primary);
+}
+.workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+  background-color:transparent;
+}
+
+ /* ====r==== */
