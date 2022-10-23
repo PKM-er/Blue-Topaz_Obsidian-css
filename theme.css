@@ -26,8 +26,8 @@ settings:
     collapsed: false
   - 
     id: color-settings
-    title: 1.1 Color Palette
-    title.zh: 1.1 颜色设置
+    title: 1.1 Color scheme 
+    title.zh: 1.1 整体配色
     type: heading
     level: 2
     collapsed: true
@@ -137,50 +137,6 @@ settings:
     type: class-toggle
     default: false
   - 
-    id: blur-depth
-    title: Blur Radius
-    title.zh: 模糊程度
-    description: To adjust the radius of blur
-    description.zh: 调整背景壁纸模糊程度
-    type: variable-number-slider
-    default: 10
-    format: px
-    min: 0
-    max: 30
-    step: 1
-  - 
-    id: brightness-4-bg
-    title: Brightness of Image
-    title.zh: 图片亮度
-    description: To adjust the brightness
-    description.zh: 调整背景壁纸亮度
-    type: variable-number-slider
-    default: 0.9
-    min: 0.3
-    max: 1.5
-    step: 0.1
-  - 
-    id: saturate-4-bg
-    title: Saturation of Image
-    title.zh: 图片饱和度
-    description: To adjust the saturation
-    description.zh: 调整背景壁纸饱和度
-    type: variable-number-slider
-    default: 1
-    min: 0
-    max: 2
-    step: 0.1
-  -
-    id: background-waves-color
-    title: Waves color
-    title.zh: 波浪背景颜色
-    description.zh: 当背景色选择为waves时起作用。
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#4A75DB8C'
-    default-dark: '#4A75DB8C'
-  -
     id: background-settings-workplace-theme-light
     title: Light mode
     type: class-select
@@ -263,6 +219,50 @@ settings:
     type: variable-text
     default: url("https://")
   - 
+    id: blur-depth
+    title: Blur Radius
+    title.zh: 模糊程度
+    description: To adjust the radius of blur
+    description.zh: 调整背景壁纸模糊程度
+    type: variable-number-slider
+    default: 10
+    format: px
+    min: 0
+    max: 30
+    step: 1
+  - 
+    id: brightness-4-bg
+    title: Brightness of Image
+    title.zh: 图片亮度
+    description: To adjust the brightness
+    description.zh: 调整背景壁纸亮度
+    type: variable-number-slider
+    default: 0.9
+    min: 0.3
+    max: 1.5
+    step: 0.1
+  - 
+    id: saturate-4-bg
+    title: Saturation of Image
+    title.zh: 图片饱和度
+    description: To adjust the saturation
+    description.zh: 调整背景壁纸饱和度
+    type: variable-number-slider
+    default: 1
+    min: 0
+    max: 2
+    step: 0.1
+  -
+    id: background-waves-color
+    title: Waves color
+    title.zh: 波浪背景颜色
+    description.zh: 当背景色选择为waves时起作用。
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#4A75DB8C'
+    default-dark: '#4A75DB8C'
+  -
     id: background-settings-workplace-random
     title: Random background
     title.zh: 随机背景
@@ -385,7 +385,7 @@ settings:
         label: Stripe notebook 2
         value: background-image-settings-markdown-page-stripe-notebook-2
   - 
-    id: background-settings-markdown-page
+    id: notebook-liked-background-settings
     title: 1.2.2.1 Notebook-liked background options
     title.zh: 1.2.2.1 类笔记样式背景设置
     type: heading
@@ -2197,7 +2197,7 @@ settings:
         label: Obsidian default
         value: default-list-marker
   -
-    id: list-style-change-options-folder
+    id: options-bt-default
     title: 2.3.2.1.1 Options for 'Blue Topaz Default'
     type: heading
     level: 5
@@ -2218,7 +2218,7 @@ settings:
     default-light: '#'
     default-dark: '#'
   -
-    id: list-style-change-options-folder
+    id: options-for-custom
     title: 2.3.2.1.2 Options for 'Custom'
     type: heading
     level: 5
@@ -3125,6 +3125,12 @@ settings:
     type: variable-text
     default: 100%
   -
+    id: image-border
+    title: Image borders
+    title.zh: 图片添加边框
+    type: class-toggle
+    default: false
+  -
     id: icons-style-folder-1
     title: Intro to Basic Image Position
     title.zh: 基本图片位置简介
@@ -3195,7 +3201,7 @@ settings:
     title: 2.3.16.1 Custom Text
     type: heading
     level: 4
-    collapsed: false
+    collapsed: true
   -
     id: loading-diy-text
     title: Custom Text
@@ -3250,7 +3256,7 @@ settings:
     title: 2.3.16.2 Custom Image/Animation
     type: heading
     level: 4
-    collapsed: false
+    collapsed: true
   -
     id: loading-text-before
     title: Adding Things Before
@@ -3287,7 +3293,7 @@ settings:
     title: 2.3.16.3 Custom Image/Animation
     type: heading
     level: 4
-    collapsed: false
+    collapsed: true
   -
     id: loading-page-custom-gif-url
     title: Custom Loading Page Image/Animation
@@ -3303,7 +3309,7 @@ settings:
     title: 2.3.16.4 Custom Image/Animation with Position Changing
     type: heading
     level: 4
-    collapsed: false
+    collapsed: true
   -
     id: loading-page-custom-gif-url-alt
     title: Custom Loading Page Image/Animation
@@ -3366,11 +3372,11 @@ settings:
         label: Customised colorful tag
         value: colorful-tag-bt
   -
-    id: style-options-for-other-plugins
+    id: customised-colorful-tag
     title: 2.3.17.1 Customised colorful tag
     type: heading
     level: 4
-    collapsed: false
+    collapsed: true
   - 
     id: tag1
     title: Tag-1
@@ -3420,11 +3426,11 @@ settings:
     default-light: '#f8f8f8'
     default-dark: '#e4e4e4'
   -
-    id: style-options-for-other-plugins
+    id: outlined-style
     title: 2.3.17.2 Outlined
     type: heading
     level: 4
-    collapsed: false
+    collapsed: true
   -
     id: tag-border-width
     title: Tag border width
@@ -8475,7 +8481,13 @@ body.color-scheme-options-simplicity-topaz .checkbox-container.is-enabled {
   background-color: var(--interactive-accent-hover);
 }
 
-
+body.color-scheme-options-simplicity-topaz  .workspace-split.mod-root  .workspace-tab-header.is-active.mod-active {
+  border-color: var(--background-modifier-border);
+  border-style: solid;
+  background-image: linear-gradient(to right, var(--simple-white-6), var(--simple-tran));
+  border: none;
+}
+ 
 /* Hide dock's tab menu, and show them when hovered  */
 body.color-scheme-options-simplicity-topaz .workspace-tab-header-container {
 	z-index: 1;
@@ -13353,6 +13365,10 @@ span.cm-formatting.cm-formatting-header {
   opacity: 0.45;
 }
 
+body.image-border img{
+  border: 1px solid rgba(var(--mono-rgb-100),0.1);
+  filter:drop-shadow(0px 0px 3px rgba(var(--mono-rgb-100),0.2));
+}
 /* images : reduce displayed size of embedded files, zoom on hover */
 body:not(.obsidian-default-image) :is(.markdown-preview-view,.markdown-rendered) img:not([class*="emoji"]) {
   max-width: var(--image-max-width);
@@ -13800,6 +13816,7 @@ body.nowrap-outline .outline .tree-item-inner {
 [class='modal']{
  max-width: unset ;
  width: unset;
+ min-width: var(--dialog-width);
 }
 
 .modal.mod-settings {
@@ -17547,15 +17564,6 @@ div.workspace-leaf-content[data-type="style-settings"]  div.style-settings-headi
   border-top: 1px inset #ffffff24;
 }
 
-body.is-hidden-frameless .setting-item:is([data-id="simple-titlebar"],[data-id="custom-titlebar-bg"],[data-id="titlebar-blur-depth"],[data-id="titlebar-brightness"],[data-id="hide-titlebar-text"])
-{
-  display: none;
-}
-
-body:not(.is-hidden-frameless) .setting-item:is([data-id="hide-titlebar-close-btn"])
-{
-  display: none;
-}
 
 /*
 .theme-light div.setting-item {
@@ -17665,7 +17673,105 @@ div.workspace-leaf-content[data-type="style-settings"] div.style-settings-headin
 .style-settings-container .setting-item:is([data-id^="text-accent"]) .setting-item-control::before {
   background-color: var(--text-accent);
 }
+/**style setting logic  ******/
+body:not(.color-scheme-options-lillimon-topaz)  .setting-item[data-id="color-magic"],
+body:not(.background-settings-workplace-background-image)  .setting-item[data-id="background-settings-workplace-background-image"] ~ *,
+body:not(.background-image-settings-switch)  .setting-item[data-id="background-image-settings-switch"] ~ *
+{
+  display: none;
+}
 
+body:not([class*="background-settings-workplace-wave"]) .setting-item[data-id="background-waves-color"],
+body:not(.background-settings-workplace-theme-light-custom-option) .setting-item[data-id="background-settings-workplace-theme-light-custom"],
+body:not(.background-settings-workplace-theme-dark-custom-option) .setting-item[data-id="background-settings-workplace-theme-dark-custom"],
+body:not(.background-settings-workplace-random-dark) .setting-item[data-id="background-settings-workplace-random"],
+body:not(.background-settings-workplace-random-light) .setting-item[data-id="background-settings-workplace-random"]
+{
+  display: none;
+}
+
+body:not(.background-image-settings-markdown-page-random) .setting-item[data-id="background-image-settings-markdown-page-random-options"],
+body.non-notebook-bg .setting-item[data-id="notebook-liked-background-settings"] ,
+body.non-notebook-bg .setting-item[data-id="notebook-liked-background-settings"]  ~ *
+{
+  display: none;
+}
+ .setting-item[data-id="notebook-liked-background-settings"] + .style-settings-container .setting-item:not(:first-child)
+{
+  display: none;
+}
+body:is(.background-image-settings-markdown-page-grid-notebook-1,.background-image-settings-markdown-page-grid-notebook-2,
+.background-image-settings-markdown-page-dotted-notebook-1,.background-image-settings-markdown-page-dotted-notebook-2) .setting-item[data-id="bg-color-notebook"],
+body.background-image-settings-markdown-page-grid-notebook-1 .setting-item[data-id="grid-notebook-line-color-1"],
+body.background-image-settings-markdown-page-grid-notebook-2 .setting-item[data-id="grid-notebook-line-color-2"],
+body:is(.background-image-settings-markdown-page-dotted-notebook-1,.background-image-settings-markdown-page-dotted-notebook-2) .setting-item[data-id="dotted-notebook-dot-color"]
+{
+display: block!important;
+}
+body:not(.background-image-settings-command-palette-switch)  .setting-item[data-id="background-image-settings-command-palette-switch"] ~ *,
+body:not(.background-image-settings-command-palette-custom)  .setting-item[data-id="background-command-palette-theme-light-custom"],
+body:not(.background-image-settings-command-palette-custom)  .setting-item[data-id="background-command-palette-theme-dark-custom"]
+{
+  display: none;
+}
+body:not(.toggle-bg-panel-page)  .setting-item[data-id="toggle-bg-panel-page"] ~ *,
+body:not(.panel-page-bg-theme-light-custom) .setting-item[data-id="background-panel-page-theme-light-custom"],
+body:not(.panel-page-bg-theme-dark-custom) .setting-item[data-id="background-panel-page-theme-dark-custom"]
+{
+  display: none;
+}
+
+body:not(.fancy-hr-icon)   .setting-item[data-id="fancy-hr-folder-icon"],
+body:not(.fancy-hr-no-icon)   .setting-item[data-id="fancy-hr-folder-no-icon"],
+body:not(.fancy-hr-number)   .setting-item[data-id="fancy-hr-folder-with-number"]
+{
+  display: none;
+}
+
+body:not(.bt-default-unordered-list) .setting-item[data-id="options-bt-default"],
+body:not(.custom-unordered-list) .setting-item[data-id="options-for-custom"]
+{
+  display: none;
+}
+
+body:not(.custom-ordered-list) .setting-item[data-id^="list-ol-marker-"]
+{
+  display: none;
+}
+body.folder-style-change-options-colorful-default  .setting-item[data-id="folder-style-change-options-colorful-subfolder"]
+{
+  display: none;
+}
+
+body:not(.folder-colorful-custom) .setting-item[data-id="folder-colorful-custom-color"]
+{
+  display: none;
+}
+
+body:not(.loading-custom-text)  .setting-item[data-id="loading-custom-text-folder"],
+body:not(.loading-animation-custom)  .setting-item[data-id="loading-animation-custom-folder"]
+{
+  display: none;
+}
+
+body:not(.colorful-tag-bt) .setting-item[data-id="customised-colorful-tag"],
+body:not(.tag-pill-outlined) .setting-item[data-id="outlined-style"]
+{
+  display: none;
+}
+ 
+
+body.is-hidden-frameless .setting-item:is([data-id="simple-titlebar"],[data-id="custom-titlebar-bg"],[data-id="titlebar-blur-depth"],[data-id="titlebar-brightness"],[data-id="hide-titlebar-text"])
+{
+  display: none;
+}
+
+body:not(.is-hidden-frameless) .setting-item:is([data-id="hide-titlebar-close-btn"])
+{
+  display: none;
+}
+
+/********/
 /* ================================== */
 /* ==== advanced-tables-toolbar ===== */
 /* ================================== */
@@ -25018,6 +25124,15 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 .callout[data-callout="stickies"] { 
   box-shadow:none;
   border-left:0px;
+  overflow: unset;
+}
+.callout[data-callout="stickies"][data-callout-metadata*="left"]
+{
+  width: max(180px, 30%);
+}
+
+.callout[data-callout="stickies"][data-callout-metadata*="left"]>.callout-content { 
+  max-width: 100%;
 }
 .callout[data-callout="stickies"] >.callout-title { 
   display: none;
@@ -25128,6 +25243,14 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
   border: 1px;
   box-shadow: inset -10px -10px 10px #f0b7a4, inset 3px 3px 5px;
 }
+.callout[data-callout="stickies2"][data-callout-metadata*="right"]
+{
+  width: max(180px, 30%);
+}
+.callout[data-callout="stickies2"][data-callout-metadata*="right"] >.callout-content {
+  float:right;
+  max-width: 100%;
+}
 
 .callout[data-callout="stickies3"] { 
   background-color: transparent ;
@@ -25226,7 +25349,7 @@ div.callout[data-callout="stickies3"] >.callout-content ul {
   max-height: 195px;
 }
 
-.callout:is([data-callout-metadata='yellow']) {
+.callout:is([data-callout-metadata*='yellow']) .callout-content{
   background: #F7E999;
   -webkit-transform: rotate(2deg);
   -moz-transform: rotate(2deg);
@@ -25235,7 +25358,7 @@ div.callout[data-callout="stickies3"] >.callout-content ul {
   transform: rotate(2deg);
 }
 
-.callout:is([data-callout-metadata='blue']) .callout-content {
+.callout:is([data-callout-metadata*='blue']) .callout-content {
   background: #b9dcf4;
   -webkit-transform: rotate(-2deg);
   -moz-transform: rotate(-2deg);
@@ -25244,7 +25367,7 @@ div.callout[data-callout="stickies3"] >.callout-content ul {
   transform: rotate(-2deg);
 }
 
-.callout:is([data-callout-metadata='pink']) .callout-content {
+.callout:is([data-callout-metadata*='pink']) .callout-content {
   background: #FFBDA3;
   -webkit-transform: rotate(1deg);
   -moz-transform: rotate(1deg);
@@ -25253,7 +25376,7 @@ div.callout[data-callout="stickies3"] >.callout-content ul {
   transform: rotate(1deg);
 }
 
-.callout:is([data-callout-metadata='green']) .callout-content {
+.callout:is([data-callout-metadata*='green']) .callout-content {
   background: #CAF4B9;
   -webkit-transform: rotate(-1deg);
   -moz-transform: rotate(-1deg);
@@ -25483,11 +25606,20 @@ body:not(.remove-selectionbackground) .markdown-source-view.mod-cm6 .cm-editor .
   margin: 0;
   padding: 0 var(--size-4-2);
 }
-
+.workspace-tabs.mod-stacked  .view-header,
+.is-focused .workspace .mod-root .workspace-tabs.mod-stacked .workspace-leaf.mod-active .view-header
+{
+  background-color: var(--color-base-10);
+}
+.workspace-split.mod-root   .workspace-tabs.mod-stacked  .view-content
+{
+  backdrop-filter: blur(20px);
+}
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
   background-color: var(--background-primary);
   border-right: 1px solid var(--page-border-bottom);
   box-shadow: -1px 0 10px 0 var(--tab-stacked-shadow);
+  backdrop-filter: blur(6px);
 }
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header:first-child {
  border-left: 1px solid var(--page-border-bottom);
@@ -26858,7 +26990,7 @@ body.hide-titlebar-close-btn.is-hidden-frameless .titlebar-inner:hover  .titleba
 }
  /* ====web-browser==== */
 
- /* ====new styler==== */
+ /* ====new style==== */
 body.background-settings-workplace-background-image.workspace > .workspace-leaf, .workspace > .workspace-split {
   background-color: transparent;
 }
@@ -26895,8 +27027,8 @@ body.show-view-header .view-header{
 .workspace-split.mod-root  .workspace-tab-header.is-active.mod-active {
   border-color: var(--background-modifier-border);
   border-style: solid;
-  background-image: linear-gradient(to right, var(--background-secondary), var(--background-secondary));
-  border: none;
+  background-image: linear-gradient(to right, var(--background-secondary), transparent);
+  border: none; 
 }
 body.theme-dark:not(.background-settings-workplace-background-image) .workspace-split.mod-horizontal:is(.mod-left-split,.mod-right-split) .workspace-tabs .workspace-leaf-resize-handle {
   --divider-color: var(--background-primary);
@@ -26904,5 +27036,8 @@ body.theme-dark:not(.background-settings-workplace-background-image) .workspace-
 .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
   background-color:transparent;
 }
-
- /* ====r==== */
+/*** emoji toolbar**/
+.callout  img.emoji {
+  display: inline-block!important;
+}
+/**emoji toolbar*****/
