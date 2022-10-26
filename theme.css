@@ -8926,8 +8926,10 @@ body.reduce-bottom-padding:not(.plugin-cm-typewriter-scroll) .cm-s-obsidian .cm-
 	object-fit:cover;
 	height:100%
 }
-.img-grid .img-grid-ratio .markdown-preview-section>.el-embed-image>p>.internal-embed img,.img-grid.img-grid-ratio .markdown-preview-section>.el-embed-image>p>.internal-embed img{
-	object-fit:contain;
+
+.img-grid-ratio .markdown-preview-section>.el-embed-image>p>.internal-embed img
+,.img-grid.img-grid-ratio .markdown-preview-section>.el-embed-image>p>.internal-embed img{
+  object-fit:contain;
 	height:100%;
 	align-self:center
 }
@@ -18321,7 +18323,12 @@ padding: 0;
 }
 .database-plugin__cell_size_normal .data-input > *
 {
-  height:auto;
+  align-items: center;
+}
+.database-plugin__cell_size_normal .data-input > div
+{
+  display: flex;;
+  align-items: center;
 }
 
 .data-input.database-plugin__calendar {
@@ -18338,7 +18345,8 @@ div.react-datepicker-wrapper {
 .database-plugin__td :is(.cell-padding, .data-input):empty::before {
 	content: "✏️";
 	text-align: center;
-	color: hsla(var(--interactive-accent-hsl),0.8)
+	color: hsla(var(--interactive-accent-hsl),0.8);
+ pointer-events: none;
 }
 .database-plugin__markdown-preview-view {
   padding: 0;
@@ -19399,12 +19407,18 @@ body.is-mobile.background-settings-workplace-background-image .workspace-split.m
     min-height: 30px;
     background-color:  hsla(var(--color-accent-hsl), 0.2);
     width: 100%;
+    pointer-events: none;
       }
   
   .projects-container [role='row']  [role='gridcell'].selected
       {
         box-shadow: 0 0 0 1px var(--interactive-accent);
       }
+
+ .projects-container div.rowHeader
+{
+  backdrop-filter:blur(10px);
+}
 /*=======================
 ===  dialogue by cuman====
 ========================*/
