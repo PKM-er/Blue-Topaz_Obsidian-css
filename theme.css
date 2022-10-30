@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v1.0。uid [20221022] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.0, uid [20221022] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.0.3。uid [20221030] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.0.3, uid [20221030] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -356,16 +356,19 @@ settings:
         label: Yellow and Orange
         value: background-image-settings-markdown-page-random-yellow-and-orange
   - 
+    id: background-notebook-liked-switch
+    title: Toggle Notebook-liked Background
+    title.zh: 切换类笔记背景
+    type: class-toggle
+    default: false
+  - 
     id: notebook-liked-markdown-page-options
     title: Notebook-liked Background
     title.zh: 类笔记背景
     type: class-select
     allowEmpty: false
-    default: non-notebook-bg
+    default: notebook-liked-markdown-page-grid-notebook-1
     options:
-      - 
-        label: Non
-        value: non-notebook-bg
       - 
         label: Grid notebook 1 (@CZ-15/YZ-10)
         value: background-image-settings-markdown-page-grid-notebook-1
@@ -384,6 +387,12 @@ settings:
       - 
         label: Stripe notebook 2
         value: background-image-settings-markdown-page-stripe-notebook-2
+  - 
+    id: toggle-fixed-pattern
+    title: Toggle Fixed pattern
+    title.zh: 固定背景
+    type: class-toggle
+    default: false
   - 
     id: notebook-liked-background-settings
     title: 1.2.2.1 Notebook-liked background options
@@ -4614,10 +4623,11 @@ body.all-dark .print.theme-light,
   --table-background-color: #2f2f2f32;
   --table-background-color-odd: #00000033;
   --table-border-color: #4a4a4a;
-  --table-thead-background-color: #2e507863;
+  --table-thead-background-color: var(--theme-color-translucent-01);
   --table-hover-raw-color: #08569a21;
   --table-hover-color: #1f65a221;
   --table-hover-thead-color: #298c54c7;
+  --table-header-color: var(--text-normal);
 
   /*calendar*/
   --calendar-week-color: #a2df94;
@@ -4972,10 +4982,11 @@ body.all-dark .print.theme-light,
   --table-background-color: #f1f1f176;
   --table-background-color-odd: #ffffff70;
   --table-border-color: #7d7d7d;
-  --table-thead-background-color: #dee6efd8;
+  --table-thead-background-color: var(--theme-color-translucent-01);
   --table-hover-raw-color: #85bfee2f;
   --table-hover-color: #5dacec34;
   --table-hover-thead-color: #ddefff;
+  --table-header-color: var(--text-normal);
 
   /*calendar*/
   --calendar-week-color: #48b432;
@@ -8663,22 +8674,20 @@ body:not(.is-mobile).color-scheme-options-simplicity-topaz .mod-root .workspace-
   background-color: transparent;
 }
 
-body.color-scheme-options-simplicity-topaz.background-image-settings-switch.background-image-settings-markdown-page-transparent .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header
-{
+body.color-scheme-options-simplicity-topaz.background-image-settings-switch.background-image-settings-markdown-page-transparent .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
   background-color:var(--simple-white-5);
 }
 body.color-scheme-options-simplicity-topaz .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active {
-
   box-shadow: var(--window-shadow-hover);
- }
- body.color-scheme-options-simplicity-topaz .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
-   border-radius: 15px;
-   box-shadow: none;
-  }
+}
+body.color-scheme-options-simplicity-topaz .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
+  border-radius: 15px;
+  box-shadow: none;
+}
  
-  body.color-scheme-options-simplicity-topaz .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner {
-   border-radius: 15px;
-  }
+body.color-scheme-options-simplicity-topaz .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner {
+  border-radius: 15px;
+}
   
 /*
 --------------------------- 
@@ -17731,10 +17740,19 @@ div.workspace-leaf-content[data-type="style-settings"] div.style-settings-headin
   background-color: var(--text-accent);
 }
 /**style setting logic  ******/
-body:not(.color-scheme-options-lillimon-topaz)  .setting-item[data-id="color-magic"],
-body:not(.background-settings-workplace-background-image)  .setting-item[data-id="background-settings-workplace-background-image"] ~ *,
-body:not(.background-image-settings-switch)  .setting-item[data-id="background-image-settings-switch"] ~ *
-{
+body:not(.color-scheme-options-lillimon-topaz) .setting-item[data-id="color-magic"],
+body:not(.background-settings-workplace-background-image)  .setting-item[data-id="background-settings-workplace-background-image"] ~ * {
+  display: none;
+}
+
+body:not(.background-image-settings-switch) .setting-item[data-id="toggle-nonoverlapping-bg"],
+body:not(.background-image-settings-switch) .setting-item[data-id="background-image-settings-markdown-page-options"],
+body:not(.background-image-settings-switch) .setting-item[data-id="background-image-settings-markdown-page-random"],
+body:not(.background-image-settings-switch) .setting-item[data-id="background-image-settings-markdown-page-random-options"] {
+  display: none;
+}
+
+body:not(.background-notebook-liked-switch)  .setting-item[data-id="background-notebook-liked-switch"] ~ * {
   display: none;
 }
 
@@ -17742,89 +17760,76 @@ body:not([class*="background-settings-workplace-wave"]) .setting-item[data-id="b
 body:not(.background-settings-workplace-theme-light-custom-option) .setting-item[data-id="background-settings-workplace-theme-light-custom"],
 body:not(.background-settings-workplace-theme-dark-custom-option) .setting-item[data-id="background-settings-workplace-theme-dark-custom"],
 body:not(.background-settings-workplace-random-dark) .setting-item[data-id="background-settings-workplace-random"],
-body:not(.background-settings-workplace-random-light) .setting-item[data-id="background-settings-workplace-random"]
-{
+body:not(.background-settings-workplace-random-light) .setting-item[data-id="background-settings-workplace-random"] {
   display: none;
 }
 
-body:not(.background-image-settings-markdown-page-random) .setting-item[data-id="background-image-settings-markdown-page-random-options"],
-body.non-notebook-bg .setting-item[data-id="notebook-liked-background-settings"] ,
-body.non-notebook-bg .setting-item[data-id="notebook-liked-background-settings"]  ~ *
-{
+.setting-item:is([data-id="background-image-settings-switch"],[data-id="background-notebook-liked-switch"],[data-id="background-settings-workplace-background-image"],[data-id="background-image-settings-command-palette-switch"]) .setting-item-name {
+  font-weight: bold;
+}
+
+body:not(.background-image-settings-markdown-page-random) .setting-item[data-id="background-image-settings-markdown-page-random-options"] {
   display: none;
 }
- .setting-item[data-id="notebook-liked-background-settings"] + .style-settings-container .setting-item:not(:first-child)
-{
+.setting-item[data-id="notebook-liked-background-settings"] + .style-settings-container .setting-item:not(:first-child) {
   display: none;
 }
 body:is(.background-image-settings-markdown-page-grid-notebook-1,.background-image-settings-markdown-page-grid-notebook-2,
 .background-image-settings-markdown-page-dotted-notebook-1,.background-image-settings-markdown-page-dotted-notebook-2) .setting-item[data-id="bg-color-notebook"],
 body.background-image-settings-markdown-page-grid-notebook-1 .setting-item[data-id="grid-notebook-line-color-1"],
 body.background-image-settings-markdown-page-grid-notebook-2 .setting-item[data-id="grid-notebook-line-color-2"],
-body:is(.background-image-settings-markdown-page-dotted-notebook-1,.background-image-settings-markdown-page-dotted-notebook-2) .setting-item[data-id="dotted-notebook-dot-color"]
-{
-display: block!important;
+body:is(.background-image-settings-markdown-page-dotted-notebook-1,.background-image-settings-markdown-page-dotted-notebook-2) .setting-item[data-id="dotted-notebook-dot-color"] {
+  display: block !important;
 }
 body:not(.background-image-settings-command-palette-switch)  .setting-item[data-id="background-image-settings-command-palette-switch"] ~ *,
 body:not(.background-image-settings-command-palette-custom)  .setting-item[data-id="background-command-palette-theme-light-custom"],
-body:not(.background-image-settings-command-palette-custom)  .setting-item[data-id="background-command-palette-theme-dark-custom"]
-{
+body:not(.background-image-settings-command-palette-custom)  .setting-item[data-id="background-command-palette-theme-dark-custom"] {
   display: none;
 }
 body:not(.toggle-bg-panel-page)  .setting-item[data-id="toggle-bg-panel-page"] ~ *,
 body:not(.panel-page-bg-theme-light-custom) .setting-item[data-id="background-panel-page-theme-light-custom"],
-body:not(.panel-page-bg-theme-dark-custom) .setting-item[data-id="background-panel-page-theme-dark-custom"]
-{
+body:not(.panel-page-bg-theme-dark-custom) .setting-item[data-id="background-panel-page-theme-dark-custom"] {
   display: none;
 }
 
 body:not(.fancy-hr-icon)   .setting-item[data-id="fancy-hr-folder-icon"],
 body:not(.fancy-hr-no-icon)   .setting-item[data-id="fancy-hr-folder-no-icon"],
-body:not(.fancy-hr-number)   .setting-item[data-id="fancy-hr-folder-with-number"]
-{
+body:not(.fancy-hr-number)   .setting-item[data-id="fancy-hr-folder-with-number"] {
   display: none;
 }
 
 body:not(.bt-default-unordered-list) .setting-item[data-id="options-bt-default"],
-body:not(.custom-unordered-list) .setting-item[data-id="options-for-custom"]
-{
+body:not(.custom-unordered-list) .setting-item[data-id="options-for-custom"] {
   display: none;
 }
 
-body:not(.custom-ordered-list) .setting-item[data-id^="list-ol-marker-"]
-{
+body:not(.custom-ordered-list) .setting-item[data-id^="list-ol-marker-"] {
   display: none;
 }
-body.folder-style-change-options-colorful-default  .setting-item[data-id="folder-style-change-options-colorful-subfolder"]
-{
+body.folder-style-change-options-colorful-default  .setting-item[data-id="folder-style-change-options-colorful-subfolder"] {
   display: none;
 }
 
-body:not(.folder-colorful-custom) .setting-item[data-id="folder-colorful-custom-color"]
-{
+body:not(.folder-colorful-custom) .setting-item[data-id="folder-colorful-custom-color"] {
   display: none;
 }
 
 body:not(.loading-custom-text)  .setting-item[data-id="loading-custom-text-folder"],
-body:not(.loading-animation-custom)  .setting-item[data-id="loading-animation-custom-folder"]
-{
+body:not(.loading-animation-custom)  .setting-item[data-id="loading-animation-custom-folder"] {
   display: none;
 }
 
 body:not(.colorful-tag-bt) .setting-item[data-id="customised-colorful-tag"],
-body:not(.tag-pill-outlined) .setting-item[data-id="outlined-style"]
-{
+body:not(.tag-pill-outlined) .setting-item[data-id="outlined-style"] {
   display: none;
 }
  
 
-body.is-hidden-frameless .setting-item:is([data-id="simple-titlebar"],[data-id="custom-titlebar-bg"],[data-id="titlebar-blur-depth"],[data-id="titlebar-brightness"],[data-id="hide-titlebar-text"])
-{
+body.is-hidden-frameless .setting-item:is([data-id="simple-titlebar"],[data-id="custom-titlebar-bg"],[data-id="titlebar-blur-depth"],[data-id="titlebar-brightness"],[data-id="hide-titlebar-text"]) {
   display: none;
 }
 
-body:not(.is-hidden-frameless) .setting-item:is([data-id="hide-titlebar-close-btn"])
-{
+body:not(.is-hidden-frameless) .setting-item:is([data-id="hide-titlebar-close-btn"]) {
   display: none;
 }
 
@@ -20287,28 +20292,32 @@ body.toggle-nonoverlapping-bg .workspace-split.mod-root .view-content {
   background-size: 100% 100%;
 }
 
-body.background-image-settings-switch.background-image-settings-markdown-page-grid-notebook-1 .markdown-reading-view,
-body.background-image-settings-switch.background-image-settings-markdown-page-grid-notebook-1 .markdown-source-view.mod-cm6 .cm-scroller {
+body.background-notebook-liked-switch.background-image-settings-markdown-page-grid-notebook-1 .markdown-reading-view,
+body.background-notebook-liked-switch.background-image-settings-markdown-page-grid-notebook-1 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--bg-color-notebook);
   background-image: linear-gradient(90deg, var(--grid-notebook-line-color-1) 3%, transparent 0), linear-gradient(var(--grid-notebook-line-color-1) 3%, transparent 0);
   background-size: 20px 20px;
+}
+
+body:not(.toggle-fixed-pattern).background-notebook-liked-switch .markdown-reading-view,
+body:not(.toggle-fixed-pattern).background-notebook-liked-switch .markdown-source-view.mod-cm6 .cm-scroller {
   background-attachment: local !important;
 }
 
-body.background-image-settings-switch:is(.background-image-settings-markdown-page-grid-notebook-1,.background-image-settings-markdown-page-grid-notebook-2,.background-image-settings-markdown-page-dotted-notebook-1,.background-image-settings-markdown-page-dotted-notebook-2) .markdown-source-view.mod-cm6 .cm-embed-block {
+body.background-notebook-liked-switch .markdown-source-view.mod-cm6 .cm-embed-block {
   background: inherit;
 }
 
-body.background-image-settings-switch.background-image-settings-markdown-page-dotted-notebook-1 .markdown-reading-view,
-body.background-image-settings-switch.background-image-settings-markdown-page-dotted-notebook-1 .markdown-source-view.mod-cm6 .cm-scroller {
+body.background-notebook-liked-switch.background-image-settings-markdown-page-dotted-notebook-1 .markdown-reading-view,
+body.background-notebook-liked-switch.background-image-settings-markdown-page-dotted-notebook-1 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--bg-color-notebook);
   background-image: radial-gradient(var(--dotted-notebook-dot-color) 10%, transparent 0);
   background-size: 22px 22px;
   background-position: 8px 8px;
 }
 
-body.background-image-settings-switch.background-image-settings-markdown-page-dotted-notebook-2 .markdown-reading-view,
-body.background-image-settings-switch.background-image-settings-markdown-page-dotted-notebook-2 .markdown-source-view.mod-cm6 .cm-scroller {
+body.background-notebook-liked-switch.background-image-settings-markdown-page-dotted-notebook-2 .markdown-reading-view,
+body.background-notebook-liked-switch.background-image-settings-markdown-page-dotted-notebook-2 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--bg-color-notebook);
   background-image: radial-gradient(var(--dotted-notebook-dot-color) 10%, transparent 0),
   radial-gradient(var(--dotted-notebook-dot-color) 10%, transparent 0);
@@ -20317,8 +20326,8 @@ body.background-image-settings-switch.background-image-settings-markdown-page-do
 }
 
 /*https://www.jianshu.com/p/2b713844cfe9*/
-body.background-image-settings-switch.background-image-settings-markdown-page-grid-notebook-2 .markdown-reading-view,
-body.background-image-settings-switch.background-image-settings-markdown-page-grid-notebook-2 .markdown-source-view.mod-cm6 .cm-scroller {
+body.background-notebook-liked-switch.background-image-settings-markdown-page-grid-notebook-2 .markdown-reading-view,
+body.background-notebook-liked-switch.background-image-settings-markdown-page-grid-notebook-2 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--bg-color-notebook);
   background-image:
      linear-gradient(var(--grid-notebook-line-color-2) 1px, transparent 0),
@@ -20329,26 +20338,26 @@ body.background-image-settings-switch.background-image-settings-markdown-page-gr
      transparent 0);
   background-size: 75px 75px, 75px 75px, 15px 15px, 15px 15px;
 }
-body.background-image-settings-switch.background-image-settings-markdown-page-stripe-notebook-1 .markdown-reading-view,
-body.background-image-settings-switch.background-image-settings-markdown-page-stripe-notebook-1 .markdown-source-view.mod-cm6 .cm-scroller {
+body.background-notebook-liked-switch.background-image-settings-markdown-page-stripe-notebook-1 .markdown-reading-view,
+body.background-notebook-liked-switch.background-image-settings-markdown-page-stripe-notebook-1 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image: repeating-linear-gradient(135deg,
   hsla(0,0%,100%,.03), hsla(0,0%,100%,.03) 13px, transparent 0, transparent 30px);
 }
-body.background-image-settings-switch.background-image-settings-markdown-page-stripe-notebook-1.theme-light .markdown-reading-view,
-body.background-image-settings-switch.background-image-settings-markdown-page-stripe-notebook-1.theme-light .markdown-source-view.mod-cm6 .cm-scroller {
+body.background-notebook-liked-switch.background-image-settings-markdown-page-stripe-notebook-1.theme-light .markdown-reading-view,
+body.background-notebook-liked-switch.background-image-settings-markdown-page-stripe-notebook-1.theme-light .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image: repeating-linear-gradient(135deg,
   hsla(0,0%,100%,.3), hsla(0,0%,100%,.3) 13px, transparent 0, transparent 30px);
 }
-body.background-image-settings-switch.background-image-settings-markdown-page-stripe-notebook-2 .markdown-reading-view,
-body.background-image-settings-switch.background-image-settings-markdown-page-stripe-notebook-2 .markdown-source-view.mod-cm6 .cm-scroller {
+body.background-notebook-liked-switch.background-image-settings-markdown-page-stripe-notebook-2 .markdown-reading-view,
+body.background-notebook-liked-switch.background-image-settings-markdown-page-stripe-notebook-2 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image:repeating-linear-gradient(45deg,
   hsla(0,0%,100%,.025), hsla(0,0%,100%,.025) 20px, transparent 0, transparent 60px), repeating-linear-gradient(-45deg, hsla(0,0%,100%,.025), hsla(0,0%,100%,.025) 20px, transparent 0, transparent 60px);
 }
-body.background-image-settings-switch.background-image-settings-markdown-page-stripe-notebook-2.theme-light .markdown-reading-view,
-body.background-image-settings-switch.background-image-settings-markdown-page-stripe-notebook-2.theme-light .markdown-source-view.mod-cm6 .cm-scroller {
+body.background-notebook-liked-switch.background-image-settings-markdown-page-stripe-notebook-2.theme-light .markdown-reading-view,
+body.background-notebook-liked-switch.background-image-settings-markdown-page-stripe-notebook-2.theme-light .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image:repeating-linear-gradient(45deg,
   hsla(0,0%,100%,.3), hsla(0,0%,100%,.3) 20px, transparent 0, transparent 60px), repeating-linear-gradient(-45deg, hsla(0,0%,100%,.3), hsla(0,0%,100%,.3) 20px, transparent 0, transparent 60px);
