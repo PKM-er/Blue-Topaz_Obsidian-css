@@ -371,22 +371,22 @@ settings:
     options:
       - 
         label: Grid notebook 1 (@CZ-15/YZ-10)
-        value: background-image-settings-markdown-page-grid-notebook-1
+        value: notebook-liked-markdown-page-grid-notebook-1
       - 
         label: Grid notebook 2
-        value: background-image-settings-markdown-page-grid-notebook-2
+        value: notebook-liked-markdown-page-grid-notebook-2
       - 
         label: Dotted notebook 1
-        value: background-image-settings-markdown-page-dotted-notebook-1
+        value: notebook-liked-markdown-page-dotted-notebook-1
       - 
         label: Dotted notebook 2
-        value: background-image-settings-markdown-page-dotted-notebook-2
+        value: notebook-liked-markdown-page-dotted-notebook-2
       - 
         label: Stripe notebook 1
-        value: background-image-settings-markdown-page-stripe-notebook-1
+        value: notebook-liked-markdown-page-stripe-notebook-1
       - 
         label: Stripe notebook 2
-        value: background-image-settings-markdown-page-stripe-notebook-2
+        value: notebook-liked-markdown-page-stripe-notebook-2
   - 
     id: toggle-fixed-pattern
     title: Toggle Fixed pattern
@@ -17771,11 +17771,11 @@ body:not(.background-image-settings-markdown-page-random) .setting-item[data-id=
 .setting-item[data-id="notebook-liked-background-settings"] + .style-settings-container .setting-item:not(:first-child) {
   display: none;
 }
-body:is(.background-image-settings-markdown-page-grid-notebook-1,.background-image-settings-markdown-page-grid-notebook-2,
-.background-image-settings-markdown-page-dotted-notebook-1,.background-image-settings-markdown-page-dotted-notebook-2) .setting-item[data-id="bg-color-notebook"],
-body.background-image-settings-markdown-page-grid-notebook-1 .setting-item[data-id="grid-notebook-line-color-1"],
-body.background-image-settings-markdown-page-grid-notebook-2 .setting-item[data-id="grid-notebook-line-color-2"],
-body:is(.background-image-settings-markdown-page-dotted-notebook-1,.background-image-settings-markdown-page-dotted-notebook-2) .setting-item[data-id="dotted-notebook-dot-color"] {
+body:is(.notebook-liked-markdown-page-grid-notebook-1,.notebook-liked-markdown-page-grid-notebook-2,
+.notebook-liked-markdown-page-dotted-notebook-1,.notebook-liked-markdown-page-dotted-notebook-2) .setting-item[data-id="bg-color-notebook"],
+body.notebook-liked-markdown-page-grid-notebook-1 .setting-item[data-id="grid-notebook-line-color-1"],
+body.notebook-liked-markdown-page-grid-notebook-2 .setting-item[data-id="grid-notebook-line-color-2"],
+body:is(.notebook-liked-markdown-page-dotted-notebook-1,.notebook-liked-markdown-page-dotted-notebook-2) .setting-item[data-id="dotted-notebook-dot-color"] {
   display: block !important;
 }
 body:not(.background-image-settings-command-palette-switch)  .setting-item[data-id="background-image-settings-command-palette-switch"] ~ *,
@@ -20287,14 +20287,14 @@ body.toggle-nonoverlapping-bg .workspace-split.mod-root .view-content {
   background-size: 100% 100%;
 }
 
-body.background-notebook-liked-switch.background-image-settings-markdown-page-grid-notebook-1 .markdown-reading-view,
-body.background-notebook-liked-switch.background-image-settings-markdown-page-grid-notebook-1 .markdown-source-view.mod-cm6 .cm-scroller {
+body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-1 .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-1 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--bg-color-notebook);
   background-image: linear-gradient(90deg, var(--grid-notebook-line-color-1) 3%, transparent 0), linear-gradient(var(--grid-notebook-line-color-1) 3%, transparent 0);
   background-size: 20px 20px;
 }
 
-body:not(.toggle-fixed-pattern).background-notebook-liked-switch .markdown-reading-view,
+body:not(.toggle-fixed-pattern).background-notebook-liked-switch .markdown-reading-view .markdown-rendered,
 body:not(.toggle-fixed-pattern).background-notebook-liked-switch .markdown-source-view.mod-cm6 .cm-scroller {
   background-attachment: local !important;
 }
@@ -20303,16 +20303,16 @@ body.background-notebook-liked-switch .markdown-source-view.mod-cm6 .cm-embed-bl
   background: inherit;
 }
 
-body.background-notebook-liked-switch.background-image-settings-markdown-page-dotted-notebook-1 .markdown-reading-view,
-body.background-notebook-liked-switch.background-image-settings-markdown-page-dotted-notebook-1 .markdown-source-view.mod-cm6 .cm-scroller {
+body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-1 .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-1 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--bg-color-notebook);
   background-image: radial-gradient(var(--dotted-notebook-dot-color) 10%, transparent 0);
   background-size: 22px 22px;
   background-position: 8px 8px;
 }
 
-body.background-notebook-liked-switch.background-image-settings-markdown-page-dotted-notebook-2 .markdown-reading-view,
-body.background-notebook-liked-switch.background-image-settings-markdown-page-dotted-notebook-2 .markdown-source-view.mod-cm6 .cm-scroller {
+body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-2 .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-2 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--bg-color-notebook);
   background-image: radial-gradient(var(--dotted-notebook-dot-color) 10%, transparent 0),
   radial-gradient(var(--dotted-notebook-dot-color) 10%, transparent 0);
@@ -20321,8 +20321,8 @@ body.background-notebook-liked-switch.background-image-settings-markdown-page-do
 }
 
 /*https://www.jianshu.com/p/2b713844cfe9*/
-body.background-notebook-liked-switch.background-image-settings-markdown-page-grid-notebook-2 .markdown-reading-view,
-body.background-notebook-liked-switch.background-image-settings-markdown-page-grid-notebook-2 .markdown-source-view.mod-cm6 .cm-scroller {
+body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-2 .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-2 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--bg-color-notebook);
   background-image:
      linear-gradient(var(--grid-notebook-line-color-2) 1px, transparent 0),
@@ -20333,26 +20333,26 @@ body.background-notebook-liked-switch.background-image-settings-markdown-page-gr
      transparent 0);
   background-size: 75px 75px, 75px 75px, 15px 15px, 15px 15px;
 }
-body.background-notebook-liked-switch.background-image-settings-markdown-page-stripe-notebook-1 .markdown-reading-view,
-body.background-notebook-liked-switch.background-image-settings-markdown-page-stripe-notebook-1 .markdown-source-view.mod-cm6 .cm-scroller {
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1 .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image: repeating-linear-gradient(135deg,
   hsla(0,0%,100%,.03), hsla(0,0%,100%,.03) 13px, transparent 0, transparent 30px);
 }
-body.background-notebook-liked-switch.background-image-settings-markdown-page-stripe-notebook-1.theme-light .markdown-reading-view,
-body.background-notebook-liked-switch.background-image-settings-markdown-page-stripe-notebook-1.theme-light .markdown-source-view.mod-cm6 .cm-scroller {
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1.theme-light .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1.theme-light .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image: repeating-linear-gradient(135deg,
   hsla(0,0%,100%,.3), hsla(0,0%,100%,.3) 13px, transparent 0, transparent 30px);
 }
-body.background-notebook-liked-switch.background-image-settings-markdown-page-stripe-notebook-2 .markdown-reading-view,
-body.background-notebook-liked-switch.background-image-settings-markdown-page-stripe-notebook-2 .markdown-source-view.mod-cm6 .cm-scroller {
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2 .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image:repeating-linear-gradient(45deg,
   hsla(0,0%,100%,.025), hsla(0,0%,100%,.025) 20px, transparent 0, transparent 60px), repeating-linear-gradient(-45deg, hsla(0,0%,100%,.025), hsla(0,0%,100%,.025) 20px, transparent 0, transparent 60px);
 }
-body.background-notebook-liked-switch.background-image-settings-markdown-page-stripe-notebook-2.theme-light .markdown-reading-view,
-body.background-notebook-liked-switch.background-image-settings-markdown-page-stripe-notebook-2.theme-light .markdown-source-view.mod-cm6 .cm-scroller {
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2.theme-light .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2.theme-light .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image:repeating-linear-gradient(45deg,
   hsla(0,0%,100%,.3), hsla(0,0%,100%,.3) 20px, transparent 0, transparent 60px), repeating-linear-gradient(-45deg, hsla(0,0%,100%,.3), hsla(0,0%,100%,.3) 20px, transparent 0, transparent 60px);
