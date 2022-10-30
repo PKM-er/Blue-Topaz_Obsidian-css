@@ -16693,7 +16693,7 @@ body.style-options-for-admonition-plugin .admonition-col2 {
   
 body.style-options-for-admonition-plugin .admonition-col2 .admonition	{
   overflow: visible;
-  margin:0;
+  margin: 0;
 }
 
 body.style-options-for-admonition-plugin .admonition-col2>.admonition-content-holder> .admonition-content {	
@@ -16904,8 +16904,7 @@ body.style-options-for-admonition-plugin .admonition-flex {
   box-shadow: none;
   border-left: none;
 }
-body.admonition-bg-color-same.style-options-for-admonition-plugin .admonition-flex
-{
+body.admonition-bg-color-same.style-options-for-admonition-plugin .admonition-flex {
   margin: 1em 0;
 }
 .is-live-preview .callout-content.admonition-content >p {
@@ -17572,7 +17571,7 @@ div.style-settings-heading[data-level="0"].is-collapsed {
   box-shadow: 0 3px 5px var( --background-modifier-box-shadow);
 }
 
- div.style-settings-heading[data-level="0"].is-collapsed {
+div.style-settings-heading[data-level="0"].is-collapsed {
   background-color: var(--background-primary-alt);
 }
 
@@ -17668,7 +17667,6 @@ div.workspace-leaf-content[data-type="style-settings"] div.style-settings-headin
   color: unset;
   content: "❤️";
 }
-
 
 .setting-item.style-settings-heading[data-id="topaz-github"] {
   cursor: default;
@@ -17789,9 +17787,9 @@ body:not(.panel-page-bg-theme-dark-custom) .setting-item[data-id="background-pan
   display: none;
 }
 
-body:not(.fancy-hr-icon)   .setting-item[data-id="fancy-hr-folder-icon"],
-body:not(.fancy-hr-no-icon)   .setting-item[data-id="fancy-hr-folder-no-icon"],
-body:not(.fancy-hr-number)   .setting-item[data-id="fancy-hr-folder-with-number"] {
+body:not(.fancy-hr-icon) .setting-item[data-id="fancy-hr-folder-icon"],
+body:not(.fancy-hr-no-icon) .setting-item[data-id="fancy-hr-folder-no-icon"],
+body:not(.fancy-hr-number) .setting-item[data-id="fancy-hr-folder-with-number"] {
   display: none;
 }
 
@@ -22585,7 +22583,7 @@ body.background-settings-workplace-background-image.theme-dark .modal-container 
 }
 
 body.background-settings-workplace-background-image.background-settings-workplace-theme-light-blue-mountain.theme-light {
-  --blue-mountain: url('https://images.unsplash.com/photo-1486520299386-6d106b22014b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80')
+  --blue-mountain: url('https://images.unsplash.com/photo-1486520299386-6d106b22014b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80');
   --theme-background: var(--blue-mountain);
 }
 
