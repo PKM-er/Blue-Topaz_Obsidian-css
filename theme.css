@@ -280,7 +280,7 @@ settings:
   - 
     id: background-image-settings-switch
     title: Toggle Background Images
-    title.zh: 切换笔记背景
+    title.zh: 开启笔记背景
     type: class-toggle
     default: false
   - 
@@ -358,7 +358,7 @@ settings:
   - 
     id: background-notebook-liked-switch
     title: Toggle Notebook-liked Background
-    title.zh: 切换类笔记背景
+    title.zh: 开启类笔记背景
     type: class-toggle
     default: false
   - 
@@ -1487,19 +1487,19 @@ settings:
   -
     id: h1-toggle-underline
     title: Toggle h1 Underline
-    title.zh: 切换h1下划线
+    title.zh: 开启h1下划线
     type: class-toggle
     default: false
   -
     id: h1-toggle-short-underline
     title: Toggle H1 Underline (Shorter)
-    title.zh: 切换H1下划线 （短线）
+    title.zh: 开启H1下划线 （短线）
     type: class-toggle
     default: false
   -
     id: header-1-background
     title: Toggle h1 Background
-    title.zh: 切换h1背景颜色
+    title.zh: 开启h1背景颜色
     type: class-toggle
     default: false
   - 
@@ -1544,19 +1544,19 @@ settings:
   -
     id: h2-toggle-underline
     title: toggle H2 underline
-    title.zh: 切换H2下划线
+    title.zh: 开启H2下划线
     type: class-toggle
     default: false
   -
     id: h2-toggle-short-underline
     title: Toggle H2 Underline (Shorter)
-    title.zh: 切换H2下划线 （短线）
+    title.zh: 开启H2下划线 （短线）
     type: class-toggle
     default: false
   -
     id: header-2-background
     title: Toggle h2 Background
-    title.zh: 切换h2背景颜色
+    title.zh: 开启h2背景颜色
     type: class-toggle
     default: false
   - 
@@ -1601,19 +1601,19 @@ settings:
   -
     id: h3-toggle-underline
     title: toggle H3 underline
-    title.zh: 切换H3下划线
+    title.zh: 开启H3下划线
     type: class-toggle
     default: false
   -
     id: h3-toggle-short-underline
     title: Toggle H3 Underline (Shorter)
-    title.zh: 切换H3下划线 （短线）
+    title.zh: 开启H3下划线 （短线）
     type: class-toggle
     default: false
   -
     id: header-3-background
     title: Toggle h3 Background
-    title.zh: 切换h3背景颜色
+    title.zh: 开启h3背景颜色
     type: class-toggle
     default: false
   - 
@@ -1658,19 +1658,19 @@ settings:
   -
     id: h4-toggle-underline
     title: toggle H4 underline
-    title.zh: 切换H4下划线
+    title.zh: 开启H4下划线
     type: class-toggle
     default: false
   -
     id: h4-toggle-short-underline
     title: Toggle H4 Underline (Shorter)
-    title.zh: 切换H4下划线 （短线）
+    title.zh: 开启H4下划线 （短线）
     type: class-toggle
     default: false
   -
     id: header-4-background
     title: Toggle h4 Background
-    title.zh: 切换h4背景颜色
+    title.zh: 开启h4背景颜色
     type: class-toggle
     default: false
   - 
@@ -1715,19 +1715,19 @@ settings:
   -
     id: h5-toggle-underline
     title: toggle H5 underline
-    title.zh: 切换H5下划线
+    title.zh: 开启H5下划线
     type: class-toggle
     default: false
   -
     id: h5-toggle-short-underline
     title: Toggle H5 Underline (Shorter)
-    title.zh: 切换H5下划线 （短线）
+    title.zh: 开启H5下划线 （短线）
     type: class-toggle
     default: false
   -
     id: header-5-background
     title: Toggle h5 Background
-    title.zh: 切换h5背景颜色
+    title.zh: 开启h5背景颜色
     type: class-toggle
     default: false
   - 
@@ -1772,19 +1772,19 @@ settings:
   -
     id: h6-toggle-underline
     title: Toggle H6 Underline
-    title.zh: 切换H6下划线
+    title.zh: 开启H6下划线
     type: class-toggle
     default: false
   -
     id: h6-toggle-short-underline
     title: Toggle H6 Underline (Shorter)
-    title.zh: 切换H6下划线 （短线）
+    title.zh: 开启H6下划线 （短线）
     type: class-toggle
     default: false
   -
     id: header-6-background
     title: Toggle h6 Background
-    title.zh: 切换h6背景颜色
+    title.zh: 开启h6背景颜色
     type: class-toggle
     default: false
   - 
@@ -2191,7 +2191,7 @@ settings:
   - 
     id: colorful-unordered-list
     title: Toggle colorful unordered list marker
-    title.zh: 切换彩色无序列表符号
+    title.zh: 启用彩色无序列表符号
     type: class-toggle
     default: false
   -
@@ -2332,7 +2332,7 @@ settings:
   - 
     id: colorful-ordered-list
     title: Toggle colorful ordered list marker
-    title.zh: 切换彩色有序列表符号
+    title.zh: 启用彩色有序列表符号
     type: class-toggle
     default: false
   -
@@ -2980,25 +2980,25 @@ settings:
   -
     id: link-underline-internal
     title: Toggle Internal Link Underline
-    title.zh: 切换内部链接下划线（默认：无）
+    title.zh: 开启内部链接下划线（默认：无）
     type: class-toggle
     default: false
   -
     id: link-underline-external
     title: Toggle External Link Underline
-    title.zh: 切换外部链接下划线（默认：有）
+    title.zh: 开启外部链接下划线（默认：有）
     type: class-toggle
     default: false
   -
     id: link-underline-unresolved
     title: Toggle Unresolved Link Underline 
-    title.zh: 切换未创建链接下划线（默认：有）
+    title.zh: 开启未创建链接下划线（默认：有）
     type: class-toggle
     default: false
   -
     id: colorful-link-animation
     title: Toggle colorful link background (hovering)
-    title.zh: 切换彩色链接背景颜色 （鼠标悬浮时）
+    title.zh: 开启彩色链接背景颜色 （鼠标悬浮时）
     type: class-toggle
     default: false
   -
@@ -26926,12 +26926,10 @@ body.hide-left-ribbon-retention-drawer.hide-titlebar-close-btn.is-hidden-framele
   display: none;
 }
 
-body.hide-left-ribbon-retention-drawer.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.mod-left .sidebar-toggle-button
-{
+body.hide-left-ribbon-retention-drawer.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.mod-left .sidebar-toggle-button {
   padding-top: var(--size-4-2);
 }
-body.hide-left-ribbon-retention-drawer .workspace-ribbon.mod-left:not(:hover) ~ .workspace-split .workspace-tabs.mod-top .workspace-tab-header-container
-{
+body.hide-left-ribbon-retention-drawer .workspace-ribbon.mod-left:not(:hover) ~ .workspace-split .workspace-tabs.mod-top .workspace-tab-header-container {
   margin-left: 28px;
   transition: all 350ms ease-in-out;
 }
@@ -27004,18 +27002,14 @@ body.tab-title-bar-position .workspace-split.mod-root .view-content {
 }
 
 
-
-
-body.hide-titlebar-close-btn.is-hidden-frameless .titlebar-button.mod-logo
-{
-display: block;
-margin-left:5px;
-margin-top: 6px;
+body.hide-titlebar-close-btn.is-hidden-frameless .titlebar-button.mod-logo {
+  display: block;
+  margin-left:5px;
+  margin-top: 6px;
 }
 
 
-body.hide-titlebar-close-btn.hide-left-ribbon.is-hidden-frameless .titlebar-button.mod-logo
-{
+body.hide-titlebar-close-btn.hide-left-ribbon.is-hidden-frameless .titlebar-button.mod-logo {
   display: none;
 }
 
@@ -27025,40 +27019,33 @@ body.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.side-dock-rib
 
 body.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.mod-left .sidebar-toggle-button {
   padding-top: 52px;
- }
- body.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.mod-left .side-dock-actions
- {
-  padding-top: 12px;
- }
- body.hide-titlebar-close-btn.is-hidden-frameless .titlebar-button-container.mod-right:not(:hover)
- {
-transform: translateY(calc( -1 * var(--header-height) + 6px));
-transition: all 0.6s linear;
- }
-
- body.hide-titlebar-close-btn.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-right-space .workspace-tab-header-container:after
- {
-  top: -20px;
-
- }
-
- body.hide-titlebar-close-btn.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
-
- padding-right: unset;
 }
-body.hide-titlebar-close-btn.is-hidden-frameless .titlebar-inner:hover  .titlebar-button-container.mod-right
- {
+body.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.mod-left .side-dock-actions {
+  padding-top: 12px;
+}
+body.hide-titlebar-close-btn.is-hidden-frameless .titlebar-button-container.mod-right:not(:hover) {
+  transform: translateY(calc( -1 * var(--header-height) + 6px));
+  transition: all 0.6s linear;
+}
+
+body.hide-titlebar-close-btn.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-right-space .workspace-tab-header-container:after {
+  top: -20px;
+}
+
+body.hide-titlebar-close-btn.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
+  padding-right: unset;
+}
+body.hide-titlebar-close-btn.is-hidden-frameless .titlebar-inner:hover  .titlebar-button-container.mod-right {
   transition: all 0.1s linear;
   transform:translateY(-15px);
   background: var(--titlebar-background-focused);
   opacity: 0.8;
- }
- body.hide-titlebar-close-btn.is-hidden-frameless.mod-linux .titlebar-button, 
- body.hide-titlebar-close-btn.is-hidden-frameless.mod-windows .titlebar-button
- {
+}
+body.hide-titlebar-close-btn.is-hidden-frameless.mod-linux .titlebar-button, 
+ body.hide-titlebar-close-btn.is-hidden-frameless.mod-windows .titlebar-button {
   padding-bottom: 6px;
   align-items: flex-end;
- }
+}
 
 .view-header-title-container.web-browser-header-bar .view-header-title-parent:before {
   content: ' ';
@@ -27068,7 +27055,6 @@ body.hide-titlebar-close-btn.is-hidden-frameless .titlebar-inner:hover  .titleba
   height: 8px;
   background-color: var(--text-muted);
  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-search'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
-
 }
  /* ====web-browser==== */
 .view-header-title-container.web-browser-header-bar  +  .view-actions .view-action {
@@ -27109,7 +27095,7 @@ body.background-settings-workplace-background-image .workspace-leaf-resize-handl
 }
 
 body.background-settings-workplace-background-image .workspace-split.mod-horizontal:is(.mod-left-split,.mod-right-split)  .workspace-tab-header.is-active {
-  background-color:transparent;
+  background-color: transparent;
 }
 
 body.is-frameless.background-settings-workplace-background-image .workspace-split .workspace-tab-header-container {
@@ -27121,7 +27107,6 @@ body.show-view-header .view-header{
   --page-border-bottom: transparent;
   border-top-left-radius:var(--radius-m);
   border-top-right-radius: var(--radius-m);
-
 }
 .workspace-split.mod-root .workspace-tab-header-container-inner .workspace-tab-header:first-child {
   margin-left: 1rem;
