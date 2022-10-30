@@ -6,13 +6,11 @@
 
 # Preview
 
-```html
-<video autoplay="autoplay" loop="loop" id="video" x-webkit-airplay="true" webkit-playsinline="true" muted="">
+<video autoplay="autoplay" loop="loop" id="video" x-webkit-airplay="true" webkit-playsinline="true" controls>
    <source src="https://user-images.githubusercontent.com/72023275/198887926-44a4bf85-40fc-479a-8500-d00923de7136.mp4" type="video/mp4">
 </video>
-```
 
-<video autoplay="autoplay" loop="loop" id="video" x-webkit-airplay="true" webkit-playsinline="true" muted="">
+<video autoplay="autoplay" loop="loop" id="video" x-webkit-airplay="true" webkit-playsinline="true" controls>
    <source src="https://user-images.githubusercontent.com/72023275/198887920-575d0735-2433-41ff-8960-3c7bacbdf532.mp4" type="video/mp4">
 </video>
 
