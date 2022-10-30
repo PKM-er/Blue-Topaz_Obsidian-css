@@ -10058,7 +10058,7 @@ body.toggle-left-aligned-content :is(.markdown-preview-view,.markdown-rendered).
 }
 
 .markdown-source-view.mod-cm6 div.cm-line {
-  margin-bottom: calc((var(--paragraph-spacing) - 1)*1em) !important;
+  padding-bottom: calc((var(--paragraph-spacing) - 1)*1em) !important;
 }
 
 body.text-indentation-two-em .markdown-source-view.mod-cm6 div.cm-line:not(.HyperMD-header),
@@ -13519,8 +13519,14 @@ body.file-name-wrapped .nav-folder-title-content {
   background-color: var(--activeline-background)  !important;
 }
 
-.CodeMirror-activeline-background.CodeMirror-linebackground,
-.markdown-source-view.cm-s-obsidian.mod-cm6 .cm-active.cm-line {
+.CodeMirror-activeline-background.CodeMirror-linebackground::before,
+.markdown-source-view.cm-s-obsidian.mod-cm6 .cm-active.cm-line::before {
+  content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: calc(100% + (var(--paragraph-spacing) - 1)*1em);
   background-color: var(--activeline-background) !important;
 }
 
@@ -26992,7 +26998,7 @@ body.tab-title-bar-position .workspace-split.mod-root .view-content {
 }
 
 
-body.hide-titlebar-close-btn.is-hidden-frameless .titlebar-button.mod-logo {
+body.mod-windows.hide-titlebar-close-btn.is-hidden-frameless .titlebar-button.mod-logo {
   display: block;
   margin-left:5px;
   margin-top: 6px;
@@ -27003,14 +27009,14 @@ body.hide-titlebar-close-btn.hide-left-ribbon.is-hidden-frameless .titlebar-butt
   display: none;
 }
 
-body.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.side-dock-ribbon.mod-left {
+body.mod-windows.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.side-dock-ribbon.mod-left {
  padding-top: 26px;
 }
 
-body.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.mod-left .sidebar-toggle-button {
+body.mod-windows.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.mod-left .sidebar-toggle-button {
   padding-top: 52px;
 }
-body.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.mod-left .side-dock-actions {
+body.mod-windows.hide-titlebar-close-btn.is-hidden-frameless .workspace-ribbon.mod-left .side-dock-actions {
   padding-top: 12px;
 }
 body.hide-titlebar-close-btn.is-hidden-frameless .titlebar-button-container.mod-right:not(:hover) {
