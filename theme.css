@@ -8241,10 +8241,10 @@ body.color-scheme-options-simplicity-topaz .theme-light,
 body.color-scheme-options-simplicity-topaz.theme-light {
   --h1-color: var(--print-h1-color,var(--text-normal));
   --h2-color: var(--print-h2-color,var(--text-normal));
-  --h3-color: var(--print-h1-color,var(--text-normal));
-  --h4-color: var(--print-h2-color,var(--text-normal));  
-  --h5-color: var(--print-h2-color,var(--text-normal));
-  --h6-color: var(--print-h2-color,var(--text-normal));
+  --h3-color: var(--print-h3-color,var(--text-normal));
+  --h4-color: var(--print-h4-color,var(--text-normal));  
+  --h5-color: var(--print-h5-color,var(--text-normal));
+  --h6-color: var(--print-h6-color,var(--text-normal));
     --background-accent:  var(--simple-white-1);
   --background-modifier-border: var(--simple-gray-5);
   --background-modifier-form-field:  var(--simple-white-1);
@@ -22355,8 +22355,11 @@ body.background-settings-workplace-background-image:is(.background-settings-work
   background: var(--simple-white-2);
 }
 
+body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image:is(.background-settings-workplace-waves,.background-settings-workplace-waves2).theme-dark  .workspace {
+  background: var(--simple-white-2);
+}
 body.background-settings-workplace-background-image:is(.background-settings-workplace-waves,.background-settings-workplace-waves2).theme-dark  .workspace {
-  background: var(--simple-tran);
+  background: var(--background-primary);
 }
 /****from https://www.shapedivider.app/*****/
 body.background-settings-workplace-background-image.background-settings-workplace-waves-light.theme-light .workspace:before,
@@ -27064,7 +27067,8 @@ body.background-settings-workplace-background-image .workspace-split.mod-horizon
 }
 
 body.is-frameless.background-settings-workplace-background-image .workspace-split .workspace-tab-header-container {
-  border-bottom-color: var(--divider-color);
+  border-bottom-color: transparent;
+  border-radius: 0;
 }
 body:not(.show-view-header) .workspace-tabs .workspace-leaf .view-content,
 body.show-view-header .view-header{
@@ -27077,10 +27081,13 @@ body.show-view-header .view-header{
   margin-left: 1rem;
 }
 
+body.theme-light .workspace-split.mod-root  .workspace-tab-header.is-active.mod-active {
+  background-image: linear-gradient(to right, var(--background-secondary), transparent);
+}
 .workspace-split.mod-root  .workspace-tab-header.is-active.mod-active {
   border-color: var(--background-modifier-border);
   border-style: solid;
-  background-image: linear-gradient(to right, var(--background-secondary), transparent);
+  background-image: linear-gradient(to right, var(--background-primary), transparent);
   border: none; 
 }
 body.theme-dark:not(.background-settings-workplace-background-image) .workspace-split.mod-horizontal:is(.mod-left-split,.mod-right-split) .workspace-tabs .workspace-leaf-resize-handle {
