@@ -13900,7 +13900,8 @@ body.nowrap-outline .outline .tree-item-inner {
 }
 
 .vertical-tab-nav-item {
-  padding: 5px 6px 5px 24px;
+  padding: 6px 6px 6px 24px;
+  margin-bottom: 0;
 }
 
 
