@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v1.0.3。uid [20221030] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.0.3, uid [20221030] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.0.3。uid [20221101] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.0.3, uid [20221101] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -13522,12 +13522,13 @@ body.file-name-wrapped .nav-folder-title-content {
 .CodeMirror-activeline-background.CodeMirror-linebackground::before,
 .markdown-source-view.cm-s-obsidian.mod-cm6 .cm-active.cm-line::before {
   content: '';
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   width: 100%;
-   height: calc(100% + (var(--paragraph-spacing) - 1)*1em);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% + (var(--paragraph-spacing) - 1)*1em);
   background-color: var(--activeline-background) !important;
+  z-index: -1;
 }
 
 body.muted-activeline-bg .CodeMirror-activeline-background.CodeMirror-linebackground,
@@ -25707,11 +25708,11 @@ body:not(.remove-selectionbackground) .markdown-source-view.mod-cm6 .cm-editor .
   margin: 0;
   padding: 0 var(--size-4-2);
 }
+/*
 .workspace-tabs.mod-stacked  .view-header,
-.is-focused .workspace .mod-root .workspace-tabs.mod-stacked .workspace-leaf.mod-active .view-header
-{
+.is-focused .workspace .mod-root .workspace-tabs.mod-stacked .workspace-leaf.mod-active .view-header {
   background-color: var(--color-base-10);
-}
+}*/
 .workspace-split.mod-root   .workspace-tabs.mod-stacked  .view-content
 {
   backdrop-filter: blur(20px);
