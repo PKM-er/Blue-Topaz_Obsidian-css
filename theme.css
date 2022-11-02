@@ -12844,7 +12844,6 @@ body.file-name-animation .obsidian-icon-folder-icon {
 }
 
 body.file-name-animation .nav-folder-title {
- 
   white-space: nowrap;
 }
 
@@ -13620,7 +13619,7 @@ body.muted-activeline-bg .HyperMD-codeblock-bg.CodeMirror-activeline-background.
 
 .nav-folder-title {
   font-weight: 600;
-  padding: 2px 5px 2px 20px;
+  padding: 2px 5px 2px 23px;
   color: var(--text-normal);
 }
 
