@@ -1814,8 +1814,8 @@ settings:
         value: h5-text-align-end
   -
     id: other-typography-settings
-    title: 2.2.4 Other Settings
-    title.zh: 2.2.4 其他设置
+    title: 2.2.4 Other Typography Settings
+    title.zh: 2.2.4 其他排版设置
     type: heading
     level: 3
     collapsed: true
@@ -1914,7 +1914,7 @@ settings:
   -
     id: style-change-options
     title: 2.3 Element Styles
-    title.zh: 2.3 其他样式设置
+    title.zh: 2.3 其他元素样式
     type: heading
     level: 2
     collapsed: true
@@ -3575,6 +3575,18 @@ settings:
         label: Mixed orientation
         value: stack-tab-text-ori-mixed
   -
+    id: stack-tabs-background-blur-depth
+    title: stack tabs background Blur Radius
+    title.zh: 堆叠模式下笔记背景模糊程度
+    description: To adjust the radius of blur
+    description.zh: 调整背景模糊程度
+    type: variable-number-slider
+    default: 40
+    format: px
+    min: 0
+    max: 200
+    step: 10
+  - 
     id: tabs-settings
     title: 2.3.23  tabs
     type: heading
@@ -4161,6 +4173,20 @@ settings:
     level: 1
     collapsed: true
   -
+    id: mute-code-indent-line
+    title: Mute Codebox indent Line
+    title.zh: 取消代码块缩进参考线
+    type: class-toggle
+    default: false
+  -
+    id: code-line-number
+    title: Code box showing line numbers (Editing Mode)
+    title.zh: 代码显示行号 （编辑模式）
+    description: csslass declares code-line-number to be available for the current document
+    description.zh:  csslass 声明code-line-number 可对单篇note生效
+    type: class-toggle
+    default: false
+  -
     id: whole-code-wrap
     title: Code Wrap (Reading Mode)
     title.zh: 代码换行 （阅读模式）
@@ -4225,6 +4251,12 @@ settings:
     opacity: true
     default-light: '#292d3e'
     default-dark: '#292d3e'
+  -
+    id: muted-code-activeline-bg
+    title: Mute Codebox Active Line
+    title.zh: 取消代码块当前行高亮
+    type: class-toggle
+    default: false
   -
     id: code-active-line-background-color
     title: Codebox Active Line Background-Color
@@ -4570,6 +4602,7 @@ body {
   --opacity-cp: 0.25;
   --titlebar-brightness: 1;
   --titlebar-blur-depth: 8px;
+  --stack-tabs-background-blur-depth:40px;
 
   --fancy-hr-icon: '😀';
   --fancy-hr-rotate: 0deg;
@@ -9948,7 +9981,9 @@ a.tag,
   padding-top: 0.1em;
   padding-bottom: 0.1em;
 }
-
+  .is-live-preview a.tag {
+  line-height: 1.8;
+}
 body.tag-pill-outlined .tag:not(.token):nth-child(5n+1) {
   border-color: var(--tag1);
   color: var(--tag1);
@@ -12188,14 +12223,21 @@ span.token.directive-hash
   color: var(--code-comment);
 }
 
+.muted-code-activeline-bg .markdown-source-view.cm-s-obsidian.mod-cm6  .cm-active.cm-line.HyperMD-codeblock-bg  {
+  background-color: var(--background-code) !important;
+}
+.muted-code-activeline-bg .markdown-source-view.cm-s-obsidian.mod-cm6  .cm-active.cm-line.HyperMD-codeblock-bg::before  {
+  background-color: unset !important;
+
+}
 .markdown-source-view.cm-s-obsidian.mod-cm6 .cm-active.cm-line.HyperMD-codeblock-bg::before {
-  background-color: var(--code-active-line-background-color) !important;
-  height: 100%;
+display: none;
+
 }
 .markdown-source-view.cm-s-obsidian.mod-cm6 .cm-active.cm-line.HyperMD-codeblock-bg {
-
-  background-color: unset;
+  background-color: var(--code-active-line-background-color) ;
 --text-selection:var(--code-selection-background);
+z-index: -1;
 }
 .markdown-source-view.mod-cm6 .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line {
   text-indent: -2em;
@@ -12217,6 +12259,45 @@ code[class*="language-"] ::selection {
 .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line span.live-preview-codeblock-line-nums {
   margin-left: -1.5em;
 }
+
+
+
+.code-line-number .HyperMD-codeblock-begin {
+  counter-reset: line-numbers;
+}
+
+.code-line-number .HyperMD-codeblock.cm-line:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end) {
+  padding-left: 5em;
+  position: relative;
+}
+  
+.code-line-number .HyperMD-codeblock.cm-line:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::after {
+  align-items: flex-start;
+  color: var(--text-faint);
+  content: counter(line-numbers);
+  counter-increment: line-numbers;
+  display: flex;
+  font-size: 0.8em;
+  height: 100%;
+  justify-content: flex-end;
+  left: 0;
+  position: absolute;
+  text-align: right;
+  width: 2em;
+  padding-right: 0.5em;
+  bottom: -2px;
+  border-right: 1px solid var(--scrollbar-thumb-bg);
+}
+
+.code-line-number .HyperMD-codeblock.cm-line.cm-active:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::after {
+  color: var(--color-accent);
+}
+
+.code-line-number .HyperMD-codeblock .cm-foldPlaceholder::before {
+  display: none;
+}
+
+
 
 /* ================================== */
 
@@ -14162,7 +14243,7 @@ body.file-name-wrapped .nav-folder-title-content {
 }
 
 .CodeMirror-activeline-background.CodeMirror-linebackground::before,
-.markdown-source-view.cm-s-obsidian.mod-cm6 .cm-active.cm-line::before {
+ .cm-active.cm-line::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -14173,16 +14254,18 @@ body.file-name-wrapped .nav-folder-title-content {
   z-index: -1;
 }
 
-
-
-body.muted-activeline-bg .CodeMirror-activeline-background.CodeMirror-linebackground::before,
-body.muted-activeline-bg .markdown-source-view.cm-s-obsidian.mod-cm6 .cm-active.cm-line::before {
-  background-color: transparent !important;
+.mute-code-indent-line .markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-indent::before
+{
+  display:none;
 }
 
-body.muted-activeline-bg .HyperMD-codeblock-bg.CodeMirror-activeline-background.CodeMirror-linebackground {
-  background-color: var(--background-code) !important;
+
+.muted-activeline-bg .CodeMirror-activeline-background.CodeMirror-linebackground::before,
+.muted-activeline-bg .markdown-source-view.cm-s-obsidian.mod-cm6 .cm-active.cm-line:not(.HyperMD-codeblock-bg)::before {
+  background-color: transparent  !important;
 }
+
+
 
 .CodeMirror pre.CodeMirror-line,
 .CodeMirror pre.CodeMirror-line-like {
@@ -17263,7 +17346,7 @@ body.style-options-for-admonition-plugin .admonition-flex .admonition-content ul
   margin-block-start:0;
 }
  
-body.style-options-for-admonition-plugin :is(.admonition-flex,.admonition-col2,.admonition-col3,.admonition-col4) .admonition-content .admonition-content ul li{
+body.style-options-for-admonition-plugin :is(.admonition-flex,.admonition-col2,.admonition-col3,.admonition-col4) .admonition-content .admonition-content ul>li{
   list-style-type: none;
   padding:0;
 }
@@ -18592,6 +18675,62 @@ body:not(.outliner-plugin-bls).markdown-source-view.mod-cm5 .cm-hmd-list-indent 
   right: -0.4em;
   background-size: 1.45ch 1px !important;
 }
+
+
+/* ================================== */
+/* ==============Better Code Block ============= */
+/* ================================== */
+pre.code-block-pre__has-linenum {
+  padding: 0;
+  min-height: unset;
+}
+.obsidian-embedded-code-title__code-block-title > .title {
+
+    line-height: 29px;
+    font-weight: bold;
+    font-size: var(--callout-title-size);
+    font-family: var(--font-text);
+}
+.markdown-rendered pre.obsidian-embedded-code-title__code-block-title[closed] {
+ 
+  background-color: rgba(var(--interactive-accent-rgb), 0.1) !important;
+
+}
+.markdown-rendered pre.obsidian-embedded-code-title__code-block-title {
+  overflow-y: hidden;
+  background-color: transparent !important;
+}
+
+.obsidian-embedded-code-title__code-block-title:not([closed]) .langName {
+  opacity: 0.35;
+  font-size: 12px;
+}
+.obsidian-embedded-code-title__code-block-title[closed] .langName {
+  opacity: 0.75;
+  font-size: 12px;
+}
+.obsidian-embedded-code-title__code-block-title .collapser .handle {
+  opacity: 0.35;
+}
+pre.code-block-pre__has-linenum::before {
+  display: none;
+}
+.code-block-linenum-wrap
+{
+ opacity: 0.5;
+ border-right-color:rgba(var(--mono-rgb-100), 0.5) !important;
+}
+
+.markdown-rendered  .code-block-pre__has-linenum button.copy-code-button:not([style="right: 32pt"]) {
+	background-image: url("data:image/svg+xml,%3Csvg t='1667575665955' class='icon' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' p-id='5542' width='32' height='32'%3E%3Cpath d='M568.7 319.8l86.8 86.8v476.6h-466V319.8h379.2m29-70H178.9c-32.8 0-59.4 26.5-59.4 59.3v584.7c0 15.7 6.3 30.8 17.4 42 11.1 11.2 26.2 17.4 42 17.4h487.4c15.7 0 30.8-6.3 41.9-17.4 11.1-11.1 17.3-26.2 17.3-42V377.6L597.7 249.8z' fill='%2391B1D5' p-id='5543'%3E%3C/path%3E%3Cpath d='M776.7 70.8H357.9c-32.8 0-59.4 26.5-59.4 59.3v100h70v-89.3h379.2l86.8 86.8v476.6h-85.8v70h96.6c15.7 0 30.8-6.3 41.9-17.4 11.1-11.1 17.3-26.2 17.3-42V198.6L776.7 70.8z' fill='%2391B1D5' p-id='5544'%3E%3C/path%3E%3C/svg%3E");
+
+}
+.code-block-pre__has-linenum button.copy-code-button:hover
+{
+background-color: none;
+box-shadow: var(--window-shadow);
+}
+
 
 /* ================================== */
 /* ============== Memos ============= */
@@ -26300,7 +26439,7 @@ body:not(.remove-selectionbackground) .markdown-source-view.mod-cm6 .cm-editor .
 }*/
 .workspace-split.mod-root   .workspace-tabs.mod-stacked  .view-content
 {
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(var(--stack-tabs-background-blur-depth));
 }
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
   background-color: var(--background-primary);
@@ -27756,7 +27895,7 @@ body.safari-tab-style .workspace .mod-root .workspace-tabs:not(.mod-stacked) .wo
 body.safari-tab-style .mod-vertical:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner,
 body.safari-tab-style .mod-horizontal:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner {
   align-items: center;
-  justify-content: center;
+ 
   margin: 0;
   width: 100%;
 }
