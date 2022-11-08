@@ -79,6 +79,12 @@ settings:
         label: Simplicity (@Cuman)
         value: color-scheme-options-simplicity-topaz 
   -
+    id: disable-auto-hide-header
+    title:  Disable auto hide header
+    title.zh: 禁用自动隐藏头部
+    type: class-toggle
+    default: false
+  - 
     id: color-magic
     title: Color of Rubik's Cube palette
     title.zh: 魔方配色
@@ -2935,8 +2941,8 @@ settings:
     default: false
   -
     id: link-underline-external
-    title: Toggle External Link Underline
-    title.zh: 开启外部链接下划线（默认：有）
+    title: Disable External Link Underline
+    title.zh: 关闭外部链接下划线（默认：有）
     type: class-toggle
     default: false
   -
@@ -8844,31 +8850,32 @@ body.color-scheme-options-simplicity-topaz [class="menu"] {
 }
 /* Left dock navigation (new note, new folder, reorder) */
  
-body.color-scheme-options-simplicity-topaz .workspace-tab-header-container:hover + .workspace-tab-container .workspace-leaf .workspace-leaf-content>.nav-header {
+body.color-scheme-options-simplicity-topaz:not(.disable-auto-hide-header) .workspace-tab-header-container:hover + .workspace-tab-container .workspace-leaf .workspace-leaf-content>.nav-header {
   margin-top: 0;
   transition: all 0.1s linear;
 }
 
-body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-tab-container .workspace-leaf .workspace-leaf-content>.nav-header:hover {
+body.color-scheme-options-simplicity-topaz:not(.disable-auto-hide-header) .workspace-tab-header-container + .workspace-tab-container .workspace-leaf .workspace-leaf-content>.nav-header:hover {
   margin-top: 0;
   transition: all 0.6s linear;
 }
-body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-tab-container .workspace-leaf .workspace-leaf-content>.nav-header {
+body.color-scheme-options-simplicity-topaz:not(.disable-auto-hide-header) .workspace-tab-header-container + .workspace-tab-container .workspace-leaf .workspace-leaf-content>.nav-header {
   margin-top: -30px;
   transition: all 0.6s linear;
 }
 
-body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-tab-container .workspace-leaf .workspace-leaf-content[data-type="file-tree-view"] 
+
+body.color-scheme-options-simplicity-topaz:not(.disable-auto-hide-header) .workspace-tab-header-container + .workspace-tab-container .workspace-leaf .workspace-leaf-content[data-type="file-tree-view"] 
 .view-content .file-tree-header-fixed {
   position: relative;
   margin-top: -30px;
   transition: all 0.6s linear;
 }
-body.color-scheme-options-simplicity-topaz .workspace-tab-header-container:hover + .workspace-tab-container .workspace-leaf .workspace-leaf-content[data-type="file-tree-view"] .view-content .file-tree-header-fixed {
+body.color-scheme-options-simplicity-topaz:not(.disable-auto-hide-header) .workspace-tab-header-container:hover + .workspace-tab-container .workspace-leaf .workspace-leaf-content[data-type="file-tree-view"] .view-content .file-tree-header-fixed {
   margin-top: 0;
   transition: all 0.3s linear;
 }
-body.color-scheme-options-simplicity-topaz .workspace-tab-header-container + .workspace-tab-container .workspace-leaf .workspace-leaf-content[data-type="file-tree-view"] .view-content .file-tree-header-fixed:hover{
+body.color-scheme-options-simplicity-topaz:not(.disable-auto-hide-header) .workspace-tab-header-container + .workspace-tab-container .workspace-leaf .workspace-leaf-content[data-type="file-tree-view"] .view-content .file-tree-header-fixed:hover{
   margin-top: 0;
 }
 
@@ -18502,6 +18509,9 @@ body:not(.is-hidden-frameless) .setting-item:is([data-id="hide-titlebar-close-bt
   display: none;
 }
 
+body:not(.color-scheme-options-simplicity-topaz)  .setting-item:is([data-id="disable-auto-hide-header"]) {
+  display: none;
+}
 /********/
 /* ================================== */
 /* ==== advanced-tables-toolbar ===== */
@@ -27773,7 +27783,7 @@ body.hide-titlebar-close-btn.is-hidden-frameless.mod-linux .titlebar-button,
   margin-left: 10px;
   color: var(--text-faint);
   width:10px;
-  height: 8px;
+  height: 6px;
   background-color: var(--text-muted);
  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-search'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
 }
