@@ -5072,7 +5072,7 @@ body.all-dark .print.theme-light,
   --bg-color-highlight-2: #54b9476f;
   --bg-color-highlight-3: #1e83d086;
 
-  --background-popover: var(--background-primary);
+  --background-popover: var(--color-base-10);
 
   --cursor-red: #ff3939;
   --cursor-yellow: #fff955;
@@ -5422,7 +5422,7 @@ body.all-dark .print.theme-light,
   --bg-color-highlight-2: #0fc41835;
   --bg-color-highlight-3: #4ca6ff51;
 
-  --background-popover: var(--background-primary);
+  --background-popover: var(--color-base-10);
 
   --cursor-red: #ff0000;
   --cursor-yellow: #d5ca00;
@@ -17107,7 +17107,7 @@ aside>h2 {
 :is(.markdown-preview-view,.markdown-rendered) .tippy-content {
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
-  font-size: var(--font-size-better-footnote) !important;
+ /*  font-size: var(--font-size-better-footnote) !important;*/
   font-family: var(--font-family-better-footnote) !important;
 }
 
@@ -18694,6 +18694,10 @@ pre.code-block-pre__has-linenum {
   padding: 0;
   min-height: unset;
 }
+.code-block-wrap > pre  pre:not([closed]) + code[class*=language-] {
+  padding-bottom:  1em !important;
+}
+
 .obsidian-embedded-code-title__code-block-title > .title {
 
     line-height: 29px;
@@ -21100,9 +21104,9 @@ body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebo
   padding-left: 0;
 }
 
-body.toggle-split-note-background .workspace-split.mod-horizontal .workspace-leaf-content .markdown-rendered,
-body.toggle-split-note-background .workspace-split.mod-horizontal .workspace-tab-container .workspace-leaf-content .cm-scroller,
-body.toggle-split-note-background .workspace-split.mod-horizontal .workspace-tab-container .workspace-leaf-content .markdown-reading-view {
+body.toggle-split-note-background .workspace-split.mod-horizontal:is(.mod-left-split,.mod-right-split) .workspace-leaf-content .markdown-rendered,
+body.toggle-split-note-background .workspace-split.mod-horizontall:is(.mod-left-split,.mod-right-split) .workspace-tab-container .workspace-leaf-content .cm-scroller,
+body.toggle-split-note-background .workspace-split.mod-horizontall:is(.mod-left-split,.mod-right-split) .workspace-tab-container .workspace-leaf-content .markdown-reading-view {
   background: initial;
 }
 
@@ -27466,9 +27470,7 @@ body.title-justify-start .view-header-title-container {
 .menu{
   background-color:var(--color-base-10);
 }
-.popover.hover-popover, .popover.hover-popover .markdown-embed {
-  background-color:var(--color-base-10);
-}
+ 
 .cm-s-obsidian span.obsidian-search-match-highlight {
   box-shadow: none;
 }
@@ -27728,10 +27730,13 @@ body.tab-title-bar-position .markdown-reading-view .markdown-preview-view {
   padding-left: unset;
 }
 
-body.tab-title-bar-position .workspace-split.mod-root .view-content {
+body.tab-title-bar-position  .workspace-split.mod-root .workspace-leaf-content[data-type='markdown'] .view-content {
   padding-left: 2.5rem;
 }
-
+body.tab-title-bar-position .workspace-tabs:not(.mod-stacked) .view-header-title-container.web-browser-header-bar
+{
+  top: unset;
+}
 
 body.mod-windows.hide-titlebar-close-btn.is-hidden-frameless .titlebar-button.mod-logo {
   display: block;
@@ -27777,7 +27782,32 @@ body.hide-titlebar-close-btn.is-hidden-frameless.mod-linux .titlebar-button,
   padding-bottom: 6px;
   align-items: flex-end;
 }
+.theme-light .view-header-title-container.web-browser-header-bar input.web-browser-search-bar
+{
 
+  background-image:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-search'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0px 8px;
+  background-size: 14px;
+  opacity: 0.6;
+}
+.theme-dark .view-header-title-container.web-browser-header-bar input.web-browser-search-bar
+{
+
+  background-image:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-search'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0px 8px;
+  background-size: 14px;
+  opacity: 0.6;
+}
+.view-header-title-container.web-browser-header-bar input.web-browser-search-bar:focus
+{
+  opacity: 1;
+}
+.view-header .view-header-title-container.web-browser-header-bar:hover
+{
+  border:none;
+}
 .view-header-title-container.web-browser-header-bar .view-header-title-parent:before {
   content: ' ';
   margin-left: 10px;
