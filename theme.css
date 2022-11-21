@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v1.0.3。uid [20221101] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.0.3, uid [20221101] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.0.3。uid [20221121] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.0.3, uid [20221121] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -713,6 +713,18 @@ settings:
     type: class-toggle
     default: false
   -
+    id: toggle-divider-lines
+    title: Toggle non-divided-line style
+    title.zh: 切换无分割线样式
+    type: class-toggle
+    default: false
+  -
+    id: toggle-header-bottom-line
+    title: Toggle non-divided-line header box
+    title.zh: 切换无分割线文件标题框
+    type: class-toggle
+    default: false
+  -
     id: background-settings
     title: 2. Detail Settings
     title.zh: 2. 细节设置
@@ -1140,6 +1152,22 @@ settings:
     format: hex
     default-light: '#'
     default-dark: '#'
+  - 
+    id: divider-color
+    title: divider color
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  - 
+    id: tab-outline-color
+    title: tab-outline-color
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
   -
     id: graph-view-color-settings
     title: 2.1.5 Graph-view Colors
@@ -1516,6 +1544,12 @@ settings:
     format: hex
     default-light: '#'
     default-dark: '#'
+  - 
+    id: font-weight-h1
+    title: Vault Name
+    title.zh: H1 font weight
+    type: variable-text
+    default: bold
   -
     id: h1-text-align-settings
     title: H1 Text-align
@@ -1573,6 +1607,12 @@ settings:
     format: hex
     default-light: '#'
     default-dark: '#'
+  - 
+    id: font-weight-h2
+    title: Vault Name
+    title.zh: H2 font weight
+    type: variable-text
+    default: bold
   -
     id: h2-text-align-settings
     title: H2 text-align
@@ -1630,6 +1670,12 @@ settings:
     format: hex
     default-light: '#'
     default-dark: '#'
+  - 
+    id: font-weight-h3
+    title: Vault Name
+    title.zh: H3 font weight
+    type: variable-text
+    default: bold
   -
     id: h3-text-align-settings
     title: H3 text-align
@@ -1687,6 +1733,12 @@ settings:
     format: hex
     default-light: '#'
     default-dark: '#'
+  - 
+    id: font-weight-h4
+    title: Vault Name
+    title.zh: H4 font weight
+    type: variable-text
+    default: bold
   -
     id: h4-text-align-settings
     title: H4 text-align
@@ -1744,6 +1796,12 @@ settings:
     format: hex
     default-light: '#'
     default-dark: '#'
+  - 
+    id: font-weight-h5
+    title: Vault Name
+    title.zh: H5 font weight
+    type: variable-text
+    default: bold
   -
     id: h5-text-align-settings
     title: H5 text-align
@@ -1801,6 +1859,12 @@ settings:
     format: hex
     default-light: '#'
     default-dark: '#'
+  - 
+    id: font-weight-h6
+    title: Vault Name
+    title.zh: H6 font weight
+    type: variable-text
+    default: bold
   -
     id: h6-text-align-settings
     title: H6 text-align
@@ -4697,6 +4761,12 @@ body {
   --hr-color-numbers-color: var(--theme-color);
   --hr-numbers-text-fill: transparent;
   --hr-numbers-text-stroke: var(--text-normal);
+  --font-weight-h1: bold;
+  --font-weight-h2: bold;
+  --font-weight-h3: bold;
+  --font-weight-h4: bold;
+  --font-weight-h5: bold;
+  --font-weight-h6: bold;
 
   --cloze-bg-color: var(--accent-strong);
   --cloze-decoration: none;
@@ -8782,10 +8852,7 @@ body.color-scheme-options-simplicity-topaz .titlebar-button-container.mod-right:
 	opacity: 0.8;
   transition: all 0.6s linear;
 }
-body.color-scheme-options-simplicity-topaz.theme-dark  .workspace-split.mod-root .workspace-tab-header.is-active::before,
-body.color-scheme-options-simplicity-topaz.theme-dark .workspace-split.mod-root .workspace-tab-header.is-active::after {
-  box-shadow: none;
-}     
+   
 body.color-scheme-options-simplicity-topaz .nav-action-button.is-active {
   background-color: var(--simple-blue-2);
 }
@@ -11118,6 +11185,7 @@ body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line span
   padding-bottom: 1px;
   font-family: var(--font-family-h1);
   color: var(--h1-color);
+  font-weight: var(--font-weight-h1);
 }
 
 :is(.markdown-preview-view,.markdown-rendered) h2 {
@@ -11126,6 +11194,7 @@ body.clutter-free-headings div:not(.CodeMirror-activeline)>.CodeMirror-line span
   padding-bottom: 1px;
   font-family: var(--font-family-h2);
   color: var(--h2-color);
+  font-weight: var(--font-weight-h2);
 }
 
 body.h1-toggle-underline :is(.markdown-preview-view,.markdown-rendered) h1,
@@ -11172,21 +11241,25 @@ body.h6-toggle-short-underline .markdown-source-view.is-live-preview .HyperMD-he
   font-size: var(--h3-size);
   font-family: var(--font-family-h3);
   color: var(--h3-color);
+  font-weight: var(--font-weight-h3);
 }
 :is(.markdown-preview-view,.markdown-rendered) h4 {
   font-size: var(--h4-size);
   font-family: var(--font-family-h4);
   color: var(--h4-color);
+  font-weight: var(--font-weight-h4);
 }
 :is(.markdown-preview-view,.markdown-rendered) h5 {
   font-size: var(--h5-size);
   font-family: var(--font-family-h5);
   color: var(--h5-color);
+  font-weight: var(--font-weight-h5);
 }
 :is(.markdown-preview-view,.markdown-rendered) h6 {
   font-size: var(--h6-size);
   font-family: var(--font-family-h6);
   color: var(--h6-color);
+  font-weight: var(--font-weight-h6);
 }
 
 body.header-1-background .cm-header-1,
@@ -11219,36 +11292,42 @@ body.header-6-background :is(.markdown-preview-view,.markdown-rendered) h6 {
   position: relative;
   font-family: var(--font-family-h1) !important;
   color: var(--h1-color);
+  font-weight: var(--font-weight-h1);
 }
 .cm-header-2 {
   font-size: var(--h2-size) !important;
   position: relative;
   font-family: var(--font-family-h2) !important;
   color: var(--h2-color);
+  font-weight: var(--font-weight-h2);
 }
 .cm-header-3 {
   font-size: var(--h3-size) !important;
   position: relative;
   font-family: var(--font-family-h3) !important;
   color: var(--h3-color);
+  font-weight: var(--font-weight-h3);
 }
 .cm-header-4 {
   font-size: var(--h4-size) !important;
   position: relative;
   font-family: var(--font-family-h4) !important;
   color: var(--h4-color);
+  font-weight: var(--font-weight-h4);
 }
 .cm-header-5 {
   font-size: var(--h5-size) !important;
   position: relative;
   font-family: var(--font-family-h5) !important;
   color: var(--h5-color);
+  font-weight: var(--font-weight-h5);
 }
 .cm-header-6 {
   font-size: var(--h6-size) !important;
   position: relative;
   font-family: var(--font-family-h6) !important;
   color: var(--h6-color);
+  font-weight: var(--font-weight-h6);
 }
 .cm-contentContainer :is(.cm-header-1,.cm-header-2,.cm-header-3,.cm-header-4) {
   line-height: calc(var(--paragraph-spacing) + 0.5);
@@ -11771,33 +11850,26 @@ body:not(.tag-default) .cm-s-obsidian .cm-formatting-hashtag,
 }
 
 
-.markdown-source-view   mjx-math,
-:is(.markdown-preview-view,.markdown-rendered) :not(:is(h1,h2,h3,h4,h5,h6))>.math>mjx-container>mjx-math
-{
+.markdown-source-view mjx-math,
+:is(.markdown-preview-view,.markdown-rendered) :not(:is(h1,h2,h3,h4,h5,h6))>.math>mjx-container>mjx-math {
   color: var(--mjx-inline-math-color);
 }
-.markdown-source-view .cm-header-1 ~ .math  mjx-math
-{
+.markdown-source-view .cm-header-1 ~ .math  mjx-math {
   color: var(--print-h1-color);
 }
-.markdown-source-view .cm-header-2 ~ .math  mjx-math
-{
+.markdown-source-view .cm-header-2 ~ .math  mjx-math {
   color: var(--print-h2-color);
 }
-.markdown-source-view .cm-header-3 ~ .math  mjx-math
-{
+.markdown-source-view .cm-header-3 ~ .math  mjx-math {
   color: var(--print-h3-color);
 }
-.markdown-source-view .cm-header-4 ~ .math  mjx-math
-{
+.markdown-source-view .cm-header-4 ~ .math  mjx-math {
   color: var(--print-h4-color);
 }
-.markdown-source-view .cm-header-5 ~ .math  mjx-math
-{
+.markdown-source-view .cm-header-5 ~ .math  mjx-math {
   color: var(--print-h5-color);
 }
-.markdown-source-view .cm-header-6 ~ .math  mjx-math
-{
+.markdown-source-view .cm-header-6 ~ .math  mjx-math {
   color: var(--print-h6-color);
 }
 
@@ -12940,9 +13012,8 @@ body.rainbow-ordered-list :is(.markdown-preview-view,.markdown-rendered) ol>li o
 
 
 /*===========*/
-:is(h1,h2,h3,h4,h5,h6,b,strong),
-.view-header-title,
-.cm-s-obsidian .cm-header {
+:is(.markdown-preview-view,.markdown-rendered) :is(b,strong),
+.view-header-title {
   font-weight: bold;
 }
 
@@ -14489,44 +14560,6 @@ body:not(.default-icons) :is(h1,h2,h3,h4,h5,h6):hover div.heading-collapse-indic
   opacity: 1;
 }
 
-/* header collaspe indicators in edit */
-body:not(.default-icons) div.CodeMirror-foldgutter-open {
-  left: 5px;
-  position: absolute;
-  transition: transform 20ms linear 0s;
-}
-
-body:not(.default-icons) div.CodeMirror-foldgutter-open::after {
-  content: "↓";
-  position: absolute;
-  font-size: 14px;
-  font-weight: bold;
-  font-family: 'Inter';
-  margin-left: -4px;
-  top: -1px;
-  color: var(--text-accent);
-  transition: transform 10ms linear 0s;
-}
-
-body:not(.default-icons) div.CodeMirror-foldgutter-folded {
-  position: absolute;
-  transition: transform 20ms linear 0s;
-}
-
-body:not(.default-icons) div.CodeMirror-foldgutter-folded::after {
-  content: "→";
-  position: absolute;
-  font-size: 14px;
-  font-weight: bold;
-  font-family: 'Inter';
-  margin-left: 1px;
-  top: -1px;
-  color: var(--text-accent);
-  opacity: 0.5;
-  transition: transform 10ms linear 0s;
-}
-
-
 body:not(.default-icons) .outline .tree-item .collapse-icon {
   padding: 0;
   transition: transform 20ms linear 0s;
@@ -14648,7 +14681,7 @@ body.nowrap-outline .outline .tree-item-inner {
 }
 
 .vertical-tab-content .setting-item {
-  padding: 13px 0;
+  padding: 8px 0;
 }
 
 .modal button:not(.mod-cta):not(.mod-warning):hover {
@@ -17107,7 +17140,7 @@ aside>h2 {
 :is(.markdown-preview-view,.markdown-rendered) .tippy-content {
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
- /*  font-size: var(--font-size-better-footnote) !important;*/
+/*  font-size: var(--font-size-better-footnote) !important;*/
   font-family: var(--font-family-better-footnote) !important;
 }
 
@@ -18183,10 +18216,6 @@ span.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight.hmd-hidd
   word-break: break-word;
 }
 
-.style-settings-heading {
-  margin-bottom: 5px !important;
-}
-
 .setting-item.setting-item-heading.style-settings-heading[data-level="1"] .setting-item-name {
   color: var(--h2-color) !important;
 }
@@ -18233,9 +18262,9 @@ div.style-settings-heading[data-level="0"] {
 }
 
 div.style-settings-heading[data-level="0"] + .style-settings-container {
-  padding: 15px 34px 20px;
-  margin-top: -30px;
-  margin-bottom: 15px;
+  padding: 20px 30px;
+  margin-top: -10px;
+  margin-bottom: 0;
   margin-left: 0;
   border: 0px;
   border-radius: var(--radius-l);
@@ -20090,6 +20119,11 @@ body.is-mobile.background-settings-workplace-background-image .workspace-split.m
   line-height: 1.5;
   margin-bottom: 2px;
 }
+
+body:not(.default-icons).is-mobile .nav-folder-collapse-indicator::after {
+  margin-left: -0.1em;
+}
+
 /*侧边栏工作区标题*/
 .is-mobile .workspace-drawer-tab-option-item-title, .is-mobile .workspace-drawer-active-tab-title {
   font-size: calc(var(--font-size-folder-and-file) + 0.15em);
@@ -20620,8 +20654,9 @@ body.background-settings-workplace-background-image .workspace-tab-header-contai
   background: var(--background-secondary);
 }
 
-body.background-settings-workplace-background-image .workspace-ribbon {
-  border-right: none;
+body.toggle-divider-lines {
+  --divider-color: transparent;
+  --tab-outline-color: transparent;
 }
 
 body.background-settings-workplace-background-image .titlebar, 
@@ -20651,11 +20686,11 @@ body.is-frameless.background-settings-workplace-background-image.theme-dark {
   --divider-color: #22222288;
 }
 
-
+/*
 body.is-frameless.background-settings-workplace-background-image .workspace-tab-header.is-active {
   box-shadow: none;
 }
-
+*/
 body.is-frameless.background-settings-workplace-background-image .workspace-split.mod-root,
 body:not(.is-focused).is-frameless.background-settings-workplace-background-image .workspace-tabs.mod-top .workspace-tab-header-container,
 body.is-frameless.background-settings-workplace-background-image .workspace-tabs.mod-top .workspace-tab-header-container,
@@ -20675,7 +20710,6 @@ body:not(.is-focused):not(.is-frameless) .workspace-split.mod-root .workspace-ta
 .workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
   background-color: var(--background-secondary);
 }
-
 
 
 .view-header {
@@ -20723,7 +20757,7 @@ body.is-mobile.view-button-front .workspace-leaf-content:is([data-mode="preview"
 body.view-button-front .workspace-leaf-content:is([data-mode="preview"],[data-mode="source"]) .view-header .view-actions>:is([aria-label^="该面板处于编辑视图中"],[aria-label^="Current view: editing"]) {
   opacity: 0.8;
   position: absolute;
-  left:10px;
+  left: 10px;
   top: 3px;
 }
 body.is-mobile.view-button-front .workspace-leaf-content[data-mode='preview'] .view-header .view-actions>:is([aria-label^="该面板处于阅读视图中"],[aria-label^="Current view: reading"]) {
@@ -20763,11 +20797,10 @@ body.view-button-front:not(.remove-custom-svg-icons) .workspace-leaf-content .vi
   opacity:0.6;
 }
  
-body:not(.remove-custom-svg-icons) .workspace-leaf-content[data-type="markdown"] .view-header-icon:hover::before
-{
-content:"👆🏻";
-opacity: 0.6;
-margin-left:-12px;
+body:not(.remove-custom-svg-icons) .workspace-leaf-content[data-type="markdown"] .view-header-icon:hover::before {
+  content:"👆🏻";
+  opacity: 0.6;
+  margin-left: -12px;
 }
 
 
@@ -21008,9 +21041,6 @@ body.toggle-bg-panel-page.panel-page-bg-theme-light-custom.theme-light {
   --panel-page-background-url-theme: var(--background-panel-page-theme-light-custom);
 }
 
-body.is-frameless.background-settings-workplace-background-image .workspace-tab-header-container {
-  border-bottom-color: var(--background-secondary-bg-4-bt);
-}
 
 body.toggle-nonoverlapping-bg .workspace-split.mod-root .view-content {
   background: var(--background-nonoverlapping-note);
@@ -23119,6 +23149,67 @@ body.blockquote-style-border-left :is(.markdown-preview-view,.markdown-rendered)
   border-radius: 0;
 }
 
+body.background-settings-workplace-background-image .titlebar {
+  z-index: 1;
+}
+
+body.background-settings-workplace-background-image.theme-light .titlebar-text,
+body.background-settings-workplace-background-image.theme-dark .titlebar-text {
+  color: var(--text-normal);
+}
+
+body.background-settings-workplace-background-image:not(.simple-titlebar):not(.is-frameless) .titlebar::before {
+  background-image: var(--theme-background);
+  background-size: cover;
+  content: '';
+  display: block;
+  position: absolute;
+  top: -3px;
+  filter: blur(var(--titlebar-blur-depth)) brightness(var(--titlebar-brightness)) opacity(0.5);
+  right: -15px;
+  bottom: 0px;
+  left: -15px;
+}  
+body.background-settings-workplace-background-image:not(.simple-titlebar):not(.is-frameless).theme-dark .titlebar::before {
+  filter: blur(var(--titlebar-blur-depth)) brightness(calc(var(--titlebar-brightness) - 0.5)) opacity(0.5);
+}
+
+body:not(.simple-titlebar).background-settings-workplace-waves-light.theme-light .titlebar::before {
+  content: '';
+  display: block;
+  position: absolute;
+  height:40px;
+	width: 120%;
+  background-image:unset;
+  -webkit-mask-image: var(--theme-background);
+  background-size:100% 100%;
+	opacity:0.5;
+  background-color: var(--wave-background-color);
+} 
+body.background-settings-workplace-background-image:not(.simple-titlebar):not(.is-hidden-frameless) .titlebar {
+  --custom-titlebar-bg: var(--titlebar-background-focused);
+  background-color:  var(--custom-titlebar-bg);
+  border: none;
+}
+
+.titlebar-inner {
+  -webkit-app-region: drag;
+  display: flex;
+  flex-grow: 1;
+  color: var(--text-normal);
+} 
+
+body.simple-titlebar .titlebar {
+  background-color: var(--custom-titlebar-bg);
+  border: none;
+}
+
+body.simple-titlebar .titlebar::before {
+  content: '';
+  background-color: var(--custom-titlebar-bg);
+}
+
+
 /*==========*/
 body.background-settings-workplace-background-image .side-dock-ribbon-tab,
 body.background-settings-workplace-background-image .side-dock-ribbon-action:not(:hover),
@@ -23134,14 +23225,17 @@ body.background-settings-workplace-background-image.theme-dark .workspace::befor
   filter: blur(var(--blur-depth)) brightness(var(--brightness-4-bg)) saturate(var(--saturate-4-bg));
 }
 
-body.background-settings-workplace-background-image:is(.background-settings-workplace-waves-light,.background-settings-workplace-waves2-light).theme-light .workspace {
+body.background-settings-workplace-background-image:is(.background-settings-workplace-waves-light,.background-settings-workplace-waves2-light).theme-light :is(.workspace, .titlebar),
+
+body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image:is(.background-settings-workplace-waves,.background-settings-workplace-waves2).theme-dark .workspace {
   background: var(--simple-white-2);
 }
 
-body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image:is(.background-settings-workplace-waves,.background-settings-workplace-waves2).theme-dark  .workspace {
-  background: var(--simple-white-2);
-}
-body.background-settings-workplace-background-image:is(.background-settings-workplace-waves,.background-settings-workplace-waves2).theme-dark  .workspace {
+body.background-settings-workplace-background-image:is(.background-settings-workplace-waves2,.background-settings-workplace-waves2-light) .titlebar-inner {
+  background-color: var(--background-primary);
+} 
+
+body.background-settings-workplace-background-image:is(.background-settings-workplace-waves,.background-settings-workplace-waves2).theme-dark :is(.workspace,.titlebar) {
   background: var(--background-primary);
 }
 /****from https://www.shapedivider.app/*****/
@@ -23239,72 +23333,6 @@ body.background-settings-workplace-background-image .workspace::before {
   right: -15px;
   bottom: 0;
   left: -15px;
-}
-
-body.background-settings-workplace-background-image .titlebar {
-  z-index: 1;
-}
-
-body.background-settings-workplace-background-image.theme-light .titlebar-text,
-body.background-settings-workplace-background-image.theme-dark .titlebar-text {
-  color: var(--text-normal);
-}
-
-body.background-settings-workplace-background-image:not(.simple-titlebar):not(.is-frameless) .titlebar::before {
-  background-image: var(--theme-background);
-  background-size: cover;
-  content: '';
-  display: block;
-  position: absolute;
-  top: -3px;
-  filter: blur(var(--titlebar-blur-depth)) brightness(var(--titlebar-brightness)) opacity(0.5);
-  right: -15px;
-  bottom: 0px;
-  left: -15px;
-}  
-body.background-settings-workplace-background-image:not(.simple-titlebar):not(.is-frameless).theme-dark .titlebar::before {
-  filter: blur(var(--titlebar-blur-depth)) brightness(calc(var(--titlebar-brightness) - 0.5)) opacity(0.5);
-}
-
-
-body:not(.simple-titlebar).background-settings-workplace-waves-light.theme-light .titlebar::before {
-  content: '';
-  display: block;
-  position: absolute;
-  height:40px;
-	width: 120%;
-  background-image:unset;
-  -webkit-mask-image: var(--theme-background);
-  background-size:100% 100%;
-	opacity:0.5;
-  background-color: var(--wave-background-color);
-} 
-body.background-settings-workplace-background-image:not(.simple-titlebar):not(.is-hidden-frameless) .titlebar {
-  --custom-titlebar-bg: var(--background-secondary);
-  background-color:  var(--custom-titlebar-bg);
-  border: none;
-}
-
-.titlebar-inner {
-  -webkit-app-region: drag;
-  display: flex;
-  flex-grow: 1;
-  color: var(--text-normal);
-} 
-
-body.simple-titlebar .titlebar {
-  background-color: var(--custom-titlebar-bg);
-  border: none;
-}
-
-.titlebar {
-  background-color: var(--titlebar-background-focused);
-  border: none;
-}
-
-body.simple-titlebar .titlebar::before {
-  content: '';
-  background-color: var(--custom-titlebar-bg);
 }
 
 body.background-settings-workplace-background-image.theme-light {
@@ -27470,7 +27498,7 @@ body.title-justify-start .view-header-title-container {
 .menu{
   background-color:var(--color-base-10);
 }
- 
+
 .cm-s-obsidian span.obsidian-search-match-highlight {
   box-shadow: none;
 }
@@ -27733,8 +27761,8 @@ body.tab-title-bar-position .markdown-reading-view .markdown-preview-view {
 body.tab-title-bar-position  .workspace-split.mod-root .workspace-leaf-content[data-type='markdown'] .view-content {
   padding-left: 2.5rem;
 }
-body.tab-title-bar-position .workspace-tabs:not(.mod-stacked) .view-header-title-container.web-browser-header-bar
-{
+
+body.tab-title-bar-position .workspace-tabs:not(.mod-stacked) .view-header-title-container.web-browser-header-bar {
   top: unset;
 }
 
@@ -27782,32 +27810,28 @@ body.hide-titlebar-close-btn.is-hidden-frameless.mod-linux .titlebar-button,
   padding-bottom: 6px;
   align-items: flex-end;
 }
-.theme-light .view-header-title-container.web-browser-header-bar input.web-browser-search-bar
-{
 
+.theme-light .view-header-title-container.web-browser-header-bar input.web-browser-search-bar {
   background-image:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-search'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: 0px 8px;
   background-size: 14px;
   opacity: 0.6;
 }
-.theme-dark .view-header-title-container.web-browser-header-bar input.web-browser-search-bar
-{
-
+.theme-dark .view-header-title-container.web-browser-header-bar input.web-browser-search-bar {
   background-image:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-search'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: 0px 8px;
   background-size: 14px;
   opacity: 0.6;
 }
-.view-header-title-container.web-browser-header-bar input.web-browser-search-bar:focus
-{
+.view-header-title-container.web-browser-header-bar input.web-browser-search-bar:focus {
   opacity: 1;
 }
-.view-header .view-header-title-container.web-browser-header-bar:hover
-{
+.view-header .view-header-title-container.web-browser-header-bar:hover {
   border:none;
 }
+
 .view-header-title-container.web-browser-header-bar .view-header-title-parent:before {
   content: ' ';
   margin-left: 10px;
@@ -27859,16 +27883,15 @@ body.background-settings-workplace-background-image .workspace-split.mod-horizon
   background-color: transparent;
 }
 
-body.is-frameless.background-settings-workplace-background-image .workspace-split .workspace-tab-header-container {
-  border-bottom-color: transparent;
-  border-radius: 0;
+body.toggle-header-bottom-line .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
+  --page-border-bottom: transparent;
 }
-body:not(.show-view-header) .workspace-tabs .workspace-leaf .view-content,
-body.show-view-header .view-header{
+body.toggle-header-bottom-line.show-view-header .view-header {
   --page-border-bottom: transparent;
   border-top-left-radius:var(--radius-m);
   border-top-right-radius: var(--radius-m);
 }
+
 .workspace-split.mod-root .workspace-tab-header-container-inner .workspace-tab-header:first-child {
   margin-left: 1rem;
 }
