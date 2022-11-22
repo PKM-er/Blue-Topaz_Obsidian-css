@@ -20657,6 +20657,10 @@ body.toggle-divider-lines {
   --tab-outline-color: transparent;
 }
 
+body.toggle-divider-lines .workspace-ribbon.mod-left:before {
+  border-bottom: var(--tab-outline-width) transparent;
+}
+
 body.background-settings-workplace-background-image .titlebar, 
 body.background-settings-workplace-background-image .workspace-ribbon.mod-left {
   background: var(--background-secondary);
@@ -23185,8 +23189,8 @@ body:not(.simple-titlebar).background-settings-workplace-waves-light.theme-light
   background-color: var(--wave-background-color);
 } 
 body.background-settings-workplace-background-image:not(.simple-titlebar):not(.is-hidden-frameless) .titlebar {
-  --custom-titlebar-bg: var(--titlebar-background-focused);
-  background-color:  var(--custom-titlebar-bg);
+  --custom-titlebar-bg: var(--background-primary);
+  background-color: var(--custom-titlebar-bg);
   border: none;
 }
 
@@ -23229,10 +23233,12 @@ body.background-settings-workplace-background-image:is(.background-settings-work
   background: var(--simple-white-2);
 }
 
-body.background-settings-workplace-background-image:is(.background-settings-workplace-waves2,.background-settings-workplace-waves2-light):not(.is-hidden-frameless) .titlebar-inner,
+body.background-settings-workplace-background-image:is(.background-settings-workplace-waves-light,.background-settings-workplace-waves,.background-settings-workplace-waves2,.background-settings-workplace-waves2-light):not(.is-hidden-frameless) .titlebar-inner,
 body.background-settings-workplace-background-image:is(.background-settings-workplace-waves,.background-settings-workplace-waves2).theme-dark .workspace {
   background: var(--background-primary);
 }
+
+
 /****from https://www.shapedivider.app/*****/
 body.background-settings-workplace-background-image.background-settings-workplace-waves-light.theme-light .workspace:before,
 body.background-settings-workplace-background-image.background-settings-workplace-waves.theme-dark .workspace:before {
