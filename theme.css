@@ -20461,7 +20461,9 @@ body.dialogue-style-wechat .chat-view-align-right .chat-view-message:after {
   border-top-right-radius: 2px;
   border-bottom-left-radius: 0;
 }
-body.dialogue-style-wechat .chat-view-message {
+body.dialogue-style-wechat .chat-view-message,
+body.dialogue-style-wechat .chat-view-bubble> :not(:is(h1,h2,h3,h4,h5,h6,sub))
+{
   background: #fff;
   padding: 12px 18px;
   font-size: large;
@@ -20485,7 +20487,7 @@ body.dialogue-style-wechat.theme-dark .chat-view-align-center .chat-view-message
   background: #3cb676;
 }
 
-body.dialogue-style-wechat .chat-view-message:after {
+body.dialogue-style-wechat .chat-view-bubble> :not(:is(h1,h2,h3,h4,h5,h6,sub)):after {
   content: '';
   background: #fff;
   width: 12px;
@@ -25544,7 +25546,10 @@ color: rgb(var(--callout-color));
   border-radius: var(--radius-m);
   flex-wrap: wrap;
 }
-
+.callout.callout[data-callout*="kanban"] li  .list-bullet{
+display: none;
+}
+ 
 .callout.callout[data-callout*="kanban"] ul>li {
   flex: 1 1 20%;
   padding: 0.1em 1em 0.1em 0.8em;
@@ -25561,10 +25566,7 @@ color: rgb(var(--callout-color));
   margin-left: auto;
 }
 
-.callout.callout[data-callout*="kanban"] ul .list-collapse-indicator.collapse-indicator.collapse-icon {
-  margin-left: -1.2em;
-}
-
+ 
 .callout.callout[data-callout*="kanban"] ul .list-collapse-indicator.collapse-indicator.collapse-icon::before {
   color: var(--text-accent);
   transition: transform 10ms linear 0s;
