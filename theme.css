@@ -3132,6 +3132,7 @@ settings:
     id: toggle-icon-anima
     title: Toggle clickable-icons' hovering animation
     title.zh: 取消按钮图标的鼠标悬浮动画效果
+    description.zh: 是否开启图标背景动画以及图标悬浮动画效果
     type: class-toggle
     default: false    
   -
@@ -8821,6 +8822,11 @@ body.color-scheme-options-simplicity-topaz.theme-dark {
 body.color-scheme-options-simplicity-topaz:not(.background-settings-workplace-background-image) {
 	--background-secondary:	var(--simple-white-2);
 }
+
+body.theme-dark.color-scheme-options-simplicity-topaz .workspace-tab-header.is-active {
+  --tab-background-active: var(--simple-gray-5);
+  --tab-outline-width: var(--simple-gray-5);
+}
 /*
 --------------------------- 
 	Title Bar
@@ -8872,9 +8878,10 @@ body.color-scheme-options-simplicity-topaz .workspace-tab-header-container {
 	z-index: 1;
 	/* height:1px; */
 	transition: opacity 0.1s;
-	border-radius: var(--button-radius);
+	/* border-radius: var(--button-radius); */
 	box-shadow: none;
 	width: 100%;
+  border-bottom: var(--tab-outline-width) transparent;
 }
 body.color-scheme-options-simplicity-topaz .modal,
 body.color-scheme-options-simplicity-topaz .modal-container .prompt {
@@ -10422,6 +10429,10 @@ p {
 }
 
 
+:is(.markdown-preview-view,.markdown-rendered) :is(ol,ul) {
+  margin-block-start: calc((var(--paragraph-spacing) - 1)*1em);
+  margin-block-end: calc((var(--paragraph-spacing) - 1)*1em);
+}
 body.toggle-paragraph-spacing :is(.markdown-preview-view,.markdown-rendered) p>br {
   content:" ";
   margin-top: calc((var(--paragraph-spacing) - 1)*1em);
@@ -17375,16 +17386,16 @@ body.style-options-for-admonition-plugin :is(.admonition-col2, .admonition-col3,
 body.style-options-for-admonition-plugin :is(.callout.admonition-col2,.callout.admonition-col3,.callout.admonition-col4,.callout.admonition-flex)>.admonition-content>ul {
   margin-left: auto;
 }
-body.style-options-for-admonition-plugin .admonition-col2 .admonition-content ul,
-body.style-options-for-admonition-plugin .admonition-col3 .admonition-content ul,
-body.style-options-for-admonition-plugin .admonition-col4 .admonition-content ul,
-body.style-options-for-admonition-plugin .admonition-flex .admonition-content ul {
+body.style-options-for-admonition-plugin .admonition-col2 .admonition-content>ul,
+body.style-options-for-admonition-plugin .admonition-col3 .admonition-content>ul,
+body.style-options-for-admonition-plugin .admonition-col4 .admonition-content>ul,
+body.style-options-for-admonition-plugin .admonition-flex .admonition-content>ul {
   padding-inline-start: 20px !important;
   margin-left: -20px;
   margin-block-start:0;
 }
  
-body.style-options-for-admonition-plugin :is(.admonition-flex,.admonition-col2,.admonition-col3,.admonition-col4) .admonition-content .admonition-content ul>li{
+body.style-options-for-admonition-plugin :is(.admonition-flex,.admonition-col2,.admonition-col3,.admonition-col4) .admonition-content .admonition-content>ul>li{
   list-style-type: none;
   padding:0;
 }
@@ -18721,7 +18732,7 @@ pre.code-block-pre__has-linenum {
   padding: 0;
   min-height: unset;
 }
-.code-block-wrap > pre  pre:not([closed]) + code[class*=language-] {
+div.code-block-wrap > pre  pre:not([closed]) + code[class*=language-] {
   padding-bottom:  1em !important;
 }
 
@@ -20657,7 +20668,12 @@ body.toggle-divider-lines {
   --tab-outline-color: transparent;
 }
 
+
+
 body.toggle-divider-lines .workspace-ribbon.mod-left:before {
+  border-bottom: var(--tab-outline-width) transparent;
+}
+body.toggle-divider-lines  .workspace-tab-header-container{
   border-bottom: var(--tab-outline-width) transparent;
 }
 
@@ -27382,12 +27398,12 @@ body.colorful-ordered-list ul ul ul ul ul ul ul ol li::marker {
 }
 
 
-div.nav-header:hover {
+body:not(.toggle-icon-anima)  div.nav-header:hover {
   background: linear-gradient(135deg,  hsla(calc(var(--accent-h)),var(--accent-s),var(--accent-l),0.08), hsla(calc(var(--accent-h) + 60),var(--accent-s),var(--accent-l),0.08), hsla(calc(var(--accent-h) + 120),var(--accent-s),var(--accent-l),0.08), hsla(calc(var(--accent-h) + 180),var(--accent-s),var(--accent-l),0.08), hsla(calc(var(--accent-h) + 240),var(--accent-s),var(--accent-l),0.08), hsla(calc(var(--accent-h) + 300),var(--accent-s),var(--accent-l),0.08));
   animation: huerotate-1 3s infinite reverse;
 }
 
-.theme-dark div.nav-header:hover {
+body:not(.toggle-icon-anima).theme-dark div.nav-header:hover {
   background: linear-gradient(135deg,  hsla(calc(var(--accent-h)),var(--accent-s),var(--accent-l),0.15), hsla(calc(var(--accent-h) + 60),var(--accent-s),var(--accent-l),0.15), hsla(calc(var(--accent-h) + 120),var(--accent-s),var(--accent-l),0.15), hsla(calc(var(--accent-h) + 180),var(--accent-s),var(--accent-l),0.15), hsla(calc(var(--accent-h) + 240),var(--accent-s),var(--accent-l),0.15), hsla(calc(var(--accent-h) + 300),var(--accent-s),var(--accent-l),0.15));
   animation: huerotate-1 3s infinite reverse;
 }
@@ -27843,12 +27859,16 @@ body.hide-titlebar-close-btn.is-hidden-frameless.mod-linux .titlebar-button,
  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-search'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
 }
  /* ====web-browser==== */
-.view-header-title-container.web-browser-header-bar  +  .view-actions .view-action {
+ .workspace-leaf-content[data-type$="web-browser-view"]  .view-actions .view-action {
   opacity: 1 !important;
 }
-.view-header-title-container.web-browser-header-bar  +  .view-actions .view-action[aria-label="切换视图"] {
+.workspace-leaf-content[data-type$="web-browser-view"] .view-actions>a:not([class*="-web-browser"]) {
   display: none;
 }
+.workspace-leaf-content:not([data-type$="web-browser-view"])  .view-actions>a[class*="-web-browser"]{
+  display: none;
+}
+
 
 .view-header-title-container.web-browser-header-bar input {
   padding: 0 10px 0 19px;
@@ -27862,7 +27882,7 @@ body.hide-titlebar-close-btn.is-hidden-frameless.mod-linux .titlebar-button,
   color: var(--interactive-accent-hover);
   border-radius: 6px;
 }
- /* ====web-browser==== */
+ /* ==End==web-browser==== */
 
  /* ====new style==== */
 body.background-settings-workplace-background-image.workspace > .workspace-leaf, .workspace > .workspace-split {
