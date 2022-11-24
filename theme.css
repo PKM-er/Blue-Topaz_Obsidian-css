@@ -17386,16 +17386,16 @@ body.style-options-for-admonition-plugin :is(.admonition-col2, .admonition-col3,
 body.style-options-for-admonition-plugin :is(.callout.admonition-col2,.callout.admonition-col3,.callout.admonition-col4,.callout.admonition-flex)>.admonition-content>ul {
   margin-left: auto;
 }
-body.style-options-for-admonition-plugin .admonition-col2 .admonition-content ul,
-body.style-options-for-admonition-plugin .admonition-col3 .admonition-content ul,
-body.style-options-for-admonition-plugin .admonition-col4 .admonition-content ul,
-body.style-options-for-admonition-plugin .admonition-flex .admonition-content ul {
+body.style-options-for-admonition-plugin .admonition-col2 .admonition-content>ul,
+body.style-options-for-admonition-plugin .admonition-col3 .admonition-content>ul,
+body.style-options-for-admonition-plugin .admonition-col4 .admonition-content>ul,
+body.style-options-for-admonition-plugin .admonition-flex .admonition-content>ul {
   padding-inline-start: 20px !important;
   margin-left: -20px;
   margin-block-start:0;
 }
  
-body.style-options-for-admonition-plugin :is(.admonition-flex,.admonition-col2,.admonition-col3,.admonition-col4) .admonition-content .admonition-content ul>li{
+body.style-options-for-admonition-plugin :is(.admonition-flex,.admonition-col2,.admonition-col3,.admonition-col4) .admonition-content .admonition-content>ul>li{
   list-style-type: none;
   padding:0;
 }
