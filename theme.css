@@ -10034,7 +10034,7 @@ body:not(.tag-default) .cm-s-obsidian span.cm-hashtag-begin+.cm-hashtag.cm-meta 
 }
 
 body:is(.rainbow-tag,.tag-pill-outlined,.tag-clear-style,.colorful-tag-bt) .cm-s-obsidian span:is(.cm-hashtag,.cm-hashtag-begin,.cm-hashtag-end,.cm-hashtag-begin+.cm-hashtag.cm-meta,.cm-hashtag-begin+.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-hashtag-end) {
-  color: var(--tag-text) !important;
+  color: var(--tag-text) ;
 }
 
 
@@ -20666,6 +20666,7 @@ body.background-settings-workplace-background-image .workspace-tab-header-contai
 body.toggle-divider-lines {
   --divider-color: transparent;
   --tab-outline-color: transparent;
+  --tab-divider-color: transparent;
 }
 
 
@@ -27885,10 +27886,12 @@ body.hide-titlebar-close-btn.is-hidden-frameless.mod-linux .titlebar-button,
  /* ==End==web-browser==== */
 
  /* ====new style==== */
-body.background-settings-workplace-background-image.workspace > .workspace-leaf, .workspace > .workspace-split {
+body.background-settings-workplace-background-image.workspace > .workspace-leaf {
   background-color: transparent;
 }
-
+.workspace > .workspace-split {
+  background-color: var(--background-secondary-alt);
+}
 body.background-settings-workplace-background-image .workspace-tab-container-before.is-before-active, 
 body.background-settings-workplace-background-image .workspace-tab-container-after.is-after-active, 
 body.background-settings-workplace-background-image .workspace-tab-header.is-before-active,
