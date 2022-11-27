@@ -4526,14 +4526,6 @@ settings:
     default-light: '#ffcb6b'
     default-dark: '#ffcb6b'
   -
-    id: code-language
-    title: Code Block language Color
-    description: code block language color 
-    type: variable-themed-color
-    format: hex
-    default-light: '#ff5370'
-    default-dark: '#ff5370'
-  -
 */
 
 @font-face {
@@ -11970,8 +11962,7 @@ body {
  --code-tag: var( --purple);
  --code-operator: var(--code-property);
  --code-hr: var(--code-punctuation);
- --code-string-2: var(--code-string);
- --code-language: var(--text-muted);
+ --code-string2: var(--code-string);
  --code-attribute: var(--code-function);
  --code-atom: var(--orange-1);
  --code-comment: var(--darkgreen);
@@ -12245,7 +12236,7 @@ span.cm-def
   color: var(--code-hr);
 }
 .cm-string-2 {
-  color: var(--code-string-2);
+  color: var(--code-string2);
 }
 
 .cm-s-obsidian .cm-hmd-frontmatter.cm-atom,
@@ -12284,7 +12275,7 @@ span.cm-def
 }
 
 .markdown-preview-view pre code span.punctuation {
-  color: var(--code-punctuation);
+  color: var(--code-foreground-color);
 }
 
 .markdown-preview-view pre code span.operator {
@@ -12492,14 +12483,9 @@ code[class*="language-"] ::selection {
 }
 
 .cm-formatting.cm-formatting-code-block.cm-hmd-codeblock {
-  color: var(--code-language); 
+  color: var(--text-muted);
 }
-.cm-hmd-frontmatter {
-  color: var(--code-normal); 
-}
-.cm-hmd-frontmatter.cm-string {
-  color: var(--code-string); 
-}
+
 /*bold code text except code language*/
 :not(pre)>code:not([class*='language-']) {
   font-weight: var(--font-weight-inline-code);
@@ -18813,12 +18799,6 @@ div.code-block-wrap > pre  pre:not([closed]) + code[class*=language-] {
   opacity: 0.35;
   font-size: 12px;
 }
-.obsidian-embedded-code-title__code-block-title .langName {
-  color: var(--code-language);
-}
-.obsidian-embedded-code-title__code-block-title .collapser .handle {
-  margin-top: 10px;
-}
 .obsidian-embedded-code-title__code-block-title[closed] .langName {
   opacity: 0.75;
   font-size: 12px;
@@ -20608,7 +20588,7 @@ body.dialogue-style-chat .dialogue-plugin-message-title {
 }
 
 .markdown-source-view.is-live-preview span.code-block-flair {
-  color: var(--code-language);
+  color: #95a3b5;
 }
 
 .markdown-source-view.is-live-preview .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line {
@@ -27735,7 +27715,7 @@ body.hide-left-ribbon-retention-drawer .mod-left-split .workspace-tab-header-con
 {
   padding-left: 12px;
 }
-body.hide-left-ribbon-retention-drawer.is-focused:not(.background-settings-workplace-background-image) .workspace-tabs.mod-top {
+body.hide-left-ribbon-retention-drawer.is-focused .workspace-tabs.mod-top {
   background: var(--background-secondary-alt);
 }
 body.stack-tab-text-ori-mixed .workspace-tab-header-inner-title {
@@ -27928,7 +27908,7 @@ body.hide-titlebar-close-btn.is-hidden-frameless.mod-linux .titlebar-button,
 body.background-settings-workplace-background-image.workspace > .workspace-leaf {
   background-color: transparent;
 }
-body:not(.color-scheme-options-simplicity-topaz) .workspace > .workspace-split {
+.workspace > .workspace-split {
   background-color: var(--background-secondary-alt);
 }
 body.background-settings-workplace-background-image .workspace-tab-container-before.is-before-active, 
