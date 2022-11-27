@@ -725,6 +725,21 @@ settings:
     type: class-toggle
     default: false
   -
+    id: top-bottom-style
+    title: Top-bottom style
+    title.zh: 左侧边栏不与上方颜色一致
+    type: class-toggle
+    default: false
+  - 
+    id: background-titlebar-inner
+    title: Top titlebar background color
+    title.zh: 上方颜色
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
     id: background-settings
     title: 2. Detail Settings
     title.zh: 2. 细节设置
@@ -5187,6 +5202,8 @@ body.all-dark .print.theme-light,
   --background-nonoverlapping-note: #000000;
   --stripe-notebook-stripe-color: #162419;
   --prompt-box-shadow: #555555;
+
+  --background-titlebar-inner: transparent;
 }
 
 .theme-light {
@@ -5529,6 +5546,8 @@ body.all-dark .print.theme-light,
   --stripe-notebook-stripe-color: #f5f2e6;
   --background-nonoverlapping-note: #ffffff;
   --prompt-box-shadow: #bebebe;
+
+  --background-titlebar-inner: transparent
 }
 
 body.color-scheme-options-avocado-topaz .theme-light,
@@ -20540,10 +20559,27 @@ body.dialogue-style-chat .dialogue-plugin-message-title {
   caret-color: var(--cursor-color);
 }
 
-.workspace-ribbon.side-dock-ribbon.mod-left,
-.workspace-ribbon.side-dock-ribbon.mod-right,
-.nav-folder.mod-root>.nav-folder-title {
-  background-color: var(--background-primary);
+body:not(.top-bottom-style) .workspace-ribbon.side-dock-ribbon.mod-left,
+body:not(.top-bottom-style) .workspace-ribbon.side-dock-ribbon.mod-right,
+body:not(.top-bottom-style) .nav-folder.mod-root>.nav-folder-title {
+  background-color: var(--background-secondary-alt);
+}
+
+body.top-bottom-style .titlebar::after, 
+body.top-bottom-style .titlebar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--background-titlebar-inner);
+}
+
+body.background-settings-workplace-background-image .workspace-ribbon.side-dock-ribbon.mod-left,
+body.background-settings-workplace-background-image .workspace-ribbon.side-dock-ribbon.mod-right,
+body.background-settings-workplace-background-image .nav-folder.mod-root>.nav-folder-title {
+  background-color: var(--background-secondary);
 }
 
 /*==== separators =====*/
@@ -26435,7 +26471,7 @@ body:not(.remove-selectionbackground) .markdown-source-view.mod-cm6 .cm-editor .
   border-color: var(--background-modifier-border);
   border-style: solid;
   border: none; 
-  --tab-background-active: var(--background-primary);
+  z-index: 100;
 }
 
 /*
