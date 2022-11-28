@@ -9130,7 +9130,8 @@ display: none;
 }
 body:not(.is-mobile).color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-split.mod-root,
 body:not(.is-mobile).color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .mod-root .workspace-tabs .workspace-tab-header-container,
-body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-tabs.mod-top
+body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-tabs.mod-top,
+body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-tabs
 {
   background-color: var(--simple-tran);
 }
@@ -23451,7 +23452,7 @@ body.background-settings-workplace-background-image.background-settings-workplac
   --theme-background: var(--leaf);
 }
 
-body.background-settings-workplace-background-image.theme-dark:not(.is-mobile) {
+body.background-settings-workplace-background-image.theme-dark {
   --background-primary-bg-4-bt: #1414148a;
   --background-secondary-bg-4-bt: #16161680;
   --background-secondary-alt-bg-4-bt: #16161680;
