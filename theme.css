@@ -18894,6 +18894,14 @@ pre.code-block-pre__has-linenum::before {
 
 
 /* ================================== */
+/* ============== Make.md ============= */
+/* ================================== */
+body.mk-mark-sans #calendar-container
+{
+  margin: -10px -8px 0px -8px;
+}
+
+/* ================================== */
 /* ============== Memos ============= */
 /* ================================== */
 div[data-type="memos_view"] .memo-editor-wrapper > .memo-editor textarea {
