@@ -9117,22 +9117,26 @@ body:not(.is-mobile).color-scheme-options-simplicity-topaz:not(.background-setti
 }
 
 body:not(.is-mobile).color-scheme-options-simplicity-topaz .workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
-body:not(.is-mobile).color-scheme-options-simplicity-topaz .mod-root .workspace-tabs .workspace-leaf {
+body:not(.is-mobile).color-scheme-options-simplicity-topaz .mod-root .workspace-tabs .workspace-leaf,
+body:not(.is-mobile).color-scheme-options-simplicity-topaz .mod-root .workspace-tabs .workspace-tab-header-container {
   background-color: transparent;
 }
-body:not(.is-mobile).color-scheme-options-simplicity-topaz .workspace-split.mod-root,
-body:not(.is-mobile).color-scheme-options-simplicity-topaz .mod-root .workspace-tabs,
-body:not(.is-mobile).color-scheme-options-simplicity-topaz .mod-root .workspace-tabs .workspace-tab-header-container  {
-  background-color: var(--background-secondary);
-}
+ 
 body.color-scheme-options-simplicity-topaz .workspace-split.mod-root .workspace-tab-header.is-active::before,
 body.color-scheme-options-simplicity-topaz.workspace-split.mod-root .workspace-tab-header.is-active::after {
 display: none;
 }
-body:not(.is-mobile).color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-split.mod-root,
-body:not(.is-mobile).color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .mod-root .workspace-tabs .workspace-tab-header-container,
-body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-tabs.mod-top,
-body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-tabs
+body:not(.is-mobile).color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-split.mod-root
+{
+  background-color: var(--simple-tran);
+}
+body.color-scheme-options-simplicity-topaz .workspace-split.mod-root
+{
+  background-color: var(--simple-white-2);
+}
+body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-tabs,
+body.theme-dark.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-ribbon.side-dock-ribbon.mod-left,
+body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image div.workspace-ribbon.mod-left:before
 {
   background-color: var(--background-secondary-bg-4-bt);
 }
@@ -9266,7 +9270,7 @@ body.color-scheme-options-simplicity-topaz.background-settings-workplace-backgro
 }
 body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image.theme-dark {
   --background-primary-alt-bg-4-bt: var(--simple-tran);
-   /* --background-secondary-bg-4-bt: var(--simple-tran);  */
+   --background-secondary-bg-4-bt: var(--simple-tran);  
   --background-secondary-alt-bg-4-bt: var(--simple-tran);
 }
 
@@ -9291,6 +9295,17 @@ body.color-scheme-options-simplicity-topaz:not(.view-button-front) .workspace-le
 body.color-scheme-options-simplicity-topaz .workspace-leaf-content .view-header .view-header-icon svg {
   opacity: 0;
 }
+body.color-scheme-options-simplicity-topaz .workspace-tab-container-before.is-before-active, 
+body.color-scheme-options-simplicity-topaz .workspace-tab-container-after.is-after-active,
+ .workspace-tab-header.is-before-active, 
+body.color-scheme-options-simplicity-topaz .workspace-tab-header.is-after-active, 
+body.color-scheme-options-simplicity-topaz .workspace-split.mod-right-split .workspace-tabs .workspace-leaf, 
+body.color-scheme-options-simplicity-topaz .workspace-split.mod-left-split .workspace-tabs .workspace-leaf,
+body.color-scheme-options-simplicity-topaz .workspace-tabs .workspace-tab-header-container
+{
+  background-color: var(--background-secondary-alt);
+}
+
 /*==============*/
 /*==============*/
 /*======@cuman--end========*/
@@ -18893,8 +18908,6 @@ pre.code-block-pre__has-linenum::before {
   background-color: none;
   box-shadow: var(--window-shadow);
 }
-
-
 /* ================================== */
 /* ============== Make.md ============= */
 /* ================================== */
@@ -20663,14 +20676,13 @@ body.theme-light.background-settings-workplace-background-image .nav-folder.mod-
   background-color: var(--background-secondary);
 }
 body.theme-dark.background-settings-workplace-background-image .workspace-ribbon.side-dock-ribbon.mod-left,
-body.theme-dark.background-settings-workplace-background-image .workspace-ribbon.side-dock-ribbon.mod-right
+body.theme-dark.background-settings-workplace-background-image .workspace-ribbon.side-dock-ribbon.mod-right,
+body.background-settings-workplace-background-image div.workspace-ribbon.mod-left:before
  {
   background-color: var(--background-primary-alt);
 }
-body.background-settings-workplace-background-image div.workspace-ribbon.mod-left:before
-{
-  background: var(--background-primary-alt);
-}
+
+
 /*==== separators =====*/
 body.asymmetric-split-left .workspace-split.mod-horizontal.mod-left-split .workspace-leaf {
   background-color: var(--background-asymm-split-left);
@@ -20730,7 +20742,7 @@ body.asymmetric-split-left .workspace-split.mod-left-split .workspace-tab-header
 
 body:not(.color-scheme-options-simplicity-topaz) .workspace-ribbon.mod-left:before,
 body:not(.color-scheme-options-simplicity-topaz) .workspace-split.mod-root,
-body:not(.is-focused):not(.color-scheme-options-simplicity-topaz) .workspace-tabs.mod-top {
+body:not(.color-scheme-options-simplicity-topaz) .workspace-tabs {
   background: var(--background-secondary-alt);
 }
 
@@ -20746,15 +20758,12 @@ body.background-settings-workplace-background-image .workspace {
 }
 
 body.background-settings-workplace-background-image .workspace-ribbon.mod-left:before,
-body:not(.color-scheme-options-simplicity-topaz).background-settings-workplace-background-image .workspace-split.mod-root,
-body:not(.is-focused).background-settings-workplace-background-image .workspace-tabs.mod-top,
+body.background-settings-workplace-background-image .workspace-tabs,
 body.background-settings-workplace-background-image .workspace-tab-header-container {
   background: var(--background-secondary);
 }
 
-body:not(.color-scheme-options-simplicity-topaz).background-settings-workplace-background-image .workspace-tabs.mod-top.mod-active {
-  background: var(--background-secondary-alt);
-}
+ 
 
 body.toggle-divider-lines {
   --divider-color: transparent;
@@ -21522,11 +21531,16 @@ body.background-image-settings-switch.background-image-settings-markdown-page-ra
 
 
 body.background-image-settings-switch.background-image-settings-markdown-page-transparent .workspace-split.mod-root {
-  --background-primary: var(--background-secondary);
-  --tab-outline-color:var(--background-secondary);
+  --background-primary: transparent;
+ 
+  --tab-outline-color:transparent;
 }
 
+body.background-image-settings-switch.background-image-settings-markdown-page-transparent.theme-dark .workspace-split.mod-root .workspace-tab-header.is-active
+{
 
+background-color: transparent;
+}
 body.background-image-settings-switch.background-image-settings-markdown-page-transparent .mod-root .workspace-tabs .workspace-leaf {
   background-color: unset;
 }
@@ -26573,7 +26587,12 @@ body:not(.remove-selectionbackground) .markdown-source-view.mod-cm6 .cm-editor .
   border-style: solid;
   border: none; 
   z-index: 30;
+  color: var(--text-normal);
 }
+.is-focused .workspace-tab-header {
+  color: var(--text-muted);
+}
+
 
 /*
 .workspace-tabs.mod-stacked .view-header,
@@ -28064,10 +28083,7 @@ body.theme-light .workspace-split.mod-root .workspace-tab-header.is-active.mod-a
 body.theme-dark .workspace-split.mod-root .workspace-tab-header.is-active.mod-active {
   background-color: var(--background-secondary);
 }
-.workspace-split.mod-root .workspace-tab-header.is-active::before, 
-.workspace-split.mod-root .workspace-tab-header.is-active::after {
-  box-shadow: inset 0 0 0 var(--tab-outline-width) var(--tab-outline-color), 0 0 0 calc(var(--tab-curve) * 4) var(--background-secondary);
-}
+ 
 
 
 body.background-settings-workplace-background-image .workspace-split.mod-root .workspace-tab-header.is-active::before, 
