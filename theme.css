@@ -24903,7 +24903,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   th, 
   td {
     white-space: pre-wrap !important; 
-    word-break: break-word !important; 
+    /* word-break: break-word !important;  */
     overflow-wrap: break-word !important; 
   }
 
