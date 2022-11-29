@@ -8877,6 +8877,7 @@ body.theme-dark.color-scheme-options-simplicity-topaz .workspace-tab-header.is-a
 body.color-scheme-options-simplicity-topaz.background-image-settings-switch.background-image-settings-markdown-page-transparent  {
   --background-secondary: var(--simple-tran);
   --background-primary: var(--simple-tran);
+  --background-secondary-bg-4-bt: var(--simple-tran);  
   --tab-outline-color: var(--background-secondary);
 }
 
@@ -9133,7 +9134,7 @@ body:not(.is-mobile).color-scheme-options-simplicity-topaz.background-settings-w
 body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-tabs.mod-top,
 body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-tabs
 {
-  background-color: var(--simple-tran);
+  background-color: var(--background-secondary-bg-4-bt);
 }
 
 body.color-scheme-options-simplicity-topaz.background-image-settings-switch.background-image-settings-markdown-page-transparent .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
@@ -9265,7 +9266,7 @@ body.color-scheme-options-simplicity-topaz.background-settings-workplace-backgro
 }
 body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image.theme-dark {
   --background-primary-alt-bg-4-bt: var(--simple-tran);
-  --background-secondary-bg-4-bt: var(--simple-tran);
+   /* --background-secondary-bg-4-bt: var(--simple-tran);  */
   --background-secondary-alt-bg-4-bt: var(--simple-tran);
 }
 
@@ -14723,8 +14724,9 @@ body.nowrap-outline .outline .tree-item-inner {
 }
 
 /*setting panel*/
-.modal {
-  background-color: var(--color-base-20);
+
+.modal  .modal-title {
+  margin-left: 1em;
 }
 .modal-content .cmdr-setting-content
 {
@@ -23433,11 +23435,13 @@ body.background-settings-workplace-background-image.theme-light {
 }
 
 body.background-settings-workplace-background-image.theme-light .modal-container {
-  --background-primary: #ffffff
+  --background-primary: #ffffff;
+  --background-secondary:#ffffffbe;
 }
 
 body.background-settings-workplace-background-image.theme-dark .modal-container {
-  --background-primary: #202020
+  --background-primary: #202020;
+    --background-secondary:#16161690;
 }
 
 body.background-settings-workplace-background-image.background-settings-workplace-theme-light-blue-mountain.theme-light {
