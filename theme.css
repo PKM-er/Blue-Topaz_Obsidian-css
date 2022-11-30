@@ -12001,9 +12001,12 @@ div.math.math-block mjx-math{
 
 :is(.markdown-preview-view,.markdown-rendered) pre {
   background-color: var(--background-code);
-  padding: 18px 1.5em;
+  padding: 1em 1.5em;
 }
-
+:is(.markdown-preview-view,.markdown-rendered) pre[class*="language-"]
+{
+  padding: 1em 0.5em;
+}
 :is(.markdown-preview-view,.markdown-rendered) code {
   vertical-align: auto;
   background-color: var(--background-code-2) ;
