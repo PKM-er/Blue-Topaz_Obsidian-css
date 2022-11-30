@@ -27994,6 +27994,7 @@ body.hide-titlebar-close-btn.is-hidden-frameless.mod-linux .titlebar-button,
   opacity: 0.6;
   padding: 0 0 0 22px;
   border: none;
+  background-color: transparent;
 }
 .view-header-title-container:is(.web-browser-header-bar,.wb-header-bar)  input:is(.web-browser-search-bar,.wb-search-bar):focus {
   opacity: 1;
@@ -28028,8 +28029,13 @@ body.hide-titlebar-close-btn.is-hidden-frameless.mod-linux .titlebar-button,
   display: none;
 }
 
-
-
+ .wb-page-search-bar-input-container input.wb-page-search-bar-input{
+  background-color: var(--background-secondary);
+box-shadow: var(--window-shadow2);
+}
+.wb-page-search-bar-input-container input.wb-page-search-bar-input:not(:hover){
+ border:none;
+}
 .view-header-title-container.web-browser-header-bar input {
   padding: 0 10px 0 19px;
   border: 0;
