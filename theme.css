@@ -4870,6 +4870,7 @@ body {
 
   --font-weight-strong: bold;
   --font-style-em: italic;
+  --code-background: var(--background-code);
 }
 
 body.all-dark .print.theme-light,
@@ -9287,6 +9288,7 @@ body.color-scheme-options-simplicity-topaz.is-frameless.background-settings-work
 body.color-scheme-options-simplicity-topaz .workspace-leaf-content .view-header .view-header-icon {
   margin-left: -10px;
   opacity: 0;
+  width:18px;
 }
 body.color-scheme-options-simplicity-topaz .workspace-leaf-content .view-header .view-header-icon:hover {
   opacity: 1;
@@ -11998,8 +12000,8 @@ div.math.math-block mjx-math{
 }
 
 :is(.markdown-preview-view,.markdown-rendered) pre {
-  background-color: var(--background-code-2);
-  padding: 18px 8px;
+  background-color: var(--background-code);
+  padding: 18px 1.5em;
 }
 
 :is(.markdown-preview-view,.markdown-rendered) code {
@@ -12009,6 +12011,7 @@ div.math.math-block mjx-math{
 
 :is(.markdown-preview-view,.markdown-rendered) pre code {
   background-color: transparent !important;
+  color:var(--code-normal);
 }
 
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
@@ -12177,6 +12180,7 @@ body.theme-dark.code-theme-bt-default {
   --code-tag: var(--red) ;
   --code-value:  var(--green) ;
   --code-string-2:var(--yellow) ;
+  --code-active-line-background-color: #111111eb;
 }
 body.theme-light.code-theme-bt-default {
   --code-keyword:var(--blue-green);
@@ -27851,8 +27855,7 @@ body.hide-left-ribbon-retention-drawer .workspace-ribbon.mod-left:before,
 body.hide-left-ribbon-retention-drawer .workspace-ribbon.side-dock-ribbon.mod-left,
 body.hide-left-ribbon-retention-drawer .workspace-ribbon.mod-left:hover ~ .workspace-split .workspace-tabs.mod-top .workspace-tab-header-container {
   transition: all 350ms ease-in-out;
-  background: var(--background-secondary-alt);
- 
+
 }
 body.hide-titlebar-close-btn.hide-left-ribbon-retention-drawer .workspace-ribbon.side-dock-ribbon.mod-left .sidebar-toggle-button.mod-left
 {
@@ -27935,10 +27938,10 @@ body.hide-titlebar-close-btn.hide-left-ribbon-retention-drawer .view-header
 }
 body.hide-titlebar-close-btn.hide-left-ribbon-retention-drawer.view-button-front .workspace-leaf-content:is([data-mode="preview"],[data-mode="source"]) .view-header .view-actions>:is([aria-label^="该面板处于编辑视图中"],[aria-label^="Current view: editing"])
 {
-  left:30px
+  left:24px
 }
 body.hide-titlebar-close-btn.hide-left-ribbon-retention-drawer.view-button-front .workspace-leaf-content[data-mode='preview'] .view-header .view-actions>:is([aria-label^="该面板处于阅读视图中"],[aria-label^="Current view: reading"]) {
-  left: 30px;
+  left: 24px;
 }
 body.hide-titlebar-close-btn.hide-left-ribbon.is-hidden-frameless .titlebar-button.mod-logo {
   display: none;
