@@ -4870,6 +4870,7 @@ body {
 
   --font-weight-strong: bold;
   --font-style-em: italic;
+  --code-background: var(--background-code);
 }
 
 body.all-dark .print.theme-light,
@@ -8925,9 +8926,14 @@ body.color-scheme-options-simplicity-topaz .workspace-split.mod-root .workspace-
   border-radius: 6px;
   border-color: var(--background-modifier-border);
   border-style: solid;
-  background-image: linear-gradient(to right, var(--simple-white-6), var(--simple-tran));
+  background-image: unset;
   border-width: 0px;
-  
+}
+body.color-scheme-options-simplicity-topaz .workspace-split.mod-root .workspace-tab-header.is-active {
+  background-image: linear-gradient(to right, var(--tab-background-active), var(--simple-white-2));
+}
+.workspace-split.mod-root .workspace-tab-header.is-active::before, .workspace-split.mod-root .workspace-tab-header.is-active::after {
+  display: none;
 }
 body.color-scheme-options-simplicity-topaz.theme-dark:not(.background-settings-workplace-background-image) .workspace-split.mod-root .workspace-tab-header.is-active.mod-active
 {
@@ -9117,22 +9123,26 @@ body:not(.is-mobile).color-scheme-options-simplicity-topaz:not(.background-setti
 }
 
 body:not(.is-mobile).color-scheme-options-simplicity-topaz .workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
-body:not(.is-mobile).color-scheme-options-simplicity-topaz .mod-root .workspace-tabs .workspace-leaf {
+body:not(.is-mobile).color-scheme-options-simplicity-topaz .mod-root .workspace-tabs .workspace-leaf,
+body:not(.is-mobile).color-scheme-options-simplicity-topaz .mod-root .workspace-tabs .workspace-tab-header-container {
   background-color: transparent;
 }
-body:not(.is-mobile).color-scheme-options-simplicity-topaz .workspace-split.mod-root,
-body:not(.is-mobile).color-scheme-options-simplicity-topaz .mod-root .workspace-tabs,
-body:not(.is-mobile).color-scheme-options-simplicity-topaz .mod-root .workspace-tabs .workspace-tab-header-container  {
-  background-color: var(--background-secondary);
-}
+ 
 body.color-scheme-options-simplicity-topaz .workspace-split.mod-root .workspace-tab-header.is-active::before,
 body.color-scheme-options-simplicity-topaz.workspace-split.mod-root .workspace-tab-header.is-active::after {
 display: none;
 }
-body:not(.is-mobile).color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-split.mod-root,
-body:not(.is-mobile).color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .mod-root .workspace-tabs .workspace-tab-header-container,
-body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-tabs.mod-top,
-body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-tabs
+body:not(.is-mobile).color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-split.mod-root
+{
+  background-color: var(--simple-tran);
+}
+body.color-scheme-options-simplicity-topaz .workspace-split.mod-root
+{
+  background-color: var(--simple-white-2);
+}
+body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-tabs,
+body.theme-dark.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-ribbon.side-dock-ribbon.mod-left,
+body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image div.workspace-ribbon.mod-left:before
 {
   background-color: var(--background-secondary-bg-4-bt);
 }
@@ -9266,7 +9276,7 @@ body.color-scheme-options-simplicity-topaz.background-settings-workplace-backgro
 }
 body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image.theme-dark {
   --background-primary-alt-bg-4-bt: var(--simple-tran);
-   /* --background-secondary-bg-4-bt: var(--simple-tran);  */
+   --background-secondary-bg-4-bt: var(--simple-tran);  
   --background-secondary-alt-bg-4-bt: var(--simple-tran);
 }
 
@@ -9278,6 +9288,7 @@ body.color-scheme-options-simplicity-topaz.is-frameless.background-settings-work
 body.color-scheme-options-simplicity-topaz .workspace-leaf-content .view-header .view-header-icon {
   margin-left: -10px;
   opacity: 0;
+  width:18px;
 }
 body.color-scheme-options-simplicity-topaz .workspace-leaf-content .view-header .view-header-icon:hover {
   opacity: 1;
@@ -9291,6 +9302,17 @@ body.color-scheme-options-simplicity-topaz:not(.view-button-front) .workspace-le
 body.color-scheme-options-simplicity-topaz .workspace-leaf-content .view-header .view-header-icon svg {
   opacity: 0;
 }
+body.color-scheme-options-simplicity-topaz .workspace-tab-container-before.is-before-active, 
+body.color-scheme-options-simplicity-topaz .workspace-tab-container-after.is-after-active,
+ .workspace-tab-header.is-before-active, 
+body.color-scheme-options-simplicity-topaz .workspace-tab-header.is-after-active, 
+body.color-scheme-options-simplicity-topaz .workspace-split.mod-right-split .workspace-tabs .workspace-leaf, 
+body.color-scheme-options-simplicity-topaz .workspace-split.mod-left-split .workspace-tabs .workspace-leaf,
+body.color-scheme-options-simplicity-topaz .workspace-tabs .workspace-tab-header-container
+{
+  background-color: var(--background-secondary-alt);
+}
+
 /*==============*/
 /*==============*/
 /*======@cuman--end========*/
@@ -11978,10 +12000,13 @@ div.math.math-block mjx-math{
 }
 
 :is(.markdown-preview-view,.markdown-rendered) pre {
-  background-color: var(--background-code-2);
-  padding: 18px 8px;
+  background-color: var(--background-code);
+  padding: 1em 1.5em;
 }
-
+:is(.markdown-preview-view,.markdown-rendered) pre[class*="language-"]
+{
+  padding: 1em 0.5em;
+}
 :is(.markdown-preview-view,.markdown-rendered) code {
   vertical-align: auto;
   background-color: var(--background-code-2) ;
@@ -11989,6 +12014,7 @@ div.math.math-block mjx-math{
 
 :is(.markdown-preview-view,.markdown-rendered) pre code {
   background-color: transparent !important;
+  color:var(--code-normal);
 }
 
 .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
@@ -12157,6 +12183,7 @@ body.theme-dark.code-theme-bt-default {
   --code-tag: var(--red) ;
   --code-value:  var(--green) ;
   --code-string-2:var(--yellow) ;
+  --code-active-line-background-color: #111111eb;
 }
 body.theme-light.code-theme-bt-default {
   --code-keyword:var(--blue-green);
@@ -14457,8 +14484,8 @@ body.file-name-wrapped .nav-folder-title-content {
 }
 
 .cm-lineNumbers .cm-active.cm-gutterElement {
-  color: var(--theme-color);
-  background: var(--activeline-background);
+  color: var(--text-accent);
+  /* background: var(--activeline-background); */
 }
 
 /*----file explorer smaller fonts & line height----*/
@@ -18893,8 +18920,6 @@ pre.code-block-pre__has-linenum::before {
   background-color: none;
   box-shadow: var(--window-shadow);
 }
-
-
 /* ================================== */
 /* ============== Make.md ============= */
 /* ================================== */
@@ -20663,14 +20688,13 @@ body.theme-light.background-settings-workplace-background-image .nav-folder.mod-
   background-color: var(--background-secondary);
 }
 body.theme-dark.background-settings-workplace-background-image .workspace-ribbon.side-dock-ribbon.mod-left,
-body.theme-dark.background-settings-workplace-background-image .workspace-ribbon.side-dock-ribbon.mod-right
+body.theme-dark.background-settings-workplace-background-image .workspace-ribbon.side-dock-ribbon.mod-right,
+body.background-settings-workplace-background-image div.workspace-ribbon.mod-left:before
  {
   background-color: var(--background-primary-alt);
 }
-body.background-settings-workplace-background-image div.workspace-ribbon.mod-left:before
-{
-  background: var(--background-primary-alt);
-}
+
+
 /*==== separators =====*/
 body.asymmetric-split-left .workspace-split.mod-horizontal.mod-left-split .workspace-leaf {
   background-color: var(--background-asymm-split-left);
@@ -20730,7 +20754,7 @@ body.asymmetric-split-left .workspace-split.mod-left-split .workspace-tab-header
 
 body:not(.color-scheme-options-simplicity-topaz) .workspace-ribbon.mod-left:before,
 body:not(.color-scheme-options-simplicity-topaz) .workspace-split.mod-root,
-body:not(.is-focused):not(.color-scheme-options-simplicity-topaz) .workspace-tabs.mod-top {
+body:not(.color-scheme-options-simplicity-topaz) .workspace-tabs {
   background: var(--background-secondary-alt);
 }
 
@@ -20746,15 +20770,12 @@ body.background-settings-workplace-background-image .workspace {
 }
 
 body.background-settings-workplace-background-image .workspace-ribbon.mod-left:before,
-body:not(.color-scheme-options-simplicity-topaz).background-settings-workplace-background-image .workspace-split.mod-root,
-body:not(.is-focused).background-settings-workplace-background-image .workspace-tabs.mod-top,
+body.background-settings-workplace-background-image .workspace-tabs,
 body.background-settings-workplace-background-image .workspace-tab-header-container {
   background: var(--background-secondary);
 }
 
-body:not(.color-scheme-options-simplicity-topaz).background-settings-workplace-background-image .workspace-tabs.mod-top.mod-active {
-  background: var(--background-secondary-alt);
-}
+ 
 
 body.toggle-divider-lines {
   --divider-color: transparent;
@@ -21522,11 +21543,16 @@ body.background-image-settings-switch.background-image-settings-markdown-page-ra
 
 
 body.background-image-settings-switch.background-image-settings-markdown-page-transparent .workspace-split.mod-root {
-  --background-primary: var(--background-secondary);
-  --tab-outline-color:var(--background-secondary);
+  --background-primary: transparent;
+ 
+  --tab-outline-color:transparent;
 }
 
+body.background-image-settings-switch.background-image-settings-markdown-page-transparent.theme-dark .workspace-split.mod-root .workspace-tab-header.is-active
+{
 
+background-color: transparent;
+}
 body.background-image-settings-switch.background-image-settings-markdown-page-transparent .mod-root .workspace-tabs .workspace-leaf {
   background-color: unset;
 }
@@ -26573,7 +26599,12 @@ body:not(.remove-selectionbackground) .markdown-source-view.mod-cm6 .cm-editor .
   border-style: solid;
   border: none; 
   z-index: 30;
+  color: var(--text-normal);
 }
+.is-focused .workspace-tab-header {
+  color: var(--text-muted);
+}
+
 
 /*
 .workspace-tabs.mod-stacked .view-header,
@@ -27827,8 +27858,7 @@ body.hide-left-ribbon-retention-drawer .workspace-ribbon.mod-left:before,
 body.hide-left-ribbon-retention-drawer .workspace-ribbon.side-dock-ribbon.mod-left,
 body.hide-left-ribbon-retention-drawer .workspace-ribbon.mod-left:hover ~ .workspace-split .workspace-tabs.mod-top .workspace-tab-header-container {
   transition: all 350ms ease-in-out;
-  background: var(--background-secondary-alt);
- 
+
 }
 body.hide-titlebar-close-btn.hide-left-ribbon-retention-drawer .workspace-ribbon.side-dock-ribbon.mod-left .sidebar-toggle-button.mod-left
 {
@@ -27911,10 +27941,10 @@ body.hide-titlebar-close-btn.hide-left-ribbon-retention-drawer .view-header
 }
 body.hide-titlebar-close-btn.hide-left-ribbon-retention-drawer.view-button-front .workspace-leaf-content:is([data-mode="preview"],[data-mode="source"]) .view-header .view-actions>:is([aria-label^="该面板处于编辑视图中"],[aria-label^="Current view: editing"])
 {
-  left:30px
+  left:24px
 }
 body.hide-titlebar-close-btn.hide-left-ribbon-retention-drawer.view-button-front .workspace-leaf-content[data-mode='preview'] .view-header .view-actions>:is([aria-label^="该面板处于阅读视图中"],[aria-label^="Current view: reading"]) {
-  left: 30px;
+  left: 24px;
 }
 body.hide-titlebar-close-btn.hide-left-ribbon.is-hidden-frameless .titlebar-button.mod-logo {
   display: none;
@@ -27975,6 +28005,7 @@ body.hide-titlebar-close-btn.is-hidden-frameless.mod-linux .titlebar-button,
   opacity: 0.6;
   padding: 0 0 0 22px;
   border: none;
+  background-color: transparent;
 }
 .view-header-title-container:is(.web-browser-header-bar,.wb-header-bar)  input:is(.web-browser-search-bar,.wb-search-bar):focus {
   opacity: 1;
@@ -28009,8 +28040,13 @@ body.hide-titlebar-close-btn.is-hidden-frameless.mod-linux .titlebar-button,
   display: none;
 }
 
-
-
+ .wb-page-search-bar-input-container input.wb-page-search-bar-input{
+  background-color: var(--background-secondary);
+box-shadow: var(--window-shadow2);
+}
+.wb-page-search-bar-input-container input.wb-page-search-bar-input:not(:hover){
+ border:none;
+}
 .view-header-title-container.web-browser-header-bar input {
   padding: 0 10px 0 19px;
   border: 0;
@@ -28064,10 +28100,7 @@ body.theme-light .workspace-split.mod-root .workspace-tab-header.is-active.mod-a
 body.theme-dark .workspace-split.mod-root .workspace-tab-header.is-active.mod-active {
   background-color: var(--background-secondary);
 }
-.workspace-split.mod-root .workspace-tab-header.is-active::before, 
-.workspace-split.mod-root .workspace-tab-header.is-active::after {
-  box-shadow: inset 0 0 0 var(--tab-outline-width) var(--tab-outline-color), 0 0 0 calc(var(--tab-curve) * 4) var(--background-secondary);
-}
+ 
 
 
 body.background-settings-workplace-background-image .workspace-split.mod-root .workspace-tab-header.is-active::before, 
