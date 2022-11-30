@@ -14472,8 +14472,8 @@ body.file-name-wrapped .nav-folder-title-content {
 }
 
 .cm-lineNumbers .cm-active.cm-gutterElement {
-  color: var(--theme-color);
-  background: var(--activeline-background);
+  color: var(--text-accent);
+  /* background: var(--activeline-background); */
 }
 
 /*----file explorer smaller fonts & line height----*/
