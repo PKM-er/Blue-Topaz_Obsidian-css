@@ -8925,9 +8925,14 @@ body.color-scheme-options-simplicity-topaz .workspace-split.mod-root .workspace-
   border-radius: 6px;
   border-color: var(--background-modifier-border);
   border-style: solid;
-  background-image: linear-gradient(to right, var(--simple-white-6), var(--simple-tran));
+  background-image: unset;
   border-width: 0px;
-  
+}
+body.color-scheme-options-simplicity-topaz .workspace-split.mod-root .workspace-tab-header.is-active {
+  background-image: linear-gradient(to right, var(--tab-background-active), var(--simple-white-2));
+}
+.workspace-split.mod-root .workspace-tab-header.is-active::before, .workspace-split.mod-root .workspace-tab-header.is-active::after {
+  display: none;
 }
 body.color-scheme-options-simplicity-topaz.theme-dark:not(.background-settings-workplace-background-image) .workspace-split.mod-root .workspace-tab-header.is-active.mod-active
 {
