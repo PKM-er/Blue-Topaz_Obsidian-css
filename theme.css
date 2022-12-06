@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v1.0.3。uid [20221127] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.0.3, uid [20221127] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.1.0。uid [20221206] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.1.0, uid [20221206] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -16237,7 +16237,7 @@ body.style-options-for-calendar-plugin-style-two #calendar-container tbody tr:nt
 /*copy button for code blocks*/
 /*===========================*/
 button.copy-code-button:not([style="right: 32pt"]) {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAABU0lEQVRYhe2WMU4CQRSG/2eMjQRptQB7j8AJnIbKEq/A2qg0SjRROgauYGljTMALLN7AA7Ak1oRIY7HPYt0IuzPLMgxggK97u2/e/PPv25kBNh0yGSSavQqYqkHEDx2n0FqaANH0SmC8RIqU2k7+1YqAs9rH3uggcw+iMoBD7UDyi75PRESuLoeBT4CeMoPhzXPt5FuVsxt98JXL3hH4cpryduX4HQCE9LQ5BBwBfDXKZRlANZUAgMtAsMJwkt+JGAA6Tn7CtTBWvT9t9IpE5DL4XCdgR636b4Xz8HZR6I7XVKFwIJlwpbaIObBsUjsQ/fa2WLkDWwEz/wWzMq13Vu6AsQAh+10hPdc0nlsAwEwAm8cahPTY9m6XxPr0gGm+xR6wlL/tgbQsrAeCi2RwnUouaacHYvu0kP1HgK91ZWzfC2IO7A+GtwDVQyf+Let7FmwcPzCZvMtlTU3QAAAAAElFTkSuQmCC);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 154, 255, 1);transform: ;msFilter:;"><path d="M20 2H10c-1.103 0-2 .897-2 2v4H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2v-4h4c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM4 20V10h10l.002 10H4zm16-6h-4v-4c0-1.103-.897-2-2-2h-4V4h10v10z"></path><path d="M6 12h6v2H6zm0 4h6v2H6z"></path></svg>');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -21074,6 +21074,17 @@ body:not(.remove-file-icons) .nav-file-title[data-path$=".excalidraw.md"] .nav-f
   /*
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-18 -10 35 39"><path d="M-7-4 0-9M0-9V-9L7-4-7 21-3 14-3 6 1 6-6 6-6 5-5 4 2 4-5 4-7-4ZM1-5C1-6-1-6-1-5-1-4 1-4 1-5ZM10-2-4 23 3 28 9 23 6 5M3 23V11" fill="none" stroke="currentcolor" stroke-width="2.5"></path></svg>');*/
   filter: hue-rotate(135deg);
+}
+
+body:not(.remove-file-icons) .nav-file-title[data-path$=".canvas"] .nav-file-title-content::before { 
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M13 21V11h8v10h-8zM3 13V3h8v10H3zm6-2V5H5v6h4zM3 21v-6h8v6H3zm2-2h4v-2H5v2zm10 0h4v-6h-4v6zM13 3h8v6h-8V3zm2 2v2h4V5h-4z"/></svg>');
+  filter: hue-rotate(-135deg);
+}
+
+body:not(.remove-file-icons) .nav-file-title[data-path$=".canvas"] .nav-file-tag {
+  background-color: var(--theme-color-translucent-01);
+  color: var(--theme-color);
+  filter: hue-rotate(-135deg);
 }
 
 body.dark-background-file:not(.remove-file-icons):not(.folder-style-change-options-colorful) .nav-file-title.is-active[data-path$=".md"]>.nav-file-title-content::before {
