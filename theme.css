@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v1.1.0。uid [20221206] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.1.0, uid [20221206] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.1.0。uid [20221207] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.1.0, uid [20221207] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -8932,11 +8932,12 @@ body.color-scheme-options-simplicity-topaz .workspace-split.mod-root .workspace-
 body.color-scheme-options-simplicity-topaz .workspace-split.mod-root .workspace-tab-header.is-active {
   background-image: linear-gradient(to right, var(--tab-background-active), var(--simple-white-2));
 }
+/*
 .workspace-split.mod-root .workspace-tab-header.is-active::before, .workspace-split.mod-root .workspace-tab-header.is-active::after {
   display: none;
 }
-body.color-scheme-options-simplicity-topaz.theme-dark:not(.background-settings-workplace-background-image) .workspace-split.mod-root .workspace-tab-header.is-active.mod-active
-{
+*/
+body.color-scheme-options-simplicity-topaz.theme-dark:not(.background-settings-workplace-background-image) .workspace-split.mod-root .workspace-tab-header.is-active.mod-active {
   background-color: var(--simple-white-4);
 }
  
@@ -26597,11 +26598,6 @@ body:not(.remove-selectionbackground) .markdown-source-view.mod-cm6 .cm-editor .
   color: var(--theme-color);
 }
 
-.workspace-tabs .view-header {
-  margin: 0;
-  padding: 0 var(--size-4-2);
-}
-
 .workspace-split.mod-root .workspace-tab-header.is-active.mod-active {
   border-color: var(--background-modifier-border);
   border-style: solid;
@@ -27868,8 +27864,7 @@ body.hide-left-ribbon-retention-drawer .workspace-ribbon.mod-left:hover ~ .works
   transition: all 350ms ease-in-out;
 
 }
-body.hide-titlebar-close-btn.hide-left-ribbon-retention-drawer .workspace-ribbon.side-dock-ribbon.mod-left .sidebar-toggle-button.mod-left
-{
+body.hide-titlebar-close-btn.hide-left-ribbon-retention-drawer .workspace-ribbon.side-dock-ribbon.mod-left .sidebar-toggle-button.mod-left {
   background: unset;
 }
 
@@ -28052,11 +28047,11 @@ body.hide-titlebar-close-btn.is-hidden-frameless.mod-linux .titlebar-button,
   display: none;
 }
 
- .wb-page-search-bar-input-container input.wb-page-search-bar-input{
+.wb-page-search-bar-input-container input.wb-page-search-bar-input{
   background-color: var(--background-secondary);
 box-shadow: var(--window-shadow2);
 }
-.wb-page-search-bar-input-container input.wb-page-search-bar-input:not(:hover){
+.wb-page-search-bar-input-container input.wb-page-search-bar-input:not(:hover) {
  border:none;
 }
 .view-header-title-container.web-browser-header-bar input {
@@ -28101,18 +28096,16 @@ body.toggle-header-bottom-line.show-view-header .view-header {
   border-top-right-radius: var(--radius-m);
 }
 
-.workspace-split.mod-root .workspace-tab-header-container-inner .workspace-tab-header:first-child {
-  margin-left: 1rem;
-}
+
 /*
 body.theme-light .workspace-split.mod-root .workspace-tab-header.is-active.mod-active {
   background-image: linear-gradient(to right, rgba(var(--mono-rgb-0), 0.6), transparent);
 }
-*/
+
 body.theme-dark .workspace-split.mod-root .workspace-tab-header.is-active.mod-active {
   background-color: var(--background-secondary);
 }
- 
+*/
 
 
 body.background-settings-workplace-background-image .workspace-split.mod-root .workspace-tab-header.is-active::before, 
