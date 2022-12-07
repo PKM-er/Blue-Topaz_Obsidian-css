@@ -5217,6 +5217,8 @@ body.all-dark .print.theme-light,
   --stripe-notebook-stripe-color: #162419;
   --prompt-box-shadow: #555555;
   --background-titlebar-inner:   hsla(var(--accent-h), var(--accent-s), var(--accent-l),30%);
+  --window-shadow: 0 1px 3px hsla(207, 10%, 10%, 0.1);
+  --window-shadow2:	0 0 9px hsla(212, 17%, 0%, 0.3);
 }
 
 .theme-light {
@@ -5560,6 +5562,8 @@ body.all-dark .print.theme-light,
   --background-nonoverlapping-note: #ffffff;
   --prompt-box-shadow: #bebebe;
   --background-titlebar-inner: hsla(var(--accent-h), var(--accent-s), var(--accent-l),30%);
+  --window-shadow: 0 1px 3px hsla(212, 17%, 80%, 0.2);
+  --window-shadow2: 0 0 9px hsla(217, 15%, 83%, 0.7);
 }
 
 body.color-scheme-options-avocado-topaz .theme-light,
@@ -8785,6 +8789,7 @@ body.color-scheme-options-simplicity-topaz.theme-light {
   --background-transparent-black-or-white-2: var(--bg-color-settings-1) !important;
   --background-transparent-black-or-white-3: var(--bg-color-settings-1) !important;
   --tab-background-active: #ffffff;
+  --theme-color-translucent-005: hsla(254,80%,68%,0.05);
 }
 
 
@@ -9132,10 +9137,7 @@ body:not(.is-mobile).color-scheme-options-simplicity-topaz .mod-root .workspace-
   background-color: transparent;
 }
  
-body.color-scheme-options-simplicity-topaz .workspace-split.mod-root .workspace-tab-header.is-active::before,
-body.color-scheme-options-simplicity-topaz.workspace-split.mod-root .workspace-tab-header.is-active::after {
  
-}
 body:not(.is-mobile).color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-split.mod-root
 {
   background-color: var(--simple-tran);
@@ -9240,9 +9242,7 @@ body.color-scheme-options-simplicity-topaz .workspace-tab-header:not(.is-active 
   opacity: 0.3;
 }
 
-body.color-scheme-options-simplicity-topaz .nav-file-title.is-active {
-  background-color: hsla(var(--interactive-accent-hsl),0.3);
-}
+ 
 
 body.color-scheme-options-simplicity-topaz .markdown-source-view.mod-cm6 .cm-underline,
 body.color-scheme-options-simplicity-topaz a, 
@@ -9942,30 +9942,30 @@ body.colorful-tag-bt .tag:not(.token):nth-child(5n) {
 
 /*rainbow tag*/
 body.rainbow-tag .tag:not(.token):nth-child(5n+1) {
-  background-color: var(--theme-color-translucent-01);
+  background-color: var(--theme-color-translucent-005);
   color: var(--theme-color);
 }
 
 body.rainbow-tag .tag:not(.token):nth-child(5n+2) {
-  background-color: var(--theme-color-translucent-01);
+  background-color: var(--theme-color-translucent-005);
   color: var(--theme-color);
   filter: hue-rotate(70deg);
 }
 
 body.rainbow-tag .tag:not(.token):nth-child(5n+3) {
-  background-color: var(--theme-color-translucent-01);
+  background-color: var(--theme-color-translucent-005);
   color: var(--theme-color);
   filter: hue-rotate(140deg);
 }
 
 body.rainbow-tag .tag:not(.token):nth-child(5n+4) {
-  background-color: var(--theme-color-translucent-01);
+  background-color: var(--theme-color-translucent-005);
   color: var(--theme-color);
   filter: hue-rotate(210deg);
 }
 
 body.rainbow-tag .tag:not(.token):nth-child(5n) {
-  background-color: var(--theme-color-translucent-01);
+  background-color: var(--theme-color-translucent-005);
   color: var(--theme-color);
   filter: hue-rotate(280deg);
 }
@@ -10151,7 +10151,7 @@ body:not(.tag-default) .cm-s-obsidian span.cm-hashtag-begin+.cm-hashtag.cm-meta+
   padding-right: 0.3em;
 }
 
-body.tag-pill-outlined .tag:not(.token) {
+body:not(.tag-default).tag-pill-outlined .tag:not(.token) {
   color: var(--text-normal);
   background-color: transparent !important;
   border: var(--tag-border-width) solid;
@@ -14803,6 +14803,11 @@ body.nowrap-outline .outline .tree-item-inner {
 
 .vertical-tab-content .setting-item {
   padding: 8px 0;
+}
+
+.is-phone .setting-item-heading {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .modal button:not(.mod-cta):not(.mod-warning):hover {
@@ -26629,12 +26634,11 @@ body:not(.remove-selectionbackground) .markdown-source-view.mod-cm6 .cm-editor .
   padding: 0 var(--size-4-2);
 }
 
-.workspace-split.mod-root .workspace-tab-header.is-active.mod-active {
-  border-color: var(--background-modifier-border);
-  border-style: solid;
+.workspace-split.mod-root .workspace-tab-header.is-active {
   border: none; 
   z-index: var(--layer-popover);
   color: var(--text-normal);
+  box-shadow: var(--window-shadow);
 }
 .is-mobile  .workspace-split.mod-root .workspace-tab-header.is-active.mod-active
 {
