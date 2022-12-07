@@ -17306,7 +17306,13 @@ section.footnotes ol>li:not(.task-list-item) {
 .cm-s-obsidian span.cm-footref {
   color: var(--text-accent);
 }
-
+.tippy-box[data-theme~="obsidian"]
+{
+  backdrop-filter: blur(5px);	
+}
+.file-embed.mod-empty:hover {
+  backdrop-filter: blur(5px);	
+}
 /* ================================== */
 /* =========== admonition =========== */
 /* ================================== */
