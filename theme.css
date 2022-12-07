@@ -3695,6 +3695,9 @@ settings:
       - 
         label: Safari-style
         value: safari-tab-style
+      - 
+        label: Transparent-style
+        value: transparent-tab-style
   -
     id: table-styles
     title: 2.3.23 Mermaid
@@ -8871,9 +8874,14 @@ body.color-scheme-options-simplicity-topaz:not(.background-settings-workplace-ba
 }
 
 body.theme-dark.color-scheme-options-simplicity-topaz .workspace-tab-header.is-active {
-  --tab-background-active: var(--simple-gray-5);
+  --tab-background-active: var(--background-primary);
   --tab-outline-width: var(--simple-gray-5);
 }
+
+body.theme-dark.color-scheme-options-simplicity-topaz .workspace-split.mod-root .workspace-tab-header.is-active.mod-active {
+  background-color: var(--tab-background-active);
+}
+ 
 
 body.color-scheme-options-simplicity-topaz.background-image-settings-switch.background-image-settings-markdown-page-transparent  {
   --background-secondary: var(--simple-tran);
@@ -8921,28 +8929,17 @@ body.color-scheme-options-simplicity-topaz .checkbox-container.is-enabled {
   background-color: var(--interactive-accent-hover);
 }
 
-body.color-scheme-options-simplicity-topaz .workspace-split.mod-root .workspace-tab-header.is-active.mod-active {
+body.theme-light.color-scheme-options-simplicity-topaz .workspace-split.mod-root .workspace-tab-header.is-active.mod-active {
 
   border-radius: 6px;
   border-color: var(--background-modifier-border);
   border-style: solid;
-  background-image: unset;
+  
   border-width: 0px;
 }
-
  
-
-
-body.color-scheme-options-simplicity-topaz .workspace-split.mod-root .workspace-tab-header.is-active {
-  background-image: linear-gradient(to right, var(--tab-background-active), var(--simple-white-2));
-}
-/*
-.workspace-split.mod-root .workspace-tab-header.is-active::before, .workspace-split.mod-root .workspace-tab-header.is-active::after {
-  display: none;
-}
-*/
-body.color-scheme-options-simplicity-topaz.theme-dark:not(.background-settings-workplace-background-image) .workspace-split.mod-root .workspace-tab-header.is-active.mod-active {
-
+body.color-scheme-options-simplicity-topaz.theme-dark:not(.background-settings-workplace-background-image) .workspace-split.mod-root .workspace-tab-header.is-active.mod-active
+{
   background-color: var(--simple-white-4);
 }
  
@@ -9136,7 +9133,7 @@ body:not(.is-mobile).color-scheme-options-simplicity-topaz .mod-root .workspace-
  
 body.color-scheme-options-simplicity-topaz .workspace-split.mod-root .workspace-tab-header.is-active::before,
 body.color-scheme-options-simplicity-topaz.workspace-split.mod-root .workspace-tab-header.is-active::after {
-  display: none;
+ 
 }
 body:not(.is-mobile).color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-split.mod-root
 {
@@ -9301,7 +9298,10 @@ body.color-scheme-options-simplicity-topaz:not(.view-button-front) .workspace-le
   margin-left: -15px;
 }
 
- 
+body.default-tab.theme-light.color-scheme-options-simplicity-topaz .workspace-split.mod-root .workspace-tab-header.is-active {
+  background-image: linear-gradient(to right, var(--background-secondary), var(--simple-white-2));
+}
+
 body.color-scheme-options-simplicity-topaz .workspace-leaf-content .view-header .view-header-icon svg {
   opacity: 0;
 }
@@ -18624,7 +18624,7 @@ body:not(.background-image-settings-markdown-page-random) .setting-item[data-id=
   display: none;
 }
 .setting-item[data-id="notebook-liked-background-settings"] + .style-settings-container .setting-item:not(:first-child) {
-  display: none;
+  /* display: none; */
 }
 body:is(.notebook-liked-markdown-page-grid-notebook-1,.notebook-liked-markdown-page-grid-notebook-2,
 .notebook-liked-markdown-page-dotted-notebook-1,.notebook-liked-markdown-page-dotted-notebook-2) .setting-item[data-id="bg-color-notebook"],
@@ -20219,6 +20219,15 @@ body.is-mobile.background-settings-workplace-background-image .safe-area-top-cov
 }
 */
 
+body.is-mobile.theme-light .menu {
+  background-color: var(--background-primary-alt);
+}
+body.is-mobile .menu {
+  color:var(--text-muted);
+}
+body.is-mobile .menu-item-title {
+  padding-left: 4px;
+}
 
 /*侧边栏文件列表字体大小*/
 .is-mobile .nav-file-title, .is-mobile .nav-folder-title, .is-mobile .outline, .is-mobile .tree-item-self, .is-mobile .tag-container, .is-mobile .tag-pane-tag {
@@ -20932,6 +20941,12 @@ body.view-button-front .workspace-leaf-content[data-mode='source'] .view-content
   opacity: 0.5;
   pointer-events: none;
 }
+
+body.hide-titlebar-close-btn.hide-left-ribbon-retention-drawer.view-button-front  .workspace-leaf-content[data-mode='source'] .view-content .markdown-source-view:not(.is-live-preview)::before 
+{
+  left: 32px;
+}
+
 body.view-button-front:not(.remove-custom-svg-icons) .workspace-leaf-content .view-header .view-actions svg.svg-icon.lucide-book-open {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='' height='' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M114.18 936.37c-7.08-0.01-13.88-2.83-18.90-7.84-7.13-7.13-9.73-17.60-6.78-27.24 0.58-1.89 58.08-190.17 69.57-232.60 1.24-4.57 3.65-8.73 6.99-12.08 0 0 509.13-509.34 524.08-524.12 27.32-27.32 63.92-43.31 102.51-44.84 35.84 0.81 69.89 15.79 94.70 41.66 32.72 31.43 49.66 65.07 50.34 100.03 0.52 35.39-15.64 70.37-48.22 103.97C856.96 365.85 382.08 835.45 361.87 855.42c-3.13 3.09-6.97 5.37-11.19 6.62-31.98 9.53-226.32 72.36-228.29 72.99C119.75 935.90 116.98 936.35 114.18 936.37zM207.99 690.03c-10.01 35.62-39.82 125.58-56.68 181.06 55.85-17.99 146.82-49.51 177.65-59.01 50.76-50.21 491.57-486.20 521.11-516.63 22.12-22.85 33.24-44.76 32.85-65.12-0.40-19.87-11.67-40.69-33.65-61.74-14.94-16.13-35.63-25.74-57.60-26.73-24.42 1.73-47.44 12.11-64.90 29.28-14.10 13.90-465.93 465.95-518.84 518.88L207.99 690.03zM350.36 853.71c-13.57-0.06-24.98-10.20-26.63-23.68-6.27-30.87-21.46-59.22-43.70-81.52-22.46-24.48-52.04-41.30-84.56-48.09-14.71-1.90-25.17-15.27-23.48-30.01 1.53-14.70 14.70-25.39 29.40-23.85 0.01 0 0.03 0 0.05 0 88.93 17.85 158.30 87.60 175.66 176.62 1.91 14.80-8.50 28.34-23.28 30.29-1.16 0.15-2.33 0.22-3.51 0.22L350.36 853.71zM828.88 369.14c-13.58-0.05-24.99-10.20-26.62-23.68-14.30-64.29-64.20-114.68-128.34-129.60-14.70-1.94-25.13-15.30-23.45-30.03 1.51-14.67 14.63-25.35 29.31-23.85 0.03 0.01 0.06 0.01 0.10 0.01 44.72 8.07 85.64 30.37 116.68 63.57 30.72 30.78 51.32 70.19 59.05 112.99 2.02 14.73-8.28 28.31-23.02 30.33-1.25 0.18-2.52 0.26-3.80 0.26L828.88 369.14z' fill='%23666666'/%3E%3C/svg%3E");
   opacity:0.6;
@@ -23508,7 +23523,7 @@ body.background-settings-workplace-background-image.theme-dark {
 
 body.background-settings-workplace-background-image.theme-dark.is-mobile  {
   --background-primary-bg-4-bt: #1f1f1fbf;
-  --background-secondary-bg-4-bt: #000000cf;
+  --background-secondary-bg-4-bt: #00000069;
   --background-secondary-alt-bg-4-bt: #16161680;
   --background-primary-alt-bg-4-bt: #00000082;
   --text-normal: #d4d4d4;
@@ -26601,8 +26616,12 @@ body:not(.remove-selectionbackground) .markdown-source-view.mod-cm6 .cm-editor .
   border-color: var(--background-modifier-border);
   border-style: solid;
   border: none; 
-  z-index: 29;
+  z-index: var(--layer-popover);
   color: var(--text-normal);
+}
+.is-mobile  .workspace-split.mod-root .workspace-tab-header.is-active.mod-active
+{
+  z-index: 29;
 }
 .is-focused .workspace-tab-header {
   color: var(--text-muted);
@@ -28116,7 +28135,7 @@ body.background-settings-workplace-background-image .workspace-split.mod-root .w
 }
 
 body.background-settings-workplace-background-image .mod-root .workspace-tab-header-container-inner {
-  padding-bottom: 1.8px;
+  padding-bottom: 1.5px;
 }
 
 body.theme-dark:not(.background-settings-workplace-background-image) .workspace-split.mod-horizontal:is(.mod-left-split,.mod-right-split) .workspace-tabs .workspace-leaf-resize-handle {
@@ -28241,6 +28260,19 @@ body.safari-tab-style .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab
   border: 1px solid  rgba(var(--mono-rgb-0), .25) ;
 }
 
+
+body.transparent-tab-style .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header {
+  --tab-background-active: transparent;
+  --tab-outline-width: transparent;
+}
+body.transparent-tab-style.color-scheme-options-simplicity-topaz.theme-dark:not(.background-settings-workplace-background-image) .workspace-split.mod-root .workspace-tab-header.is-active.mod-active {
+  background-color: var(--tab-background-active);
+}
+
+body.transparent-tab-style.theme-dark .workspace-split.mod-root .workspace-tab-header.is-active.mod-active
+{
+  background-color: var(--tab-background-active);
+}
 .sidebar-toggle-button.mod-left,
 .sidebar-toggle-button.mod-right {
   align-items: center;
