@@ -4489,6 +4489,7 @@ settings:
   -
     id: code-punctuation
     title: Code Block punctuation Color
+    description: code punctuation,bracket color
     type: variable-themed-color
     format: hex
     default-light: '#ff5370'
@@ -11990,10 +11991,15 @@ div.math.math-block mjx-math{
 }
 
 .cm-s-obsidian pre.HyperMD-codeblock,
-.cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end),
 :is(.markdown-preview-view,.markdown-rendered) code,
 .markdown-rendered code {
   color: var(--text-color-code);
+  font-size: var(--font-size-code) !important;
+  font-family: var(--font-monospace);
+  text-align: start;
+}
+.cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end)
+{
   font-size: var(--font-size-code) !important;
   font-family: var(--font-monospace);
   text-align: start;
@@ -12535,6 +12541,11 @@ code[class*="language-"] ::selection {
 
 .cm-meta.cm-hmd-frontmatter {
   color: var(--code-meta)  ;
+}
+.token.punctuation, 
+.cm-punctuation, 
+.cm-bracket {
+  color: var(--code-punctuation)  !important ;
 }
 
 .theme-dark .cm-s-obsidian span.cm-keyword {
