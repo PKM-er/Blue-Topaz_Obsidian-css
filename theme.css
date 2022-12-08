@@ -9260,10 +9260,7 @@ body.color-scheme-options-simplicity-topaz
 body.color-scheme-options-simplicity-topaz .nav-folder{
 padding-bottom: 2px;
 }
-body.color-scheme-options-simplicity-topaz .nav-file-title,
-body.color-scheme-options-simplicity-topaz .nav-folder-title{
-  transition: 0.05s ease-in;
-}
+
 body.color-scheme-options-simplicity-topaz .nav-folder-title{
   font-weight: 500;
 }
@@ -10825,9 +10822,7 @@ span.cm-strong.cm-em.cm-highlight {
   background-color: var(--text-highlight-bg);
 }
 
-.nav-folder.mod-root .nav-folder > .nav-folder-children {
-  transition: all 400ms ease-in-out;
-}
+ 
 
 body.default-icons .nav-folder.mod-root .nav-folder > .nav-folder-children {
   margin: 0 0 0 16px;
@@ -27724,6 +27719,11 @@ body.remove-arrow:not(.default-icons) :is(.nav-folder-title,.nav-file-title) {
 }
 .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
   padding-left: var(--size-2-3);
+}
+
+.nav-folder .nav-folder-children[style="height: 0px;"]
+{
+  height: auto !important;
 }
 
 textarea:active, 
