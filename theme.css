@@ -8789,7 +8789,7 @@ body.color-scheme-options-simplicity-topaz.theme-light {
   --background-transparent-black-or-white-2: var(--bg-color-settings-1) !important;
   --background-transparent-black-or-white-3: var(--bg-color-settings-1) !important;
   --tab-background-active: #ffffff;
-  --theme-color-translucent-005: hsla(254,80%,68%,0.05);
+  --theme-color-translucent-01: hsla(254,80%,68%,0.1);
 }
 
 
@@ -9256,9 +9256,10 @@ body.color-scheme-options-simplicity-topaz
   padding-left: 0.5em;
   display: flex;
   flex-direction: column;
-  gap: 2px;
 }
-
+body.color-scheme-options-simplicity-topaz .nav-folder{
+padding-bottom: 2px;
+}
 body.color-scheme-options-simplicity-topaz .nav-file-title,
 body.color-scheme-options-simplicity-topaz .nav-folder-title{
   transition: 0.05s ease-in;
@@ -9320,6 +9321,12 @@ body.is-mobile.color-scheme-options-simplicity-topaz .workspace-tabs .workspace-
 {
   background-color: var(--background-secondary);
 }
+
+body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .mod-root .workspace-tabs:not(.mod-top) .workspace-tab-header-container-inner
+{
+  padding-bottom:1px;
+}
+
 /*==============*/
 /*==============*/
 /*======@cuman--end========*/
@@ -9942,30 +9949,30 @@ body.colorful-tag-bt .tag:not(.token):nth-child(5n) {
 
 /*rainbow tag*/
 body.rainbow-tag .tag:not(.token):nth-child(5n+1) {
-  background-color: var(--theme-color-translucent-005);
+  background-color: var(--theme-color-translucent-01);
   color: var(--theme-color);
 }
 
 body.rainbow-tag .tag:not(.token):nth-child(5n+2) {
-  background-color: var(--theme-color-translucent-005);
+  background-color: var(--theme-color-translucent-01);
   color: var(--theme-color);
   filter: hue-rotate(70deg);
 }
 
 body.rainbow-tag .tag:not(.token):nth-child(5n+3) {
-  background-color: var(--theme-color-translucent-005);
+  background-color: var(--theme-color-translucent-01);
   color: var(--theme-color);
   filter: hue-rotate(140deg);
 }
 
 body.rainbow-tag .tag:not(.token):nth-child(5n+4) {
-  background-color: var(--theme-color-translucent-005);
+  background-color: var(--theme-color-translucent-01);
   color: var(--theme-color);
   filter: hue-rotate(210deg);
 }
 
 body.rainbow-tag .tag:not(.token):nth-child(5n) {
-  background-color: var(--theme-color-translucent-005);
+  background-color: var(--theme-color-translucent-01);
   color: var(--theme-color);
   filter: hue-rotate(280deg);
 }
@@ -11051,7 +11058,7 @@ span.cm-formatting-task.cm-property {
   color: var(--text-accent);
 }
 
-.markdown-preview-view .task-list-item-checkbox {
+:is(.markdown-preview-view,.markdown-reading-view,.markdown-source-view) .task-list-item-checkbox {
   top: 4px;
   margin-left: 3px;
   margin-right: 8px;
@@ -17313,7 +17320,7 @@ section.footnotes ol>li:not(.task-list-item) {
 }
 .tippy-box[data-theme~="obsidian"]
 {
-  backdrop-filter: blur(5px);	
+  backdrop-filter: blur(8px);	
 }
 .file-embed.mod-empty:hover {
   backdrop-filter: blur(5px);	
@@ -27711,9 +27718,7 @@ select:focus,
 .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title, .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title {
   box-shadow: none;
 }
-.nav-folder:not(.is-collapsed) .nav-folder-children {
-  height: auto !important;
-}
+ 
 body.remove-arrow:not(.default-icons) :is(.nav-folder-title,.nav-file-title) {
   padding-left: 0.5em;
 }
@@ -28338,3 +28343,11 @@ body.background-settings-workplace-background-image.theme-dark.is-frameless:is(.
   font-weight: bold;
 }
 
+ .theme-dark .mod-root .workspace-tabs .workspace-leaf {
+  background-color: transparent;
+}
+
+.workspace-tab-header-inner-icon img
+{
+  margin:auto;
+}
