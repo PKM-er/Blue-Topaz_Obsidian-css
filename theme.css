@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v1.0.3。uid [20221127] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.0.3, uid [20221127] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.0.3。uid [20221209] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.0.3, uid [20221209] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -9300,6 +9300,19 @@ body.color-scheme-options-simplicity-topaz:not(.view-button-front) .workspace-le
 body.default-tab.theme-light.color-scheme-options-simplicity-topaz .workspace-split.mod-root .workspace-tab-header.is-active {
   background-image: linear-gradient(to right, var(--background-secondary), var(--simple-white-2));
 }
+body.default-tab.color-scheme-options-simplicity-topaz:not(.background-settings-workplace-background-image,.background-image-settings-switch.background-image-settings-markdown-page-transparent)
+.workspace-split.mod-root .workspace-tab-header.is-active {
+  background:var(--background-primary);
+  --tab-background-active:var(--background-primary);
+}
+
+body.default-tab.background-image-settings-switch.background-image-settings-markdown-page-transparent
+.workspace-split.mod-root .workspace-tab-header.is-active {
+  background:transparent;
+  --tab-background-active:transparent;
+}
+
+ 
 
 body.color-scheme-options-simplicity-topaz .workspace-leaf-content .view-header .view-header-icon svg {
   opacity: 0;
@@ -21157,7 +21170,7 @@ body:not(.remove-custom-svg-icons) .workspace-leaf-content .view-header .view-ac
 body.setting-default-frosted-glass [class="menu"] {
   border: none;
   backdrop-filter: blur(8px);
-  background-color: var(--bg-color-settings-6);
+  background-color: var(--bg-color-settings-3);
   box-shadow: 0 0 8px var(--bg-color-settings-5);
 }
 
@@ -21241,6 +21254,10 @@ body.toggle-nonoverlapping-bg .workspace-split.mod-root .view-content {
   background-size: 100% 100%;
 }
 
+body.background-notebook-liked-switch .markdown-reading-view .markdown-embed .markdown-rendered
+{
+  background-image: unset!important;
+}
 body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-1 .markdown-reading-view .markdown-rendered,
 body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-1 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--bg-color-notebook);
@@ -23335,7 +23352,12 @@ body.background-settings-workplace-background-image:not(.simple-titlebar):not(.i
   display: flex;
   flex-grow: 1;
   color: var(--text-normal);
+
 } 
+body .titlebar,
+ body .workspace-ribbon.mod-left {
+  --titlebar-background: var(--titlebar-background-focused);
+}
 
 body.simple-titlebar .titlebar {
   background-color: var(--custom-titlebar-bg);
@@ -23505,9 +23527,13 @@ body.background-settings-workplace-background-image.theme-light {
   --divider-color: #dededee0;
 }
 
+textarea, input[type='text'], input[type='search'], input[type='email'], input[type='password'], input[type='number']
+{
+  background: var(--bg-color-settings-4);
+}
 
-
-body.background-settings-workplace-background-image .modal-container {
+body:is(.background-settings-workplace-background-image,.background-image-settings-switch) .modal-container {
+  --modal-background:var(--bg-color-settings-3);
   --background-primary: var(--bg-color-settings-3);
   --background-secondary:var(--bg-color-settings-3);
 }
@@ -27914,7 +27940,7 @@ body.hide-titlebar-close-btn.hide-left-ribbon-retention-drawer .workspace-ribbon
 }
 
 
-body.hide-left-ribbon-retention-drawer.is-focused:not(.background-settings-workplace-background-image) .workspace-tabs.mod-top {
+body.hide-left-ribbon-retention-drawer:not(.background-settings-workplace-background-image) .workspace-tabs.mod-top {
   background: var(--background-secondary-alt);
 }
 body.stack-tab-text-ori-mixed .workspace-tab-header-inner-title {
