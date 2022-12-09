@@ -11066,10 +11066,15 @@ span.cm-formatting-task.cm-property {
   color: var(--text-accent);
 }
 
-:is(.markdown-preview-view,.markdown-reading-view,.markdown-source-view) .task-list-item-checkbox {
-  top: 4px;
+:is(.markdown-preview-view,.markdown-rendered,.markdown-reading-view) .task-list-item-checkbox,
+.markdown-source-view.mod-cm6 .task-list-label .task-list-item-checkbox
+ {
   margin-left: 3px;
-  margin-right: 8px;
+  margin-top: 0px;
+  margin-bottom: 2px;
+  margin-right:3px;
+  vertical-align: middle;
+  top:0px;
 }
 
 input[type=checkbox] {
