@@ -2782,7 +2782,7 @@ settings:
     type: class-toggle
     default: false
   -
-    id: embed-title
+    id: hide-embed-title
     title: Hide Embedded Title
     title.zh: 隐藏嵌入文档标题
     type: class-toggle
@@ -9439,26 +9439,26 @@ body.reduce-bottom-padding:not(.plugin-cm-typewriter-scroll) .cm-s-obsidian .cm-
 .img-grid .markdown-preview-section .el-embed-image img:not([width]),.img-grid .markdown-preview-section video{
   width:100%
 }
-.img-grid .markdown-preview-section>.el-embed-image>p{
+.img-grid .markdown-preview-section>div>p{
   display:grid;
   grid-column-gap:0.5rem;
   grid-row-gap:0;
   grid-template-columns:repeat(auto-fit,minmax(0,1fr))
 }
-.img-grid .markdown-preview-section>.el-embed-image>p>br{
+.img-grid .markdown-preview-section>div>p>br{
   display:none
 }
-.img-grid .markdown-preview-section>.el-embed-image>p>img{
+.img-grid .markdown-preview-section>div>p>img{
   object-fit:cover;
   align-self:stretch
 }
-.img-grid .markdown-preview-section>.el-embed-image>p>.internal-embed img{
+.img-grid .markdown-preview-section>div>p>.internal-embed img{
   object-fit:cover;
   height:100%
 }
 
-.img-grid-ratio .markdown-preview-section>.el-embed-image>p>.internal-embed img
-,.img-grid.img-grid-ratio .markdown-preview-section>.el-embed-image>p>.internal-embed img{
+.img-grid-ratio .markdown-preview-section>div>p>.internal-embed img
+,.img-grid.img-grid-ratio .markdown-preview-section>div>p>.internal-embed img{
   object-fit:contain;
   height:100%;
   align-self:center
@@ -9467,7 +9467,7 @@ body.reduce-bottom-padding:not(.plugin-cm-typewriter-scroll) .cm-s-obsidian .cm-
   .el-embed-image{
     margin-top:.25rem
   }
-  .img-grid .markdown-preview-section>.el-embed-image>p{
+  .img-grid .markdown-preview-section>div>p{
     grid-column-gap:0.25rem
   }
 }
@@ -11072,8 +11072,7 @@ span.cm-formatting-task.cm-property {
   color: var(--text-accent);
 }
 
-:is(.markdown-preview-view,.markdown-rendered,.markdown-reading-view) .task-list-item-checkbox,
-.markdown-source-view.mod-cm6 .task-list-label .task-list-item-checkbox
+:is(.markdown-preview-view,.markdown-rendered,.markdown-reading-view) .task-list-item-checkbox
  {
   margin-left: 3px;
   margin-top: 0px;
@@ -11081,6 +11080,19 @@ span.cm-formatting-task.cm-property {
   margin-right:3px;
   vertical-align: middle;
   top:0px;
+}
+.markdown-source-view.mod-cm6 .task-list-label .task-list-item-checkbox
+{
+  margin-left: -1.5px;
+  margin-top: 0px;
+  margin-bottom: 2px;
+  margin-right:3px;
+  vertical-align: middle;
+  top:0px;
+}
+.markdown-source-view.mod-cm6 .cm-formatting-list-ol ~ .task-list-label .task-list-item-checkbox
+{
+margin-left: 3px;
 }
 
 input[type=checkbox] {
@@ -14096,7 +14108,7 @@ body.naked-embed.theme-light {
 body.naked-embed .markdown-source-view.mod-cm6 .markdown-embed {
   border: none;
 }
-body.embed-title .markdown-embed-title{
+body.hide-embed-title .markdown-embed-title{
   display: none;
 }
 body.embed-hd .markdown-embed :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) {
@@ -17905,6 +17917,7 @@ body.style-options-for-admonition-plugin .admonition-flex {
   margin: auto;
   box-shadow: none;
   border-left: none;
+  word-break: break-word;
 }
 body.admonition-bg-color-same.style-options-for-admonition-plugin .admonition-flex {
   margin: 1em 0;
@@ -26986,9 +26999,7 @@ body:not(.default-list-marker) .markdown-source-view.mod-cm6 .cm-indent::before 
   width: 0;
 }
 
-body:not(.default-list-marker) .markdown-source-view.mod-cm6 .HyperMD-task-line .cm-indent::before {
-  width: 4px;
-}
+
 .is-focused .mod-active .workspace-tab-header.is-active 
 .workspace-tab-header-inner-icon {
   color: var(--theme-color);
