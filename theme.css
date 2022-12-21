@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v1.0.3。uid [20221209] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.0.3, uid [20221209] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.0.3。uid [20221221] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.0.3, uid [20221221] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -2788,6 +2788,12 @@ settings:
     type: class-toggle
     default: false
   - 
+    id: hide-embed-banner
+    title: Hide Embedded banner
+    title.zh: 隐藏嵌入文档banner
+    type: class-toggle
+    default: false
+  - 
     id: embed-hd
     title: Hide Embedded Headers
     title.zh: 隐藏嵌入文档中的H1 H2 H3标题
@@ -3126,9 +3132,9 @@ settings:
     type: class-toggle
     default: false
   - 
-    id: toggle-icon-anima
-    title: Toggle clickable-icons' hovering animation
-    title.zh: 取消按钮图标的鼠标悬浮动画效果
+    id: enable-icon-anima
+    title: Enable clickable-icons' hovering animation
+    title.zh: 开启按钮图标的鼠标悬浮动画效果
     description.zh: 是否开启图标背景动画以及图标悬浮动画效果
     type: class-toggle
     default: false    
@@ -14114,6 +14120,11 @@ body.hide-embed-title .markdown-embed-title{
 body.embed-hd .markdown-embed :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) {
   display: none;
 }
+.hide-embed-banner .markdown-embed-content .obsidian-banner-wrapper
+{
+  display: none;
+}
+
 
 .popover.hover-popover :is(.markdown-preview-view,.markdown-rendered) .markdown-embed,
 .popover .markdown-preview-sizer:is(.markdown-preview-section,.markdown-rendered) {
@@ -14140,13 +14151,18 @@ body.embed-hover.theme-dark .internal-embed .markdown-embed:hover {
   transform: translate3d(0px, -3px, 0px);
 }
 
-.markdown-embed,
+body.hover-scrollbars .markdown-embed:not(.canvas-node-content),
+body.hover-scrollbars .popover.hover-popover .markdown-embed .markdown-embed 
+{
+  padding:  0 0 0 1em;
+}
+.markdown-embed:not(.canvas-node-content),
 .popover.hover-popover .markdown-embed .markdown-embed {
   background-color: var(--embed-color);
   border: 1px solid var(--embed-color);
   border-radius: var(--radius-xs);
-  padding: 0 0.2em;
   margin-bottom: 0;
+  padding: 0  0.5em  0 1em;
   margin-top: 0;
 }
 .popover.hover-popover,
@@ -14154,10 +14170,7 @@ body.embed-hover.theme-dark .internal-embed .markdown-embed:hover {
   background-color: var(--background-popover);
 }
 
-.markdown-source-view .markdown-embed,
-.markdown-embed :is(.markdown-preview-view,.markdown-rendered) {
-  padding: 0.03em 0.375em !important;
-}
+ 
 
 .markdown-embed-link,
 .file-embed-link {
@@ -16070,7 +16083,7 @@ body.hover-scrollbars :is(.vertical-tab-header, .vertical-tab-content, .nav-file
 body.hover-scrollbars :is(.vertical-tab-header, .vertical-tab-content, .nav-files-container, .view-content, .search-result-container, .git-view-body, .workspace-leaf-content[data-type=markdown] .cm-scroller, .markdown-preview-view, .suggestion-container .suggestion, .prompt-results, .markdown-embed-content, .community-modal-search-results-wrapper,.community-modal-info,.tag-container):hover {
   color: var(--scrollbar-thumb);
 }
-body.hover-scrollbars :is(.vertical-tab-header, .vertical-tab-content, .nav-files-container, .view-content, .search-result-container, .git-view-body, .workspace-leaf-content[data-type=markdown] .cm-scroller, .markdown-preview-view, .suggestion-container .suggestion, .prompt-results, .markdown-embed-content, .community-modal-search-results-wrapper,.tag-container) > :not(h1, h2, h3, h4, h5, h6) {
+body.hover-scrollbars :is(.vertical-tab-header, .vertical-tab-content, .nav-files-container, .view-content, .search-result-container, .git-view-body, .workspace-leaf-content[data-type=markdown] .cm-scroller, .markdown-preview-view, .suggestion-container .suggestion, .prompt-results, .community-modal-search-results-wrapper,.tag-container) > :not(h1, h2, h3, h4, h5, h6) {
   color: var(--text-normal);
 }
 
@@ -27805,7 +27818,7 @@ body.colorful-ordered-list ul ul ul ul ul ul ul ol li::marker {
   inherits: false;
   initial-value: #00f02c21;
 }
-body:not(.toggle-icon-anima) div.nav-header:hover {
+body.enable-icon-anima div.nav-header:hover {
   background: linear-gradient(135deg,var(--colorA),var(--colorB),var(--colorC));
   animation: rainbow-change 8s infinite linear;
 }
@@ -27834,7 +27847,7 @@ body:not(.toggle-icon-anima) div.nav-header:hover {
 }
 
 
-body:not(.toggle-icon-anima) :is(.workspace-ribbon, .nav-header) .clickable-icon:before{
+body.enable-icon-anima :is(.workspace-ribbon, .nav-header) .clickable-icon:before{
   content: '';
   background-color: var(--theme-color-translucent-01);
   position: absolute;
@@ -27844,11 +27857,11 @@ body:not(.toggle-icon-anima) :is(.workspace-ribbon, .nav-header) .clickable-icon
   visibility: hidden;
 }
 
-body:not(.toggle-icon-anima) :is(.workspace-ribbon, .nav-header) .clickable-icon:hover:before {
+body.enable-icon-anima :is(.workspace-ribbon, .nav-header) .clickable-icon:hover:before {
   animation: bead-1 1s;
 }
 
-body:not(.toggle-icon-anima) :is(.workspace-ribbon, .nav-header) .clickable-icon:after {
+body.enable-icon-anima :is(.workspace-ribbon, .nav-header) .clickable-icon:after {
   content: '';
   background-color: var(--theme-color-translucent-01);
   position: absolute;
@@ -27858,7 +27871,7 @@ body:not(.toggle-icon-anima) :is(.workspace-ribbon, .nav-header) .clickable-icon
   visibility: hidden;
 }
 
-body:not(.toggle-icon-anima) :is(.workspace-ribbon, .nav-header) .clickable-icon:hover:after {
+body.enable-icon-anima :is(.workspace-ribbon, .nav-header) .clickable-icon:hover:after {
   animation: bead-2 1s;
 }
 
@@ -28397,11 +28410,11 @@ body.toggle-header-bottom-line.show-view-header .view-header {
 body.theme-light .workspace-split.mod-root .workspace-tab-header.is-active.mod-active {
   background-image: linear-gradient(to right, rgba(var(--mono-rgb-0), 0.6), transparent);
 }
-*/
+/* 
 body.theme-dark .workspace-split.mod-root .workspace-tab-header.is-active.mod-active {
   background-color: var(--background-secondary);
 }
- 
+  */
 
 
 body.background-settings-workplace-background-image .workspace-split.mod-root .workspace-tab-header.is-active::before, 
@@ -28605,3 +28618,25 @@ body.background-settings-workplace-background-image.theme-dark.is-frameless:is(.
   color: var(--text-muted);
 }
 
+/*********canvas****/
+
+.canvas-node-content img {
+  min-width: 100%;
+  position:absolute; 
+  left: 0;
+  top: 0;
+  right:0;
+  bottom: 0;
+}
+
+.canvas-node-container
+{
+  border:unset;
+  box-shadow: var(--shadow-s);
+}
+.canvas-node-container .markdown-embed{
+  background-color: transparent;
+}
+.canvas-node-content.markdown-embed > .markdown-embed-content > .markdown-preview-view {
+  padding: 0  0.5em;
+}
