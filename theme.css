@@ -825,11 +825,19 @@ settings:
     id: text-highlight
     title: Highlight text color
     title.zh: 高亮文本颜色
+    description: ==XXXXX== color
     type: variable-themed-color
     opacity: true
     format: hex
     default-light: '#'
     default-dark: '#'
+  - 
+    id: highlight-bg-color-head
+    title: Highlight Background Color
+    title.zh: 高亮背景颜色
+    type: heading
+    level: 4
+    collapsed: true
   - 
     id: text-highlight-bg-h-light
     title: Hue (Light mode)
@@ -915,6 +923,13 @@ settings:
     max: 1
     step: 0.05
   -
+    id: colorful-highlight-head
+    title: Colorful Highlight Setting
+    title.zh:  多彩高亮背景颜色
+    type: heading
+    level: 4
+    collapsed: true
+  - 
     id: remove-colorful-highlight-bg
     title: Deactivate Colorful-Highlight
     title.zh: 取消多彩高亮颜色
