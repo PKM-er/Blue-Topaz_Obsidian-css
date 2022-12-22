@@ -2296,13 +2296,13 @@ settings:
   -
     id: list-ul-marker-size
     title: Bullet size
-    title.zh: 字体大小
+    title.zh: 符号大小
     type: variable-text
     default: 1em
   -
     id: list-ul-marker-color
     title: Text color (1st level)
-    title.zh: 字体颜色（第一层）
+    title.zh: 符号颜色（第一层）
     type: variable-themed-color
     opacity: true
     format: hex
@@ -2323,13 +2323,13 @@ settings:
   -
     id: list-ul-marker-size-1
     title: Bullet size (1st level)
-    title.zh: 字体大小（第一层）
+    title.zh: 符号大小（第一层）
     type: variable-text
     default: 1em
   -
     id: list-ul-marker-color-1
-    title: Text color (1st level)
-    title.zh: 字体颜色（第一层）
+    title: Bullet color (1st level)
+    title.zh: 符号颜色（第一层）
     type: variable-themed-color
     opacity: true
     format: hex
@@ -2344,13 +2344,13 @@ settings:
   -
     id: list-ul-marker-size-2
     title: Bullet size (2nd level)
-    title.zh: 字体大小（第二层）
+    title.zh: 符号大小（第二层）
     type: variable-text
     default: 1em
   -
     id: list-ul-marker-color-2
-    title: Text color (2nd level)
-    title.zh: 字体颜色（第二层）
+    title: Bullet color (2nd level)
+    title.zh: 符号颜色（第二层）
     type: variable-themed-color
     opacity: true
     format: hex
@@ -2365,13 +2365,13 @@ settings:
   -
     id: list-ul-marker-size-3
     title: Bullet size (3rd level)
-    title.zh: 字体大小（第三层）
+    title.zh: 符号大小（第三层）
     type: variable-text
     default: 1em
   -
     id: list-ul-marker-color-3
-    title: Text color (3rd level)
-    title.zh: 字体颜色（第三层）
+    title: Bullet color (3rd level)
+    title.zh: 符号颜色（第三层）
     type: variable-themed-color
     opacity: true
     format: hex
@@ -2386,13 +2386,13 @@ settings:
   -
     id: list-ul-marker-size-4
     title: Bullet size (4th level)
-    title.zh: 字体大小（第四层）
+    title.zh: 符号大小（第四层）
     type: variable-text
     default: 1em
   -
     id: list-ul-marker-color-4
-    title: Text color (4th level)
-    title.zh: 字体颜色（第四层）
+    title: Bullet color (4th level)
+    title.zh: 符号颜色（第四层）
     type: variable-themed-color
     opacity: true
     format: hex
@@ -9437,9 +9437,7 @@ body.reduce-bottom-padding:not(.plugin-cm-typewriter-scroll) .cm-s-obsidian .cm-
 /* cssclass: image-grid */
 /* image-grid-2 */
 /* adapted from https://github.com/iEchoxu/obsidian_orange/blob/main/.obsidian/snippets/image-grid.css */
-/* .img-grid :is(.markdown-preview-section,.markdown-rendered)>div>p>.image-embed[alt*="."] {
-  padding: 0 0.3rem;
-}
+
 .img-grid :is(.markdown-preview-section,.markdown-rendered)>div>p>.image-embed[alt*="."]:last-child {
   padding-right: 0;
 }
@@ -9455,31 +9453,31 @@ body.reduce-bottom-padding:not(.plugin-cm-typewriter-scroll) .cm-s-obsidian .cm-
 .img-grid img[alt*="."] {
   max-height: 100vh;
   object-fit: cover;
-} */
+} 
 
 .img-grid .markdown-preview-section .el-embed-image img:not([width]),.img-grid .markdown-preview-section video{
   width:100%
 }
-.img-grid .markdown-preview-section>div>p{
+.img-grid .markdown-preview-section>.el-embed-image>p{
   display:grid;
   grid-column-gap:0.5rem;
   grid-row-gap:0;
   grid-template-columns:repeat(auto-fit,minmax(0,1fr))
 }
-.img-grid .markdown-preview-section>div>p>br{
+.img-grid .markdown-preview-section>.el-embed-image>p>br{
   display:none
 }
-.img-grid .markdown-preview-section>div>p>img{
+.img-grid .markdown-preview-section>.el-embed-image>p>img{
   object-fit:cover;
   align-self:stretch
 }
-.img-grid .markdown-preview-section>div>p>.internal-embed img{
+.img-grid .markdown-preview-section>.el-embed-image>p>.internal-embed img{
   object-fit:cover;
   height:100%
 }
 
-.img-grid-ratio .markdown-preview-section>div>p>.internal-embed img
-,.img-grid.img-grid-ratio .markdown-preview-section>div>p>.internal-embed img{
+.img-grid-ratio .markdown-preview-section>.el-embed-image>p>.internal-embed img
+,.img-grid.img-grid-ratio .markdown-preview-section>.el-embed-image>p>.internal-embed img{
   object-fit:contain;
   height:100%;
   align-self:center
@@ -9488,7 +9486,7 @@ body.reduce-bottom-padding:not(.plugin-cm-typewriter-scroll) .cm-s-obsidian .cm-
   .el-embed-image{
     margin-top:.25rem
   }
-  .img-grid .markdown-preview-section>div>p{
+  .img-grid .markdown-preview-section>.el-embed-image>p{
     grid-column-gap:0.25rem
   }
 }
@@ -9554,7 +9552,9 @@ body.colorful-p-kanban .kanban ul>li:nth-of-type(8n+7) {
 body.colorful-p-kanban .kanban ul>li:nth-of-type(8n) {
   background-color: var(--p-kanban-color-8);
 }
-
+.canvas-node-container .kanban ul>li:nth-of-type(n) {
+  backdrop-filter:none;
+}
 .kanban ul>li:nth-of-type(n) {
   background-color: var(--p-kanban-color-simple);
   padding-left: 1em;
@@ -14110,6 +14110,10 @@ body:not(.link-underline-internal) :is(.markdown-preview-view,.markdown-rendered
   color: var(--code-normal);
   text-shadow: none;
   letter-spacing: calc(var(--letter-space-code) * 0.02em);
+}
+
+body.codebox-frosted-glass  .canvas-node-container  pre[class*='language-'] {
+  backdrop-filter: none;
 }
 body.codebox-frosted-glass .cm-s-obsidian div.HyperMD-codeblock-bg,
 body.codebox-frosted-glass :not(pre)>code[class*='language-'],
@@ -22818,8 +22822,8 @@ body.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder
   font-weight: bold;
   filter: saturate(150%);
 }
-body.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder .nav-folder-title,
-body.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder .nav-file-title {
+body.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder .nav-folder-title
+ {
   font-weight: 600;
 }
 body.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+2) .nav-folder-title,
@@ -26341,6 +26345,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
   border-radius: 10px;
 }
 .callout.callout[data-callout="timeline"] .callout-content blockquote {
+  color: var(--text-on-accent);
   display: block;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -26354,7 +26359,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
   margin: 0;
   border: none;
   padding: 0;
-  background-color: unset;
+  background-color: var(--interactive-accent);
 }
 .callout.callout[data-callout="timeline"] .callout-content blockquote p::before {
   display: none;
@@ -26362,14 +26367,18 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 .callout.callout[data-callout="timeline"] .callout-content blockquote,
 .callout.callout[data-callout="timeline"] .callout-content blockquote + *:not(.callout),
 .callout.callout[data-callout="timeline"] .callout-content hr+ *:not(.callout) {
-  padding-top: 1em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+.callout.callout[data-callout="timeline"] .callout-content blockquote  .list-bullet::after{
+  color: var(--text-on-accent);
+  left:0;
 }
 .callout.callout[data-callout="timeline"] .callout-content blockquote p {
   display: block;
   color: var(--text-on-accent);
   background-color: var(--interactive-accent);
   font-style: normal;
-  padding: 6px;
   border-radius: 5px;
 }
 .callout.callout[data-callout="timeline"] .callout-content>*:not(blockquote):not(hr) {
@@ -26983,13 +26992,13 @@ body.custom-unordered-list .markdown-rendered .has-list-bullet .has-list-bullet 
 body.custom-unordered-list .markdown-rendered .list-bullet::after {
   content: var(--list-ul-marker-4);
   font-size: var(--list-ul-marker-size-4);
-  color: var(--list-ul-marker-color-4);
+  color: var(--list-ul-marker-color-4,var(--list-marker-color));
 }
 
 body.custom-unordered-list .markdown-source-view.mod-cm6 .list-bullet::after {
   content: var(--list-ul-marker-4);
   font-size: var(--list-ul-marker-size-4);
-  color: var(--list-ul-marker-color-4);
+  color: var(--list-ul-marker-color-4,var(--list-marker-color));
 }
 
 body.custom-unordered-list .has-list-bullet .list-bullet::after,
@@ -26997,7 +27006,7 @@ body.custom-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.Hype
 body.custom-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line>span.cm-formatting:first-of-type .list-bullet::after {
   content: var(--list-ul-marker-1);
   font-size: var(--list-ul-marker-size-1);
-  color: var(--list-ul-marker-color-1);
+  color: var(--list-ul-marker-color-1,var(--list-marker-color));
 }
 
 body.custom-unordered-list .has-list-bullet .has-list-bullet .list-bullet::after,
@@ -27005,14 +27014,14 @@ body.custom-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.Hype
 body.custom-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
   content: var(--list-ul-marker-2);
   font-size: var(--list-ul-marker-size-2);
-  color: var(--list-ul-marker-color-2);
+  color: var(--list-ul-marker-color-2,var(--list-marker-color));
 }
 body.custom-unordered-list .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
 body.custom-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
 body.custom-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
   content: var(--list-ul-marker-3);
   font-size: var(--list-ul-marker-size-3);
-  color: var(--list-ul-marker-color-3);
+  color: var(--list-ul-marker-color-3,var(--list-marker-color));
 }
 
 body:not(.default-list-marker) .has-list-bullet .list-bullet::after,
@@ -28635,13 +28644,18 @@ body.background-settings-workplace-background-image.theme-dark.is-frameless:is(.
 
 /*********canvas****/
 
-.canvas-node-content img {
+.canvas-node-content div[data-embed-type="image"]>p>img {
   min-width: 100%;
   position:absolute; 
   left: 0;
   top: 0;
   right:0;
   bottom: 0;
+  image-rendering:-moz-crisp-edges;
+        image-rendering:-o-crisp-edges;
+        image-rendering:-webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+        -ms-interpolation-mode:nearest-neighbor;
 }
 
 .canvas-node-container
