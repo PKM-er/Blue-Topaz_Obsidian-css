@@ -28634,3 +28634,16 @@ display: block !important;
  .frontmatter-container {
   display: none;
 }
+
+
+.workspace-leaf-content[data-type="recent-files"] .view-content
+{
+overflow-x: hidden;
+}
+
+.canvas-node-container  h1
+{
+font-size: calc(var(--h1-size) + 1em);
+text-align: center;
+}
+
