@@ -28581,6 +28581,25 @@ body.background-settings-workplace-background-image.theme-dark.is-frameless:is(.
 }
 
 /*********canvas****/
+/****弹出窗口 导出canvas 避免工作区背景干扰****/
+body.is-popout-window .workspace-leaf-content[data-type="canvas"],
+body.is-popout-window .canvas-wrapper
+{
+  background-color:var(--color-base-00);
+  --background-primary:var(--color-base-00);
+}
+ .canvas-wrapper
+{
+  --background-primary:var(--bg-color-settings-3);
+}
+
+.canvas-path-label
+{
+  font-size: var(--font-ui-medium);
+  padding: calc(var(--size-2-2) * var(--zoom-multiplier));
+  background-color:var(--bg-color-settings-3);
+}
+/***/
 
 .canvas-node-content div[data-embed-type="image"]>p>img {
   min-width: 100%;
