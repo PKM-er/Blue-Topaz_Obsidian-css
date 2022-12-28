@@ -1952,6 +1952,14 @@ settings:
     type: class-toggle
     default: false
   -
+    id: justify-align
+    title: Alignment of both ends(justify align)
+    title.zh: 段落两端对齐
+    description.zh: 开启全局生效，单独生效只需要在,笔记yaml声明cssclass：justify。阅读模式需要安装Contextual Typography插件
+    description: Enable global effect, local effect only need to  declare "cssclass：justify" in the YAML area. Contextual Typography plugin needs to be installed in Reading mode.
+    type: class-toggle
+    default: false
+  -
     id: reduce-bottom-padding
     title: To Reduce Padding Bottom of Pages
     title.zh: 缩减笔记下方预留空白大小
@@ -4651,15 +4659,15 @@ body {
 
   /*font family*/
   --font-default: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei", sans-serif;
-  --font-family-list: '';/*列表字体*/
-  --font-text-theme: Bookerly, "霞鹜文楷 GB", "LXGW WenKai", "Segoe UI Emoji"; /*主体（包括列表）字体，除代码框等少数部分*/
+  --font-family-list: ;/*列表字体*/
+  --font-text-theme: Bookerly,'Inter', "Segoe UI","霞鹜文楷 GB", "LXGW WenKai", "Segoe UI Emoji"; /*主体（包括列表）字体，除代码框等少数部分*/
   --font-family-h1: var(--font-default);
   --font-family-h2: var(--font-default);
   --font-family-h3: var(--font-default);
   --font-family-h4: var(--font-default);
-  --font-family-h5: '';
-  --font-family-h6: '';
-  --font-family-title:'';/*文件抬头标题*/
+  --font-family-h5: ;
+  --font-family-h6: ;
+  --font-family-title: ;/*文件抬头标题*/
   --font-family-folder-file-title: Arlrdbd, "Source Han Sans", "Noto Sans CJK", "Source Sans Pro", "Segoe UI Emoji", sans-serif;/*左侧边栏文件、文件夹字体*/
   --font-monospace-theme: Consolas, Monaco, "等距更纱黑体 SC", "Source Han Mono", "Microsoft Yahei Mono", "Segoe UI Emoji", "Microsoft YaHei", "Source Code Pro", monospace;
   --font-family-inline-code: var(--font-monospace-theme);
@@ -4671,7 +4679,7 @@ body {
   --mermaid-font-family: Segoe UI, "Microsoft YaHei", "Segoe UI Emoji", "trebuchet ms", verdana, Arial, cursive;
   --font-family-better-footnote: Arlrdbd, "Source Han Sans", "Segoe UI Emoji";
   --font-family-strong: Bookerly, "LXGW WenKai Screen", "LXGW WenKai Screen R", "霞鹜文楷 GB", "LXGW WenKai", "Segoe UI Emoji", var(--font-default);
-  --font-family-em: '';
+  --font-family-em: ;
   --font-loading-text: var(--font-monospace-theme);
 
   /*radius*/
@@ -4817,7 +4825,7 @@ body {
   --fancy-cursor-width: 2px;
   --cursor-color-temp: var(var(--text-normal));
 
-  --print-strong-color: '';
+  --print-strong-color: ;
   --print-em-color: var(--accent-em);
 
   --tag-border-width: 1px;
@@ -10580,7 +10588,19 @@ body.text-indentation-two-em [data-type="markdown"] div[class="el-p"]:not(blockq
 }
 body.text-indentation-two-em [data-type="markdown"] div[class="el-p"]:not(blockquote) > p>br::after,
 [data-type="markdown"] :is(.markdown-preview-view,.markdown-rendered).indent div[class="el-p"]:not(blockquote) >p>br::after {
-  content: '\A\0009\0009';
+  content: '\A\0020\0020\0020\0020';
+}
+
+body.justify-align .markdown-source-view.mod-cm6 div.cm-line:not(.HyperMD-header),
+.markdown-source-view.mod-cm6.justify div.cm-line:not(.HyperMD-header) {
+  text-align: justify;
+    hyphens: auto;
+}
+
+body.justify-align [data-type="markdown"] div[class="el-p"]:not(blockquote) > p,
+[data-type="markdown"] :is(.markdown-preview-view,.markdown-rendered).justify div[class="el-p"]:not(blockquote) > p {
+  text-align: justify;
+    hyphens: auto;
 }
 
 
@@ -14378,7 +14398,7 @@ body.image-border img{
   filter: drop-shadow(0px 0px 3px rgba(var(--mono-rgb-100),0.2));
 }
 /* images : reduce displayed size of embedded files, zoom on hover */
-body:not(.obsidian-default-image) :is(.markdown-preview-view,.markdown-rendered) img:not([class*="emoji"]) {
+body:not(.obsidian-default-image) :is(.markdown-preview-view,.markdown-rendered)  :not(.canvas-node-content)> img:not([class*="emoji"]) {
   max-width: var(--image-max-width);
   margin-left: auto;
   margin-right: auto;
@@ -14386,7 +14406,7 @@ body:not(.obsidian-default-image) :is(.markdown-preview-view,.markdown-rendered)
 body:not(.obsidian-default-image) .print :is(.markdown-preview-view,.markdown-rendered) img:not([class*="emoji"]) {
   display: block;
 }
-body:not(.obsidian-default-image) .view-content img:not([class*="emoji"]) {
+body:not(.obsidian-default-image) .view-content  :not(.canvas-node-content)>img:not([class*="emoji"]) {
   cursor: zoom-in;
   display: block;
   margin-left: auto !important;
@@ -25247,7 +25267,11 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
     display:unset;
   }
   body.text-indentation-two-em .print *:not(blockquote) > p>br::after {
-    content: '\A\0009\0009';
+    content: '\A\0020\0020\0020\0020';
+  }
+  body.justify-align .print *:not(blockquote) > p {
+    text-align: justify;
+    hyphens: auto;
   }
 }
 
@@ -25648,7 +25672,7 @@ body.admonition-bg-color-same .callout-title {
   
 .callout.callout:is([data-callout-metadata*="indent"], 
 [data-callout*=indent]) .callout-content p br::after {
-  content: '\A\0009\0009';
+  content: '\A\0020\0020\0020\0020';
 }
 /* ===隐藏图标============ */
 .callout.callout:is([data-callout-metadata^="noicon"], 
@@ -28626,8 +28650,12 @@ body.is-popout-window .canvas-wrapper
 .canvas-node-content.markdown-embed > .markdown-embed-content > .markdown-preview-view {
   padding: 0  0.5em;
 }
+body[data-canvas-path*="_middle"] .canvas-node-container *
+{
+text-align: center;
+}
 
-
+/*******/
 .show-full-metadata  .frontmatter-container .frontmatter-section
 {
   display: flex!important;
@@ -28638,6 +28666,10 @@ body.is-popout-window .canvas-wrapper
 }
 
 :not(.show-full-metadata) .frontmatter-container:has(.frontmatter-container-header + .frontmatter-section:not(:is(.mod-aliases,.mod-tags)))
+{
+  display: none;
+}
+:not(.show-full-metadata) .frontmatter-container:not(:has(.frontmatter-container-header + .frontmatter-section))
 {
   display: none;
 }
