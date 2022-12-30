@@ -1325,7 +1325,7 @@ settings:
     description: Fonts except from the code texts
     description.zh: 除代码框外字体
     type: variable-text
-    default: "Bookerly, 'LXGW WenKai', 'Segoe UI Emoji', var(--font-default)"
+    default: "Bookerly,'Inter', 'Segoe UI','霞鹜文楷 GB', 'LXGW WenKai', 'Segoe UI Emoji',var(--font-default)"
   - 
     id: font-family-h1
     title: Header 1
@@ -1367,7 +1367,7 @@ settings:
     title: Codebox
     title.zh: 代码框字体
     type: variable-text
-    default: "Consolas, Monaco, 'Source Han Mono', 'Microsoft Yahei Mono', 'Segoe UI Emoji', 'Microsoft YaHei', 'Source Code Pro',  monospace"
+    default: "'JetBrains Mono',Consolas, Monaco, '等距更纱黑体 SC', 'Source Han Mono', 'Microsoft Yahei Mono', 'Segoe UI Emoji', 'Microsoft YaHei', 'Source Code Pro', monospace"
   -
     id: font-family-inline-code
     title: Inline Code
@@ -1385,12 +1385,12 @@ settings:
     title: Bold Text
     title.zh: 加粗文字字体
     type: variable-text
-    default: "Bookerly, 'LXGW WenKai Screen R', 'LXGW WenKai UI', 'Segoe UI Emoji', var(--font-default)"
+    default: "Bookerly,'Inter', 'Segoe UI', 'LXGW WenKai Screen', 'LXGW WenKai Screen R', '霞鹜文楷 GB', 'LXGW WenKai', 'Segoe UI Emoji', var(--font-default)"
   - 
     id: font-weight-strong
     title: Bold text font weight
     title.zh: 加粗文字样式
-    description: typy 'light, normal, bold, bolder; or 100-900'
+    description: type 'light, normal, bold, bolder; or 100-900'
     type: variable-text
     default: bold
   - 
@@ -2265,6 +2265,16 @@ settings:
     min: 0
     max: 3
     step: 0.2
+  -
+    id: list-indent
+    title: List indent 
+    title.zh: 列表缩进间距
+    type: variable-number-slider
+    default: 2
+    format: em
+    min: 0
+    max: 6
+    step: 0.1
   -
     id: list-style-change-options-folder
     title: 2.3.2.1 Unordered List
@@ -3757,10 +3767,39 @@ settings:
     level: 3
     collapsed: true
   -
-    id: show-full-metadata 
-    title: Show full metadata in Reading mode
-    title.zh: 阅读模式下显示完整的metadata信息
-    description.zh: 需要先在设置中开启显示front-matter，笔记cssclass中声明show-full-metadata 可单独控制是否显示yaml
+    id: canvas-styles
+    title: 2.3.25 Canvas
+    title.zh: 2.3.25白板Canvas
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: canvas-card-text-middle 
+    title: canvas card text center align
+    title.zh: 卡片文字默认居中
+    type: class-toggle
+    default: false
+  - 
+    id: canvas-card-opacity
+    title: Canvas Card Opacity
+    title.zh: 卡片透明度
+    type: variable-number-slider
+    default: 0.1
+    min: 0
+    max: 1
+    step: 0.05
+  -
+    id: canvas-workplace-background 
+    title: canvas workplace background settings
+    title.zh: canvas页面背景设置
+    type: heading
+    level: 4
+    collapsed: true
+  - 
+    id: canvas-workplace-background 
+    title: Toggle canvas workplace  background 
+    title.zh: 关闭Canvas工作区背景
+    description.zh: 如果开启了1.2.1工作页面背景，画板也会带有背景，这里可以关闭画板背景
     type: class-toggle
     default: false
   - 
@@ -4318,6 +4357,9 @@ settings:
         label: monokai
         value: code-theme-monokai
       - 
+        label: sublime
+        value: code-theme-sublime
+      - 
         label: Custom
         value: code-theme-custom
   - 
@@ -4669,16 +4711,16 @@ body {
   --font-family-h6: ;
   --font-family-title: ;/*文件抬头标题*/
   --font-family-folder-file-title: Arlrdbd, "Source Han Sans", "Noto Sans CJK", "Source Sans Pro", "Segoe UI Emoji", sans-serif;/*左侧边栏文件、文件夹字体*/
-  --font-monospace-theme: Consolas, Monaco, "等距更纱黑体 SC", "Source Han Mono", "Microsoft Yahei Mono", "Segoe UI Emoji", "Microsoft YaHei", "Source Code Pro", monospace;
+  --font-monospace-theme: 'JetBrains Mono',Consolas, Monaco, "等距更纱黑体 SC", "Source Han Mono", "Microsoft Yahei Mono", "Segoe UI Emoji", "Microsoft YaHei", "Source Code Pro", monospace;
   --font-family-inline-code: var(--font-monospace-theme);
-  --font-family-tag: Bookerly, "Microsoft YaHei", STzhongsong, STSong, "Segoe UI Emoji", Serif;
+  --font-family-tag: Bookerly,'Inter', "Segoe UI", "Microsoft YaHei", STzhongsong, STSong, "Segoe UI Emoji", Serif;
   --font-family-vault: "Lucida Handwriting", "Segoe UI Emoji";/*左侧库名字体*/
   --font-family-special-tag: "Lucida Handwriting", "Segoe UI Emoji";
   --font-family-YAML: "Lucida Handwriting";
 
   --mermaid-font-family: Segoe UI, "Microsoft YaHei", "Segoe UI Emoji", "trebuchet ms", verdana, Arial, cursive;
   --font-family-better-footnote: Arlrdbd, "Source Han Sans", "Segoe UI Emoji";
-  --font-family-strong: Bookerly, "LXGW WenKai Screen", "LXGW WenKai Screen R", "霞鹜文楷 GB", "LXGW WenKai", "Segoe UI Emoji", var(--font-default);
+  --font-family-strong: Bookerly,'Inter', "Segoe UI", "LXGW WenKai Screen", "LXGW WenKai Screen R", "霞鹜文楷 GB", "LXGW WenKai", "Segoe UI Emoji", var(--font-default);
   --font-family-em: ;
   --font-loading-text: var(--font-monospace-theme);
 
@@ -4864,6 +4906,7 @@ body {
   --font-weight-strong: bold;
   --font-style-em: italic;
   --code-background: var(--background-code);
+  --canvas-card-opacity: 0.1;
 }
 
 body.all-dark .print.theme-light,
@@ -12301,6 +12344,18 @@ body.code-theme-monokai {
   --code-comment: #75715E;
   --code-active-line-background-color: #17013f9f;
 }
+body.code-theme-sublime
+{
+  --code-operator: #9a6e3a;
+  --code-variable: #5180de;
+  --code-keyword: #EA5E66;
+  --code-string: #40bf31;
+  --code-function: #F9AE58;
+  --code-string-2: #F9AE58;
+ --code-type: #F9AE58;
+ --code-def: #F9AE58;
+}
+
 
 .cm-s-obsidian span.cm-variable {
   color: var(--code-variable);
@@ -19060,7 +19115,7 @@ div.code-block-wrap > pre  pre:not([closed]) + code[class*=language-] {
   color: var(--code-language);
 }
 .obsidian-embedded-code-title__code-block-title .collapser .handle {
-  margin-top: 10px;
+  margin-top: -3px;
 }
 .obsidian-embedded-code-title__code-block-title[closed] .langName {
   opacity: 0.75;
@@ -23999,7 +24054,7 @@ body.plain-file-title.theme-dark {
   --color-view-header-gradient-2: var(--background-primary);
 }
 
-body:not(.default-loading-page) .progress-bar-message {
+body:not(:is(.default-loading-page,.is-popout-window)) .progress-bar-message {
   visibility: hidden;
 }
 
@@ -24018,6 +24073,9 @@ body:not(.default-loading-page).loading-page-style-default .progress-bar-message
 
 body:not(.default-loading-page).theme-light .progress-bar {
   background-color: white;
+}
+body:not(.default-loading-page).theme-dark .progress-bar {
+  background-color: #222222;
 }
 
 @keyframes shape {
@@ -25065,6 +25123,10 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
   display: none;
 }
 /*无序列表分栏（配合伪看板使用）*/
+.theme-dark .gridlist ul>li a {
+  color:var(--text-folder-file) !important;
+}
+
 .gridlist ul ul {
   display: grid;
   grid-template-columns: repeat(2, minmax(10px, 1fr));
@@ -26927,7 +26989,7 @@ body:not(.default-list-marker) .markdown-rendered .list-bullet::after {
   border: none;
   background: transparent;
   color: var(--list-ul-marker-color);
-  margin-left: -0.13em;
+  margin-left: 0.13em;
   margin-top: calc(0.466em * var(--line-height-list) - 0.286em);
   line-height: 0.55;
   transition: all 0.15s ease;
@@ -26941,8 +27003,8 @@ body:not(.default-list-marker) .list-bullet::after {
   border: none;
   background: transparent;
   color: var(--list-ul-marker-color);
-  margin-left: -0.03em;
-  margin-top: -0.15em;
+/*   margin-left: -0.03em;
+  margin-top: -0.15em; */
   display: flex;
   justify-content: center; 
   flex-direction: column; 
@@ -26991,7 +27053,6 @@ body:not(.default-list-marker) .has-list-bullet .has-list-bullet .list-bullet::a
 body:not(.default-list-marker) .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
 body:not(.default-list-marker) .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after {
   top: 0;
-  left: -0.6rem;
 }
 
 body:not(.default-list-marker) .markdown-source-view.mod-cm6 .cm-indent::before {
@@ -27008,9 +27069,9 @@ body:not(.default-list-marker) .markdown-source-view.mod-cm6 .cm-indent::before 
   margin-top: calc(var(--header-height)*0.98);
 }
 
-.has-list-bullet .list-bullet:after {
+/* .has-list-bullet .list-bullet:after {
   margin-left: -10px;
-}
+} */
 
 body:not(.default-list-marker) .list-collapse-indicator:hover ~ .list-bullet:after,
 body:not(.default-list-marker) .cm-fold-indicator:hover ~ .list-bullet:after,
@@ -27106,13 +27167,6 @@ body.colorful-unordered-list .markdown-rendered .has-list-bullet .has-list-bulle
   color: var(--list-marker-color-collapsed);
   box-shadow: -0.02em 0.058em 0 2px var(--background-modifier-active-hover);
   background-color: var(--background-modifier-active-hover);
-}
-
-
-
-
-.markdown-rendered.show-indentation-guide li > ul::before{
-  left: -19px;
 }
 
 
@@ -28604,17 +28658,15 @@ body.background-settings-workplace-background-image.theme-dark.is-frameless:is(.
   color: var(--text-muted);
 }
 
-/*********canvas****/
-/****弹出窗口 导出canvas 避免工作区背景干扰****/
-body.is-popout-window .workspace-leaf-content[data-type="canvas"],
-body.is-popout-window .canvas-wrapper
+
+/* ================================== */
+/* ========= Canvas ========= */
+/* ================================== */
+
+ 
+.workspace-leaf-content[data-type='canvas'] .view-content .canvas-wrapper
 {
-  background-color:var(--color-base-00);
-  --background-primary:var(--color-base-00);
-}
- .canvas-wrapper
-{
-  --background-primary:var(--bg-color-settings-3);
+  background-color: unset;
 }
 
 .canvas-path-label
@@ -28623,7 +28675,6 @@ body.is-popout-window .canvas-wrapper
   padding: calc(var(--size-2-2) * var(--zoom-multiplier));
   background-color:var(--bg-color-settings-3);
 }
-/***/
 
 .canvas-node-content div[data-embed-type="image"]>p>img {
   min-width: 100%;
@@ -28638,23 +28689,78 @@ body.is-popout-window .canvas-wrapper
         image-rendering: crisp-edges;
         -ms-interpolation-mode:nearest-neighbor;
 }
-
-.canvas-node-container
+.canvas-wrapper .canvas-node .canvas-node-container:has(.canvas-node-placeholder)
 {
-  border:unset;
-  box-shadow: var(--shadow-s);
+  border: 2px solid rgb(var(--canvas-color));
 }
-.canvas-node-container .markdown-embed{
-  background-color: var(--background-primary);
+.canvas-wrapper .canvas-node .canvas-node-container 
+{
+  border: unset;
+  box-shadow: inset 0 0 0 1px rgba(var(--canvas-color), calc(var(--canvas-card-opacity) + 0.6)), var(--shadow-stationary);
 }
+ .canvas-wrapper .canvas-node:not(.is-themed) .canvas-node-container:has(.canvas-node-placeholder) 
+{
+  border: 2px solid var(--color-base-60);
+  box-shadow: none;
+}
+.canvas-wrapper .canvas-node:not(.is-themed) .canvas-node-container
+{
+  border: 1px solid rgb(var(--canvas-color));
+  box-shadow: inset 0 0 0 1px var(--color-base-00), var(--shadow-stationary);
+}
+.canvas-wrapper .canvas-node:not(.is-themed) .canvas-node-content
+{
+  background-color: rgba(var(--mono-rgb-0),var(--canvas-card-opacity));
+}
+.canvas-wrapper .canvas-node .canvas-node-content
+{
+  background-color: rgba(var(--canvas-color), var(--canvas-card-opacity));
+}
+body.theme-dark .canvas-wrapper .canvas-menu{
+  background-color: rgba(10, 10, 10,0.8);
+}
+
+body.theme-light .canvas-wrapper .canvas-menu{
+  background-color: rgba(var(--mono-rgb-0),0.7);
+}
+
+
 .canvas-node-content.markdown-embed > .markdown-embed-content > .markdown-preview-view {
   padding: 0  0.5em;
 }
-body[data-canvas-path*="_middle"] .canvas-node-container *
-{
-text-align: center;
-}
 
+
+/* blur node */
+.is-text-garbled .canvas-node  *,
+.is-text-garbled .markdown-preview-section div pre code {
+    text-shadow: 0 0 6px currentColor !important;
+	-webkit-text-fill-color: transparent !important;
+}
+/* blur media */
+.is-text-garbled .canvas-node-container div img,
+.is-text-garbled .canvas-node-container div svg,
+.is-text-garbled .canvas-node-container div video,
+.is-text-garbled .canvas-node-container div webview,
+.is-text-garbled .canvas-node-container div iframe {
+    filter: blur(4px) !important;
+ }
+
+ body.canvas-workplace-background .workspace-leaf-content[data-type="canvas"],
+ body.canvas-workplace-background .canvas-wrapper
+ {
+   --background-primary:var(--color-base-00);
+ }
+ /* hide convas export  grid */
+ .canvas-wrapper.is-screenshotting .canvas-background rect
+{
+  display: none;
+}
+.app-container:has(~ .canvas-wrapper.is-screenshotting ) ,
+.titlebar:has(~ .canvas-wrapper.is-screenshotting ) 
+{
+   display: none;
+}
+ 
 /*******/
 .show-full-metadata  .frontmatter-container .frontmatter-section
 {
@@ -28698,3 +28804,8 @@ font-size: calc(var(--h1-size) + 1em);
 text-align: center;
 }
 
+ 
+body.canvas-card-text-middle .canvas-node-container .canvas-node-content.markdown-embed:not(.is-loaded)
+{
+text-align: center;
+}
