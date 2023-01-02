@@ -1910,7 +1910,7 @@ settings:
     title.zh: 行宽（缩减栏宽模式下）
     description: The maximum line width in rem units (1rem = Body font size)
     type: variable-number
-    default: 42
+    default: 45
     format: rem
   -
     id: line-height-main
@@ -12082,8 +12082,8 @@ body:not(.font-family-change-to-default) .markdown-source-view {
 }
 
 .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-content {
-  width: var(--file-line-width);
-  max-width: 100%;
+/*   width: var(--file-line-width);
+  max-width: 100%; */
   margin: 0 auto;
 }
 
@@ -29057,6 +29057,9 @@ body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-custom) .ca
   stroke-width: calc(12 * var(--zoom-multiplier));
 }
 
+.canvas-node-content.markdown-embed table {
+  text-align: start;
+}
 
 /* ================================== */
 .show-full-metadata  .frontmatter-container .frontmatter-section
