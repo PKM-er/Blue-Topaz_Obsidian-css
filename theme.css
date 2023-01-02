@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v1.0.3。uid [20221221] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.0.3, uid [20221221] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.0.3。uid [20230102] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.0.3, uid [20230102] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -3224,11 +3224,19 @@ settings:
     id: icons-style-folder-3
     title: Intro to Image Grid
     title.zh: 图片横排介绍
-    description: You can add 🔸|+grid into some images to grid these images in a line, e.g. ![[*.jpg|+grid]] Or type ❗cssclass：img-grid❗ in YAML to make images arrange in a grid in the preview mode.
-    description.zh: 在图片格式里添加 🔸|+grid 使复数的图片排成一行, e.g. ![[*.jpg|+grid]] 。或者在YAML种输入 ❗cssclass：img-grid❗
+    description: You can add 🔸|+grid into some images to grid these images in a line, e.g. ![[*.jpg|+grid]] Or type ❗cssclass：img-grid❗ in YAML to make images arrange in a grid in the preview mode. require Contextual Typography plugin
+    description.zh: 在图片格式里添加 🔸|+grid 使复数的图片排成一行, e.g. ![[*.jpg|+grid]] 。或者在YAML种输入 ❗cssclass：img-grid❗最好安装 Contextual Typography 插件实现更好的并排效果
     type: heading
     level: 4
-    collapsed: true
+    collapsed: false
+  -
+    id: img-grid
+    title:  Enable Global Image Grid
+    title.zh: 开启全局图片横排显示
+    description: Enable the Contextual Typography plugin to control side-by-side images via blank lines
+    description.zh:  开启后，不需要在笔记上方声明cssclass：img-grid，通过图片空行控制是否并排
+    type: class-toggle
+    default: false
   -
     id: loading-page-style-folder
     title: 2.3.16 Loading Page 
@@ -3766,13 +3774,28 @@ settings:
     type: heading
     level: 3
     collapsed: true
+  - 
+    id: show-full-metadata 
+    title: Show full metadata in Reading mode
+    title.zh: 阅读模式下显示完整的metadata信息
+    description.zh: 需要先在设置中开启显示front-matter，笔记cssclass中声明show-full-metadata 可单独控制是否显示yaml
+    type: class-toggle
+    default: false
   -
     id: canvas-styles
     title: 2.3.25 Canvas
-    title.zh: 2.3.25白板Canvas
+    title.zh: 2.3.25 白板Canvas
     type: heading
     level: 3
     collapsed: true
+  -
+    id: canvas-card-focus-mode 
+    title: canvas card focus mode
+    title.zh: 开启Canvas聚焦模式
+    description: clicking on a card will highlight all cards and lines of the same color on the canvas When turned on
+    description.zh: 开启后 点击卡片会突出显示画布上所有相同颜色的卡片和线条
+    type: class-toggle
+    default: false
   -
     id: canvas-card-text-middle 
     title: canvas card text center align
@@ -3789,20 +3812,76 @@ settings:
     max: 1
     step: 0.05
   -
-    id: canvas-workplace-background 
+    id: canvas-workplace-background-heading
     title: canvas workplace background settings
     title.zh: canvas页面背景设置
     type: heading
     level: 4
     collapsed: true
   - 
+    id: toggle-canvas-grid 
+    title: Toggle canvas grid
+    title.zh: 关闭Canvas网格显示
+    type: class-toggle
+    default: false
+  -
     id: canvas-workplace-background 
     title: Toggle canvas workplace  background 
     title.zh: 关闭Canvas工作区背景
-    description.zh: 如果开启了1.2.1工作页面背景，画板也会带有背景，这里可以关闭画板背景
+    description.zh: 如果开启了1.2.1工作页面背景，编辑画板也会带有背景，这里可以关闭画板背景
     type: class-toggle
     default: false
   - 
+    id: canvas-background-image
+    title: Canvas Background image
+    title.zh: canvas背景图案
+    type: class-select
+    allowEmpty: false
+    default: default-canvas-background
+    options:
+      - 
+        label: Default
+        value: default-canvas-background
+      - 
+        label: Stardust
+        value: stardust-canvas-background
+      - 
+        label: Dark Mosaic
+        value: mosaic-canvas-background-dark
+      -  
+        label: Woven (Dark)
+        value: woven-canvas-background-dark
+      - 
+        label: Woven (light)
+        value: woven-canvas-background
+      - 
+        label: Wood
+        value: wood-canvas-background
+      - 
+        label: Retina Wood
+        value: retina-wood-canvas-background
+      - 
+        label: Matrix grid 
+        value: matrix-grid-canvas-background
+      - 
+        label: Notebook
+        value: notebook-canvas-background
+      - 
+        label: Project Paper
+        value: paper-canvas-background
+      - 
+        label: Blackboard
+        value: blackboard-canvas-background
+  -
+    id: custom-canvas-bg
+    title: Custom Canvas Background Color
+    title.zh: 自定义canvas背景色
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#fef9ee'
+    default-dark: '#05172e'
+  -
     id: style-options-for-other-plugins
     title: 3. For Plugins
     title.zh: 3. 插件样式
@@ -3831,6 +3910,26 @@ settings:
     description.zh: Obsidian 默认callout样式
     type: class-toggle
     default: false
+  -
+    id: callout-style-settings
+    title: callout style settings
+    title.zh: Callout 外观样式设置
+    type: class-select
+    allowEmpty: false
+    default: traditional-callout-style
+    options:
+      - 
+        label: Default
+        value: admonition-bg-color-same
+      - 
+        label: Traditional
+        value: traditional-callout-style
+      - 
+        label: Border
+        value: border-callout-style
+      - 
+        label: Shade
+        value: shade-callout-style
   -
     id: full-width-callout
     title: Full-width layout for callout & admonition
@@ -10631,11 +10730,11 @@ body.text-indentation-two-em [data-type="markdown"] div[class="el-p"]:not(blockq
 }
 body.text-indentation-two-em [data-type="markdown"] div[class="el-p"]:not(blockquote) > p>br::after,
 [data-type="markdown"] :is(.markdown-preview-view,.markdown-rendered).indent div[class="el-p"]:not(blockquote) >p>br::after {
-  content: '\A\0020\0020\0020\0020';
+  content: '\A\9\9';
 }
 
-body.justify-align .markdown-source-view.mod-cm6 div.cm-line:not(.HyperMD-header),
-.markdown-source-view.mod-cm6.justify div.cm-line:not(.HyperMD-header) {
+body.justify-align .markdown-source-view.mod-cm6 div[class="cm-line"]:not(.HyperMD-header),
+.markdown-source-view.mod-cm6.justify div[class="cm-line"]:not(.HyperMD-header) {
   text-align: justify;
     hyphens: auto;
 }
@@ -10645,7 +10744,11 @@ body.justify-align [data-type="markdown"] div[class="el-p"]:not(blockquote) > p,
   text-align: justify;
     hyphens: auto;
 }
-
+body.justify-align [data-type="markdown"] div.el-p.callout-content:not(blockquote) > p,
+[data-type="markdown"] :is(.markdown-preview-view,.markdown-rendered).justify div.el-p.callout-content:not(blockquote) > p {
+  text-align: justify;
+    hyphens: auto;
+}
 
 /*edit mode blockquote font size*/
 .cm-s-obsidian span.cm-quote {
@@ -17523,7 +17626,10 @@ body.style-options-for-admonition-plugin .callout.admonition .admonition-content
 .admonition.callout {
   border-color: rgba(var(--callout-color),0.15);
 }
-
+.callout:not(.admonition).drop-shadow
+{
+  box-shadow:var(--window-shadow2);
+}
 .callout.admonition.admonition-plugin.is-collapsed {
   overflow: hidden;
 }
@@ -19474,6 +19580,18 @@ div[data-type='memos_view'] .usage-heat-map-wrapper > .usage-heat-map > .stat-co
 /* =============recent files=============== */
 
 /**recent file **/
+body.remove-file-icons .workspace-leaf-content[data-type="recent-files"] .view-content {
+  padding: unset;
+}
+
+body.remove-file-icons:not(.remove-arrow) .nav-folder.mod-root>.nav-folder-children>.nav-file
+{
+ padding-left:16px ;
+}
+body.remove-file-icons.remove-arrow .nav-folder.mod-root
+{
+ padding-left:4px ;
+}
 .workspace-leaf-content[data-type="recent-files"] .view-content {
   padding: unset;
 }
@@ -25329,7 +25447,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
     display:unset;
   }
   body.text-indentation-two-em .print *:not(blockquote) > p>br::after {
-    content: '\A\0020\0020\0020\0020';
+    content: '\A\9\9'';
   }
   body.justify-align .print *:not(blockquote) > p {
     text-align: justify;
@@ -25347,8 +25465,31 @@ body.admonition-bg-color-same .callout
   background-color: rgba(var(--callout-color), 0.1);
   border-width: var(--callout-border-width);
 }
+body.shade-callout-style .callout
+{
+
+ border:none;
+ box-shadow: inset 0 0 0 2px rgba(var(--callout-color), 0.25), 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1) !important;
+}
+body.shade-callout-style  .callout .callout-title {
+  padding: 6px;
+  background-color: rgba(var(--callout-color), 0.4);
+}
  
-body:not(.admonition-bg-color-same) .callout-title {
+body.border-callout-style .callout
+{
+  --callout-radius: 2px;
+  border-left: solid 4px rgb(var(--callout-color));
+}
+ 
+body.border-callout-style .callout .callout-title {
+  padding: 6px;
+  background-color: rgba(var(--callout-color), 0.4);
+}
+body.border-callout-style .callout .callout-content {
+  background-color: rgba(var(--callout-color), 0.1);
+}
+.callout-title {
   background-color: rgba(var(--callout-color), 0.15);
 }
 .callout-title-inner {
@@ -25368,6 +25509,7 @@ body:not(.admonition-bg-color-same) .callout-title {
 }
 body.admonition-bg-color-same .callout-title {
   color: rgb(var(--callout-color));
+  background-color:unset;
 }
 .callout-title {
   padding: 12px 0 12px 12px;
@@ -25734,8 +25876,20 @@ body.admonition-bg-color-same .callout-title {
   
 .callout.callout:is([data-callout-metadata*="indent"], 
 [data-callout*=indent]) .callout-content p br::after {
-  content: '\A\0020\0020\0020\0020';
+  content: '\A\9\9';
 }
+
+/* ===段落两端对齐============ */
+/*支持两种写法
+    > [!note|justify]
+    > [!note justify]
+   */
+   .callout.callout:is([data-callout-metadata*="justify"], 
+   [data-callout*=justify]) .callout-content>p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+   }
 /* ===隐藏图标============ */
 .callout.callout:is([data-callout-metadata^="noicon"], 
 [data-callout*=noicon]) .callout-icon {
@@ -26298,13 +26452,11 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 
 .callout.callout[data-callout*=bookinfo] .callout-title {
   text-align: center;
-  margin-top: -10px;
   display: flex;
   justify-content: space-between;
 }
 
 .callout.callout[data-callout*=bookinfo] .callout-content {
-  margin-top: -10px;
   display: flex;
   justify-content: space-between;
 }
@@ -28663,6 +28815,11 @@ body.background-settings-workplace-background-image.theme-dark.is-frameless:is(.
 /* ========= Canvas ========= */
 /* ================================== */
 
+.app-container:has(~ .canvas-wrapper.is-screenshotting ) ,
+.titlebar:has(~ .canvas-wrapper.is-screenshotting ) 
+{
+   display: none;
+}
  
 .workspace-leaf-content[data-type='canvas'] .view-content .canvas-wrapper
 {
@@ -28751,17 +28908,157 @@ body.theme-light .canvas-wrapper .canvas-menu{
    --background-primary:var(--color-base-00);
  }
  /* hide convas export  grid */
+ body.toggle-canvas-grid .canvas-wrapper .canvas-background rect,
  .canvas-wrapper.is-screenshotting .canvas-background rect
 {
-  display: none;
+  opacity: 0;
 }
-.app-container:has(~ .canvas-wrapper.is-screenshotting ) ,
-.titlebar:has(~ .canvas-wrapper.is-screenshotting ) 
+
+
+.canvas-wrapper::before
 {
-   display: none;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--custom-canvas-bg,var(--canvas-background-color)) ;
+  background-image: var(--canvas-background) ;
+
+} 
+
+
+body.default-canvas-background{
+  --canvas-background-color:var(--custom-canvas-bg);
 }
- 
-/*******/
+
+body.stardust-canvas-background{
+  --canvas-background-color:#000000;
+  --canvas-background:url("https://www.transparenttextures.com/patterns/stardust.png")
+}
+
+
+body.mosaic-canvas-background-dark{
+  --canvas-background-color: #000000;
+  --canvas-background: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+}
+
+
+body.woven-canvas-background-dark{
+  --canvas-background-color: #000000;
+  --canvas-background: url("https://www.transparenttextures.com/patterns/woven.png");
+}
+
+
+body.woven-canvas-background{
+  --canvas-background-color: #131401;
+  --canvas-background: url("https://www.transparenttextures.com/patterns/woven-light.png");
+}
+
+body.wood-canvas-background{
+  --canvas-background-color: #000000;
+  --canvas-background: url("https://www.transparenttextures.com/patterns/dark-wood.png");
+}
+
+body.retina-wood-canvas-background{
+  --canvas-background-color: #070f00;
+  --canvas-background: url("https://www.transparenttextures.com/patterns/retina-wood.png");
+}
+
+body.matrix-grid-canvas-background{
+  --canvas-background-color: #050f2e;
+  --canvas-background: url("https://www.transparenttextures.com/patterns/old-mathematics.png");
+}
+
+body.notebook-canvas-background{
+  --canvas-background-color: #9c9e7e;
+  --canvas-background: url("https://www.transparenttextures.com/patterns/notebook.png");
+}
+
+body.notebook-canvas-background{
+  --canvas-background-color: #9c9e7e;
+  --canvas-background: url("https://www.transparenttextures.com/patterns/notebook.png");
+}
+body.paper-canvas-background{
+  --canvas-background-color: #000000;
+  --canvas-background: url("https://www.transparenttextures.com/patterns/project-paper.png");
+}
+body.blackboard-canvas-background{
+  --canvas-background: url("http://thepatternlibrary.com/img/h.jpg");
+}
+
+/*=======canvas-card-focus-mode========
+=====Modified by Cuman from boninall=====*/
+
+body.theme-dark.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-1) .canvas-edges>:not(.mod-canvas-color-1),
+body.theme-dark.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-2) .canvas-edges>:not(.mod-canvas-color-2),
+body.theme-dark.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-3) .canvas-edges>:not(.mod-canvas-color-3),
+body.theme-dark.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-4) .canvas-edges>:not(.mod-canvas-color-4),
+body.theme-dark.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-5) .canvas-edges>:not(.mod-canvas-color-5),
+body.theme-dark.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-6) .canvas-edges>:not(.mod-canvas-color-6),
+body.theme-dark.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-custom) .canvas-edges>:not(.mod-canvas-color-custom),
+/* .canvas:has(.is-focused:not(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6, .mod-canvas-color-custom)) .canvas-node:not(.is-focused):is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6, .mod-canvas-color-custom),  */
+body.theme-dark.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-1) .canvas-node.is-themed:not(:is(.mod-canvas-color-1)),
+body.theme-dark.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-2) .canvas-node.is-themed:not(:is(.mod-canvas-color-2)),
+body.theme-dark.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-3) .canvas-node.is-themed:not(:is(.mod-canvas-color-3)),
+body.theme-dark.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-4) .canvas-node.is-themed:not(:is(.mod-canvas-color-4)),
+body.theme-dark.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-5) .canvas-node.is-themed:not(:is(.mod-canvas-color-5)),
+body.theme-dark.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-6) .canvas-node.is-themed:not(:is(.mod-canvas-color-6)),
+body.theme-dark.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-custom) .canvas-node.is-themed:not(.mod-canvas-color-custom)  {
+    filter: brightness(0.8) grayscale(0.9);
+}
+
+
+body.theme-light.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-1) .canvas-edges>:not(.mod-canvas-color-1),
+body.theme-light.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-2) .canvas-edges>:not(.mod-canvas-color-2),
+body.theme-light.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-3) .canvas-edges>:not(.mod-canvas-color-3),
+body.theme-light.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-4) .canvas-edges>:not(.mod-canvas-color-4),
+body.theme-light.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-5) .canvas-edges>:not(.mod-canvas-color-5),
+body.theme-light.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-6) .canvas-edges>:not(.mod-canvas-color-6),
+body.theme-light.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-custom) .canvas-edges>:not(.mod-canvas-color-custom),
+/* .canvas:has(.is-focused:not(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6, .mod-canvas-color-custom)) .canvas-node:not(.is-focused):is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6, .mod-canvas-color-custom),  */
+body.theme-light.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-1) .canvas-node.is-themed:not(:is(.mod-canvas-color-1)),
+body.theme-light.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-2) .canvas-node.is-themed:not(:is(.mod-canvas-color-2)),
+body.theme-light.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-3) .canvas-node.is-themed:not(:is(.mod-canvas-color-3)),
+body.theme-light.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-4) .canvas-node.is-themed:not(:is(.mod-canvas-color-4)),
+body.theme-light.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-5) .canvas-node.is-themed:not(:is(.mod-canvas-color-5)),
+body.theme-light.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-6) .canvas-node.is-themed:not(:is(.mod-canvas-color-6)),
+body.theme-light.canvas-card-focus-mode  .canvas:has(.is-focused.mod-canvas-color-custom) .canvas-node.is-themed:not(.mod-canvas-color-custom)  {
+
+filter:grayscale(0.9);
+}
+
+/* .canvas:has(.is-focused:not(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6, .mod-canvas-color-custom)) .canvas-node:not(.is-focused):is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6, .mod-canvas-color-custom),  */
+body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-1) .canvas-node.is-themed:is(.mod-canvas-color-1),
+body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-3) .canvas-node.is-themed:is(.mod-canvas-color-3),
+body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-2) .canvas-node.is-themed:is(.mod-canvas-color-2),
+body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-4) .canvas-node.is-themed:is(.mod-canvas-color-4),
+body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-5) .canvas-node.is-themed:is(.mod-canvas-color-5),
+body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-6) .canvas-node.is-themed:is(.mod-canvas-color-6),
+body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-custom) .canvas-node.is-themed.mod-canvas-color-custom {
+  box-shadow:
+           0 0px 8px -7px rgba(var(--canvas-color), 0.8),
+           0 0px 8px -7px rgba(var(--canvas-color), 0.8),
+           0px 0 8px -1px   rgba(var(--canvas-color), 0.4),
+           0px 0 8px -1px   rgba(var(--canvas-color), 0.4);
+}
+
+body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-1) .canvas-edges>.mod-canvas-color-1 path.canvas-interaction-path,
+body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-2) .canvas-edges>.mod-canvas-color-2 path.canvas-interaction-path,
+body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-3) .canvas-edges>.mod-canvas-color-3 path.canvas-interaction-path,
+body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-4) .canvas-edges>.mod-canvas-color-4 path.canvas-interaction-path,
+body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-5) .canvas-edges>.mod-canvas-color-5 path.canvas-interaction-path,
+body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-6) .canvas-edges>.mod-canvas-color-6 path.canvas-interaction-path,
+body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-custom) .canvas-edges>.mod-canvas-color-custom path.canvas-interaction-path
+{
+  stroke: rgba(var(--canvas-color), 0.1);
+  stroke-width: calc(12 * var(--zoom-multiplier));
+}
+
+
+/* ================================== */
 .show-full-metadata  .frontmatter-container .frontmatter-section
 {
   display: flex!important;
