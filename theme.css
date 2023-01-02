@@ -28914,7 +28914,7 @@ body.theme-light .canvas-wrapper .canvas-menu{
   opacity: 0;
 }
 
-
+.workspace-leaf-content[data-type="canvas"] .view-header::before,
 .canvas-wrapper::before
 {
   content: "";
