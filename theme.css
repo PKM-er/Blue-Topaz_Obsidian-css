@@ -29079,7 +29079,7 @@ body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-custom) .ca
 }
 
 /* ================================== */
-.show-full-metadata  .frontmatter-container .frontmatter-section
+.show-full-metadata  .frontmatter-container:not(.is-collapsed) .frontmatter-section
 {
   display: flex!important;
 }
