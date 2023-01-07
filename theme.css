@@ -16587,6 +16587,14 @@ pre.frontmatter.language-yaml::before {
   margin: 0 0 1.2em 0;
   background-color: transparent;
 }
+.frontmatter-container .frontmatter-alias {
+  line-height: 1.2;
+  white-space: initial;
+}
+.frontmatter-container .frontmatter-section-label
+{
+  flex-basis: 8em;
+}
 
 /*====================*/
 /*day planner plugin*/
@@ -29122,8 +29130,12 @@ overflow-x: hidden;
 font-size: calc(var(--h1-size) + 1em);
 text-align: center;
 }
-
- 
+.canvas-node-placeholder::after {
+  background-color: rgba(var(--canvas-color), 0.3);
+}
+.canvas-icon-placeholder svg {
+  opacity: 0.5;
+}
 body.canvas-card-text-middle .canvas-node-container .canvas-node-content.markdown-embed:not(.is-loaded)
 {
 text-align: center;
