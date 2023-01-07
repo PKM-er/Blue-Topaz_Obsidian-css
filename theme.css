@@ -9043,7 +9043,10 @@ body.color-scheme-options-simplicity-topaz.background-image-settings-switch.back
 body.is-mobile.color-scheme-options-simplicity-topaz .workspace>.workspace-split.mod-vertical{
   padding: 0;
 }
-
+.view-header .view-actions .view-action
+{
+  z-index: 1;	
+}
 body.color-scheme-options-simplicity-topaz .view-header .view-actions .view-action,
 body.color-scheme-options-simplicity-topaz .titlebar-button-container.mod-right{
   opacity: 0;
@@ -9103,7 +9106,6 @@ body.color-scheme-options-simplicity-topaz.setting-default-frosted-glass.theme-d
 body.color-scheme-options-simplicity-topaz.background-image-settings-command-palette-switch .modal-container .prompt::before {
   border-radius: 20px;
   box-shadow: var(--window-shadow2);
-  top: 50%;
 }
 
 body.color-scheme-options-simplicity-topaz.background-image-settings-command-palette-switch .modal-container .community-plugin-search {
@@ -23950,8 +23952,8 @@ body.background-image-settings-command-palette-switch:not(.background-image-sett
 
 body.background-image-settings-command-palette-same-as-workplace.background-image-settings-command-palette-switch .modal-container .prompt::before {
   background-image: var(--theme-background);
-  filter: blur(var(--blur-depth)) brightness(var(--brightness-4-bg)) saturate(var(--saturate-4-bg));
-  opacity: 0.25;
+  filter: blur(var(--blur-depth-cp)) brightness(var(--brightness-4-bg-cp)) saturate(var(--saturate-4-bg-cp));
+  opacity: var(--opacity-cp);
   z-index: -1;
 }
 body.background-image-settings-command-palette-same-as-workplace.background-image-settings-command-palette-switch.background-settings-workplace-waves2-light .modal-container .prompt::before,
