@@ -324,6 +324,42 @@ settings:
       -
         label: Transparent
         value: background-image-settings-markdown-page-transparent
+      -
+        label: Custom
+        value: background-image-settings-markdown-page-custom
+  -
+    id: bg-markdown-page-opacity-cp
+    title: Opacity
+    title.zh: 笔记背景透明度
+    type: variable-number-slider
+    default: 0.25
+    min: 0
+    max: 1
+    step: 0.05
+  -
+    id: custom-markdown-page-background-color
+    title: custom markdown page background color
+    title.zh: 自定义笔记背景颜色
+    description.zh: 当背景色选择为custom时起作用。
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#a39b8f'
+    default-dark: '#000414'
+  -
+    id: background-markdown-page-theme-light-custom
+    title: Custom Image (Light mode)
+    description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片 url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
+    type: variable-text
+    default: url("https://")
+  -
+    id: background-markdown-page-theme-dark-custom
+    title: Custom Image (Dark mode)
+    description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片 url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
+    type: variable-text
+    default: url("https://")
   -
     id: background-image-settings-markdown-page-random
     title: Random background
@@ -548,6 +584,15 @@ settings:
     type: class-toggle
     default: false
   -
+    id: bg-panel-page-opacity-cp
+    title: Opacity
+    title.zh: 透明度
+    type: variable-number-slider
+    default: 0.25
+    min: 0
+    max: 1
+    step: 0.05
+  -
     id: bg-panel-page-option
     title: Image Picking (Light mode)
     title.zh: 图片选择 (Light mode)
@@ -581,7 +626,7 @@ settings:
     type: variable-text
     default: url("https://")
   -
-    id: bg-panel-page-option
+    id: bg-panel-page-option-dark
     title: Image Picking (Dark mode)
     title.zh: 图片选择 (Dark mode)
     type: class-select
@@ -4835,6 +4880,8 @@ body {
   --background-command-palette-theme-dark-custom: url("https://");
   --background-panel-page-theme-dark-custom: url("https://");
   --background-panel-page-theme-light-custom: url("https://");
+  --background-markdown-page-theme-dark-custom: url("https://");
+  --background-markdown-page-theme-light-custom: url("https://");
   --blur-depth: 10px;
   --blur-depth-cp: 10px;
   --saturate-4-bg: 1;
@@ -4842,6 +4889,7 @@ body {
   --brightness-4-bg: 0.9;
   --brightness-4-bg-cp: 0.9;
   --opacity-cp: 0.25;
+  --bg-panel-page-opacity-cp:0.25;
   --titlebar-brightness: 1;
   --titlebar-blur-depth: 8px;
   --stack-tabs-background-blur-depth:40px;
@@ -18931,7 +18979,7 @@ body:not(.color-scheme-options-lillimon-topaz) .setting-item[data-id="color-magi
 body:not(.background-settings-workplace-background-image) .setting-item[data-id="background-settings-workplace-background-image"] ~ * {
   display: none;
 }
-
+body:not(.background-image-settings-switch) .setting-item[data-id="bg-markdown-page-opacity-cp"],
 body:not(.background-image-settings-switch) .setting-item[data-id="toggle-nonoverlapping-bg"],
 body:not(.background-image-settings-switch) .setting-item[data-id="background-image-settings-markdown-page-options"],
 body:not(.background-image-settings-switch) .setting-item[data-id="background-image-settings-markdown-page-random"],
@@ -18954,6 +19002,12 @@ body:not(.background-settings-workplace-random-light) .setting-item[data-id="bac
 .setting-item:is([data-id="background-image-settings-switch"],[data-id="background-notebook-liked-switch"],[data-id="background-settings-workplace-background-image"],[data-id="background-image-settings-command-palette-switch"]) .setting-item-name {
   font-weight: bold;
 }
+body:not(.background-image-settings-markdown-page-custom) .setting-item[data-id="custom-markdown-page-background-color"],
+body:not(.background-image-settings-markdown-page-custom) .setting-item[data-id="background-markdown-page-theme-light-custom"],
+body:not(.background-image-settings-markdown-page-custom) .setting-item[data-id="background-markdown-page-theme-dark-custom"]  {
+  display: none;
+}
+
 
 body:not(.background-image-settings-markdown-page-random) .setting-item[data-id="background-image-settings-markdown-page-random-options"] {
   display: none;
@@ -21520,11 +21574,11 @@ body.toggle-bg-panel-page :is(.nav-files-container,.file-tree-plugin-view)::befo
 }
 
 body.toggle-bg-panel-page.theme-dark :is(.nav-files-container,.file-tree-plugin-view)::before {
-  opacity: 0.2;
+  opacity: var(--bg-panel-page-opacity-cp);
 }
 
 body.toggle-bg-panel-page.theme-light :is(.nav-files-container,.file-tree-plugin-view)::before {
-  opacity: 0.25;
+  opacity: var(--bg-panel-page-opacity-cp);
 }
 
 body.toggle-bg-panel-page.panel-page-bg-theme-dark-plant.theme-dark {
@@ -21668,8 +21722,7 @@ body.toggle-split-note-background .workspace-split.mod-horizontal:is(.mod-left-s
   background: initial;
 }
 
-
-body.background-image-settings-switch.background-image-settings-markdown-page-random .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
+body.background-image-settings-switch .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
   content: '';
   display: block;
   position: absolute;
@@ -21677,7 +21730,7 @@ body.background-image-settings-switch.background-image-settings-markdown-page-ra
   right: 0;
   bottom: 0;
   left: 0;
-  opacity: 0.15;
+  opacity: var(--bg-markdown-page-opacity-cp,0.25);
   background-size: cover;
 }
 body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-default .workspace-split.mod-root .workspace-leaf:nth-child(7n+1) .workspace-leaf-content[data-type="markdown"]::before {
@@ -21702,17 +21755,7 @@ body.background-image-settings-switch.background-image-settings-markdown-page-ra
   background-image: url("https://source.unsplash.com/random?7") !important;
 }
 
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-blue .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.15;
-  background-size: cover;
-}
+
 body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-blue .workspace-split.mod-root .workspace-leaf:nth-child(7n+1) .workspace-leaf-content[data-type="markdown"]::before {
   background-image: url("https://source.unsplash.com/random?blue") !important;
 }
@@ -21735,17 +21778,7 @@ body.background-image-settings-switch.background-image-settings-markdown-page-ra
   background-image: url("https://source.unsplash.com/random?blue,5") !important;
 }
 
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-green .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.15;
-  background-size: cover;
-}
+
 body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-green .workspace-split.mod-root .workspace-leaf:nth-child(7n+1) .workspace-leaf-content[data-type="markdown"]::before {
   background-image: url("https://source.unsplash.com/random?green") !important;
 }
@@ -21768,17 +21801,7 @@ body.background-image-settings-switch.background-image-settings-markdown-page-ra
   background-image: url("https://source.unsplash.com/random?green,5") !important;
 }
 
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-pink .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.15;
-  background-size: cover;
-}
+
 body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-pink .workspace-split.mod-root .workspace-leaf:nth-child(7n+1) .workspace-leaf-content[data-type="markdown"]::before {
   background-image: url("https://source.unsplash.com/random?pink") !important;
 }
@@ -21801,17 +21824,7 @@ body.background-image-settings-switch.background-image-settings-markdown-page-ra
   background-image: url("https://source.unsplash.com/random?pink,5") !important;
 }
 
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-purple .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.15;
-  background-size: cover;
-}
+
 body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-purple .workspace-split.mod-root .workspace-leaf:nth-child(7n+1) .workspace-leaf-content[data-type="markdown"]::before {
   background-image: url("https://source.unsplash.com/random?purple") !important;
 }
@@ -21834,17 +21847,7 @@ body.background-image-settings-switch.background-image-settings-markdown-page-ra
   background-image: url("https://source.unsplash.com/random?purple,5") !important;
 }
 
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-red .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.15;
-  background-size: cover;
-}
+
 body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-red .workspace-split.mod-root .workspace-leaf:nth-child(7n+1) .workspace-leaf-content[data-type="markdown"]::before {
   background-image: url("https://source.unsplash.com/random?red") !important;
 }
@@ -21867,17 +21870,7 @@ body.background-image-settings-switch.background-image-settings-markdown-page-ra
   background-image: url("https://source.unsplash.com/random?red,5") !important;
 }
 
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-yellow-and-orange .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.15;
-  background-size: cover;
-}
+
 
 body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-yellow-and-orange .workspace-split.mod-root .workspace-leaf:nth-child(7n+1) .workspace-leaf-content[data-type="markdown"]::before {
   background-image: url("https://source.unsplash.com/random?yellow") !important;
@@ -21918,17 +21911,7 @@ body.background-image-settings-switch.background-image-settings-markdown-page-tr
 }
 
 
-body.background-image-settings-switch.background-image-settings-markdown-page-sea-and-sky .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.15;
-  background-size: cover;
-}
+
 
 body.background-image-settings-switch.background-image-settings-markdown-page-sea-and-sky.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(5n+1) .workspace-leaf-content[data-type="markdown"]::before {
   background-image: url("https://images.unsplash.com/photo-1543188643-0526808dee93?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTd8fG9jZWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
@@ -21946,9 +21929,6 @@ body.background-image-settings-switch.background-image-settings-markdown-page-se
   background-image: url("https://images.unsplash.com/photo-1550868142-97bfb991bbd8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjZ8fG9jZWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
 }
 
-body.background-image-settings-switch.background-image-settings-markdown-page-sea-and-sky.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
-  opacity: 0.12;
-}
 
 body.background-image-settings-switch.background-image-settings-markdown-page-sea-and-sky.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(5n+1) .workspace-leaf-content[data-type="markdown"]::before {
   background-image: url("https://images.unsplash.com/photo-1609086491368-78f4af23e5c5?ixid=MnwxMjA3fDB8MHx2aXN1YWwtc2VhcmNofDEyOHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
@@ -21967,14 +21947,6 @@ body.background-image-settings-switch.background-image-settings-markdown-page-se
 }
 
 body.background-image-settings-switch.background-image-settings-markdown-page-four-seasons .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.15;
   background-size: 100% 100%;
 }
 
@@ -21991,9 +21963,7 @@ body.background-image-settings-switch.background-image-settings-markdown-page-fo
   background-image: url("https://images.unsplash.com/photo-1604007803492-3ba583208302?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80");
 }
 
-body.background-image-settings-switch.background-image-settings-markdown-page-four-seasons.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
-  opacity: 0.13;
-}
+
 
 body.background-image-settings-switch.background-image-settings-markdown-page-four-seasons.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(4n+1) .workspace-leaf-content[data-type="markdown"]::before {
   background-image: url("https://images.unsplash.com/photo-1503517245364-78fc9a9cdd37?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=386&q=80");
@@ -22008,17 +21978,7 @@ body.background-image-settings-switch.background-image-settings-markdown-page-fo
   background-image: url("https://images.unsplash.com/photo-1603388115096-e71e44b67a0d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=388&q=80");
 }
 
-body.background-image-settings-switch.background-image-settings-markdown-page-woof-meow .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.13;
-  background-size: cover;
-}
+
 
 body.background-image-settings-switch.background-image-settings-markdown-page-woof-meow.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(4n+1) .workspace-leaf-content[data-type="markdown"]::before {
   background-image: url("https://images.unsplash.com/photo-1593042905117-7e61dd9196b6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHdvb2Z8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
@@ -22033,9 +21993,7 @@ body.background-image-settings-switch.background-image-settings-markdown-page-wo
   background-image: url("https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80");
 }
 
-body.background-image-settings-switch.background-image-settings-markdown-page-woof-meow.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
-  opacity: 0.13;
-}
+
 body.background-image-settings-switch.background-image-settings-markdown-page-woof-meow.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(4n+1) .workspace-leaf-content[data-type="markdown"]::before {
   background-image: url("https://images.unsplash.com/photo-1587463272361-565200f82b33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODd8fGRvZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
 }
@@ -22049,17 +22007,6 @@ body.background-image-settings-switch.background-image-settings-markdown-page-wo
   background-image: url("https://images.unsplash.com/photo-1582797493098-23d8d0cc6769?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTMyfHxjYXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
 }
 
-body.background-image-settings-switch.background-image-settings-markdown-page-white-and-black .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.13;
-  background-size: cover;
-}
 
 body.background-image-settings-switch.background-image-settings-markdown-page-white-and-black.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(4n+1) .workspace-leaf-content[data-type="markdown"]::before {
   background-image: url("https://images.unsplash.com/photo-1549281899-f75600a24107?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQ0fHx3aGl0ZSUyMGJsYWNrfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
@@ -22074,9 +22021,7 @@ body.background-image-settings-switch.background-image-settings-markdown-page-wh
   background-image: url("https://images.unsplash.com/photo-1489416656989-27c1c2236852?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHdoaXRlJTIwYmxhY2t8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
 }
 
-body.background-image-settings-switch.background-image-settings-markdown-page-white-and-black.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
-  opacity: 0.13;
-}
+
 body.background-image-settings-switch.background-image-settings-markdown-page-white-and-black.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(4n+1) .workspace-leaf-content[data-type="markdown"]::before {
   background-image: url("https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHdoaXRlJTIwYmxhY2t8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
 }
@@ -22090,17 +22035,6 @@ body.background-image-settings-switch.background-image-settings-markdown-page-wh
   background-image: url("https://images.unsplash.com/photo-1527567018838-584d3468eb85?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHdoaXRlJTIwYmxhY2t8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
 }
 
-body.background-image-settings-switch.background-image-settings-markdown-page-kawaii .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.13;
-  background-size: cover;
-}
 
 body.background-image-settings-switch.background-image-settings-markdown-page-kawaii.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(4n+1) .workspace-leaf-content[data-type="markdown"]::before {
   background-image: url("https://images.unsplash.com/photo-1471644778460-220908b75485?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1172&q=60");
@@ -22114,9 +22048,7 @@ body.background-image-settings-switch.background-image-settings-markdown-page-ka
 body.background-image-settings-switch.background-image-settings-markdown-page-kawaii.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(4n) .workspace-leaf-content[data-type="markdown"]::before {
   background-image: url("https://images.unsplash.com/photo-1495192838256-ed16d5160e9c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80");
 }
-body.background-image-settings-switch.background-image-settings-markdown-page-kawaii.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
-  opacity: 0.13;
-}
+
 body.background-image-settings-switch.background-image-settings-markdown-page-kawaii.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(4n+1) .workspace-leaf-content[data-type="markdown"]::before {
   background-image: url("https://images.unsplash.com/photo-1514517521153-1be72277b32f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=60");
 }
@@ -22130,6 +22062,19 @@ body.background-image-settings-switch.background-image-settings-markdown-page-ka
   background-image: url("https://images.unsplash.com/photo-1525268771113-32d9e9021a97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=60");
 }
 
+
+body.background-image-settings-switch.background-image-settings-markdown-page-custom.theme-dark .workspace-split.mod-root .workspace-leaf .workspace-leaf-content[data-type="markdown"]::before {
+  background-image: var(--background-markdown-page-theme-dark-custom);
+}
+
+body.background-image-settings-switch.background-image-settings-markdown-page-custom.theme-light .workspace-split.mod-root .workspace-leaf .workspace-leaf-content[data-type="markdown"]::before {
+  background-image: var(--background-markdown-page-theme-light-custom);
+}
+body.background-image-settings-switch.background-image-settings-markdown-page-custom .workspace-split.mod-root .workspace-leaf .workspace-leaf-content[data-type="markdown"]::before {
+background-size:unset;
+background-color: var(--custom-markdown-page-background-color);
+opacity: var(--bg-markdown-page-opacity-cp,1);
+}
 /* ================================== */
 /* ============= publish ============ */
 /* ================================== */
