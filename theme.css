@@ -3146,7 +3146,7 @@ settings:
     title: Cancel click the link to trigger auto-jump
     title.zh: 取消编辑模式下点击链接自动跳转
     type: class-toggle
-    default: true
+    default: false
     description: You can click on the link by holding down the ctrl key to jump
     description.zh: 可以通过按住ctrl键点击链接跳转
   -
@@ -26846,7 +26846,7 @@ div.callout[data-callout="stickies3"] >.callout-content ul {
   transform: rotate(-1deg);
 }
 /*禁用点击超链接跳转 需要跳转 按ctrl+超链接即可*/
-body.link-click .cm-s-obsidian span.cm-link {
+body.link-click .is-live-preview .cm-s-obsidian span.cm-link {
   pointer-events: none;
 }
 
