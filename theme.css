@@ -9049,7 +9049,7 @@ body.color-scheme-options-simplicity-topaz.theme-dark {
   --indentation-guide: var(--simple-gray-3);
 
   --scrollbar-bg: transparent;
-  --brightness-4-bg: 0.4;
+
 }
 
 body.color-scheme-options-simplicity-topaz:not(.background-settings-workplace-background-image) {
@@ -23629,6 +23629,10 @@ body.is-mobile.background-settings-workplace-background-image:not(:is(.backgroun
   background-image: var(--theme-background);
   background-size: cover;
   opacity: 0.8;
+}
+body.color-scheme-options-simplicity-topaz.theme-dark.background-settings-workplace-background-image .workspace::before
+{
+  filter: blur(var(--blur-depth)) brightness(calc(var(--brightness-4-bg) - 0.5)) saturate(var(--saturate-4-bg));
 }
 
 body.background-settings-workplace-background-image.theme-light .workspace::before,
