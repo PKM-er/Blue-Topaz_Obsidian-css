@@ -2308,7 +2308,7 @@ settings:
     type: variable-number-slider
     default: 1
     min: 0
-    max: 3
+    max: 10
     step: 0.2
   -
     id: list-indent
