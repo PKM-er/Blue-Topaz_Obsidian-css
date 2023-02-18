@@ -25146,6 +25146,10 @@ body:not(.default-loading-page) .progress-bar-subline {
 .show-inline-title .obsidian-banner-wrapper.has-banner-icon .obsidian-banner-icon.v-above {
   margin-top: calc(-2em - 12px);
 }
+.obsidian-banner img
+{
+  border-radius: 15px;
+}
 /* ====cssclass background 属性可以使得banner作为笔记背景  ===== */
 .markdown-preview-view.background .obsidian-banner-wrapper {
   position: absolute;
