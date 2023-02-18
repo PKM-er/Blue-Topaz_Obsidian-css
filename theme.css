@@ -29098,14 +29098,15 @@ body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-custom) .ca
 .show-full-metadata  .frontmatter-container:not(.is-collapsed) .frontmatter-section {
   display: flex!important;
 }
-:not(.show-full-metadata) .frontmatter-container  .frontmatter-container-header  ~ .frontmatter-section:not(:is(.mod-aliases,.mod-tags)) {
+body:not(.show-full-metadata) .frontmatter-container  .frontmatter-container-header  ~ .frontmatter-section:not(:is(.mod-aliases,.mod-tags)) 
+{
   display: none;
 }
 
-:not(.show-full-metadata) .frontmatter-container:has(.frontmatter-container-header + .frontmatter-section:not(:is(.mod-aliases,.mod-tags))) {
+body:not(.show-full-metadata) .frontmatter-container:has(.frontmatter-container-header + .frontmatter-section:not(:is(.mod-aliases,.mod-tags))) {
   display: none;
 }
-:not(.show-full-metadata) .frontmatter-container:not(:has(.frontmatter-container-header + .frontmatter-section)) {
+body:not(.show-full-metadata) .frontmatter-container:not(:has(.frontmatter-container-header + .frontmatter-section)) {
   display: none;
 }
 
