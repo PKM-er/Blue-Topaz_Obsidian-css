@@ -14216,6 +14216,10 @@ a.internal-link,
   color: var(--internal-link-color) !important;
 }
 
+.cm-s-obsidian span.cm-link:hover,
+.cm-s-obsidian span.cm-hmd-internal-link:hover {
+  background: var(--theme-color-translucent-01);
+}
 /* internal link in highlight
 .cm-highlight.cm-hmd-internal-link,
 :is(.markdown-preview-view,.markdown-rendered) mark .internal-link:not(.is-unresolved) {
@@ -14229,6 +14233,7 @@ a.internal-link,
   text-decoration: none !important;
   transition: all 0.4s ease-in-out;
   text-shadow: var(--window-shadow-hover);
+  background: var(--theme-color-translucent-01);
 }
 
 body.colorful-link-animation :is(.markdown-preview-view,.markdown-rendered) a:hover {
@@ -14769,6 +14774,7 @@ body.file-name-wrapped .nav-folder-title-content {
   color: var(--text-folder-file);
 }
 
+.nav-folder-title,
 .tree-item-self.is-clickable.mod-collapsible.nav-folder-title {
   font-weight: 600;
   padding: 2px 5px 2px 23px;
@@ -29250,8 +29256,7 @@ body:not(.show-full-metadata) .frontmatter-container:not(:has(.frontmatter-conta
 .canvas-icon-placeholder svg {
   opacity: 0.5;
 }
-body.canvas-card-text-middle .canvas-node-container .canvas-node-content.markdown-embed:not(.is-loaded)
-{
+body.canvas-card-text-middle .canvas-node-container .canvas-node-content.markdown-embed:not(.is-loaded) {
 text-align: center;
 }
 
