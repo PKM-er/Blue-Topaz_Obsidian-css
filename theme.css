@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v1.0.3。uid [20230102] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.0.3, uid [20230102] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.2.5。uid [20230424] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.2.5, uid [20230424] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -1412,7 +1412,7 @@ settings:
     title: Codebox
     title.zh: 代码框字体
     type: variable-text
-    default: "'JetBrains Mono',Consolas, Monaco, '等距更纱黑体 SC', 'Source Han Mono', 'Microsoft Yahei Mono', 'Segoe UI Emoji', 'Microsoft YaHei', 'Source Code Pro', monospace"
+    default: "'JetBrains Mono', Consolas, Monaco, '等距更纱黑体 SC', 'Source Han Mono', 'Microsoft Yahei Mono', 'Segoe UI Emoji', 'Microsoft YaHei', 'Source Code Pro', monospace"
   -
     id: font-family-inline-code
     title: Inline Code
@@ -2534,23 +2534,20 @@ settings:
     title.zh: 阅读视图列表样式
     type: class-select
     allowEmpty: false
-    default: list-bracket-left
+    default: list-bracket-style
     options:
       -
         label: Bracket 1
-        value: list-bracket-left
+        value: list-bracket-style
       -
         label: Bracket 2 (1.1.1)
-        value: list-bracket-left-two
+        value: list-bracket-style-two
       -
-        label: Vertical line 1
+        label: Bracket 3
+        value: list-bracket-style-three
+      -
+        label: Vertical line 1 (1.1.1)
         value: list-vertical-line-one
-      -
-        label: Vertical line 2
-        value: list-vertical-line-two
-      -
-        label: Vertical line 3 (1.1.1)
-        value: list-vertical-line-three
       -
         label: Using Ob Settings
         value: list-no-border
@@ -14772,7 +14769,7 @@ body.file-name-wrapped .nav-folder-title-content {
   color: var(--text-folder-file);
 }
 
-.nav-folder-title {
+.tree-item-self.is-clickable.mod-collapsible.nav-folder-title {
   font-weight: 600;
   padding: 2px 5px 2px 23px;
   color: var(--text-normal);
@@ -18547,8 +18544,8 @@ ul.dataview.dataview-ul.dataview-result-list-root-ul {
   border: 1px solid var(--embed-color);
 }
 
-body:is(.rainbow-lines-reading,.list-vertical-line-one,.list-vertical-line-two,.list-vertical-line-three) table.dataview.table-view-table :is(ol,ul) :is(ol,ul)::before,
-body:is(.rainbow-lines-reading,.list-vertical-line-one,.list-vertical-line-two,.list-vertical-line-three) .kanban-plugin__markdown-preview-view :is(ol,ul) :is(ol,ul)::before {
+body:is(.rainbow-lines-reading,.list-vertical-line-one) table.dataview.table-view-table :is(ol,ul) :is(ol,ul)::before,
+body:is(.rainbow-lines-reading,.list-vertical-line-one) .kanban-plugin__markdown-preview-view :is(ol,ul) :is(ol,ul)::before {
   border-left: none;
 }
 
@@ -27463,6 +27460,128 @@ body.list-bracket-style :is(.markdown-preview-view,.markdown-rendered) ol:not(.c
 }
 
 
+body.list-bracket-style-two :is(.markdown-preview-view,.markdown-rendered):not(.kanban) :is(ul,ol)>li:not(.task-list-item) {
+  border-radius: var(--radius-s);
+  word-wrap: break-word;
+  word-break: break-word;
+  transition: all 300ms ease-in-out;
+  border-left: 0.125em solid var(--list-ul-block-color);
+}
+
+body.list-bracket-style-two :is(.markdown-preview-view,.markdown-rendered):not(.kanban) ol>li:not(.task-list-item) {
+  border-left: 0.125em solid var(--list-ol-block-color);
+}
+
+body.list-bracket-style-two .markdown-rendered.show-indentation-guide li:not(.task-list-item) > ul::before, 
+body.list-bracket-style-two .markdown-rendered.show-indentation-guide li:not(.task-list-item) > ol::before {
+  border: none;
+}
+
+/*list-bracket-style-two*/
+body.list-bracket-style-two ol,
+body.list-bracket-style-two ol ol,
+body.list-bracket-style-two ol ol ol,
+body.list-bracket-style-two ol ul ol,
+body.list-bracket-style-two ol ol ol ol,
+body.list-bracket-style-two ol ol ul ol,
+body.list-bracket-style-two ol ul ol ol {
+  list-style: none;
+}
+
+body.list-bracket-style-two ol {
+  counter-reset: niceBT;
+}
+
+body.list-bracket-style-two ol>li {
+  counter-increment: niceBT;
+}
+
+body.list-bracket-style-two ol>li::before {
+  content: counters(niceBT, '.') '. ';
+  font-weight: bold;
+  font-family: Monaco;
+  font-size: 0.8em;
+  color: var(--list-ol-number-color);
+  display: inline-block;
+  white-space: pre;
+}
+
+body.list-bracket-style-two ul>li:not(.task-list-item) {
+  padding-left: 1.1em;
+}
+body.list-bracket-style-two ol>li:not(.task-list-item) {
+  padding-left: 0.4em;
+}
+
+body.list-bracket-style-two .markdown-rendered .list-bullet {
+  left: 0.6em;
+}
+
+body.list-bracket-style-three :is(.markdown-preview-view,.markdown-rendered):not(.kanban) :is(ul,ol):has(:is(ol,ul))>li:has(:is(ol,ul)):not(.task-list-item) {
+  border-radius: var(--radius-s);
+  word-wrap: break-word;
+  word-break: break-word;
+  transition: all 300ms ease-in-out;
+  border-left: 0.125em solid var(--list-ul-block-color);
+
+}
+body.list-bracket-style-three :is(.markdown-preview-view,.markdown-rendered):not(.kanban) ol:has(:is(ol,ul))>li:has(:is(ol,ul)):not(.task-list-item) {
+  border-left: 0.125em solid var(--list-ol-block-color);
+}
+
+body.list-bracket-style-three :is(.markdown-preview-view,.markdown-rendered):not(.kanban) :is(ul,ol):has(:is(ol,ul))>li:has(:is(ol,ul)):not(.task-list-item) {
+  padding-left: 0.3em;
+}
+
+body.list-bracket-style-three .markdown-rendered.show-indentation-guide li:not(.task-list-item) > ul::before, 
+body.list-bracket-style-three .markdown-rendered.show-indentation-guide li:not(.task-list-item) > ol::before {
+  border: none;
+}
+body.list-bracket-style-three :is(.markdown-preview-view,.markdown-rendered):not(.kanban) li:not(.task-list-item) {
+  padding-left: 0.5rem;
+}
+
+
+/*list-vertical-line-one*/
+body.list-vertical-line-one ol,
+body.list-vertical-line-one ol ol,
+body.list-vertical-line-one ol ol ol,
+body.list-vertical-line-one ol ul ol,
+body.list-vertical-line-one ol ol ol ol,
+body.list-vertical-line-one ol ol ul ol,
+body.list-vertical-line-one ol ul ol ol {
+  list-style: none;
+}
+
+body.list-vertical-line-one ol {
+  counter-reset: niceBTT;
+}
+
+body.list-vertical-line-one ol>li {
+  counter-increment: niceBTT;
+}
+
+body.list-vertical-line-one ol>li::before {
+  content: counters(niceBTT, '.') '. ';
+  font-weight: bold;
+  color: var(--list-ol-number-color);
+  margin-left: -1.3em;
+  font-family: Monaco;
+  font-size: 0.9em;
+}
+
+body.list-vertical-line-one :is(ol,ul) :is(ol,ul) {
+  position: relative;
+}
+
+:is(body.list-vertical-line-one,body.list-vertical-line-one, body.list-vertical-line-one) :is(.markdown-preview-view,.markdown-rendered) ul ol:not(.contains-task-list)>li:not(.task-list-item), 
+:is(body.list-vertical-line-one,body.list-vertical-line-one, body.list-vertical-line-one) :is(.markdown-preview-view,.markdown-rendered) ul ol:not(.contains-task-list)+ul>li:not(.task-list-item), 
+:is(body.list-vertical-line-one,body.list-vertical-line-one, body.list-vertical-line-one) :is(.markdown-preview-view,.markdown-rendered):not(.kanban) ol ul>li:not(.task-list-item),
+:is(body.list-vertical-line-one,body.list-vertical-line-one, body.list-vertical-line-one) :is(.markdown-preview-view,.markdown-rendered):not(.kanban) ol ul+ol>li:not(.task-list-item) {
+  margin-top: calc(var(--margin-list) * -0.25em);
+  padding-top: calc(var(--margin-list) * 0.25em);
+}
+
 
 
 body.colorful-ordered-list ol li::marker,
@@ -28859,7 +28978,6 @@ body.background-settings-workplace-background-image.theme-dark.is-frameless:is(.
 /* ================================== */
 /* ========= Canvas ========= */
 /* ================================== */
-
 .app-container:has(~ .canvas-wrapper.is-screenshotting ) ,
 .titlebar:has(~ .canvas-wrapper.is-screenshotting ) {
    display: none;
@@ -28898,13 +29016,11 @@ body.background-settings-workplace-background-image.theme-dark.is-frameless:is(.
   border: unset;
   box-shadow: inset 0 0 0 1px rgba(var(--canvas-color), calc(var(--canvas-card-opacity) + 0.6)), var(--shadow-stationary);
 }
- .canvas-wrapper .canvas-node:not(.is-themed) .canvas-node-container:has(.canvas-node-placeholder)
-{
+ .canvas-wrapper .canvas-node:not(.is-themed) .canvas-node-container:has(.canvas-node-placeholder) {
   border: 2px solid var(--color-base-60);
   box-shadow: none;
 }
-.canvas-wrapper .canvas-node:not(.is-themed) .canvas-node-container
-{
+.canvas-wrapper .canvas-node:not(.is-themed) .canvas-node-container {
   border: 1px solid rgb(var(--canvas-color));
   box-shadow: inset 0 0 0 1px var(--color-base-00), var(--shadow-stationary);
 }
@@ -28962,7 +29078,6 @@ body.toggle-canvas-grid .canvas-wrapper .canvas-background rect,
   left: 0;
   background-color: var(--custom-canvas-bg,var(--canvas-background-color)) ;
   background-image: var(--canvas-background) ;
-
 }
 
 
