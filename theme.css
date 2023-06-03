@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v1.2.8。uid [20230509] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.2.8, uid [20230509] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.2.8。uid [20230602] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.2.8, uid [20230602] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 Many thanks to @Cuman
@@ -11065,13 +11065,13 @@ span.cm-strong.cm-em.cm-highlight {
 
 
 
-body.default-icons .nav-folder.mod-root .nav-folder > .nav-folder-children {
+/* body.default-icons .nav-folder.mod-root .nav-folder > .nav-folder-children {
   margin: 0 0 0 16px;
-}
+} */
 
-.nav-folder.mod-root .nav-folder > .nav-folder-children {
+/* .nav-folder.mod-root .nav-folder > .nav-folder-children {
   margin: 0 0 0 13px;
-}
+} */
 
 .nav-folder.mod-root .nav-folder > .nav-folder-children:hover {
   border-left-color: var(--theme-color-translucent-04);
@@ -14860,14 +14860,14 @@ body.file-name-wrapped .nav-folder-title-content {
 /*---- nav arrows adjust location ----*/
 body:not(.default-icons) .nav-folder-collapse-indicator {
   position: absolute;
-  left: 6.5px;
+  /* left: 6.5px; */
   top: 3px;
   transition: transform 20ms linear 0s;
 }
 
-body.default-icons .nav-folder-collapse-indicator {
+/* body.default-icons .nav-folder-collapse-indicator {
   margin-left: -9px;
-}
+} */
 
 body:not(.default-icons):not(.remove-arrow) .nav-folder-collapse-indicator::after {
   position: absolute;
@@ -19732,7 +19732,7 @@ body.remove-file-icons:not(.remove-arrow) .nav-folder.mod-root>.nav-folder-child
  padding-left: 16px;
 }
 body.remove-file-icons.remove-arrow .nav-folder.mod-root {
- padding-left: 4px;
+ padding-left: 4px ;
 }
 .workspace-leaf-content[data-type="recent-files"] .view-content {
   padding: unset;
@@ -21541,11 +21541,13 @@ body.folder-icons .nav-folder-children .nav-folder.is-collapsed .nav-folder-titl
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5h-8.586L9.707 3.293A.997.997 0 0 0 9 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2zM4 19V7h16l.002 12H4z"></path></svg>');
 }
 
-body.folder-icons.remove-arrow:not(.default-icons) .nav-folder-collapse-indicator::after {
+ 
+
+body.remove-arrow:not(.default-icons) .nav-folder-collapse-indicator::after {
   display: none;
 }
-body.folder-icons.remove-arrow:not(.default-icons) :is(.nav-folder-title,.nav-file-title) {
-  padding-left: 5px;
+body.remove-arrow:not(.default-icons) :is(.nav-folder-title,.nav-file-title) {
+  padding-left: 5px!important;
 }
 body:not(.remove-file-icons) [data-type="starred"] .nav-file-icon .svg-icon {
   padding: 4px 0 0;
@@ -29286,3 +29288,5 @@ body.canvas-card-text-middle .canvas-node-container .canvas-node-content.markdow
 div#popup-search {
   background-color: var(--color-base-10);
 }
+
+ 
