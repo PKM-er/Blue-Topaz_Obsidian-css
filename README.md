@@ -63,7 +63,7 @@ Change the color palette
 # 捐赠
 如果觉得主题很棒，可以支持一下，谢谢！
 
-![image](https://user-images.githubusercontent.com/72023275/196034185-a6575587-a241-4c6e-b556-615e85cce82a.png)
+关注 pkmer.cn
 
 
 # Acknowledgements
