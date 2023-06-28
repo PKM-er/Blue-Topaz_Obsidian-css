@@ -1,7 +1,8 @@
-/*蓝色托帕石，适合Obsidian v1.2.8。uid [20230602] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.2.8, uid [20230602] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.2.8。uid [20230628] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.2.8, uid [20230628] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
+thanks pkmer.cn
 Many thanks to @Cuman
 @LillianWho @成雙酱 @嘴上云 @Klaas @Thinkbond @Rainbell129(AKA Lavi) @awyugan @GeoffreyOuO (WooYoo~~~) @锋华 @CZ-15/YZ-10 */
 
@@ -173,8 +174,8 @@ settings:
   -
     id: background-settings-workplace-theme-light-custom
     title: Custom Theme light (url)
-    description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
-    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片  url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
+    description: Customise the background image. Use the format in the Default below for an Online image. 
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置在线图片。 
     type: variable-text
     default: url("https://")
   -
@@ -220,8 +221,8 @@ settings:
   -
     id: background-settings-workplace-theme-dark-custom
     title: Custom Theme Dark (url)
-    description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
-    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片  url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
+    description: Customise the background image. Use the format in the Default below for an Online image. 
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。
     type: variable-text
     default: url("https://")
   -
@@ -349,15 +350,15 @@ settings:
   -
     id: background-markdown-page-theme-light-custom
     title: Custom Image (Light mode)
-    description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
-    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片 url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
+    description: Customise the background image. Use the format in the Default below for an Online image. 
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。
     type: variable-text
     default: url("https://")
   -
     id: background-markdown-page-theme-dark-custom
     title: Custom Image (Dark mode)
-    description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
-    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片 url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
+    description: Customise the background image. Use the format in the Default below for an Online image. 
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。
     type: variable-text
     default: url("https://")
   -
@@ -516,15 +517,15 @@ settings:
   -
     id: background-command-palette-theme-light-custom
     title: Custom Theme light (url)
-    description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
-    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片  url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
+    description: Customise the background image. Use the format in the Default below for an Online image. 
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。
     type: variable-text
     default: url("https://")
   -
     id: background-command-palette-theme-dark-custom
     title: Custom Theme Dark (url)
-    description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
-    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片  url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
+    description: Customise the background image. Use the format in the Default below for an Online image. 
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。
     type: variable-text
     default: url("https://")
   -
@@ -621,8 +622,8 @@ settings:
   -
     id: background-panel-page-theme-light-custom
     title: Custom Image (Light mode)
-    description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
-    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片 url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
+    description: Customise the background image. Use the format in the Default below for an Online image.
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。
     type: variable-text
     default: url("https://")
   -
@@ -654,8 +655,8 @@ settings:
   -
     id: background-panel-page-theme-dark-custom
     title: Custom Image (Dark mode)
-    description: Customise the background image. Use the format in the Default below for an Online image. Use the following format to point to a local file - url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg").
-    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片 url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
+    description: Customise the background image. Use the format in the Default below for an Online image. 
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。
     type: variable-text
     default: url("https://")
   -
@@ -1176,9 +1177,19 @@ settings:
     default-dark: '#'
   -
     id: search-result-file-matched-bg
-    title: Search Result Highlight Color
-    title.zh: 搜索结果高亮
+    title: File Search Result Highlight Color
+    title.zh: 文件搜索结果高亮
     description: --search-result-file-matched-bg
+    type: variable-themed-color
+    opacity: true
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
+    id: text-search-highlight-bg
+    title: Text Search Result Highlight Color
+    title.zh: 文本搜索结果高亮
+    description: --text-search-highlight-bg
     type: variable-themed-color
     opacity: true
     format: hex
@@ -2936,6 +2947,19 @@ settings:
     title.zh: 显示表格框线
     type: class-toggle
     default: false
+  -
+    id: table-width
+    title: table width 
+    title.zh: md表格默认宽度
+    type: class-select
+    default: table-width-100
+    options:
+      -
+        label: 100%
+        value: table-width-100
+      -
+        label: auto
+        value: table-width-auto
   -
     id: full-width-table
     title: Full-width table display
@@ -13642,10 +13666,17 @@ body:not(.remove-heading-indicator) .callout-content :is(h1, h2, h3, h4, h5, h6)
 }
 
 :is(.markdown-preview-section,.markdown-rendered) table:not(.dataview.table-view-table) {
-  width: 100%;
+
   border-collapse: collapse;
   overflow: auto;
   margin: 20px auto;
+}
+
+body.table-width-100 :is(.markdown-preview-section,.markdown-rendered) table:not(.dataview.table-view-table) {
+  width: 100%;
+}
+body.table-width-auto :is(.markdown-preview-section,.markdown-rendered) table:not(.dataview.table-view-table) {
+  width: auto;
 }
 
 :is(.markdown-preview-section,.markdown-rendered) table:not(.dataview.table-view-table):active,
@@ -14955,13 +14986,13 @@ body:not(.default-icons) .workspace-leaf .search-result-container.mod-global-sea
   opacity: 0.5;
 }
 
-/* header collaspe indicators */
+/* header collaspe indicators*/
 :is(.markdown-preview-view,.markdown-rendered) div.is-collapsed :is(h1,h2,h3,h4,h5,h6)::after,
-:is(.markdown-preview-view,.markdown-rendered) :is(ol,ul) .is-collapsed::after {
+:is(.markdown-preview-view,.markdown-rendered) li.is-collapsed::after {  
   content: "...";
   padding: 5px;
   color: var(--text-faint);
-}
+} 
 
 body:not(.default-icons) div.heading-collapse-indicator.collapse-indicator {
   position: absolute;
@@ -21182,8 +21213,9 @@ body.dialogue-style-chat .dialogue-plugin-message-title {
   color: var(--code-language);
 }
 
-.markdown-source-view.is-live-preview .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line {
+.markdown-source-view .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line {
   letter-spacing: calc(var(--letter-space-code) * 0.02em);
+  line-height: var(--line-height-normal);
 }
 
 .cm-s-obsidian div.HyperMD-codeblock-end-bg {
@@ -23185,8 +23217,9 @@ body:is(.folder-style-change-options-colorful,.folder-style-change-options-color
 /* Top Level Folder Titles */
 body:is(.folder-style-change-options-colorful,.folder-style-change-options-colorful-order) .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title {
   color: var(--FoldText);
+  padding: var(--nav-item-parent-padding);
   padding-left: 3px;
-  margin-top: 7px;
+ 
   /* space between top level sections */
   border-radius: 5px 5px 0 0;
 }
@@ -23451,7 +23484,8 @@ body.folder-style-change-options-colorful .workspace-leaf-content[data-type='fil
 */
 
 body.folder-style-change-options-colorful .nav-folder-title:hover {
-  background-color: var(--background-secondary-alt) !important;
+  font-weight: bold;
+  filter: saturate(250%);
 }
 
 body:is(.folder-style-change-options-colorful,.folder-style-change-options-colorful-order) .theme-dark .workspace-leaf-content[data-type="file-explorer"] {
@@ -23921,9 +23955,9 @@ body.background-settings-workplace-background-image.background-settings-workplac
 }
 
 /* font color */
-body.background-settings-workplace-background-image :is(.tree-item-inner,.tree-item-flair,.workspace-ribbon-collapse-btn,.side-dock-ribbon-tab,.side-dock-ribbon-action):not(:hover) {
+/* body.background-settings-workplace-background-image :is(.tree-item-inner,.tree-item-flair,.workspace-ribbon-collapse-btn,.side-dock-ribbon-tab,.side-dock-ribbon-action):not(:hover) {
   color: var(--text-normal);
-}
+} */
 
 body.background-settings-workplace-background-image.background-settings-workplace-theme-light-in-the-sky.theme-light {
   --in-the-sky: url('https://images.unsplash.com/photo-1514519334989-3d5c8b1a9f91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
@@ -26052,6 +26086,9 @@ body.admonition-bg-color-same .callout-title {
   float: right !important;
   margin: unset;
 }
+ 
+
+
 
 .callout.callout:is([data-callout-metadata*="center"],
 [data-callout*=center]) {
