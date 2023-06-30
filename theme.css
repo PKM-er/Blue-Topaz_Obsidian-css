@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v1.2.8。uid [20230628] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.2.8, uid [20230628] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.2.8。uid [20230630] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.2.8, uid [20230630] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 thanks pkmer.cn
@@ -18016,6 +18016,13 @@ body.style-options-for-admonition-plugin :is(.admonition-flex,.admonition-col2,.
   list-style-type: none;
   padding:0;
 }
+.markdown-rendered .callout  ul li p:last-of-type, .markdown-rendered ol li p:last-of-type {
+ margin-block-end: 0.5em; 
+}
+
+.markdown-rendered  .callout  ul li p:first-of-type, .markdown-rendered ol li p:first-of-type {
+  margin-block-start: 0.5em; 
+}
 
 body.style-options-for-admonition-plugin .admonition-col2 .admonition-content ul li .task-list-item-checkbox,
 body.style-options-for-admonition-plugin .admonition-col3 .admonition-content ul li .task-list-item-checkbox,
@@ -27253,9 +27260,9 @@ body:not(.remove-selectionbackground) .markdown-source-view.mod-cm6 .cm-editor .
   background-color: unset;
 }
 
-body:not(.default-list-marker) .list-bullet::before {
+/* body:not(.default-list-marker) .list-bullet::before {
   display: none;
-}
+} */
 
 body:not(.default-list-marker) .markdown-rendered .list-bullet::after {
   content: '\2022';
@@ -27267,7 +27274,7 @@ body:not(.default-list-marker) .markdown-rendered .list-bullet::after {
   background: transparent;
   color: var(--list-ul-marker-color);
   margin-left: 0.13em;
-  margin-top: calc(0.466em * var(--line-height-list) - 0.286em);
+  /* margin-top: calc(0.466em * var(--line-height-list) - 0.286em); */
   line-height: 0.55;
   transition: all 0.15s ease;
 }
@@ -27329,7 +27336,7 @@ body:not(.default-list-marker) .has-list-bullet .list-bullet::after,
 body:not(.default-list-marker) .has-list-bullet .has-list-bullet .list-bullet::after,
 body:not(.default-list-marker) .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
 body:not(.default-list-marker) .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after {
-  top: 0;
+  /* top: 0; */
 }
 
 body:not(.default-list-marker) .markdown-source-view.mod-cm6 .cm-indent::before {
