@@ -2,7 +2,7 @@
  * @Author: cumany cuman@qq.com
  * @Date: 2023-06-28 13:36:53
  * @LastEditors: cumany cuman@qq.com
- * @LastEditTime: 2023-06-30 13:38:40
+ * @LastEditTime: 2023-06-30 13:44:19
  * @Description: 
 -->
 # 示例 Demo vault
@@ -11,7 +11,7 @@
 如果有问题、建议或者想实现的需求，请加入Topaz社区[Topaz QQ群](https://jq.qq.com/?_wv=1027&k=TWGhXs40) 
  [Obsidian频道](https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=zHpby&from=246610&biz=ka)
 
-目前我们新建了一个来源的知识管理社区欢迎加入，点击链接加入群聊 [PKMer知识管理交流群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=lFMOfZnt5K07XWn8Y9Hs8skhmf8HaAwh&authKey=jWoLY%2BmDy5kqEEFs4%2FcVgIySwUXuwM6EyJvu4LCqJ9uFUgG2h1k4u3l6qC8i2AcO&noverify=0&group_code=825255377)
+目前我们新建了一个开源的知识管理社区欢迎加入，点击链接加入群聊 [PKMer知识管理交流群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=lFMOfZnt5K07XWn8Y9Hs8skhmf8HaAwh&authKey=jWoLY%2BmDy5kqEEFs4%2FcVgIySwUXuwM6EyJvu4LCqJ9uFUgG2h1k4u3l6qC8i2AcO&noverify=0&group_code=825255377)
 
 微信群：
 ![](https://cdn.pkmer.cn/images/wechatqrcode.png!nomark)
