@@ -2,9 +2,18 @@
  * @Author: cumany cuman@qq.com
  * @Date: 2023-06-28 13:36:53
  * @LastEditors: cumany cuman@qq.com
- * @LastEditTime: 2023-06-30 13:44:19
+ * @LastEditTime: 2023-06-30 13:49:32
  * @Description: 
 -->
+You will find a Blue Topaz example vault (the TIPS vault) here. The TIPS vault shows some theme-specific and novel usages which may help you polish or customize your notes.
+
+[中文版主题用法库](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/blob/master/TIPS%20vault/TIPS%20for%20Blue%20Topaz_Chinese.zip)
+
+
+[BT Tips Vault for English](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/blob/master/TIPS%20vault/TIPS%20for%20Blue%20Topaz_English.zip)
+
+And I still recommend you the enhanced edition (https://github.com/cumany/Blue-topaz-examples) created by @cumany, if you are not satisfied with the TIPS vault.
+
 # 示例 Demo vault
 感谢[@cumany](https://github.com/cumany) 制作的升级版示例库 https://github.com/cumany/Blue-topaz-examples
 
