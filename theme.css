@@ -18016,11 +18016,11 @@ body.style-options-for-admonition-plugin :is(.admonition-flex,.admonition-col2,.
   list-style-type: none;
   padding:0;
 }
-.markdown-rendered .callout  ul li p:last-of-type, .markdown-rendered ol li p:last-of-type {
+.markdown-rendered .admonition  ul li p:last-of-type, .markdown-rendered ol li p:last-of-type {
  margin-block-end: 0.5em; 
 }
 
-.markdown-rendered  .callout  ul li p:first-of-type, .markdown-rendered ol li p:first-of-type {
+.markdown-rendered  .admonition  ul li p:first-of-type, .markdown-rendered ol li p:first-of-type {
   margin-block-start: 0.5em; 
 }
 
