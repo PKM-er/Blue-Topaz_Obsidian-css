@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v1.2.8。uid [20230630] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.2.8, uid [20230630] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.2.8。uid [20230704] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.2.8, uid [20230704] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 thanks pkmer.cn
@@ -1398,37 +1398,37 @@ settings:
     description: Fonts except from the code texts
     description.zh: 除代码框外字体
     type: variable-text
-    default: "Bookerly,'Inter', 'Segoe UI','霞鹜文楷 GB', 'LXGW WenKai', 'Segoe UI Emoji',var(--font-default)"
+    default: "Bookerly,'Inter', 'Segoe UI','霞鹜文楷 GB', 'LXGW WenKai', 'Segoe UI Emoji',var(--font-interface)"
   -
     id: font-family-h1
     title: Header 1
     type: variable-text
-    default: "var(--font-default)"
+    default: "var(--font-interface)"
   -
     id: font-family-h2
     title: Header 2
     type: variable-text
-    default: "var(--font-default)"
+    default: "var(--font-interface)"
   -
     id: font-family-h3
     title: Header 3
     type: variable-text
-    default: "var(--font-default)"
+    default: "var(--font-interface)"
   -
     id: font-family-h4
     title: Header 4
     type: variable-text
-    default: "var(--font-default)"
+    default: "var(--font-interface)"
   -
     id: font-family-h5
     title: Header 5
     type: variable-text
-    default: "Bookerly, 'LXGW WenKai', var(--font-default)"
+    default: "Bookerly, 'LXGW WenKai', var(--font-interface)"
   -
     id: font-family-h6
     title: Header 6
     type: variable-text
-    default: "Bookerly, 'LXGW WenKai', var(--font-default)"
+    default: "Bookerly, 'LXGW WenKai', var(--font-interface)"
   -
     id: font-family-folder-file-title
     title: Folder & File Title
@@ -1458,7 +1458,7 @@ settings:
     title: Bold Text
     title.zh: 加粗文字字体
     type: variable-text
-    default: "Bookerly,'Inter', 'Segoe UI', 'LXGW WenKai Screen', 'LXGW WenKai Screen R', '霞鹜文楷 GB', 'LXGW WenKai', 'Segoe UI Emoji', var(--font-default)"
+    default: "Bookerly,'Inter', 'Segoe UI', 'LXGW WenKai Screen', 'LXGW WenKai Screen R', '霞鹜文楷 GB', 'LXGW WenKai', 'Segoe UI Emoji', var(--font-interface)"
   -
     id: font-weight-strong
     title: Bold text font weight
@@ -4904,10 +4904,10 @@ body {
   --font-default: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei", sans-serif;
   --font-family-list: ;/*列表字体*/
   --font-text-theme: Bookerly,'Inter', "Segoe UI","霞鹜文楷 GB", "LXGW WenKai", "Segoe UI Emoji"; /*主体（包括列表）字体，除代码框等少数部分*/
-  --font-family-h1: var(--font-default);
-  --font-family-h2: var(--font-default);
-  --font-family-h3: var(--font-default);
-  --font-family-h4: var(--font-default);
+  --font-family-h1: var(--font-interface);
+  --font-family-h2: var(--font-interface);
+  --font-family-h3: var(--font-interface);
+  --font-family-h4: var(--font-interface);
   --font-family-h5: ;
   --font-family-h6: ;
   --font-family-title: ;/*文件抬头标题*/
@@ -4921,7 +4921,7 @@ body {
 
   --mermaid-font-family: Segoe UI, "Microsoft YaHei", "Segoe UI Emoji", "trebuchet ms", verdana, Arial, cursive;
   --font-family-better-footnote: Arlrdbd, "Source Han Sans", "Segoe UI Emoji";
-  --font-family-strong: Bookerly,'Inter', "Segoe UI", "LXGW WenKai Screen", "LXGW WenKai Screen R", "霞鹜文楷 GB", "LXGW WenKai", "Segoe UI Emoji", var(--font-default);
+  --font-family-strong: Bookerly,'Inter', "Segoe UI", "LXGW WenKai Screen", "LXGW WenKai Screen R", "霞鹜文楷 GB", "LXGW WenKai", "Segoe UI Emoji", var(--font-interface);
   --font-family-em: ;
   --font-loading-text: var(--font-monospace-theme);
 
@@ -11479,7 +11479,7 @@ body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-h
   border-radius: var(--radius-xs);
   color: var(--text-muted);
   overflow: visible;
-  font-family: var(--font-default);
+  font-family: var(--font-interface);
   font-weight: normal !important;
 }
 
