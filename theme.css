@@ -23213,8 +23213,9 @@ body:is(.folder-style-change-options-colorful,.folder-style-change-options-color
 body:is(.folder-style-change-options-colorful,.folder-style-change-options-colorful-order) .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title {
   color: var(--FoldText);
   padding: var(--nav-item-parent-padding);
+  padding-bottom: 4px;
   padding-left: 3px;
- 
+   margin-top: 3px;
   /* space between top level sections */
   border-radius: 5px 5px 0 0;
 }
@@ -23226,7 +23227,7 @@ body:is(.folder-style-change-options-colorful,.folder-style-change-options-color
 
 /* General Nav Folder Children (this is the part that expands from each top level folder) */
 body:is(.folder-style-change-options-colorful,.folder-style-change-options-colorful-order) .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-children {
-  padding-left: 0;
+  
   margin-left: 0;
   border-radius: 0 0 5px 5px;
   padding-bottom: 5px;
