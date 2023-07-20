@@ -23205,7 +23205,8 @@ body:is(.folder-style-change-options-colorful,.folder-style-change-options-color
 }
 
 /* Remove collapse arrow from top level folders */
-body:is(.folder-style-change-options-colorful,.folder-style-change-options-colorful-order) .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title>.nav-folder-collapse-indicator {
+
+body.remove-arrow:is(.folder-style-change-options-colorful,.folder-style-change-options-colorful-order) .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title>.nav-folder-collapse-indicator {
   display: none;
 }
 
@@ -23214,7 +23215,7 @@ body:is(.folder-style-change-options-colorful,.folder-style-change-options-color
   color: var(--FoldText);
   padding: var(--nav-item-parent-padding);
   padding-bottom: 4px;
-  padding-left: 3px;
+  /* padding-left: 3px; */
    margin-top: 3px;
   /* space between top level sections */
   border-radius: 5px 5px 0 0;
@@ -23232,6 +23233,7 @@ body:is(.folder-style-change-options-colorful,.folder-style-change-options-color
   border-radius: 0 0 5px 5px;
   padding-bottom: 5px;
   border-left: 0px solid;
+  padding-left:1em;
 }
 
 body:is(.folder-style-change-options-colorful,.folder-style-change-options-colorful-order) .nav-file-title {
