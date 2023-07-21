@@ -15124,7 +15124,7 @@ body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-conte
   border: 2px solid hsla(var(--color-accent-hsl), 0.9);
   border-radius: 50%;
   position: absolute;
-  left: 7px;
+margin-left:-1em;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -15150,12 +15150,13 @@ body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-conte
   cursor: pointer;
 }
 body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon::before {
+  margin-top: 50%;
   width: var(--size-4-2);
   height: var(--size-4-2);
   background-color: hsla(var(--color-accent-hsl), 0.9);
   border-radius: 50%;
   position: absolute;
-  left: 7px;
+  left: 4px;
   top: 50%;
   transform: translateY(-50%);
 }
