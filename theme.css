@@ -15111,7 +15111,7 @@ body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-conte
   margin-top: -1px; /* fix item gap */
 }
 body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-inner {
-  padding-left: 16px;
+  padding-left: 4px;
   overflow: hidden;
   text-overflow: ellipsis;
   height: calc(var(--nav-item-size) * 1.8);
@@ -15124,7 +15124,7 @@ body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-conte
   border: 2px solid hsla(var(--color-accent-hsl), 0.9);
   border-radius: 50%;
   position: absolute;
-margin-left:-1em;
+margin-left:-1.5em;
   top: 50%;
   transform: translateY(-50%);
 }
