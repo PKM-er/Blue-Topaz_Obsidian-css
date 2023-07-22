@@ -29325,3 +29325,22 @@ div#popup-search {
   background-color: var(--color-base-10);
 }
  
+/* pdf 匹配暗色模式 */
+
+body {
+    --pdf-background: var(--background-secondary);
+    --pdf-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 8px transparent;
+    --pdf-thumbnail-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 8px transparent;
+}
+body.theme-dark .pdf-viewer .canvasWrapper,
+body.theme-dark .pdf-thumbnail-view .thumbnailImage {
+    filter: invert(1) hue-rotate(180deg);
+    mix-blend-mode: screen;
+}
+body.theme-dark .pdf-viewer {
+    background-color: var(--pdf-background);
+}
+body.theme-dark .pdf-viewer .page {
+    background-color: var(--background-primary);
+    border-color: var(--pdf-background);
+}
