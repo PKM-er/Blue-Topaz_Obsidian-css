@@ -14721,20 +14721,23 @@ body.image-border img{
   filter: drop-shadow(0px 0px 3px rgba(var(--mono-rgb-100),0.2));
 }
 /* images : reduce displayed size of embedded files, zoom on hover */
-body:not(.obsidian-default-image) :is(.markdown-preview-view,.markdown-rendered)  :not(.canvas-node-content)> img:not([class*="emoji"]) {
+body:not(.obsidian-default-image) :is(.markdown-preview-view, .markdown-rendered) .workspace-leaf-content[data-type="markdown"] img:not([class*="emoji"]) {
   max-width: var(--image-max-width);
   margin-left: auto;
   margin-right: auto;
 }
-body:not(.obsidian-default-image) .print :is(.markdown-preview-view,.markdown-rendered) img:not([class*="emoji"]) {
+
+body:not(.obsidian-default-image) .print :is(.markdown-preview-view, .markdown-rendered) img:not([class*="emoji"]) {
   display: block;
 }
-body:not(.obsidian-default-image) .view-content  :not(.canvas-node-content)>img:not([class*="emoji"]) {
+
+body:not(.obsidian-default-image) .workspace-leaf-content[data-type="markdown"] .view-content  :not(.canvas-node-content)>img:not([class*="emoji"]) {
   cursor: zoom-in;
   display: block;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  margin-left: auto ;
+  margin-right: auto;
 }
+
 body:not(.image-zoom) .markdown-reading-view button img,
 body:not(.image-zoom) .markdown-reading-view .callout-title-inner img {
   pointer-events: none;
@@ -17225,7 +17228,7 @@ body.style-options-for-kanban-plugin-dynamic-neon-three.theme-dark .kanban-plugi
 }
 
 body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane-wrapper:nth-child(n) {
-  background: unset !important;
+
   position: relative;
   z-index: 0;
   border-radius: 10px;
@@ -17243,8 +17246,8 @@ body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane-wrapp
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 250%;
-  height: 300%;
+  width: 38px;
+  height: 125%;
   background-color: var(--background-secondary-alt) !important;
   background-repeat: no-repeat;
   background-size: 50% 50%;
