@@ -21791,7 +21791,7 @@ body.toggle-bg-panel-page.panel-page-bg-theme-light-custom.theme-light {
 }
 
 
-body.toggle-nonoverlapping-bg .workspace-split.mod-root .view-content {
+body.background-image-settings-switch.toggle-nonoverlapping-bg .workspace-split.mod-root .view-content {
   background: var(--background-nonoverlapping-note);
 }
 
