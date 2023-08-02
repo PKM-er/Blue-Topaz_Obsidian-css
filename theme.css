@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v1.2.8。uid [20230719] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.2.8, uid [20230719] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.2.8。uid [20230802] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.2.8, uid [20230802] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 thanks pkmer.cn
@@ -1440,7 +1440,7 @@ settings:
     title: Inline Code
     title.zh: 行内代码字体
     type: variable-text
-    default: var(--font-monospace-theme)
+    default: var(--font-monospace-override), var(--font-monospace-theme)
   -
     id: font-family-tag
     title: Tag
@@ -4913,7 +4913,7 @@ body {
   --font-family-title: ;/*文件抬头标题*/
   --font-family-folder-file-title: Arlrdbd, "Source Han Sans", "Noto Sans CJK", "Source Sans Pro", "Segoe UI Emoji", sans-serif;/*左侧边栏文件、文件夹字体*/
   --font-monospace-theme: 'JetBrains Mono',Consolas, Monaco, "等距更纱黑体 SC", "Source Han Mono", "Microsoft Yahei Mono", "Segoe UI Emoji", "Microsoft YaHei", "Source Code Pro", monospace;
-  --font-family-inline-code: var(--font-monospace-theme);
+  --font-family-inline-code: var(--font-monospace-override), var(--font-monospace-theme);
   --font-family-tag: Bookerly,'Inter', "Segoe UI", "Microsoft YaHei", STzhongsong, STSong, "Segoe UI Emoji", Serif;
   --font-family-vault: "Lucida Handwriting", "Segoe UI Emoji";/*左侧库名字体*/
   --font-family-special-tag: "Lucida Handwriting", "Segoe UI Emoji";
@@ -9594,13 +9594,13 @@ body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered
 body.font-family-change-to-default *:not(font)>em>strong,
 body.font-family-change-to-default *:not(font)>strong>em,
 body.font-family-change-to-default .cm-strong.cm-em {
-  font-family: unset !important;
+  font-family: var(--font-text);
 }
 
 body.font-family-change-to-default .cm-s-obsidian .cm-hmd-frontmatter,
 body.font-family-change-to-default .markdown-rendered code,
 body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) code{
-  font-family: 'Source Code Pro', monospace !important;
+  font-family: var(--font-monospace);
 }
 
 body.reduce-bottom-padding .workspace-leaf-content[data-type="markdown"] :is(.markdown-preview-view,.markdown-rendered) .markdown-preview-sizer,
