@@ -1505,6 +1505,12 @@ settings:
     type: variable-text
     default: 0.85em
   -
+    id: font-size-outline
+    title: outline font size
+    title.zh: 大纲字体大小
+    type: variable-text
+    default: 13px
+  -
     id: font-size-code
     title: Codeblock
     title.zh: 代码框字体大小
@@ -4890,6 +4896,7 @@ body {
   --font-size-list: 1em;
   --font-size-preview-blockquote: 1em;
   --font-size-edit-blockquote: 1em;
+  --font-size-outline:var(--nav-item-size);
   --font-size-code: 1em;
   --font-size-latex: 1.25em;
   --font-size-cloze: 0.9375em;
@@ -11269,6 +11276,10 @@ body:not(.is-focused) .titlebar-text {
 .outline .tree-item-self.is-clickable:hover {
   background-color: var(--theme-color-translucent-015);
   color: var(--text-normal);
+}
+.outline .tree-item-self
+{
+  font-size: var(--font-size-outline);
 }
 
 .search-result-file-match:hover {
