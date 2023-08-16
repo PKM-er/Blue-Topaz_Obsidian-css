@@ -19878,63 +19878,71 @@ body.hide-titlebar-close-btn.hide-left-ribbon-retention-drawer .file-tree-plugin
 /* ================================== */
 /* ============== webpage export html ============= */
 /* ================================== */
-.flex-container {
---banner-height:300px;
---banner-internal-embed-height:200px;
---banner-preview-embed-height:120px;
-}
 
+.webpage-container {
+  --banner-height:300px;
+  --banner-internal-embed-height:200px;
+  --banner-preview-embed-height:120px;
+  }
+  
+  
+  body.color-scheme-options-simplicity-topaz.theme-dark.background-settings-workplace-background-image .webpage-container::before {
+    filter: blur(var(--blur-depth)) brightness(calc(var(--brightness-4-bg) - 0.5)) saturate(var(--saturate-4-bg));
+  }
+  body.background-settings-workplace-background-image.theme-light .webpage-container::before,
+   body.background-settings-workplace-background-image.theme-dark .webpage-container::before {
+    background-image: var(--theme-background);
+    background-size: cover;
+    filter: blur(var(--blur-depth)) brightness(var(--brightness-4-bg)) saturate(var(--saturate-4-bg));
+  }
+  body.background-settings-workplace-background-image.background-settings-workplace-waves2-light.theme-light .webpage-container::before,
+  body.background-settings-workplace-background-image.background-settings-workplace-waves2.theme-dark .webpage-container:before {
+    content: "";
+    position: fixed;
+    height: auto;
+    width: 300%;
+    top: 75%;
+    left: -25%;
+    background-image: unset;
+    -webkit-mask-image: var(--theme-background);
+    background-size: 100% 100%;
+    opacity: 0.7;
+    filter: blur(var(--blur-depth)) brightness(var(--brightness-4-bg)) saturate(var(--saturate-4-bg));
+    background-color: var(--wave2-background-color);
+  }
+  body.background-settings-workplace-background-image .webpage-container::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -37px;
+    right: -15px;
+    bottom: 0;
+    left: -15px;
+  }
+  
+  body.background-settings-workplace-background-image.background-settings-workplace-waves-light.theme-light .webpage-container::before, 
+  body.background-settings-workplace-background-image.background-settings-workplace-waves.theme-dark .webpage-container::before {
+    content: "";
+    position: fixed;
+    height: auto;
+    width: 300%;
+    transform: rotate(180deg);
+    top: 75%;
+    left: -25%;
+    background-image: unset;
+    -webkit-mask-image: var(--theme-background);
+    background-size: 100% 100%;
+    opacity: 0.7;
+    filter: blur(var(--blur-depth)) brightness(var(--brightness-4-bg)) saturate(var(--saturate-4-bg));
+    background-color: var(--wave-background-color);
+  }
+  
+   
+  .document-container :is(.markdown-preview-view,.markdown-rendered),.document-container .markdown-source-view {
+  
+    background-color: var(--background-primary)!important;
+  }
 
-body.color-scheme-options-simplicity-topaz.theme-dark.background-settings-workplace-background-image .flex-container::before {
-  filter: blur(var(--blur-depth)) brightness(calc(var(--brightness-4-bg) - 0.5)) saturate(var(--saturate-4-bg));
-}
-body.background-settings-workplace-background-image.theme-light .flex-container::before,
- body.background-settings-workplace-background-image.theme-dark .flex-container::before {
-  background-image: var(--theme-background);
-  background-size: cover;
-  filter: blur(var(--blur-depth)) brightness(var(--brightness-4-bg)) saturate(var(--saturate-4-bg));
-}
-body.background-settings-workplace-background-image.background-settings-workplace-waves2-light.theme-light .flex-container::before,
-body.background-settings-workplace-background-image.background-settings-workplace-waves2.theme-dark .flex-container:before {
-  content: "";
-  position: fixed;
-  height: auto;
-  width: 300%;
-  top: 75%;
-  left: -25%;
-  background-image: unset;
-  -webkit-mask-image: var(--theme-background);
-  background-size: 100% 100%;
-  opacity: 0.7;
-  filter: blur(var(--blur-depth)) brightness(var(--brightness-4-bg)) saturate(var(--saturate-4-bg));
-  background-color: var(--wave2-background-color);
-}
-body.background-settings-workplace-background-image .flex-container::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: -37px;
-  right: -15px;
-  bottom: 0;
-  left: -15px;
-}
-
-body.background-settings-workplace-background-image.background-settings-workplace-waves-light.theme-light .flex-container::before, 
-body.background-settings-workplace-background-image.background-settings-workplace-waves.theme-dark .flex-container::before {
-  content: "";
-  position: fixed;
-  height: auto;
-  width: 300%;
-  transform: rotate(180deg);
-  top: 75%;
-  left: -25%;
-  background-image: unset;
-  -webkit-mask-image: var(--theme-background);
-  background-size: 100% 100%;
-  opacity: 0.7;
-  filter: blur(var(--blur-depth)) brightness(var(--brightness-4-bg)) saturate(var(--saturate-4-bg));
-  background-color: var(--wave-background-color);
-}
 /* ================================== */
 /* ============== quiet-outline ============= */
 /* ================================== */
@@ -21819,18 +21827,18 @@ body.background-image-settings-switch.toggle-nonoverlapping-bg .workspace-split.
   background-size: 100% 100%;
 }
 
-body.background-notebook-liked-switch .markdown-reading-view .markdown-embed .markdown-rendered
+body.background-notebook-liked-switch  .markdown-embed .markdown-rendered
 {
   background-image: unset!important;
 }
-body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-1 .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-1  .markdown-rendered,
 body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-1 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--bg-color-notebook);
   background-image: linear-gradient(90deg, var(--grid-notebook-line-color-1) 3%, transparent 0), linear-gradient(var(--grid-notebook-line-color-1) 3%, transparent 0);
   background-size: 20px 20px;
 }
 
-body:not(.toggle-fixed-pattern).background-notebook-liked-switch .markdown-reading-view .markdown-rendered,
+body:not(.toggle-fixed-pattern).background-notebook-liked-switch  .markdown-rendered,
 body:not(.toggle-fixed-pattern).background-notebook-liked-switch .markdown-source-view.mod-cm6 .cm-scroller {
   background-attachment: local !important;
 }
@@ -21839,7 +21847,7 @@ body.background-notebook-liked-switch .markdown-source-view.mod-cm6 .cm-embed-bl
   background: inherit;
 }
 
-body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-1 .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-1  .markdown-rendered,
 body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-1 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--bg-color-notebook);
   background-image: radial-gradient(var(--dotted-notebook-dot-color) 10%, transparent 0);
@@ -21847,7 +21855,7 @@ body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebo
   background-position: 8px 8px;
 }
 
-body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-2 .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-2  .markdown-rendered,
 body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-2 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--bg-color-notebook);
   background-image: radial-gradient(var(--dotted-notebook-dot-color) 10%, transparent 0),
@@ -21857,7 +21865,7 @@ body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebo
 }
 
 /*https://www.jianshu.com/p/2b713844cfe9*/
-body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-2 .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-2  .markdown-rendered,
 body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-2 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--bg-color-notebook);
   background-image:
@@ -21869,25 +21877,25 @@ body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook
     transparent 0);
   background-size: 75px 75px, 75px 75px, 15px 15px, 15px 15px;
 }
-body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1 .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1  .markdown-rendered,
 body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image: repeating-linear-gradient(135deg,
   hsla(0,0%,100%,.03), hsla(0,0%,100%,.03) 13px, transparent 0, transparent 30px);
 }
-body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1.theme-light .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1.theme-light  .markdown-rendered,
 body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1.theme-light .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image: repeating-linear-gradient(135deg,
   hsla(0,0%,100%,.3), hsla(0,0%,100%,.3) 13px, transparent 0, transparent 30px);
 }
-body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2 .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2  .markdown-rendered,
 body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image:repeating-linear-gradient(45deg,
   hsla(0,0%,100%,.025), hsla(0,0%,100%,.025) 20px, transparent 0, transparent 60px), repeating-linear-gradient(-45deg, hsla(0,0%,100%,.025), hsla(0,0%,100%,.025) 20px, transparent 0, transparent 60px);
 }
-body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2.theme-light .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2.theme-light  .markdown-rendered,
 body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2.theme-light .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image:repeating-linear-gradient(45deg,
@@ -28665,7 +28673,7 @@ body.view-button-front.tab-title-bar-position .workspace-leaf-content[data-mode=
 }
 
 
-body.tab-title-bar-position .markdown-reading-view .markdown-preview-view {
+body.tab-title-bar-position  .markdown-preview-view {
   padding-left: unset;
 }
 
