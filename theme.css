@@ -9619,6 +9619,13 @@ body.reduce-bottom-padding:not(.plugin-cm-typewriter-scroll) .cm-s-obsidian .cm-
 /*===============================*/
 /*=============YAML==============*/
 /*===============================*/
+
+input[type='text'].metadata-property-key-input
+{
+  background:transparent;
+}
+
+
 /* cssclass: inline-list */
 /* can change list from block to inline; can be used with inline images */
 .inline-list ul,
@@ -16740,15 +16747,15 @@ pre.frontmatter.language-yaml::before {
   color: var(--color-specification);
 }
 
-.frontmatter-container {
+:is(.metadata-container,.frontmatter-container) {
   margin: 0 0 1.2em 0;
   background-color: transparent;
 }
-.frontmatter-container .frontmatter-alias {
+:is(.metadata-container,.frontmatter-container) .frontmatter-alias {
   line-height: 1.2;
   white-space: initial;
 }
-.frontmatter-container .frontmatter-section-label
+:is(.metadata-container,.frontmatter-container) .frontmatter-section-label
 {
   flex-basis: 8em;
 }
@@ -25389,7 +25396,7 @@ body.theme-dark .popover.hover-popover:not(.is-loaded) {
 :is(.markdown-preview-view,.markdown-rendered).noyaml div>.language-yaml {
   display: none;
 }
-:is(.markdown-preview-view,.markdown-rendered).noyaml div>.frontmatter-container {
+:is(.markdown-preview-view,.markdown-rendered).noyaml div>:is(.metadata-container,.frontmatter-container) {
   display: none;
 }
 /*隐藏滚动条*/
@@ -29300,27 +29307,23 @@ body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-custom) .ca
 }
 
 /* ================================== */
-.show-full-metadata  .frontmatter-container:not(.is-collapsed) .frontmatter-section {
+.show-full-metadata  :is(.metadata-container,.frontmatter-container):not(.is-collapsed) .frontmatter-section {
   display: flex!important;
 }
-body:not(.show-full-metadata) .frontmatter-container  .frontmatter-container-header  ~ .frontmatter-section:not(:is(.mod-aliases,.mod-tags)) {
+ 
+body:not(.show-full-metadata) .markdown-preview-view .metadata-property:not(:has(:is(.multi-select-pill,.metadata-input-longtext:not(:empty))))
+{
   display: none;
 }
 
-body:not(.show-full-metadata) .frontmatter-container:has(.frontmatter-container-header + .frontmatter-section:not(:is(.mod-aliases,.mod-tags))) {
-  display: none;
-}
-body:not(.show-full-metadata) .frontmatter-container:not(:has(.frontmatter-container-header + .frontmatter-section)) {
-  display: none;
+body:not(.show-full-metadata) .markdown-preview-view .metadata-property:has(.metadata-property-key-input[aria-label=""])
+{
+  display: flex!important;
 }
 
 
-.markdown-preview-view.show-full-metadata .frontmatter-container {
-  display: block !important;
-}
 
-
-.workspace-split.mod-horizontal:is(.mod-left-split,.mod-right-split) .workspace-tab-container .frontmatter-container {
+.workspace-split.mod-horizontal:is(.mod-left-split,.mod-right-split) .workspace-tab-container :is(.metadata-container,.frontmatter-container) {
   display: none;
 }
 
