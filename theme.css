@@ -16760,6 +16760,13 @@ pre.frontmatter.language-yaml::before {
   flex-basis: 8em;
 }
 
+.metadata-container .metadata-add-button {
+
+    position: absolute;
+    top: 0;
+    left: 10em;
+}
+
 /*====================*/
 /*day planner plugin*/
 /*====================*/
@@ -29323,7 +29330,8 @@ body:not(.show-full-metadata) .markdown-preview-view .metadata-property:has(.met
 
 
 
-.workspace-split.mod-horizontal:is(.mod-left-split,.mod-right-split) .workspace-tab-container :is(.metadata-container,.frontmatter-container) {
+.workspace-split.mod-horizontal:is(.mod-left-split,.mod-right-split) .workspace-tab-container .workspace-leaf-content:not([data-type="file-properties"]) 
+:is(.metadata-container,.frontmatter-container) {
   display: none;
 }
 
