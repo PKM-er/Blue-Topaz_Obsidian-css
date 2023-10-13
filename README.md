@@ -14,6 +14,9 @@ You will find a Blue Topaz example vault (the TIPS vault) here. The TIPS vault s
 
 And I still recommend you the enhanced edition (https://github.com/cumany/Blue-topaz-examples) created by @cumany, if you are not satisfied with the TIPS vault.
 
+<a href="https://www.buymeacoffee.com/whyi" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
+
 # 示例 Demo vault
 感谢[@cumany](https://github.com/cumany) 制作的升级版示例库 https://github.com/cumany/Blue-topaz-examples
 
@@ -81,11 +84,12 @@ Change the color palette
 [这里查看](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/changes.md)
 
 
-# 捐赠
-如果觉得主题很棒，可以支持一下，谢谢！
+# 捐赠 Support
+如果觉得主题很棒，可以支持一下，谢谢！     
 
-关注 pkmer.cn
+关注 [pkmer.cn](https://pkmer.cn/)
 
+<a href="https://www.buymeacoffee.com/whyi" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
 # Acknowledgements
 I appreciate the help and support from @boninall @成雙醬 @Cuman @Klaas @lillian-who @shaggyfeng @Thinkbond @, and other cool guys who love Blue Topaz!
