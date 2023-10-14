@@ -4521,7 +4521,19 @@ settings:
     title.zh: 感谢Topaz社区支持😁，欢迎来访，QQ群:908688452
     type: heading
     level: 1
-    collapsed: true
+    collapsed: false
+  -
+    id: bt-buyacoffe
+    title: Support me
+    description: "[https://www.buymeacoffee.com/whyi](https://www.buymeacoffee.com/whyi)"
+    type: info-text
+    markdown: true
+  -
+    id: bt-github
+    title: Star the theme
+    description: "[https://github.com/PKM-er/Blue-Topaz_Obsidian-css](https://github.com/PKM-er/Blue-Topaz_Obsidian-css)"
+    type: info-text
+    markdown: true
 */
 
 /* @settings
