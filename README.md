@@ -129,7 +129,8 @@ It is highly recommended to install the style settings plugin to customize your 
 
 支付宝
 
-<img src="https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/cadb0f0f-c9f6-48ab-aaf8-3da92194d726" width="200">
+<img src="https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/4a8f9a6d-5156-4071-9a80-898b77b74ba3" width="200">
+
 
 ---
 
