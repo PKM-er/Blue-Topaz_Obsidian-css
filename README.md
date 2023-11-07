@@ -9,13 +9,18 @@ You will find a Blue Topaz example vault (the TIPS vault) here. The TIPS vault s
 
 [中文版主题用法库](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/blob/master/TIPS%20vault/TIPS%20for%20Blue%20Topaz_Chinese.zip)
 
-
 [BT Tips Vault for English](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/blob/master/TIPS%20vault/TIPS%20for%20Blue%20Topaz_English.zip)
 
 And I still recommend you the enhanced edition (https://github.com/cumany/Blue-topaz-examples) created by @cumany, if you are not satisfied with the TIPS vault.
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/whyi)
 
+---
+If you want to distribute the whole or parts of the above codes, please copy & paste the following sentences in your CSS file(s) and README.md:
+
+Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/PKM-er/Blue-Topaz_Obsidian-css), and I would like to express my appreciation to WhyI (https://github.com/whyt-byte) and pkmer.cn (https://pkmer.cn).
+
+---
 
 # 示例 Demo vault
 感谢[@cumany](https://github.com/cumany) 制作的升级版示例库 https://github.com/cumany/Blue-topaz-examples
@@ -51,30 +56,65 @@ https://user-images.githubusercontent.com/72023275/198887920-575d0735-2433-41ff-
 ![](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/preview_Blue%20Topaz.png)
 
 
+# Default style (Style Settings installed)
 
-# Blue-Topaz_Obsidian-css
-蓝色托帕石不是贵重的宝石，以契合“黑曜石”😜。另外蓝色托帕石一般由无色或浅色黄玉经过人工处理后得到——这个主题不是我从零开始做出来的，而是大量借鉴了他人的主题后，修改而成的，就像蓝色托帕石一样，是后天人造的。在此，感谢所有共享了css文件的人。另外，“无色或浅色黄玉”没有任何暗喻的意思，也没有和别人的主题做比较的意思。如果你能喜欢这个主题，那就很好！（更多片段请移步至QQ群：908688452）
+![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/f7317905-2c05-4860-b30d-a580890f2ec0)
+![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/a9895fcd-1d89-4272-9914-33d6e2d42af4)
 
-A blue theme for **Obsidian**. Blue Topaz is not a precious gem, like obsidian😜. Generally, Blue Topaz is obtained by artificially treating colourless topaz. Likewise，I did not make this theme from scratch, but modified it after borrowing others' themes. It is like Blue Topaz, which is a modified product. Thus, thanks for all the shared themes, which inspired me indeed! BTW, For the word "colourless topaz", there is no offense and no comparison. And it is not a metaphor. I will be glad if you enjoy the theme, *Blue Topaz*.
+# Color scheme
 
-# 示例 Demo vault
-感谢@cumany制作的升级版示例库 https://github.com/cumany/Blue-topaz-examples
-![image](https://user-images.githubusercontent.com/72023275/148891990-5db9c00f-98bc-41c1-b1a1-a9121c1035a8.png)
-![image](https://user-images.githubusercontent.com/72023275/148891998-9f4546fd-0b06-4add-8b73-692523781037.png)
-![image](https://user-images.githubusercontent.com/72023275/148892015-19ee2945-36c5-406f-b61c-b905ce85471b.png)
-![image](https://user-images.githubusercontent.com/72023275/148892023-c1391a98-9445-41de-97dc-bb2c6731b70c.png)
-![image](https://user-images.githubusercontent.com/72023275/148892043-d10819a8-9e4a-4786-9c24-a3adff3ec1db.png)
-![image](https://user-images.githubusercontent.com/72023275/148892055-a1eca6ae-dcc8-410e-8824-ca9307ad816f.png)
-![image](https://user-images.githubusercontent.com/72023275/148892062-e3bbe32e-bc7f-44ee-b1ab-055cbe4c4411.png)
+![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/166222ab-379f-4e55-8c36-43ad56553162)
+![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/371427dc-a5e3-4db4-81de-f31ea9e532d4)
+
+# Background image
+## For workplace
+
+![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/9403f704-d983-4aa6-9196-239304ca8314)
+
+## For note
+
+![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/49084d2b-def8-4168-b169-c21f53cf581c)
+
+## Toggle both
+
+![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/48a94c43-f36c-45a7-8687-4a2adce5248d)
+![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/7bb19b3f-1c9e-418a-b1a1-ad1d5e465f4a)
+
+## Notebook-liked (For note)
+
+![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/9bc7562b-240b-46df-872f-ec0cbf791c54)
+![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/962c11e3-95f6-4059-af36-a3bbe8f33928)
+
+## For command palette
+
+It will provide you with a random image when you toggle the option:
+![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/98af11d6-8e4b-47d8-a54d-73279bfe5e4f)
+
+You can set the same image as your workplace background when you have activated the workplace background.
+![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/db688148-0b4d-4109-8e25-71f91dff5001)
+
+## For file explorer
+
+![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/7013642a-da37-4a5f-a58d-fd165a473913)
+
+# Layout
+## Colorful titlebar
+
+![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/efeb47b8-22d6-4e70-a157-82ccd2ea24a8)
+![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/e4be0e17-dc2f-4d46-b5a3-72c95758efee)
+
+
+# PDF
+
+![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/c74874e7-4ff4-431a-b7ae-58e6255704bc)
+
+![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/3bc69e78-2665-468c-95d0-5f4dd995b720)
 
 
 # 插件 Plugin
 强烈建议安装Style Settings插件，用来自定义你的Blue Topaz
 It is highly recommended to install the style settings plugin to customize your Blue Topaz theme
 ![image](https://user-images.githubusercontent.com/72023275/148892207-ffbbb363-1a43-4267-a3f9-d95ee7cc9bd9.png)
-
-Change the color palette
-![image](https://user-images.githubusercontent.com/72023275/148892424-9cdbe7a3-68e6-4dd0-91d0-6763361e5ae3.png)
 
 
 # 字体 (fonts)
@@ -85,11 +125,18 @@ Change the color palette
 
 
 # 捐赠 Support
-如果觉得主题很棒，可以支持一下，谢谢！     
+如果觉得主题很棒，可以支持一下，谢谢！  关注 [pkmer.cn](https://pkmer.cn/)
 
-关注 [pkmer.cn](https://pkmer.cn/)
+支付宝
+
+<img src="https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/cadb0f0f-c9f6-48ab-aaf8-3da92194d726" width="200">
+
+---
+
+Buy me a coffee
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/whyi)
+
 
 # Acknowledgements
 I appreciate the help and support from @boninall @成雙醬 @Cuman @Klaas @lillian-who @shaggyfeng @Thinkbond @, and other cool guys who love Blue Topaz!
