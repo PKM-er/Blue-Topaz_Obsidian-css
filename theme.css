@@ -8,8 +8,8 @@ Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/
 
 */
 
-/*蓝色托帕石，适合Obsidian v1.2.8。uid [20231111] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.2.8, uid [20231111] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.2.8。uid [20231112] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.2.8, uid [20231112] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /*
 MIT License
@@ -13303,7 +13303,6 @@ ul > li.is-collapsed::marker,
   color: var(--list-marker-color-collapsed);
 }
 
-
 /*list-no-border*/
 body.list-no-border ul>li:not(.task-list-item) {
   border-left: none !important;
@@ -13313,7 +13312,286 @@ body.list-no-border ol>li {
   border-left: none !important;
 }
 
+/* Adapted from https://gist.github.com/KillyMXI/cbef8edff6dd55d9e6ea4df66567e9b1 */
+body.bt-connected-indent-hover .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3, .HyperMD-list-line-2):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-2:hover, ~ .HyperMD-list-line-2 ~ :is(.HyperMD-list-line-3, .HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-3, .HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
+  --list-threading-offset: calc(4px + 0.12em);
+}
 
+body.bt-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-3:hover, ~ .HyperMD-list-line-3 ~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
+  --list-threading-offset: calc(4px + 0.12em + var(--list-indent));
+}
+
+body.bt-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-4:hover, ~ .HyperMD-list-line-4 ~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
+  --list-threading-offset: calc(4px + 0.12em + 2 * var(--list-indent));
+}
+
+body.bt-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-5:hover, ~ .HyperMD-list-line-5 ~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
+  --list-threading-offset: calc(4px + 0.12em + 3 * var(--list-indent));
+}
+
+body.bt-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-6:hover, ~ .HyperMD-list-line-6 ~ :is(.HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7):hover))::before {
+  --list-threading-offset: calc(4px + 0.12em + 4 * var(--list-indent));
+}
+
+body.bt-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-7:hover, ~ .HyperMD-list-line-7 ~ :is(.HyperMD-list-line-8):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-7:not(:has(~ .HyperMD-list-line-7 ~ .HyperMD-list-line:hover)):hover::before {
+  --list-threading-offset: calc(4px + 0.12em + 5 * var(--list-indent));
+}
+
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::after,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-3:hover, ~ .HyperMD-list-line-3 ~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
+  filter: hue-rotate(60deg);
+}
+
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover)::after,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-4:hover, ~ .HyperMD-list-line-4 ~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
+  filter: hue-rotate(120deg);
+}
+
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover)::after,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-5:hover, ~ .HyperMD-list-line-5 ~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
+  filter: hue-rotate(180deg);
+}
+
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::after,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-6:hover, ~ .HyperMD-list-line-6 ~ :is(.HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7):hover))::before {
+  filter: hue-rotate(240deg);
+}
+
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7):hover)::after,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-7:hover, ~ .HyperMD-list-line-7 ~ :is(.HyperMD-list-line-8):hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-7:not(:has(~ .HyperMD-list-line-7 ~ .HyperMD-list-line:hover)):hover::before {
+  filter: hue-rotate(300deg);
+}
+
+/* tails */
+body.bt-connected-indent-hover .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3, .HyperMD-list-line-2):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7):hover)::after {
+  content: "";
+  position: absolute;
+  left: var(--list-threading-offset);
+  bottom: 0;
+  height: calc(100% - 1em);
+  width: var(--bt-colorful-indentation-width-hover);
+  background-color: var(--list-colorful-marker);
+}
+body.bt-connected-indent-hover .HyperMD-list-line.HyperMD-task-line::after {
+  max-height: calc(100% - 1.2em);
+}
+
+/* in-between lines */
+body.bt-connected-indent-hover .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-2:hover, ~ .HyperMD-list-line-2 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-3:hover, ~ .HyperMD-list-line-3 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-4:hover, ~ .HyperMD-list-line-4 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-5:hover, ~ .HyperMD-list-line-5 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-6:hover, ~ .HyperMD-list-line-6 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-7:hover)::before {
+  content: "";
+  position: absolute;
+  left: var(--list-threading-offset);
+  top: 0;
+  height: 100%;
+  width: var(--bt-colorful-indentation-width-hover);
+  background-color: var(--list-colorful-marker);
+}
+
+/* elbows */
+body.bt-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover))::before,
+body.bt-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover))::before,
+body.bt-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover))::before,
+body.bt-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover))::before,
+body.bt-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7):hover))::before,
+body.bt-connected-indent-hover .HyperMD-list-line-7:not(:has(~ .HyperMD-list-line-7 ~ .HyperMD-list-line:hover)):hover::before {
+  content: "";
+  position: absolute;
+  left: var(--list-threading-offset);
+  width: var(--list-indent);
+  top: 0;
+  height: calc(var(--line-height-list) / 2 * var(--font-size-list) + 2px);
+  border-bottom-left-radius: var(--radius-m);
+  border-bottom: var(--bt-colorful-indentation-width-hover) solid var(--list-colorful-marker);
+  border-left: var(--bt-colorful-indentation-width-hover) solid var(--list-colorful-marker);
+}
+body.bt-connected-indent-hover .HyperMD-list-line.HyperMD-task-line::before {
+  max-width: calc(var(--list-indent) - 0.35em);
+}
+
+body.bt-colorful-indentation-lines.bt-indentation-line-gradient ul ul::before,
+body.bt-colorful-indentation-lines.bt-indentation-line-gradient ol ol::before  {
+  border-right-color: var(--list-colorful-marker) !important;
+  border-image: linear-gradient(var(--bt-indentation-gradient-color-1), var(--bt-indentation-gradient-color-2)) 10;
+}
+
+body.bt-colorful-indentation-lines.bt-indentation-line-image :is(ul, ol) :is(ul, ol)::before {
+  border-right-color: var(--list-colorful-marker) !important;
+  border-image: var(--bt-indentation-line-image) 10;
+}
+
+body.bt-colorful-indentation-lines :is(ul, ol) :is(ul, ol)::before {
+  border-right-color: var(--list-colorful-marker) !important;
+  border-right-width: var(--bt-colorful-indentation-width);
+  border-right-style: double;
+}
+body.bt-colorful-indentation-lines :is(ul, ol) :is(ul, ol) :is(ul, ol)::before {
+  border-right-color: var(--list-colorful-marker) !important;
+  filter: hue-rotate(60deg);
+}
+body.bt-colorful-indentation-lines :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol)::before {
+  border-right-color: var(--list-colorful-marker) !important;
+  filter: hue-rotate(120deg);
+}
+body.bt-colorful-indentation-lines :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol)::before {
+  border-right-color: var(--list-colorful-marker) !important;
+  filter: hue-rotate(180deg);
+}
+body.bt-colorful-indentation-lines :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol)::before {
+  border-right-color: var(--list-colorful-marker) !important;
+  filter: hue-rotate(240deg);
+}
+body.bt-colorful-indentation-lines :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol)::before {
+  border-right-color: var(--list-colorful-marker) !important;
+  filter: hue-rotate(300deg);
+}
+
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-2 .cm-hmd-list-indent > .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-3 .cm-hmd-list-indent > .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-4 .cm-hmd-list-indent > .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-5 .cm-hmd-list-indent > .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-6 .cm-hmd-list-indent > .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-7 .cm-hmd-list-indent > .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-8 .cm-hmd-list-indent > .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-9 .cm-hmd-list-indent > .cm-indent::before {
+  border-color: var(--list-colorful-marker)
+}
+
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-3 .cm-hmd-list-indent > .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-4 .cm-hmd-list-indent > .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-5 .cm-hmd-list-indent > .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-6 .cm-hmd-list-indent > .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-7 .cm-hmd-list-indent > .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-8 .cm-hmd-list-indent > .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-9 .cm-hmd-list-indent > .cm-indent ~ .cm-indent::before  {
+  border-color: var(--list-colorful-marker);
+  filter: hue-rotate(60deg);
+}
+
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-4 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-5 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-6 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-7 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-8 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-9 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent::before {
+  border-color: var(--list-colorful-marker);
+  filter: hue-rotate(120deg);
+}
+
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-5 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-6 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-7 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-8 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-9 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before {
+  border-color: var(--list-colorful-marker);
+  filter: hue-rotate(180deg);
+}
+
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-6 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-7 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-8 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-9 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before {
+  border-color: var(--list-colorful-marker);
+  filter: hue-rotate(240deg);
+}
+
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-7 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-8 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-9 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before{
+  border-color: var(--list-colorful-marker);
+  filter: hue-rotate(300deg);
+}
+
+body.bt-connected-indent-hover li {
+  position: relative;
+}
+
+/* In-between items */
+body.bt-connected-indent-hover li > :is(ul, ol) > li:has(~ li:hover)::before,
+body.bt-connected-indent-hover :is(ul, ol):has(~ *:hover) > li::before {
+  content: "";
+  position: absolute;
+  background-color: var(--list-colorful-marker);
+  width: var(--bt-colorful-indentation-width-hover);
+  top: calc(var(--list-spacing-bt) * 0.075em - var(--font-size-list) * 0.6);
+  left: calc(-1.5 * var(--list-indent) - 1px);
+  bottom: calc(var(--list-spacing-bt) * 0.075em - var(--font-size-list) * 0.5);
+}
+
+/* Elbows items */
+body.bt-connected-indent-hover li > :is(ul, ol) > li:hover::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  top: calc(var(--list-spacing-bt) * 0.075em - var(--font-size-list) * 0.6);
+  left: calc(-1.5 * var(--list-indent) - 1px);
+  width: calc(1em + var(--size-4-4));
+  height: calc(var(--font-size-list) * 1.27);
+  border-bottom-left-radius: var(--radius-m);
+  border-bottom: var(--bt-colorful-indentation-width-hover) solid var(--list-colorful-marker);
+  border-left: var(--bt-colorful-indentation-width-hover) solid var(--list-colorful-marker);
+}
+
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li:has( ~ li:hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > ul:has(+ ol) > li::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > ol:has(+ ul) > li::before {
+  filter: hue-rotate(60deg);
+}
+
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:has( ~ li:hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > ul:has(+ ol) > li::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > ol:has(+ ul) > li::before {
+  filter: hue-rotate(120deg);
+}
+
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) >li:has( ~ li:hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ul:has(+ ol) > li::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ol:has(+ ul) > li::before {
+  filter: hue-rotate(180deg);
+}
+
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) >li:has( ~ li:hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ul:has(+ ol) > li::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ol:has(+ ul) > li::before {
+  filter: hue-rotate(240deg);
+}
+
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:has( ~ li:hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ul:has(+ ol) > li::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ol:has(+ ul) > li::before {
+  filter: hue-rotate(300deg);
+}
 
 
 /*===========*/
@@ -27419,7 +27697,6 @@ body.list-bracket-style-three :is(.markdown-preview-view,.markdown-rendered):not
   word-break: break-word;
   transition: all 300ms ease-in-out;
   border-left: 0.125em solid var(--list-ul-block-color);
-
 }
 body.list-bracket-style-three :is(.markdown-preview-view,.markdown-rendered):not(.kanban) ol:has(:is(ol,ul))>li:has(:is(ol,ul)):not(.task-list-item) {
   border-left: 0.125em solid var(--list-ol-block-color);
@@ -27477,7 +27754,6 @@ body.list-vertical-line-one :is(ol,ul) :is(ol,ul) {
   margin-top: calc(var(--margin-list) * -0.25em);
   padding-top: calc(var(--margin-list) * 0.25em);
 }
-
 
 
 body.colorful-ordered-list ol li::marker,
@@ -27542,7 +27818,6 @@ body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.Hype
 body.colorful-ordered-list :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) ol li::marker {
   color: hsl(calc(var(--accent-h) + 270), var(--accent-s), calc(var(--accent-l) * 0.95));
 }
-
 
 body.colorful-ordered-list :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) ol li::before,
 body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-7.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
@@ -27713,9 +27988,7 @@ body.title-justify-start .view-header-title-container {
   box-shadow: none;
 }
 select:hover,
-.dropdown:hover {
-  box-shadow: none;
-}
+.dropdown:hover,
 select:focus,
 .dropdown:focus {
   box-shadow: none;
@@ -27891,7 +28164,6 @@ body.hide-left-ribbon .workspace-ribbon.side-dock-ribbon.mod-left {
   transition: all 350ms ease-in-out;
 }
 
-
 body.hide-left-ribbon-retention-drawer.hide-titlebar-close-btn.is-hidden-frameless .titlebar-button.mod-logo {
   display: none;
 }
@@ -27983,7 +28255,6 @@ body.tab-title-bar-position .workspace-tabs:not(.mod-stacked) .view-header-title
   text-orientation: mixed;
 }
 
-
 body.view-button-front.tab-title-bar-position .workspace-leaf-content .view-header .view-header-nav-buttons{
   margin-left: -12px;
   margin-top: 25px;
@@ -27997,7 +28268,6 @@ body.view-button-front.tab-title-bar-position .workspace-leaf-content:is([data-m
 body.view-button-front.tab-title-bar-position .workspace-leaf-content[data-mode='preview'] .view-header .view-actions>:is([aria-label^="该面板处于阅读视图中"],[aria-label^="Current view: reading"]) {
   left: -10px;
 }
-
 
 body.tab-title-bar-position  .markdown-preview-view {
   padding-left: unset;
@@ -28185,16 +28455,6 @@ body.toggle-header-bottom-line.show-view-header .view-header {
 .workspace-split.mod-root .workspace-tab-header-container-inner .workspace-tab-header:first-child {
   margin-left: 1rem;
 }
-/*
-body.theme-light .workspace-split.mod-root .workspace-tab-header.is-active.mod-active {
-  background-image: linear-gradient(to right, rgba(var(--mono-rgb-0), 0.6), transparent);
-}
-/*
-body.theme-dark .workspace-split.mod-root .workspace-tab-header.is-active.mod-active {
-  background-color: var(--background-secondary);
-}
-  */
-
 
 body.background-settings-workplace-background-image .workspace-split.mod-root .workspace-tab-header.is-active::before,
 body.background-settings-workplace-background-image .workspace-split.mod-root .workspace-tab-header.is-active::after {
@@ -28212,7 +28472,6 @@ body.theme-dark:not(.background-settings-workplace-background-image) .workspace-
   display: inline-block!important;
 }
 /**emoji toolbar*****/
-
 
 body.underline-tab-style .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header {
   background-color: transparent;
@@ -28240,7 +28499,6 @@ body.underline-tab-style .workspace-split:not(.mod-left-split):not(.mod-right-sp
   background-color: var(--background-modifier-hover);
 }
 
-
 body.safari-tab-style .workspace-tabs:not(.mod-stacked) .workspace-tab-header::before,
 body.safari-tab-style .workspace-tabs:not(.mod-stacked) .workspace-tab-header::after,
 body.safari-tab-style .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner::after {
@@ -28264,7 +28522,6 @@ body.safari-tab-style .mod-horizontal:not(.mod-left-split):not(.mod-right-split)
   transition: 400ms, background-color 150ms ease-in-out;
 }
 
-
 body.safari-tab-style .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
   transition: 400ms;
 }
@@ -28272,7 +28529,6 @@ body.safari-tab-style .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab
 body.safari-tab-style .workspace-tabs:not(.mod-stacked) .workspace-tab-header:first-child {
   margin-left: 0;
 }
-
 
 body.safari-tab-style .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner {
   padding: 0 4px 0 8px;
@@ -28292,19 +28548,12 @@ body.safari-tab-style .mod-root:not(.mod-left-split):not(.mod-right-split) .work
   flex-grow: 1.67;
   max-width: 300px;
 }
-/*
-body.theme-light.safari-tab-style .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner:hover {
-  background-color: rgba(188, 192, 205, 0.4);
-}
-body.theme-dark.safari-tab-style .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner:hover {
-  background-color: rgba(81, 86, 109, 0.4);
-}
-*/
+
 body.safari-tab-style .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner,
 body.safari-tab-style .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
 body.safari-tab-style .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-close-button,
 body.safari-tab-style .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
-  color: var(--text-noraml) ;
+  color: var(--text-noraml);
   font-weight:bold;
 }
 
@@ -28506,7 +28755,6 @@ div#popup-search {
   background-color: var(--color-base-10);
 }
  
-
 body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
   --background-modifier-border-focus: color-mix(in srgb, var(--theme-color), transparent 30%);
 }
@@ -28514,13 +28762,6 @@ body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
 .tree-item-self {
   align-items: center;
 }
-
-/*
-.mod-root .workspace-tab-header-container-inner {
-  position: absolute;
-  top: 20px
-}
-*/
 
 body.bt-bubble-layout {
   --divider-color: transparent;
@@ -28584,7 +28825,6 @@ body.bt-bubble-layout:not(.background-settings-workplace-background-image) .work
   --divider-color: transparent;
 }
 
-
 body.bt-bubble-layout.bt-bubble-layout-hide-borders {
   --bt-bubble-border-color: transparent;
   --tab-outline-color: transparent;
@@ -28592,7 +28832,6 @@ body.bt-bubble-layout.bt-bubble-layout-hide-borders {
 body.bt-bubble-layout.bt-bubble-layout-hide-borders .menu {
   border: 0 !important;
 }
-
 
 body.bt-bubble-layout .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle,
 body.bt-bubble-layout .workspace-split.mod-right-split > .workspace-leaf-resize-handle,
@@ -28775,292 +29014,4 @@ body.background-settings-workplace-background-image .workspace-split:not(.mod-ro
 
 body.nowrap-edit-codebox .HyperMD-codeblock {
   white-space: nowrap;
-}
-
-
-/* Adapted from https://gist.github.com/KillyMXI/cbef8edff6dd55d9e6ea4df66567e9b1 */
-body.bt-connected-indent-hover .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3, .HyperMD-list-line-2):hover)::after,
-body.bt-connected-indent-hover .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-2:hover, ~ .HyperMD-list-line-2 ~ :is(.HyperMD-list-line-3, .HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
-body.bt-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-3, .HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
-  --list-threading-offset: calc(4px + 0.12em);
-}
-
-body.bt-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::after,
-body.bt-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-3:hover, ~ .HyperMD-list-line-3 ~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
-body.bt-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
-  --list-threading-offset: calc(4px + 0.12em + var(--list-indent));
-}
-
-body.bt-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover)::after,
-body.bt-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-4:hover, ~ .HyperMD-list-line-4 ~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
-body.bt-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
-  --list-threading-offset: calc(4px + 0.12em + 2 * var(--list-indent));
-}
-
-body.bt-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover)::after,
-body.bt-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-5:hover, ~ .HyperMD-list-line-5 ~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
-body.bt-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
-  --list-threading-offset: calc(4px + 0.12em + 3 * var(--list-indent));
-}
-
-body.bt-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::after,
-body.bt-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-6:hover, ~ .HyperMD-list-line-6 ~ :is(.HyperMD-list-line-7):hover)::before,
-body.bt-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7):hover))::before {
-  --list-threading-offset: calc(4px + 0.12em + 4 * var(--list-indent));
-}
-
-body.bt-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7):hover)::after,
-body.bt-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-7:hover, ~ .HyperMD-list-line-7 ~ :is(.HyperMD-list-line-8):hover)::before,
-body.bt-connected-indent-hover .HyperMD-list-line-7:not(:has(~ .HyperMD-list-line-7 ~ .HyperMD-list-line:hover)):hover::before {
-  --list-threading-offset: calc(4px + 0.12em + 5 * var(--list-indent));
-}
-
-
-
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::after,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-3:hover, ~ .HyperMD-list-line-3 ~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
-  filter: hue-rotate(60deg);
-}
-
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover)::after,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-4:hover, ~ .HyperMD-list-line-4 ~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
-  filter: hue-rotate(120deg);
-}
-
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover)::after,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-5:hover, ~ .HyperMD-list-line-5 ~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
-  filter: hue-rotate(180deg);
-}
-
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::after,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-6:hover, ~ .HyperMD-list-line-6 ~ :is(.HyperMD-list-line-7):hover)::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7):hover))::before {
-  filter: hue-rotate(240deg);
-}
-
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7):hover)::after,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-7:hover, ~ .HyperMD-list-line-7 ~ :is(.HyperMD-list-line-8):hover)::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-7:not(:has(~ .HyperMD-list-line-7 ~ .HyperMD-list-line:hover)):hover::before {
-  filter: hue-rotate(300deg);
-}
-
-/* tails */
-body.bt-connected-indent-hover .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3, .HyperMD-list-line-2):hover)::after,
-body.bt-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::after,
-body.bt-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover)::after,
-body.bt-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover)::after,
-body.bt-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::after,
-body.bt-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7):hover)::after {
-  content: "";
-  position: absolute;
-  left: var(--list-threading-offset);
-  bottom: 0;
-  height: calc(100% - 1em);
-  width: var(--bt-colorful-indentation-width-hover);
-  background-color: var(--list-colorful-marker);
-}
-body.bt-connected-indent-hover .HyperMD-list-line.HyperMD-task-line::after {
-  max-height: calc(100% - 1.2em);
-}
-
-/* in-between lines */
-body.bt-connected-indent-hover .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-2:hover, ~ .HyperMD-list-line-2 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::before,
-body.bt-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-3:hover, ~ .HyperMD-list-line-3 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover)::before,
-body.bt-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-4:hover, ~ .HyperMD-list-line-4 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover)::before,
-body.bt-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-5:hover, ~ .HyperMD-list-line-5 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::before,
-body.bt-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-6:hover, ~ .HyperMD-list-line-6 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::before,
-body.bt-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-7:hover)::before {
-  content: "";
-  position: absolute;
-  left: var(--list-threading-offset);
-  top: 0;
-  height: 100%;
-  width: var(--bt-colorful-indentation-width-hover);
-  background-color: var(--list-colorful-marker);
-}
-
-/* elbows */
-body.bt-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover))::before,
-body.bt-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover))::before,
-body.bt-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover))::before,
-body.bt-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover))::before,
-body.bt-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7):hover))::before,
-body.bt-connected-indent-hover .HyperMD-list-line-7:not(:has(~ .HyperMD-list-line-7 ~ .HyperMD-list-line:hover)):hover::before {
-  content: "";
-  position: absolute;
-  left: var(--list-threading-offset);
-  width: var(--list-indent);
-  top: 0;
-  height: calc(100% - 0.7em - var(--bt-colorful-indentation-width-hover) / 2);
-  border-bottom-left-radius: var(--radius-m);
-  border-bottom: var(--bt-colorful-indentation-width-hover) solid var(--list-colorful-marker);
-  border-left: var(--bt-colorful-indentation-width-hover) solid var(--list-colorful-marker);
-}
-body.bt-connected-indent-hover .HyperMD-list-line.HyperMD-task-line::before {
-  max-width: calc(var(--list-indent) - 0.35em);
-}
-
-
-body.bt-colorful-indentation-lines.bt-indentation-line-gradient ul ul::before,
-body.bt-colorful-indentation-lines.bt-indentation-line-gradient ol ol::before  {
-  border-right-color: var(--list-colorful-marker) !important;
-  border-image: linear-gradient(var(--bt-indentation-gradient-color-1), var(--bt-indentation-gradient-color-2)) 10;
-}
-
-body.bt-colorful-indentation-lines.bt-indentation-line-image :is(ul, ol) :is(ul, ol)::before {
-  border-right-color: var(--list-colorful-marker) !important;
-  border-image: var(--bt-indentation-line-image) 10;
-}
-
-body.bt-colorful-indentation-lines :is(ul, ol) :is(ul, ol)::before {
-  border-right-color: var(--list-colorful-marker) !important;
-  border-right-width: var(--bt-colorful-indentation-width);
-  border-right-style: double;
-}
-body.bt-colorful-indentation-lines :is(ul, ol) :is(ul, ol) :is(ul, ol)::before {
-  border-right-color: var(--list-colorful-marker) !important;
-  filter: hue-rotate(60deg);
-}
-body.bt-colorful-indentation-lines :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol)::before {
-  border-right-color: var(--list-colorful-marker) !important;
-  filter: hue-rotate(120deg);
-}
-body.bt-colorful-indentation-lines :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol)::before {
-  border-right-color: var(--list-colorful-marker) !important;
-  filter: hue-rotate(180deg);
-}
-body.bt-colorful-indentation-lines :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol)::before {
-  border-right-color: var(--list-colorful-marker) !important;
-  filter: hue-rotate(240deg);
-}
-body.bt-colorful-indentation-lines :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol)::before {
-  border-right-color: var(--list-colorful-marker) !important;
-  filter: hue-rotate(300deg);
-}
-
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-2 .cm-hmd-list-indent > .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-3 .cm-hmd-list-indent > .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-4 .cm-hmd-list-indent > .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-5 .cm-hmd-list-indent > .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-6 .cm-hmd-list-indent > .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-7 .cm-hmd-list-indent > .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-8 .cm-hmd-list-indent > .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-9 .cm-hmd-list-indent > .cm-indent::before {
-  border-color: var(--list-colorful-marker)
-}
-
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-3 .cm-hmd-list-indent > .cm-indent ~ .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-4 .cm-hmd-list-indent > .cm-indent ~ .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-5 .cm-hmd-list-indent > .cm-indent ~ .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-6 .cm-hmd-list-indent > .cm-indent ~ .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-7 .cm-hmd-list-indent > .cm-indent ~ .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-8 .cm-hmd-list-indent > .cm-indent ~ .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-9 .cm-hmd-list-indent > .cm-indent ~ .cm-indent::before  {
-  border-color: var(--list-colorful-marker);
-  filter: hue-rotate(60deg);
-}
-
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-4 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-5 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-6 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-7 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-8 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-9 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent::before {
-  border-color: var(--list-colorful-marker);
-  filter: hue-rotate(120deg);
-}
-
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-5 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-6 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-7 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-8 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-9 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before {
-  border-color: var(--list-colorful-marker);
-  filter: hue-rotate(180deg);
-}
-
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-6 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-7 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-8 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-9 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before {
-  border-color: var(--list-colorful-marker);
-  filter: hue-rotate(240deg);
-}
-
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-7 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-8 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
-body.bt-colorful-indentation-lines-editing .HyperMD-list-line-9 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before{
-  border-color: var(--list-colorful-marker);
-  filter: hue-rotate(300deg);
-}
-
-
-
-
-body.bt-connected-indent-hover li {
-  position: relative;
-}
-
-/* In-between items */
-body.bt-connected-indent-hover li > :is(ul, ol) > li:has(~ li:hover)::before,
-body.bt-connected-indent-hover :is(ul, ol):has(~ *:hover) > li::before {
-  content: "";
-  position: absolute;
-  background-color: var(--list-colorful-marker);
-  width: var(--bt-colorful-indentation-width-hover);
-  top: calc(var(--list-spacing-bt) * 0.075em - var(--font-size-list) * 0.6);
-  left: calc(-1.5 * var(--list-indent) - 1px);
-  bottom: calc(var(--list-spacing-bt) * 0.075em - var(--font-size-list) * 0.5);
-}
-
-/* Elbows items */
-body.bt-connected-indent-hover li > :is(ul, ol) > li:hover::before {
-  content: "";
-  position: absolute;
-  background-color: transparent;
-  top: calc(var(--list-spacing-bt) * 0.075em - var(--font-size-list) * 0.6);
-  left: calc(-1.5 * var(--list-indent) - 1px);
-  width: calc(1em + var(--size-4-4));
-  height: calc(var(--font-size-list) * 1.27);
-  border-bottom-left-radius: var(--radius-m);
-  border-bottom: var(--bt-colorful-indentation-width-hover) solid var(--list-colorful-marker);
-  border-left: var(--bt-colorful-indentation-width-hover) solid var(--list-colorful-marker);
-}
-
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li:has( ~ li:hover)::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > ul:has(+ ol) > li::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > ol:has(+ ul) > li::before {
-  filter: hue-rotate(60deg);
-}
-
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:has( ~ li:hover)::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > ul:has(+ ol) > li::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > ol:has(+ ul) > li::before {
-  filter: hue-rotate(120deg);
-}
-
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) >li:has( ~ li:hover)::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ul:has(+ ol) > li::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ol:has(+ ul) > li::before {
-  filter: hue-rotate(180deg);
-}
-
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) >li:has( ~ li:hover)::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ul:has(+ ol) > li::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ol:has(+ ul) > li::before {
-  filter: hue-rotate(240deg);
-}
-
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:has( ~ li:hover)::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ul:has(+ ol) > li::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ol:has(+ ul) > li::before {
-  filter: hue-rotate(300deg);
 }
