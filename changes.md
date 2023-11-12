@@ -1,5 +1,16 @@
 # 更新日志
 
+### 20231111
+
+1. 增加彩色列表层级线
+2. 增加Connected indent lines （鼠标悬浮），默认开启单色，提供多彩选项
+3. 整理style settings排列
+4. Iconize适配
+
+修复：
+1. 字体修复
+2. 删除冗余代码
+
 ### 20231107
 
 1. Style Settings 内容整理
