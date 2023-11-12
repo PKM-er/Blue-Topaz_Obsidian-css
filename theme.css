@@ -8,8 +8,8 @@ Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/
 
 */
 
-/*蓝色托帕石，适合Obsidian v1.2.8。uid [20231107] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.2.8, uid [20231107] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.2.8。uid [20231111] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.2.8, uid [20231111] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /*
 MIT License
@@ -1012,8 +1012,8 @@ settings:
     description: --mjx-inline-math-color
     opacity: true
     format: hex
-    default-light: '#0e0e0e'
-    default-dark: '#bdbdbd'
+    default-light: '#'
+    default-dark: '#'
   -
     id: mjx-math-color
     title: Color of mathematical expressions ($$x=0$$)
@@ -1022,8 +1022,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#0e0e0e'
-    default-dark: '#bdbdbd'
+    default-light: '#'
+    default-dark: '#'
   -
     id: background-leaf-resize-handle
     title: Color of leaf resize handle
@@ -1032,8 +1032,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#e9e9e9'
-    default-dark: '#000000'
+    default-light: '#'
+    default-dark: '#'
   -
     id: mjx-inline-math-color
     title: Color of mathematical expressions (inline $x=0$)
@@ -1042,8 +1042,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#0e0e0e'
-    default-dark: '#bdbdbd'
+    default-light: '#'
+    default-dark: '#'
   -
     id: search-result-file-matched-bg
     title: File search result highlight color
@@ -2721,29 +2721,6 @@ settings:
       -
         label: Using Ob Settings
         value: list-no-border
-      -
-        label: Rainbow Outline
-        value: rainbow-lines-reading
-  -
-    id: rainbow-lines-head
-    title:  2.3.2.1 Rainbow outline style settings
-    title.zh: 2.3.2.1 彩虹列表设置
-    description: Settings for "Rainbow Outlines" option
-    type: heading
-    level: 4
-    collapsed: true
-  -
-    id: rainbow-ordered-list
-    title:  Enable rainbow outline list order
-    title.zh: 开启彩虹列表序号
-    type: class-toggle
-    default: false
-  -
-    id: rainbow-checkbox
-    title:  Enable rainbow outline checkbox
-    title.zh: 开启彩虹任务选择框
-    type: class-toggle
-    default: false
   -
     id: indentation-line-styles
     title: 2.3.2.3 Indentation lines
@@ -2758,41 +2735,109 @@ settings:
     type: variable-text
     default: 1px
   -
+    id: indentation-guide-color
+    title: Inactive line color (Editing)
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: 'rgba(0, 0, 0, 0.06)'
+    default-dark: 'rgba(255, 255, 255, 0.08)'
+  -
+    id: indentation-guide-color-active
+    title: Active line color (Editing)
+    type: variable-themed-color
+    format: rgb
+    opacity: true
+    default-light: 'rgba(0, 0, 0, 0.14)'
+    default-dark: 'rgba(255, 255, 255, 0.17)'
+  -
+    id: bt-colorful-indentation-lines-editing
+    title: Toggle colorful indentation lines (Editing)
+    title.zh: 启用彩色层级线 （编辑）
+    type: class-toggle
+    default: false
+  -
+    id: indentation-guide-width
+    title: Indent line width (Editing)
+    type: variable-number
+    default: 1
+    format: px
+  -
+    id: bt-connected-indent-hover
+    title: Toggle connected indent (Hovering)
+    title.zh: 启用Connected indent lines（鼠标悬浮）
+    description: Inspired from the CSS snippet by KillyMXI (https://gist.github.com/KillyMXI/cbef8edff6dd55d9e6ea4df66567e9b1)
+    type: class-toggle
+    default: true
+  -
+    id: bt-colorful-connected-indent-hover
+    title: Toggle colorful indentation lines (Hovering)
+    title.zh: 启用彩色Connected indent lines（鼠标悬浮）
+    type: class-toggle
+    default: false
+  -
+    id: bt-colorful-indentation-width-hover
+    title: Width of colorful indentation lines (Hovering)
+    title.zh: 彩色层级线宽度 （Hovering）
+    type: variable-text
+    default: 3px
+  -
     id: bt-list-indentation-margin-left-reading
     title: Move to right by ?px (Reading)
     title.zh: 向右移动 ?px (Reading)
     type: variable-text
     default: 1px
   -
-    id: indentation-guides-lines-settings
-    title: 2.3.2.3.1 Color settings of default indentation line
-    title.zh: 2.3.2.3.1 默认层级线颜色设置
-    description: Settings for default "indentation guides" option
-    type: heading
-    level: 5
-    collapsed: true
+    id: bt-colorful-indentation-lines
+    title: Toggle colorful indentation lines (Reading)
+    title.zh: 启用彩色层级线 （阅读）
+    type: class-toggle
+    default: false
   -
-        id: indentation-guide-color
-        title: Inactive Line Color
-        type: variable-themed-color
-        format: rgb
-        opacity: true
-        default-light: 'rgba(0, 0, 0, 0.06)'
-        default-dark: 'rgba(255, 255, 255, 0.08)'
+    id: bt-colorful-indentation-line-options
+    title: Line styles (Reading)
+    title.zh: 层级线样式 （阅读）
+    type: class-select
+    allowEmpty: false
+    default: default-indentation-line
+    options:
+      -
+        label: Default
+        value: default-indentation-line
+      -
+        label: Gradient
+        value: bt-indentation-line-gradient
+      -
+        label: Image
+        value: bt-indentation-line-image
   -
-        id: indentation-guide-color-active
-        title: Active Line Color
-        type: variable-themed-color
-        format: rgb
-        opacity: true
-        default-light: 'rgba(0, 0, 0, 0.14)'
-        default-dark: 'rgba(255, 255, 255, 0.17)'
+    id: bt-indentation-gradient-color-1
+    title: Indentation gradient color 1
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#'
+    default-dark: '#'
   -
-        id: indentation-guide-width
-        title: Line width
-        type: variable-number
-        default: 1
-        format: px
+    id: bt-indentation-gradient-color-2
+    title: Indentation gradient color 2
+    type: variable-themed-color
+    format: hex
+    opacity: true
+    default-light: '#'
+    default-dark: '#'
+  -
+    id: bt-colorful-indentation-width
+    title: Width of colorful indentation lines (Reading)
+    title.zh: 彩色层级线宽度 （阅读）
+    type: variable-text
+    default: 1px
+  -
+    id: bt-indentation-line-image
+    title: Add an image as indentation lines (Reading)
+    title.zh: 层级线背景图片 （阅读）
+    type: variable-text
+    default: url("https://")
   -
     id: folder-style-change-options-folder
     title: 2.3.3 Folder
@@ -5384,21 +5429,21 @@ body {
   /*font family*/
   --font-default: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
   --font-family-list: ;/*列表字体*/
-  --font-text-theme: Bookerly, 'Inter', "Segoe UI","霞鹜文楷 GB", "LXGW WenKai", "Segoe UI Emoji"; /*主体（包括列表）字体，除代码框等少数部分*/
+  --font-text-theme: Bookerly, 'Inter', "Segoe UI", "霞鹜文楷 GB", "LXGW WenKai", "Microsoft YaHei"; /*主体（包括列表）字体，除代码框等少数部分*/
   --h1-font: var(--font-default);
   --h2-font: var(--font-default);
   --h3-font: var(--font-default);
   --h4-font: var(--font-default);
   --font-family-title: ;/*文件抬头标题*/
   --font-family-folder-file-title: Arlrdbd, "Source Han Sans", "Noto Sans CJK", "Source Sans Pro", "Segoe UI Emoji", sans-serif;/*左侧边栏文件、文件夹字体*/
-  --font-monospace-theme: 'JetBrains Mono',Consolas, Monaco, "等距更纱黑体 SC", "Source Han Mono", "Microsoft Yahei Mono", "Segoe UI Emoji", "Microsoft YaHei", "Source Code Pro", monospace;
+  --font-monospace-theme: 'JetBrains Mono', Consolas, Monaco, "等距更纱黑体 SC", "Source Han Mono", "Microsoft Yahei Mono", "Segoe UI Emoji", "Microsoft YaHei", "Source Code Pro", monospace;
   --font-family-inline-code: var(--font-monospace-override), var(--font-monospace-theme);
-  --font-family-tag: Bookerly,'Inter', "Segoe UI", "Microsoft YaHei", STzhongsong, STSong, "Segoe UI Emoji", Serif;
+  --font-family-tag: Bookerly, 'Inter', "Segoe UI", "Microsoft YaHei", STzhongsong, STSong, "Segoe UI Emoji", Serif;
   --font-family-vault: "Lucida Handwriting", "Segoe UI Emoji";/*左侧库名字体*/
   --font-family-special-tag: "Lucida Handwriting", "Segoe UI Emoji";
   --mermaid-font-family: Segoe UI, "Microsoft YaHei", "Segoe UI Emoji", "trebuchet ms", verdana, Arial, cursive;
   --font-family-better-footnote: Arlrdbd, "Source Han Sans", "Segoe UI Emoji";
-  --font-family-strong: Bookerly,'Inter', "Segoe UI", "LXGW WenKai Screen", "LXGW WenKai Screen R", "霞鹜文楷 GB", "LXGW WenKai", "Segoe UI Emoji", var(--font-interface);
+  --font-family-strong: Bookerly, 'Inter', "Segoe UI", "LXGW WenKai Screen", "LXGW WenKai Screen R", "霞鹜文楷 GB", "LXGW WenKai", "Segoe UI Emoji", var(--font-interface);
   --font-family-em: ;
   --font-loading-text: var(--font-monospace-theme);
 
@@ -5603,6 +5648,8 @@ body {
   --inline-title-bg-color: color-mix(in srgb, var(--h1-color) 15%, transparent);
 
   --ribbon-background: var(--background-secondary-alt);--ribbon-background-collapsed: var(--background-secondary-alt);
+
+  --bt-colorful-indentation-width-hover: 3px;
 }
 
 
@@ -5619,7 +5666,7 @@ body.all-dark-pdf .print.theme-light,
   --background-modifier-error-rgb: 155, 67, 67;
   --text-accent: var(--color-accent);
   --text-accent-hover: var(--color-accent-2);
-  --text-normal: #bdbdbd;
+  --text-normal: #c6c6c6;
   --text-highlight: var(--text-normal);
   --background-modifier-box-shadow: rgba(228, 228, 228, 0.08);
 
@@ -6572,7 +6619,7 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --green-1: #79c142;
   --list-ul-hover: #e28915de;
   --list-ol-block-color: #878787b4;
-  --list-ol-number-color: #bdbdbd;
+  --list-ol-number-color: #c6c6c6;
   --list-ol-hover: #2c7bd6;
   --tag-text: #e4e4e4;
   --stag1: #f08383;
@@ -8237,7 +8284,6 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
 
   --background-modifier-border: #565656;/*一些线条颜色*/
 
-  --text-normal: #bdbdbd;/*一般文字颜色*/
   --text-muted: #8a8a8a;/*muted 文字颜色*/
   --text-faint: #797979;/*faint 文字颜色*/
   --text-folder-file: #b3b3b3;/*文件夹、文件 文字颜色*/
@@ -8550,7 +8596,6 @@ body.color-scheme-options-autumn-topaz.theme-dark {
   --background-secondary: var(--background-secondary-bg-4-bt,#222222);
   --background-secondary-alt: var(--background-secondary-alt-bg-4-bt,#444444);
 
-  --text-normal: #bdbdbd; /*一般文字颜色*/
   --text-muted: #8a8a8a;  /*muted 文字颜色*/
   --text-faint: #797979;  /*faint 文字颜色*/
   --text-folder-file: #b3b3b3; /*文件夹、文件 文字颜色*/
@@ -12906,7 +12951,6 @@ span.cm-def {
   color: var(--code-atom);
 }
 
-
 .cm-s-obsidian .cm-hmd-frontmatter.cm-meta,
 .cm-s-obsidian .cm-templater-command.cm-meta,
 .cm-s-obsidian .cm-math.cm-meta,
@@ -13000,7 +13044,6 @@ span.token.directive-hash {
   z-index: -1;
 }
 
-
 pre code[class*="language-"] {
   padding: 1em 0.5em;
 }
@@ -13016,7 +13059,6 @@ code[class*="language-"] ::selection {
 .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line span.live-preview-codeblock-line-nums {
   margin-left: -1.5em;
 }
-
 
 .code-line-number .HyperMD-codeblock-begin {
   counter-reset: line-numbers;
@@ -13118,7 +13160,6 @@ code[class*="language-"] ::selection {
 }
 
 
-/* ================================== */
 /*inline code*/
 .cm-s-obsidian.mod-cm6 .HyperMD-codeblock span.cm-inline-code {
   display: inline-block;
@@ -13231,23 +13272,13 @@ ul ul ul ol ul {
 body.custom-ordered-list ol {
   list-style: var(--list-ol-marker-1);
 }
-body.custom-ordered-list ul ol,
-body.custom-ordered-list ol ol {
+body.custom-ordered-list :is(ul, ol) ol {
   list-style: var(--list-ol-marker-2);
 }
-body.custom-ordered-list ul ol ol,
-body.custom-ordered-list ul ul ol,
-body.custom-ordered-list ol ol ol,
-body.custom-ordered-list ol ul ol {
+body.custom-ordered-list :is(ul, ol) :is(ul, ol) ol {
   list-style: var(--list-ol-marker-3);
 }
-body.custom-ordered-list ul ul ul ol,
-body.custom-ordered-list ul ul ol ol,
-body.custom-ordered-list ul ol ul ol,
-body.custom-ordered-list ul ol ol ol,
-body.custom-ordered-list ol ol ol ol,
-body.custom-ordered-list ol ol ul ol,
-body.custom-ordered-list ol ul ol ol {
+body.custom-ordered-list :is(ul, ol) :is(ul, ol) :is(ul, ol) ol {
   list-style: var(--list-ol-marker-4);
 }
 
@@ -13283,411 +13314,6 @@ body.list-no-border ol>li {
 }
 
 
-/********彩虹大纲线片段********/
-/* RAINBOW INDENT COLORS from https://gist.github.com/GitMurf/5122c0c8405ffa36a03049d9f4434bf4 */
-:root {
-  --list-padding: 24px;
-  --accent-1-rgb: 56,85,139;
-  --accent-2-rgb: 95,56,139;
-  --accent-3-rgb: 139,56,132;
-  --accent-4-rgb: 56,139,56;
-  --accent-5-rgb: 224,142,19;
-  --accent-6-rgb: 211,103,103;
-  --accent-7-rgb: 0,171,132;
-  --accent-8-rgb: 0,163,224;
-}
-
-
-body.rainbow-lines-reading :is(ol,ul) :is(ol,ul) {
-  position: relative;
-}
-
-body.rainbow-lines-reading :is(ol,ul) :is(ol,ul)::before{
-  content: '';
-  border-right: 1.5px solid var(--background-modifier-border);
-  position: absolute;
-  left: -1.1em;
-  height: 100%;
-}
-
-body.rainbow-lines-reading .kanban :is(ol,ul) ul::before {
-  display: none;
-}
-
-body.rainbow-lines-reading ul>li:not(.task-list-item) {
-  border-left: none !important;
-}
-
-body.rainbow-lines-reading ol>li {
-  border-left: none !important;
-}
-
-body.rainbow-lines-reading ol,
-body.rainbow-lines-reading ol ol,
-body.rainbow-lines-reading ol ol ol,
-body.rainbow-lines-reading ol ul ol,
-body.rainbow-lines-reading ol ol ol ol,
-body.rainbow-lines-reading ol ol ul ol,
-body.rainbow-lines-reading ol ul ol ol {
-  list-style: decimal;
-}
-
-body.rainbow-lines-reading ol>li::marker {
-  font-weight: normal;
-  color: var(--text-normal);
-}
-
-
-body.rainbow-ordered-list .HyperMD-list-line-1 .cm-formatting-list {
-  color: rgb(var(--accent-1-rgb)) !important;
-}
-body.rainbow-checkbox .HyperMD-list-line-1 .cm-formatting-task {
-  color: rgb(var(--accent-1-rgb)) !important;
-}
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-1 .task-list-item-checkbox[data-task="x"]:checked {
-  background-color: rgba(var(--accent-1-rgb),0.7);
-}
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-1 .task-list-item-checkbox {
-  border-color: rgba(var(--accent-1-rgb),0.7);
-}
-body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(8n+1)::before {
-  border-color: rgba(var(--accent-1-rgb),0.7);
-}
-body.rainbow-lines .mod-cm6 .HyperMD-list-line-1>span.list-bullet {
-  color: rgb(var(--accent-1-rgb)) ;
-}
-
-body.rainbow-ordered-list .HyperMD-list-line-2 .cm-formatting-list {
-  color: rgb(var(--accent-2-rgb))!important;
-}
-body.rainbow-checkbox .HyperMD-list-line-2 .cm-formatting-task {
-  color: rgb(var(--accent-2-rgb))!important;
-}
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-2 .task-list-item-checkbox[data-task="x"]:checked {
-  background-color: rgba(var(--accent-2-rgb),0.7);
-}
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-2 .task-list-item-checkbox {
-  border-color: rgba(var(--accent-2-rgb),0.7);
-}
-body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(8n+2)::before {
-  border-color: rgba(var(--accent-2-rgb),0.7);
-}
-body.rainbow-lines .mod-cm6 .HyperMD-list-line-2>span.list-bullet {
-  color: rgb(var(--accent-2-rgb));
-}
-
-body.rainbow-ordered-list .HyperMD-list-line-3 .cm-formatting-list {
-  color: rgb(var(--accent-3-rgb))!important;
-}
-body.rainbow-checkbox .HyperMD-list-line-3 .cm-formatting-task {
-  color: rgb(var(--accent-3-rgb))!important;
-}
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-3 .task-list-item-checkbox[data-task="x"]:checked {
-  background-color: rgba(var(--accent-3-rgb),0.7);
-}
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-3 .task-list-item-checkbox {
-  border-color: rgba(var(--accent-3-rgb),0.7);
-}
-body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(8n+3)::before {
-  border-color: rgba(var(--accent-3-rgb),0.7);
-}
-body.rainbow-lines .mod-cm6 .HyperMD-list-line-3>span.list-bullet {
-  color: rgb(var(--accent-3-rgb));
-}
-
-body.rainbow-ordered-list .HyperMD-list-line-4 .cm-formatting-list {
-  color: rgb(var(--accent-4-rgb))!important;
-}
-body.rainbow-checkbox .HyperMD-list-line-4 .cm-formatting-task {
-  color: rgb(var(--accent-4-rgb))!important;
-}
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-4 .task-list-item-checkbox[data-task="x"]:checked {
-  background-color: rgba(var(--accent-4-rgb),0.7);
-}
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-4 .task-list-item-checkbox {
-  border-color: rgba(var(--accent-4-rgb),0.7);
-}
-body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(8n+4)::before {
-  border-color: rgba(var(--accent-4-rgb),0.7);
-}
-body.rainbow-lines .mod-cm6 .HyperMD-list-line-4>span.list-bullet {
-  color: rgb(var(--accent-4-rgb));
-}
-
-body.rainbow-ordered-list .HyperMD-list-line-5 .cm-formatting-list {
-  color: rgb(var(--accent-5-rgb))!important;
-}
-body.rainbow-checkbox .HyperMD-list-line-5 .cm-formatting-task {
-  color: rgb(var(--accent-5-rgb))!important;
-}
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-5 .task-list-item-checkbox[data-task="x"]:checked {
-  background-color:  rgba(var(--accent-5-rgb),0.7);
-}
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-5 .task-list-item-checkbox {
-  border-color: rgba(var(--accent-5-rgb),0.7);
-}
-body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(8n+5)::before {
-  border-color: rgba(var(--accent-5-rgb),0.7);
-}
-body.rainbow-lines .mod-cm6 .HyperMD-list-line-5>span.list-bullet {
-  color: rgb(var(--accent-5-rgb));
-}
-
-body.rainbow-ordered-list .HyperMD-list-line-6 .cm-formatting-list {
-  color: rgb(var(--accent-6-rgb))!important;
-}
-body.rainbow-checkbox .HyperMD-list-line-6 .cm-formatting-task {
-  color: rgb(var(--accent-6-rgb))!important;
-}
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-6 .task-list-item-checkbox[data-task="x"]:checked {
-  background-color: rgba(var(--accent-6-rgb),0.7);
-}
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-6 .task-list-item-checkbox {
-  border-color: rgba(var(--accent-6-rgb),0.7);
-}
-body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(8n+6)::before {
-  border-color: rgba(var(--accent-6-rgb),0.7);
-}
-body.rainbow-lines .mod-cm6 .HyperMD-list-line-6>span.list-bullet {
-  color: rgb(var(--accent-6-rgb));
-}
-
-body.rainbow-ordered-list .HyperMD-list-line-7 .cm-formatting-list {
-  color: rgb(var(--accent-7-rgb))!important;
-}
-body.rainbow-checkbox .HyperMD-list-line-7 .cm-formatting-task {
-  color: rgb(var(--accent-7-rgb))!important;
-}
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-7 .task-list-item-checkbox[data-task="x"]:checked {
-  background-color: rgba(var(--accent-7-rgb),0.7);
-}
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-7 .task-list-item-checkbox {
-  border-color: rgba(var(--accent-7-rgb),0.7);
-}
-body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(8n+7)::before {
-  border-color: rgba(var(--accent-7-rgb),0.7);
-}
-body.rainbow-lines .mod-cm6 .HyperMD-list-line-7>span.list-bullet {
-  color: rgb(var(--accent-7-rgb));
-}
-
-body.rainbow-ordered-list .HyperMD-list-line-8 .cm-formatting-list {
-  color: rgb(var(--accent-8-rgb))!important;
-}
-body.rainbow-checkbox .HyperMD-list-line-8 .cm-formatting-task {
-  color: rgb(var(--accent-8-rgb))!important;
-}
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-8 .task-list-item-checkbox[data-task="x"]:checked {
-  background-color: rgba(var(--accent-8-rgb),0.7);
-}
-body.rainbow-checkbox .mod-cm6 .HyperMD-list-line-8 .task-list-item-checkbox {
-  border-color: rgba(var(--accent-8-rgb),0.7);
-}
-body.rainbow-lines .cm-hmd-list-indent > span.cm-tab:nth-child(8n)::before {
-  border-color: rgba(var(--accent-8-rgb),0.7);
-}
-body.rainbow-lines .mod-cm6 .HyperMD-list-line-7>span.list-bullet {
-  color: rgb(var(--accent-8-rgb));
-}
-
-body.rainbow-lines .CodeMirror-foldgutter-open.CodeMirror-guttermarker-subtle::after {
-  color: rgb(var(--accent-1-rgb));
-}
-
-/*预览模式
-/*无序列表 任务框*/
-body.rainbow-lines-reading ul li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-1-rgb),0.7);
-}
-body.rainbow-lines-reading ul ul li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-2-rgb),0.7);
-}
-body.rainbow-lines-reading ul ul ul li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-3-rgb),0.7);
-}
-body.rainbow-lines-reading ul ul ul ul li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-4-rgb),0.7);
-}
-body.rainbow-lines-reading ul ul ul ul ul  li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-5-rgb),0.7);
-}
-body.rainbow-checkbox  ul ul ul ul ul ul li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-6-rgb),0.7);
-}
-body.rainbow-checkbox  ul ul ul ul ul ul ul li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-7-rgb),0.7);
-}
-body.rainbow-checkbox  ul ul ul ul ul ul ul ul li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-7-rgb),0.7);
-}
-
-/*无序列表 大纲线*/
-body.rainbow-lines-reading ul ul::before {
-  border-color: rgba(var(--accent-1-rgb),0.7) !important;
-}
-body.rainbow-lines-reading li ul ul::before {
-  border-color: rgba(var(--accent-2-rgb),0.7) !important;
-}
-body.rainbow-lines-reading li ul ul ul::before {
-  border-color: rgba(var(--accent-3-rgb),0.7) !important;
-}
-body.rainbow-lines-reading li ul ul ul ul::before {
-  border-color: rgba(var(--accent-4-rgb),0.7) !important;
-}
-body.rainbow-lines-reading li ul ul ul ul ul::before {
-  border-color: rgba(var(--accent-5-rgb),0.7) !important;
-}
-body.rainbow-lines-reading li ul ul ul ul ul ul::before {
-  border-color: rgba(var(--accent-6-rgb),0.7) !important;
-}
-body.rainbow-lines-reading li ul ul ul ul ul ul ul::before {
-  border-color: rgba(var(--accent-7-rgb),0.7) !important;
-}
-body.rainbow-lines-reading li ul ul ul ul ul ul ul ul::before {
-  border-color: rgba(var(--accent-8-rgb),0.7) !important;
-}
-body.rainbow-lines-reading li ul ul ul ul ul ul ul ul ul::before {
-  border-color: rgba(var(--accent-1-rgb),0.7) !important;
-}
-
-/*任务有序列表 大纲线*/
-body.rainbow-lines-reading ol ol::before {
-  border-color: rgba(var(--accent-1-rgb),0.7) !important;
-}
-body.rainbow-lines-reading li ol ol::before {
-  border-color: rgba(var(--accent-2-rgb),0.7) !important;
-}
-body.rainbow-lines-reading li ol ol ol::before {
-  border-color: rgba(var(--accent-3-rgb),0.7) !important;
-}
-body.rainbow-lines-reading li ol ol ol ol::before {
-  border-color: rgba(var(--accent-4-rgb),0.7) !important;
-}
-body.rainbow-lines-reading li ol ol ol ol ol::before {
-  border-color: rgba(var(--accent-5-rgb),0.7) !important;
-}
-body.rainbow-lines-reading li ol ol ol ol ol ol::before {
-  border-color: rgba(var(--accent-6-rgb),0.7) !important;
-}
-body.rainbow-lines-reading li ol ol ol ol ol ol ol::before {
-  border-color: rgba(var(--accent-7-rgb),0.7) !important;
-}
-body.rainbow-lines-reading li ol ol ol ol ol ol ol ol::before {
-  border-color: rgba(var(--accent-8-rgb),0.7) !important;
-}
-body.rainbow-lines-reading li ol ol ol ol ol ol ol ol::before {
-  border-color: rgba(var(--accent-1-rgb),0.7) !important;
-}
-
-/*任务有序列表 选择框*/
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li[data-task="x"] .task-list-item-checkbox:checked {
-  background-color: rgb(var(--accent-1-rgb),0.7);
-}
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li[data-task="x"] .task-list-item-checkbox:checked {
-  background-color: rgb(var(--accent-2-rgb),0.7)!important;
-}
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li[data-task="x"] .task-list-item-checkbox:checked {
-  background-color: rgb(var(--accent-3-rgb),0.7)!important;
-}
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li[data-task="x"] .task-list-item-checkbox:checked {
-  background-color: rgb(var(--accent-4-rgb),0.7)!important;
-}
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li li[data-task="x"] .task-list-item-checkbox:checked {
-  background-color: rgb(var(--accent-5-rgb),0.7)!important;
-}
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li li li[data-task="x"] .task-list-item-checkbox:checked {
-  background-color: rgb(var(--accent-6-rgb),0.7)!important;
-}
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li li li li[data-task="x"] .task-list-item-checkbox:checked {
-  background-color: rgb(var(--accent-7-rgb),0.7)!important;
-}
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li li li li li[data-task="x"] .task-list-item-checkbox:checked {
-  background-color: rgb(var(--accent-8-rgb),0.7)!important;
-}
-
-/*任务有序列表 选择框未选择*/
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-1-rgb),0.7) !important;
-}
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-2-rgb),0.7) !important;
-}
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-3-rgb),0.7) !important;
-}
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-4-rgb),0.7) !important;
-}
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-5-rgb),0.7) !important;
-}
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li li li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-6-rgb),0.7) !important;
-}
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li li li li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-7-rgb),0.7) !important;
-}
-body.rainbow-checkbox :is(.markdown-preview-view,.markdown-rendered) li li li li li li li li .task-list-item-checkbox {
-  border-color: rgba(var(--accent-8-rgb),0.7) !important;
-}
-
-body.rainbow-lines-reading :is(.markdown-preview-view,.markdown-rendered) li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
-  color: rgb(var(--accent-1-rgb));
-}
-body.rainbow-lines-reading :is(.markdown-preview-view,.markdown-rendered) li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
-  color: rgb(var(--accent-2-rgb));
-}
-body.rainbow-lines-reading :is(.markdown-preview-view,.markdown-rendered) li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
-  color: rgb(var(--accent-3-rgb));
-}
-body.rainbow-lines-reading :is(.markdown-preview-view,.markdown-rendered) li li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
-  color: rgb(var(--accent-4-rgb));
-}
-body.rainbow-lines-reading :is(.markdown-preview-view,.markdown-rendered) li li li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
-  color: rgb(var(--accent-5-rgb));
-}
-body.rainbow-lines-reading :is(.markdown-preview-view,.markdown-rendered) li li li li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
-  color: rgb(var(--accent-6-rgb));
-}
-body.rainbow-lines-reading :is(.markdown-preview-view,.markdown-rendered) li li li li li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
-  color: rgb(var(--accent-7-rgb));
-}
-body.rainbow-lines-reading :is(.markdown-preview-view,.markdown-rendered) li li li li li li li li .list-collapse-indicator.collapse-indicator.collapse-icon::before {
-  color: rgb(var(--accent-8-rgb));
-}
-
-body.rainbow-ordered-list :is(.markdown-preview-view,.markdown-rendered) ul>li::marker,
-body.rainbow-ordered-list :is(.markdown-preview-view,.markdown-rendered) ol>li::marker {
-  color: rgb(var(--accent-1-rgb));
-}
-body.rainbow-ordered-list :is(.markdown-preview-view,.markdown-rendered) ul>li ul>li::marker,
-body.rainbow-ordered-list :is(.markdown-preview-view,.markdown-rendered) ol>li ol>li::marker {
-  color: rgb(var(--accent-2-rgb));
-}
-body.rainbow-ordered-list :is(.markdown-preview-view,.markdown-rendered) ul>li ul>li ul>li::marker,
-body.rainbow-ordered-list :is(.markdown-preview-view,.markdown-rendered) ol>li ol>li ol>li::marker {
-  color:  rgb(var(--accent-3-rgb));
-}
-body.rainbow-ordered-list :is(.markdown-preview-view,.markdown-rendered) ul>li ul>li ul>li ul>li::marker,
-body.rainbow-ordered-list :is(.markdown-preview-view,.markdown-rendered) ol>li ol>li ol>li ol>li::marker {
-  color: rgb(var(--accent-4-rgb));
-}
-body.rainbow-ordered-list :is(.markdown-preview-view,.markdown-rendered) ul>li ul>li ul>li ul>li ul>li::marker,
-body.rainbow-ordered-list :is(.markdown-preview-view,.markdown-rendered) ol>li ol>li ol>li ol>li ol>li::marker {
-  color: rgb(var(--accent-5-rgb));
-}
-body.rainbow-ordered-list :is(.markdown-preview-view,.markdown-rendered) ul>li ul>li ul>li ul>li ul>li ul>li::marker,
-body.rainbow-ordered-list :is(.markdown-preview-view,.markdown-rendered) ol>li ol>li ol>li ol>li ol>li ol>li::marker {
-  color: rgb(var(--accent-6-rgb));
-}
-body.rainbow-ordered-list :is(.markdown-preview-view,.markdown-rendered) ul>li ul>li ul>li ul>li ul>li ul>li ul>li::marker,
-body.rainbow-ordered-list :is(.markdown-preview-view,.markdown-rendered) ol>li ol>li ol>li ol>li ol>li ol>li ol>li::marker {
-  color: rgb(var(--accent-7-rgb));
-}
-body.rainbow-ordered-list :is(.markdown-preview-view,.markdown-rendered) ul>li ul>li ul>li ul>li ul>li ul>li ul>li ul>li::marker,
-body.rainbow-ordered-list :is(.markdown-preview-view,.markdown-rendered) ol>li ol>li ol>li ol>li ol>li ol>li ol>li ol>li::marker {
-  color: rgb(var(--accent-8-rgb));
-}
 
 
 /*===========*/
@@ -14816,10 +14442,7 @@ body.whole-code-wrap pre[class*='language-'] {
   word-break: normal;
 }
 
-body.nowrap-edit-codebox .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line {
-  white-space: nowrap;
-  overflow: auto;
-}
+
 
 /* Inline code */
 :not(pre)>code[class*='language-'] {
@@ -21744,6 +21367,10 @@ body.remove-arrow:not(.default-icons) .tree-item.nav-folder.mod-root>.tree-item-
   margin-left: -10px;
 }
 
+body.remove-arrow .nav-folder-title .iconize-icon {
+  margin: 0 22px 0 -18px !important;
+}
+
 body:not(.remove-file-icons) [data-type="starred"] .nav-file-icon .svg-icon {
   padding: 4px 0 0;
 }
@@ -25827,9 +25454,6 @@ body.border-callout-style .callout .callout-content {
 .callout-title {
   background-color: rgba(var(--callout-color), 0.15);
 }
-.callout-title-inner {
-  flex: 1 1 auto;
-}
 .callout {
   padding: 0;
   border-left: 4px solid rgba(var(--callout-color),0.15);
@@ -25847,7 +25471,7 @@ body.admonition-bg-color-same .callout-title {
   background-color:unset;
 }
 .callout-title {
-  padding: 12px 0 12px 12px;
+  padding: 8px 0 8px 12px;
   color: unset;
 }
 .admonition-title .admonition-title-icon {
@@ -27535,7 +27159,6 @@ body.custom-unordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.Hype
 }
 
 
-
 .markdown-source-view.mod-cm6 .cm-indent::before {
   margin-left: var(--bt-list-indentation-margin-left-editing, 0px);
 }
@@ -27865,574 +27488,79 @@ body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.Hype
   color: var(--list-colorful-marker);
 }
 
-body.colorful-ordered-list ol ol li::marker,
-body.colorful-ordered-list ul ol li::marker {
+body.colorful-ordered-list :is(ul, ol) ol li::marker {
   color: hsl(calc(var(--accent-h) + 45),var(--accent-s),var(--accent-l));
 }
-body.colorful-ordered-list ol ol li::before,
-body.colorful-ordered-list ul ol li::before,
+body.colorful-ordered-list :is(ul, ol) ol li::before,
 body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
 body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
   color: var(--list-colorful-marker);
   filter: hue-rotate(45deg);
 }
 
-body.colorful-ordered-list ol ol ol li::marker,
-body.colorful-ordered-list ol ul ol li::marker,
-body.colorful-ordered-list ul ul ol li::marker,
-body.colorful-ordered-list ul ol ol li::marker {
+body.colorful-ordered-list :is(ul, ol) :is(ul, ol) ol li::marker {
   color: hsl(calc(var(--accent-h) + 90),var(--accent-s),calc(var(--accent-l) * 0.95));
 }
-body.colorful-ordered-list ol ol ol li::before,
-body.colorful-ordered-list ol ul ol li::before,
-body.colorful-ordered-list ul ul ol li::before,
-body.colorful-ordered-list ul ol ol li::before,
+body.colorful-ordered-list :is(ul, ol) :is(ul, ol) ol li::before,
 body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
 body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
   color: var(--list-colorful-marker);
   filter: hue-rotate(90deg);
 }
 
-body.colorful-ordered-list ol ol ol ol li::marker,
-body.colorful-ordered-list ol ol ul ol li::marker,
-body.colorful-ordered-list ol ul ol ol li::marker,
-body.colorful-ordered-list ul ol ol ol li::marker,
-body.colorful-ordered-list ol ul ul ol li::marker,
-body.colorful-ordered-list ul ol ul ol li::marker,
-body.colorful-ordered-list ul ul ol ol li::marker,
-body.colorful-ordered-list ul ul ul ol li::marker {
+body.colorful-ordered-list :is(ul, ol) :is(ul, ol) :is(ul, ol) ol li::marker {
   color: hsl(calc(var(--accent-h) + 135),var(--accent-s),calc(var(--accent-l) * 0.95));
 }
-body.colorful-ordered-list ol ol ol ol li::before,
-body.colorful-ordered-list ol ol ul ol li::before,
-body.colorful-ordered-list ol ul ol ol li::before,
-body.colorful-ordered-list ul ol ol ol li::before,
-body.colorful-ordered-list ol ul ul ol li::before,
-body.colorful-ordered-list ul ol ul ol li::before,
-body.colorful-ordered-list ul ul ol ol li::before,
-body.colorful-ordered-list ul ul ul ol li::before,
+body.colorful-ordered-list :is(ul, ol) :is(ul, ol) :is(ul, ol) ol li::before,
 body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-4.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
 body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-4.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
   color: var(--list-colorful-marker);
   filter: hue-rotate(135deg);
 }
 
-body.colorful-ordered-list ol ol ol ol ol li::marker,
-body.colorful-ordered-list ol ol ol ul ol li::marker,
-body.colorful-ordered-list ol ol ul ol ol li::marker,
-body.colorful-ordered-list ol ul ol ol ol li::marker,
-body.colorful-ordered-list ol ol ul ul ol li::marker,
-body.colorful-ordered-list ol ul ol ul ol li::marker,
-body.colorful-ordered-list ol ul ul ol ol li::marker,
-body.colorful-ordered-list ol ul ul ul ol li::marker,
-body.colorful-ordered-list ul ol ol ol ol li::marker,
-body.colorful-ordered-list ul ol ol ul ol li::marker,
-body.colorful-ordered-list ul ol ul ol ol li::marker,
-body.colorful-ordered-list ul ul ol ol ol li::marker,
-body.colorful-ordered-list ul ol ul ul ol li::marker,
-body.colorful-ordered-list ul ul ol ul ol li::marker,
-body.colorful-ordered-list ul ul ul ol ol li::marker,
-body.colorful-ordered-list ul ul ul ul ol li::marker {
+body.colorful-ordered-list :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) ol li::marker {
   color: hsl(calc(var(--accent-h) + 180),var(--accent-s),calc(var(--accent-l) * 0.95));
 }
-body.colorful-ordered-list ol ol ol ol ol li::before,
-body.colorful-ordered-list ol ol ol ul ol li::before,
-body.colorful-ordered-list ol ol ul ol ol li::before,
-body.colorful-ordered-list ol ul ol ol ol li::before,
-body.colorful-ordered-list ol ol ul ul ol li::before,
-body.colorful-ordered-list ol ul ol ul ol li::before,
-body.colorful-ordered-list ol ul ul ol ol li::before,
-body.colorful-ordered-list ol ul ul ul ol li::before,
-body.colorful-ordered-list ul ol ol ol ol li::before,
-body.colorful-ordered-list ul ol ol ul ol li::before,
-body.colorful-ordered-list ul ol ul ol ol li::before,
-body.colorful-ordered-list ul ul ol ol ol li::before,
-body.colorful-ordered-list ul ol ul ul ol li::before,
-body.colorful-ordered-list ul ul ol ul ol li::before,
-body.colorful-ordered-list ul ul ul ol ol li::before,
-body.colorful-ordered-list ul ul ul ul ol li::before,
+body.colorful-ordered-list :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) ol li::before,
 body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-5.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
 body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-5.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
   color: var(--list-colorful-marker);
   filter: hue-rotate(180deg);
 }
 
-body.colorful-ordered-list ol ol ol ol ol ol li::marker,
-body.colorful-ordered-list ol ol ol ol ul ol li::marker,
-body.colorful-ordered-list ol ol ol ul ol ol li::marker,
-body.colorful-ordered-list ol ol ul ol ol ol li::marker,
-body.colorful-ordered-list ol ol ol ul ul ol li::marker,
-body.colorful-ordered-list ol ol ul ol ul ol li::marker,
-body.colorful-ordered-list ol ol ul ul ol ol li::marker,
-body.colorful-ordered-list ol ol ul ul ul ol li::marker,
-body.colorful-ordered-list ol ul ol ol ol ol li::marker,
-body.colorful-ordered-list ol ul ol ol ul ol li::marker,
-body.colorful-ordered-list ol ul ol ul ol ol li::marker,
-body.colorful-ordered-list ol ul ul ol ol ol li::marker,
-body.colorful-ordered-list ol ul ol ul ul ol li::marker,
-body.colorful-ordered-list ol ul ul ol ul ol li::marker,
-body.colorful-ordered-list ol ul ul ul ol ol li::marker,
-body.colorful-ordered-list ol ul ul ul ul ol li::marker,
-body.colorful-ordered-list ul ol ol ol ol ol li::marker,
-body.colorful-ordered-list ul ol ol ol ul ol li::marker,
-body.colorful-ordered-list ul ol ol ul ol ol li::marker,
-body.colorful-ordered-list ul ol ul ol ol ol li::marker,
-body.colorful-ordered-list ul ol ol ul ul ol li::marker,
-body.colorful-ordered-list ul ol ul ol ul ol li::marker,
-body.colorful-ordered-list ul ol ul ul ol ol li::marker,
-body.colorful-ordered-list ul ol ul ul ul ol li::marker,
-body.colorful-ordered-list ul ul ol ol ol ol li::marker,
-body.colorful-ordered-list ul ul ol ol ul ol li::marker,
-body.colorful-ordered-list ul ul ol ul ol ol li::marker,
-body.colorful-ordered-list ul ul ul ol ol ol li::marker,
-body.colorful-ordered-list ul ul ol ul ul ol li::marker,
-body.colorful-ordered-list ul ul ul ol ul ol li::marker,
-body.colorful-ordered-list ul ul ul ul ol ol li::marker,
-body.colorful-ordered-list ul ul ul ul ul ol li::marker {
+body.colorful-ordered-list :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) ol li::marker {
   color: hsl(calc(var(--accent-h) + 225),var(--accent-s),calc(var(--accent-l) * 0.95));
 }
 
-body.colorful-ordered-list ol ol ol ol ol ol li::before,
-body.colorful-ordered-list ol ol ol ol ul ol li::before,
-body.colorful-ordered-list ol ol ol ul ol ol li::before,
-body.colorful-ordered-list ol ol ul ol ol ol li::before,
-body.colorful-ordered-list ol ol ol ul ul ol li::before,
-body.colorful-ordered-list ol ol ul ol ul ol li::before,
-body.colorful-ordered-list ol ol ul ul ol ol li::before,
-body.colorful-ordered-list ol ol ul ul ul ol li::before,
-body.colorful-ordered-list ol ul ol ol ol ol li::before,
-body.colorful-ordered-list ol ul ol ol ul ol li::before,
-body.colorful-ordered-list ol ul ol ul ol ol li::before,
-body.colorful-ordered-list ol ul ul ol ol ol li::before,
-body.colorful-ordered-list ol ul ol ul ul ol li::before,
-body.colorful-ordered-list ol ul ul ol ul ol li::before,
-body.colorful-ordered-list ol ul ul ul ol ol li::before,
-body.colorful-ordered-list ol ul ul ul ul ol li::before,
-body.colorful-ordered-list ul ol ol ol ol ol li::before,
-body.colorful-ordered-list ul ol ol ol ul ol li::before,
-body.colorful-ordered-list ul ol ol ul ol ol li::before,
-body.colorful-ordered-list ul ol ul ol ol ol li::before,
-body.colorful-ordered-list ul ol ol ul ul ol li::before,
-body.colorful-ordered-list ul ol ul ol ul ol li::before,
-body.colorful-ordered-list ul ol ul ul ol ol li::before,
-body.colorful-ordered-list ul ol ul ul ul ol li::before,
-body.colorful-ordered-list ul ul ol ol ol ol li::before,
-body.colorful-ordered-list ul ul ol ol ul ol li::before,
-body.colorful-ordered-list ul ul ol ul ol ol li::before,
-body.colorful-ordered-list ul ul ul ol ol ol li::before,
-body.colorful-ordered-list ul ul ol ul ul ol li::before,
-body.colorful-ordered-list ul ul ul ol ul ol li::before,
-body.colorful-ordered-list ul ul ul ul ol ol li::before,
-body.colorful-ordered-list ul ul ul ul ul ol li::before,
+body.colorful-ordered-list :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) ol li::before,
 body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-6.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
 body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-6.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
   color: var(--list-colorful-marker);
   filter: hue-rotate(225deg);
 }
 
-body.colorful-ordered-list ol ol ol ol ol ol ol li::marker,
-body.colorful-ordered-list ol ol ol ol ol ul ol li::marker,
-body.colorful-ordered-list ol ol ol ol ul ol ol li::marker,
-body.colorful-ordered-list ol ol ol ul ol ol ol li::marker,
-body.colorful-ordered-list ol ol ol ol ul ul ol li::marker,
-body.colorful-ordered-list ol ol ol ul ol ul ol li::marker,
-body.colorful-ordered-list ol ol ol ul ul ol ol li::marker,
-body.colorful-ordered-list ol ol ol ul ul ul ol li::marker,
-body.colorful-ordered-list ol ol ul ol ol ol ol li::marker,
-body.colorful-ordered-list ol ol ul ol ol ul ol li::marker,
-body.colorful-ordered-list ol ol ul ol ul ol ol li::marker,
-body.colorful-ordered-list ol ol ul ul ol ol ol li::marker,
-body.colorful-ordered-list ol ol ul ol ul ul ol li::marker,
-body.colorful-ordered-list ol ol ul ul ol ul ol li::marker,
-body.colorful-ordered-list ol ol ul ul ul ol ol li::marker,
-body.colorful-ordered-list ol ol ul ul ul ul ol li::marker,
-body.colorful-ordered-list ol ul ol ol ol ol ol li::marker,
-body.colorful-ordered-list ol ul ol ol ol ul ol li::marker,
-body.colorful-ordered-list ol ul ol ol ul ol ol li::marker,
-body.colorful-ordered-list ol ul ol ul ol ol ol li::marker,
-body.colorful-ordered-list ol ul ol ol ul ul ol li::marker,
-body.colorful-ordered-list ol ul ol ul ol ul ol li::marker,
-body.colorful-ordered-list ol ul ol ul ul ol ol li::marker,
-body.colorful-ordered-list ol ul ol ul ul ul ol li::marker,
-body.colorful-ordered-list ol ul ul ol ol ol ol li::marker,
-body.colorful-ordered-list ol ul ul ol ol ul ol li::marker,
-body.colorful-ordered-list ol ul ul ol ul ol ol li::marker,
-body.colorful-ordered-list ol ul ul ul ol ol ol li::marker,
-body.colorful-ordered-list ol ul ul ol ul ul ol li::marker,
-body.colorful-ordered-list ol ul ul ul ol ul ol li::marker,
-body.colorful-ordered-list ol ul ul ul ul ol ol li::marker,
-body.colorful-ordered-list ol ul ul ul ul ul ol li::marker,
-body.colorful-ordered-list ul ol ol ol ol ol ol li::marker,
-body.colorful-ordered-list ul ol ol ol ol ul ol li::marker,
-body.colorful-ordered-list ul ol ol ol ul ol ol li::marker,
-body.colorful-ordered-list ul ol ol ul ol ol ol li::marker,
-body.colorful-ordered-list ul ol ol ol ul ul ol li::marker,
-body.colorful-ordered-list ul ol ol ul ol ul ol li::marker,
-body.colorful-ordered-list ul ol ol ul ul ol ol li::marker,
-body.colorful-ordered-list ul ol ol ul ul ul ol li::marker,
-body.colorful-ordered-list ul ol ul ol ol ol ol li::marker,
-body.colorful-ordered-list ul ol ul ol ol ul ol li::marker,
-body.colorful-ordered-list ul ol ul ol ul ol ol li::marker,
-body.colorful-ordered-list ul ol ul ul ol ol ol li::marker,
-body.colorful-ordered-list ul ol ul ol ul ul ol li::marker,
-body.colorful-ordered-list ul ol ul ul ol ul ol li::marker,
-body.colorful-ordered-list ul ol ul ul ul ol ol li::marker,
-body.colorful-ordered-list ul ol ul ul ul ul ol li::marker,
-body.colorful-ordered-list ul ul ol ol ol ol ol li::marker,
-body.colorful-ordered-list ul ul ol ol ol ul ol li::marker,
-body.colorful-ordered-list ul ul ol ol ul ol ol li::marker,
-body.colorful-ordered-list ul ul ol ul ol ol ol li::marker,
-body.colorful-ordered-list ul ul ol ol ul ul ol li::marker,
-body.colorful-ordered-list ul ul ol ul ol ul ol li::marker,
-body.colorful-ordered-list ul ul ol ul ul ol ol li::marker,
-body.colorful-ordered-list ul ul ol ul ul ul ol li::marker,
-body.colorful-ordered-list ul ul ul ol ol ol ol li::marker,
-body.colorful-ordered-list ul ul ul ol ol ul ol li::marker,
-body.colorful-ordered-list ul ul ul ol ul ol ol li::marker,
-body.colorful-ordered-list ul ul ul ul ol ol ol li::marker,
-body.colorful-ordered-list ul ul ul ol ul ul ol li::marker,
-body.colorful-ordered-list ul ul ul ul ol ul ol li::marker,
-body.colorful-ordered-list ul ul ul ul ul ol ol li::marker,
-body.colorful-ordered-list ul ul ul ul ul ul ol li::marker {
+body.colorful-ordered-list :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) ol li::marker {
   color: hsl(calc(var(--accent-h) + 270), var(--accent-s), calc(var(--accent-l) * 0.95));
 }
 
 
-body.colorful-ordered-list ol ol ol ol ol ol ol li::before,
-body.colorful-ordered-list ol ol ol ol ol ul ol li::before,
-body.colorful-ordered-list ol ol ol ol ul ol ol li::before,
-body.colorful-ordered-list ol ol ol ul ol ol ol li::before,
-body.colorful-ordered-list ol ol ol ol ul ul ol li::before,
-body.colorful-ordered-list ol ol ol ul ol ul ol li::before,
-body.colorful-ordered-list ol ol ol ul ul ol ol li::before,
-body.colorful-ordered-list ol ol ol ul ul ul ol li::before,
-body.colorful-ordered-list ol ol ul ol ol ol ol li::before,
-body.colorful-ordered-list ol ol ul ol ol ul ol li::before,
-body.colorful-ordered-list ol ol ul ol ul ol ol li::before,
-body.colorful-ordered-list ol ol ul ul ol ol ol li::before,
-body.colorful-ordered-list ol ol ul ol ul ul ol li::before,
-body.colorful-ordered-list ol ol ul ul ol ul ol li::before,
-body.colorful-ordered-list ol ol ul ul ul ol ol li::before,
-body.colorful-ordered-list ol ol ul ul ul ul ol li::before,
-body.colorful-ordered-list ol ul ol ol ol ol ol li::before,
-body.colorful-ordered-list ol ul ol ol ol ul ol li::before,
-body.colorful-ordered-list ol ul ol ol ul ol ol li::before,
-body.colorful-ordered-list ol ul ol ul ol ol ol li::before,
-body.colorful-ordered-list ol ul ol ol ul ul ol li::before,
-body.colorful-ordered-list ol ul ol ul ol ul ol li::before,
-body.colorful-ordered-list ol ul ol ul ul ol ol li::before,
-body.colorful-ordered-list ol ul ol ul ul ul ol li::before,
-body.colorful-ordered-list ol ul ul ol ol ol ol li::before,
-body.colorful-ordered-list ol ul ul ol ol ul ol li::before,
-body.colorful-ordered-list ol ul ul ol ul ol ol li::before,
-body.colorful-ordered-list ol ul ul ul ol ol ol li::before,
-body.colorful-ordered-list ol ul ul ol ul ul ol li::before,
-body.colorful-ordered-list ol ul ul ul ol ul ol li::before,
-body.colorful-ordered-list ol ul ul ul ul ol ol li::before,
-body.colorful-ordered-list ol ul ul ul ul ul ol li::before,
-body.colorful-ordered-list ul ol ol ol ol ol ol li::before,
-body.colorful-ordered-list ul ol ol ol ol ul ol li::before,
-body.colorful-ordered-list ul ol ol ol ul ol ol li::before,
-body.colorful-ordered-list ul ol ol ul ol ol ol li::before,
-body.colorful-ordered-list ul ol ol ol ul ul ol li::before,
-body.colorful-ordered-list ul ol ol ul ol ul ol li::before,
-body.colorful-ordered-list ul ol ol ul ul ol ol li::before,
-body.colorful-ordered-list ul ol ol ul ul ul ol li::before,
-body.colorful-ordered-list ul ol ul ol ol ol ol li::before,
-body.colorful-ordered-list ul ol ul ol ol ul ol li::before,
-body.colorful-ordered-list ul ol ul ol ul ol ol li::before,
-body.colorful-ordered-list ul ol ul ul ol ol ol li::before,
-body.colorful-ordered-list ul ol ul ol ul ul ol li::before,
-body.colorful-ordered-list ul ol ul ul ol ul ol li::before,
-body.colorful-ordered-list ul ol ul ul ul ol ol li::before,
-body.colorful-ordered-list ul ol ul ul ul ul ol li::before,
-body.colorful-ordered-list ul ul ol ol ol ol ol li::before,
-body.colorful-ordered-list ul ul ol ol ol ul ol li::before,
-body.colorful-ordered-list ul ul ol ol ul ol ol li::before,
-body.colorful-ordered-list ul ul ol ul ol ol ol li::before,
-body.colorful-ordered-list ul ul ol ol ul ul ol li::before,
-body.colorful-ordered-list ul ul ol ul ol ul ol li::before,
-body.colorful-ordered-list ul ul ol ul ul ol ol li::before,
-body.colorful-ordered-list ul ul ol ul ul ul ol li::before,
-body.colorful-ordered-list ul ul ul ol ol ol ol li::before,
-body.colorful-ordered-list ul ul ul ol ol ul ol li::before,
-body.colorful-ordered-list ul ul ul ol ul ol ol li::before,
-body.colorful-ordered-list ul ul ul ul ol ol ol li::before,
-body.colorful-ordered-list ul ul ul ol ul ul ol li::before,
-body.colorful-ordered-list ul ul ul ul ol ul ol li::before,
-body.colorful-ordered-list ul ul ul ul ul ol ol li::before,
-body.colorful-ordered-list ul ul ul ul ul ul ol li::before,
+body.colorful-ordered-list :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) ol li::before,
 body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-7.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
 body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-7.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
   color: var(--list-colorful-marker);
   filter: hue-rotate(270deg);
 }
 
-body.colorful-ordered-list ol ol ol ol ol ol ol ol li::before,
-body.colorful-ordered-list ol ol ol ol ol ol ul ol li::before,
-body.colorful-ordered-list ol ol ol ol ol ul ol ol li::before,
-body.colorful-ordered-list ol ol ol ol ul ol ol ol li::before,
-body.colorful-ordered-list ol ol ol ol ol ul ul ol li::before,
-body.colorful-ordered-list ol ol ol ol ul ol ul ol li::before,
-body.colorful-ordered-list ol ol ol ol ul ul ol ol li::before,
-body.colorful-ordered-list ol ol ol ol ul ul ul ol li::before,
-body.colorful-ordered-list ol ol ol ul ol ol ol ol li::before,
-body.colorful-ordered-list ol ol ol ul ol ol ul ol li::before,
-body.colorful-ordered-list ol ol ol ul ol ul ol ol li::before,
-body.colorful-ordered-list ol ol ol ul ul ol ol ol li::before,
-body.colorful-ordered-list ol ol ol ul ol ul ul ol li::before,
-body.colorful-ordered-list ol ol ol ul ul ol ul ol li::before,
-body.colorful-ordered-list ol ol ol ul ul ul ol ol li::before,
-body.colorful-ordered-list ol ol ol ul ul ul ul ol li::before,
-body.colorful-ordered-list ol ol ul ol ol ol ol ol li::before,
-body.colorful-ordered-list ol ol ul ol ol ol ul ol li::before,
-body.colorful-ordered-list ol ol ul ol ol ul ol ol li::before,
-body.colorful-ordered-list ol ol ul ol ul ol ol ol li::before,
-body.colorful-ordered-list ol ol ul ol ol ul ul ol li::before,
-body.colorful-ordered-list ol ol ul ol ul ol ul ol li::before,
-body.colorful-ordered-list ol ol ul ol ul ul ol ol li::before,
-body.colorful-ordered-list ol ol ul ol ul ul ul ol li::before,
-body.colorful-ordered-list ol ol ul ul ol ol ol ol li::before,
-body.colorful-ordered-list ol ol ul ul ol ol ul ol li::before,
-body.colorful-ordered-list ol ol ul ul ol ul ol ol li::before,
-body.colorful-ordered-list ol ol ul ul ul ol ol ol li::before,
-body.colorful-ordered-list ol ol ul ul ol ul ul ol li::before,
-body.colorful-ordered-list ol ol ul ul ul ol ul ol li::before,
-body.colorful-ordered-list ol ol ul ul ul ul ol ol li::before,
-body.colorful-ordered-list ol ol ul ul ul ul ul ol li::before,
-body.colorful-ordered-list ol ul ol ol ol ol ol ol li::before,
-body.colorful-ordered-list ol ul ol ol ol ol ul ol li::before,
-body.colorful-ordered-list ol ul ol ol ol ul ol ol li::before,
-body.colorful-ordered-list ol ul ol ol ul ol ol ol li::before,
-body.colorful-ordered-list ol ul ol ol ol ul ul ol li::before,
-body.colorful-ordered-list ol ul ol ol ul ol ul ol li::before,
-body.colorful-ordered-list ol ul ol ol ul ul ol ol li::before,
-body.colorful-ordered-list ol ul ol ol ul ul ul ol li::before,
-body.colorful-ordered-list ol ul ol ul ol ol ol ol li::before,
-body.colorful-ordered-list ol ul ol ul ol ol ul ol li::before,
-body.colorful-ordered-list ol ul ol ul ol ul ol ol li::before,
-body.colorful-ordered-list ol ul ol ul ul ol ol ol li::before,
-body.colorful-ordered-list ol ul ol ul ol ul ul ol li::before,
-body.colorful-ordered-list ol ul ol ul ul ol ul ol li::before,
-body.colorful-ordered-list ol ul ol ul ul ul ol ol li::before,
-body.colorful-ordered-list ol ul ol ul ul ul ul ol li::before,
-body.colorful-ordered-list ol ul ul ol ol ol ol ol li::before,
-body.colorful-ordered-list ol ul ul ol ol ol ul ol li::before,
-body.colorful-ordered-list ol ul ul ol ol ul ol ol li::before,
-body.colorful-ordered-list ol ul ul ol ul ol ol ol li::before,
-body.colorful-ordered-list ol ul ul ol ol ul ul ol li::before,
-body.colorful-ordered-list ol ul ul ol ul ol ul ol li::before,
-body.colorful-ordered-list ol ul ul ol ul ul ol ol li::before,
-body.colorful-ordered-list ol ul ul ol ul ul ul ol li::before,
-body.colorful-ordered-list ol ul ul ul ol ol ol ol li::before,
-body.colorful-ordered-list ol ul ul ul ol ol ul ol li::before,
-body.colorful-ordered-list ol ul ul ul ol ul ol ol li::before,
-body.colorful-ordered-list ol ul ul ul ul ol ol ol li::before,
-body.colorful-ordered-list ol ul ul ul ol ul ul ol li::before,
-body.colorful-ordered-list ol ul ul ul ul ol ul ol li::before,
-body.colorful-ordered-list ol ul ul ul ul ul ol ol li::before,
-body.colorful-ordered-list ol ul ul ul ul ul ul ol li::before,
-body.colorful-ordered-list ul ol ol ol ol ol ol ol li::before,
-body.colorful-ordered-list ul ol ol ol ol ol ul ol li::before,
-body.colorful-ordered-list ul ol ol ol ol ul ol ol li::before,
-body.colorful-ordered-list ul ol ol ol ul ol ol ol li::before,
-body.colorful-ordered-list ul ol ol ol ol ul ul ol li::before,
-body.colorful-ordered-list ul ol ol ol ul ol ul ol li::before,
-body.colorful-ordered-list ul ol ol ol ul ul ol ol li::before,
-body.colorful-ordered-list ul ol ol ol ul ul ul ol li::before,
-body.colorful-ordered-list ul ol ol ul ol ol ol ol li::before,
-body.colorful-ordered-list ul ol ol ul ol ol ul ol li::before,
-body.colorful-ordered-list ul ol ol ul ol ul ol ol li::before,
-body.colorful-ordered-list ul ol ol ul ul ol ol ol li::before,
-body.colorful-ordered-list ul ol ol ul ol ul ul ol li::before,
-body.colorful-ordered-list ul ol ol ul ul ol ul ol li::before,
-body.colorful-ordered-list ul ol ol ul ul ul ol ol li::before,
-body.colorful-ordered-list ul ol ol ul ul ul ul ol li::before,
-body.colorful-ordered-list ul ol ul ol ol ol ol ol li::before,
-body.colorful-ordered-list ul ol ul ol ol ol ul ol li::before,
-body.colorful-ordered-list ul ol ul ol ol ul ol ol li::before,
-body.colorful-ordered-list ul ol ul ol ul ol ol ol li::before,
-body.colorful-ordered-list ul ol ul ol ol ul ul ol li::before,
-body.colorful-ordered-list ul ol ul ol ul ol ul ol li::before,
-body.colorful-ordered-list ul ol ul ol ul ul ol ol li::before,
-body.colorful-ordered-list ul ol ul ol ul ul ul ol li::before,
-body.colorful-ordered-list ul ol ul ul ol ol ol ol li::before,
-body.colorful-ordered-list ul ol ul ul ol ol ul ol li::before,
-body.colorful-ordered-list ul ol ul ul ol ul ol ol li::before,
-body.colorful-ordered-list ul ol ul ul ul ol ol ol li::before,
-body.colorful-ordered-list ul ol ul ul ol ul ul ol li::before,
-body.colorful-ordered-list ul ol ul ul ul ol ul ol li::before,
-body.colorful-ordered-list ul ol ul ul ul ul ol ol li::before,
-body.colorful-ordered-list ul ol ul ul ul ul ul ol li::before,
-body.colorful-ordered-list ul ul ol ol ol ol ol ol li::before,
-body.colorful-ordered-list ul ul ol ol ol ol ul ol li::before,
-body.colorful-ordered-list ul ul ol ol ol ul ol ol li::before,
-body.colorful-ordered-list ul ul ol ol ul ol ol ol li::before,
-body.colorful-ordered-list ul ul ol ol ol ul ul ol li::before,
-body.colorful-ordered-list ul ul ol ol ul ol ul ol li::before,
-body.colorful-ordered-list ul ul ol ol ul ul ol ol li::before,
-body.colorful-ordered-list ul ul ol ol ul ul ul ol li::before,
-body.colorful-ordered-list ul ul ol ul ol ol ol ol li::before,
-body.colorful-ordered-list ul ul ol ul ol ol ul ol li::before,
-body.colorful-ordered-list ul ul ol ul ol ul ol ol li::before,
-body.colorful-ordered-list ul ul ol ul ul ol ol ol li::before,
-body.colorful-ordered-list ul ul ol ul ol ul ul ol li::before,
-body.colorful-ordered-list ul ul ol ul ul ol ul ol li::before,
-body.colorful-ordered-list ul ul ol ul ul ul ol ol li::before,
-body.colorful-ordered-list ul ul ol ul ul ul ul ol li::before,
-body.colorful-ordered-list ul ul ul ol ol ol ol ol li::before,
-body.colorful-ordered-list ul ul ul ol ol ol ul ol li::before,
-body.colorful-ordered-list ul ul ul ol ol ul ol ol li::before,
-body.colorful-ordered-list ul ul ul ol ul ol ol ol li::before,
-body.colorful-ordered-list ul ul ul ol ol ul ul ol li::before,
-body.colorful-ordered-list ul ul ul ol ul ol ul ol li::before,
-body.colorful-ordered-list ul ul ul ol ul ul ol ol li::before,
-body.colorful-ordered-list ul ul ul ol ul ul ul ol li::before,
-body.colorful-ordered-list ul ul ul ul ol ol ol ol li::before,
-body.colorful-ordered-list ul ul ul ul ol ol ul ol li::before,
-body.colorful-ordered-list ul ul ul ul ol ul ol ol li::before,
-body.colorful-ordered-list ul ul ul ul ul ol ol ol li::before,
-body.colorful-ordered-list ul ul ul ul ol ul ul ol li::before,
-body.colorful-ordered-list ul ul ul ul ul ol ul ol li::before,
-body.colorful-ordered-list ul ul ul ul ul ul ol ol li::before,
-body.colorful-ordered-list ul ul ul ul ul ul ul ol li::before,
+body.colorful-ordered-list :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) ol li::before,
 body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-8.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
 body.colorful-ordered-list .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-8.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
   color: var(--list-colorful-marker);
   filter: hue-rotate(340deg);
 }
 
-body.colorful-ordered-list ol ol ol ol ol ol ol ol li::marker,
-body.colorful-ordered-list ol ol ol ol ol ol ul ol li::marker,
-body.colorful-ordered-list ol ol ol ol ol ul ol ol li::marker,
-body.colorful-ordered-list ol ol ol ol ul ol ol ol li::marker,
-body.colorful-ordered-list ol ol ol ol ol ul ul ol li::marker,
-body.colorful-ordered-list ol ol ol ol ul ol ul ol li::marker,
-body.colorful-ordered-list ol ol ol ol ul ul ol ol li::marker,
-body.colorful-ordered-list ol ol ol ol ul ul ul ol li::marker,
-body.colorful-ordered-list ol ol ol ul ol ol ol ol li::marker,
-body.colorful-ordered-list ol ol ol ul ol ol ul ol li::marker,
-body.colorful-ordered-list ol ol ol ul ol ul ol ol li::marker,
-body.colorful-ordered-list ol ol ol ul ul ol ol ol li::marker,
-body.colorful-ordered-list ol ol ol ul ol ul ul ol li::marker,
-body.colorful-ordered-list ol ol ol ul ul ol ul ol li::marker,
-body.colorful-ordered-list ol ol ol ul ul ul ol ol li::marker,
-body.colorful-ordered-list ol ol ol ul ul ul ul ol li::marker,
-body.colorful-ordered-list ol ol ul ol ol ol ol ol li::marker,
-body.colorful-ordered-list ol ol ul ol ol ol ul ol li::marker,
-body.colorful-ordered-list ol ol ul ol ol ul ol ol li::marker,
-body.colorful-ordered-list ol ol ul ol ul ol ol ol li::marker,
-body.colorful-ordered-list ol ol ul ol ol ul ul ol li::marker,
-body.colorful-ordered-list ol ol ul ol ul ol ul ol li::marker,
-body.colorful-ordered-list ol ol ul ol ul ul ol ol li::marker,
-body.colorful-ordered-list ol ol ul ol ul ul ul ol li::marker,
-body.colorful-ordered-list ol ol ul ul ol ol ol ol li::marker,
-body.colorful-ordered-list ol ol ul ul ol ol ul ol li::marker,
-body.colorful-ordered-list ol ol ul ul ol ul ol ol li::marker,
-body.colorful-ordered-list ol ol ul ul ul ol ol ol li::marker,
-body.colorful-ordered-list ol ol ul ul ol ul ul ol li::marker,
-body.colorful-ordered-list ol ol ul ul ul ol ul ol li::marker,
-body.colorful-ordered-list ol ol ul ul ul ul ol ol li::marker,
-body.colorful-ordered-list ol ol ul ul ul ul ul ol li::marker,
-body.colorful-ordered-list ol ul ol ol ol ol ol ol li::marker,
-body.colorful-ordered-list ol ul ol ol ol ol ul ol li::marker,
-body.colorful-ordered-list ol ul ol ol ol ul ol ol li::marker,
-body.colorful-ordered-list ol ul ol ol ul ol ol ol li::marker,
-body.colorful-ordered-list ol ul ol ol ol ul ul ol li::marker,
-body.colorful-ordered-list ol ul ol ol ul ol ul ol li::marker,
-body.colorful-ordered-list ol ul ol ol ul ul ol ol li::marker,
-body.colorful-ordered-list ol ul ol ol ul ul ul ol li::marker,
-body.colorful-ordered-list ol ul ol ul ol ol ol ol li::marker,
-body.colorful-ordered-list ol ul ol ul ol ol ul ol li::marker,
-body.colorful-ordered-list ol ul ol ul ol ul ol ol li::marker,
-body.colorful-ordered-list ol ul ol ul ul ol ol ol li::marker,
-body.colorful-ordered-list ol ul ol ul ol ul ul ol li::marker,
-body.colorful-ordered-list ol ul ol ul ul ol ul ol li::marker,
-body.colorful-ordered-list ol ul ol ul ul ul ol ol li::marker,
-body.colorful-ordered-list ol ul ol ul ul ul ul ol li::marker,
-body.colorful-ordered-list ol ul ul ol ol ol ol ol li::marker,
-body.colorful-ordered-list ol ul ul ol ol ol ul ol li::marker,
-body.colorful-ordered-list ol ul ul ol ol ul ol ol li::marker,
-body.colorful-ordered-list ol ul ul ol ul ol ol ol li::marker,
-body.colorful-ordered-list ol ul ul ol ol ul ul ol li::marker,
-body.colorful-ordered-list ol ul ul ol ul ol ul ol li::marker,
-body.colorful-ordered-list ol ul ul ol ul ul ol ol li::marker,
-body.colorful-ordered-list ol ul ul ol ul ul ul ol li::marker,
-body.colorful-ordered-list ol ul ul ul ol ol ol ol li::marker,
-body.colorful-ordered-list ol ul ul ul ol ol ul ol li::marker,
-body.colorful-ordered-list ol ul ul ul ol ul ol ol li::marker,
-body.colorful-ordered-list ol ul ul ul ul ol ol ol li::marker,
-body.colorful-ordered-list ol ul ul ul ol ul ul ol li::marker,
-body.colorful-ordered-list ol ul ul ul ul ol ul ol li::marker,
-body.colorful-ordered-list ol ul ul ul ul ul ol ol li::marker,
-body.colorful-ordered-list ol ul ul ul ul ul ul ol li::marker,
-body.colorful-ordered-list ul ol ol ol ol ol ol ol li::marker,
-body.colorful-ordered-list ul ol ol ol ol ol ul ol li::marker,
-body.colorful-ordered-list ul ol ol ol ol ul ol ol li::marker,
-body.colorful-ordered-list ul ol ol ol ul ol ol ol li::marker,
-body.colorful-ordered-list ul ol ol ol ol ul ul ol li::marker,
-body.colorful-ordered-list ul ol ol ol ul ol ul ol li::marker,
-body.colorful-ordered-list ul ol ol ol ul ul ol ol li::marker,
-body.colorful-ordered-list ul ol ol ol ul ul ul ol li::marker,
-body.colorful-ordered-list ul ol ol ul ol ol ol ol li::marker,
-body.colorful-ordered-list ul ol ol ul ol ol ul ol li::marker,
-body.colorful-ordered-list ul ol ol ul ol ul ol ol li::marker,
-body.colorful-ordered-list ul ol ol ul ul ol ol ol li::marker,
-body.colorful-ordered-list ul ol ol ul ol ul ul ol li::marker,
-body.colorful-ordered-list ul ol ol ul ul ol ul ol li::marker,
-body.colorful-ordered-list ul ol ol ul ul ul ol ol li::marker,
-body.colorful-ordered-list ul ol ol ul ul ul ul ol li::marker,
-body.colorful-ordered-list ul ol ul ol ol ol ol ol li::marker,
-body.colorful-ordered-list ul ol ul ol ol ol ul ol li::marker,
-body.colorful-ordered-list ul ol ul ol ol ul ol ol li::marker,
-body.colorful-ordered-list ul ol ul ol ul ol ol ol li::marker,
-body.colorful-ordered-list ul ol ul ol ol ul ul ol li::marker,
-body.colorful-ordered-list ul ol ul ol ul ol ul ol li::marker,
-body.colorful-ordered-list ul ol ul ol ul ul ol ol li::marker,
-body.colorful-ordered-list ul ol ul ol ul ul ul ol li::marker,
-body.colorful-ordered-list ul ol ul ul ol ol ol ol li::marker,
-body.colorful-ordered-list ul ol ul ul ol ol ul ol li::marker,
-body.colorful-ordered-list ul ol ul ul ol ul ol ol li::marker,
-body.colorful-ordered-list ul ol ul ul ul ol ol ol li::marker,
-body.colorful-ordered-list ul ol ul ul ol ul ul ol li::marker,
-body.colorful-ordered-list ul ol ul ul ul ol ul ol li::marker,
-body.colorful-ordered-list ul ol ul ul ul ul ol ol li::marker,
-body.colorful-ordered-list ul ol ul ul ul ul ul ol li::marker,
-body.colorful-ordered-list ul ul ol ol ol ol ol ol li::marker,
-body.colorful-ordered-list ul ul ol ol ol ol ul ol li::marker,
-body.colorful-ordered-list ul ul ol ol ol ul ol ol li::marker,
-body.colorful-ordered-list ul ul ol ol ul ol ol ol li::marker,
-body.colorful-ordered-list ul ul ol ol ol ul ul ol li::marker,
-body.colorful-ordered-list ul ul ol ol ul ol ul ol li::marker,
-body.colorful-ordered-list ul ul ol ol ul ul ol ol li::marker,
-body.colorful-ordered-list ul ul ol ol ul ul ul ol li::marker,
-body.colorful-ordered-list ul ul ol ul ol ol ol ol li::marker,
-body.colorful-ordered-list ul ul ol ul ol ol ul ol li::marker,
-body.colorful-ordered-list ul ul ol ul ol ul ol ol li::marker,
-body.colorful-ordered-list ul ul ol ul ul ol ol ol li::marker,
-body.colorful-ordered-list ul ul ol ul ol ul ul ol li::marker,
-body.colorful-ordered-list ul ul ol ul ul ol ul ol li::marker,
-body.colorful-ordered-list ul ul ol ul ul ul ol ol li::marker,
-body.colorful-ordered-list ul ul ol ul ul ul ul ol li::marker,
-body.colorful-ordered-list ul ul ul ol ol ol ol ol li::marker,
-body.colorful-ordered-list ul ul ul ol ol ol ul ol li::marker,
-body.colorful-ordered-list ul ul ul ol ol ul ol ol li::marker,
-body.colorful-ordered-list ul ul ul ol ul ol ol ol li::marker,
-body.colorful-ordered-list ul ul ul ol ol ul ul ol li::marker,
-body.colorful-ordered-list ul ul ul ol ul ol ul ol li::marker,
-body.colorful-ordered-list ul ul ul ol ul ul ol ol li::marker,
-body.colorful-ordered-list ul ul ul ol ul ul ul ol li::marker,
-body.colorful-ordered-list ul ul ul ul ol ol ol ol li::marker,
-body.colorful-ordered-list ul ul ul ul ol ol ul ol li::marker,
-body.colorful-ordered-list ul ul ul ul ol ul ol ol li::marker,
-body.colorful-ordered-list ul ul ul ul ul ol ol ol li::marker,
-body.colorful-ordered-list ul ul ul ul ol ul ul ol li::marker,
-body.colorful-ordered-list ul ul ul ul ul ol ul ol li::marker,
-body.colorful-ordered-list ul ul ul ul ul ul ol ol li::marker,
-body.colorful-ordered-list ul ul ul ul ul ul ul ol li::marker {
+body.colorful-ordered-list :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) ol li::marker {
   color: hsl(calc(var(--accent-h) + 340),var(--accent-s),calc(var(--accent-l) * 0.95));
 }
-
 
 @property --colorA {
   syntax: '<color>';
@@ -29643,4 +28771,296 @@ body.remove-first-folder-icon .tree-item.nav-folder.mod-root>.tree-item-children
 
 body.background-settings-workplace-background-image .workspace-split:not(.mod-root) .workspace-tab-container {
   background-color: var(--bt-background-split-container);
+}
+
+body.nowrap-edit-codebox .HyperMD-codeblock {
+  white-space: nowrap;
+}
+
+
+/* Adapted from https://gist.github.com/KillyMXI/cbef8edff6dd55d9e6ea4df66567e9b1 */
+body.bt-connected-indent-hover .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3, .HyperMD-list-line-2):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-2:hover, ~ .HyperMD-list-line-2 ~ :is(.HyperMD-list-line-3, .HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-3, .HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
+  --list-threading-offset: calc(4px + 0.12em);
+}
+
+body.bt-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-3:hover, ~ .HyperMD-list-line-3 ~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
+  --list-threading-offset: calc(4px + 0.12em + var(--list-indent));
+}
+
+body.bt-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-4:hover, ~ .HyperMD-list-line-4 ~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
+  --list-threading-offset: calc(4px + 0.12em + 2 * var(--list-indent));
+}
+
+body.bt-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-5:hover, ~ .HyperMD-list-line-5 ~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
+  --list-threading-offset: calc(4px + 0.12em + 3 * var(--list-indent));
+}
+
+body.bt-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-6:hover, ~ .HyperMD-list-line-6 ~ :is(.HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7):hover))::before {
+  --list-threading-offset: calc(4px + 0.12em + 4 * var(--list-indent));
+}
+
+body.bt-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-7:hover, ~ .HyperMD-list-line-7 ~ :is(.HyperMD-list-line-8):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-7:not(:has(~ .HyperMD-list-line-7 ~ .HyperMD-list-line:hover)):hover::before {
+  --list-threading-offset: calc(4px + 0.12em + 5 * var(--list-indent));
+}
+
+
+
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::after,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-3:hover, ~ .HyperMD-list-line-3 ~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
+  filter: hue-rotate(60deg);
+}
+
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover)::after,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-4:hover, ~ .HyperMD-list-line-4 ~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
+  filter: hue-rotate(120deg);
+}
+
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover)::after,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-5:hover, ~ .HyperMD-list-line-5 ~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
+  filter: hue-rotate(180deg);
+}
+
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::after,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-6:hover, ~ .HyperMD-list-line-6 ~ :is(.HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7):hover))::before {
+  filter: hue-rotate(240deg);
+}
+
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7):hover)::after,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-7:hover, ~ .HyperMD-list-line-7 ~ :is(.HyperMD-list-line-8):hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .HyperMD-list-line-7:not(:has(~ .HyperMD-list-line-7 ~ .HyperMD-list-line:hover)):hover::before {
+  filter: hue-rotate(300deg);
+}
+
+/* tails */
+body.bt-connected-indent-hover .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3, .HyperMD-list-line-2):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::after,
+body.bt-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7):hover)::after {
+  content: "";
+  position: absolute;
+  left: var(--list-threading-offset);
+  bottom: 0;
+  height: calc(100% - 1em);
+  width: var(--bt-colorful-indentation-width-hover);
+  background-color: var(--list-colorful-marker);
+}
+body.bt-connected-indent-hover .HyperMD-list-line.HyperMD-task-line::after {
+  max-height: calc(100% - 1.2em);
+}
+
+/* in-between lines */
+body.bt-connected-indent-hover .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-2:hover, ~ .HyperMD-list-line-2 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-3:hover, ~ .HyperMD-list-line-3 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-4:hover, ~ .HyperMD-list-line-4 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-5:hover, ~ .HyperMD-list-line-5 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-6:hover, ~ .HyperMD-list-line-6 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::before,
+body.bt-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-7:hover)::before {
+  content: "";
+  position: absolute;
+  left: var(--list-threading-offset);
+  top: 0;
+  height: 100%;
+  width: var(--bt-colorful-indentation-width-hover);
+  background-color: var(--list-colorful-marker);
+}
+
+/* elbows */
+body.bt-connected-indent-hover .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover))::before,
+body.bt-connected-indent-hover .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover))::before,
+body.bt-connected-indent-hover .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover))::before,
+body.bt-connected-indent-hover .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover))::before,
+body.bt-connected-indent-hover .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7):hover))::before,
+body.bt-connected-indent-hover .HyperMD-list-line-7:not(:has(~ .HyperMD-list-line-7 ~ .HyperMD-list-line:hover)):hover::before {
+  content: "";
+  position: absolute;
+  left: var(--list-threading-offset);
+  width: var(--list-indent);
+  top: 0;
+  height: calc(100% - 0.7em - var(--bt-colorful-indentation-width-hover) / 2);
+  border-bottom-left-radius: var(--radius-m);
+  border-bottom: var(--bt-colorful-indentation-width-hover) solid var(--list-colorful-marker);
+  border-left: var(--bt-colorful-indentation-width-hover) solid var(--list-colorful-marker);
+}
+body.bt-connected-indent-hover .HyperMD-list-line.HyperMD-task-line::before {
+  max-width: calc(var(--list-indent) - 0.35em);
+}
+
+
+body.bt-colorful-indentation-lines.bt-indentation-line-gradient ul ul::before,
+body.bt-colorful-indentation-lines.bt-indentation-line-gradient ol ol::before  {
+  border-right-color: var(--list-colorful-marker) !important;
+  border-image: linear-gradient(var(--bt-indentation-gradient-color-1), var(--bt-indentation-gradient-color-2)) 10;
+}
+
+body.bt-colorful-indentation-lines.bt-indentation-line-image :is(ul, ol) :is(ul, ol)::before {
+  border-right-color: var(--list-colorful-marker) !important;
+  border-image: var(--bt-indentation-line-image) 10;
+}
+
+body.bt-colorful-indentation-lines :is(ul, ol) :is(ul, ol)::before {
+  border-right-color: var(--list-colorful-marker) !important;
+  border-right-width: var(--bt-colorful-indentation-width);
+  border-right-style: double;
+}
+body.bt-colorful-indentation-lines :is(ul, ol) :is(ul, ol) :is(ul, ol)::before {
+  border-right-color: var(--list-colorful-marker) !important;
+  filter: hue-rotate(60deg);
+}
+body.bt-colorful-indentation-lines :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol)::before {
+  border-right-color: var(--list-colorful-marker) !important;
+  filter: hue-rotate(120deg);
+}
+body.bt-colorful-indentation-lines :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol)::before {
+  border-right-color: var(--list-colorful-marker) !important;
+  filter: hue-rotate(180deg);
+}
+body.bt-colorful-indentation-lines :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol)::before {
+  border-right-color: var(--list-colorful-marker) !important;
+  filter: hue-rotate(240deg);
+}
+body.bt-colorful-indentation-lines :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol)::before {
+  border-right-color: var(--list-colorful-marker) !important;
+  filter: hue-rotate(300deg);
+}
+
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-2 .cm-hmd-list-indent > .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-3 .cm-hmd-list-indent > .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-4 .cm-hmd-list-indent > .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-5 .cm-hmd-list-indent > .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-6 .cm-hmd-list-indent > .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-7 .cm-hmd-list-indent > .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-8 .cm-hmd-list-indent > .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-9 .cm-hmd-list-indent > .cm-indent::before {
+  border-color: var(--list-colorful-marker)
+}
+
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-3 .cm-hmd-list-indent > .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-4 .cm-hmd-list-indent > .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-5 .cm-hmd-list-indent > .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-6 .cm-hmd-list-indent > .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-7 .cm-hmd-list-indent > .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-8 .cm-hmd-list-indent > .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-9 .cm-hmd-list-indent > .cm-indent ~ .cm-indent::before  {
+  border-color: var(--list-colorful-marker);
+  filter: hue-rotate(60deg);
+}
+
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-4 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-5 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-6 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-7 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-8 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-9 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent::before {
+  border-color: var(--list-colorful-marker);
+  filter: hue-rotate(120deg);
+}
+
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-5 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-6 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-7 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-8 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-9 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before {
+  border-color: var(--list-colorful-marker);
+  filter: hue-rotate(180deg);
+}
+
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-6 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-7 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-8 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-9 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before {
+  border-color: var(--list-colorful-marker);
+  filter: hue-rotate(240deg);
+}
+
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-7 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-8 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before,
+body.bt-colorful-indentation-lines-editing .HyperMD-list-line-9 .cm-hmd-list-indent > .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent ~ .cm-indent::before{
+  border-color: var(--list-colorful-marker);
+  filter: hue-rotate(300deg);
+}
+
+
+
+
+body.bt-connected-indent-hover li {
+  position: relative;
+}
+
+/* In-between items */
+body.bt-connected-indent-hover li > :is(ul, ol) > li:has(~ li:hover)::before,
+body.bt-connected-indent-hover :is(ul, ol):has(~ *:hover) > li::before {
+  content: "";
+  position: absolute;
+  background-color: var(--list-colorful-marker);
+  width: var(--bt-colorful-indentation-width-hover);
+  top: calc(var(--list-spacing-bt) * 0.075em - var(--font-size-list) * 0.6);
+  left: calc(-1.5 * var(--list-indent) - 1px);
+  bottom: calc(var(--list-spacing-bt) * 0.075em - var(--font-size-list) * 0.5);
+}
+
+/* Elbows items */
+body.bt-connected-indent-hover li > :is(ul, ol) > li:hover::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  top: calc(var(--list-spacing-bt) * 0.075em - var(--font-size-list) * 0.6);
+  left: calc(-1.5 * var(--list-indent) - 1px);
+  width: calc(1em + var(--size-4-4));
+  height: calc(var(--font-size-list) * 1.27);
+  border-bottom-left-radius: var(--radius-m);
+  border-bottom: var(--bt-colorful-indentation-width-hover) solid var(--list-colorful-marker);
+  border-left: var(--bt-colorful-indentation-width-hover) solid var(--list-colorful-marker);
+}
+
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li:has( ~ li:hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > ul:has(+ ol) > li::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > ol:has(+ ul) > li::before {
+  filter: hue-rotate(60deg);
+}
+
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:has( ~ li:hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > ul:has(+ ol) > li::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > ol:has(+ ul) > li::before {
+  filter: hue-rotate(120deg);
+}
+
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) >li:has( ~ li:hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ul:has(+ ol) > li::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ol:has(+ ul) > li::before {
+  filter: hue-rotate(180deg);
+}
+
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) >li:has( ~ li:hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ul:has(+ ol) > li::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ol:has(+ ul) > li::before {
+  filter: hue-rotate(240deg);
+}
+
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:has( ~ li:hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ul:has(+ ol) > li::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ol:has(+ ul) > li::before {
+  filter: hue-rotate(300deg);
 }
