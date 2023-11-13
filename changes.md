@@ -1,5 +1,12 @@
 # 更新日志
 
+### 20231113
+
+1. Connected indent lines调整
+2. Callout 适配 notebook-liked background
+3. Connected indent lines和伪看板的调整
+4. PDF背景颜色提供黑暗、明亮的分开设置
+
 ### 20231112
 
 1. Connected indent lines调整
