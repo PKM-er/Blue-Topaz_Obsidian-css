@@ -21915,11 +21915,11 @@ body.background-image-settings-switch.toggle-nonoverlapping-bg .workspace-split.
   background-size: 100% 100%;
 }
 
-body.background-notebook-liked-switch .markdown-embed .markdown-rendered:not(.show-indentation-guide) {
+body.background-notebook-liked-switch .markdown-embed :is(.markdown-preview-view, .markdown-rendered:not(.show-indentation-guide)) {
   background-image: unset !important;
 }
-body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-1 .markdown-rendered:not(.show-indentation-guide),
-body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-1 .markdown-source-view.mod-cm6 .cm-scroller {
+body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-1 :is(.markdown-preview-view, .markdown-rendered:not(.show-indentation-guide)),
+body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-1 .cm-s-obsidian .cm-scroller {
   background: var(--bg-color-notebook);
   background-image: linear-gradient(90deg, var(--grid-notebook-line-color-1) 3%, transparent 0), linear-gradient(var(--grid-notebook-line-color-1) 3%, transparent 0);
   background-size: 20px 20px;
@@ -21934,7 +21934,7 @@ body.background-notebook-liked-switch .cm-s-obsidian .cm-embed-block {
   background: inherit;
 }
 
-body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-1 .markdown-rendered:not(.show-indentation-guide),
+body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-1 :is(.markdown-preview-view, .markdown-rendered:not(.show-indentation-guide)),
 body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-1 .cm-s-obsidian .cm-scroller {
   background: var(--bg-color-notebook);
   background-image: radial-gradient(var(--dotted-notebook-dot-color) 10%, transparent 0);
@@ -21942,7 +21942,7 @@ body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebo
   background-position: 8px 8px;
 }
 
-body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-2 .markdown-rendered:not(.show-indentation-guide),
+body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-2 :is(.markdown-preview-view, .markdown-rendered:not(.show-indentation-guide)),
 body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-2 .cm-s-obsidian .cm-scroller {
   background: var(--bg-color-notebook);
   background-image: radial-gradient(var(--dotted-notebook-dot-color) 10%, transparent 0),
@@ -21952,7 +21952,7 @@ body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebo
 }
 
 /*https://www.jianshu.com/p/2b713844cfe9*/
-body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-2  .markdown-rendered:not(.show-indentation-guide),
+body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-2 :is(.markdown-preview-view, .markdown-rendered:not(.show-indentation-guide)),
 body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-2 .cm-s-obsidian .cm-scroller {
   background: var(--bg-color-notebook);
   background-image:
@@ -21964,25 +21964,25 @@ body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook
     transparent 0);
   background-size: 75px 75px, 75px 75px, 15px 15px, 15px 15px;
 }
-body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1 .markdown-rendered:not(.show-indentation-guide),
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1 :is(.markdown-preview-view, .markdown-rendered:not(.show-indentation-guide)),
 body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1 .cm-s-obsidian .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image: repeating-linear-gradient(135deg,
   hsla(0,0%,100%,.03), hsla(0,0%,100%,.03) 13px, transparent 0, transparent 30px);
 }
-body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1.theme-light .markdown-rendered:not(.show-indentation-guide),
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1.theme-light :is(.markdown-preview-view, .markdown-rendered:not(.show-indentation-guide)),
 body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1.theme-light .cm-s-obsidian .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image: repeating-linear-gradient(135deg,
   hsla(0,0%,100%,.3), hsla(0,0%,100%,.3) 13px, transparent 0, transparent 30px);
 }
-body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2 .markdown-rendered:not(.show-indentation-guide),
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2 :is(.markdown-preview-view, .markdown-rendered:not(.show-indentation-guide)),
 body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2 .cm-s-obsidian .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image:repeating-linear-gradient(45deg,
   hsla(0,0%,100%,.025), hsla(0,0%,100%,.025) 20px, transparent 0, transparent 60px), repeating-linear-gradient(-45deg, hsla(0,0%,100%,.025), hsla(0,0%,100%,.025) 20px, transparent 0, transparent 60px);
 }
-body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2.theme-light .markdown-rendered:not(.show-indentation-guide),
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2.theme-light :is(.markdown-preview-view, .markdown-rendered:not(.show-indentation-guide)),
 body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2.theme-light .cm-s-obsidian .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image:repeating-linear-gradient(45deg,
