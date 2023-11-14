@@ -1,5 +1,12 @@
 # 更新日志
 
+### 20231114
+
+1. Connected indent lines调整，在伪看板中不启用
+2. Kanban插件优化显示
+3. 增加滚动条颜色设置
+4. notebook-liked background优化
+
 ### 20231113
 
 1. Connected indent lines调整

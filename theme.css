@@ -8,8 +8,8 @@ Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/
 
 */
 
-/*蓝色托帕石，适合Obsidian v1.2.8。uid [20231113] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.2.8, uid [20231113] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.2.8。uid [20231114] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.2.8, uid [20231114] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /*
 MIT License
@@ -794,6 +794,24 @@ settings:
       -
         label: Obsidian default
         value: native-scrollbars
+  -
+    id: scrollbar-thumb-bg
+    title: Scrollbar thumb background
+    title.zh: 滚动条滑块颜色
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#'
+    default-dark: '#'
+  -
+    id: scrollbar-active-thumb-bg
+    title: Scrollbar thumb background (Active)
+    title.zh: 滚动条滑块颜色 （选择时）
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: '#'
+    default-dark: '#'
   -
     id: view-button-front
     title: The view status button is placed in front of the header
@@ -5740,8 +5758,8 @@ body.all-dark-pdf .print.theme-light,
   --background-black-or-white-1: #353535;
   --background-modifier-border-1: #000000;
   --background-transparent-blue: #003e759a;
-  --scrollbar-thumb: #5e5e5e7e;
-  --scrollbar-thumb-active: #5e5e5e;
+  --scrollbar-thumb-bg: #3f3f3f7e;
+  --scrollbar-active-thumb-bg: #4d4d4d88;
   --gray-1: #5C6370;
   --gray-2: #abb2bf;
   --red: #db7c84;
@@ -6096,8 +6114,8 @@ body.all-dark-pdf .print.theme-light,
   --bg-color-settings-5: #d4d4d464;
   --bg-color-settings-6: #ffffff85;
 
-  --scrollbar-thumb: #e4e4e4a8;
-  --scrollbar-thumb-active: #e4e4e4;
+  --scrollbar-thumb-bg: #dcdcdcbe;
+  --scrollbar-active-thumb-bg: #ddddddd9;
 
   --gray-1: #383a42;
   --gray-2: #383a42;
@@ -6394,8 +6412,8 @@ body.color-scheme-options-avocado-topaz.theme-light {
 
   --background-transparent-blue: #c6e5ffde;
 
-  --scrollbar-thumb: #c6c6c6a8;
-  --scrollbar-thumb-active: #c6c6c6;
+  --scrollbar-thumb-bg: #c6c6c6a8;
+  --scrollbar-active-thumb-bg: #c6c6c6;
   --search-result-file-title-color: var(--text-normal);
 
   --background-blockquote: #b6b6b62c;
@@ -6532,8 +6550,8 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --background-mobile-drawer-1: #1b1b1b;
   --background-mobile-drawer-2: #1b1b1b69;
   --background-transparent-blue: #003e759a;
-  --scrollbar-thumb: #8282827e;
-  --scrollbar-thumb-active: #828282;
+  --scrollbar-thumb-bg: #8282827e;
+  --scrollbar-active-thumb-bg: #828282;
   --search-result-file-title-color: var(--text-normal);
 
   --background-blockquote: #9191911c;
@@ -6897,8 +6915,8 @@ body.color-scheme-options-pink-topaz.theme-light {
   --background-mobile-drawer-2: #ffffff;
   --background-secondary-alt-bg-4-bt-publish: #f6f6f6;
 
-  --scrollbar-thumb: #e2bdbd8d;
-  --scrollbar-thumb-active: #e2bdbd;
+  --scrollbar-thumb-bg: #e2bdbd8d;
+  --scrollbar-active-thumb-bg: #e2bdbd;
   --search-result-file-title-color: #cc437c;
 
   --background-blockquote: #e6d6ba2c;
@@ -7039,8 +7057,8 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --background-mobile-drawer-2: #1b1b1b69;
 
   --background-transparent-blue: #003e759a;
-  --scrollbar-thumb: #8d69698d;
-  --scrollbar-thumb-active: #8d6969;
+  --scrollbar-thumb-bg: #8d69698d;
+  --scrollbar-active-thumb-bg: #8d6969;
   --search-result-file-title-color: #c0689b;
 
   --background-blockquote: #9191911c;
@@ -7549,8 +7567,8 @@ body.color-scheme-options-flamingo.theme-light {
 
   --table-color-calendar-2: rgb(214, 118, 146);
   --table-color-rgb: 214, 118, 146;
-  --scrollbar-thumb: #f39ba050;
-  --scrollbar-thumb-active: #f39ba0;
+  --scrollbar-thumb-bg: #f39ba050;
+  --scrollbar-active-thumb-bg: #f39ba0;
 }
 
 body.color-scheme-options-flamingo.all-dark-pdf .print.theme-light,
@@ -7678,8 +7696,8 @@ body.color-scheme-options-flamingo.theme-dark {
 
   --table-color-calendar-2: rgb(215, 86, 125);
   --table-color-rgb: 215, 86, 125;
-  --scrollbar-thumb: #e2bdbd50;
-  --scrollbar-thumb-active: #e2bdbd;
+  --scrollbar-thumb-bg: #e2bdbd50;
+  --scrollbar-active-thumb-bg: #e2bdbd;
 }
 
 body.color-scheme-options-flamingo.theme-light #calendar-container {
@@ -8019,8 +8037,8 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
 
   --background-transparent-blue: #003e759a;
 
-  --scrollbar-thumb: #8282827e;
-  --scrollbar-thumb-active: #828282;
+  --scrollbar-thumb-bg: #8282827e;
+  --scrollbar-active-thumb-bg: #828282;
 
   --search-result-file-title-color: var(--main-color);
 
@@ -8334,8 +8352,8 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
   --background-mobile-drawer-2: var(--bg-color);
 
   --background-transparent-blue: #003e759a;/*用在kanban里的，可以不调*/
-  --scrollbar-thumb: #8282827e;
-  --scrollbar-thumb-active: #828282;
+  --scrollbar-thumb-bg: #8282827e;
+  --scrollbar-active-thumb-bg: #828282;
 
   --search-result-file-title-color: var(--main-color);
 
@@ -9067,8 +9085,8 @@ body.color-scheme-options-lilac.theme-light {
 
   --background-secondary-alt-bg-4-bt-publish: #e1d5eb61;
 
-  --scrollbar-thumb: #aa7dd3a8;
-  --scrollbar-thumb-active: #aa7dd3;
+  --scrollbar-thumb-bg: #aa7dd3a8;
+  --scrollbar-active-thumb-bg: #aa7dd3;
 
   --search-result-file-title-color: #5a10a0;
 
@@ -9239,8 +9257,8 @@ body.color-scheme-options-lilac.theme-dark {
   --background-mobile-drawer-2: #1b1b1b69;
   --background-transparent-blue: #003e759a;
 
-  --scrollbar-thumb: #603a8199;
-  --scrollbar-thumb-active: #603a81;
+  --scrollbar-thumb-bg: #603a8199;
+  --scrollbar-active-thumb-bg: #603a81;
 
   --search-result-file-title-color: #a75ac6;
 
@@ -9480,7 +9498,7 @@ body.color-scheme-options-simplicity-topaz.theme-light {
   --background-modifier-border-hr: var(--simple-gray-5);
   --background-secondary-alt-bg-4-bt-publish: var(--simple-gray-5);
 
-  --scrollbar-thumb: var(--simple-gray-5);
+  --scrollbar-thumb-bg: var(--simple-gray-5);
 
   --color-black: var(--simple-black-1);
   --color-dark-gray: var(--simple-gray-1);
@@ -13336,79 +13354,79 @@ body.list-no-border ol>li {
 }
 
 /* Adapted from https://gist.github.com/KillyMXI/cbef8edff6dd55d9e6ea4df66567e9b1 */
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3, .HyperMD-list-line-2):hover)::after,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-2:hover, ~ .HyperMD-list-line-2 ~ :is(.HyperMD-list-line-3, .HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-3, .HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3, .HyperMD-list-line-2):hover)::after,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-2:hover, ~ .HyperMD-list-line-2 ~ :is(.HyperMD-list-line-3, .HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-3, .HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
   --list-threading-offset: calc(4px + 0.12em);
 }
 
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::after,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-3:hover, ~ .HyperMD-list-line-3 ~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::after,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-3:hover, ~ .HyperMD-list-line-3 ~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
   --list-threading-offset: calc(4px + 0.12em + var(--list-indent));
 }
 
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover)::after,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-4:hover, ~ .HyperMD-list-line-4 ~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover)::after,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-4:hover, ~ .HyperMD-list-line-4 ~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
   --list-threading-offset: calc(4px + 0.12em + 2 * var(--list-indent));
 }
 
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover)::after,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-5:hover, ~ .HyperMD-list-line-5 ~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover)::after,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-5:hover, ~ .HyperMD-list-line-5 ~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
   --list-threading-offset: calc(4px + 0.12em + 3 * var(--list-indent));
 }
 
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::after,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-6:hover, ~ .HyperMD-list-line-6 ~ :is(.HyperMD-list-line-7):hover)::before,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7):hover))::before {
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::after,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-6:hover, ~ .HyperMD-list-line-6 ~ :is(.HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7):hover))::before {
   --list-threading-offset: calc(4px + 0.12em + 4 * var(--list-indent));
 }
 
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7):hover)::after,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-7:hover, ~ .HyperMD-list-line-7 ~ :is(.HyperMD-list-line-8):hover)::before,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-7:not(:has(~ .HyperMD-list-line-7 ~ .HyperMD-list-line:hover)):hover::before {
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7):hover)::after,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-7:hover, ~ .HyperMD-list-line-7 ~ :is(.HyperMD-list-line-8):hover)::before,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-7:not(:has(~ .HyperMD-list-line-7 ~ .HyperMD-list-line:hover)):hover::before {
   --list-threading-offset: calc(4px + 0.12em + 5 * var(--list-indent));
 }
 
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::after,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-3:hover, ~ .HyperMD-list-line-3 ~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::after,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-3:hover, ~ .HyperMD-list-line-3 ~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
   filter: hue-rotate(60deg);
 }
 
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover)::after,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-4:hover, ~ .HyperMD-list-line-4 ~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover)::after,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-4:hover, ~ .HyperMD-list-line-4 ~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
   filter: hue-rotate(120deg);
 }
 
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover)::after,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-5:hover, ~ .HyperMD-list-line-5 ~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover)::after,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-5:hover, ~ .HyperMD-list-line-5 ~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
   filter: hue-rotate(180deg);
 }
 
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::after,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-6:hover, ~ .HyperMD-list-line-6 ~ :is(.HyperMD-list-line-7):hover)::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7):hover))::before {
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::after,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-6:hover, ~ .HyperMD-list-line-6 ~ :is(.HyperMD-list-line-7):hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7):hover))::before {
   filter: hue-rotate(240deg);
 }
 
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7):hover)::after,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-7:hover, ~ .HyperMD-list-line-7 ~ :is(.HyperMD-list-line-8):hover)::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-7:not(:has(~ .HyperMD-list-line-7 ~ .HyperMD-list-line:hover)):hover::before {
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7):hover)::after,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-7:hover, ~ .HyperMD-list-line-7 ~ :is(.HyperMD-list-line-8):hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-7:not(:has(~ .HyperMD-list-line-7 ~ .HyperMD-list-line:hover)):hover::before {
   filter: hue-rotate(300deg);
 }
 
 /* tails */
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3, .HyperMD-list-line-2):hover)::after,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::after,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover)::after,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover)::after,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::after,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7):hover)::after {
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3, .HyperMD-list-line-2):hover)::after,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::after,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover)::after,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover)::after,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::after,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7):hover)::after {
   content: "";
   position: absolute;
   left: var(--list-threading-offset);
@@ -13417,17 +13435,17 @@ body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-6:
   width: var(--bt-colorful-indentation-width-hover);
   background-color: var(--list-colorful-marker);
 }
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line.HyperMD-task-line::after {
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line.HyperMD-task-line::after {
   max-height: calc(100% - 1.2em);
 }
 
 /* in-between lines */
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-2:hover, ~ .HyperMD-list-line-2 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::before,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-3:hover, ~ .HyperMD-list-line-3 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover)::before,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-4:hover, ~ .HyperMD-list-line-4 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover)::before,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-5:hover, ~ .HyperMD-list-line-5 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::before,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-6:hover, ~ .HyperMD-list-line-6 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::before,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-7:hover)::before {
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-2:hover, ~ .HyperMD-list-line-2 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::before,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-3:hover, ~ .HyperMD-list-line-3 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover)::before,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-4:hover, ~ .HyperMD-list-line-4 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover)::before,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-5:hover, ~ .HyperMD-list-line-5 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::before,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-6:hover, ~ .HyperMD-list-line-6 ~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::before,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-7:hover)::before {
   content: "";
   position: absolute;
   left: var(--list-threading-offset);
@@ -13438,12 +13456,12 @@ body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-6:
 }
 
 /* elbows */
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover))::before,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover))::before,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover))::before,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover))::before,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7):hover))::before,
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-7:not(:has(~ .HyperMD-list-line-7 ~ .HyperMD-list-line:hover)):hover::before {
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover))::before,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover))::before,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover))::before,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover))::before,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7):hover))::before,
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line-7:not(:has(~ .HyperMD-list-line-7 ~ .HyperMD-list-line:hover)):hover::before {
   content: "";
   position: absolute;
   left: var(--list-threading-offset);
@@ -13454,12 +13472,12 @@ body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-7:
   border-bottom: var(--bt-colorful-indentation-width-hover) solid var(--list-colorful-marker);
   border-left: var(--bt-colorful-indentation-width-hover) solid var(--list-colorful-marker);
 }
-body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line.HyperMD-task-line::before {
+body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) div:not([data-callout="kanban"]) .HyperMD-list-line.HyperMD-task-line::before {
   max-width: calc(var(--list-indent) - 0.35em);
 }
 
-body.bt-colorful-indentation-lines.bt-indentation-line-gradient ul ul::before,
-body.bt-colorful-indentation-lines.bt-indentation-line-gradient ol ol::before  {
+body.bt-colorful-indentation-lines.bt-indentation-line-gradient div:not([data-callout="kanban"]) ul ul::before,
+body.bt-colorful-indentation-lines.bt-indentation-line-gradient div:not([data-callout="kanban"]) ol ol::before  {
   border-right-color: var(--list-colorful-marker) !important;
   border-image: linear-gradient(var(--bt-indentation-gradient-color-1), var(--bt-indentation-gradient-color-2)) 10;
 }
@@ -13556,8 +13574,8 @@ body.bt-connected-indent-hover .markdown-preview-view:not(.kanban) li {
 }
 
 /* In-between items */
-body.bt-connected-indent-hover .markdown-preview-view:not(.kanban) li > :is(ul, ol) > li:has(~ li:hover)::before,
-body.bt-connected-indent-hover .markdown-preview-view:not(.kanban) :is(ul, ol):has(~ *:hover) > li::before {
+body.bt-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li > :is(ul, ol) > li:has(~ li:hover)::before,
+body.bt-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) :is(ul, ol):has(~ *:hover) > li::before {
   content: "";
   position: absolute;
   background-color: var(--list-colorful-marker);
@@ -13568,7 +13586,7 @@ body.bt-connected-indent-hover .markdown-preview-view:not(.kanban) :is(ul, ol):h
 }
 
 /* Elbows items */
-body.bt-connected-indent-hover .markdown-preview-view:not(.kanban) li > :is(ul, ol) > li:hover::before {
+body.bt-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li > :is(ul, ol) > li:hover::before {
   content: "";
   position: absolute;
   background-color: transparent;
@@ -13581,38 +13599,38 @@ body.bt-connected-indent-hover .markdown-preview-view:not(.kanban) li > :is(ul, 
   border-left: var(--bt-colorful-indentation-width-hover) solid var(--list-colorful-marker);
 }
 
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) li > :is(ul, ol) > li > :is(ul, ol) > li:has( ~ li:hover)::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) .markdown-preview-view:not(.kanban) li:hover > :is(ul, ol) > li > ul:has(+ ol) > li::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover li:hover > :is(ul, ol) > li > ol:has(+ ul) > li::before {
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li > :is(ul, ol) > li > :is(ul, ol) > li:has( ~ li:hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li:hover > :is(ul, ol) > li > ul:has(+ ol) > li::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li:hover > :is(ul, ol) > li > ol:has(+ ul) > li::before {
   filter: hue-rotate(60deg);
 }
 
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:has( ~ li:hover)::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) li:hover > :is(ul, ol) > li > :is(ul, ol) > li > ul:has(+ ol) > li::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) li:hover > :is(ul, ol) > li > :is(ul, ol) > li > ol:has(+ ul) > li::before {
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:has( ~ li:hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li:hover > :is(ul, ol) > li > :is(ul, ol) > li > ul:has(+ ol) > li::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li:hover > :is(ul, ol) > li > :is(ul, ol) > li > ol:has(+ ul) > li::before {
   filter: hue-rotate(120deg);
 }
 
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) >li:has( ~ li:hover)::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ul:has(+ ol) > li::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ol:has(+ ul) > li::before {
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) >li:has( ~ li:hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ul:has(+ ol) > li::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ol:has(+ ul) > li::before {
   filter: hue-rotate(180deg);
 }
 
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) >li:has( ~ li:hover)::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ul:has(+ ol) > li::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ol:has(+ ul) > li::before {
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) >li:has( ~ li:hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ul:has(+ ol) > li::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ol:has(+ ul) > li::before {
   filter: hue-rotate(240deg);
 }
 
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:has( ~ li:hover)::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ul:has(+ ol) > li::before,
-body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ol:has(+ ul) > li::before {
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:has( ~ li:hover)::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li:hover::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ul:has(+ ol) > li::before,
+body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .markdown-preview-view:not(.kanban) .callout:not([data-callout="kanban"]) li:hover > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > :is(ul, ol) > li > ol:has(+ ul) > li::before {
   filter: hue-rotate(300deg);
 }
 
@@ -16455,19 +16473,17 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
   border: 3px solid transparent;
   border-width: 3px 2px 3px 3px;
   min-height: 65px;
-  background-color: var(--scrollbar-thumb);
+  background-color: var(--scrollbar-thumb-bg);
   border: 3.5px solid transparent !important;
 }
 
 body:not(.native-scrollbars) ::-webkit-scrollbar {
-  background-color: transparent;
-  width: 13px;
-  height: 13px;
+  background: transparent;
 }
 
 body:not(.native-scrollbars) textarea:hover::-webkit-scrollbar-thumb:active,
 body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-thumb-active);
+  background: var(--scrollbar-active-thumb-bg);
 }
 
 body.remove-scrollbars ::-webkit-scrollbar-thumb {
@@ -16493,21 +16509,21 @@ body.body:not(.is-mobile).hover-scrollbars :is(.vertical-tab-header, .vertical-t
   overflow-y: overlay;
 }
 body.body:not(.is-mobile).hover-scrollbars :is(.vertical-tab-header, .vertical-tab-content, .nav-files-container, .view-content, .search-result-container, .git-view-body, .workspace-leaf-content[data-type=markdown] .cm-scroller, .markdown-preview-view, .suggestion-container .suggestion, .prompt-results, .markdown-embed-content, .community-modal-search-results-wrapper,.community-modal-info,.tag-container):hover {
-  color: var(--scrollbar-thumb);
+  color: var(--scrollbar-thumb-bg);
 }
 body.body:not(.is-mobile).hover-scrollbars :is(.vertical-tab-header, .vertical-tab-content, .nav-files-container, .view-content, .search-result-container, .git-view-body, .workspace-leaf-content[data-type=markdown] .cm-scroller, .markdown-preview-view, .suggestion-container .suggestion, .prompt-results, .community-modal-search-results-wrapper,.tag-container) > :not(h1, h2, h3, h4, h5, h6) {
   color: var(--text-normal);
 }
 
 body.body:not(.is-mobile).hover-scrollbars :is(.vertical-tab-header, .vertical-tab-content, .nav-files-container, .view-content, .search-result-container, .git-view-body, .workspace-leaf-content[data-type=markdown] .cm-scroller, .markdown-preview-view, .suggestion-container .suggestion, .prompt-results, .markdown-embed-content, .community-modal-search-results-wrapper,.community-modal-info,.tag-container)::-webkit-scrollbar-thumb:active {
-  background-color: var(--scrollbar-thumb-active) !important;
+  background-color: var(--scrollbar-active-thumb-bg) !important;
 }
 
 body.body:not(.is-mobile).hover-scrollbars .popover.hover-popover > .markdown-embed > .markdown-embed-content > .markdown-preview-view {
   color: transparent !important;
 }
 body.body:not(.is-mobile).hover-scrollbars .popover.hover-popover > .markdown-embed > .markdown-embed-content > .markdown-preview-view:hover {
-  color: var(--scrollbar-thumb) !important;
+  color: var(--scrollbar-thumb-bg) !important;
 }
 
 
@@ -16966,6 +16982,7 @@ button.copy-code-button:hover {
   padding: 8px 11px 0 !important;
 }
 
+
 .kanban-plugin__checkbox-wrapper {
   background: var(--background-transparent-black-or-white-2);
 }
@@ -17054,24 +17071,38 @@ button.kanban-plugin__new-item-button:hover {
 
 .theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+1) {
   background: linear-gradient(to bottom, var(--kanban-color-1) 60%, transparent);
+  --scrollbar-thumb-bg: color-mix(in srgb, var(--kanban-color-1), transparent 60%);
+  --scrollbar-active-thumb-bg: var(--kanban-color-1);
 }
 .theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+2) {
   background: linear-gradient(to bottom, var(--kanban-color-2) 60%, transparent);
+  --scrollbar-thumb-bg: color-mix(in srgb, var(--kanban-color-2), transparent 60%);
+  --scrollbar-active-thumb-bg: var(--kanban-color-2);
 }
 .theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+3) {
   background: linear-gradient(to bottom, var(--kanban-color-3) 60%, transparent);
+  --scrollbar-thumb-bg: color-mix(in srgb, var(--kanban-color-3), transparent 60%);
+  --scrollbar-active-thumb-bg: var(--kanban-color-3);
 }
 .theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+4) {
   background: linear-gradient(to bottom, var(--kanban-color-4) 60%, transparent);
+  --scrollbar-thumb-bg: color-mix(in srgb, var(--kanban-color-4), transparent 60%);
+  --scrollbar-active-thumb-bg: var(--kanban-color-4);
 }
 .theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+5) {
   background: linear-gradient(to bottom, var(--kanban-color-5) 60%, transparent);
+  --scrollbar-thumb-bg: color-mix(in srgb, var(--kanban-color-5), transparent 60%);
+  --scrollbar-active-thumb-bg: var(--kanban-color-5);
 }
 .theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+6) {
   background: linear-gradient(to bottom, var(--kanban-color-6) 60%, transparent);
+  --scrollbar-thumb-bg: color-mix(in srgb, var(--kanban-color-6), transparent 60%);
+  --scrollbar-active-thumb-bg: var(--kanban-color-6);
 }
 .theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+0) {
   background: linear-gradient(to bottom, var(--kanban-color-7) 60%, transparent);
+  --scrollbar-thumb-bg: color-mix(in srgb, var(--kanban-color-7), transparent 60%);
+  --scrollbar-active-thumb-bg: var(--kanban-color-7);
 }
 
 body.style-options-for-kanban-plugin-static-all-color.theme-light {
@@ -17086,24 +17117,38 @@ body.style-options-for-kanban-plugin-static-all-color.theme-light {
 
 body.style-options-for-kanban-plugin-static-all-color.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+1) {
   background: linear-gradient(to bottom, var(--kanban-color-1) 30%,  transparent) !important;
+  --scrollbar-thumb-bg: color-mix(in srgb, var(--kanban-color-1), transparent 60%);
+  --scrollbar-active-thumb-bg: var(--kanban-color-1);
 }
 body.style-options-for-kanban-plugin-static-all-color.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+2) {
   background: linear-gradient(to bottom, var(--kanban-color-2) 30%,  transparent) !important;
+  --scrollbar-thumb-bg: color-mix(in srgb, var(--kanban-color-2), transparent 60%);
+  --scrollbar-active-thumb-bg: var(--kanban-color-2);
 }
 body.style-options-for-kanban-plugin-static-all-color.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+3) {
   background: linear-gradient(to bottom, var(--kanban-color-3) 30%,  transparent) !important;
+  --scrollbar-thumb-bg: color-mix(in srgb, var(--kanban-color-3), transparent 60%);
+  --scrollbar-active-thumb-bg: var(--kanban-color-3);
 }
 body.style-options-for-kanban-plugin-static-all-color.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+4) {
   background: linear-gradient(to bottom, var(--kanban-color-4) 30%,  transparent) !important;
+  --scrollbar-thumb-bg: color-mix(in srgb, var(--kanban-color-4), transparent 60%);
+  --scrollbar-active-thumb-bg: var(--kanban-color-4);
 }
 body.style-options-for-kanban-plugin-static-all-color.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+5) {
   background: linear-gradient(to bottom, var(--kanban-color-5) 30%,  transparent) !important;
+  --scrollbar-thumb-bg: color-mix(in srgb, var(--kanban-color-5), transparent 60%);
+  --scrollbar-active-thumb-bg: var(--kanban-color-5);
 }
 body.style-options-for-kanban-plugin-static-all-color.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+6) {
   background: linear-gradient(to bottom, var(--kanban-color-6) 30%,  transparent) !important;
+  --scrollbar-thumb-bg: color-mix(in srgb, var(--kanban-color-6), transparent 60%);
+  --scrollbar-active-thumb-bg: var(--kanban-color-6);
 }
 body.style-options-for-kanban-plugin-static-all-color.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+0) {
   background: linear-gradient(to bottom, var(--kanban-color-7) 30%,  transparent) !important;
+  --scrollbar-thumb-bg: color-mix(in srgb, var(--kanban-color-7), transparent 60%);
+  --scrollbar-active-thumb-bg: var(--kanban-color-7);
 }
 body.style-options-for-kanban-plugin-static-all-color .kanban-plugin__item-title-wrapper {
   background: transparent !important;
@@ -17211,6 +17256,8 @@ body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plu
 
 body.style-options-for-kanban-plugin-static-plain .kanban-plugin__lane-wrapper {
   background: unset !important;
+  --scrollbar-thumb-bg: unset !important;
+  --scrollbar-active-thumb-bg: unset !important;
 }
 
 body.style-options-for-kanban-plugin-static-plain .kanban-plugin__lane {
@@ -17218,7 +17265,8 @@ body.style-options-for-kanban-plugin-static-plain .kanban-plugin__lane {
 }
 
 body.style-options-for-kanban-plugin-static-plain .kanban-plugin__lane-header-wrapper {
-  background: var(--background-transparent-black-or-white-2) !important;
+  background: unset !important;
+  border-bottom: 1px solid  var(--background-modifier-border) !important;
 }
 
 body.style-options-for-kanban-plugin-static-plain.theme-dark .kanban-plugin__lane-header-wrapper,
@@ -21915,26 +21963,23 @@ body.background-image-settings-switch.toggle-nonoverlapping-bg .workspace-split.
   background-size: 100% 100%;
 }
 
-body.background-notebook-liked-switch .markdown-embed :is(.markdown-preview-view, .markdown-rendered:not(.show-indentation-guide)) {
-  background-image: unset !important;
+body.background-notebook-liked-switch .markdown-embed :is(.markdown-preview-view, .markdown-rendered),
+body.background-notebook-liked-switch .cm-s-obsidian .cm-embed-block {
+  background: inherit !important;
 }
-body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-1 :is(.markdown-preview-view, .markdown-rendered:not(.show-indentation-guide)),
+body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-1 .markdown-rendered:not(:is(.community-modal-readme,.show-indentation-guide)),
 body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-1 .cm-s-obsidian .cm-scroller {
   background: var(--bg-color-notebook);
   background-image: linear-gradient(90deg, var(--grid-notebook-line-color-1) 3%, transparent 0), linear-gradient(var(--grid-notebook-line-color-1) 3%, transparent 0);
   background-size: 20px 20px;
 }
 
-body:not(.toggle-fixed-pattern).background-notebook-liked-switch .markdown-rendered:not(.show-indentation-guide),
+body:not(.toggle-fixed-pattern).background-notebook-liked-switch .markdown-rendered:not(:is(.community-modal-readme,.show-indentation-guide)),
 body:not(.toggle-fixed-pattern).background-notebook-liked-switch .cm-s-obsidian .cm-scroller {
   background-attachment: local !important;
 }
 
-body.background-notebook-liked-switch .cm-s-obsidian .cm-embed-block {
-  background: inherit;
-}
-
-body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-1 :is(.markdown-preview-view, .markdown-rendered:not(.show-indentation-guide)),
+body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-1 .markdown-rendered:not(:is(.community-modal-readme,.show-indentation-guide)),
 body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-1 .cm-s-obsidian .cm-scroller {
   background: var(--bg-color-notebook);
   background-image: radial-gradient(var(--dotted-notebook-dot-color) 10%, transparent 0);
@@ -21942,7 +21987,7 @@ body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebo
   background-position: 8px 8px;
 }
 
-body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-2 :is(.markdown-preview-view, .markdown-rendered:not(.show-indentation-guide)),
+body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-2 .markdown-rendered:not(:is(.community-modal-readme,.show-indentation-guide)),
 body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-2 .cm-s-obsidian .cm-scroller {
   background: var(--bg-color-notebook);
   background-image: radial-gradient(var(--dotted-notebook-dot-color) 10%, transparent 0),
@@ -21952,7 +21997,7 @@ body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebo
 }
 
 /*https://www.jianshu.com/p/2b713844cfe9*/
-body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-2 :is(.markdown-preview-view, .markdown-rendered:not(.show-indentation-guide)),
+body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-2 .markdown-rendered:not(:is(.community-modal-readme,.show-indentation-guide)),
 body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-2 .cm-s-obsidian .cm-scroller {
   background: var(--bg-color-notebook);
   background-image:
@@ -21964,25 +22009,25 @@ body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook
     transparent 0);
   background-size: 75px 75px, 75px 75px, 15px 15px, 15px 15px;
 }
-body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1 :is(.markdown-preview-view, .markdown-rendered:not(.show-indentation-guide)),
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1 .markdown-rendered:not(:is(.community-modal-readme,.show-indentation-guide)),
 body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1 .cm-s-obsidian .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image: repeating-linear-gradient(135deg,
   hsla(0,0%,100%,.03), hsla(0,0%,100%,.03) 13px, transparent 0, transparent 30px);
 }
-body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1.theme-light :is(.markdown-preview-view, .markdown-rendered:not(.show-indentation-guide)),
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1.theme-light .markdown-rendered:not(:is(.community-modal-readme,.show-indentation-guide)),
 body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1.theme-light .cm-s-obsidian .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image: repeating-linear-gradient(135deg,
   hsla(0,0%,100%,.3), hsla(0,0%,100%,.3) 13px, transparent 0, transparent 30px);
 }
-body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2 :is(.markdown-preview-view, .markdown-rendered:not(.show-indentation-guide)),
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2 .markdown-rendered:not(:is(.community-modal-readme,.show-indentation-guide)),
 body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2 .cm-s-obsidian .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image:repeating-linear-gradient(45deg,
   hsla(0,0%,100%,.025), hsla(0,0%,100%,.025) 20px, transparent 0, transparent 60px), repeating-linear-gradient(-45deg, hsla(0,0%,100%,.025), hsla(0,0%,100%,.025) 20px, transparent 0, transparent 60px);
 }
-body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2.theme-light :is(.markdown-preview-view, .markdown-rendered:not(.show-indentation-guide)),
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2.theme-light .markdown-rendered:not(:is(.community-modal-readme,.show-indentation-guide)),
 body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2.theme-light .cm-s-obsidian .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image:repeating-linear-gradient(45deg,
