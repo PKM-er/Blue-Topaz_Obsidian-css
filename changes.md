@@ -2,6 +2,13 @@
 
 ### 20231114
 
+1. 继续修复Connected indent lines在伪看板中不启用
+2. 修改列表默认颜色，调整多彩样式
+3. 增加Connected indent lines颜色设置
+4. 其他细节微调
+
+### 20231114
+
 1. Connected indent lines调整，在伪看板中不启用
 2. Kanban插件优化显示
 3. 增加滚动条颜色设置
