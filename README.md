@@ -3,8 +3,13 @@
  * @Date: 2023-06-28 13:36:53
  * @LastEditors: cumany cuman@qq.com
  * @LastEditTime: 2023-06-30 13:49:32
- * @Description: 
+ * @Description:
 -->
+
+> Attention！Don't upgrade! Don't upgrade! Don't upgrade! Due to obsidian's policy of not being able to use online or local vault images, all configuration about images is no longer available.Now that the BT theme has become very expensive to maintain with obsidian ontology changes and policy implications, the theme will be streamlined and no longer offer diverse configuration options.At the same time obsidian stated that the theme will be removed in January next year, but the developers have limited time and energy, in order not to let the partners who love Blue topaz disappointed, had to update this version. bt theme will be resumed in the future by the love of bt after the reconstruction of the update.
+
+> 注意！请勿升级，请勿升级，请勿升级。由于 obsidian 的政策，不能使用在线或本地库里的图片，所有图片配置设置均已失效。如今 BT 主题随着 obsidian 本体变动和政策影响维护成本变得非常高，后续将精简主题并不再提供多样化的配置选项。再次强调，最新版的主题中，图片相关设置均已失效。同时 obsidian 声明将在明年一月下架该主题，但开发者时间精力有限，为了不让喜爱 Blue topaz 的伙伴失望，不得已更新此版本。BT 主题将在未来由热爱 BT 的人重构后重新恢复更新。
+
 You will find a Blue Topaz example vault (the TIPS vault) here. The TIPS vault shows some theme-specific and novel usages which may help you polish or customize your notes.
 
 [中文版主题用法库](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/blob/master/TIPS%20vault/TIPS%20for%20Blue%20Topaz_Chinese.zip)
@@ -16,6 +21,7 @@ And I still recommend you the enhanced edition (https://github.com/cumany/Blue-t
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/whyi)
 
 ---
+
 If you want to distribute the whole or parts of the above codes, please copy & paste the following sentences in your CSS file(s) and README.md:
 
 Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/PKM-er/Blue-Topaz_Obsidian-css), and I would like to express my appreciation to WhyI (https://github.com/whyt-byte) and pkmer.cn (https://pkmer.cn).
@@ -23,12 +29,13 @@ Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/
 ---
 
 # 示例 Demo vault
+
 感谢[@cumany](https://github.com/cumany) 制作的升级版示例库 https://github.com/cumany/Blue-topaz-examples
 
-如果有问题、建议或者想实现的需求，请加入Topaz社区[Topaz QQ群](https://jq.qq.com/?_wv=1027&k=TWGhXs40) 
- [Obsidian频道](https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=zHpby&from=246610&biz=ka)
+如果有问题、建议或者想实现的需求，请加入 Topaz 社区[Topaz QQ 群](https://jq.qq.com/?_wv=1027&k=TWGhXs40)
+[Obsidian 频道](https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=zHpby&from=246610&biz=ka)
 
-目前我们新建了一个开源的知识管理社区欢迎加入，点击链接加入群聊 [PKMer知识管理交流群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=lFMOfZnt5K07XWn8Y9Hs8skhmf8HaAwh&authKey=jWoLY%2BmDy5kqEEFs4%2FcVgIySwUXuwM6EyJvu4LCqJ9uFUgG2h1k4u3l6qC8i2AcO&noverify=0&group_code=825255377)
+目前我们新建了一个开源的知识管理社区欢迎加入，点击链接加入群聊 [PKMer 知识管理交流群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=lFMOfZnt5K07XWn8Y9Hs8skhmf8HaAwh&authKey=jWoLY%2BmDy5kqEEFs4%2FcVgIySwUXuwM6EyJvu4LCqJ9uFUgG2h1k4u3l6qC8i2AcO&noverify=0&group_code=825255377)
 
 微信群：
 ![](https://cdn.pkmer.cn/images/wechatqrcode.png!nomark)
@@ -51,10 +58,9 @@ https://user-images.githubusercontent.com/72023275/198887920-575d0735-2433-41ff-
 
 %%
 
-（视频作者：@代号7）
+（视频作者：@代号 7）
 
 ![](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/preview_Blue%20Topaz.png)
-
 
 # Default style (Style Settings installed)
 
@@ -67,6 +73,7 @@ https://user-images.githubusercontent.com/72023275/198887920-575d0735-2433-41ff-
 ![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/371427dc-a5e3-4db4-81de-f31ea9e532d4)
 
 # Background image
+
 ## For workplace
 
 ![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/9403f704-d983-4aa6-9196-239304ca8314)
@@ -98,11 +105,11 @@ You can set the same image as your workplace background when you have activated 
 ![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/7013642a-da37-4a5f-a58d-fd165a473913)
 
 # Layout
+
 ## Colorful titlebar
 
 ![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/efeb47b8-22d6-4e70-a157-82ccd2ea24a8)
 ![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/e4be0e17-dc2f-4d46-b5a3-72c95758efee)
-
 
 # PDF
 
@@ -110,27 +117,27 @@ You can set the same image as your workplace background when you have activated 
 
 ![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/3bc69e78-2665-468c-95d0-5f4dd995b720)
 
-
 # 插件 Plugin
-强烈建议安装Style Settings插件，用来自定义你的Blue Topaz
+
+强烈建议安装 Style Settings 插件，用来自定义你的 Blue Topaz
 It is highly recommended to install the style settings plugin to customize your Blue Topaz theme
 ![image](https://user-images.githubusercontent.com/72023275/148892207-ffbbb363-1a43-4267-a3f9-d95ee7cc9bd9.png)
 
-
 # 字体 (fonts)
+
 中文：霞鹜文楷，免费开源，下载地址：https://github.com/lxgw/LxgwWenKai 觉得喜欢的话，也请给这个项目星星。加粗字体请使用霞鹜文楷屏幕版（因为霞鹜文楷的加粗不是很明显）https://github.com/lxgw/LxgwWenKai-Screen
 
 # 更新内容
+
 [这里查看](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/changes.md)
 
-
 # 捐赠 Support
-如果觉得主题很棒，可以支持一下，谢谢！  关注 [pkmer.cn](https://pkmer.cn/)
+
+如果觉得主题很棒，可以支持一下，谢谢！   关注 [pkmer.cn](https://pkmer.cn/)
 
 支付宝
 
 <img src="https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/4a8f9a6d-5156-4071-9a80-898b77b74ba3" width="200">
-
 
 ---
 
@@ -138,6 +145,6 @@ Buy me a coffee
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/whyi)
 
-
 # Acknowledgements
+
 I appreciate the help and support from @boninall @成雙醬 @Cuman @Klaas @lillian-who @shaggyfeng @Thinkbond @, and other cool guys who love Blue Topaz!

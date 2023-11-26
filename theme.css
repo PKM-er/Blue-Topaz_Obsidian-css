@@ -34,6 +34,13 @@ name: 🥑Blue Topaz Theme
 id: blue-topaz-theme
 settings:
   -
+    id: attension
+    title: Attention！Due to obsidian's policy of not being able to use online or local vault images, all configuration about images is no longer available.Now that the BT theme has become very expensive to maintain with obsidian ontology changes and policy implications, the theme will be streamlined and no longer offer diverse configuration options.
+    title.zh: 注意！由于obsidian的政策，不能使用在线或本地库里的图片，所有图片配置设置均已失效。如今BT主题随着obsidian本体变动和政策影响维护成本变得非常高，后续将精简主题并不再提供多样化的配置选项。
+    type: heading
+    level: 1
+    collapsed: false
+  -
     id: background-settings
     title: 1. General settings
     title.zh: 1. 整体性设置
@@ -376,29 +383,29 @@ settings:
   -
     id: background-markdown-page-theme-light-custom
     title: Custom image (Light mode)
-    description: Customise the background image. Use the format in the Default below for an Online image. 
-    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。
+    description: Due to obsidian's policy of not being able to use online images, this configuration is no longer available. 
+    description.zh: 由于obsidian的政策，不能使用在线图片，此配置已失效。
     type: variable-text
-    default: url("https://")
+    default: 
   -
     id: background-markdown-page-theme-dark-custom
     title: Custom image (Dark mode)
-    description: Customise the background image. Use the format in the Default below for an Online image. 
-    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。
+    description: Due to obsidian's policy of not being able to use online images, this configuration is no longer available.
+    description.zh: 由于obsidian的政策，不能使用在线图片，此配置已失效。
     type: variable-text
-    default: url("https://")
+    default: 
   -
     id: background-image-settings-markdown-page-random
     title: Random background
     title.zh: 随机背景
-    description: Images will be refreshed when Obsidian launches; nInternet connection required
-    description.zh: 图片在Obsidian打开时刷新；需要联网
+    description: Due to obsidian's policy of not being able to use online images, this configuration is no longer available.
+    description.zh: 由于obsidian的政策，不能使用在线图片，此配置已失效。
     type: class-toggle
     default: false
   -
     id: background-image-settings-markdown-page-random-options
     title: Random image with a certain color
-    title.zh: 特定颜色的随机背景
+    title.zh: 由于obsidian的政策，不能使用在线图片，此配置已失效。
     type: class-select
     allowEmpty: false
     default: background-image-settings-markdown-page-random-default
@@ -406,24 +413,6 @@ settings:
       -
         label: None
         value: background-image-settings-markdown-page-random-default
-      -
-        label: Blue
-        value: background-image-settings-markdown-page-random-blue
-      -
-        label: Green
-        value: background-image-settings-markdown-page-random-green
-      -
-        label: Pink
-        value: background-image-settings-markdown-page-random-pink
-      -
-        label: Purple
-        value: background-image-settings-markdown-page-random-purple
-      -
-        label: Red
-        value: background-image-settings-markdown-page-random-red
-      -
-        label: Yellow and Orange
-        value: background-image-settings-markdown-page-random-yellow-and-orange
   -
     id: background-notebook-liked-switch
     title: Toggle notebook-liked background
@@ -543,17 +532,17 @@ settings:
   -
     id: background-command-palette-theme-light-custom
     title: Custom theme (light, url)
-    description: Customise the background image. Use the format in the Default below for an Online image. 
-    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。
+    description: Due to obsidian's policy of not being able to use online images, this configuration is no longer available.
+    description.zh: 由于obsidian的政策，不能使用在线图片，此配置已失效。
     type: variable-text
-    default: url("https://")
+    default: 
   -
     id: background-command-palette-theme-dark-custom
     title: Custom theme (dark, url)
-    description: Customise the background image. Use the format in the Default below for an Online image. 
-    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。
+    description: Due to obsidian's policy of not being able to use online images, this configuration is no longer available.
+    description.zh: 由于obsidian的政策，不能使用在线图片，此配置已失效。
     type: variable-text
-    default: url("https://")
+    default: 
   -
     id: blur-depth-cp
     title: Blur radius
@@ -648,10 +637,10 @@ settings:
   -
     id: background-panel-page-theme-light-custom
     title: Custom image (Light mode)
-    description: Customise the background image. Use the format in the Default below for an Online image.
-    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。
+    description: Due to obsidian's policy of not being able to use online images, this configuration is no longer available.
+    description.zh: 由于obsidian的政策，不能使用在线图片，此配置已失效。
     type: variable-text
-    default: url("https://")
+    default: 
   -
     id: bg-panel-page-option-dark
     title: Image picking (Dark mode)
@@ -681,10 +670,10 @@ settings:
   -
     id: background-panel-page-theme-dark-custom
     title: Custom image (Dark mode)
-    description: Customise the background image. Use the format in the Default below for an Online image. 
-    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置网络图片。
+    description: Due to obsidian's policy of not being able to use online images, this configuration is no longer available.
+    description.zh: 由于obsidian的政策，不能使用在线图片，此配置已失效。
     type: variable-text
-    default: url("https://")
+    default: 
   -
     id: layout-settings
     title: 1.3 Layout
@@ -2215,12 +2204,6 @@ settings:
     default-light: '#'
     default-dark: '#'
   -
-    id: inline-title-bg-url
-    title: Inline title background image (url)
-    title.zh: 页面内标题背景图片 (url)
-    type: variable-text
-    default: "url(https://)"
-  -
     id: inline-title-text-align-settings
     title: Inline title text-align
     title.zh: 页面内标题位置
@@ -2858,12 +2841,6 @@ settings:
     title.zh: 彩色层级线宽度 （阅读）
     type: variable-text
     default: 1px
-  -
-    id: bt-indentation-line-image
-    title: Add an image as indentation lines (Reading)
-    title.zh: 层级线背景图片 （阅读）
-    type: variable-text
-    default: url("https://")
   -
     id: folder-style-change-options-folder
     title: 2.3.3 Folder
@@ -3678,11 +3655,6 @@ settings:
     level: 4
     collapsed: true
   -
-    id: loading-page-custom-gif-url
-    title: Custom loading page image/animation
-    type: variable-text
-    default: url(https://)
-  -
     id: loading-page-custom-gif-caption
     title: Image caption
     type: variable-text
@@ -3693,11 +3665,6 @@ settings:
     type: heading
     level: 4
     collapsed: true
-  -
-    id: loading-page-custom-gif-url-alt
-    title: Custom loading page image/animation
-    type: variable-text
-    default: url(https://cdn.dribbble.com/users/53712/screenshots/9948351/media/2397850c7727f8e70b0ec50b5a83fe76.gif)
   -
     id: loading-page-custom-gif-caption-alt
     title: Image caption
@@ -5502,14 +5469,6 @@ body {
   --radius-m: 7px;
   --radius-l: 15px;
 
-  --background-settings-workplace-theme-light-custom: url("https://");
-  --background-settings-workplace-theme-dark-custom: url("https://");
-  --background-command-palette-theme-light-custom: url("https://");
-  --background-command-palette-theme-dark-custom: url("https://");
-  --background-panel-page-theme-dark-custom: url("https://");
-  --background-panel-page-theme-light-custom: url("https://");
-  --background-markdown-page-theme-dark-custom: url("https://");
-  --background-markdown-page-theme-light-custom: url("https://");
   --blur-depth: 10px;
   --blur-depth-cp: 10px;
   --saturate-4-bg: 1;
@@ -5548,8 +5507,6 @@ body {
   --loading-diy-text-color: var(--text-normal);
   --loading-page-custom-gif-caption: " ";
   --loading-page-custom-gif-caption-alt: " ";
-  --loading-page-custom-gif-url: url(https://);
-  --loading-page-custom-gif-url-alt: url(https://cdn.dribbble.com/users/53712/screenshots/9948351/media/2397850c7727f8e70b0ec50b5a83fe76.gif);
   --loading-text-before: "❀✿";
   --loading-text-after: "✿❀";
   --loading-add-text-color: #d47e86;
@@ -6038,7 +5995,6 @@ body.all-dark-pdf .print.theme-light,
   --background-titlebar-inner: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 10%);
   --window-shadow: 0 1px 3px hsla(207, 10%, 10%, 0.1);
   --window-shadow2:	0 0 9px hsla(212, 17%, 0%, 0.3);
-  --bt-indentation-line-image: url("https://images.unsplash.com/photo-1511512608152-b60215d0dd61?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=1770");
   --bt-connected-indent-line-color: #926a6a;
   --list-colorful-marker: #ff8686;
 }
@@ -6381,7 +6337,6 @@ body.all-dark-pdf .print.theme-light,
   --background-titlebar-inner: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 10%);
   --window-shadow: 0 1px 3px hsla(212, 17%, 80%, 0.2);
   --window-shadow2: 0 0 9px hsla(217, 15%, 83%, 0.7);
-  --bt-indentation-line-image: url("https://images.unsplash.com/photo-1579546928686-286c9fbde1ec?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=1839");
   --bt-connected-indent-line-color: #FFA8A8;
   --list-colorful-marker: #fd4949;
 }
@@ -17165,104 +17120,17 @@ body.style-options-for-kanban-plugin-static-all-color .kanban-plugin__item-title
   background: transparent !important;
 }
 
-body.style-options-for-kanban-plugin-static-all-image-one.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+1) {
-  background-image: url("https://images.unsplash.com/photo-1486520299386-6d106b22014b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80");
-}
-body.style-options-for-kanban-plugin-static-all-image-one.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+2) {
-  background-image: url("https://images.unsplash.com/photo-1528919699453-27d2dcfbdf06?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=753&q=80");
-}
-body.style-options-for-kanban-plugin-static-all-image-one.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+3) {
-  background-image: url("https://images.unsplash.com/photo-1528919880398-4af90c12ac1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=894&q=80");
-}
-body.style-options-for-kanban-plugin-static-all-image-one.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+4) {
-  background-image: url("https://images.unsplash.com/photo-1538947151057-dfe933d688d1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
-}
-body.style-options-for-kanban-plugin-static-all-image-one.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+5) {
-  background-image: url("https://images.unsplash.com/photo-1565942443747-031188e6e56c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
-}
-body.style-options-for-kanban-plugin-static-all-image-one.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+6) {
-  background-image: url("https://images.unsplash.com/photo-1549279866-41b2b21a0de4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=747&q=80");
-}
-body.style-options-for-kanban-plugin-static-all-image-one.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+0) {
-  background-image: url("https://images.unsplash.com/photo-1536147116438-62679a5e01f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80");
-}
 
 body.style-options-for-kanban-plugin-static-all-image-one.theme-dark .kanban-plugin__lane-wrapper {
   background-repeat: no-repeat;
   background-size: cover;
 }
-body.style-options-for-kanban-plugin-static-all-image-one.theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+1) {
-  background-image: url("https://images.unsplash.com/photo-1595520519880-a86c48ea536c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZGFyayUyMGJsdWV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.style-options-for-kanban-plugin-static-all-image-one.theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+2) {
-  background-image: url("https://images.unsplash.com/photo-1593959734793-6e92d102da1e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZGFyayUyMGJsdWV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.style-options-for-kanban-plugin-static-all-image-one.theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+3) {
-  background-image: url("https://images.unsplash.com/photo-1593270573246-2dca2f2c1c43?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZGFyayUyMGJsdWV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.style-options-for-kanban-plugin-static-all-image-one.theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+4) {
-  background-image: url("https://images.unsplash.com/photo-1604838656896-171d9d737cbe?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODd8fGRhcmslMjBibHVlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.style-options-for-kanban-plugin-static-all-image-one.theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+5) {
-  background-image: url("https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODZ8fGRhcmslMjBibHVlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.style-options-for-kanban-plugin-static-all-image-one.theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+6) {
-  background-image: url("https://images.unsplash.com/photo-1516249181155-bbf89a130f77?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTExfHxkYXJrJTIwYmx1ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.style-options-for-kanban-plugin-static-all-image-one.theme-dark .kanban-plugin__lane-wrapper:nth-child(7n+0) {
-  background-image: url("https://images.unsplash.com/photo-1578089789664-f256b7c4e07f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTM2fHxkYXJrJTIwYmx1ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
 
-/* Kanban background images v0.2, special edition abstract, @Solen Feyissa https://unsplash.com/@solenfeyissa and @Pawel Czerwinski https://unsplash.com/@pawel_czerwinski, for Blue Topaz */
-body.style-options-for-kanban-plugin-static-all-image-two.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+1) {
-  background-image: url("https://images.unsplash.com/photo-1601682633973-a76aa17a7844?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
-}
-body.style-options-for-kanban-plugin-static-all-image-two.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+2) {
-  background-image: url("https://images.unsplash.com/photo-1601436155225-2633c7f3818b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
-}
-body.style-options-for-kanban-plugin-static-all-image-two.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+3) {
-  background-image: url("https://images.unsplash.com/photo-1564951434112-64d74cc2a2d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE4fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60");
-}
-body.style-options-for-kanban-plugin-static-all-image-two.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+4) {
-  background-image: url("https://images.unsplash.com/photo-1601436155223-9b6f9c287cd1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
-}
-body.style-options-for-kanban-plugin-static-all-image-two.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+5) {
-  background-image: url("https://images.unsplash.com/photo-1600456011949-d2fc441999b4?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NTAyfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.style-options-for-kanban-plugin-static-all-image-two.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+6) {
-  background-image: url("https://images.unsplash.com/photo-1600226082873-02b7eb2b7c23?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NTA2fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.style-options-for-kanban-plugin-static-all-image-two.theme-light .kanban-plugin__lane-wrapper:nth-child(7n+0) {
-  background-image: url("https://images.unsplash.com/photo-1600538622150-d5a24464bc47?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NTAwfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
+
 
 body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plugin__lane-wrapper {
   background-repeat: no-repeat;
   background-size: cover;
-}
-body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plugin__lane-wrapper:nth-child(8n+1) {
-  background-image: url("https://images.unsplash.com/photo-1628432436663-9e588806592a?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MjR8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plugin__lane-wrapper:nth-child(8n+2) {
-  background-image: url("https://images.unsplash.com/photo-1621791554791-cb212a4a55a6?ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plugin__lane-wrapper:nth-child(8n+3) {
-  background-image: url("https://images.unsplash.com/photo-1630182044473-34dd20c6dd8c?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8OHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plugin__lane-wrapper:nth-child(8n+4) {
-  background-image: url("https://images.unsplash.com/photo-1622405538251-e8c48fdc40db?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTA2fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plugin__lane-wrapper:nth-child(8n+5) {
-  background-image: url("https://images.unsplash.com/photo-1628432337777-bdc12ebda14e?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjh8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plugin__lane-wrapper:nth-child(8n+6) {
-  background-image: url("https://images.unsplash.com/photo-1620503266076-5fd971fdd572?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTQxfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plugin__lane-wrapper:nth-child(8n+7) {
-  background-image: url("https://images.unsplash.com/photo-1625425325558-d83335f635d8?ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Njd8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.style-options-for-kanban-plugin-static-all-image-two.theme-dark .kanban-plugin__lane-wrapper:nth-child(8n+0) {
-  background-image: url("https://images.unsplash.com/photo-1620503395484-07e2a7ea3f8b?ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
 }
 
 body.style-options-for-kanban-plugin-static-plain .kanban-plugin__lane-wrapper {
@@ -21919,39 +21787,12 @@ body.toggle-bg-panel-page.theme-light :is(.nav-files-container,.file-tree-plugin
 }
 
 body.toggle-bg-panel-page.panel-page-bg-theme-dark-plant.theme-dark {
-  --panel-page-background-url-theme: url(https://images.unsplash.com/photo-1538641351053-b85bffeb9b7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80);
-}
-body.toggle-bg-panel-page.panel-page-bg-theme-dark-curves.theme-dark {
-  --panel-page-background-url-theme: url(https://images.unsplash.com/photo-1637946175559-22c4fe13fc54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80);
-}
-body.toggle-bg-panel-page.panel-page-bg-theme-dark-sea.theme-dark {
-  --panel-page-background-url-theme: url(https://images.unsplash.com/photo-1612434995720-89c1537a3009?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170);
-}
-body.toggle-bg-panel-page.panel-page-bg-theme-dark-bulb.theme-dark {
-  --panel-page-background-url-theme: url(https://images.unsplash.com/photo-1448745799564-e2c1ed534c94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-}
-body.toggle-bg-panel-page.panel-page-bg-theme-dark-random.theme-dark {
-  --panel-page-background-url-theme: url(https://source.unsplash.com/random?dark);
+  --panel-page-background-url-theme: url("data:image/avif;base64,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");
 }
 body.toggle-bg-panel-page.panel-page-bg-theme-dark-custom.theme-dark {
   --panel-page-background-url-theme: var(--background-panel-page-theme-dark-custom);
 }
 
-body.toggle-bg-panel-page.panel-page-bg-theme-light-curve.theme-light {
-  --panel-page-background-url-theme: url(https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-}
-body.toggle-bg-panel-page.panel-page-bg-theme-light-wall.theme-light {
-  --panel-page-background-url-theme: url(https://images.unsplash.com/photo-1617713964959-d9a36bbc7b52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-}
-body.toggle-bg-panel-page.panel-page-bg-theme-light-brick.theme-light {
-  --panel-page-background-url-theme: url(https://images.unsplash.com/photo-1515549832467-8783363e19b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80);
-}
-body.toggle-bg-panel-page.panel-page-bg-theme-light-cloud.theme-light {
-  --panel-page-background-url-theme: url(https://images.unsplash.com/photo-1596367407372-96cb88503db6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-}
-body.toggle-bg-panel-page.panel-page-bg-theme-light-random.theme-light {
-  --panel-page-background-url-theme: url(https://source.unsplash.com/random?white);
-}
 body.toggle-bg-panel-page.panel-page-bg-theme-light-custom.theme-light {
   --panel-page-background-url-theme: var(--background-panel-page-theme-light-custom);
 }
@@ -22066,166 +21907,6 @@ body.background-image-settings-switch .workspace-split.mod-root .workspace-leaf:
   opacity: var(--bg-markdown-page-opacity-cp,0.25);
   background-size: cover;
 }
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-default .workspace-split.mod-root .workspace-leaf:nth-child(7n+1) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-default .workspace-split.mod-root .workspace-leaf:nth-child(7n+2) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?2") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-default .workspace-split.mod-root .workspace-leaf:nth-child(7n+3) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?3") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-default .workspace-split.mod-root .workspace-leaf:nth-child(7n+4) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?4") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-default .workspace-split.mod-root .workspace-leaf:nth-child(7n+5) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?5") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-default .workspace-split.mod-root .workspace-leaf:nth-child(7n+6) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?6") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-default .workspace-split.mod-root .workspace-leaf:nth-child(7n) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?7") !important;
-}
-
-
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-blue .workspace-split.mod-root .workspace-leaf:nth-child(7n+1) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?blue") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-blue .workspace-split.mod-root .workspace-leaf:nth-child(7n+2) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?blue,light") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-blue .workspace-split.mod-root .workspace-leaf:nth-child(7n+3) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?blue,1") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-blue .workspace-split.mod-root .workspace-leaf:nth-child(7n+4) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?blue,2") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-blue .workspace-split.mod-root .workspace-leaf:nth-child(7n+5) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?blue,3") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-blue .workspace-split.mod-root .workspace-leaf:nth-child(7n+6) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?blue,4") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-blue .workspace-split.mod-root .workspace-leaf:nth-child(7n) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?blue,5") !important;
-}
-
-
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-green .workspace-split.mod-root .workspace-leaf:nth-child(7n+1) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?green") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-green .workspace-split.mod-root .workspace-leaf:nth-child(7n+2) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?green,light") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-green .workspace-split.mod-root .workspace-leaf:nth-child(7n+3) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?green,1") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-green .workspace-split.mod-root .workspace-leaf:nth-child(7n+4) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?green,2") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-green .workspace-split.mod-root .workspace-leaf:nth-child(7n+5) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?green,3") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-green .workspace-split.mod-root .workspace-leaf:nth-child(7n+6) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?green,4") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-green .workspace-split.mod-root .workspace-leaf:nth-child(7n) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?green,5") !important;
-}
-
-
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-pink .workspace-split.mod-root .workspace-leaf:nth-child(7n+1) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?pink") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-pink .workspace-split.mod-root .workspace-leaf:nth-child(7n+2) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?pink,light") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-pink .workspace-split.mod-root .workspace-leaf:nth-child(7n+3) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?pink,1") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-pink .workspace-split.mod-root .workspace-leaf:nth-child(7n+4) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?pink,2") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-pink .workspace-split.mod-root .workspace-leaf:nth-child(7n+5) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?pink,3") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-pink .workspace-split.mod-root .workspace-leaf:nth-child(7n+6) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?pink,4") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-pink .workspace-split.mod-root .workspace-leaf:nth-child(7n) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?pink,5") !important;
-}
-
-
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-purple .workspace-split.mod-root .workspace-leaf:nth-child(7n+1) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?purple") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-purple .workspace-split.mod-root .workspace-leaf:nth-child(7n+2) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?purple,light") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-purple .workspace-split.mod-root .workspace-leaf:nth-child(7n+3) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?purple,1") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-purple .workspace-split.mod-root .workspace-leaf:nth-child(7n+4) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?purple,2") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-purple .workspace-split.mod-root .workspace-leaf:nth-child(7n+5) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?purple,3") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-purple .workspace-split.mod-root .workspace-leaf:nth-child(7n+6) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?purple,4") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-purple .workspace-split.mod-root .workspace-leaf:nth-child(7n) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?purple,5") !important;
-}
-
-
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-red .workspace-split.mod-root .workspace-leaf:nth-child(7n+1) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?red") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-red .workspace-split.mod-root .workspace-leaf:nth-child(7n+2) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?red,light") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-red .workspace-split.mod-root .workspace-leaf:nth-child(7n+3) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?red,1") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-red .workspace-split.mod-root .workspace-leaf:nth-child(7n+4) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?red,2") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-red .workspace-split.mod-root .workspace-leaf:nth-child(7n+5) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?red,3") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-red .workspace-split.mod-root .workspace-leaf:nth-child(7n+6) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?red,4") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-red .workspace-split.mod-root .workspace-leaf:nth-child(7n) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?red,5") !important;
-}
-
-
-
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-yellow-and-orange .workspace-split.mod-root .workspace-leaf:nth-child(7n+1) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?yellow") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-yellow-and-orange .workspace-split.mod-root .workspace-leaf:nth-child(7n+2) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?orange") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-yellow-and-orange .workspace-split.mod-root .workspace-leaf:nth-child(7n+3) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?yellow,1") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-yellow-and-orange .workspace-split.mod-root .workspace-leaf:nth-child(7n+4) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?orange,1") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-yellow-and-orange .workspace-split.mod-root .workspace-leaf:nth-child(7n+5) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?yellow,2") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-yellow-and-orange .workspace-split.mod-root .workspace-leaf:nth-child(7n+6) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?yellow,orange") !important;
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-random.background-image-settings-markdown-page-random-yellow-and-orange .workspace-split.mod-root .workspace-leaf:nth-child(7n) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://source.unsplash.com/random?yellow,orange,1") !important;
-}
 
 
 body.background-image-settings-switch.background-image-settings-markdown-page-transparent .workspace-split.mod-root {
@@ -22241,153 +21922,9 @@ body.background-image-settings-switch.background-image-settings-markdown-page-tr
 }
 
 
-body.background-image-settings-switch.background-image-settings-markdown-page-sea-and-sky.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(5n+1) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1543188643-0526808dee93?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTd8fG9jZWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-sea-and-sky.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(5n+2) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1530053969600-caed2596d242?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fG9jZWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-sea-and-sky.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(5n+3) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1477342620885-10e8a3790e30?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fG9jZWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-sea-and-sky.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(5n+4) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1518399681705-1c1a55e5e883?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjF8fG9jZWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-sea-and-sky.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(5n) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1550868142-97bfb991bbd8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjZ8fG9jZWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-
-
-body.background-image-settings-switch.background-image-settings-markdown-page-sea-and-sky.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(5n+1) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1609086491368-78f4af23e5c5?ixid=MnwxMjA3fDB8MHx2aXN1YWwtc2VhcmNofDEyOHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-sea-and-sky.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(5n+2) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1620590532278-c9225fc3eac6?ixid=MnwxMjA3fDB8MHx2aXN1YWwtc2VhcmNofDF8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-sea-and-sky.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(5n+3) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1628430523678-253f14a42dd6?ixid=MnwxMjA3fDB8MHx2aXN1YWwtc2VhcmNofDI2N3x8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-sea-and-sky.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(5n+4) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1553227483-2d27fcf88ebe?ixid=MnwxMjA3fDB8MHx2aXN1YWwtc2VhcmNofDc1fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-sea-and-sky.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(5n) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1619416656371-2cf425e158ca?ixid=MnwxMjA3fDB8MHx2aXN1YWwtc2VhcmNofDkxfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-
 body.background-image-settings-switch.background-image-settings-markdown-page-four-seasons .workspace-split.mod-root .workspace-leaf:nth-child(n) .workspace-leaf-content[data-type="markdown"]::before {
   background-size: 100% 100%;
 }
-
-body.background-image-settings-switch.background-image-settings-markdown-page-four-seasons.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(4n+1) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1551582045-6ec9c11d8697?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-four-seasons.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(4n+2) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1424384309529-4f05c2349657?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-four-seasons.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(4n+3) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1553649084-3e42773ff0e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-four-seasons.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(4n) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1604007803492-3ba583208302?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80");
-}
-
-
-body.background-image-settings-switch.background-image-settings-markdown-page-four-seasons.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(4n+1) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1503517245364-78fc9a9cdd37?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=386&q=80");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-four-seasons.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(4n+2) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1522748906645-95d8adfd52c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-four-seasons.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(4n+3) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1557434440-d4d48e6578b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-four-seasons.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(4n) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1603388115096-e71e44b67a0d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=388&q=80");
-}
-
-
-body.background-image-settings-switch.background-image-settings-markdown-page-woof-meow.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(4n+1) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1593042905117-7e61dd9196b6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHdvb2Z8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-woof-meow.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(4n+2) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1517321759936-7446b48b9643?ixid=MnwxMjA3fDB8MHx2aXN1YWwtc2VhcmNofDF8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-woof-meow.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(4n+3) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1552053831-71594a27632d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-woof-meow.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(4n) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80");
-}
-
-
-body.background-image-settings-switch.background-image-settings-markdown-page-woof-meow.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(4n+1) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1587463272361-565200f82b33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODd8fGRvZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-woof-meow.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(4n+2) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1582264665500-b3ae21f3f163?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE2fHxjYXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-woof-meow.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(4n+3) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1560807707-8cc77767d783?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZG9nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-woof-meow.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(4n) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1582797493098-23d8d0cc6769?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTMyfHxjYXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-
-
-body.background-image-settings-switch.background-image-settings-markdown-page-white-and-black.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(4n+1) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1549281899-f75600a24107?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQ0fHx3aGl0ZSUyMGJsYWNrfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-white-and-black.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(4n+2) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1512514076443-1eef59c260b0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzF8fHdoaXRlJTIwYmxhY2t8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-white-and-black.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(4n+3) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njd8fHdoaXRlJTIwYmxhY2t8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-white-and-black.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(4n) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1489416656989-27c1c2236852?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHdoaXRlJTIwYmxhY2t8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-
-
-body.background-image-settings-switch.background-image-settings-markdown-page-white-and-black.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(4n+1) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHdoaXRlJTIwYmxhY2t8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-white-and-black.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(4n+2) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1487260211189-670c54da558d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHdoaXRlJTIwYmxhY2t8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-white-and-black.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(4n+3) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1520262494112-9fe481d36ec3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8d2hpdGUlMjBibGFja3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-white-and-black.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(4n) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1527567018838-584d3468eb85?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHdoaXRlJTIwYmxhY2t8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-
-
-body.background-image-settings-switch.background-image-settings-markdown-page-kawaii.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(4n+1) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1471644778460-220908b75485?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1172&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-kawaii.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(4n+2) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1583091618471-56becbdb1c00?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fGN1dGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-kawaii.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(4n+3) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1523992038393-d5ab874a077e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-kawaii.theme-dark .workspace-split.mod-root .workspace-leaf:nth-child(4n) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1495192838256-ed16d5160e9c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80");
-}
-
-body.background-image-settings-switch.background-image-settings-markdown-page-kawaii.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(4n+1) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1514517521153-1be72277b32f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-kawaii.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(4n+2) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1624534881842-3d46b79c318e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8a2F3YWlpfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-kawaii.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(4n+3) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1605125207433-a67e404afc0f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8a2F3YWlpfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-}
-body.background-image-settings-switch.background-image-settings-markdown-page-kawaii.theme-light .workspace-split.mod-root .workspace-leaf:nth-child(4n) .workspace-leaf-content[data-type="markdown"]::before {
-  background-image: url("https://images.unsplash.com/photo-1525268771113-32d9e9021a97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=60");
-}
-
 
 body.background-image-settings-switch.background-image-settings-markdown-page-custom.theme-dark .workspace-split.mod-root .workspace-leaf .workspace-leaf-content[data-type="markdown"]::before {
   background-image: var(--background-markdown-page-theme-dark-custom);
@@ -24117,25 +23654,12 @@ body:is(.background-settings-workplace-background-image,.background-image-settin
   --background-secondary:var(--bg-color-settings-3);
 }
 
-body.background-settings-workplace-background-image.background-settings-workplace-theme-light-blue-mountain.theme-light {
-  --blue-mountain: url('https://images.unsplash.com/photo-1486520299386-6d106b22014b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80');
-  --theme-background: var(--blue-mountain);
-}
 
 /* font color */
 /* body.background-settings-workplace-background-image :is(.tree-item-inner,.tree-item-flair,.workspace-ribbon-collapse-btn,.side-dock-ribbon-tab,.side-dock-ribbon-action):not(:hover) {
   color: var(--text-normal);
 } */
 
-body.background-settings-workplace-background-image.background-settings-workplace-theme-light-in-the-sky.theme-light {
-  --in-the-sky: url('https://images.unsplash.com/photo-1514519334989-3d5c8b1a9f91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
-  --theme-background: var(--in-the-sky);
-}
-
-body.background-settings-workplace-background-image.background-settings-workplace-theme-light-leaf.theme-light {
-  --leaf: url('https://images.unsplash.com/photo-1536882240095-0379873feb4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80');
-  --theme-background: var(--leaf);
-}
 
 body.background-settings-workplace-background-image.theme-dark {
   --background-primary-bg-4-bt: #1414148a;
@@ -24174,26 +23698,6 @@ body.background-settings-workplace-background-image.background-settings-workplac
   --theme-background: var(--in-the-sky);
 }
 
-body.background-settings-workplace-background-image.background-settings-workplace-theme-dark-blue-gas.theme-dark {
-  --blue-gas: url("https://images.unsplash.com/photo-1597332503885-fc8d195a99b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80");
-  --theme-background: var(--blue-gas);
-}
-
-body.background-settings-workplace-background-image.background-settings-workplace-theme-dark-jellyfish-1.theme-dark {
-  --jellyfish-1: url("https://images.unsplash.com/photo-1569887652102-59696fef1528?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=418&q=80");
-  --theme-background: var(--jellyfish-1);
-}
-
-body.background-settings-workplace-background-image.background-settings-workplace-theme-dark-jellyfish-2.theme-dark {
-  --jellyfish-2: url("https://images.unsplash.com/photo-1550176593-d107c56ca211?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-  --theme-background: var(--jellyfish-2);
-}
-
-body.background-settings-workplace-background-image.background-settings-workplace-theme-dark-hyacinth-macaw.theme-dark {
-  --hyacinth-macaw: url("https://images.unsplash.com/photo-1610847034016-49565e0c068a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80");
-  --theme-background: var(--hyacinth-macaw);
-}
-
 body.background-settings-workplace-background-image.background-settings-workplace-waves-light.theme-light,
 body.background-settings-workplace-background-image.background-settings-workplace-waves.theme-dark {
   --wave-background: url("data:image/svg+xml, %3Csvg data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E %3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.25' class='shape-fill'%3E%3C/path%3E %3Cpath d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z' opacity='.5' class='shape-fill'%3E%3C/path%3E %3Cpath d='M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z' class='shape-fill'%3E%3C/path%3E %3C/svg%3E");
@@ -24213,15 +23717,6 @@ body.is-mobile.background-settings-workplace-background-image:is(.background-set
   --wave-background-color: #245eff;
 }
 
-body.background-settings-workplace-background-image.background-settings-workplace-random-dark.theme-dark {
-  background-image: url("https://source.unsplash.com/random") !important;
-  background-size: cover;
-}
-body.background-settings-workplace-background-image.background-settings-workplace-random-light.theme-light {
-  background-image: url("https://source.unsplash.com/random?1") !important;
-  background-size: cover;
-}
-
 body.background-image-settings-command-palette-switch .modal-container .prompt::before {
   background-size: cover;
   content: '';
@@ -24230,12 +23725,6 @@ body.background-image-settings-command-palette-switch .modal-container .prompt::
   bottom: 0;
   left: 0;
   position: absolute;
-}
-body.background-image-settings-command-palette-switch:not(.background-image-settings-command-palette-same-as-workplace) .modal-container .prompt::before {
-  background-image: url("https://source.unsplash.com/random");
-  filter: blur(var(--blur-depth-cp)) brightness(var(--brightness-4-bg-cp)) saturate(var(--saturate-4-bg-cp));
-  opacity: var(--opacity-cp);
-  z-index: -1;
 }
 
 body.background-image-settings-command-palette-same-as-workplace.background-image-settings-command-palette-switch .modal-container .prompt::before {
@@ -24505,7 +23994,7 @@ body:not(.default-loading-page).theme-dark .progress-bar {
 body:not(.default-loading-page).loading-animation-cat .progress-bar-message::before {
   content: "GIF creator: Jake Fleming";
   display: block;
-  background: no-repeat center/cover url(https://cdn.dribbble.com/users/53712/screenshots/9948351/media/2397850c7727f8e70b0ec50b5a83fe76.gif);
+  background: no-repeat center/cover;
   width: 800px;
   height: 500px;
   margin-top: -20px;
@@ -28740,44 +28229,6 @@ body.toggle-canvas-grid .canvas-wrapper .canvas-background rect,
   opacity: 0;
 }
 
-body.stardust-canvas-background .canvas-background {
-  background-image: url("https://www.transparenttextures.com/patterns/stardust.png")
-}
-
-body.mosaic-canvas-background-dark .canvas-background {
-  background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
-}
-
-body.woven-canvas-background-dark .canvas-background {
-  background-image: url("https://www.transparenttextures.com/patterns/woven.png");
-}
-
-body.woven-canvas-background .canvas-background {
-  background-image: url("https://www.transparenttextures.com/patterns/woven-light.png");
-}
-
-body.wood-canvas-background .canvas-background {
-  background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png");
-}
-
-body.retina-wood-canvas-background .canvas-background {
-  background-image: url("https://www.transparenttextures.com/patterns/retina-wood.png");
-}
-
-body.matrix-grid-canvas-background .canvas-background {
-  background-image: url("https://www.transparenttextures.com/patterns/old-mathematics.png");
-}
-
-body.notebook-canvas-background .canvas-background {
-  background-image: url("https://www.transparenttextures.com/patterns/notebook.png");
-}
-
-body.paper-canvas-background .canvas-background {
-  background-image: url("https://www.transparenttextures.com/patterns/project-paper.png");
-}
-body.blackboard-canvas-background{
-  background-image: url("http://thepatternlibrary.com/img/h.jpg");
-}
 
 /*=======canvas-card-focus-mode========
 =====Modified by Cuman from boninall=====*/
