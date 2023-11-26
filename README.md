@@ -6,7 +6,7 @@
  * @Description:
 -->
 
-> Attension！Due to obsidian's policy of not being able to use online or local vault images, all configuration about images is no longer available.Now that the BT theme has become very expensive to maintain with obsidian ontology changes and policy implications, the theme will be streamlined and no longer offer diverse configuration options.
+> Attention！Due to obsidian's policy of not being able to use online or local vault images, all configuration about images is no longer available.Now that the BT theme has become very expensive to maintain with obsidian ontology changes and policy implications, the theme will be streamlined and no longer offer diverse configuration options.
 
 > 注意！由于 obsidian 的政策，不能使用在线或本地库里的图片，所有图片配置设置均已失效。如今 BT 主题随着 obsidian 本体变动和政策影响维护成本变得非常高，后续将精简主题并不再提供多样化的配置选项。
 
