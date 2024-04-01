@@ -8,8 +8,8 @@ Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/
 
 */
 
-/*蓝色托帕石，适合Obsidian v1.2.8。uid [20231115] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.2.8, uid [20231115] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.2.8。uid [20240401] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.2.8, uid [20240401] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /*
 MIT License
@@ -35,8 +35,8 @@ id: blue-topaz-theme
 settings:
   -
     id: attension
-    title: Attention！Due to obsidian's policy of not being able to use online or local vault images, all configuration about images is no longer available.Now that the BT theme has become very expensive to maintain with obsidian ontology changes and policy implications, the theme will be streamlined and no longer offer diverse configuration options.
-    title.zh: 注意！由于obsidian的政策，不能使用在线或本地库里的图片，所有图片配置设置均已失效。如今BT主题随着obsidian本体变动和政策影响维护成本变得非常高，后续将精简主题并不再提供多样化的配置选项。
+    title: Attention！Due to obsidian's policy of not being able to use online or local vault images, all configuration about images is no longer available.Please go to the repository to download the css snippet
+    title.zh: 注意！由于obsidian的政策，不能使用在线或本地库里的图片，所有图片配置设置均已失效。如果需要自定义图片请去仓库下载片段使用。
     type: heading
     level: 1
     collapsed: false
@@ -2204,6 +2204,12 @@ settings:
     default-light: '#'
     default-dark: '#'
   -
+    id: inline-title-bg-url
+    title: Inline title background image (url)
+    title.zh: 页面内标题背景图片 (url)
+    type: variable-text
+    default: "url(https://)"
+  -
     id: inline-title-text-align-settings
     title: Inline title text-align
     title.zh: 页面内标题位置
@@ -4025,20 +4031,6 @@ settings:
     title.zh: 阅读模式可调整mermaid大小
     type: class-toggle
     default: false
-  -
-    id: metadata-styles
-    title: 2.3.22 Metadata (Yaml)
-    type: heading
-    level: 3
-    collapsed: true
-  -
-    id: show-full-metadata
-    title: Show full metadata in Reading mode
-    title.zh: 阅读模式下显示完整的metadata信息
-    description.zh: 需要先在设置中开启显示front-matter，笔记cssclass中声明show-full-metadata 可单独控制是否显示yaml
-    type: class-toggle
-    default: false
-    addCommand: true
   -
     id: canvas-styles
     title: 2.3.23 Canvas
@@ -11168,13 +11160,13 @@ body.toggle-left-aligned-content :is(.markdown-preview-view,.markdown-rendered).
   padding-bottom: calc((var(--paragraph-spacing) - 1) * 1em) ;
 }
 
-body.text-indentation-two-em .markdown-source-view.mod-cm6 div.cm-line:not(.HyperMD-header),
-.markdown-source-view.mod-cm6.indent div.cm-line:not(.HyperMD-header) {
+body.text-indentation-two-em .workspace-leaf-content[data-type="markdown"] .markdown-source-view.mod-cm6 div.cm-line:not(:is(.HyperMD-header,.HyperMD-quote)),
+.markdown-source-view.mod-cm6.indent div.cm-line:not(:is(.HyperMD-header,.HyperMD-quote)) {
   text-indent: 2em;
 }
 
-body.text-indentation-two-em .markdown-source-view.mod-cm6 div.cm-line:not(.HyperMD-header) .cm-hmd-frontmatter:first-of-type,
-.markdown-source-view.mod-cm6.indent div.cm-line:not(.HyperMD-header) .cm-hmd-frontmatter:first-of-type {
+body.text-indentation-two-em  .workspace-leaf-content[data-type="markdown"]  .markdown-source-view.mod-cm6 div.cm-line:not(:is(.HyperMD-header,.HyperMD-quote)) .cm-hmd-frontmatter:first-of-type,
+.markdown-source-view.mod-cm6.indent div.cm-line:not(:is(.HyperMD-header,.HyperMD-quote)) .cm-hmd-frontmatter:first-of-type {
   margin-left: -2em;
 }
 body.text-indentation-two-em .markdown-source-view.mod-cm6 div.has-banner.cm-line:not(.HyperMD-header) .cm-def.cm-hmd-frontmatter,
@@ -13323,37 +13315,37 @@ body.list-no-border ol>li {
 body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3, .HyperMD-list-line-2):hover)::after,
 body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-1:not(:has(~ .HyperMD-list-line-1 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-2:hover, ~ .HyperMD-list-line-2 ~ :is(.HyperMD-list-line-3, .HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
 body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-3, .HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
-  --list-threading-offset: calc(4px + 0.12em);
+  --list-threading-offset: 1em;
 }
 
 body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::after,
 body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-3:hover, ~ .HyperMD-list-line-3 ~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
 body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
-  --list-threading-offset: calc(4px + 0.12em + var(--list-indent));
+  --list-threading-offset: calc(1em + var(--list-indent));
 }
 
 body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4):hover)::after,
 body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-3:not(:has(~ .HyperMD-list-line-3 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-4:hover, ~ .HyperMD-list-line-4 ~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
 body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-5, .HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
-  --list-threading-offset: calc(4px + 0.12em + 2 * var(--list-indent));
+  --list-threading-offset: calc(1em + 2 * var(--list-indent));
 }
 
 body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5):hover)::after,
 body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-4:not(:has(~ .HyperMD-list-line-4 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-5:hover, ~ .HyperMD-list-line-5 ~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover)::before,
 body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-6, .HyperMD-list-line-7):hover))::before {
-  --list-threading-offset: calc(4px + 0.12em + 3 * var(--list-indent));
+  --list-threading-offset: calc(1em + 3 * var(--list-indent));
 }
 
 body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6):hover)::after,
 body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-5:not(:has(~ .HyperMD-list-line-5 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-6:hover, ~ .HyperMD-list-line-6 ~ :is(.HyperMD-list-line-7):hover)::before,
 body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):is(:hover, :has(~ :is(.HyperMD-list-line-7):hover))::before {
-  --list-threading-offset: calc(4px + 0.12em + 4 * var(--list-indent));
+  --list-threading-offset: calc(1em + 4 * var(--list-indent));
 }
 
 body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7):hover)::after,
 body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-6:not(:has(~ .HyperMD-list-line-6 ~ .HyperMD-list-line:hover)) ~ .HyperMD-list-line:has(~ .HyperMD-list-line-7:hover, ~ .HyperMD-list-line-7 ~ :is(.HyperMD-list-line-8):hover)::before,
 body.bt-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-7:not(:has(~ .HyperMD-list-line-7 ~ .HyperMD-list-line:hover)):hover::before {
-  --list-threading-offset: calc(4px + 0.12em + 5 * var(--list-indent));
+  --list-threading-offset: calc(1em + 5 * var(--list-indent));
 }
 
 body.bt-connected-indent-hover.bt-colorful-connected-indent-hover .cm-s-obsidian:not(.kanban) .HyperMD-list-line-2:not(:has(~ .HyperMD-list-line-2 ~ .HyperMD-list-line:hover)):has(~ :is(.HyperMD-list-line-7, .HyperMD-list-line-6, .HyperMD-list-line-5, .HyperMD-list-line-4, .HyperMD-list-line-3):hover)::after,
@@ -13547,7 +13539,7 @@ body.bt-connected-indent-hover .markdown-preview-view:not(.kanban) *:not([data-c
   background-color: var(--bt-connected-indent-line-color);
   width: var(--bt-indentation-width-hover);
   top: calc(var(--list-spacing-bt) * 0.075em - var(--font-size-list) * 0.6);
-  left: calc(-1.5 * var(--list-indent) - 1px);
+  left: calc(-1.5 * var(--list-indent));
   bottom: calc(var(--list-spacing-bt) * 0.075em - var(--font-size-list) * 0.5);
 }
 
@@ -13557,7 +13549,7 @@ body.bt-connected-indent-hover .markdown-preview-view:not(.kanban) *:not([data-c
   position: absolute;
   background-color: transparent;
   top: calc(var(--list-spacing-bt) * 0.075em - var(--font-size-list) * 0.6);
-  left: calc(-1.5 * var(--list-indent) - 1px);
+  left: calc(-1.5 * var(--list-indent));
   width: calc(1em + var(--size-4-4));
   height: calc(var(--font-size-list) * 1.27);
   border-bottom-left-radius: var(--radius-m);
@@ -13842,7 +13834,7 @@ body:not(.remove-heading-indicator) .callout-content :is(h1, h2, h3, h4, h5, h6)
   top: -1.25em;
 }
 
-:is(.markdown-preview-section,.markdown-rendered) table:not(.dataview.table-view-table) {
+:is(.markdown-preview-section,.markdown-rendered) table:not(:is(.dataview.table-view-table,.table-editor)) {
 
   border-collapse: collapse;
   overflow: auto;
@@ -13856,8 +13848,8 @@ body.table-width-auto :is(.markdown-preview-section,.markdown-rendered) table:no
   width: auto;
 }
 
-:is(.markdown-preview-section,.markdown-rendered) table:not(.dataview.table-view-table):active,
-:is(.markdown-preview-section,.markdown-rendered) table:not(.dataview.table-view-table):hover {
+:is(.markdown-preview-section,.markdown-rendered) table:not(:is(.dataview.table-view-table,.table-editor)):active,
+:is(.markdown-preview-section,.markdown-rendered) table:not(:is(.dataview.table-view-table,.table-editor)):hover {
   overflow: hidden;
   resize: both !important;
 }
@@ -14010,7 +14002,7 @@ body.show-border-table :is(.markdown-preview-view,.markdown-rendered) :is(th,td)
 }
 
 :is(.markdown-preview-view,.markdown-rendered) table {
-  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 body.table-style-one.theme-light {
@@ -14900,9 +14892,9 @@ body:not(.image-zoom) .markdown-reading-view img:not([class*="emoji"]):active,
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iMCAwIDgwIDgwIj4KICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjRjJGNEY2Ii8+CiAgICA8ZyBmaWxsPSIjRkZGIj4KICAgICAgPHJlY3Qgd2lkdGg9IjIiIGhlaWdodD0iNzkiIHg9Ijc4Ii8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iMzkiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjU5Ii8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iMjAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSIyMCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjIwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iNDAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSI0MCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjQwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iNjAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSI2MCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjYwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSI3OSIgaGVpZ2h0PSIxIiB5PSIxOSIvPgogICAgICA8cmVjdCB3aWR0aD0iNzkiIGhlaWdodD0iMSIgeT0iMzkiLz4KICAgICAgPHJlY3Qgd2lkdGg9Ijc5IiBoZWlnaHQ9IjEiIHk9IjU5Ii8+CiAgICA8L2c+CiAgICA8cmVjdCB3aWR0aD0iODAiIGhlaWdodD0iMiIgeT0iNzgiIGZpbGw9IiNGRkYiLz4KICA8L2c+Cjwvc3ZnPgo=");
 }
 
-body:not(.obsidian-default-image) .internal-embed.image-embed.is-loaded img:not([class*="emoji"]) {
+body:not(.obsidian-default-image)  .workspace-leaf-content[data-type="markdown"]  .internal-embed.image-embed.is-loaded img:not([class*="emoji"]) {
   max-width: var(--image-max-width);
-  margin: 3px auto;
+ 
   display: block;
 }
 
@@ -25366,14 +25358,7 @@ body.admonition-bg-color-same .callout-title {
   height: 70px;
 }
 /* ===编辑代码块按钮调整============ */
-.markdown-source-view.mod-cm6 .cm-embed-block {
-  border: 0;
-
-}
-.markdown-source-view.mod-cm6 .cm-embed-block:hover {
-  box-shadow: 0 3px 8px 0 rgba(var(--mono-rgb-100), .25);
-  transition: all .2s ease-in-out;
-}
+ 
 
 .markdown-source-view.mod-cm6 .edit-block-button {
   padding: 0;
@@ -26741,6 +26726,11 @@ body.funny-header-anim.clutter-free-headings .cm-active .cm-formatting-header + 
   margin-left: -30px;
 }
 
+body.funny-header-anim .is-live-preview .cm-active .cm-formatting-header ~ .cm-foldPlaceholder,
+body.funny-header-anim.clutter-free-headings .cm-active .cm-formatting-header ~ .cm-foldPlaceholderr{
+  transition: margin-left 333ms;
+  margin-left: 30px;
+}
 body.funny-header-anim .is-live-preview .cm-active .cm-header:first-of-type,
 body.funny-header-anim.clutter-free-headings .cm-active .cm-header:first-of-type {
   transform: translateX(0ch);
@@ -28255,18 +28245,7 @@ body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-custom) .ca
   text-align: start;
 }
 
-/* ================================== */
-.show-full-metadata  :is(.metadata-container,.frontmatter-container):not(.is-collapsed) .frontmatter-section {
-  display: flex!important;
-}
  
-body:not(.show-full-metadata) .markdown-preview-view .metadata-property:not(:has(:is(.multi-select-pill,.metadata-input-longtext:not(:empty)))) {
-  display: none;
-}
-
-body:not(.show-full-metadata) .markdown-preview-view .metadata-property:has(.metadata-property-key-input[aria-label=""]) {
-  display: flex!important;
-}
 
 .workspace-split.mod-horizontal:is(.mod-left-split,.mod-right-split) .workspace-tab-container .workspace-leaf-content:not([data-type="file-properties"]) 
 :is(.metadata-container,.frontmatter-container) {
@@ -28555,4 +28534,9 @@ body.background-settings-workplace-background-image .workspace-split:not(.mod-ro
 
 body.nowrap-edit-codebox .HyperMD-codeblock {
   white-space: nowrap;
+}
+
+.modal.mod-settings .vertical-tab-content-container {
+  background: var(--bg-color-settings-6);
+ 
 }
