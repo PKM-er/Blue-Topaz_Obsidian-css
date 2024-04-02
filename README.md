@@ -2,13 +2,13 @@
  * @Author: cumany cuman@qq.com
  * @Date: 2023-06-28 13:36:53
  * @LastEditors: cumany cuman@qq.com
- * @LastEditTime: 2023-06-30 13:49:32
+ * @LastEditTime: 2024-04-02 16:39:43
  * @Description:
 -->
 
-> Attention！Don't upgrade! Don't upgrade! Don't upgrade! Due to obsidian's policy of not being able to use online or local vault images, all configuration about images is no longer available.Now that the BT theme has become very expensive to maintain with obsidian ontology changes and policy implications, the theme will be streamlined and no longer offer diverse configuration options.At the same time obsidian stated that the theme will be removed in January next year, but the developers have limited time and energy, in order not to let the partners who love Blue topaz disappointed, had to update this version. bt theme will be resumed in the future by the love of bt after the reconstruction of the update.
+> Attention！Don't upgrade! Don't upgrade! Don't upgrade! Due to obsidian's policy of not being able to use online or local vault images.The option for related built-in online images has been removed, but custom settings are retained. Please set the URL for displaying background images by yourself.
 
-> 注意！请勿升级，请勿升级，请勿升级。由于 obsidian 的政策，不能使用在线或本地库里的图片，所有图片配置设置均已失效。如今 BT 主题随着 obsidian 本体变动和政策影响维护成本变得非常高，后续将精简主题并不再提供多样化的配置选项。再次强调，最新版的主题中，图片相关设置均已失效。同时 obsidian 声明将在明年一月下架该主题，但开发者时间精力有限，为了不让喜爱 Blue topaz 的伙伴失望，不得已更新此版本。BT 主题将在未来由热爱 BT 的人重构后重新恢复更新。
+> 注意！由于 obsidian 的政策，不能使用在线或本地库里的图片，相关内置在线图片的选项已经删除，但保留自定义设置，需要显示背景图片请自行设置url。
 
 You will find a Blue Topaz example vault (the TIPS vault) here. The TIPS vault shows some theme-specific and novel usages which may help you polish or customize your notes.
 
@@ -17,8 +17,6 @@ You will find a Blue Topaz example vault (the TIPS vault) here. The TIPS vault s
 [BT Tips Vault for English](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/blob/master/TIPS%20vault/TIPS%20for%20Blue%20Topaz_English.zip)
 
 And I still recommend you the enhanced edition (https://github.com/cumany/Blue-topaz-examples) created by @cumany, if you are not satisfied with the TIPS vault.
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/whyi)
 
 ---
 
