@@ -4691,57 +4691,17 @@ settings:
     type: class-toggle
     default: false
   -
-    id: heatmap-light
-    title: Heatmap in Light mode
-    description: Change the color of heatmap
-    type: class-select
-    allowEmpty: false
-    default: memos-default-light
-    options:
-      -
-        label: Theme color
-        value: memos-default-light
-      -
-        label: Grass
-        value: grass-light
-      -
-        label: olive
-        value: olive-light
-      -
-        label: Frame
-        value: frame-light
-      -
-        label: Ice
-        value: ice-light
-      -
-        label: Magenta
-        value: magenta-light
+    id: memos-hide-header
+    title: hider Thino header
+    title.zh: 隐藏thino 视图的头部
+    type: class-toggle
+    default: false
   -
-    title: Heatmap in Dark mode
-    description: Change the color of heatmap
-    id: heatmap-dark
-    type: class-select
-    allowEmpty: false
-    default: memos-default-dark
-    options:
-      -
-        label: Theme color
-        value: memos-default-dark
-      -
-        label: Grass
-        value: grass-dark
-      -
-        label: Olive
-        value: olive-dark
-      -
-        label: Frame
-        value: frame-dark
-      -
-        label: Ice
-        value: ice-dark
-      -
-        label: Magenta
-        value: magenta-dark
+    id: hider-memos-modern-banner
+    title: hide thino modern moment banner
+    title.zh: 隐藏Thino modern 主题下的动态视图的banner
+    type: class-toggle
+    default: false
   -
     id: style-options-for-backlinks-panel
     title: 3.10 backlinks panel
@@ -13682,11 +13642,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
   box-shadow: 0 0 6px 6px var(--theme-color-translucent-015);
 }
 
-.popover.hover-popover:not(.hover-editor) > *:not(.mod-empty) {
-  width: calc(var(--popover-width) * var(--popover-width-factor));
-  height: calc(var(--popover-height) * var(--popover-height-factor));
-  max-height: calc(var(--popover-height) * var(--popover-height-factor));
-}
+ 
 
 /*hover editor plugin*/
 .popover.hover-editor .popover-title:after {
@@ -19382,14 +19338,18 @@ body  div[data-type='thino_view']
   --thino-wrapper-border:transparent;
   --memos-icon-hover:var(--background-modifier-border);
   --memos-bg-lightgray:var(--background-modifier-border);
-  --memos-memo-border:var(--background-modifier-border);
+  --memos-memo-border:transparent;
   --memos-location-wrapper-bg: transparent;
   --memos-bg-accent:var(--theme-color-translucent-04);
   --thino-background-primary:var(--bg-color-settings-4);
   --memos-bg-light-blue: var(--theme-color-translucent-02);
   --memos-text-blue:var(--interactive-accent);
 }
-div[data-type=thino_view] .memos-sidebar-wrapper
+body.is-fullscreen div[data-type='thino_view']
+{
+  --background-primary:var(--color-base-10);
+}
+div[data-type=thino_view].mobile-view .memos-sidebar-wrapper
 {
   background: linear-gradient(to right, var(--color-base-00) 30%, var(--background-mobile-drawer-2) 100%);
   backdrop-filter: blur(10px);
@@ -19409,9 +19369,10 @@ div[data-type=thino_view] .queries-wrapper>.create-query-btn-container>.btn
 }
 .heatmap-date-picker-wrapper>.date-picker-day-container>.date-picker-day-content>.day-item.current {
   background-color: var(--memos-stat-day-L1-bg);
-  filter: opacity(0.4); 
-
- 
+  filter: opacity(0.8); 
+}
+.heatmap-date-picker-wrapper>.date-picker-day-container>.date-picker-day-content>.day-item.current .day-item-text {
+  color:var(--color-base-70);
 }
 div[data-type=thino_view] .modern#page-wrapper, 
 div[data-type=thino_view] .memo-wrapper, .thino-hover-popover .memo-wrapper, 
@@ -19419,6 +19380,7 @@ div[data-type=thino_view] .memo-wrapper, .thino-hover-popover .memo-wrapper,
 div[data-type=thino_view] .memo-editor-wrapper, .thino-editor-modal .memo-editor-wrapper
 {
   --memos-memo-bg: transparent!important;
+  --memos-memo-bg-primary: transparent;
 }
 div[data-type=thino_view] .menu-btns-popup {
  
@@ -19464,7 +19426,7 @@ div[data-type=thino_view].mobile-view .section-header-container>.memos-header-se
 div[data-type=thino_view].mobile-view .search-bar-container {
   width: auto;
 }
-div[data-type=thino_view].mobile-view .search-bar-container>.search-bar-inputer{
+div[data-type=thino_view] .search-bar-container>.search-bar-inputer{
   
   background-color: transparent!important;
   padding:0;
@@ -19491,10 +19453,103 @@ body  div[data-type='thino_view'] .memo-editor-wrapper:has(.cm-focused)   {
 
   border: 1px solid var(--color-base-30);
 }
-div[data-type=thino_view].tiny-view .moments-view .moments-view-background-wrapper .moments-view-background
+div[data-type=thino_view] .user-banner-container>.userinfo-header-container>.userinfo-container .thino-user-icon:has(svg)
 {
-  height: 145px!important;
+  background-color: transparent;
+  box-shadow:none;
 }
+div[data-type=thino_view]:not(.mobile-view) .memos-moments-view .section-header-container.memos-header-container
+{
+  opacity:1;
+  height: 40px;
+    flex-wrap: nowrap;
+    margin-top: var(--size-2-2);  
+}
+
+div[data-type=thino_view] .search-bar-container>.quickly-action-wrapper>.quickly-action-container, .thino-canvas-filter-group .search-bar-container>.quickly-action-wrapper>.quickly-action-container {
+   
+  background-color:var(--bg-color-settings-0-1);
+  backdrop-filter: blur(10px);
+}
+ 
+div[data-type=thino_view] .section-header-container>.memos-header-search-section .thino-inline-filter-container, div[data-type=thino_view] .memos-header-container>.memos-header-search-section .thino-inline-filter-container {
+  background-color:var(--bg-color-settings-0-1);
+  backdrop-filter: blur(10px);
+}
+div[data-type=thino_view] .modern  input:not([type=checkbox])
+{
+  border: 1px solid var(--background-modifier-border);
+}
+/**********隐藏头部信息***/
+
+/* thino 隐藏头部信息 */
+body.memos-hide-header 
+div[data-type="thino_view"]
+    .view-header
+    :is(.view-header-nav-buttons, .view-header-title-container) {
+    display: none;
+}
+
+body.memos-hide-header  div[data-type="thino_view"] .view-header {
+    position: absolute;
+    right: 0;
+    background-color: transparent !important;
+    top: 12px;
+    transition: all 0.1s linear;
+    transform: translateY(-15px);
+}
+
+body.memos-hide-header  div[data-type="thino_view"] .view-actions {
+    position: relative;
+}
+
+body.memos-hide-header  div[data-type="thino_view"]  .view-header:not(:hover) {
+    transform: translateY(calc(-1 * var(--header-height)));
+    transition: all 0.6s linear;
+}
+
+ 
+
+/********moden 动态视图模式***/
+body.hider-memos-modern-banner div[data-type=thino_view]:not(.mobile-view) .memos-moments-view.modern .content-wrapper:has(.moments-view:not(.show-editor)) .section-header-container {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+  margin-top: 9px;
+}
+body.hider-memos-modern-banner div[data-type=thino_view] .memos-moments-view.modern .moments-show-editor-btn {
+  position: fixed !important;
+  transform: translate(-251px, 7px);
+}
+body.hider-memos-modern-banner div[data-type=thino_view] .memos-moments-view.modern .search-bar-inputer {
+  width: 90%;
+}
+
+body.hider-memos-modern-banner div[data-type=thino_view] .memos-moments-view.modern .search-bar-container>.quickly-action-wrapper {
+  right: 80px;
+}
+body.hider-memos-modern-banner div[data-type=thino_view] .memos-moments-view.modern .moments-view .moments-view-background-wrapper .moments-view-background {
+  display: none;
+}
+body.hider-memos-modern-banner div[data-type=thino_view] .memos-moments-view.modern .moments-view .moments-view-background-wrapper .moments-view-background-overlay {
+  margin-top: -20px;
+}
+body.hider-memos-modern-banner  div[data-type=thino_view] .view-header:has(+.view-content>.memos-moments-view.modern) {
+  display: none;
+}
+body.hider-memos-modern-banner div[data-type=thino_view] .memos-moments-view.modern .moments-view .moments-view-background-wrapper .moments-view-background-overlay .moments-view-user-info .moments-view-user-icon
+{
+  width: 40px;
+  height: 40px;
+  margin-top: -12px;;
+}
+
+div[data-type='thino_view'] .view-content .memos-moments-view.modern {
+  background: var(--bg-color-settings-2) !important;
+  backdrop-filter: blur(20px);
+  width: 95% !important;
+  height: 95% !important;
+}
+ 
  
 /**memos 输入框移到下方***/
 body.memos-inputbox div[data-type='thino_view']:not(.mobile-view) #page-wrapper .memo-editor-wrapper {
@@ -19504,7 +19559,7 @@ body.memos-inputbox div[data-type='thino_view']:not(.mobile-view) #page-wrapper 
   padding:8px;
 }
 body.memos-inputbox div[data-type='thino_view']:not(.mobile-view) .memolist-wrapper.completed {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 body.memos-inputbox div[data-type='thino_view']:not(.mobile-view) #page-wrapper > .content-wrapper {
   height: calc(100% - 150px);
@@ -19513,7 +19568,17 @@ body.memos-inputbox div[data-type='thino_view']:not(.mobile-view) #page-wrapper 
 body.memos-inputbox div[data-type='thino_view']:not(.mobile-view) .memolist-wrapper {
   flex-direction: column-reverse;
 }
+body.memos-inputbox div[data-type=thino_view] .memolist-wrapper .memolist-container .list-view .masonry-memolist-grid_column {
 
+  flex-direction: column-reverse;
+}
+body.memos-inputbox div[data-type=thino_view] .common-editor-wrapper .common-editor-inputer
+{
+  min-height: 78px;
+}
+ 
+
+ 
  
 /* ==============Commander================ */
 
