@@ -5996,7 +5996,7 @@ body.all-dark-pdf .print,
   --background-asymm-split-left: var(--background-secondary-alt);
 
   --background-mobile-drawer-1: #ffffff;
-  --background-mobile-drawer-2: #ffffff;
+  --background-mobile-drawer-2: #ffffffa1;
   --background-modifier-border-hr: #bfbfbf;
   --background-modifier-border-asymm: #d8d8d8;
   --background-modifier-border-checkbox: #9c9c9c;
@@ -6315,7 +6315,7 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --background-secondary-alt-bg-4-bt: #e8f0e8;
 
   --background-mobile-drawer-1: #ffffff;
-  --background-mobile-drawer-2: #ffffff;
+  --background-mobile-drawer-2: #ffffffa1;
   --background-secondary-alt-bg-4-bt-publish: #f6f6f6;
 
   --background-transparent-blue: #c6e5ffde;
@@ -6819,7 +6819,7 @@ body.color-scheme-options-pink-topaz.theme-light {
   --search-result-file-matched-bg: #ffc3c3;
 
   --background-mobile-drawer-1: #ffffff;
-  --background-mobile-drawer-2: #ffffff;
+  --background-mobile-drawer-2: #ffffffa1;
   --background-secondary-alt-bg-4-bt-publish: #f6f6f6;
 
   --scrollbar-thumb-bg: #e2bdbd8d;
@@ -8987,7 +8987,7 @@ body.color-scheme-options-lilac.theme-light {
   --search-result-file-matched-bg: #ffc3c3;
 
   --background-mobile-drawer-1: #ffffff;
-  --background-mobile-drawer-2: #ffffff;
+  --background-mobile-drawer-2: #ffffffa1;
 
   --background-secondary-alt-bg-4-bt-publish: #e1d5eb61;
 
@@ -19389,9 +19389,9 @@ body  div[data-type='thino_view']
   --memos-bg-light-blue: var(--theme-color-translucent-02);
   --memos-text-blue:var(--interactive-accent);
 }
-div[data-type=thino_view].mobile-view .memos-sidebar-wrapper
+div[data-type=thino_view] .memos-sidebar-wrapper
 {
-  background-color:var(--bg-color-settings-0-1);
+  background: linear-gradient(to right, var(--color-base-00) 30%, var(--background-mobile-drawer-2) 100%);
   backdrop-filter: blur(10px);
 }
 div[data-type=thino_view] .common-editor-inputer:has(.cm-focused) + .common-tools-wrapper >.btns-container>.confirm-btn
