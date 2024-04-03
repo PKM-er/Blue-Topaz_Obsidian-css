@@ -17498,41 +17498,7 @@ body.style-options-for-kanban-plugin-dynamic-neon-three .kanban-plugin__lane-wra
   color: #858585;
   white-space: pre;
 }
-
-/* thanks to dcoales from obsidian member group on discord */
-/* https://discord.com/channels/686053708261228577/702656734631821413/794236352857374764 */
-aside {
-  float: right;
-  position: relative;
-  left: 5px;
-  padding: 0 0 0 2px;
-}
-
-aside>h1,
-aside>h2 {
-  font-weight: normal !important;
-  font-size: 16px !important;
-  border: 1px solid;
-  border-bottom: 1px solid !important;
-  background-color: transparent;
-  padding: 0 5px;
-  max-width: 150px;
-  color: #467cf0 !important;
-  position: absolute;
-}
-
-aside>h1:hover::before,
-aside>h2:hover::before {
-  display: none;
-}
-
-aside>h2 {
-  color: #dd9207 !important;
-}
-
-.is-readable-line-width.sidecomments .markdown-preview-sizer {
-  margin-left: 20px !important;
-}
+ 
 
 /* ================================== */
 /* ====== markdown assitance ======== */
@@ -19337,7 +19303,7 @@ body  div[data-type='thino_view']
   --activeline-background:transparent;
   --thino-wrapper-border:transparent;
   --memos-icon-hover:var(--background-modifier-border);
-  --memos-bg-lightgray:var(--background-modifier-border);
+  --memos-bg-lightgray:var(--color-base-20);
   --memos-memo-border:transparent;
   --memos-location-wrapper-bg: transparent;
   --memos-bg-accent:var(--theme-color-translucent-04);
@@ -19345,9 +19311,28 @@ body  div[data-type='thino_view']
   --memos-bg-light-blue: var(--theme-color-translucent-02);
   --memos-text-blue:var(--interactive-accent);
 }
-body.is-fullscreen div[data-type='thino_view']
+body.is-fullscreen div[data-type='thino_view'],
+body.is-fullscreen .workspace-split .workspace-leaf-content 
 {
   --background-primary:var(--color-base-10);
+  background:var(--color-base-10);
+}
+div[data-type=thino_view] .usage-heat-map-wrapper>.usage-heat-map>.stat-container
+{
+ 
+  box-shadow: 0 3px 5px var(--background-modifier-box-shadow);
+
+}
+.theme-dark  div[data-type=thino_view] .usage-heat-map-wrapper   .stat-container {
+ 
+  background-color: #2a2a2a8a;
+  box-shadow:none;
+}
+div[data-type=thino_view] .moments-view .moments-view-background-wrapper .moments-view-background-overlay .moments-view-user-info .moments-view-user-name
+{
+  color:white;
+  font-weight: bold;
+    letter-spacing: 1px;
 }
 div[data-type=thino_view].mobile-view .memos-sidebar-wrapper
 {
@@ -19517,8 +19502,12 @@ body.hider-memos-modern-banner div[data-type=thino_view]:not(.mobile-view) .memo
   margin-top: 9px;
 }
 body.hider-memos-modern-banner div[data-type=thino_view] .memos-moments-view.modern .moments-show-editor-btn {
-  position: fixed !important;
-  transform: translate(-251px, 7px);
+  top: 22px  ;
+  right: 0px;
+}
+body.hider-memos-modern-banner div[data-type=thino_view] .moments-view .moments-view-background-wrapper
+{
+  position:unset;
 }
 body.hider-memos-modern-banner div[data-type=thino_view] .memos-moments-view.modern .search-bar-inputer {
   width: 90%;
