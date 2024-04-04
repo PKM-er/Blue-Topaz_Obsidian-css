@@ -4703,6 +4703,12 @@ settings:
     type: class-toggle
     default: false
   -
+    id: memos-banner-gradient
+    title: moment banner gradient
+    title.zh: 动态视图的banner 渐变显示
+    type: class-toggle
+    default: true
+  -
     id: style-options-for-backlinks-panel
     title: 3.10 backlinks panel
     title.zh: 3.10 反链面板
@@ -19329,9 +19335,9 @@ div[data-type=thino_view] .usage-heat-map-wrapper>.usage-heat-map>.stat-containe
   background-color: #2a2a2a8a;
   box-shadow:none;
 }
-body:not(.hider-memos-modern-banner) div[data-type=thino_view] .moments-view .moments-view-background-wrapper .moments-view-background-overlay .moments-view-user-info .moments-view-user-name
+body:not(:is(.hider-memos-modern-banner,.memos-banner-gradient)) div[data-type=thino_view] .moments-view .moments-view-background-wrapper .moments-view-background-overlay .moments-view-user-info .moments-view-user-name
 {
-  color:white;
+ color: white;
   font-weight: bold;
     letter-spacing: 1px;
 }
@@ -19464,12 +19470,18 @@ div[data-type=thino_view] .user-banner-container>.userinfo-header-container>.use
   background-color: transparent!important;
   box-shadow:none;
 }
+ 
 div[data-type=thino_view]:not(.mobile-view) .memos-moments-view .section-header-container.memos-header-container
 {
-  opacity:1;
+  
   height: 40px;
     flex-wrap: nowrap;
-    margin-top: var(--size-2-2);  
+    margin-top: 0;
+    padding: 0 20px;  
+}
+div[data-type=thino_view] .moments-view .moments-view-background-wrapper .moments-show-editor-btn
+{
+ top:20px;
 }
 
 div[data-type=thino_view] .search-bar-container>.quickly-action-wrapper>.quickly-action-container, .thino-canvas-filter-group .search-bar-container>.quickly-action-wrapper>.quickly-action-container {
@@ -19485,6 +19497,38 @@ div[data-type=thino_view] .section-header-container>.memos-header-search-section
 div[data-type=thino_view] .modern  input:not([type=checkbox])
 {
   border: 1px solid var(--background-modifier-border);
+}
+
+div[data-type=thino_view].mobile-view .modern .content-wrapper:has(.moments-view:not(.show-editor)) .section-header-container,
+div[data-type=thino_view] .content-wrapper:has(.moments-view:not(.show-editor)) .section-header-container {
+  /* position: absolute; */
+  z-index:1;
+  width:calc(100% - 55px);
+}
+ 
+div[data-type=thino_view] .memos-moments-view .filter-query-container {
+  z-index: 1;
+  padding: 6px 0 0 20px;
+  justify-content: flex-start;
+}
+div[data-type=thino_view] .memos-chat-view .filter-query-container {
+
+padding-bottom:20px;
+padding-left:0px;
+
+}
+div[data-type=thino_view] .memos-moments-view  .memolist-wrapper {
+  margin-top: -60px;
+}
+ 
+div[data-type=thino_view].mobile-view .modern#page-wrapper.memos-moments-view .content-wrapper .section-header-container  .search-bar-container .search-bar-inputer
+{
+max-width:280px;
+}
+/**********动态海报渐变显示***/
+body.memos-banner-gradient div[data-type=thino_view] .moments-view .moments-view-background-wrapper .moments-view-background {
+    mask-image: linear-gradient(to bottom,black 50%,transparent);
+    -webkit-mask-image: linear-gradient(to bottom,black 50%,transparent);
 }
 /**********隐藏头部信息***/
 
