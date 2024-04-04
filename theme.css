@@ -19311,11 +19311,12 @@ body  div[data-type='thino_view']
   --memos-bg-light-blue: var(--theme-color-translucent-02);
   --memos-text-blue:var(--interactive-accent);
 }
-body.is-fullscreen div[data-type='thino_view'],
-body.is-fullscreen .workspace-split .workspace-leaf-content 
+.workspace-tab-container:fullscreen  div[data-type='thino_view'],
+.workspace-tab-container:fullscreen .workspace-leaf-content 
 {
-  --background-primary:var(--color-base-10);
-  background:var(--color-base-10);
+ 
+    background-color: var(--background-primary-alt);
+
 }
 div[data-type=thino_view] .usage-heat-map-wrapper>.usage-heat-map>.stat-container
 {
@@ -19328,11 +19329,31 @@ div[data-type=thino_view] .usage-heat-map-wrapper>.usage-heat-map>.stat-containe
   background-color: #2a2a2a8a;
   box-shadow:none;
 }
-div[data-type=thino_view] .moments-view .moments-view-background-wrapper .moments-view-background-overlay .moments-view-user-info .moments-view-user-name
+body:not(.hider-memos-modern-banner) div[data-type=thino_view] .moments-view .moments-view-background-wrapper .moments-view-background-overlay .moments-view-user-info .moments-view-user-name
 {
   color:white;
   font-weight: bold;
     letter-spacing: 1px;
+}
+div[data-type=thino_view] .moments-view .thino-moment-wrapper .thino-moment-container .thino-moment-user-name {
+  color: #66789d;
+}
+div[data-type=thino_view] .moments-view .moments-view-background-wrapper .moments-view-background-overlay .moments-view-user-idea {
+  font-size: 12px;
+}   
+div[data-type=thino_view] .memo-wrapper>.memo-top-wrapper>.memo-top-left-wrapper>.memo-type-img
+{
+  align-items: flex-end;
+}
+div[data-type=thino_view] .moments-view .memo-content-text p a[href^="#收集"] {
+  display: block;
+  position: absolute;
+  left: 180px;
+  top: calc(100% - 31px);
+  font-size: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: var(--tag-color);
 }
 div[data-type=thino_view].mobile-view .memos-sidebar-wrapper
 {
@@ -19438,9 +19459,9 @@ body  div[data-type='thino_view'] .memo-editor-wrapper:has(.cm-focused)   {
 
   border: 1px solid var(--color-base-30);
 }
-div[data-type=thino_view] .user-banner-container>.userinfo-header-container>.userinfo-container .thino-user-icon:has(svg)
+div[data-type=thino_view] .user-banner-container>.userinfo-header-container>.userinfo-container .thino-user-icon
 {
-  background-color: transparent;
+  background-color: transparent!important;
   box-shadow:none;
 }
 div[data-type=thino_view]:not(.mobile-view) .memos-moments-view .section-header-container.memos-header-container
@@ -23371,8 +23392,8 @@ body.background-settings-workplace-background-image.background-settings-workplac
   background-color: var(--wave2-background-color);
 }
 
-body.background-settings-workplace-background-image.theme-light .workspace-split.mod-root:fullscreen::before,
-body.background-settings-workplace-background-image.theme-dark .workspace-split.mod-root:fullscreen::before {
+body.background-settings-workplace-background-image.theme-light .workspace-split.mod-root .workspace-tab-container:fullscreen::before,
+body.background-settings-workplace-background-image.theme-dark .workspace-split.mod-root .workspace-tab-container:fullscreen::before {
   background-image: var(--theme-background);
   background-size: cover;
   filter: blur(var(--blur-depth)) brightness(var(--brightness-4-bg)) saturate(var(--saturate-4-bg));
@@ -23420,9 +23441,7 @@ body.background-settings-workplace-background-image.background-settings-workplac
   background-color: var(--wave2-background-color);
 }
 
-.workspace-split.mod-root:fullscreen .modal-container .prompt {
-  width: 90%;
-}
+
 
 body.background-settings-workplace-background-image .workspace::before {
   content: '';
