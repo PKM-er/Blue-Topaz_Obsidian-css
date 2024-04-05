@@ -4697,6 +4697,12 @@ settings:
     type: class-toggle
     default: false
   -
+    id: memos-scroll
+    title: add Thino list scroll
+    title.zh: 列表 瀑布流模式下给thino 增加一个滚动条
+    type: class-toggle
+    default: false
+  -
     id: hider-memos-modern-banner
     title: hide thino modern moment banner
     title.zh: 隐藏Thino modern 主题下的动态视图的banner
@@ -19473,7 +19479,7 @@ div[data-type=thino_view] .user-banner-container>.userinfo-header-container>.use
  
 div[data-type=thino_view]:not(.mobile-view) .memos-moments-view .section-header-container.memos-header-container
 {
-  
+  justify-content: flex-start;
   height: 40px;
     flex-wrap: nowrap;
     margin-top: 0;
@@ -19520,11 +19526,49 @@ padding-left:0px;
 div[data-type=thino_view] .memos-moments-view  .memolist-wrapper {
   margin-top: -60px;
 }
- 
+body.is-mobile div[data-type=thino_view] .memos-moments-view  .memolist-wrapper {
+  margin-top: 6px;
+}
+body.is-mobile div[data-type=thino_view] .view-header:has(+.view-content>.memos-moments-view) {
+  position: absolute;
+  background: transparent;
+  border: none;
+}
+body.is-mobile div[data-type=thino_view] .section-header-container>.memos-header-search-section .thino-inline-filter-wrapper
+{
+  border-color: transparent!important;
+}
+body.is-mobile div[data-type=thino_view] .moments-view .moments-view-background-wrapper .moments-show-editor-btn {
+  top: 8px;
+}
+body.is-mobile div[data-type=thino_view].mobile-view .search-bar-container>.search-bar-inputer input:focus
+{
+  background-color: transparent;
+}
+body.is-mobile div[data-type=thino_view].mobile-view .search-bar-container {
+  width: 110px;
+}
+body.is-mobile div[data-type=thino_view] .memos-moments-view .memos-sidebar-wrapper
+{
+  margin-top: 48px;
+  height: calc(100% - 85px);
+  
+}
+body.is-mobile div[data-type=thino_view].mobile-view .tags-wrapper, 
+{
+   background-color: transparent;
+}
+
 div[data-type=thino_view].mobile-view .modern#page-wrapper.memos-moments-view .content-wrapper .section-header-container  .search-bar-container .search-bar-inputer
 {
 max-width:280px;
 }
+/**********thino 加滚动条***/
+body.memos-scroll div[data-type=thino_view] .memolist-wrapper .memolist-container .masonry-memolist {
+  max-height: 660px;
+  overflow: auto;
+}
+ 
 /**********动态海报渐变显示***/
 body.memos-banner-gradient div[data-type=thino_view] .moments-view .moments-view-background-wrapper .moments-view-background {
     mask-image: linear-gradient(to bottom,black 50%,transparent);
@@ -19558,8 +19602,21 @@ body.memos-hide-header  div[data-type="thino_view"]  .view-header:not(:hover) {
     transition: all 0.6s linear;
 }
 
+div[data-type=thino_view] .moments-view .moments-view-background-wrapper .moments-view-background-overlay .moments-view-user-info .moments-view-user-icon,
+div[data-type=thino_view] .moments-view .thino-moment-wrapper .thino-moment-icon 
+{
+  background-color: transparent;
+}
  
-
+div[data-type=thino_view] .memos-moments-view .search-bar-container>.quickly-action-wrapper, .thino-canvas-filter-group .search-bar-container>.quickly-action-wrapper {
+  top: 38px;
+  left: 220px;
+  right:0;
+}
+.is-mobile div[data-type=thino_view].tiny-view .section-header-container>.memos-header-search-section .memos-view-switcher-wrapper, 
+div[data-type=thino_view] .memos-header-container>.memos-header-search-section .memos-view-switcher-wrapper {
+  border-color: transparent;
+}
 /********moden 动态视图模式***/
 body.hider-memos-modern-banner div[data-type=thino_view]:not(.mobile-view) .memos-moments-view.modern .content-wrapper:has(.moments-view:not(.show-editor)) .section-header-container {
   border-bottom: 1px solid var(--border-color);
@@ -19597,11 +19654,13 @@ body.hider-memos-modern-banner div[data-type=thino_view] .memos-moments-view.mod
   margin-top: -12px;;
 }
 
-div[data-type='thino_view'] .view-content .memos-moments-view.modern {
+  div[data-type='thino_view'] .view-content  {
   background: var(--bg-color-settings-2) !important;
   backdrop-filter: blur(20px);
   width: 95% !important;
   height: 95% !important;
+  margin: auto;
+  box-shadow: var( --window-shadow2);
 }
  
  
@@ -27446,11 +27505,15 @@ body.title-justify-start .view-header-title-container {
 .search-input-container input:hover {
   box-shadow: var(--window-shadow-hover);
 }
+ 
 .menu{
+  background-color: var(--color-base-00);
+}
+
+.memo-context-menu{
   background-color:var(--bg-color-settings-0-1);
   backdrop-filter: blur(10px);
 }
-
 .cm-s-obsidian span.obsidian-search-match-highlight {
   box-shadow: none;
 }
