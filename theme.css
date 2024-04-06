@@ -19482,6 +19482,9 @@ padding-bottom:20px;
 padding-left:0px;
 
 }
+div[data-type=thino_view] .moments-view .thino-moment-wrapper .thino-moment-container .thino-moment-user-content .memo-wrapper .memo-top-wrapper .btn.more-action-btn {
+  background-color:  transparent;
+}
 div[data-type=thino_view] .memos-moments-view  .memolist-wrapper {
   margin-top: -60px;
 }
