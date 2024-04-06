@@ -4093,47 +4093,6 @@ settings:
     type: class-toggle
     default: false
   -
-    id: canvas-background-image
-    title: Canvas background image
-    title.zh: canvas背景图案
-    type: class-select
-    allowEmpty: false
-    default: default-canvas-background
-    options:
-      -
-        label: Default
-        value: default-canvas-background
-      -
-        label: Stardust
-        value: stardust-canvas-background
-      -
-        label: Dark Mosaic
-        value: mosaic-canvas-background-dark
-      -
-        label: Woven (Dark)
-        value: woven-canvas-background-dark
-      -
-        label: Woven (light)
-        value: woven-canvas-background
-      -
-        label: Wood
-        value: wood-canvas-background
-      -
-        label: Retina Wood
-        value: retina-wood-canvas-background
-      -
-        label: Matrix grid
-        value: matrix-grid-canvas-background
-      -
-        label: Notebook
-        value: notebook-canvas-background
-      -
-        label: Project Paper
-        value: paper-canvas-background
-      -
-        label: Blackboard
-        value: blackboard-canvas-background
-  -
     id: canvas-background
     title: Custom canvas background color
     title.zh: 自定义canvas背景色
@@ -19554,7 +19513,7 @@ body.is-mobile div[data-type=thino_view] .memos-moments-view .memos-sidebar-wrap
   height: calc(100% - 85px);
   
 }
-body.is-mobile div[data-type=thino_view].mobile-view .tags-wrapper, 
+body.is-mobile div[data-type=thino_view].mobile-view .tags-wrapper
 {
    background-color: transparent;
 }
@@ -19654,11 +19613,11 @@ body.hider-memos-modern-banner div[data-type=thino_view] .memos-moments-view.mod
   margin-top: -12px;;
 }
 
-  div[data-type='thino_view'] .view-content  {
-  background: var(--bg-color-settings-2) !important;
+  body:not(.is-mobile) div[data-type='thino_view']:not(.mobile-view) .view-content  {
+  background: var(--bg-color-settings-2) ;
   backdrop-filter: blur(20px);
-  width: 95% !important;
-  height: 95% !important;
+  width: 95% ;
+  height: 95% ;
   margin: auto;
   box-shadow: var( --window-shadow2);
 }
@@ -28501,3 +28460,37 @@ body.nowrap-edit-codebox .HyperMD-codeblock {
   background: var(--bg-color-settings-6);
  
 }
+
+/**from https://forum.obsidian.md/t/performance-issue-with-built-in-canvas-plugin/68609/2?u=kuiyuero**/
+
+.view-content:has(> .canvas-wrapper) {
+  overflow: hidden;
+}
+
+.canvas-wrapper {
+  width: 1000%;
+  height: 1000%;
+
+  left: -450%;
+  top: -450%;
+}
+
+.canvas-wrapper .canvas {
+
+    transition: transform 60ms ease;
+    will-change: transform, scale, translate;
+}
+
+.canvas-wrapper .canvas  > svg * {
+      shape-rendering: optimizeSpeed;
+    }
+  
+
+    .canvas-wrapper .canvas-controls {
+    right: calc(45% + var(--size-4-2));
+    top: calc(45% + var(--size-4-2));
+  }
+
+  .canvas-wrapper .canvas-card-menu {
+    bottom: calc(45% + var(--size-4-2));
+  }
