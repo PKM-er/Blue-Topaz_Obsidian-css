@@ -8,8 +8,8 @@ Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/
 
 */
 
-/*蓝色托帕石，适合Obsidian v1.2.8。uid [20240402] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.2.8, uid [20240402] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.2.8。uid [20240409] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.2.8, uid [20240409] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /*
 MIT License
@@ -1355,6 +1355,7 @@ settings:
     id: h1-font
     title: Header 1 font family
     title.zh: 标题 1 字体
+    description: eg："Microsoft YaHei"
     type: variable-text
     default: ""
   -
@@ -3858,6 +3859,18 @@ settings:
     max: 30
     step: 1
   -
+    id: titlebar-blur-depth
+    title: Title bar blur radius
+    title.zh: Title bar 模糊程度
+    description: To adjust the radius of blur
+    description.zh: 调整Title bar 背景模糊程度
+    type: variable-number-slider
+    default: 8
+    format: px
+    min: 0
+    max: 30
+    step: 1
+  -
     id: titlebar-brightness
     title: Title bar brightness of image
     title.zh: Title bar 背景亮度
@@ -4637,11 +4650,18 @@ settings:
         label: Chat
         value: dialogue-style-chat
   -
-    id: style-options-for-dialogue-plugin-heading
-    title: 3.9 Obsidian Thino
-    description: Adapted from @Quorafind's CSS snippet
+    id: style-options-for-Thino-plugin-heading
+    title: 3.9 ✏️Thino
+    description: Adapted from @Quorafind's Thino Plugin
     type: heading
     level: 2
+    collapsed: false
+  -
+    id: style-options-for-Thino-plugin-heading-1
+    title: 3.9.1 Thino  style
+    title.zh: 3.9.1 Thino  全局样式
+    type: heading
+    level: 3
     collapsed: true
   -
     id: memos-inputbox
@@ -4673,6 +4693,121 @@ settings:
     title.zh: 动态视图的banner 渐变显示
     type: class-toggle
     default: true
+  -
+    id: thino-view-style
+    title: thino style
+    title.zh: Thino的风格
+    type: class-select
+    allowEmpty: false
+    default: thino-frosted-style
+    options:
+      -
+        label: default
+        value: thino-default
+      -
+        label: Frosted Style(Transparent)
+        value: thino-frosted-style
+      -
+        label: Frosted Style
+        value: thino-frosted-style-default
+  -
+    id: thino-view-background
+    title: custom thino background
+    title.zh: 自定义Thino背景
+    type: class-select
+    allowEmpty: false
+    default: thino-background-default
+    options:
+      -
+        label: default
+        value: thino-background-default
+      -
+        label: custom color  
+        value: thino-background-color  
+      -
+        label: Custom background img
+        value: custom-thino-background
+  -
+    id: thino-modern-primary
+    title: thino  background color
+    title.zh: thino 背景色
+    type: variable-themed-color
+    opacity: true
+    format: hsl-split
+    default-light: '#ebf3ee'
+    default-dark: '#1e1e1e'
+  -
+    id: thino-background-light-custom
+    title: Custom thino background light (url)
+    title.zh: 自定义Thino背景（亮色模式）
+    description: Customise the background image. Use the format in the Default below for an Online image. 
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置在线图片。 
+    type: variable-text
+    default: url("https://")
+  -
+    id: thino-background-dark-custom
+    title: Custom thino background dark (url)
+    title.zh: 自定义Thino背景（暗色模式）
+    description: Customise the background image. Use the format in the Default below for an Online image. 
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置在线图片。 
+    type: variable-text
+    default: url("https://")
+  -
+    id: style-options-for-Thino-plugin-share-heading
+    title: 3.9.2 Thino share style
+    title.zh: 3.9.2 Thino 卡片分享样式
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: hide-share-thino-banner 
+    title: hide share thino banner 
+    title.zh: 隐藏分享Thino的横幅图片
+    type: class-toggle
+    default: false
+  -
+    id: share-thino-style
+    title: share thino style
+    title.zh: Thino分享样式
+    type: class-select
+    allowEmpty: false
+    default: thino-share-default
+    options:
+      -
+        label: default
+        value: thino-share-default
+      -
+        label: Same as workspace background
+        value: share-thino-with-workspace-background
+      -
+        label: Same as  thino  background 
+        value: share-thino-with-thino-background
+      -
+        label: Custom share background
+        value: custom-thino-share-background
+  -
+    id: share-card-background-opacity-cp
+    title: Share Card Background Opacity
+    title.zh: 分享卡片背景透明度
+    type: variable-number-slider
+    default: 0.6
+    min: 0
+    max: 1
+    step: 0.05
+  -
+    id: share-thino-background-light-custom
+    title: Custom thino share background light (url)
+    description: Customise the background image. Use the format in the Default below for an Online image. 
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置在线图片。 
+    type: variable-text
+    default: url("https://")
+  -
+    id: share-thino-background-dark-custom
+    title: Custom thino share background dark (url)
+    description: Customise the background image. Use the format in the Default below for an Online image. 
+    description.zh: 需在上方选项种选择Custom，以自定义背景。使用Default内格式设置在线图片。 
+    type: variable-text
+    default: url("https://")
   -
     id: style-options-for-backlinks-panel
     title: 3.10 backlinks panel
@@ -5526,6 +5661,14 @@ body {
   --ribbon-background: var(--background-secondary-alt);--ribbon-background-collapsed: var(--background-secondary-alt);
 
   --bt-indentation-width-hover: 3px;
+
+  /***thino***/
+  --share-thino-background-light-custom:url("https://");
+  --share-thino-background-dark-custom:url("https://");
+  --thino-background-light-custom:url("https://");
+  --thino-background-dark-custom:url("https://");
+ 
+  --share-card-background-opacity-cp:0.6;
 }
 
 
@@ -9922,6 +10065,10 @@ body.color-scheme-options-simplicity-topaz .workspace-split.mod-left-split .work
 body.color-scheme-options-simplicity-topaz .workspace-tabs .workspace-tab-header-container {
   background-color: var(--background-secondary-alt);
 }
+body.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-tabs .workspace-tab-header-container {
+  background-color: transparent;
+}
+
 body.is-mobile.color-scheme-options-simplicity-topaz .workspace-tabs .workspace-tab-header-container {
   background-color: var(--background-secondary);
 }
@@ -18939,7 +19086,17 @@ body:not([class*="background-settings-workplace-wave"]) .setting-item[data-id="b
 body:not(.background-settings-workplace-theme-light-custom-option) .setting-item[data-id="background-settings-workplace-theme-light-custom"],
 body:not(.background-settings-workplace-theme-dark-custom-option) .setting-item[data-id="background-settings-workplace-theme-dark-custom"],
 body:not(.background-settings-workplace-random-dark) .setting-item[data-id="background-settings-workplace-random"],
-body:not(.background-settings-workplace-random-light) .setting-item[data-id="background-settings-workplace-random"] {
+body:not(.background-settings-workplace-random-light) .setting-item[data-id="background-settings-workplace-random"],
+body:not(.custom-thino-background) .setting-item[data-id="thino-background-dark-custom"],
+body:not(.custom-thino-background) .setting-item[data-id="thino-background-light-custom"],
+body:not(.custom-thino-share-background) .setting-item[data-id="share-thino-background-dark-custom"],
+body:not(.custom-thino-share-background) .setting-item[data-id="share-thino-background-light-custom"],
+body:not(.thino-background-color) .setting-item[data-id="thino-modern-primary"]
+ {
+  display: none;
+}
+body:not(:is(.share-thino-with-workspace-background,.share-thino-with-thino-background,.custom-thino-share-background)) .setting-item[data-id="blur-thino-share-frosted-glass"]
+{
   display: none;
 }
 
@@ -19269,18 +19426,61 @@ body.mk-mark-sans #calendar-container {
 /* ============== Memos Thino============= */
 /* ================================== */
 
-body  div[data-type='thino_view']
+body:not(.thino-default) div[data-type='thino_view']
 {
   --activeline-background:transparent;
   --thino-wrapper-border:transparent;
   --memos-icon-hover:var(--background-modifier-border);
-  --memos-bg-lightgray:var(--color-base-20);
+ 
   --memos-memo-border:transparent;
   --memos-location-wrapper-bg: transparent;
   --memos-bg-accent:var(--theme-color-translucent-04);
-  --thino-background-primary:var(--bg-color-settings-4);
+  --thino-background-primary:var(--bg-color-settings-0-1);
   --memos-bg-light-blue: var(--theme-color-translucent-02);
   --memos-text-blue:var(--interactive-accent);
+}
+body:is(.thino-default,.thino-frosted-style-default)  div[data-type=thino_view] .memo-editor-wrapper{
+  background-color: var(--background-primary-bg-4-bt, var(--background-primary));
+}
+body:is(.thino-default,.thino-frosted-style-default)   div[data-type=thino_view] .memolist-wrapper>.memolist-container {
+
+  background-color: transparent;
+
+}
+body:is(.thino-default,.thino-frosted-style-default)   div[data-type=thino_view] .memo-wrapper,
+body:is(.thino-default,.thino-frosted-style-default)    .thino-hover-popover .memo-wrapper, 
+body:is(.thino-default,.thino-frosted-style-default)  .block-language-thino .thino-embed-container .memo-wrapper {
+
+  background-color: var(--background-primary-bg-4-bt, var(--background-primary));
+
+}
+div[data-type=thino_view] .memo-editor-wrapper>.tip-text {
+padding-left:1.5em;
+}
+.thino-editor-modal .common-editor-wrapper .common-editor-inputer {
+  border: none;
+}
+body.custom-thino-background div[data-type='thino_view'].workspace-leaf-content
+{
+  background-image: var(--thino-background-light-custom) ;
+  --background-primary:var(--bg-color-settings-2);
+  --memos-memo-bg:var(--bg-color-settings-0-1);
+  --memos-memo-border:var(--bg-color-settings-0-1);
+  background-size: cover;
+}
+body.custom-thino-background.theme-dark div[data-type='thino_view'].workspace-leaf-content
+{
+  background-image: var(--thino-background-dark-custom);
+  --background-primary:var(--bg-color-settings-2);
+  --memos-memo-bg:var(--bg-color-settings-0-1);
+  --memos-memo-border:var(--bg-color-settings-0-1);
+  background-size: cover;
+}
+
+body.custom-thino-background.theme-dark div[data-type='thino_view'] #page-wrapper
+{
+ 
+  background: var(--bg-color-settings-2);
 }
 .workspace-tab-container:fullscreen  div[data-type='thino_view'],
 .workspace-tab-container:fullscreen .workspace-leaf-content 
@@ -19289,13 +19489,8 @@ body  div[data-type='thino_view']
     background-color: var(--background-primary-alt);
 
 }
-div[data-type=thino_view] .usage-heat-map-wrapper>.usage-heat-map>.stat-container
-{
  
-  box-shadow: 0 3px 5px var(--background-modifier-box-shadow);
-
-}
-.theme-dark  div[data-type=thino_view] .usage-heat-map-wrapper   .stat-container {
+ .theme-dark div[data-type=thino_view] .usage-heat-map-wrapper   .stat-container {
  
   background-color: #2a2a2a8a;
   box-shadow:none;
@@ -19305,6 +19500,14 @@ body:not(:is(.hider-memos-modern-banner,.memos-banner-gradient)) div[data-type=t
  color: white;
   font-weight: bold;
     letter-spacing: 1px;
+}
+.theme-dark div[data-type=thino_view] .memo-editor-wrapper, 
+.theme-dark .thino-editor-modal .memo-editor-wrapper {
+  border: none;
+}
+.modal.thino-editor-modal .modal-content
+{
+  background-color:var(--bg-color-settings-3);
 }
 div[data-type=thino_view] .moments-view .thino-moment-wrapper .thino-moment-container .thino-moment-user-name {
   color: #66789d;
@@ -19344,31 +19547,82 @@ div[data-type=thino_view] .queries-wrapper>.create-query-btn-container>.btn
 {
   border: 1px solid var(--memos-memo-border);
 }
-.heatmap-date-picker-wrapper>.date-picker-day-container>.date-picker-day-content>.day-item.current {
+body:not(.thino-default)  .heatmap-date-picker-wrapper>.date-picker-day-container>.date-picker-day-content>.day-item.current {
   background-color: var(--memos-stat-day-L1-bg);
   filter: opacity(0.8); 
 }
-.heatmap-date-picker-wrapper>.date-picker-day-container>.date-picker-day-content>.day-item.current .day-item-text {
+body:not(.thino-default) .heatmap-date-picker-wrapper>.date-picker-day-container>.date-picker-day-content>.day-item.current .day-item-text {
   color:var(--color-base-70);
 }
-div[data-type=thino_view] .modern#page-wrapper, 
-div[data-type=thino_view] .memo-wrapper, .thino-hover-popover .memo-wrapper, 
-.block-language-thino .thino-embed-container .memo-wrapper,
-div[data-type=thino_view] .memo-editor-wrapper, .thino-editor-modal .memo-editor-wrapper
+body:is(.thino-frosted-style) div[data-type=thino_view] .modern#page-wrapper, 
+body:is(.thino-frosted-style)     div[data-type=thino_view] .memo-wrapper, .thino-hover-popover .memo-wrapper, 
+body:is(.thino-frosted-style)   .block-language-thino .thino-embed-container .memo-wrapper,
+body:is(.thino-frosted-style)     div[data-type=thino_view] .memo-editor-wrapper, .thino-editor-modal .memo-editor-wrapper
 {
-  --memos-memo-bg: transparent!important;
+  --memos-memo-bg: transparent;
   --memos-memo-bg-primary: transparent;
 }
-div[data-type=thino_view] .menu-btns-popup {
+
+
+body:is(.thino-background-default,.custom-thino-background)   div[data-type=thino_view] .modern#page-wrapper, 
+body:is(.thino-background-default,.custom-thino-background)     div[data-type=thino_view] .memo-wrapper, .thino-hover-popover .memo-wrapper, 
+body:is(.thino-background-default,.custom-thino-background)   .block-language-thino .thino-embed-container .memo-wrapper,
+body:is(.thino-background-default,.custom-thino-background)    div[data-type=thino_view] .memo-editor-wrapper, .thino-editor-modal .memo-editor-wrapper
+{
+  --memos-memo-bg: var(--bg-color-settings-0-1);
+  --memos-memo-bg-primary: var(--bg-color-settings-0-1);
+
+}
+body:is(.thino-background-default,.thino-frosted-style,.custom-thino-background,.thino-background-color)  div[data-type=thino_view] .modern#page-wrapper:is(.memos-chat-view,.memos-moments-view,.memos-list-view,.memos-table-view,.memos-calendar-view,.memos-waterfall-view) {
+ 
+  background-color: transparent;
+  --thino-modern-secondary:transparent;
+  --thino-modern-primary:transparent;
+}
+body.thino-frosted-style-default  div[data-type=thino_view] .modern#page-wrapper:is(.memos-chat-view,.memos-moments-view,.memos-list-view,.memos-table-view,.memos-calendar-view,.memos-waterfall-view) 
+
+  {
+    --thino-modern-primary: var(--bg-color-settings-0-1);
+    --thino-modern-secondary: transparent;
+  }
+  body.thino-frosted-style-default div[data-type=thino_view] .moments-view .thino-moment-wrapper {
+    border-radius: var(--radius-m);
+    background-color: var(--bg-color-settings-2);
+}
+body.thino-frosted-style-default div[data-type=thino_view] .moments-view .thino-moment-wrapper:after
+{
+  display:none;
+}
+body.thino-background-color div[data-type=thino_view].workspace-leaf-content
+{
+  --start-color: hsla(
+    var(--thino-modern-primary-h), 
+    var(--thino-modern-primary-s),
+    var(--thino-modern-primary-l),
+    var(--thino-modern-primary-a) 
+  );
+  --end-color: hsla(
+    calc(var(--thino-modern-primary-h) +  30),
+    calc(var(--thino-modern-primary-s) +  5%),
+    calc(var(--thino-modern-primary-l) + 13%), 
+    calc(var(--thino-modern-primary-a) * 0.8)
+  );
+  background: linear-gradient(117deg, var(--start-color), var(--end-color)); 
+  --background-primary:var(--bg-color-settings-2);
+  --memos-memo-bg:var(--bg-color-settings-0-1);
+  --memos-memo-border:var(--bg-color-settings-0-1);
+ }
+body:not(.thino-default)  div[data-type=thino_view] .menu-btns-popup {
  
   background-color:var(--bg-color-settings-0-1);
   backdrop-filter: blur(10px);
 }
-div[data-type=thino_view] .modern#page-wrapper:is(.memos-chat-view,.memos-moments-view,.memos-list-view,.memos-table-view,.memos-calendar-view,.memos-waterfall-view) {
+body:not:is(.thino-background-default,.custom-thino-background,.thino-frosted-style)  div[data-type=thino_view] .memo-editor-wrapper>.memo-editor, .thino-editor-modal .memo-editor-wrapper>.memo-editor {
  
-  background-color: transparent;
-  --thino-modern-secondary:: transparent;
+  background: linear-gradient(to bottom, var(--background-secondary), transparent);
+
 }
+ 
 div[data-type=thino_view] .memos-chat-view .memolist-wrapper .memolist-container .chat-view  {
   --memos-memo-bg: transparent;
 }
@@ -19379,16 +19633,16 @@ div[data-type=thino_view] .memos-chat-view .memolist-wrapper .memolist-container
 div[data-type=thino_view] .memos-chat-view .memolist-wrapper .memolist-container .chat-view:is(.fluent-style,.inline-style) .thino-bubble.right .wrap>.content:has(:is(.callout,img)):before {
 display:none;
 }
-div[data-type=thino_view].mobile-view .search-bar-container>.quickly-action-wrapper>.quickly-action-container
+body:not(.thino-default)  div[data-type=thino_view].mobile-view .search-bar-container>.quickly-action-wrapper>.quickly-action-container
 {
   background-color:var(--bg-color-settings-0-1);
   backdrop-filter: blur(10px);
 }
-div[data-type=thino_view] .memo-wrapper>.memo-top-wrapper>.memo-top-right-wrapper>.btns-container>.more-action-btns-wrapper>.more-action-btns-container, 
-.thino-hover-popover .memo-wrapper>.memo-top-wrapper>.memo-top-right-wrapper>.btns-container>.more-action-btns-wrapper>.more-action-btns-container, 
-.block-language-thino .thino-embed-container .memo-wrapper>.memo-top-wrapper>.memo-top-right-wrapper>.btns-container>.more-action-btns-wrapper>.more-action-btns-container,
-div[data-type=thino_view] .menu {
-  background-color:var(--bg-color-settings-0-1);
+body:not(.thino-default)  div[data-type=thino_view] .memo-wrapper>.memo-top-wrapper>.memo-top-right-wrapper>.btns-container>.more-action-btns-wrapper>.more-action-btns-container, 
+body:not(.thino-default)  .thino-hover-popover .memo-wrapper>.memo-top-wrapper>.memo-top-right-wrapper>.btns-container>.more-action-btns-wrapper>.more-action-btns-container, 
+body:not(.thino-default)  .block-language-thino .thino-embed-container .memo-wrapper>.memo-top-wrapper>.memo-top-right-wrapper>.btns-container>.more-action-btns-wrapper>.more-action-btns-container,
+body:not(.thino-default)  div[data-type=thino_view] .menu {
+  background-color:var(--bg-color-settings-3);
   backdrop-filter: blur(10px);
 }
 div[data-type=thino_view].mobile-view .search-bar-container>.quickly-action-wrappe {
@@ -19399,6 +19653,21 @@ div[data-type=thino_view].mobile-view .section-header-container>.memos-header-se
 {
   width: 275px;
 
+}
+
+div[data-type=thino_view] #cMenuToolbarModalBar .cMenuToolbarCommandItem {
+
+  backdrop-filter: unset;
+
+}
+div[data-type=thino_view] #cMenuToolbarModalBar .more-menu
+{
+  border:none;
+}
+div[data-type=thino_view] #cMenuToolbarModalBar.cMenuToolbarGlassAesthetic,
+div[data-type=thino_view] #cMenuToolbarModalBar.cMenuToolbarGlassAesthetic~#cMenuToolbarPopoverBar
+{
+  backdrop-filter: unset;
 }
 div[data-type=thino_view].mobile-view .search-bar-container {
   width: auto;
@@ -19421,7 +19690,8 @@ div[data-type=thino_view].mobile-view .thino-inline-filter-container .btns-conta
   flex-wrap: wrap;
 }
 
-div[data-type=thino_view].mobile-view .memo-editor-wrapper, .thino-editor-modal .memo-editor-wrapper
+div[data-type=thino_view].mobile-view .memo-editor-wrapper,
+ .thino-editor-modal .memo-editor-wrapper
 {
   padding:8px;
 }
@@ -19449,15 +19719,18 @@ div[data-type=thino_view] .moments-view .moments-view-background-wrapper .moment
  top:20px;
 }
 
-div[data-type=thino_view] .search-bar-container>.quickly-action-wrapper>.quickly-action-container, .thino-canvas-filter-group .search-bar-container>.quickly-action-wrapper>.quickly-action-container {
+div[data-type=thino_view].mobile-view .search-bar-container>.quickly-action-wrapper>.quickly-action-container,
+div[data-type=thino_view] .search-bar-container>.quickly-action-wrapper>.quickly-action-container,
+ .thino-canvas-filter-group .search-bar-container>.quickly-action-wrapper>.quickly-action-container {
    
-  background-color:var(--bg-color-settings-0-1);
-  backdrop-filter: blur(10px);
+  background-color:var(--color-base-20);
+
 }
  
-div[data-type=thino_view] .section-header-container>.memos-header-search-section .thino-inline-filter-container, div[data-type=thino_view] .memos-header-container>.memos-header-search-section .thino-inline-filter-container {
-  background-color:var(--bg-color-settings-0-1);
-  backdrop-filter: blur(10px);
+div[data-type=thino_view] .section-header-container>.memos-header-search-section .thino-inline-filter-container
+{
+  background-color:var(--color-base-20);
+
 }
 div[data-type=thino_view] .modern  input:not([type=checkbox])
 {
@@ -19485,8 +19758,10 @@ padding-left:0px;
 div[data-type=thino_view] .moments-view .thino-moment-wrapper .thino-moment-container .thino-moment-user-content .memo-wrapper .memo-top-wrapper .btn.more-action-btn {
   background-color:  transparent;
 }
-div[data-type=thino_view] .memos-moments-view  .memolist-wrapper {
+div[data-type=thino_view] .memos-moments-view .content-wrapper:not(:has(.edit-ing)) .memolist-wrapper {
+
   margin-top: -60px;
+  transition: all 0.1s linear;
 }
 body.is-mobile div[data-type=thino_view] .memos-moments-view  .memolist-wrapper {
   margin-top: 6px;
@@ -19496,7 +19771,7 @@ body.is-mobile div[data-type=thino_view] .view-header:has(+.view-content>.memos-
   background: transparent;
   border: none;
 }
-body.is-mobile div[data-type=thino_view] .section-header-container>.memos-header-search-section .thino-inline-filter-wrapper
+body div[data-type=thino_view] .section-header-container>.memos-header-search-section >*
 {
   border-color: transparent!important;
 }
@@ -19525,6 +19800,91 @@ div[data-type=thino_view].mobile-view .modern#page-wrapper.memos-moments-view .c
 {
 max-width:280px;
 }
+
+.share-memo-image-dialog .memo-content-text.markdown-rendered blockquote,
+div[data-type=thino_view] .memo-content-text.markdown-rendered blockquote
+{
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+/****thino 分享文字背景**/
+body.hide-share-thino-banner .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.property-image
+{
+  height:auto;
+}
+body.hide-share-thino-banner .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.background-container
+{
+  height:auto;
+}
+body.hide-share-thino-banner .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.thino-user-header {
+ 
+  padding-top: var(--size-4-8);
+}
+body.share-thino-with-workspace-background .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background {
+ 
+  background-image: var(--theme-background);
+  background-size: cover;
+}
+body.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background {
+ 
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+
+body.share-thino-with-thino-background.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background {
+ 
+  background-image: var(--thino-background-dark-custom);
+  background-size: cover;
+ 
+}
+body.share-thino-with-thino-background .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background {
+ 
+  background-image: var(--thino-background-light-custom);
+  background-size: cover;
+}
+
+body.custom-thino-share-background .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background {
+ 
+  background-image: var(--share-thino-background-light-custom);
+  background-size: cover;
+
+}
+body.custom-thino-share-background.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background {
+ 
+  background-image: var(--share-thino-background-dark-custom);
+  background-size: cover;
+ 
+}
+
+.share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.memo-content-text,
+.share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.thino-user-header,
+.share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.watermark-container ,
+.share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.thino-time-footer
+ {
+  background:rgba(255, 255, 255, var(--share-card-background-opacity-cp));
+  overflow: hidden;
+ 
+}
+ 
+.share-memo-image-dialog .memo-content-text p br {
+  display: block; 
+  margin-top: 0.5em; 
+  content: '\A'; 
+  white-space: pre; 
+}
+
+.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.memo-content-text,
+.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.thino-user-header,
+.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.watermark-container ,
+.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.thino-time-footer
+{
+  background:rgba(24, 24, 24, var(--share-card-background-opacity-cp));
+  overflow: hidden;
+ 
+}
+
+
 /**********thino 加滚动条***/
 body.memos-scroll div[data-type=thino_view] .memolist-wrapper .memolist-container .masonry-memolist {
   max-height: 660px;
@@ -19615,16 +19975,24 @@ body.hider-memos-modern-banner div[data-type=thino_view] .memos-moments-view.mod
   height: 40px;
   margin-top: -12px;;
 }
-
-  body:not(.is-mobile) div[data-type='thino_view']:not(.mobile-view) .view-content  {
+ body:is(.custom-thino-background,.thino-background-color) div[data-type='thino_view'] .view-content  
+ {
+  background: var(--bg-color-settings-0-1) ;
+ }
+ body.thino-frosted-style-default:not(.is-mobile) div[data-type='thino_view']:not(.mobile-view) .view-content ,
+  body.thino-frosted-style:not(.is-mobile) div[data-type='thino_view']:not(.mobile-view) .view-content  {
   background: var(--bg-color-settings-2) ;
   backdrop-filter: blur(20px);
   width: 95% ;
   height: 95% ;
   margin: auto;
   box-shadow: var( --window-shadow2);
+  border-radius:var(--radius-l);
 }
- 
+body:is(.thino-frosted-style,.custom-thino-background,.thino-background-color)  div[data-type=thino_view] #page-wrapper:is(.memos-chat-view,.memos-moments-view,.memos-list-view,.memos-table-view,.memos-calendar-view,.memos-waterfall-view) {
+  background: var(--bg-color-settings-2) ;
+  
+}
  
 /**memos 输入框移到下方***/
 body.memos-inputbox div[data-type='thino_view']:not(.mobile-view) #page-wrapper .memo-editor-wrapper {
@@ -19651,9 +20019,7 @@ body.memos-inputbox div[data-type=thino_view] .common-editor-wrapper .common-edi
 {
   min-height: 78px;
 }
- 
-
- 
+  
  
 /* ==============Commander================ */
 
@@ -23129,7 +23495,8 @@ body.blockquote-style-quotation-mark .markdown-source-view.mod-cm6 .cm-blockquot
 }
 body.blockquote-style-quotation-mark :is(.markdown-preview-view,.markdown-rendered) blockquote {
   color: var(--text-normal);
-  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1);
+
+  background:transparent;
 }
 
 body.blockquote-style-quotation-mark :is(.markdown-preview-view,.markdown-rendered) blockquote {
@@ -23138,6 +23505,7 @@ body.blockquote-style-quotation-mark :is(.markdown-preview-view,.markdown-render
   margin-inline-start: 1%;
   margin-inline-end: 1%;
   border-left-width: 0px;
+  border:none;
 }
 
 body.blockquote-style-quotation-mark :is(.markdown-preview-view,.markdown-rendered) blockquote p {
