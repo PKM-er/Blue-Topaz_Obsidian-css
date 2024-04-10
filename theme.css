@@ -11188,8 +11188,7 @@ body.toggle-left-aligned-content :is(.markdown-preview-view,.markdown-rendered).
   padding-bottom: calc((var(--paragraph-spacing) - 1) * 1em) ;
 }
 
-body.text-indentation-two-em .workspace-leaf-content[data-type="markdown"] .markdown-source-view.mod-cm6 
-div.cm-line:not(:is(.HyperMD-header,.HyperMD-quote,.HyperMD-list-line)),
+body.text-indentation-two-em .workspace-leaf-content[data-type="markdown"] .markdown-source-view.mod-cm6 div.cm-line:not(:is(.HyperMD-header,.HyperMD-quote,.HyperMD-list-line)),
 .markdown-source-view.mod-cm6.indent div.cm-line:not(:is(.HyperMD-header,.HyperMD-quote,.HyperMD-list-line)) {
   text-indent: 2em;
 }
@@ -19793,7 +19792,7 @@ body div[data-type=thino_view] .section-header-container>.memos-header-search-se
   border-color: transparent!important;
 }
 body.is-mobile div[data-type=thino_view] .moments-view .moments-view-background-wrapper .moments-show-editor-btn {
-  top: 58px;
+  top: 68px;
 }
 body.is-mobile div[data-type=thino_view].mobile-view .search-bar-container>.search-bar-inputer input:focus
 {
@@ -19806,7 +19805,7 @@ body.is-mobile div[data-type=thino_view].mobile-view .search-bar-container:has(.
 
 body.is-mobile div[data-type=thino_view] .memos-moments-view .filter-query-container:not(.hidden)
 {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 body.is-mobile div[data-type=thino_view] .memos-moments-view .filter-query-container:not(.hidden) + .memolist-wrapper {
   margin-top: -80px;
@@ -19833,7 +19832,10 @@ div[data-type=thino_view] .memo-content-text.markdown-rendered blockquote
   margin-inline-start: 0;
   margin-inline-end: 0;
 }
-
+div[data-type=thino_view] .memolist-wrapper .memolist-container .table-view th
+{
+  min-width:auto;
+}
 /****thino 分享文字背景**/
 
 body.share-thino-with-workspace-background .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container:is(.modern,.clean,.gradient)>.memo-background {
@@ -19846,7 +19848,11 @@ body.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-conta
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-
+body:is(.share-thino-with-thino-background,.share-thino-with-workspace-background, .custom-thino-share-background)  .share-memo-image-dialog>.dialog-container>.dialog-content-container.clean .memo-container>.memo-background .property-image {
+  
+  display:none;
+   
+}
 body.share-thino-with-thino-background.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container:is(.modern,.clean,.gradient)>.memo-background {
  
   background-image: var(--thino-background-dark-custom)!important;
@@ -19886,7 +19892,7 @@ body.custom-thino-share-background.theme-dark .share-memo-image-dialog>.dialog-c
 .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.watermark-container ,
 .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.thino-time-footer
  {
-  background-image: var(--share-thino-background-dark-custom)!important;
+ 
   overflow: hidden;
 }
  
@@ -27880,7 +27886,7 @@ body.title-justify-start .view-header-title-container {
 }
 
 .memo-context-menu{
-  background-color:var(--bg-color-settings-0-1);
+  background-color:var(--bg-color-settings-3);
   backdrop-filter: blur(10px);
 }
 .cm-s-obsidian span.obsidian-search-match-highlight {
