@@ -8,8 +8,8 @@ Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/
 
 */
 
-/*蓝色托帕石，适合Obsidian v1.2.8。uid [20240409] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.2.8, uid [20240409] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.2.8。uid [20240402] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.2.8, uid [20240402] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /*
 MIT License
@@ -4760,12 +4760,6 @@ settings:
     level: 3
     collapsed: true
   -
-    id: hide-share-thino-banner 
-    title: hide share thino banner 
-    title.zh: 隐藏分享Thino的横幅图片
-    type: class-toggle
-    default: false
-  -
     id: share-thino-style
     title: share thino style
     title.zh: Thino分享样式
@@ -4794,6 +4788,15 @@ settings:
     min: 0
     max: 1
     step: 0.05
+  -
+    id: share-card-background-color
+    title: Share Card Background color（Gradient Mode）
+    title.zh: 自定义分享卡片渐变背景颜色（渐变模式生效）
+    type: variable-themed-color
+    opacity: true
+    format: hsl-split
+    default-light: '#ffafbd'
+    default-dark: '#1e1e1e'
   -
     id: share-thino-background-light-custom
     title: Custom thino share background light (url)
@@ -19529,6 +19532,18 @@ div[data-type=thino_view] .moments-view .memo-content-text p a[href^="#收集"] 
   padding-bottom: 4px;
   color: var(--tag-color);
 }
+
+body.blockquote-style-quotation-mark.is-mobile div[data-type=thino_view] blockquote {
+  padding-left:0.5em;
+
+}
+.is-mobile div[data-type=thino_view].mobile-view #page-wrapper
+{
+margin-top:0;
+}
+.is-mobile div[data-type=thino_view].mobile-view .view-content:not(:has(.show-editor.moments-view)) {
+  padding-top: var(--size-4-2);
+}
 div[data-type=thino_view].mobile-view .memos-sidebar-wrapper
 {
   background: linear-gradient(to right, var(--color-base-00) 30%, var(--background-mobile-drawer-2) 100%);
@@ -19612,9 +19627,10 @@ body.thino-background-color div[data-type=thino_view].workspace-leaf-content
   --memos-memo-bg:var(--bg-color-settings-0-1);
   --memos-memo-border:var(--bg-color-settings-0-1);
  }
+ 
 body:not(.thino-default)  div[data-type=thino_view] .menu-btns-popup {
  
-  background-color:var(--bg-color-settings-0-1);
+  background-color:var(--bg-color-settings-3);
   backdrop-filter: blur(10px);
 }
 body:not:is(.thino-background-default,.custom-thino-background,.thino-frosted-style)  div[data-type=thino_view] .memo-editor-wrapper>.memo-editor, .thino-editor-modal .memo-editor-wrapper>.memo-editor {
@@ -19635,7 +19651,7 @@ display:none;
 }
 body:not(.thino-default)  div[data-type=thino_view].mobile-view .search-bar-container>.quickly-action-wrapper>.quickly-action-container
 {
-  background-color:var(--bg-color-settings-0-1);
+  background-color:var(--bg-color-settings-3);
   backdrop-filter: blur(10px);
 }
 body:not(.thino-default)  div[data-type=thino_view] .memo-wrapper>.memo-top-wrapper>.memo-top-right-wrapper>.btns-container>.more-action-btns-wrapper>.more-action-btns-container, 
@@ -19776,14 +19792,23 @@ body div[data-type=thino_view] .section-header-container>.memos-header-search-se
   border-color: transparent!important;
 }
 body.is-mobile div[data-type=thino_view] .moments-view .moments-view-background-wrapper .moments-show-editor-btn {
-  top: 8px;
+  top: 58px;
 }
 body.is-mobile div[data-type=thino_view].mobile-view .search-bar-container>.search-bar-inputer input:focus
 {
   background-color: transparent;
 }
-body.is-mobile div[data-type=thino_view].mobile-view .search-bar-container {
+body.is-mobile div[data-type=thino_view].mobile-view .search-bar-container:has(.search-bar-inputer:focus-within), 
+.is-phone .thino-canvas-filter-group .search-bar-container:has(.search-bar-inputer:focus-within) {
   width: 110px;
+}
+
+body.is-mobile div[data-type=thino_view] .memos-moments-view .filter-query-container:not(.hidden)
+{
+  margin-top: 20px;
+}
+body.is-mobile div[data-type=thino_view] .memos-moments-view .filter-query-container:not(.hidden) + .memolist-wrapper {
+  margin-top: -80px;
 }
 body.is-mobile div[data-type=thino_view] .memos-moments-view .memos-sidebar-wrapper
 {
@@ -19809,51 +19834,49 @@ div[data-type=thino_view] .memo-content-text.markdown-rendered blockquote
 }
 
 /****thino 分享文字背景**/
-body.hide-share-thino-banner .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.property-image
-{
-  height:auto;
-}
-body.hide-share-thino-banner .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.background-container
-{
-  height:auto;
-}
-body.hide-share-thino-banner .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.thino-user-header {
+
+body.share-thino-with-workspace-background .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container:is(.modern,.clean,.gradient)>.memo-background {
  
-  padding-top: var(--size-4-8);
-}
-body.share-thino-with-workspace-background .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background {
- 
-  background-image: var(--theme-background);
+  background-image: var(--theme-background)!important;
   background-size: cover;
 }
-body.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background {
+body.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container:is(.modern,.clean,.gradient)>.memo-background {
  
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 
-body.share-thino-with-thino-background.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background {
+body.share-thino-with-thino-background.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container:is(.modern,.clean,.gradient)>.memo-background {
  
-  background-image: var(--thino-background-dark-custom);
+  background-image: var(--thino-background-dark-custom)!important;
   background-size: cover;
  
 }
-body.share-thino-with-thino-background .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background {
+body.share-thino-with-thino-background .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container:is(.modern,.clean,.gradient)>.memo-background {
  
-  background-image: var(--thino-background-light-custom);
+  background-image: var(--thino-background-light-custom)!important;
   background-size: cover;
 }
 
-body.custom-thino-share-background .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background {
+body.custom-thino-share-background .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container:is(.modern,.clean,.gradient)>.memo-background {
  
-  background-image: var(--share-thino-background-light-custom);
+  background-image: var(--share-thino-background-light-custom)!important;
   background-size: cover;
 
 }
-body.custom-thino-share-background.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background {
+body.custom-thino-share-background.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container:is(.modern,.clean,.gradient)>.memo-background {
  
-  background-image: var(--share-thino-background-dark-custom);
+  background-image: var(--share-thino-background-dark-custom)!important;
   background-size: cover;
+ 
+}
+
+.share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container:is(.modern,.clean,.gradient)>.memo-background>.memo-content-text,
+.share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container:is(.modern,.clean,.gradient)>.memo-background>.thino-user-header,
+.share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container:is(.modern,.clean,.gradient)>.memo-background>.watermark-container ,
+.share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container:is(.modern,.clean,.gradient)>.memo-background>.thino-time-footer
+ {
+  background:rgba(255, 255, 255, var(--share-card-background-opacity-cp));
  
 }
 
@@ -19862,9 +19885,8 @@ body.custom-thino-share-background.theme-dark .share-memo-image-dialog>.dialog-c
 .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.watermark-container ,
 .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.thino-time-footer
  {
-  background:rgba(255, 255, 255, var(--share-card-background-opacity-cp));
+  background-image: var(--share-thino-background-dark-custom)!important;
   overflow: hidden;
- 
 }
  
 .share-memo-image-dialog .memo-content-text p br {
@@ -19874,17 +19896,33 @@ body.custom-thino-share-background.theme-dark .share-memo-image-dialog>.dialog-c
   white-space: pre; 
 }
 
-.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.memo-content-text,
-.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.thino-user-header,
-.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.watermark-container ,
-.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container>.memo-background>.thino-time-footer
+.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container:is(.modern,.clean,.gradient)>.memo-background>.memo-content-text,
+.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container:is(.modern,.clean,.gradient)>.memo-background>.thino-user-header,
+.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container:is(.modern,.clean,.gradient)>.memo-background>.watermark-container ,
+.theme-dark .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container:is(.modern,.clean,.gradient)>.memo-background>.thino-time-footer
 {
   background:rgba(24, 24, 24, var(--share-card-background-opacity-cp));
   overflow: hidden;
  
 }
 
+.share-memo-image-dialog>.dialog-container>.dialog-content-container.gradient .memo-container
+{
+  --start-color: hsla(
+    var(--share-card-background-color-h), 
+    var(--share-card-background-color-s),
+    var(--share-card-background-color-l),
+    var(--share-card-background-color-a) 
+  );
+  --end-color: hsla(
+    calc(var(--share-card-background-color-h) -  30),
+    calc(var(--share-card-background-color-s) +  10%),
+    calc(var(--share-card-background-color-l) + 20%),
+    0.8
+  );
+  background: linear-gradient(117deg, var(--start-color,#ffc3a0), var(--end-color,#ffafbd)); 
 
+ }
 /**********thino 加滚动条***/
 body.memos-scroll div[data-type=thino_view] .memolist-wrapper .memolist-container .masonry-memolist {
   max-height: 660px;
