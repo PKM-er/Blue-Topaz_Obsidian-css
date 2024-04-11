@@ -19540,9 +19540,21 @@ div[data-type=thino_view] .moments-view .memo-content-text p a[href^="#收集"] 
   color: var(--tag-color);
 }
 
-body.blockquote-style-quotation-mark.is-mobile div[data-type=thino_view] blockquote {
-  padding-left:0.5em;
 
+div[data-type=thino_view] .memos-header-container>.memos-header-search-section
+ :is(.memos-review-entry-wrapper, .memos-view-switcher-wrapper,.thino-inline-filter-wrapper,.search-bar-inputer)
+{
+padding: 0px ;
+color:var(--memos-icon-hover);
+}
+
+.is-mobile div[data-type=thino_view].mobile-view .search-bar-container>.search-bar-inputer {
+  width: 110px;
+ 
+}
+.is-mobile  div[data-type=thino_view] .memos-header-container .refresh-icon
+{
+margin: 0px;
 }
 .is-mobile div[data-type=thino_view].mobile-view #page-wrapper
 {
@@ -19785,10 +19797,17 @@ body.is-mobile div[data-type='thino_view'] .memos-moments-view .memo-editor-wrap
 {
   margin-top: 20px;
 }
+ div[data-type=thino_view] .memos-moments-view .filter-query-container:not(.hidden) + .memolist-wrapper {
+  margin-top: auto !important;
+}
+div[data-type=thino_view]:not(.mobile-view) .memos-moments-view .section-header-container.memos-header-container:has(~.memo-editor-wrapper:not(.edit-ing)):has(~.filter-query-container:not(.hidden))
+{
+  opacity: 1;
+}
 div[data-type=thino_view] .memos-moments-view .content-wrapper:not(:has(.edit-ing)) .memolist-wrapper {
 
   margin-top: -60px;
-  transition: all 0.1s linear;
+  transition: all 0.2s linear;
 }
 body.is-mobile div[data-type=thino_view] .memos-moments-view  .memolist-wrapper {
   margin-top: 6px;
@@ -19809,10 +19828,7 @@ body.is-mobile div[data-type=thino_view].mobile-view .search-bar-container>.sear
 {
   background-color: transparent;
 }
-body.is-mobile div[data-type=thino_view].mobile-view .search-bar-container:has(.search-bar-inputer:focus-within), 
-.is-phone .thino-canvas-filter-group .search-bar-container:has(.search-bar-inputer:focus-within) {
-  width: 110px;
-}
+ 
 
 body.is-mobile div[data-type=thino_view] .memos-moments-view .filter-query-container:not(.hidden)
 {
@@ -19831,7 +19847,10 @@ body.is-mobile div[data-type=thino_view].mobile-view .tags-wrapper
 {
    background-color: transparent;
 }
-
+body.is-mobile div[data-type=thino_view] .memo-content-text
+{
+  padding: 0 18px 0 0;
+}
 div[data-type=thino_view].mobile-view .modern#page-wrapper.memos-moments-view .content-wrapper .section-header-container  .search-bar-container .search-bar-inputer
 {
 max-width:280px;
