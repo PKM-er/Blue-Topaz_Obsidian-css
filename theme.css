@@ -1355,7 +1355,8 @@ settings:
     id: h1-font
     title: Header 1 font family
     title.zh: 标题 1 字体
-    description: eg："Microsoft YaHei"
+    description: eg：var(--font-text-override),"Microsoft YaHei"
+    description.zh: 填入var(--font-text-override)调用Ob字体设置，填入"Microsoft YaHei" 为指定具体字体名称
     type: variable-text
     default: ""
   -
@@ -1458,6 +1459,8 @@ settings:
     id: h2-font
     title: Header 2 font family
     title.zh: 标题 2 字体
+    description: eg：var(--font-text-override),"Microsoft YaHei"
+    description.zh: 填入var(--font-text-override)调用Ob字体设置，填入"Microsoft YaHei" 为指定具体字体名称
     type: variable-text
     default: ""
   -
@@ -3309,8 +3312,8 @@ settings:
     default: false
   -
     id: link-underline-unresolved
-    title: Toggle unresolved link underline
-    title.zh: 开启未创建链接下划线（默认：有）
+    title: Disable unresolved link underline
+    title.zh: 关闭未创建链接下划线（默认：有）
     type: class-toggle
     default: false
   -
@@ -5446,10 +5449,10 @@ body {
   --font-default: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
   --font-family-list: ;/*列表字体*/
   --font-text-theme: Bookerly, 'Inter', "Segoe UI", "霞鹜文楷 GB", "LXGW WenKai", "Microsoft YaHei"; /*主体（包括列表）字体，除代码框等少数部分*/
-  --h1-font: var(--font-default);
-  --h2-font: var(--font-default);
-  --h3-font: var(--font-default);
-  --h4-font: var(--font-default);
+  --h1-font: var(--font-text),var(--font-default);
+  --h2-font: var(--font-text),var(--font-default);
+  --h3-font: var(--font-text),var(--font-default);
+  --h4-font: var(--font-text),var(--font-default);
   --font-family-title: ;/*文件抬头标题*/
   --font-family-folder-file-title: Arlrdbd, "Source Han Sans", "Noto Sans CJK", "Source Sans Pro", "Segoe UI Emoji", sans-serif;/*左侧边栏文件、文件夹字体*/
   --font-monospace-theme: 'JetBrains Mono', Consolas, Monaco, "等距更纱黑体 SC", "Source Han Mono", "Microsoft Yahei Mono", "Segoe UI Emoji", "Microsoft YaHei", "Source Code Pro", monospace;
@@ -5970,6 +5973,7 @@ body.all-dark-pdf .print,
   --mjx-inline-math-color: var(--text-normal);
   --mjx-math-color: var(--text-normal);
   --background-leaf-resize-handle: var(--background-secondary-alt-bg-4-bt);
+  --search-result-background: var(--background-secondary-alt-bg-4-bt);
   --text-folder-file-icon: var(--theme-color);
 
   --color-highlight-1: var(--text-normal);
@@ -6186,7 +6190,7 @@ body.all-dark-pdf .print,
   --graph-canvas-bg: var(--background-primary);
   --graph-circle-fill-highlight: var(--interactive-accent);
   --graph-line-fill-highlight: rgb(var(--interactive-accent-rgb));
-
+ 
   --unresolved-link: var(--graph-unresolved);
   --link-unresolved-decoration-color: var(--graph-unresolved);
   --internal-link-color: var(--text-accent);
@@ -9583,7 +9587,7 @@ body.color-scheme-options-simplicity-topaz.theme-dark {
 
   --border:1px solid var(--simple-gray-5);
 
-  --background-primary:	var(--simple-gray-2);
+  --background-primary:	var(--simple-white-2);
 
   --tab-outline-color: var(--simple-white-2);
   --divider-color: var(--simple-gray-5);
@@ -9613,7 +9617,7 @@ body.color-scheme-options-simplicity-topaz.theme-dark {
   --accent-s: 60%;
   --accent-l: 55%;
   --indentation-guide: var(--simple-gray-3);
-
+  --search-result-background:var(--simple-gray-2);
   --scrollbar-bg: transparent;
 
 }
@@ -10019,6 +10023,7 @@ body.color-scheme-options-simplicity-topaz.background-settings-workplace-backgro
   --background-primary-alt-bg-4-bt: var(--simple-tran);
   --background-secondary-bg-4-bt: var(--simple-tran);
   --background-secondary-alt-bg-4-bt: var(--simple-tran);
+  --background-primary:	var(--simple-gray-2);
 }
 
 
@@ -14454,19 +14459,21 @@ body:not(.remove-file-icons):not(.bt-toggle-colorful-folder.folder-style-change-
 
 body:not(.default-unresolved-link) :is(.markdown-preview-view,.markdown-rendered) .internal-link.is-unresolved>*,
 body:not(.default-unresolved-link) *>.internal-link.is-unresolved,
-body:not(.default-unresolved-link) .markdown-source-view.mod-cm6 .cm-hmd-internal-link .is-unresolved {
+body:not(.default-unresolved-link) .markdown-source-view.mod-cm6 .cm-hmd-internal-link  .is-unresolved .cm-underline 
+{
   color: var(--unresolved-link) !important;
+  --link-unresolved-decoration-color:var(--unresolved-link);
 }
 
-body:not(.default-unresolved-link) .markdown-source-view.mod-cm6 .is-unresolved,
+body:not(.default-unresolved-link) .markdown-source-view.mod-cm6 .is-unresolved .cm-underline,
 body:not(.default-unresolved-link) :is(.markdown-preview-view,.markdown-rendered) .internal-link.is-unresolved {
   opacity: 0.7;
 }
 
 body.link-underline-unresolved :is(.markdown-preview-view,.markdown-rendered) .internal-link.is-unresolved>*,
 body.link-underline-unresolved *>.internal-link.is-unresolved,
-body.link-underline-unresolved .markdown-source-view.mod-cm6 .cm-hmd-internal-link .is-unresolved,
-body.link-underline-unresolved .markdown-source-view.mod-cm6 .is-unresolved,
+body.link-underline-unresolved .markdown-source-view.mod-cm6 .cm-hmd-internal-link .is-unresolved .cm-underline,
+body.link-underline-unresolved .markdown-source-view.mod-cm6 .is-unresolved .cm-underline,
 body.link-underline-unresolved :is(.markdown-preview-view,.markdown-rendered) .internal-link.is-unresolved,
 body.link-underline-unresolved .cm-hmd-internal-link .is-unresolved .cm-underline {
   text-decoration: none !important;
@@ -14483,7 +14490,7 @@ body:not(.default-unresolved-link) :is(.markdown-preview-view,.markdown-rendered
 a.internal-link,
 .cm-s-obsidian span.cm-link,
 .cm-s-obsidian span.cm-hmd-internal-link {
-  color: var(--internal-link-color) !important;
+  color: var(--internal-link-color);
 }
 
 .cm-s-obsidian span.cm-link:hover,
@@ -19774,6 +19781,10 @@ padding-left:0px;
 div[data-type=thino_view] .moments-view .thino-moment-wrapper .thino-moment-container .thino-moment-user-content .memo-wrapper .memo-top-wrapper .btn.more-action-btn {
   background-color:  transparent;
 }
+body div[data-type='thino_view'] .moments-view .memo-editor-wrapper
+{
+  margin-top: 20px;
+}
 div[data-type=thino_view] .memos-moments-view .content-wrapper:not(:has(.edit-ing)) .memolist-wrapper {
 
   margin-top: -60px;
@@ -19836,6 +19847,23 @@ div[data-type=thino_view] .memolist-wrapper .memolist-container .table-view th
 {
   min-width:auto;
 }
+div[data-type=thino_view] .memolist-wrapper .memolist-container .table-view th:has(.create-at-header-cell) {
+  min-width: 60px;
+}
+.thino-activation .thino-verify-component {
+ 
+  background:  hsla(var(--interactive-accent-hsl),0.2);
+
+}
+div[data-type=thino_view] .user-banner-container>.userinfo-header-container>.userinfo-container .thino-user-info>.username-container>.user-pro-badge.activated
+{
+background: var(--color-yellow) !important;
+color:#000000a3!important;
+padding: 2px 4px;
+margin-top: -1em;
+font-size:10px;
+}
+
 /****thino 分享文字背景**/
 
 body.share-thino-with-workspace-background .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container:is(.modern,.clean,.gradient)>.memo-background {
@@ -21115,8 +21143,8 @@ body.is-mobile.background-settings-workplace-background-image .safe-area-top-cov
 }
 */
 
-body.is-mobile.theme-light .menu {
-  background-color: var(--background-primary-alt);
+body.is-mobile .menu {
+  background-color: var(--color-base-20);
 }
 body.is-mobile .menu {
   color:var(--text-muted);
@@ -23965,7 +23993,16 @@ body:is(.background-settings-workplace-background-image,.background-image-settin
   --background-secondary:var(--bg-color-settings-3);
 }
 
-
+.snw-popover-container
+{
+  --background-primary: var(--color-base-10);
+  --text-highlight:var(--text-highlight-bg);
+}
+.snw-popover-container a
+{
+  padding: 2px 4px;
+}
+ 
 /* font color */
 /* body.background-settings-workplace-background-image :is(.tree-item-inner,.tree-item-flair,.workspace-ribbon-collapse-btn,.side-dock-ribbon-tab,.side-dock-ribbon-action):not(:hover) {
   color: var(--text-normal);
@@ -23988,6 +24025,8 @@ body.background-settings-workplace-background-image.theme-dark {
   --background-primary-alt-bg-4-bt: #1c1c1ccf;
   --text-normal: #cccccc;
   --page-border-bottom: var(--color-base-30);
+  --tab-background-active: transparent;
+  --tab-outline-width: transparent;
 }
 
 body.background-settings-workplace-background-image .nav-folder.mod-root>.nav-folder-title {
@@ -25212,7 +25251,22 @@ body:not(.default-loading-page) .progress-bar-subline {
 /* ================================== */
 /* ======= Banner ======= */
 /* ================================== */
-
+.obsidian-banner-wrapper {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.mod-header:has(+ .obsidian-banner-wrapper) .metadata-container
+{
+  display:none;
+}
+.mod-header:has(+ .obsidian-banner-wrapper) .inline-title
+{
+  display:none;
+}
+.mod-header:has(+ .obsidian-banner-wrapper) {
+  margin-top: var(--banner-height);
+ 
+}
 .show-inline-title .obsidian-banner-wrapper.has-banner-icon .obsidian-banner-icon.v-center, 
 .show-inline-title  .obsidian-banner-wrapper.has-banner-icon .obsidian-banner-icon.v-custom {
   margin-top: calc(-1em - 6px);
@@ -27957,10 +28011,11 @@ input[type='number']:focus-visible {
 }
 
 .prompt {
+  backdrop-filter: blur(10px);
   box-shadow: 0 0 10px 1px var(--prompt-box-shadow);
   border: none;
 }
-
+ 
 
 @keyframes slideUpLarge {
   0% {
@@ -28876,37 +28931,4 @@ body.nowrap-edit-codebox .HyperMD-codeblock {
   background: var(--bg-color-settings-6);
  
 }
-
-/**from https://forum.obsidian.md/t/performance-issue-with-built-in-canvas-plugin/68609/2?u=kuiyuero**/
-
-.view-content:has(> .canvas-wrapper) {
-  overflow: hidden;
-}
-
-.canvas-wrapper {
-  width: 1000%;
-  height: 1000%;
-
-  left: -450%;
-  top: -450%;
-}
-
-.canvas-wrapper .canvas {
-
-    transition: transform 60ms ease;
-    will-change: transform, scale, translate;
-}
-
-.canvas-wrapper .canvas  > svg * {
-      shape-rendering: optimizeSpeed;
-    }
-  
-
-    .canvas-wrapper .canvas-controls {
-    right: calc(45% + var(--size-4-2));
-    top: calc(45% + var(--size-4-2));
-  }
-
-  .canvas-wrapper .canvas-card-menu {
-    bottom: calc(45% + var(--size-4-2));
-  }
+ 
