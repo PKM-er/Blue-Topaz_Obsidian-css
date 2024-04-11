@@ -19449,7 +19449,7 @@ body:not(.thino-default) div[data-type='thino_view']
   --memos-bg-light-blue: var(--theme-color-translucent-02);
   --memos-text-blue:var(--interactive-accent);
 }
-body:is(.thino-default,.thino-frosted-style-default)  div[data-type=thino_view] .memo-editor-wrapper{
+body:is(.thino-default,.thino-frosted-style-default)  div[data-type=thino_view] #page-wrapper:not(.memos-moments-view) .memo-editor-wrapper{
   background-color: var(--background-primary-bg-4-bt, var(--background-primary));
 }
 body:is(.thino-default,.thino-frosted-style-default)   div[data-type=thino_view] .memolist-wrapper>.memolist-container {
@@ -19781,7 +19781,7 @@ padding-left:0px;
 div[data-type=thino_view] .moments-view .thino-moment-wrapper .thino-moment-container .thino-moment-user-content .memo-wrapper .memo-top-wrapper .btn.more-action-btn {
   background-color:  transparent;
 }
-body div[data-type='thino_view'] .moments-view .memo-editor-wrapper
+body.is-mobile div[data-type='thino_view'] .memos-moments-view .memo-editor-wrapper.edit-ing
 {
   margin-top: 20px;
 }
