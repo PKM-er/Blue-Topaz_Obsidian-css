@@ -19542,12 +19542,16 @@ div[data-type=thino_view] .moments-view .memo-content-text p a[href^="#收集"] 
 
 
 div[data-type=thino_view] .memos-header-container>.memos-header-search-section
- :is(.memos-review-entry-wrapper, .memos-view-switcher-wrapper,.thino-inline-filter-wrapper,.search-bar-inputer)
+ :is(.memos-review-entry-wrapper, .memos-view-switcher-wrapper,.thino-inline-filter-wrapper,.search-bar-inputer:not(:has(input:focus)))
 {
 padding: 0px ;
 color:var(--memos-icon-hover);
 }
-
+div[data-type=thino_view] .memos-header-container>.memos-header-search-section .search-bar-inputer:has(input:focus)
+ {
+  padding: 0px ;
+  color:var(--memos-text-muted);
+ }
 .is-mobile div[data-type=thino_view].mobile-view .search-bar-container>.search-bar-inputer {
   width: 110px;
  
@@ -19793,12 +19797,9 @@ padding-left:0px;
 div[data-type=thino_view] .moments-view .thino-moment-wrapper .thino-moment-container .thino-moment-user-content .memo-wrapper .memo-top-wrapper .btn.more-action-btn {
   background-color:  transparent;
 }
-body.is-mobile div[data-type='thino_view'] .memos-moments-view .memo-editor-wrapper.edit-ing
-{
-  margin-top: 20px;
-}
- div[data-type=thino_view] .memos-moments-view .filter-query-container:not(.hidden) + .memolist-wrapper {
-  margin-top: auto !important;
+ 
+ body:not(.day) div[data-type=thino_view] .memos-moments-view .filter-query-container:not(.hidden) + .memolist-wrapper {
+  margin-top: auto ;
 }
 div[data-type=thino_view]:not(.mobile-view) .memos-moments-view .section-header-container.memos-header-container:has(~.memo-editor-wrapper:not(.edit-ing)):has(~.filter-query-container:not(.hidden))
 {
@@ -19834,9 +19835,7 @@ body.is-mobile div[data-type=thino_view] .memos-moments-view .filter-query-conta
 {
   margin-top: 30px;
 }
-body.is-mobile div[data-type=thino_view] .memos-moments-view .filter-query-container:not(.hidden) + .memolist-wrapper {
-  margin-top: -80px;
-}
+ 
 body.is-mobile div[data-type=thino_view] .memos-moments-view .memos-sidebar-wrapper
 {
   margin-top: 48px;
