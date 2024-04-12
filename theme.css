@@ -1268,8 +1268,8 @@ settings:
     default: 0.95em
   -
     id: font-size-file-header-title
-    title: File header
-    title.zh: 文件抬头标题
+    title: File Header (NOT for Sliding Pane plugin)
+    title.zh: 文件抬头标题 (非Sliding Pane plugin)
     type: variable-text
     default: 0.9375em
   -
@@ -2852,13 +2852,13 @@ settings:
     default-dark: '#'
   -
     id: folder-icons
-    title: Toggle folder icons
+    title: Activate Folder Icons
     title.zh: 激活文件夹图标
     type: class-toggle
     default: true
   -
     id: remove-arrow
-    title: Toggle arrows (Collapse Indicator)
+    title: Folder Icons w/o arrows (Collapse Indicator)
     title.zh: 文件夹图标开启后，移除箭头图标（折叠图标）
     description: To be effective after toggling the option above
     description.zh: 开启上面选项后起效
@@ -14486,17 +14486,44 @@ body:not(.default-unresolved-link) :is(.markdown-preview-view,.markdown-rendered
 :is(.markdown-preview-view,.markdown-rendered) .internal-link.is-unresolved:hover {
   opacity: 1 !important;
 }
-
-a.internal-link,
-.cm-s-obsidian span.cm-link,
-.cm-s-obsidian span.cm-hmd-internal-link {
+.metadata-container .internal-link:hover, 
+.markdown-rendered .internal-link:hover
+{
+  color: var(--internal-link-color);
+ opacity: 0.8;
+}
+.cm-s-obsidian span.cm-hmd-internal-link:hover
+{
   color: var(--internal-link-color);
 }
-
-.cm-s-obsidian span.cm-link:hover,
-.cm-s-obsidian span.cm-hmd-internal-link:hover {
-  background: var(--theme-color-translucent-01);
+.metadata-container .internal-link,
+ .markdown-rendered .internal-link,
+a.internal-link,
+.cm-s-obsidian span.cm-hmd-internal-link ,
+.cm-s-obsidian span.cm-hmd-internal-link a {
+  color: var(--internal-link-color);
 }
+.metadata-container a.external-link:hover, 
+.markdown-rendered a.external-link:hover
+{
+  color: var(--external-link-color);
+ opacity: 0.8;
+}
+.cm-s-obsidian span.cm-link:hover,
+.cm-s-obsidian span.cm-url:hover,
+.markdown-source-view.mod-cm6 .cm-link .cm-underline:hover, 
+.markdown-source-view.mod-cm6 .cm-url .cm-underline:hover
+{
+  color: var(--external-link-color);
+}
+.cm-s-obsidian span.cm-link,
+.cm-s-obsidian span.cm-url,
+.cm-s-obsidian span.cm-link a
+{
+  color: var(--external-link-color);
+}
+ 
+ 
 /* internal link in highlight
 .cm-highlight.cm-hmd-internal-link,
 :is(.markdown-preview-view,.markdown-rendered) mark .internal-link:not(.is-unresolved) {
@@ -14510,7 +14537,7 @@ a.internal-link,
   text-decoration: none !important;
   transition: all 0.4s ease-in-out;
   text-shadow: var(--window-shadow-hover);
-  background: var(--theme-color-translucent-01);
+ 
 }
 
 body.colorful-link-animation :is(.markdown-preview-view,.markdown-rendered) a:hover {
@@ -19541,7 +19568,7 @@ div[data-type=thino_view] .moments-view .memo-content-text p a[href^="#收集"] 
 }
 
 
-div[data-type=thino_view] .memos-header-container>.memos-header-search-section
+div[data-type=thino_view].mobile-view  .moments-view .memos-header-container>.memos-header-search-section
  :is(.memos-review-entry-wrapper, .memos-view-switcher-wrapper,.thino-inline-filter-wrapper,.search-bar-inputer:not(:has(input:focus)))
 {
 padding: 0px ;
@@ -21946,7 +21973,7 @@ body.remove-arrow:not(.default-icons) :not([class*="mk-tree"]).nav-folder-title-
 }
 
 body.remove-arrow:not(.default-icons) .tree-item.nav-folder.mod-root>.tree-item-self.nav-folder-title {
-  padding-left: 30px;
+  padding-left: 23px;
   margin-left: -10px;
 }
 
@@ -27070,7 +27097,7 @@ div.callout[data-callout="stickies3"] >.callout-content ul {
   transform: rotate(-1deg);
 }
 /*禁用点击超链接跳转 需要跳转 按ctrl+超链接即可*/
-body.link-click .is-live-preview .cm-s-obsidian span.cm-link {
+body.link-click  .cm-s-obsidian span.cm-link a {
   pointer-events: none;
 }
 
