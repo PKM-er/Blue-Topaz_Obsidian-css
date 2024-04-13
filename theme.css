@@ -8,8 +8,8 @@ Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/
 
 */
 
-/*蓝色托帕石，适合Obsidian v1.2.8。uid [20240413] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.2.8, uid [20240413] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.2.8。uid [20240402] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.2.8, uid [20240402] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /*
 MIT License
@@ -28086,9 +28086,11 @@ input[type='number']:focus-visible {
 body.hide-left-ribbon .workspace-ribbon.mod-left:not(:hover):before,
 body.hide-left-ribbon .workspace-ribbon.side-dock-ribbon.mod-left:not(:hover),
 body.hide-left-ribbon .workspace-ribbon.side-dock-ribbon.mod-left:not(:hover) .sidebar-toggle-button.mod-left {
-  margin-left: -40px;
+  margin-left: calc(-1 * var(--ribbon-width) + 1px);
 }
 
+
+ 
 body.hide-left-ribbon .workspace-ribbon.side-dock-ribbon.mod-left .sidebar-toggle-button.mod-left,
 body.hide-left-ribbon .workspace-ribbon.mod-left:before,
 body.hide-left-ribbon .workspace-ribbon.side-dock-ribbon.mod-left {
@@ -28108,7 +28110,7 @@ body.hide-left-ribbon-retention-drawer .workspace-ribbon.mod-left:not(:hover) ~ 
 }
 body.hide-left-ribbon-retention-drawer .workspace-ribbon.mod-left:not(:hover):before,
 body.hide-left-ribbon-retention-drawer .workspace-ribbon.side-dock-ribbon.mod-left:not(:hover) {
-  margin-left: -40px;
+  margin-left: calc(-1 * var(--ribbon-width) + 1px);
 }
 
 body.hide-left-ribbon-retention-drawer .workspace-ribbon.side-dock-ribbon.mod-left .sidebar-toggle-button.mod-left,
@@ -28150,7 +28152,7 @@ body:is(.bt-bubble-ribbon-hide-left,.bt-bubble-ribbon) .workspace-ribbon {
 body.bt-bubble-ribbon-hide-left .workspace-ribbon.mod-left:not(:hover):before,
 body.bt-bubble-ribbon-hide-left .workspace-ribbon.side-dock-ribbon.mod-left:not(:hover),
 body.bt-bubble-ribbon-hide-left .workspace-ribbon.side-dock-ribbon.mod-left:not(:hover) .sidebar-toggle-button.mod-left {
-  margin-left: -40px;
+  margin-left: calc(-1 * var(--ribbon-width) + 1px);
 }
 
 body.bt-bubble-ribbon-hide-left .workspace-ribbon.side-dock-ribbon.mod-left .sidebar-toggle-button.mod-left,
@@ -28687,7 +28689,7 @@ body.bt-bubble-layout.theme-dark.background-settings-workplace-background-image:
 }
 
  
-body.background-settings-workplace-background-image.theme-dark:not(.color-scheme-options-simplicity-topaz) .workspace-ribbon.mod-left:after {
+body.background-settings-workplace-background-image.theme-dark:not(:is(.color-scheme-options-simplicity-topaz,.hide-left-ribbon,.hide-left-ribbon-retention-drawer,.bt-bubble-ribbon-hide-left)) .workspace-ribbon.mod-left:after {
  
   width: var(--ribbon-width);
  
@@ -28699,6 +28701,7 @@ body.background-settings-workplace-background-image.theme-dark:not(.color-scheme
   content: " ";
   pointer-events: none; 
 }
+ 
  
 body.bt-bubble-layout.bt-bubble-buttons .mod-left-split .workspace-tab-header-container-inner, 
 body.bt-bubble-layout.bt-bubble-buttons .mod-right-split .workspace-tab-header-container-inner {
