@@ -8,8 +8,8 @@ Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/
 
 */
 
-/*蓝色托帕石，适合Obsidian v1.2.8。uid [20240402] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.2.8, uid [20240402] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.2.8。uid [20240413] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.2.8, uid [20240413] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /*
 MIT License
@@ -402,7 +402,7 @@ settings:
     title.zh: 1.2.2.1 类笔记样式背景设置
     type: heading
     level: 4
-    collapsed: true
+    collapsed: false
   -
     id: toggle-split-note-background
     title: Toggle background of split pane
@@ -603,21 +603,6 @@ settings:
     level: 2
     collapsed: true
   -
-    id: bt-colorful-titlebar
-    title: Colorful titlebar
-    title.zh: 开启顶部多彩标题栏样式
-    type: class-toggle
-    default: false
-  -
-    id: background-titlebar-inner
-    title: Titlebar background color
-    title.zh: 标题栏背景颜色
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#'
-    default-dark: '#'
-  -
     id: left-ribbon-style
     title: Left ribbon styles
     title.zh: 左侧边栏样式选择
@@ -641,27 +626,9 @@ settings:
         label: Bubble, hide to left
         value: bt-bubble-ribbon-hide-left
   -
-    id: ribbon-background
-    title: Left ribbon color
-    title.zh: 左侧边栏颜色
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#'
-    default-dark: '#'
-  -
-    id: ribbon-background-collapsed
-    title: Left ribbon color (collapsed)
-    title.zh: 左侧边栏颜色（关闭时）
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#'
-    default-dark: '#'
-  -
     id: hide-vault-name
     title: Hide vault name
-    title.zh: 隐藏侧边栏中的库名称
+    title.zh: 隐藏文件栏上方的库名称
     type: class-toggle
     default: false
   -
@@ -781,6 +748,7 @@ settings:
     id: bt-bubble-layout-hide-borders
     title: Remove borders of bubbles
     type: class-toggle
+    default: true
   -
     id: bt-bubble-buttons
     title: Toggle bubble buttons
@@ -3832,58 +3800,20 @@ settings:
     level: 3
     collapsed: true
   -
-    id: simple-titlebar
-    title:  Simple title bar
-    title.zh: 简单的Title bar
-    description: To remove the background image of title bar
-    description.zh: 自定义title bar背景
+    id: bt-colorful-titlebar
+    title: Colorful titlebar
+    title.zh: 开启顶部多彩标题栏样式
     type: class-toggle
     default: false
   -
-    id: custom-titlebar-bg
-    title: Title bar background color
-    title.zh: 自定义标题栏背景色
-    description: custom-titlebar-bg
+    id: background-titlebar-inner
+    title: Titlebar background color
+    title.zh: 标题栏背景颜色
     type: variable-themed-color
     opacity: true
     format: hex
     default-light: '#'
     default-dark: '#'
-  -
-    id: titlebar-blur-depth
-    title: Title bar blur radius
-    title.zh: Title bar 模糊程度
-    description: To adjust the radius of blur
-    description.zh: 调整Title bar 背景模糊程度
-    type: variable-number-slider
-    default: 8
-    format: px
-    min: 0
-    max: 30
-    step: 1
-  -
-    id: titlebar-blur-depth
-    title: Title bar blur radius
-    title.zh: Title bar 模糊程度
-    description: To adjust the radius of blur
-    description.zh: 调整Title bar 背景模糊程度
-    type: variable-number-slider
-    default: 8
-    format: px
-    min: 0
-    max: 30
-    step: 1
-  -
-    id: titlebar-brightness
-    title: Title bar brightness of image
-    title.zh: Title bar 背景亮度
-    description: To adjust the brightness
-    description.zh: 调整Title bar 背景亮度
-    type: variable-number-slider
-    default: 1
-    min: 0.1
-    max: 1.5
-    step: 0.1
   -
     id: titlebar-close-button
     title: Titlebar close button
@@ -6006,7 +5936,7 @@ body.all-dark-pdf .print,
   --divider-color: #000000;
   --tab-outline-color: #151515;
 
-  --bg-color-notebook: #2a2825;
+  --bg-color-notebook: #FFFFFF00;
   --grid-notebook-line-color-1: #c7c7c71f;
   --grid-notebook-line-color-2: #74747440;
   --dotted-notebook-dot-color: #c7c7c71f;
@@ -6349,7 +6279,7 @@ body.all-dark-pdf .print,
   --divider-color: #e3e3e3;
   --tab-outline-color: #e3e3e3;
 
-  --bg-color-notebook: #fef9f1;
+  --bg-color-notebook: #FFFFFF00;
   --grid-notebook-line-color-1: #c7c7c740;
   --grid-notebook-line-color-2: #afafaf40;
   --dotted-notebook-dot-color: #c7c7c780;
@@ -9634,9 +9564,13 @@ body.theme-dark.color-scheme-options-simplicity-topaz .workspace-tab-header.is-a
 body.theme-dark.color-scheme-options-simplicity-topaz .workspace-split.mod-root .workspace-tab-header.is-active.mod-active {
   background-color: var(--tab-background-active);
 }
+body.bt-bubble-layout.default-tab.color-scheme-options-simplicity-topaz:not(.background-settings-workplace-background-image,.background-image-settings-switch.background-image-settings-markdown-page-transparent) .workspace-split.mod-root .workspace-tab-header.is-active
+{
+  background-color: var(--background-primary-alt);
+  box-shadow:none;
+}
 
-
-body.color-scheme-options-simplicity-topaz.background-image-settings-switch.background-image-settings-markdown-page-transparent  {
+body:not(.bt-bubble-layout).color-scheme-options-simplicity-topaz.background-image-settings-switch.background-image-settings-markdown-page-transparent  {
   --background-secondary: var(--simple-tran);
   --background-primary: var(--simple-tran);
   --background-secondary-bg-4-bt: var(--simple-tran);
@@ -9884,7 +9818,12 @@ body:not(.is-mobile).color-scheme-options-simplicity-topaz .mod-root .workspace-
 }
 
 
-body:not(.is-mobile).color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-split.mod-root
+body:not(.is-mobile).theme-dark.color-scheme-options-simplicity-topaz.background-settings-workplace-background-image .workspace-split.mod-root
+{
+  background-color: var(--simple-tran);
+}
+
+body:not(.is-mobile).background-image-settings-switch.background-image-settings-markdown-page-transparent.background-settings-workplace-background-image.color-scheme-options-simplicity-topaz .workspace-split.mod-root
 {
   background-color: var(--simple-tran);
 }
@@ -10053,13 +9992,16 @@ body.default-tab.color-scheme-options-simplicity-topaz:not(.background-settings-
   --tab-background-active:var(--background-primary);
 }
 
-body.default-tab.background-image-settings-switch.background-image-settings-markdown-page-transparent
+body.default-tab.background-image-settings-switch.background-image-settings-markdown-page-transparent:not(.toggle-nonoverlapping-bg)
 .workspace-split.mod-root .workspace-tab-header.is-active {
   background:transparent;
   --tab-background-active:transparent;
 }
 
-
+body.background-image-settings-switch.toggle-nonoverlapping-bg .workspace-tab-header-container
+{
+  border:none;
+}
 
 body.color-scheme-options-simplicity-topaz .workspace-leaf-content .view-header .view-header-icon svg {
   opacity: 0;
@@ -19491,6 +19433,10 @@ body:is(.thino-default,.thino-frosted-style-default)  .block-language-thino .thi
   background-color: var(--background-primary-bg-4-bt, var(--background-primary));
 
 }
+div[data-type=thino_view] .section-header-container, div[data-type=thino_view] .memos-header-container
+{
+  justify-content: flex-start;
+}
 div[data-type=thino_view] .memo-editor-wrapper>.tip-text {
 padding-left:1.5em;
 }
@@ -19567,14 +19513,16 @@ div[data-type=thino_view] .moments-view .memo-content-text p a[href^="#收集"] 
   color: var(--tag-color);
 }
 
-
-div[data-type=thino_view].mobile-view  .moments-view .memos-header-container>.memos-header-search-section
- :is(.memos-review-entry-wrapper, .memos-view-switcher-wrapper,.thino-inline-filter-wrapper,.search-bar-inputer:not(:has(input:focus)))
+ 
+.is-mobile  div[data-type=thino_view] .view-header:has(+.view-content>.memos-moments-view) .memos-header-container>.memos-header-search-section
+ :is(.memos-review-entry-wrapper, .memos-view-switcher-wrapper,.thino-inline-filter-wrapper,.search-bar-inputer:not(:has(input:focus))),
+ .is-mobile  div[data-type=thino_view] .view-header:has(+.view-content>.memos-moments-view) .memos-header-container .refresh-icon
 {
 padding: 0px ;
 color:var(--memos-icon-hover);
 }
-div[data-type=thino_view] .memos-header-container>.memos-header-search-section .search-bar-inputer:has(input:focus)
+ 
+.is-mobile  div[data-type=thino_view] .memos-header-container>.memos-header-search-section .search-bar-inputer:has(input:focus)
  {
   padding: 0px ;
   color:var(--memos-text-muted);
@@ -19585,6 +19533,7 @@ div[data-type=thino_view] .memos-header-container>.memos-header-search-section .
 }
 .is-mobile  div[data-type=thino_view] .memos-header-container .refresh-icon
 {
+  color: var(--memos-text-muted);
 margin: 0px;
 }
 .is-mobile div[data-type=thino_view].mobile-view #page-wrapper
@@ -21638,6 +21587,7 @@ body.dialogue-style-chat .dialogue-plugin-message-title {
 }
 
 body.bt-colorful-titlebar .titlebar::after {
+  z-index:-1;
   content: "";
   position: absolute;
   top: 0;
@@ -21737,13 +21687,13 @@ body:not(.color-scheme-options-simplicity-topaz) .workspace-tabs {
   background: var(--background-secondary-alt);
 }
 
-.sidebar-toggle-button,
+ 
 body.background-settings-workplace-background-image:not(.is-frameless) .workspace-split.mod-root .workspace-tab-header-container,
 body.background-settings-workplace-background-image:not(.is-frameless) .mod-root .workspace-tabs .workspace-leaf,
 body.background-settings-workplace-background-image .workspace {
   background: transparent;
 }
-
+ 
 body.background-settings-workplace-background-image .workspace-ribbon.mod-left:before,
 body.background-settings-workplace-background-image .workspace-tabs {
   background: var(--background-secondary);
@@ -21754,6 +21704,7 @@ body.toggle-divider-lines {
   --divider-color: transparent;
   --tab-outline-color: transparent;
   --tab-divider-color: transparent;
+  --bt-bubble-border-color: transparent;
 }
 body.toggle-divider-lines .workspace-ribbon,
 body.toggle-divider-lines .workspace-split > .workspace-leaf-resize-handle,
@@ -21761,6 +21712,10 @@ body.toggle-divider-lines .view-header  {
   border: none;
 }
 
+body.toggle-divider-lines .workspace-split .workspace-leaf-content
+{
+  border: none!important;
+}
 body.toggle-divider-lines .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:not(:hover) {
   border-bottom-color: transparent;
 }
@@ -21838,7 +21793,7 @@ body:not(.is-focused):not(.is-frameless) .workspace-split.mod-root .workspace-ta
 .view-header {
   border-top: none;
   height: 33px;
-  border-bottom: 1px solid var(--page-border-bottom);
+ 
 }
 
 body.color-scheme-options-flamingo .view-header,
@@ -22182,8 +22137,15 @@ body.toggle-bg-panel-page.panel-page-bg-theme-light-wall.theme-light {
 body.toggle-bg-panel-page.panel-page-bg-theme-light-custom.theme-light {
   --panel-page-background-url-theme: var(--background-panel-page-theme-light-custom);
 }
+body.background-image-settings-switch.toggle-nonoverlapping-bg .workspace-split.mod-root .view-header {
+  background: var(--background-nonoverlapping-note);
+}
 
-
+body.background-image-settings-switch.toggle-nonoverlapping-bg .workspace-split.mod-root   .workspace-tab-header.is-active
+{
+  background: var(--background-nonoverlapping-note);
+}
+ 
 body.background-image-settings-switch.toggle-nonoverlapping-bg .workspace-split.mod-root .view-content {
   background: var(--background-nonoverlapping-note);
 }
@@ -23821,54 +23783,15 @@ body.background-settings-workplace-background-image.theme-dark .titlebar-text {
   color: var(--text-normal);
 }
 
-body.background-settings-workplace-background-image:not(.simple-titlebar):not(.is-frameless) .titlebar::before {
-  background-image: var(--theme-background);
-  background-size: cover;
-  content: '';
-  display: block;
-  position: absolute;
-  top: -3px;
-  filter: blur(var(--titlebar-blur-depth)) brightness(var(--titlebar-brightness)) opacity(0.5);
-  right: -15px;
-  bottom: 0px;
-  left: -15px;
-}
-body.background-settings-workplace-background-image:not(.simple-titlebar):not(.is-frameless).theme-dark .titlebar::before {
-  filter: blur(var(--titlebar-blur-depth)) brightness(calc(var(--titlebar-brightness) - 0.5)) opacity(0.5);
-}
 
-body:not(.simple-titlebar).background-settings-workplace-waves-light.theme-light .titlebar::before {
-  content: '';
-  display: block;
-  position: absolute;
-  height:40px;
-  width: 120%;
-  background-image: unset;
-  -webkit-mask-image: var(--theme-background);
-  background-size: 100% 100%;
-  opacity: 0.5;
-  background-color: var(--wave-background-color);
-}
-body.background-settings-workplace-background-image:not(.simple-titlebar):not(.is-hidden-frameless) .titlebar {
-  --custom-titlebar-bg: var(--background-primary);
-  background-color: var(--custom-titlebar-bg);
-  border: none;
-}
 
 body .titlebar,
 body .workspace-ribbon.mod-left {
   --titlebar-background: var(--titlebar-background-focused);
+  border:none;
 }
 
-body.simple-titlebar .titlebar {
-  background-color: var(--custom-titlebar-bg);
-  border: none;
-}
 
-body.simple-titlebar .titlebar::before {
-  content: '';
-  background-color: var(--custom-titlebar-bg);
-}
 
 /*==========*/
 body.background-settings-workplace-background-image .side-dock-ribbon-tab,
@@ -24062,7 +23985,10 @@ body.background-settings-workplace-background-image.background-settings-workplac
   --theme-background: var(--in-the-note);
 }
 
- 
+body.background-settings-workplace-background-image .workspace-tab-header-container
+{
+  border:none;
+}
 body.background-settings-workplace-background-image.theme-dark {
   --background-primary-bg-4-bt: #1414148a;
   --background-secondary-bg-4-bt: #16161680;
@@ -28437,6 +28363,10 @@ body.background-settings-workplace-background-image.workspace > .workspace-leaf 
 body:not(.color-scheme-options-simplicity-topaz) .workspace > .workspace-split {
   background-color: var(--background-secondary-alt);
 }
+body:not(.color-scheme-options-simplicity-topaz).theme-light .workspace > .workspace-split.mod-left-split {
+  background-color: transparent;
+}
+
 body.background-settings-workplace-background-image:not(.is-mobile) .workspace-tab-container-before.is-before-active,
 body.background-settings-workplace-background-image:not(.is-mobile) .workspace-tab-container-after.is-after-active,
 body.background-settings-workplace-background-image:not(.is-mobile) .workspace-tab-header.is-before-active,
@@ -28746,7 +28676,30 @@ body.bt-bubble-layout .mod-right-split .workspace-tab-header.is-active {
   background-color: var(--background-primary);
   border: 1px solid var(--bt-bubble-border-color);
 }
+body.bt-bubble-layout   .workspace-tab-header-container
+{
+  background-color: transparent;
+  --tab-background-active: var(--background-primary);
+}
+body.bt-bubble-layout.theme-dark.background-settings-workplace-background-image:not(.color-scheme-options-simplicity-topaz) .workspace-ribbon.side-dock-ribbon.mod-left
+{
+  background-color: var(--background-secondary-alt);
+}
 
+ 
+body.background-settings-workplace-background-image.theme-dark:not(.color-scheme-options-simplicity-topaz) .workspace-ribbon.mod-left:after {
+ 
+  width: var(--ribbon-width);
+ 
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--background-secondary-alt);
+  content: " ";
+  pointer-events: none; 
+}
+ 
 body.bt-bubble-layout.bt-bubble-buttons .mod-left-split .workspace-tab-header-container-inner, 
 body.bt-bubble-layout.bt-bubble-buttons .mod-right-split .workspace-tab-header-container-inner {
   padding: 4px;
@@ -28762,11 +28715,24 @@ body.bt-bubble-layout.bt-bubble-buttons .mod-right-split .workspace-tab-header.i
   border: 1px solid transparent;
 }
 body.bt-bubble-layout.bt-bubble-not-file-tree .workspace-leaf-content:is([data-type="file-explorer"],[data-type="mk-file-view"]),
-body.bt-bubble-layout .workspace-split .workspace-leaf-content {
+body.bt-bubble-layout .workspace-split .workspace-leaf-content:not(:is([data-type="file-explorer"],[data-type="mk-file-view"]))  {
   border-radius: var(--bt-bubble-radius, var(--radius-l));
   background-color: var(--background-primary);
   border: 1px solid var(--bt-bubble-border-color);
   margin-bottom: var(--bt-bubble-layout-padding);
+}
+body.theme-dark.color-scheme-options-simplicity-topaz.bt-bubble-layout.bt-bubble-not-file-tree:not(.background-settings-workplace-background-image) .workspace-leaf-content:is([data-type="file-explorer"],[data-type="mk-file-view"]),
+body.theme-dark.color-scheme-options-simplicity-topaz.bt-bubble-layout:not(.background-settings-workplace-background-image) .workspace-split
+ .workspace-leaf-content:not(:is([data-type="file-explorer"],[data-type="mk-file-view"]))  {
+ 
+  background-color: var(--background-primary-alt);
+
+}
+
+body.bt-bubble-layout.color-scheme-options-simplicity-topaz  .workspace-leaf-content .view-header,
+body:not(.is-mobile).bt-bubble-layout.color-scheme-options-simplicity-topaz:not(.background-image-settings-switch) .workspace-split.mod-root .view-content
+{
+  background-color: transparent;
 }
 body.bt-bubble-layout .workspace-split.mod-right-split .workspace-tabs .workspace-leaf, 
 body.bt-bubble-layout .workspace-split.mod-left-split .workspace-tabs .workspace-leaf,
@@ -28785,6 +28751,10 @@ body.bt-bubble-layout.bt-bubble-layout-hide-borders {
   --bt-bubble-border-color: transparent;
   --tab-outline-color: transparent;
 }
+body.bt-bubble-layout.bt-bubble-layout-hide-borders .workspace-split .workspace-leaf-content
+{
+  border: none;
+}
 body.bt-bubble-layout.bt-bubble-layout-hide-borders .menu {
   border: 0 !important;
 }
@@ -28796,9 +28766,9 @@ body.bt-bubble-layout .workspace-split.mod-left-split > .workspace-leaf-resize-h
   border: none;
 }
 
-body.background-settings-workplace-background-image .workspace-tabs.mod-active .view-header,
+body.background-settings-workplace-background-image:not(.color-scheme-options-simplicity-topaz) .workspace-tabs.mod-active .view-header,
 body.background-settings-workplace-background-image .workspace-split.mod-root .view-content,
-body.background-settings-workplace-background-image .workspace-tabs .view-header {
+body.background-settings-workplace-background-image:not(.color-scheme-options-simplicity-topaz) .workspace-tabs .view-header {
   background-color: transparent;
 }
 
