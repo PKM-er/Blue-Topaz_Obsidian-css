@@ -18797,11 +18797,11 @@ span.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight.hmd-hidd
 {
   padding-left: 1em;
 }
-.style-settings-heading[data-level="2"] + .style-settings-container
+body:not(.is-mobile) .style-settings-heading[data-level="2"] + .style-settings-container
 {
   padding-left: 2em;
 }
-.style-settings-heading[data-level] + .style-settings-container
+body:not(.is-mobile) .style-settings-heading[data-level] + .style-settings-container
 {
   padding-left: 2em;
 }
@@ -28839,6 +28839,10 @@ body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .t
   margin: 5px 4px 5px 0;
   border-radius: 3px;
   border-left: 2px solid var(--tab-color);
+}
+body.is-mobile.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder {
+  border: 1px solid   var(--divider-color);
+
 }
 body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border):not(.is-grabbing) .tree-item.nav-folder.is-collapsed:hover {
   background-color: color-mix(in srgb, var(--tab-color) 30%, var(--background-secondary));
