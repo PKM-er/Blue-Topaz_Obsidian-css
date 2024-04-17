@@ -8,8 +8,8 @@ Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/
 
 */
 
-/*蓝色托帕石，适合Obsidian v1.2.8。uid [20240402] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.2.8, uid [20240402] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.5.0。uid [20240417] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.5.0, uid [20240417] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /*
 MIT License
@@ -2794,14 +2794,6 @@ settings:
     type: class-toggle
     default: false
   -
-    id: unmuted-collapsed-folder
-    title: Unmute collapsed folder
-    title.zh: 未激活文件夹不再黯淡
-    description: To normalize opacity of collapsed folder
-    description.zh: 统一激活/未激活文件夹亮度
-    type: class-toggle
-    default: false
-  -
     id: remove-file-icons
     title: Remove file icons
     title.zh: 移除文件前图标
@@ -2825,17 +2817,15 @@ settings:
     type: class-toggle
     default: true
   -
-    id: remove-arrow
-    title: Folder Icons w/o arrows (Collapse Indicator)
-    title.zh: 文件夹图标开启后，移除箭头图标（折叠图标）
-    description: To be effective after toggling the option above
-    description.zh: 开启上面选项后起效
-    type: class-toggle
-    default: true
-  -
     id: remove-first-folder-icon
     title: Remove the first-layer folder icons
     title.zh: 去除第一层文件夹前图标
+    type: class-toggle
+    default: true
+  -
+    id: remove-arrow
+    title: Folder Icons w/o arrows (Collapse Indicator)
+    title.zh: 移除文件夹箭头图标（折叠图标）
     type: class-toggle
     default: true
   -
@@ -2874,6 +2864,9 @@ settings:
       -
         label: Tab-liked
         value: folder-style-change-options-colorful-tab-liked
+      -
+        label: Border
+        value: folder-style-change-options-colorful-border
   -
     id: folder-style-change-options-colorful-subfolder
     title: Folder color palette
@@ -14991,7 +14984,7 @@ body.file-name-wrapped .workspace-leaf-content[data-type="file-explorer"] .nav-f
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title,
-.workspace-leaf-content[data-type="file-explorer"] .tree-item-self.is-clickable.mod-collapsible.nav-folder-title {
+.workspace-leaf-content[data-type="file-explorer"] .tree-item-self.is-clickable.nav-folder-title {
   font-weight: 600;
   padding: 4px 0 4px 23px;
   color: var(--text-normal);
@@ -15033,9 +15026,7 @@ body:not(.default-icons) .nav-folder-collapse-indicator svg {
   width: 7px;
 }
 
-body:not(.unmuted-collapsed-folder):not(.is-grabbing) .nav-folder.is-collapsed .nav-folder-title-content:not(.is-being-renamed) {
-  opacity: 0.55;
-}
+
 
 body:not(.default-icons) .nav-folder.is-collapsed .nav-folder-collapse-indicator::before {
   transform: rotate(-90deg);
@@ -18801,15 +18792,35 @@ span.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight.hmd-hidd
 .style-settings-heading {
   border-bottom: none !important;
 }
-.setting-item.setting-item-heading.style-settings-heading[data-level="2"],
-.style-settings-container[data-level="2"],
-.setting-item.setting-item-heading.style-settings-heading[data-level="3"],
-.style-settings-container[data-level="3"],
-.setting-item.setting-item-heading.style-settings-heading[data-level="4"],
-.style-settings-container[data-level="4"] {
-  padding-left: 20px;
+ 
+.style-settings-heading[data-level="1"] + .style-settings-container
+{
+  padding-left: 1em;
 }
-
+.style-settings-heading[data-level="2"] + .style-settings-container
+{
+  padding-left: 2em;
+}
+.style-settings-heading[data-level] + .style-settings-container
+{
+  padding-left: 2em;
+}
+body:not(.is-mobile) .style-settings-heading[data-level="3"] + .style-settings-container
+{
+  padding-left: 3em;
+}
+body:not(.is-mobile) .style-settings-heading[data-level="4"] + .style-settings-container
+{
+  padding-left: 4em;
+}
+body:not(.is-mobile) .style-settings-heading[data-level="5"] + .style-settings-container
+{
+  padding-left: 5em;
+}
+body:not(.is-mobile) .style-settings-heading[data-level="5"] + .style-settings-container
+{
+  padding-left: 5em;
+}
 .setting-item-description,
 .setting-item-info {
   word-wrap: break-word;
@@ -19045,6 +19056,8 @@ div.workspace-leaf-content[data-type="style-settings"] div.style-settings-headin
   background-color: var(--text-accent);
 }
 /**style setting logic  ******/
+
+
 body:not(.color-scheme-options-lillimon-topaz) .setting-item[data-id="color-magic"],
 body:not(.background-settings-workplace-background-image) .setting-item[data-id="background-settings-workplace-background-image"] ~ * {
   display: none;
@@ -19159,6 +19172,10 @@ body:not(.color-scheme-options-simplicity-topaz) .setting-item:is([data-id="disa
 }
 
 body:not(.bt-colorful-titlebar) .setting-item[data-id="background-titlebar-inner"]  {
+  display: none;
+}
+
+body:not(.folder-icons) .setting-item[data-id="remove-first-folder-icon"]  {
   display: none;
 }
 
@@ -19856,6 +19873,7 @@ color:#000000a3!important;
 padding: 2px 4px;
 margin-top: -1em;
 font-size:10px;
+line-height:10px;
 }
 
 /****thino 分享文字背景**/
@@ -21147,16 +21165,16 @@ body.is-mobile .menu-item-title {
   padding-left: 4px;
 }
 
-/*侧边栏文件列表字体大小*/
+/* 侧边栏文件列表字体大小
 .is-mobile .nav-file-title, .is-mobile .nav-folder-title, .is-mobile .outline, .is-mobile .tree-item-self, .is-mobile .tag-container, .is-mobile .tag-pane-tag {
   font-size: calc(var(--font-size-folder-and-file) + 0.2em);
   line-height: 1.5;
   margin-bottom: 2px;
-}
+} */
 
-body:not(.default-icons).is-mobile .nav-folder-collapse-indicator::before {
+/* body:not(.default-icons).is-mobile .nav-folder-collapse-indicator::before {
   margin-left: -0.1em;
-}
+} */
 
 /*侧边栏工作区标题*/
 .is-mobile .workspace-drawer-tab-option-item-title, .is-mobile .workspace-drawer-active-tab-title {
@@ -21207,9 +21225,9 @@ body:not(.default-icons).is-mobile .nav-folder-collapse-indicator::before {
     display: none;
   }
 
-  body:not(.default-icons).is-mobile .nav-folder-collapse-indicator::before {
+  /* body:not(.default-icons).is-mobile .nav-folder-collapse-indicator::before {
     top: 1px;
-  }
+  } */
 }
 
 /*=======================
@@ -23086,7 +23104,7 @@ body.bt-toggle-colorful-folder.folder-style-change-options-colorful.folder-color
 /* ===folder-style-change-options-colorful-order ============ */
 
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder .nav-file-title {
-  color: var(--FoldText);
+color: var(--FoldText);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder .nav-folder-title.is-active,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder .nav-folder-title:hover {
@@ -23095,55 +23113,59 @@ body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-f
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+2) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+2) .nav-folder-title+.nav-folder-children {
-  background-color: var(--Fold0);
+ --tab-color: var(--Fold0);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+3) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+3) .nav-folder-title+.nav-folder-children {
-  background-color: var(--Fold1);
+ --tab-color: var(--Fold1);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+4) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+4) .nav-folder-title+.nav-folder-children {
-  background-color: var(--Fold2);
+ --tab-color: var(--Fold2);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+5) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+5) .nav-folder-title+.nav-folder-children {
-  background-color: var(--Fold3);
+ --tab-color: var(--Fold3);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+6) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+6) .nav-folder-title+.nav-folder-children {
-  background-color: var(--Fold4);
+ --tab-color: var(--Fold4);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+7) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+7) .nav-folder-title+.nav-folder-children {
-  background-color: var(--Fold5);
+ --tab-color: var(--Fold5);
 }
 
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+8) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+8) .nav-folder-title+.nav-folder-children {
-  background-color: var(--Fold6);
+ --tab-color: var(--Fold6);
 }
 
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+9) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+9) .nav-folder-title+.nav-folder-children {
-  background-color: var(--Fold7);
+ --tab-color: var(--Fold7);
 }
 
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+10) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+10) .nav-folder-title+.nav-folder-children {
-  background-color: var(--Fold8);
+ --tab-color: var(--Fold8);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+11) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+11) .nav-folder-title+.nav-folder-children {
-  background-color: var(--Fold9);
+ --tab-color: var(--Fold9);
 }
 
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+12) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+12) .nav-folder-title+.nav-folder-children {
-  background-color: var(--FoldA);
+ --tab-color: var(--FoldA);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+13) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+13) .nav-folder-title+.nav-folder-children {
-  background-color: var(--FoldB);
+ --tab-color: var(--FoldB);
+}
+body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder .nav-folder-title,
+body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder .nav-folder-title+.nav-folder-children {
+  background-color: var( --tab-color);
 }
 
 /*=====folder colorful title=====*/
@@ -23159,53 +23181,61 @@ body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-f
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+2) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+2) .nav-file-title {
-  color: var(--Fold0);
+ --tab-color: var(--Fold0);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+3) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+3) .nav-file-title {
-  color: var(--Fold1);
+ --tab-color: var(--Fold1);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+4) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+4) .nav-file-title{
-  color: var(--Fold2);
+ --tab-color: var(--Fold2);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+5) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+5) .nav-file-title {
-  color: var(--Fold3);
+ --tab-color: var(--Fold3);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+6) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+6) .nav-file-title {
-  color: var(--Fold4);
+ --tab-color: var(--Fold4);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+7) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+7) .nav-file-title {
-  color: var(--Fold5);
+ --tab-color: var(--Fold5);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+8) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+8) .nav-file-title {
-  color: var(--Fold6);
+ --tab-color: var(--Fold6);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+9) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+9) .nav-file-title {
-  color: var(--Fold7);
+ --tab-color: var(--Fold7);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+10) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+10) .nav-file-title {
-  color: var(--Fold8);
+ --tab-color: var(--Fold8);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+11) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+11) .nav-file-title {
-  color: var(--Fold9);
+ --tab-color: var(--Fold9);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+12) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+12) .nav-file-title {
-  color: var(--FoldA);
+ --tab-color: var(--FoldA);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+13) .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+13) .nav-file-title {
-  color: var(--FoldB);
+ --tab-color: var(--FoldB);
 }
-
+body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder .nav-folder-title,
+body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder .nav-file-title {
+color: var(--tab-color);
+filter: brightness(0.8);
+}
+body.theme-dark.bt-toggle-colorful-folder.folder-style-change-options-colorful-title:not(.folder-colorful-six) .nav-folder.mod-root>.nav-folder-children>.nav-folder .nav-folder-title,
+body.theme-dark.bt-toggle-colorful-folder.folder-style-change-options-colorful-title:not(.folder-colorful-six)  .nav-folder.mod-root>.nav-folder-children>.nav-folder .nav-file-title {
+filter: brightness(2);
+}
 /*=====folder-colorful-custom=====*/
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order.folder-colorful-custom .nav-folder.mod-root>.nav-folder-children>.nav-folder .nav-folder-title,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order.folder-colorful-custom .nav-folder.mod-root>.nav-folder-children>.nav-folder .nav-folder-title+.nav-folder-children {
@@ -23289,7 +23319,7 @@ body.remove-arrow.bt-toggle-colorful-folder:is(.folder-style-change-options-colo
 
 /* Top Level Folder Titles */
 body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful,.folder-style-change-options-colorful-order) .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title {
-  color: var(--FoldText);
+ color: var(--FoldText);
   padding: var(--nav-item-parent-padding);
   padding-bottom: 4px;
   /* padding-left: 3px; */
@@ -23317,7 +23347,7 @@ body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful,.folder-
 }
 
 body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful,.folder-style-change-options-colorful-order) .nav-file-title-content {
-  color: var(--FoldText);
+color: var(--FoldText);
 }
 
 /*
@@ -23357,9 +23387,7 @@ body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful,.folder-
   background-image: linear-gradient(to right, var(--theme-color), transparent 90%);
 }
 
-body.unmuted-collapsed-folder.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.is-collapsed {
-  opacity: 1;
-}
+
 
 /* 16 Top level Folders By Starting Digit (0-F)
 These are set for me by leading number/letter which also ensures they are in the correct order when sorted alphabetically
@@ -23368,185 +23396,191 @@ You can change these to match your use case.
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="0"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="0"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="0"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--Fold0);
+  --tab-color: var(--Fold0);
+
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="1"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="1"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="1"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--Fold1);
+ --tab-color: var(--Fold1);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="2"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="2"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="2"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--Fold2);
+ --tab-color: var(--Fold2);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="3"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="3"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="3"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--Fold3);
+ --tab-color: var(--Fold3);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="4"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="4"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="4"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--Fold4);
+ --tab-color: var(--Fold4);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="5"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="5"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="5"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--Fold5);
+ --tab-color: var(--Fold5);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="6"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="6"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="6"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--Fold6);
+ --tab-color: var(--Fold6);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="7"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="7"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="7"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--Fold7);
+ --tab-color: var(--Fold7);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="8"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="8"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="8"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--Fold8);
+ --tab-color: var(--Fold8);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="9"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="9"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="9"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--Fold9);
+ --tab-color: var(--Fold9);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="A"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="A"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="A"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldA);
+ --tab-color: var(--FoldA);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="B"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="B"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="B"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldB);
+ --tab-color: var(--FoldB);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="C"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="C"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="C"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldC);
+ --tab-color: var(--FoldC);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="D"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="D"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="D"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldD);
+ --tab-color: var(--FoldD);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="E"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="E"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="E"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldE);
+ --tab-color: var(--FoldE);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="F"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="F"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="F"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldF);
+ --tab-color: var(--FoldF);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="G"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="G"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="G"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldG);
+ --tab-color: var(--FoldG);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="H"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="H"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="H"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldH);
+ --tab-color: var(--FoldH);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="I"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="I"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="I"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldI);
+ --tab-color: var(--FoldI);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="J"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="J"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="J"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldJ);
+ --tab-color: var(--FoldJ);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="K"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="K"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="K"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldK);
+ --tab-color: var(--FoldK);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="L"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="L"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="L"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldL);
+ --tab-color: var(--FoldL);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="M"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="M"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="M"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldM);
+ --tab-color: var(--FoldM);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="N"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="N"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="N"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldN);
+ --tab-color: var(--FoldN);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="O"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="O"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="O"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldO);
+ --tab-color: var(--FoldO);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="P"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="P"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="P"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldP);
+ --tab-color: var(--FoldP);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="Q"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="Q"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="Q"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldQ);
+ --tab-color: var(--FoldQ);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="R"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="R"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="R"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldR);
+ --tab-color: var(--FoldR);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="S"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="S"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="S"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldS);
+ --tab-color: var(--FoldS);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="T"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="T"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="T"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldT);
+ --tab-color: var(--FoldT);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="U"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="U"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="U"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldU);
+ --tab-color: var(--FoldU);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="V"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="V"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="V"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldV);
+ --tab-color: var(--FoldV);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="W"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="W"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="W"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldW);
+ --tab-color: var(--FoldW);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="X"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="X"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="X"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldX);
+ --tab-color: var(--FoldX);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="Y"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="Y"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="Y"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldY);
+ --tab-color: var(--FoldY);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="Z"],
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="Z"]+.nav-folder-children,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title[data-path^="Z"]+.nav-folder-children .nav-file-title.is-active {
-  background-color: var(--FoldZ);
+ --tab-color: var(--FoldZ);
 }
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children .nav-file-title.is-active {
   filter: hue-rotate(110deg);
+}
+body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title,
+body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title +.nav-folder-children,
+body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title +.nav-folder-children .nav-file-title.is-active {
+  background-color: var(--tab-color, hsla(var(--interactive-accent-hsl), 0.25));
 }
 /* Scrollbars eliminated
 body.folder-style-change-options-colorful .workspace-leaf-content[data-type='file-explorer'] ::-webkit-scrollbar {
@@ -28780,34 +28814,61 @@ body.background-settings-workplace-background-image .workspace-tab-header-contai
 }
 
 /*Inspired by the OneNote theme in Siyuan software*/
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .nav-folder.mod-root>.nav-folder-title {
-  margin-left: -12px;
-}
+ 
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .nav-files-container {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .nav-files-container {
   padding: 0 0 0 12px;
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder > .tree-item-children.nav-folder-children {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder > .tree-item-children.nav-folder-children {
   border-left: none;
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked:not(.default-tabs):not(.remove-arrow) .nav-folder-collapse-indicator::after {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border):not(.default-tabs):not(.remove-arrow) .nav-folder-collapse-indicator::after {
   display: none;
 }
-  
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder {
-  border: 1px solid var(--tab-divider-color);
-  margin: 5px 4px;
+ 
+body.bt-toggle-colorful-folder.folder-style-change-options-colorful-border .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder {
+  border: 1px solid var(--divider-color);
+  margin: 5px 4px 5px 0;
   border-radius: 3px;
   border-left: 2px solid var(--tab-color);
 }
-
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked:not(.is-grabbing) .tree-item-self.is-clickable.nav-folder-title:hover {
-  background-color: #cccccc29;
+body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder {
+  border: 1px solid color-mix(in srgb, var(--tab-color) 30%, var(--background-secondary));
+  margin: 5px 4px 5px 0;
+  border-radius: 3px;
+  border-left: 2px solid var(--tab-color);
 }
-  
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder.is-collapsed>.tree-item-self.is-clickable.mod-collapsible.nav-folder-title::before {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border):not(.is-grabbing) .tree-item.nav-folder.is-collapsed:hover {
+  background-color: color-mix(in srgb, var(--tab-color) 30%, var(--background-secondary));
+}
+
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border):not(.is-grabbing) .tree-item.nav-folder.is-collapsed .tree-item-self.is-clickable.nav-folder-title:hover
+{
+  background-color:transparent;
+}
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border):not(.is-grabbing) .tree-item-self.is-clickable.nav-folder-title:hover {
+  background-color: color-mix(in srgb, var(--tab-color) 20%, var(--background-secondary));
+ 
+}
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border):not(.is-grabbing) .tree-item-self.is-clickable.nav-file-title.is-active, 
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border):not(.is-grabbing) .tree-item-self.is-clickable.nav-file-title.is-active:hover, 
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border):not(.is-grabbing) .tree-item-self.is-clickable.nav-file-title:hover {
+  background-color: color-mix(in srgb, var(--tab-color) 20%, var(--background-secondary));
+}
+
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-border):not(.is-grabbing) .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title, 
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-border):not(.is-grabbing) .workspace-leaf-content[data-type="file-explorer"] .tree-item-self.is-clickable.nav-folder-title {
+ 
+  color:  color-mix(in hsl, var(--tab-color), black 20%);
+}
+body.theme-dark.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-border):not(.is-grabbing) .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title, 
+body.theme-dark.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-border):not(.is-grabbing) .workspace-leaf-content[data-type="file-explorer"] .tree-item-self.is-clickable.nav-folder-title {
+ 
+  color:  color-mix(in hsl, var(--tab-color), white 38%);
+}
+body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder.is-collapsed>.tree-item-self.is-clickable.nav-folder-title::before {
   content: "";
   width: 6px;
   height: 20px;
@@ -28817,7 +28878,7 @@ body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .t
   background-color: var(--tab-color);
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder>.tree-item-self.is-clickable.mod-collapsible.nav-folder-title::before {
+body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder>.tree-item-self.is-clickable.nav-folder-title::before {
   content: "";
   width: 13px;
   height: 20px;
@@ -28827,112 +28888,127 @@ body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .t
   background-color: var(--tab-color);
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+2)::before,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+2) {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+2)::before,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+2) {
   --tab-color: var(--Fold0);
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+3)::before,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+3) {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+3)::before,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+3) {
   --tab-color: var(--Fold1);
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+4)::before,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+4) {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+4)::before,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+4) {
   --tab-color: var(--Fold2);
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+5)::before,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+5) {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+5)::before,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+5) {
   --tab-color: var(--Fold3);
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+6)::before,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+6) {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+6)::before,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+6) {
   --tab-color: var(--Fold4);
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+7)::before,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+7) {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+7)::before,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+7) {
   --tab-color: var(--Fold5);
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+8)::before,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+8) {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+8)::before,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+8) {
   --tab-color: var(--Fold6);
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+9)::before,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+9) {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+9)::before,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+9) {
   --tab-color: var(--Fold7);
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+10)::before,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+10) {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+10)::before,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+10) {
   --tab-color: var(--Fold8);
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+11)::before,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+11) {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+11)::before,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+11) {
   --tab-color: var(--Fold9);
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+12)::before,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+12) {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+12)::before,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+12) {
   --tab-color: var(--FoldA);
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+13)::before,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+13) {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+13)::before,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+13) {
   --tab-color: var(--FoldB);
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+14)::before,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+14) {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+14)::before,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+14) {
   --tab-color: var(--FoldC);
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+15)::before,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+15) {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+15)::before,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+15) {
   --tab-color: var(--FoldD);
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+16)::before,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+16) {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+16)::before,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+16) {
   --tab-color: var(--FoldE);
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+17)::before,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+17) {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+17)::before,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+17) {
   --tab-color: var(--FoldF);
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+18)::before,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+18) {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+18)::before,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+18) {
   --tab-color: var(--FoldG);
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+19)::before,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+19) {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+19)::before,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+19) {
   --tab-color: var(--FoldH);
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n)::before,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n) {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n)::before,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n) {
   --tab-color: var(--FoldI);
 }
   
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+1)::before,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+1)::before,
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder:nth-child(20n+1) {
   --tab-color: var(--FoldJ);
 }
 
-body.remove-first-folder-icon .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder>.tree-item-self.is-clickable.mod-collapsible.nav-folder-title .nav-folder-title-content::before,
-body.remove-first-folder-icon .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder>.tree-item-self.is-clickable.mod-collapsible.nav-folder-title
-.nav-folder-collapse-indicator::before{
+body.remove-first-folder-icon .tree-item.nav-folder.mod-root>.tree-item-children.nav-folder-children > .tree-item.nav-folder>.tree-item-self.is-clickable.nav-folder-title .nav-folder-title-content::before
+{
   display: none;
 }
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-title,.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border).folder-icons .nav-folder-children  .nav-folder-title-content::before
+{
+  background-color:var(--tab-color);
+  filter:none;
+  opacity:0.5;
+}
 
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-title,.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border):not(.remove-file-icons) .nav-file-title .nav-file-title-content:not(.mk-tree-text)::before
+{
+  background-color:var(--tab-color,var(--text-folder-file-icon));
+  filter:none;
+  opacity:0.5;
+}
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-title,.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border):not(.default-icons):not(.remove-arrow) .nav-folder-collapse-indicator::before
+{
+  color:var(--tab-color);
+}
 .obsidian-icon-folder-icon {
   margin: 0 0 0 -18px !important
 }
