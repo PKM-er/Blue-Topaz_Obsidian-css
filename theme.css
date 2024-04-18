@@ -19435,6 +19435,12 @@ body:not(.thino-default) div[data-type='thino_view']
   --memos-bg-light-blue: var(--theme-color-translucent-02);
   --memos-text-blue:var(--interactive-accent);
 }
+
+body:is(.thino-frosted-style,.thino-frosted-style-default)  .workspace-leaf div[data-type=thino_view] .view-header,
+body:is(.thino-frosted-style,.thino-frosted-style-default).is-focused .workspace-leaf.mod-active div[data-type=thino_view] .view-header {
+  background-color: transparent;
+}
+
 body:is(.thino-default,.thino-frosted-style-default)  div[data-type=thino_view] #page-wrapper:not(.memos-moments-view) .memo-editor-wrapper{
   background-color: var(--background-primary-bg-4-bt, var(--background-primary));
 }
@@ -20060,9 +20066,15 @@ body.hider-memos-modern-banner div[data-type=thino_view] .memos-moments-view.mod
   height: 40px;
   margin-top: -12px;;
 }
- body:is(.custom-thino-background,.thino-background-color) div[data-type='thino_view'] .view-content  
+ body.background-settings-workplace-background-image:is(.custom-thino-background,.thino-background-color) div[data-type='thino_view'] .view-content,
+ body.background-settings-workplace-background-image:is(.custom-thino-background,.thino-background-color) div[data-type='thino_view'] .view-header  
  {
   background: var(--bg-color-settings-0-1) ;
+ }
+ body.theme-dark.background-settings-workplace-background-image:is(.custom-thino-background,.thino-background-color) div[data-type='thino_view'] .view-content,
+ body.theme-dark.background-settings-workplace-background-image:is(.custom-thino-background,.thino-background-color) div[data-type='thino_view'] .view-header  
+ {
+  background: var(--background-primary) ;
  }
  body.thino-frosted-style-default:not(.is-mobile) div[data-type='thino_view']:not(.mobile-view) .view-content ,
   body.thino-frosted-style:not(.is-mobile) div[data-type='thino_view']:not(.mobile-view) .view-content  {
@@ -20073,6 +20085,16 @@ body.hider-memos-modern-banner div[data-type=thino_view] .memos-moments-view.mod
   margin: auto;
   box-shadow: var( --window-shadow2);
   border-radius:var(--radius-l);
+}
+ 
+body.thino-frosted-style div[data-type=thino_view] .memo-editor-wrapper,
+body.thino-frosted-style div[data-type=thino_view] .memo-wrapper,
+body.thino-frosted-style:not(.is-mobile) div[data-type='thino_view']:not(.mobile-view) .view-content .status-text-container.sidebar .status-sidebar-wrapper .status-text
+{
+  --memos-bg-lightgray: transparent;
+  --memos-memo-border:transparent;
+  --memos-memo-bg:transparent;
+ 
 }
 body:is(.thino-frosted-style,.custom-thino-background,.thino-background-color)  div[data-type=thino_view] #page-wrapper:is(.memos-chat-view,.memos-moments-view,.memos-list-view,.memos-table-view,.memos-calendar-view,.memos-waterfall-view) {
   background: var(--bg-color-settings-2) ;
@@ -21701,11 +21723,12 @@ body:not(.color-scheme-options-simplicity-topaz) .workspace-tabs {
   background: var(--background-secondary-alt);
 }
 
+
 .workspace-tab-header-container {
   background: var(--background-secondary-alt);
 }
 
- 
+body.background-settings-workplace-background-image .workspace-tab-header-container,
 body.background-settings-workplace-background-image:not(.is-frameless) .workspace-split.mod-root .workspace-tab-header-container,
 body.background-settings-workplace-background-image:not(.is-frameless) .mod-root .workspace-tabs .workspace-leaf,
 body.background-settings-workplace-background-image .workspace {
@@ -28430,7 +28453,7 @@ body.toggle-header-bottom-line.show-view-header .view-header {
 
 body.background-settings-workplace-background-image .workspace-split.mod-root .workspace-tab-header.is-active::before,
 body.background-settings-workplace-background-image .workspace-split.mod-root .workspace-tab-header.is-active::after {
-  box-shadow: inset 0 0 0 var(--tab-outline-width) transparent, 0 0 0 calc(var(--tab-curve) * 4) var(--background-secondary);
+  /* box-shadow: inset 0 0 0 var(--tab-outline-width) transparent, 0 0 0 calc(var(--tab-curve) * 4) var(--background-secondary); */
 }
 
 body.theme-dark:not(.background-settings-workplace-background-image) .workspace-split.mod-horizontal:is(.mod-left-split,.mod-right-split) .workspace-tabs .workspace-leaf-resize-handle {
