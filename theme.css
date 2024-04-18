@@ -2847,7 +2847,7 @@ settings:
     title.zh: 彩色化类型
     type: class-select
     allowEmpty: false
-    default: folder-style-change-options-colorful-tab-liked
+    default: folder-style-change-options-colorful-border
     options:
       -
         label: Default non-colorful
@@ -23163,10 +23163,7 @@ body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-f
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder:nth-child(12n+13) .nav-folder-title+.nav-folder-children {
  --tab-color: var(--FoldB);
 }
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder .nav-folder-title,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-order .nav-folder.mod-root>.nav-folder-children>.nav-folder .nav-folder-title+.nav-folder-children {
-  background-color: var( --tab-color);
-}
+ 
 
 /*=====folder colorful title=====*/
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-title .nav-folder.mod-root>.nav-folder-children>.nav-folder .nav-folder-title.is-active,
@@ -23577,9 +23574,9 @@ body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children .nav-file-title.is-active {
   filter: hue-rotate(110deg);
 }
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title +.nav-folder-children,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title +.nav-folder-children .nav-file-title.is-active {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful,.folder-style-change-options-colorful-order)  .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful,.folder-style-change-options-colorful-order) .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title +.nav-folder-children,
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful,.folder-style-change-options-colorful-order) .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title +.nav-folder-children .nav-file-title.is-active {
   background-color: var(--tab-color, hsla(var(--interactive-accent-hsl), 0.25));
 }
 /* Scrollbars eliminated
