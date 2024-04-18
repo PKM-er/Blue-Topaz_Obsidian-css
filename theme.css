@@ -19881,7 +19881,17 @@ margin-top: -1em;
 font-size:10px;
 line-height:10px;
 }
+body.background-settings-workplace-background-image div[data-type=thino_view]   .menu-btns-popup,
+body.background-settings-workplace-background-image div[data-type=thino_view] .selector-wrapper>.items-wrapper {
+ 
+  background-color:var(--bg-color-settings-3);
+  backdrop-filter: blur(10px);
+}
+div[data-type=thino_view] .usage-heat-map-wrapper>.day-tip-text-container, .block-language-thino .usage-heat-map-wrapper>.day-tip-text-container, .thino-canvas-menu .usage-heat-map-wrapper>.day-tip-text-container {
+  
+  width: auto;
 
+}
 /****thino 分享文字背景**/
 
 body.share-thino-with-workspace-background .share-memo-image-dialog>.dialog-container>.dialog-content-container>.memo-container:is(.modern,.clean,.gradient)>.memo-background {
@@ -19976,6 +19986,9 @@ body.custom-thino-share-background.theme-dark .share-memo-image-dialog>.dialog-c
   background: linear-gradient(117deg, var(--start-color,#ffc3a0), var(--end-color,#ffafbd)); 
 
  }
+
+
+ 
 /**********thino 加滚动条***/
 body.memos-scroll div[data-type=thino_view] .memolist-wrapper .memolist-container .masonry-memolist {
   max-height: 660px;
