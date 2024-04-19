@@ -1385,7 +1385,7 @@ settings:
     title: Header 1 line height
     title.zh: 标题 1 行高
     type: variable-number
-    default: 1.2
+    default: 1.5
   -
     id: h1-text-align-settings
     title: h1 Text-align
@@ -1487,6 +1487,12 @@ settings:
     type: variable-text
     default: bold
   -
+    id: h2-line-height
+    title: Header 2 line height
+    title.zh: 标题 2 行高
+    type: variable-number
+    default: 1.5
+  -
     id: h2-text-align-settings
     title: h2 text-align
     title.zh: h2 位置
@@ -1586,6 +1592,12 @@ settings:
     type: variable-text
     default: bold
   -
+    id: h3-line-height
+    title: Header 3 line height
+    title.zh: 标题 3 行高
+    type: variable-number
+    default: 1.5
+  -
     id: h3-text-align-settings
     title: h3 text-align
     title.zh: h3 位置
@@ -1684,6 +1696,12 @@ settings:
     title.zh: 标题 4 字重
     type: variable-text
     default: bold
+  -
+    id: h4-line-height
+    title: Header 4 line height
+    title.zh: 标题 4 行高
+    type: variable-number
+    default: 1.5
   -
     id: h4-text-align-settings
     title: h4 text-align
@@ -12032,10 +12050,59 @@ body.toggle-inline-title-background .inline-title {
   background: no-repeat center/100% var(--inline-title-bg-url) var(--inline-title-bg-color);
 }
 
-.cm-contentContainer :is(.cm-header-1,.cm-header-2,.cm-header-3,.cm-header-4) {
-  line-height: calc(var(--paragraph-spacing) + 0.5);
+body.h1-toggle-underline  .markdown-source-view.mod-cm6 .HyperMD-header-1,
+body.h2-toggle-underline  .markdown-source-view.mod-cm6 .HyperMD-header-2,
+body.h3-toggle-underline  .markdown-source-view.mod-cm6 .HyperMD-header-3,
+body.h4-toggle-underline  .markdown-source-view.mod-cm6 .HyperMD-header-4,
+body.h5-toggle-underline  .markdown-source-view.mod-cm6 .HyperMD-header-5,
+body.h6-toggle-underline  .markdown-source-view.mod-cm6 .HyperMD-header-6
+{
+  margin-bottom: 0.5rem!important;
 }
 
+
+body:not(.h1-toggle-underline) 
+.cm-contentContainer .cm-header-1
+{
+  line-height: max(calc(var(--paragraph-spacing) + 1),var(--h1-line-height));
+}
+body:not(.h2-toggle-underline) 
+.cm-contentContainer .cm-header-2
+{
+  line-height: max(calc(var(--paragraph-spacing) + 1),var(--h2-line-height));
+}
+body:not(.h3-toggle-underline) 
+.cm-contentContainer .cm-header-3
+{
+  line-height: max(calc(var(--paragraph-spacing) + 1),var(--h3-line-height));
+}
+body:not(.h4-toggle-underline) 
+.cm-contentContainer .cm-header-4 {
+  line-height: max(calc(var(--paragraph-spacing) + 0.5),var(--h4-line-height));
+}
+body:not(.h5-toggle-underline) 
+.cm-contentContainer .cm-header-5 {
+  line-height: max(calc(var(--paragraph-spacing) + 0.5),var(--h5-line-height));
+}
+body:not(.h6-toggle-underline) 
+.cm-contentContainer .cm-header-6 {
+  line-height: max(calc(var(--paragraph-spacing) + 0.5),var(--h6-line-height));
+}
+.markdown-rendered div:has( > :is(p,pre,table,ul,ol)) + div > :is(h1,h2,h3,h4,h5,h6)
+{
+  margin-top: 0px;
+}
+body.h6-toggle-underline .cm-s-obsidian .cm-line.HyperMD-header-6,
+body.h5-toggle-underline .cm-s-obsidian .cm-line.HyperMD-header-5,
+body.h4-toggle-underline .cm-s-obsidian .cm-line.HyperMD-header-4,
+body.h3-toggle-underline .cm-s-obsidian .cm-line.HyperMD-header-3,
+body.h2-toggle-underline .cm-s-obsidian .cm-line.HyperMD-header-2,
+body.h1-toggle-underline .cm-s-obsidian .cm-line.HyperMD-header-1 {
+  padding-top: 0.5rem;
+}
+.cm-s-obsidian .cm-line.HyperMD-header {
+  padding-top: 0;
+}
 body.h1-text-align-center .HyperMD-header.HyperMD-header-1.cm-line,
 body.h2-text-align-center .HyperMD-header.HyperMD-header-2.cm-line,
 body.h3-text-align-center .HyperMD-header.HyperMD-header-3.cm-line,
