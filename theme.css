@@ -28039,7 +28039,7 @@ body.enable-icon-anima :is(.workspace-ribbon, .nav-header) .clickable-icon:hover
 
 .markdown-preview-view progress, .markdown-rendered progress, .markdown-source-view.is-live-preview progress {
   overflow: unset;
-  vertical-align:top;
+  vertical-align: middle;
 }
 
 body.title-justify-start .view-header-title-container {
