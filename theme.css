@@ -11123,11 +11123,19 @@ p {
   margin-block-end: calc(var(--paragraph-spacing) * 1em);
 }
 
+ 
+
+.markdown-source-view.mod-cm6 div.cm-line:not(.HyperMD-codeblock):not(.HyperMD-header):not(:has(>br:only-child)) {
+  padding-bottom: calc((var(--paragraph-spacing) - 1) * 1em) ;
+}
 
 :is(.markdown-preview-view,.markdown-rendered) :is(ol,ul) {
   margin-block-start: calc((var(--line-height-list) - 2) * 1em);
   margin-block-end: calc((var(--line-height-list) - 2) * 1em);
 }
+
+
+
 body.toggle-paragraph-spacing :is(.markdown-preview-view,.markdown-rendered) p>br {
   content:" ";
   margin-top: calc((var(--paragraph-spacing) - 1) * 1em);
@@ -11142,17 +11150,14 @@ body.toggle-left-aligned-content :is(.markdown-preview-view,.markdown-rendered).
   margin-left: 0;
 }
 
-/* .markdown-source-view.mod-cm6 div.cm-line:not(.HyperMD-codeblock) {
-  padding-bottom: calc((var(--paragraph-spacing) - 1) * 1em) ;
-} */
 
-body.text-indentation-two-em .workspace-leaf-content[data-type="markdown"] .markdown-source-view.mod-cm6 div.cm-line:not(:is(.HyperMD-header,.HyperMD-quote,.HyperMD-list-line)),
-.markdown-source-view.mod-cm6.indent div.cm-line:not(:is(.HyperMD-header,.HyperMD-quote,.HyperMD-list-line)) {
+body.text-indentation-two-em .workspace-leaf-content[data-type="markdown"] .markdown-source-view.mod-cm6 div.cm-line:not(:is(.hr,.HyperMD-header,.HyperMD-quote,.HyperMD-list-line)),
+.markdown-source-view.mod-cm6.indent div.cm-line:not(:is(.hr,.HyperMD-header,.HyperMD-quote,.HyperMD-list-line)) {
   text-indent: 2em;
 }
 
-body.text-indentation-two-em  .workspace-leaf-content[data-type="markdown"]  .markdown-source-view.mod-cm6 div.cm-line:not(:is(.HyperMD-header,.HyperMD-quote,.HyperMD-list-line)) .cm-hmd-frontmatter:first-of-type,
-.markdown-source-view.mod-cm6.indent div.cm-line:not(:is(.HyperMD-header,.HyperMD-quote,.HyperMD-list-line)) .cm-hmd-frontmatter:first-of-type {
+body.text-indentation-two-em  .workspace-leaf-content[data-type="markdown"]  .markdown-source-view.mod-cm6 div.cm-line:not(:is(.hr,.HyperMD-header,.HyperMD-quote,.HyperMD-list-line)) .cm-hmd-frontmatter:first-of-type,
+.markdown-source-view.mod-cm6.indent div.cm-line:not(:is(.hr,.HyperMD-header,.HyperMD-quote,.HyperMD-list-line)) .cm-hmd-frontmatter:first-of-type {
   margin-left: -2em;
 }
 body.text-indentation-two-em .markdown-source-view.mod-cm6 div.has-banner.cm-line:not(.HyperMD-header) .cm-def.cm-hmd-frontmatter,
@@ -12064,33 +12069,34 @@ body.h6-toggle-underline  .markdown-source-view.mod-cm6 .HyperMD-header-6
 body:not(.h1-toggle-underline) 
 .cm-contentContainer .cm-header-1
 {
-  line-height: max(calc(var(--paragraph-spacing) + 1),var(--h1-line-height));
+  line-height: var(--h1-line-height);
 }
 body:not(.h2-toggle-underline) 
 .cm-contentContainer .cm-header-2
 {
-  line-height: max(calc(var(--paragraph-spacing) + 1),var(--h2-line-height));
+  line-height: var(--h2-line-height);
 }
 body:not(.h3-toggle-underline) 
 .cm-contentContainer .cm-header-3
 {
-  line-height: max(calc(var(--paragraph-spacing) + 1),var(--h3-line-height));
+  line-height: var(--h3-line-height);
 }
 body:not(.h4-toggle-underline) 
 .cm-contentContainer .cm-header-4 {
-  line-height: max(calc(var(--paragraph-spacing) + 0.5),var(--h4-line-height));
+  line-height: var(--h4-line-height);
 }
 body:not(.h5-toggle-underline) 
 .cm-contentContainer .cm-header-5 {
-  line-height: max(calc(var(--paragraph-spacing) + 0.5),var(--h5-line-height));
+  line-height: var(--h5-line-height);
 }
 body:not(.h6-toggle-underline) 
 .cm-contentContainer .cm-header-6 {
-  line-height: max(calc(var(--paragraph-spacing) + 0.5),var(--h6-line-height));
+  line-height: var(--h6-line-height);
 }
 .markdown-rendered div:has( > :is(p,pre,table,ul,ol)) + div > :is(h1,h2,h3,h4,h5,h6)
 {
-  margin-top: 1rem;
+  margin-top: calc(var(--p-spacing) * 0.5);
+  margin-bottom: calc(var(--p-spacing) * 0.5);
 }
 body.h6-toggle-underline .cm-s-obsidian .cm-line.HyperMD-header-6,
 body.h5-toggle-underline .cm-s-obsidian .cm-line.HyperMD-header-5,
@@ -12101,8 +12107,10 @@ body.h1-toggle-underline .cm-s-obsidian .cm-line.HyperMD-header-1 {
   padding-top: 0.5rem;
 }
 .cm-s-obsidian .cm-line.HyperMD-header {
-  padding-top: 0;
+  padding-top: calc(var(--p-spacing) * 0.5);
+  padding-bottom:calc(var(--p-spacing) * 0.5);
 }
+
 body.h1-text-align-center .HyperMD-header.HyperMD-header-1.cm-line,
 body.h2-text-align-center .HyperMD-header.HyperMD-header-2.cm-line,
 body.h3-text-align-center .HyperMD-header.HyperMD-header-3.cm-line,
