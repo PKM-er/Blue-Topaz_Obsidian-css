@@ -29160,6 +29160,15 @@ body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-title,.f
   filter:none;
   opacity:0.5;
 }
+body.folder-colorful-custom.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-title,.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border).folder-icons .nav-folder-children  .nav-folder-title-content::before
+{
+  background-color:var(--folder-colorful-custom-color);
+ 
+}
+body.folder-colorful-custom.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-title,.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border):not(.remove-file-icons) .nav-file-title .nav-file-title-content:not(.mk-tree-text)::before
+{
+  background-color:var(--folder-colorful-custom-color,var(--text-folder-file-icon));
+}
 
 body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-title,.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border):not(.remove-file-icons) .nav-file-title .nav-file-title-content:not(.mk-tree-text)::before
 {
