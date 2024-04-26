@@ -15485,7 +15485,7 @@ body.setting-default-frosted-glass .modal.mod-settings {
 }
 body.setting-default-frosted-glass .vertical-tab-header,
 body.translucent-setting-panel .vertical-tab-header {
-  background-color: var(--bg-color-settings-1);
+  background-color: var(--bg-color-settings-3);
 }
 body.translucent-setting-panel .horizontal-tab-nav-item,
 body.translucent-setting-panel .vertical-tab-nav-item,
@@ -15515,7 +15515,7 @@ body.setting-default-frosted-glass .vertical-tab-content {
 }
 
 body.translucent-setting-panel .vertical-tab-content {
-  background-color: var(--bg-color-settings-1);
+  background-color: var(--bg-color-settings-2);
 }
 
 body.setting-default-frosted-glass .vertical-tab-header-group-title {
@@ -18843,12 +18843,31 @@ span.cm-formatting.cm-formatting-highlight.cm-strong.cm-em.cm-highlight.hmd-hidd
   height: 18rem !important;
 }
 
-.suggestion-container
+body.setting-default-frosted-glass .suggestion-container
 {
   background-color: var(--bg-color-settings-4);
   backdrop-filter: blur(3px);
 }
+body.setting-style-traditional .suggestion-container
+{
+  background-color: var(--color-base-20);
+ 
+}
+body.setting-style-traditional .modal.mod-settings .vertical-tab-content-container {
+  background: var(--color-base-20);
+}
+body.setting-style-traditional .modal.mod-settings .vertical-tab-header {
+  background: var(--color-base-00);
+}
 
+body.setting-style-traditional .menu{
+  background-color: var(--color-base-00);
+}
+
+body.setting-style-traditional  .prompt
+{
+  background: var(--color-base-00);
+}
 /* ================================== */
 /* ============ QuickAdd ============ */
 /* ================================== */
@@ -19193,6 +19212,10 @@ body:is(.notebook-liked-markdown-page-dotted-notebook-1,.notebook-liked-markdown
 body:not(.background-image-settings-command-palette-switch) .setting-item[data-id="background-image-settings-command-palette-switch"] ~ *,
 body:not(.background-image-settings-command-palette-custom) .setting-item[data-id="background-command-palette-theme-light-custom"],
 body:not(.background-image-settings-command-palette-custom) .setting-item[data-id="background-command-palette-theme-dark-custom"] {
+  display: none;
+}
+
+body.background-image-settings-command-palette-same-as-workplace .setting-item[data-id="background-image-settings-command-palette-custom"] {
   display: none;
 }
 body:not(.toggle-bg-panel-page) .setting-item[data-id="toggle-bg-panel-page"] ~ *,
@@ -24241,6 +24264,7 @@ body.background-image-settings-command-palette-switch .modal-container .prompt::
   bottom: 0;
   left: 0;
   position: absolute;
+  z-index:-1;
 }
 
 body.background-image-settings-command-palette-same-as-workplace.background-image-settings-command-palette-switch .modal-container .prompt::before {
@@ -24277,7 +24301,12 @@ body.background-image-settings-command-palette-custom.background-image-settings-
 body.background-image-settings-command-palette-custom.background-image-settings-command-palette-switch:not(.background-image-settings-command-palette-same-as-workplace).theme-dark .modal-container .prompt::before {
   background-image: var(--background-command-palette-theme-dark-custom);
 }
-
+body.background-image-settings-command-palette-custom.background-image-settings-command-palette-switch .modal-container .prompt::before {
+  background-size: auto;
+  filter: blur(var(--blur-depth-cp)) brightness(var(--brightness-4-bg-cp)) saturate(var(--saturate-4-bg-cp));
+  opacity: var(--opacity-cp);
+  z-index: -1;
+}
 body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
 body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
 body.layout-style-options-default.background-settings-workplace-background-image .workspace-tab-header.is-before-active .workspace-tab-header-inner,
@@ -28098,9 +28127,7 @@ body.title-justify-start .view-header-title-container {
   box-shadow: var(--window-shadow-hover);
 }
  
-.menu{
-  background-color: var(--color-base-00);
-}
+
 
 .memo-context-menu{
   background-color:var(--bg-color-settings-3);
