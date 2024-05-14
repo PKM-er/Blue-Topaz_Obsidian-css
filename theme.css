@@ -28844,7 +28844,7 @@ body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-custom) .ca
 }
 
 .canvas-node-container h1 {
-  font-size: calc(var(--h1-size) + 1em);
+  font-size: calc(var(--h1-size) );
   text-align: center;
 }
 
