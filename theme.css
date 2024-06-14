@@ -16969,12 +16969,12 @@ button.copy-code-button:hover {
   background-color: var(--background-secondary) !important;
 }
 
-.kanban-plugin__item-title ol:not(.contains-task-list)>li:not(.task-list-item),
+/* .kanban-plugin__item-title ol:not(.contains-task-list)>li:not(.task-list-item),
 .kanban-plugin__item-title ul:not(.contains-task-list)>li:not(.task-list-item) {
   border-left: none;
   padding: 0 1px;
   margin-left: 0px;
-}
+} */
 
 .kanban-plugin .task-list-item-checkbox {
   margin: 0px 7px 0px 0;
@@ -17044,13 +17044,13 @@ button.kanban-plugin__new-item-button:hover {
   padding: 4px !important;
 }
 
-.kanban-plugin__markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item),
+/* .kanban-plugin__markdown-preview-view ol:not(.contains-task-list)>li:not(.task-list-item),
 .kanban-plugin__markdown-preview-view:not(.kanban) ul>li:not(.task-list-item) {
   margin-left: unset;
   padding-left: unset;
   margin-bottom: unset;
   margin-top: unset;
-}
+} */
 
 /*meta*/
 .kanban-plugin__meta-row {
@@ -17872,35 +17872,35 @@ body.style-options-for-admonition-plugin .admonition-kanban ul .list-collapse-in
 
 body.style-options-for-admonition-plugin.colorful-p-kanban .admonition-kanban ul>li:nth-of-type(8n+1) {
   background-color: var(--p-kanban-color-1);
-  padding-left: 1em;
+  padding-left: 2em;
 }
 body.style-options-for-admonition-plugin.colorful-p-kanban .admonition-kanban ul>li:nth-of-type(8n+2) {
   background-color: var(--p-kanban-color-2);
-  padding-left: 1em;
+  padding-left: 2em;
 }
 body.style-options-for-admonition-plugin.colorful-p-kanban .admonition-kanban ul>li:nth-of-type(8n+3) {
   background-color: var(--p-kanban-color-3);
-  padding-left: 1em;
+  padding-left: 2em;
 }
 body.style-options-for-admonition-plugin.colorful-p-kanban .admonition-kanban ul>li:nth-of-type(8n+4) {
   background-color: var(--p-kanban-color-4);
-  padding-left: 1em;
+  padding-left: 2em;
 }
 body.style-options-for-admonition-plugin.colorful-p-kanban .admonition-kanban ul>li:nth-of-type(8n+5) {
   background-color: var(--p-kanban-color-5);
-  padding-left: 1em;
+  padding-left: 2em;
 }
 body.style-options-for-admonition-plugin.colorful-p-kanban .admonition-kanban ul>li:nth-of-type(8n+6) {
   background-color: var(--p-kanban-color-6);
-  padding-left: 1em;
+  padding-left: 2em;
 }
 body.style-options-for-admonition-plugin.colorful-p-kanban .admonition-kanban ul>li:nth-of-type(8n+7) {
   background-color: var(--p-kanban-color-7);
-  padding-left: 1em;
+  padding-left: 2em;
 }
 body.style-options-for-admonition-plugin.colorful-p-kanban .admonition-kanban ul>li:nth-of-type(8n) {
   background-color: var(--p-kanban-color-8);
-  padding-left: 1em;
+  padding-left: 2em;
 }
 
 body.style-options-for-admonition-plugin .admonition-kanban ul ul {
@@ -18628,7 +18628,7 @@ span.dataview.small-text {
 
 ul.dataview.list-view-ul>li:not(.task-list-item) {
   border-left: none !important;
-  margin-left: -1em;
+ 
 }
 
 li.dataview-result-list-li ul>li:not(.task-list-item) {
@@ -20877,10 +20877,10 @@ body span[alt*="+grid"] {
   padding: 0 18px 0 21px;
 }
 
-.is-mobile :is(.markdown-preview-view,.markdown-rendered) ol:not(.contains-task-list)>li:not(.task-list-item),
+/* .is-mobile :is(.markdown-preview-view,.markdown-rendered) ol:not(.contains-task-list)>li:not(.task-list-item),
 .is-mobile .markdown-preview-view:not(.kanban) ul>li:not(.task-list-item) {
   margin-left: 0;
-}
+} */
 
 /*collapse allows*/
 body:not(.default-icons).is-mobile h1 div.heading-collapse-indicator.collapse-indicator,
@@ -21985,7 +21985,7 @@ body.is-mobile.view-button-front .workspace-leaf-content:is([data-mode="preview"
 body.view-button-front .workspace-leaf-content:is([data-mode="preview"],[data-mode="source"]) .view-header .view-actions>:is([aria-label^="该面板处于编辑视图中"],[aria-label^="Current view: editing"]) {
   opacity: 0.8;
   position: absolute;
-  left: 20px;
+  left: 8px;
   top: 3px;
 }
 body.is-mobile.view-button-front .workspace-leaf-content[data-mode='preview'] .view-header .view-actions>:is([aria-label^="该面板处于阅读视图中"],[aria-label^="Current view: reading"]) {
@@ -21995,7 +21995,7 @@ body.is-mobile.view-button-front .workspace-leaf-content[data-mode='preview'] .v
 body.view-button-front .workspace-leaf-content[data-mode='preview'] .view-header .view-actions>:is([aria-label^="该面板处于阅读视图中"],[aria-label^="Current view: reading"]) {
   opacity: 0.5;
   position: absolute;
-  left: 20px;
+  left: 8px;
   top: 3px;
 }
 body.view-button-front .workspace-leaf-content[data-mode='preview'] .view-header:hover .view-actions>:is([aria-label^="该面板处于阅读视图中"],[aria-label^="Current view: reading"]) {
@@ -26664,7 +26664,7 @@ body.remove-shadow-p-kanban.theme-dark .callout.callout[data-callout*="kanban"] 
 
 .callout.callout[data-callout*="kanban"] ul > li.task-list-item {
   flex: 1 1 20%;
-  padding: 0.1em 1em;
+  padding: 0.1em 0.1em 1em 2em;
   list-style: none;
   border: 1px solid var(--p-kanban-border-color);
   border-left: 1px solid var(--p-kanban-border-color) !important;
@@ -29017,7 +29017,7 @@ body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-like
 }
  
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-border .nav-files-container>div>.tree-item.nav-folder {
-  border: 1px solid var(--divider-color);
+  border: 1px solid var(--background-modifier-border);
   margin: 5px 4px 5px 0;
   border-radius: 3px;
   border-left: 2px solid var(--tab-color);
@@ -29029,7 +29029,7 @@ body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .n
   border-left: 2px solid var(--tab-color);
 }
 body.is-mobile.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .nav-files-container>div>.tree-item.nav-folder {
-  border: 1px solid   var(--divider-color);
+  border: 1px solid   var(--background-modifier-border);
 
 }
 body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border):not(.is-grabbing) .tree-item.nav-folder.is-collapsed:hover {
