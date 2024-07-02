@@ -605,7 +605,7 @@ settings:
   -
     id: left-ribbon-style
     title: Left ribbon styles
-    title.zh: 左侧边栏样式选择
+    title.zh: 左工具栏样式选择
     type: class-select
     allowEmpty: false
     default: default-left-ribbon-style
@@ -625,12 +625,6 @@ settings:
       -
         label: Bubble, hide to left
         value: bt-bubble-ribbon-hide-left
-  -
-    id: hide-vault-name
-    title: Hide vault name
-    title.zh: 隐藏文件栏上方的库名称
-    type: class-toggle
-    default: false
   -
     id: search-bar-style-option
     title: Search bar style
@@ -2847,9 +2841,21 @@ settings:
     type: class-toggle
     default: true
   -
+    id: folder-note-underline
+    title: Toggle Folder note underline
+    title.zh: 开启文件夹下划线
+    type: class-toggle
+    default: false
+  -
+    id: folder-note-dot
+    title: Toggle Folder note dot
+    title.zh: 文件夹后添加一个圆点
+    type: class-toggle
+    default: false
+  -
     id: folder-style-change-options-colorful-folder
     title: 2.3.3.1 Colorful folder
-    title.zh: 2.3.3.1 多彩文件夹
+    title.zh: 2.3.3.1 彩色文件夹
     type: heading
     level: 4
     collapsed: false
@@ -14096,6 +14102,9 @@ body.table-style-three .markdown-source-view table tbody>tr {
 
 /*Full-width table dvtable callout backlinks layout*/
 /*modified from https://github.com/efemkay */
+ .markdown-source-view.mod-cm6.is-readable-line-width.fullwidth .cm-sizer,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer,
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div,
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content,
@@ -14114,7 +14123,7 @@ body.table-style-three .markdown-source-view table tbody>tr {
 /*	Editing View -- set all divs back to normal width (ensuring specificity rule over some theme), then	expand to full-width for each selected css class */
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) div.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div,
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  div.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > .cm-line {
-  max-width: var(--file-line-width);
+  max-width: 100%;
   margin-inline: auto !important;
 } /* important for margin needed because app.css:2842 use it */
 
@@ -14126,14 +14135,14 @@ body.full-width-backlinks .markdown-source-view.mod-cm6 .cm-contentContainer.cm-
 }
 
 body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block>div[class^="block-language"]:not(.block-language-dataview) {
-  max-width: var(--file-line-width);
+  max-width: 100%;
   margin-inline: auto;
 }
 
 /*	Reading View -- similar to Editing View, set all divs to normal-width and then selected divs to full-width,
 		however, for Reading View, wide-dataview and wide-table will require Contextual Typography plugin */
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)	div.markdown-preview-view:not(.fullwidth) .markdown-preview-sizer.markdown-preview-sizer > div:not(.obsidian-banner-wrapper) {
-  max-width: var(--file-line-width);
+  max-width: 100%;
   margin-inline: auto;
 }
 
@@ -22071,6 +22080,39 @@ body.folder-icons .nav-folder-children .nav-folder.is-collapsed .nav-folder-titl
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5h-8.586L9.707 3.293A.997.997 0 0 0 9 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2zM4 19V7h16l.002 12H4z"></path></svg>');
 } 
 
+.folder-note-underline .nav-folder.is-collapsed .nav-folder-title-content {
+  text-decoration-line: underline;
+  /* text-decoration-color: var(--text-faint); */
+  text-decoration-color: var(--tab-color);
+
+  color: var(--tab-color);
+  text-decoration-thickness: 2px;
+  line-height: 1.6;
+  text-underline-offset: 4px;
+
+}
+
+ 
+/* 添加彩色点 by 熊猫 2023-12-27_00:26:41 */
+.folder-note-dot .nav-folder .nav-folder-title-content
+{
+  width: 100%
+}
+.folder-note-dot .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title, .workspace-leaf-content[data-type="file-explorer"] .tree-item-self.is-clickable.nav-folder-title {
+
+  padding: var(--nav-item-parent-padding);
+}
+
+.folder-note-dot .workspace-leaf-content>.nav-files-container>div>.tree-item.nav-folder .nav-folder-title:after {
+  color: var(--tab-color);
+  content: "⬤";
+  position: relative;
+  margin-left: 10px;
+  top: 0px;
+  right: 0.3rem ;
+  opacity: 0.7;
+}
+
 
 body.remove-arrow:not(.default-icons):not(.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked) .nav-folder-collapse-indicator::before {
   display: none;
@@ -28452,7 +28494,7 @@ body.hide-titlebar-close-btn.hide-left-ribbon-retention-drawer.view-button-front
   left: 30px;
 }
 
-body.view-button-front .view-header {
+body.view-button-front:not(.tab-title-bar-position) .view-header {
   padding-left: 32px !important;
 }
 body.hide-titlebar-close-btn.hide-left-ribbon.is-hidden-frameless .titlebar-button.mod-logo {
@@ -29026,7 +29068,11 @@ body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .n
   border: 1px solid color-mix(in srgb, var(--tab-color) 30%, var(--background-secondary));
   margin: 5px 4px 5px 0;
   border-radius: 3px;
-  border-left: 2px solid var(--tab-color);
+  border-left: 3px solid var(--tab-color);
+}
+body.theme-dark.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .nav-files-container>div>.tree-item.nav-folder {
+  border: 1px solid color-mix(in srgb, var(--tab-color) 15%, var(--background-secondary));
+  border-left: 3px solid var(--tab-color);
 }
 body.is-mobile.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .nav-files-container>div>.tree-item.nav-folder {
   border: 1px solid   var(--background-modifier-border);
@@ -29075,11 +29121,14 @@ body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .n
   width: 13px;
   height: 20px;
   position: absolute;
-  margin-left: -36px;
+  margin-left: -37px;
   border-radius: 3px 0px 0px 3px;
   background-color: var(--tab-color);
 }
   
+
+
+
 body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .nav-files-container>div>.tree-item.nav-folder:nth-child(20n+2)::before,
 body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .nav-files-container>div>.tree-item.nav-folder:nth-child(20n+2) {
   --tab-color: var(--Fold0);
