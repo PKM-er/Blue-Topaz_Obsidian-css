@@ -14102,51 +14102,66 @@ body.table-style-three .markdown-source-view table tbody>tr {
 
 /*Full-width table dvtable callout backlinks layout*/
 /*modified from https://github.com/efemkay */
- .markdown-source-view.mod-cm6.is-readable-line-width.fullwidth .cm-sizer,
-:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
-:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
-:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer,
-:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div,
-:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content,
-:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content .cm-table-widge {
+.markdown-source-view.mod-cm6.is-readable-line-width.fullwidth .cm-sizer,
+.markdown-source-view.mod-cm6.is-readable-line-width.fullwidth .cm-line,
+.markdown-source-view.mod-cm6.fullwidth.is-readable-line-width:not(.is-rtl) .cm-contentContainer,
+.markdown-source-view.mod-cm6.fullwidth .cm-contentContainer,
+.markdown-source-view.mod-cm6.fullwidth .cm-contentContainer > div,
+.markdown-source-view.mod-cm6.fullwidth .cm-contentContainer > div.cm-content {
   max-width: 100%;
-  /* width: 100%;  ob1.0*/
+  
 }
+ 
 
+
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6 .cm-contentContainer,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6 .cm-contentContainer > div,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6 .cm-contentContainer > div.cm-content,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6 .cm-contentContainer > div.cm-content .cm-table-widge
+{
+  max-width: 100%;
+ 
+}
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer,
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div {
-  max-width: 100%;
+  
   margin-inline: auto;
   width: 100%;
 }
 
 /*	Editing View -- set all divs back to normal width (ensuring specificity rule over some theme), then	expand to full-width for each selected css class */
-:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) div.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div,
-:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  div.markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > .cm-line {
-  max-width: 100%;
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) div.markdown-source-view.mod-cm6 .cm-contentContainer > div > div,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  div.markdown-source-view.mod-cm6 .cm-contentContainer > div > .cm-line {
+  max-width: var(--file-line-width);
   margin-inline: auto !important;
 } /* important for margin needed because app.css:2842 use it */
 
-body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block:not(.admonition-parent),
-body.full-width-table .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div:is(.HyperMD-table-row, .cm-table-widget),
-body.full-width-callout .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div:is(.cm-callout,.admonition-parent),
-body.full-width-backlinks .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div:is(.embedded-backlinks) > div {
+body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer > div > div.cm-preview-code-block:not(.admonition-parent),
+body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer > div > div.cm-preview-code-block>.block-language-dataviewjs ,
+body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer > div > div.cm-preview-code-block>.block-language-dataview ,
+body.full-width-table .markdown-source-view.mod-cm6 .cm-contentContainer > div > div:is(.HyperMD-table-row, .cm-table-widget),
+body.full-width-callout .markdown-source-view.mod-cm6 .cm-contentContainer > div > div:is(.cm-callout,.admonition-parent),
+body.full-width-backlinks .markdown-source-view.mod-cm6 .cm-contentContainer > div:is(.embedded-backlinks) > div {
   max-width: 100%;
 }
 
-body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block>div[class^="block-language"]:not(.block-language-dataview) {
-  max-width: 100%;
+body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer > div > div.cm-preview-code-block>div[class^="block-language"]:not([class^="block-language-dataview"])
+{
+  max-width: var(--file-line-width);
   margin-inline: auto;
 }
 
 /*	Reading View -- similar to Editing View, set all divs to normal-width and then selected divs to full-width,
 		however, for Reading View, wide-dataview and wide-table will require Contextual Typography plugin */
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)	div.markdown-preview-view:not(.fullwidth) .markdown-preview-sizer.markdown-preview-sizer > div:not(.obsidian-banner-wrapper) {
-  max-width: 100%;
+  max-width: var(--file-line-width);
   margin-inline: auto;
 }
-
-
+body.full-width-dvtable .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div[data-block-language="dataview"],
+body.full-width-dvtable .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div[data-block-language="dataviewjs"],
+body.full-width-dvtable .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-lang-dataviewjs),
 body.full-width-dvtable .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-lang-dataview),
 body.full-width-table .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is(.el-table),
 body.full-width-callout .markdown-preview-view .markdown-preview-sizer.markdown-preview-sizer > div:is([data-callout],.admonition-parent),
@@ -14158,10 +14173,10 @@ body.full-width-backlinks .markdown-preview-view .markdown-preview-sizer.markdow
 /*modified from https://github.com/efemkay */
 
 /*	Editing View -- set Readable Line Length (RLL) to wide (100%) for any css class with "wide" word in it. / "width:100%" added for Blue Topaz / div.cm-content added to override Mado 11 */
-div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer,
-div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div,
-div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content,
-div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div.cm-content .cm-table-widget {
+div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer,
+div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer > div,
+div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer > div.cm-content,
+div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer > div.cm-content .cm-table-widget {
   max-width: 100%;
   /* width: 100%;  ob1.0*/
 }
@@ -14176,19 +14191,19 @@ div[class*="wide-"].markdown-preview-view .markdown-preview-sizer.markdown-previ
 
 /* === Wide Dataview, Table & Backlink === */
 /*	Editing View -- set all divs back to normal width (ensuring specificity rule over some theme), then expand to full-width for each selected css class (i.e. wide-dataview, wide-table and wide-backlinks) */
-div.markdown-source-view.mod-cm6:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .cm-contentContainer.cm-contentContainer > div > div,
-div.markdown-source-view.mod-cm6:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .cm-contentContainer.cm-contentContainer > div > .cm-line {
+div.markdown-source-view.mod-cm6:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .cm-contentContainer > div > div,
+div.markdown-source-view.mod-cm6:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .cm-contentContainer > div > .cm-line {
   max-width: var(--file-line-width);
   margin-inline: auto !important;
 } /* important for margin needed because app.css:2842 use it */
-div[class*="-dataview"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block:not(.admonition-parent),
-div[class*="-table"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div:is(.HyperMD-table-row, .cm-table-widget),
-div[class*="-callout"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div:is(.cm-callout,.admonition-parent),
-div[class*="-backlinks"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div:is(.embedded-backlinks) > div {
+div[class*="-dataview"].markdown-source-view.mod-cm6 .cm-contentContainer > div > div.cm-preview-code-block:not(.admonition-parent),
+div[class*="-table"].markdown-source-view.mod-cm6 .cm-contentContainer > div > div:is(.HyperMD-table-row, .cm-table-widget),
+div[class*="-callout"].markdown-source-view.mod-cm6 .cm-contentContainer > div > div:is(.cm-callout,.admonition-parent),
+div[class*="-backlinks"].markdown-source-view.mod-cm6 .cm-contentContainer > div:is(.embedded-backlinks) > div {
   max-width: 100%;
 }
 
-div[class*="-dataview"].markdown-source-view.mod-cm6 .cm-contentContainer.cm-contentContainer > div > div.cm-preview-code-block>div[class^="block-language"]:not(.block-language-dataview) {
+div[class*="-dataview"].markdown-source-view.mod-cm6 .cm-contentContainer > div > div.cm-preview-code-block>div[class^="block-language"]:not(.block-language-dataview) {
   max-width: var(--file-line-width);
   margin-inline: auto;
 }
