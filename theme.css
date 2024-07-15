@@ -15212,6 +15212,8 @@ body:not(.default-icons) :is(h1,h2) .heading-collapse-indicator.collapse-indicat
 }
 
 body:not(.default-icons) .heading-collapse-indicator.collapse-indicator::before {
+  width: 1.5em;
+  height: 1.5em;
   content: "↓";
   position: absolute;
   font-size: 15px;
