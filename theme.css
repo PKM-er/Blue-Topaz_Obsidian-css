@@ -11880,11 +11880,14 @@ body.extend-checkbox-list li[data-task="*"]>p>input:checked {
 body.circular-checkbox input[type=checkbox] {
   border-radius: 50%;
 }
-
+.cm-active.HyperMD-quote.cm-line:not(.HyperMD-callout) .cm-quote
+{
+  margin-left: 15px;
+}
 /* headers */
 /*编辑状态是否显示H1 H2标记*/
 /*适配Live preview模式*/
-body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header):not(.cm-hashtag):not(.cm-inline-code):not(.cm-highlight).cm-header::before {
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header::before {
   font-size: 0.6rem;
   width: auto;
   margin-right: 1px;
@@ -12221,6 +12224,10 @@ body.retain-header-color .cm-s-obsidian .cm-header.cm-header-6[class*="cm-strong
 /* adapted from Obsidian-Typora-Vue https://github.com/ZekunC/Obsidian-Typora-Vue-Theme */
 :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6) {
   position: relative;
+}
+body:not(.remove-heading-indicator).is-mobile :is(.markdown-preview-view,.markdown-rendered) :is(h1,h2,h3,h4,h5,h6):hover::before {
+
+  margin-left: -20px;
 }
 body:not(.remove-heading-indicator) :is(.markdown-preview-view,.markdown-rendered) h1:hover::before {
   content: 'H1';
@@ -15192,19 +15199,19 @@ body:not(.default-icons) .workspace-leaf .search-result-container.mod-global-sea
   color: var(--text-faint);
 } 
 
-body:not(.default-icons) div.heading-collapse-indicator.collapse-indicator {
+body:not(.default-icons) .heading-collapse-indicator.collapse-indicator  {
   position: absolute;
   margin: 15px 0 0 -20px;
   padding: 0;
   transition: transform 20ms linear 0s;
 }
 
-body:not(.default-icons) :is(h1,h2) div.heading-collapse-indicator.collapse-indicator {
+body:not(.default-icons) :is(h1,h2) .heading-collapse-indicator.collapse-indicator  {
   position: absolute;
   transition: transform 20ms linear 0s;
 }
 
-body:not(.default-icons) div.heading-collapse-indicator.collapse-indicator::before {
+body:not(.default-icons) .heading-collapse-indicator.collapse-indicator::before {
   content: "↓";
   position: absolute;
   font-size: 15px;
@@ -15219,12 +15226,12 @@ body:not(.default-icons) .heading-collapse-indicator.collapse-indicator.collapse
   display: none;
 }
 
-body:not(.default-icons) div.is-collapsed div.heading-collapse-indicator.collapse-indicator {
+body:not(.default-icons) div.is-collapsed .heading-collapse-indicator.collapse-indicator  {
   transform: translateX(7px) translateY(7px) rotate(-90deg);
 }
 
-body:not(.default-icons) div.is-collapsed div.heading-collapse-indicator.collapse-indicator::before,
-body:not(.default-icons) :is(h1,h2,h3,h4,h5,h6):hover div.heading-collapse-indicator.collapse-indicator::before {
+body:not(.default-icons) div.is-collapsed .heading-collapse-indicator.collapse-indicator::before,
+body:not(.default-icons) :is(h1,h2,h3,h4,h5,h6):hover .heading-collapse-indicator.collapse-indicator::before {
   opacity: 1;
 }
 
@@ -19349,15 +19356,15 @@ body:not(.folder-icons) .setting-item[data-id="remove-first-folder-icon"]  {
   margin-right: -25px;
 }
 
-body:not(.default-icons) :is(.markdown-preview-view,.markdown-rendered).rtl div.heading-collapse-indicator.collapse-indicator {
+body:not(.default-icons) :is(.markdown-preview-view,.markdown-rendered).rtl .heading-collapse-indicator.collapse-indicator  {
   position: absolute;
   right: -33px;
   padding-left: 0;
   transition: transform 20ms linear 0s;
 }
 
-body:not(.default-icons) :is(.markdown-preview-view,.markdown-rendered).rtl h1 div.heading-collapse-indicator.collapse-indicator,
-body:not(.default-icons) :is(.markdown-preview-view,.markdown-rendered).rtl h2 div.heading-collapse-indicator.collapse-indicator {
+body:not(.default-icons) :is(.markdown-preview-view,.markdown-rendered).rtl h1 .heading-collapse-indicator.collapse-indicator ,
+body:not(.default-icons) :is(.markdown-preview-view,.markdown-rendered).rtl h2 .heading-collapse-indicator.collapse-indicator  {
   position: absolute;
   right: -32px;
   padding-left: 0;
@@ -19365,13 +19372,13 @@ body:not(.default-icons) :is(.markdown-preview-view,.markdown-rendered).rtl h2 d
   transition: transform 20ms linear 0s;
 }
 
-body:not(.default-icons) :is(.markdown-preview-view,.markdown-rendered).rtl div.is-collapsed h1 div.heading-collapse-indicator.collapse-indicator,
-body:not(.default-icons) :is(.markdown-preview-view,.markdown-rendered).rtl div.is-collapsed h2 div.heading-collapse-indicator.collapse-indicator {
+body:not(.default-icons) :is(.markdown-preview-view,.markdown-rendered).rtl div.is-collapsed h1 .heading-collapse-indicator.collapse-indicator ,
+body:not(.default-icons) :is(.markdown-preview-view,.markdown-rendered).rtl div.is-collapsed h2 .heading-collapse-indicator.collapse-indicator  {
   transform: translateX(-9px) translateY(18px) rotate(90deg);
   opacity: 0.5;
 }
 
-body:not(.default-icons) :is(.markdown-preview-view,.markdown-rendered).rtl div.is-collapsed div.heading-collapse-indicator.collapse-indicator {
+body:not(.default-icons) :is(.markdown-preview-view,.markdown-rendered).rtl div.is-collapsed .heading-collapse-indicator.collapse-indicator  {
   transform: translateX(-2px) translateY(25px) rotate(90deg);
   opacity: 0.5;
 }
@@ -20897,9 +20904,9 @@ body span[alt*="+grid"] {
 /*===================================================*/
 /*==================   MOBILE   =====================*/
 /*===================================================*/
-.is-mobile :is(.markdown-preview-view,.markdown-rendered) {
+/* .is-mobile :is(.markdown-preview-view,.markdown-rendered) {
   padding: 0 18px 0 21px;
-}
+} */
 
 /* .is-mobile :is(.markdown-preview-view,.markdown-rendered) ol:not(.contains-task-list)>li:not(.task-list-item),
 .is-mobile .markdown-preview-view:not(.kanban) ul>li:not(.task-list-item) {
@@ -20907,19 +20914,19 @@ body span[alt*="+grid"] {
 } */
 
 /*collapse allows*/
-body:not(.default-icons).is-mobile h1 div.heading-collapse-indicator.collapse-indicator,
-body:not(.default-icons).is-mobile h2 div.heading-collapse-indicator.collapse-indicator,
-body:not(.default-icons).is-mobile div.heading-collapse-indicator.collapse-indicator {
+body:not(.default-icons).is-mobile h1 .heading-collapse-indicator.collapse-indicator ,
+body:not(.default-icons).is-mobile h2 .heading-collapse-indicator.collapse-indicator ,
+body:not(.default-icons).is-mobile .heading-collapse-indicator.collapse-indicator  {
   padding-left: 2px;
 }
 
-body:not(.default-icons).is-mobile div.is-collapsed div.heading-collapse-indicator.collapse-indicator {
-  transform: translateX(-11px) translateY(16px) rotate(-90deg);
+body:not(.default-icons).is-mobile div.is-collapsed .heading-collapse-indicator.collapse-indicator  {
+  transform: translateX(10px) translateY(6px) rotate(-90deg)
 }
 
-body:not(.default-icons).is-mobile div.is-collapsed h1 div.heading-collapse-indicator.collapse-indicator,
-body:not(.default-icons).is-mobile div.is-collapsed h2 div.heading-collapse-indicator.collapse-indicator {
-  transform: translateX(-2px) translateY(6px) rotate(-90deg);
+body:not(.default-icons).is-mobile div.is-collapsed h1 .heading-collapse-indicator.collapse-indicator ,
+body:not(.default-icons).is-mobile div.is-collapsed h2 .heading-collapse-indicator.collapse-indicator  {
+  transform: translateX(10px) translateY(6px) rotate(-90deg)
 }
 
 /*main body*/
@@ -24188,9 +24195,9 @@ body.background-settings-workplace-background-image .workspace::before {
   display: block;
   position: absolute;
   top: -37px;
-  right: -15px;
+  right: 0px;
   bottom: 0;
-  left: -15px;
+  left: 0px;
 }
 
 /*
@@ -29239,11 +29246,13 @@ body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-like
   --tab-color: var(--FoldI);
 }
   
+
+
 body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .nav-files-container>div>.tree-item.nav-folder:nth-child(20n+1)::before,
-body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .nav-files-container>div>.tree-item.nav-folder:nth-child(20n+1) {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .nav-files-container>div>.tree-item.nav-folder:nth-child(20n+1) {
   --tab-color: var(--FoldJ);
 }
-
+  
 body.remove-first-folder-icon .nav-files-container>div>.tree-item.nav-folder>.tree-item-self.is-clickable.nav-folder-title .nav-folder-title-content::before
 {
   display: none;
