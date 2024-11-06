@@ -8,8 +8,8 @@ Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/
 
 */
 
-/*蓝色托帕石，适合Obsidian v1.5.0。uid [20240417] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.5.0, uid [20240417] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.5.0。uid [20241106] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.5.0, uid [20241106] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /*
 MIT License
@@ -3380,8 +3380,9 @@ settings:
   -
     id: enable-alternative-checkboxes
     title: Enable Alternative Checkboxes
-    title.zh:
+    title.zh: 启用扩展勾选框样式
     description: Disable this if you are using your own implementation via a CSS Snippet.
+    description.zh: 如果启用第三方勾选框样式片段请禁用此选项
     default: true
     type: class-toggle
   -
@@ -3415,12 +3416,6 @@ settings:
     id: unmute-checkbox-animation
     title: Deactivate checkbox animation
     title.zh: 取消勾选框摇摆动画
-    type: class-toggle
-    default: false
-  -
-    id: extend-checkbox-list
-    title: Extend checkbox list (unavailable)
-    title.zh: 扩充勾选框类型 (不可用)
     type: class-toggle
     default: false
   -
@@ -11164,13 +11159,14 @@ body.toggle-left-aligned-content :is(.markdown-preview-view,.markdown-rendered).
 }
 
 
-body.text-indentation-two-em .workspace-leaf-content[data-type="markdown"] .markdown-source-view.mod-cm6 div.cm-line:not(:is(.hr,.HyperMD-header,.HyperMD-quote,.HyperMD-list-line)),
-.markdown-source-view.mod-cm6.indent div.cm-line:not(:is(.hr,.HyperMD-header,.HyperMD-quote,.HyperMD-list-line)) {
+
+body.text-indentation-two-em .workspace-leaf-content[data-type="markdown"] .markdown-source-view.mod-cm6 div.cm-line:not(:is(.hr,.HyperMD-header,.HyperMD-quote,.HyperMD-list-line,.HyperMD-codeblock)),
+.markdown-source-view.mod-cm6.indent div.cm-line:not(:is(.hr,.HyperMD-header,.HyperMD-quote,.HyperMD-list-line,.HyperMD-codeblock)) {
   text-indent: 2em;
 }
 
-body.text-indentation-two-em  .workspace-leaf-content[data-type="markdown"]  .markdown-source-view.mod-cm6 div.cm-line:not(:is(.hr,.HyperMD-header,.HyperMD-quote,.HyperMD-list-line)) .cm-hmd-frontmatter:first-of-type,
-.markdown-source-view.mod-cm6.indent div.cm-line:not(:is(.hr,.HyperMD-header,.HyperMD-quote,.HyperMD-list-line)) .cm-hmd-frontmatter:first-of-type {
+body.text-indentation-two-em  .workspace-leaf-content[data-type="markdown"]  .markdown-source-view.mod-cm6 div.cm-line:not(:is(.hr,.HyperMD-header,.HyperMD-quote,.HyperMD-list-line,.HyperMD-codeblock)) .cm-hmd-frontmatter:first-of-type,
+.markdown-source-view.mod-cm6.indent div.cm-line:not(:is(.hr,.HyperMD-header,.HyperMD-quote,.HyperMD-list-line,.HyperMD-codeblock)) .cm-hmd-frontmatter:first-of-type {
   margin-left: -2em;
 }
 body.text-indentation-two-em .markdown-source-view.mod-cm6 div.has-banner.cm-line:not(.HyperMD-header) .cm-def.cm-hmd-frontmatter,
@@ -11795,73 +11791,60 @@ body.enable-alternative-checkboxes .markdown-source-view.mod-cm6 .HyperMD-task-l
   text-decoration: line-through !important;
 }
 
-body.enable-alternative-checkboxes.extend-checkbox-list input[data-task="“"]:checked,
-body.enable-alternative-checkboxes.extend-checkbox-list li[data-task="“"]>input:checked,
-body.enable-alternative-checkboxes.extend-checkbox-list li[data-task="“"]>p>input:checked {
+body.enable-alternative-checkboxes input[data-task="“"]:checked,
+body.enable-alternative-checkboxes li[data-task="“"]>input:checked,
+body.enable-alternative-checkboxes li[data-task="“"]>p>input:checked {
   background-color: transparent;
   background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(47, 167, 188);transform: ;msFilter:;"><path d="M3.691 6.292C5.094 4.771 7.217 4 10 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 6.925 10H10a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2H3a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789zM20 20h-6a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789C16.094 4.771 18.217 4 21 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 17.925 10H21a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2z"></path></svg>');
 }
 
-body.enable-alternative-checkboxes.extend-checkbox-list input[data-task="…"]:checked,
-body.enable-alternative-checkboxes.extend-checkbox-list li[data-task="…"]>input:checked,
-body.enable-alternative-checkboxes.extend-checkbox-list li[data-task="…"]>p>input:checked {
+body.enable-alternative-checkboxes input[data-task="…"]:checked,
+body.enable-alternative-checkboxes li[data-task="…"]>input:checked,
+body.enable-alternative-checkboxes li[data-task="…"]>p>input:checked {
   background-color: transparent;
   background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(128, 128, 128);transform: ;msFilter:;"><path d="M10 10h4v4h-4zm6 0h4v4h-4zM4 10h4v4H4z"></path></svg>');
 }
 
-body.enable-alternative-checkboxes.extend-checkbox-list input[data-task="/"]:checked,
-body.enable-alternative-checkboxes.extend-checkbox-list li[data-task="/"]>input:checked,
-body.enable-alternative-checkboxes.extend-checkbox-list li[data-task="/"]>p>input:checked {
+body.enable-alternative-checkboxes input[data-task="/"]:checked,
+body.enable-alternative-checkboxes li[data-task="/"]>input:checked,
+body.enable-alternative-checkboxes li[data-task="/"]>p>input:checked {
   background-color: transparent;
   background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="rgb(213, 155, 48)"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zm2-15.86c1.03.13 2 .45 2.87.93H13v-.93zM13 7h5.24c.25.31.48.65.68 1H13V7zm0 3h6.74c.08.33.15.66.19 1H13v-1zm0 9.93V19h2.87c-.87.48-1.84.8-2.87.93zM18.24 17H13v-1h5.92c-.2.35-.43.69-.68 1zm1.5-3H13v-1h6.93c-.04.34-.11.67-.19 1z"/></svg>');
 }
 
-body.enable-alternative-checkboxes.extend-checkbox-list input[data-task="."]:checked,
-body.enable-alternative-checkboxes.extend-checkbox-list li[data-task="."]>input:checked,
-body.enable-alternative-checkboxes.extend-checkbox-list li[data-task="."]>p>input:checked {
+body.enable-alternative-checkboxes input[data-task="."]:checked,
+body.enable-alternative-checkboxes li[data-task="."]>input:checked,
+body.enable-alternative-checkboxes li[data-task="."]>p>input:checked {
   background-color: transparent;
   background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="rgb(115, 115, 115)"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3-8c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3z"/></svg>');
 }
 
-body.enable-alternative-checkboxes.extend-checkbox-list input[data-task="d"]:checked,
-body.enable-alternative-checkboxes.extend-checkbox-list li[data-task="d"]>input:checked,
-body.enable-alternative-checkboxes.extend-checkbox-list li[data-task="d"]>p>input:checked {
-  background-color: transparent;
-  background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(159, 84, 212);transform: ;msFilter:;"><path d="m14 9.586-4 4-6.293-6.293-1.414 1.414L10 16.414l4-4 4.293 4.293L16 19h6v-6l-2.293 2.293z"></path></svg>');
-}
-
-body.enable-alternative-checkboxes.extend-checkbox-list input[data-task="u"]:checked,
-body.enable-alternative-checkboxes.extend-checkbox-list li[data-task="u"]>input:checked,
-body.enable-alternative-checkboxes.extend-checkbox-list li[data-task="u"]>p>input:checked {
-  background-color: transparent;
-  background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(32, 101, 248);transform: ;msFilter:;"><path d="m10 10.414 4 4 5.707-5.707L22 11V5h-6l2.293 2.293L14 11.586l-4-4-7.707 7.707 1.414 1.414z"></path></svg>');
-}
 
 
-body.enable-alternative-checkboxes.extend-checkbox-list input[data-task="A"]:checked,
-body.enable-alternative-checkboxes.extend-checkbox-list li[data-task="A"]>input:checked,
-body.enable-alternative-checkboxes.extend-checkbox-list li[data-task="A"]>p>input:checked {
+body.enable-alternative-checkboxes input[data-task="A"]:checked,
+body.enable-alternative-checkboxes li[data-task="A"]>input:checked,
+body.enable-alternative-checkboxes li[data-task="A"]>p>input:checked {
   background-color: transparent;
   background-image: url('data:image/svg+xml; utf8, <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" overflow="hidden"><defs><clipPath id="clip0"><rect x="1066" y="514" width="16" height="16"/></clipPath></defs><g clip-path="url(#clip0)" transform="translate(-1066 -514)"><rect x="1066" y="514" width="16.0001" height="16.0002"/></g></svg>');
 }
 
-body.enable-alternative-checkboxes.extend-checkbox-list input[data-task="D"]:checked,
-body.enable-alternative-checkboxes.extend-checkbox-list li[data-task="D"]>input:checked,
-body.enable-alternative-checkboxes.extend-checkbox-list li[data-task="D"]>p>input:checked {
+body.enable-alternative-checkboxes input[data-task="D"]:checked,
+body.enable-alternative-checkboxes li[data-task="D"]>input:checked,
+body.enable-alternative-checkboxes li[data-task="D"]>p>input:checked {
   background-color: transparent;
   background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgb(218, 78, 78)"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"/></svg>');
 }
 
-body.enable-alternative-checkboxes.extend-checkbox-list input:is([data-task="￥"],[data-task="$"]):checked,
-body.enable-alternative-checkboxes.extend-checkbox-list li:is([data-task="￥"],[data-task="$"])>input:checked,
-body.enable-alternative-checkboxes.extend-checkbox-list li:is([data-task="￥"],[data-task="$"])>p>input:checked {
+body.enable-alternative-checkboxes input:is([data-task="￥"],[data-task="$"]):checked,
+body.enable-alternative-checkboxes li:is([data-task="￥"],[data-task="$"])>input:checked,
+body.enable-alternative-checkboxes li:is([data-task="￥"],[data-task="$"])>p>input:checked {
   background-color: transparent;
   background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(57, 211, 49);transform: ;msFilter:;"><path d="M12 6C7.03 6 2 7.546 2 10.5v4C2 17.454 7.03 19 12 19s10-1.546 10-4.5v-4C22 7.546 16.97 6 12 6zm-8 8.5v-1.197a9.989 9.989 0 0 0 2 .86v1.881c-1.312-.514-2-1.126-2-1.544zm12 .148v1.971c-.867.179-1.867.31-3 .358v-2a21.75 21.75 0 0 0 3-.329zm-5 2.33a18.788 18.788 0 0 1-3-.358v-1.971c.959.174 1.972.287 3 .33v1.999zm7-.934v-1.881a9.931 9.931 0 0 0 2-.86V14.5c0 .418-.687 1.03-2 1.544zM12 13c-5.177 0-8-1.651-8-2.5S6.823 8 12 8s8 1.651 8 2.5-2.823 2.5-8 2.5z"></path></svg>');
 }
 
-body.enable-alternative-checkboxes.extend-checkbox-list input[data-task="*"]:checked,
-body.enable-alternative-checkboxes.extend-checkbox-list li[data-task="*"]>input:checked,
-body.enable-alternative-checkboxes.extend-checkbox-list li[data-task="*"]>p>input:checked {
+body.enable-alternative-checkboxes input[data-task="*"]:checked,
+body.enable-alternative-checkboxes li[data-task="*"]>input:checked,
+body.enable-alternative-checkboxes li[data-task="*"]>p>input:checked {
   background-color: transparent;
   background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgb(218, 192, 22)"><path d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"></path></svg>');
 }
@@ -11888,10 +11871,7 @@ body.enable-alternative-checkboxes.extend-checkbox-list li[data-task="*"]>p>inpu
 body.circular-checkbox input[type=checkbox] {
   border-radius: 50%;
 }
-.cm-active.HyperMD-quote.cm-line:not(.HyperMD-callout) .cm-quote
-{
-  margin-left: 15px;
-}
+ 
 /* headers */
 /*编辑状态是否显示H1 H2标记*/
 /*适配Live preview模式*/
@@ -22144,8 +22124,12 @@ body.folder-icons .nav-folder-children .nav-folder.is-collapsed .nav-folder-titl
   right: 0.3rem ;
   opacity: 0.7;
 }
-
-
+body.remove-arrow .tree-item-self {
+  --icon-opacity:0;
+}
+body.remove-arrow .tree-item-self .tree-item-icon {
+  --icon-opacity:0;
+}
 body.remove-arrow:not(.default-icons):not(.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked) .nav-folder-collapse-indicator::before {
   display: none;
 }
@@ -23534,10 +23518,13 @@ body.bt-toggle-colorful-folder.folder-style-change-options-colorful-border.folde
 /* ===folder-style-change-options-colorful-tab-liked============ */
  
 body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked.folder-colorful-custom .nav-files-container>div>.tree-item.nav-folder {
-  border: 1px solid color-mix(in srgb, var(--folder-colorful-custom-color) 30%, var(--background-secondary));
+  border: none;
+  
   border-left: 2px solid var(--folder-colorful-custom-color);
   filter: var(--tab-color)  ;
- 
+  @supports (border: 1px solid color-mix(in srgb, var(--folder-colorful-custom-color) 30%, var(--background-secondary))) {
+    border: 1px solid color-mix(in srgb, var(--folder-colorful-custom-color) 30%, var(--background-secondary));
+  }
 }
  
 
@@ -29103,7 +29090,11 @@ body.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .n
   border-left: 3px solid var(--tab-color);
 }
 body.theme-dark.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .nav-files-container>div>.tree-item.nav-folder {
-  border: 1px solid color-mix(in srgb, var(--tab-color) 15%, var(--background-secondary));
+  border: none;
+    /* 支持 color-mix 的浏览器使用 color-mix */
+    @supports (border: 1px solid color-mix(in srgb, var(--tab-color) 15%, var(--background-secondary))) {
+      border: 1px solid color-mix(in srgb, var(--tab-color) 15%, var(--background-secondary));
+    }
   border-left: 3px solid var(--tab-color);
 }
 body.is-mobile.bt-toggle-colorful-folder.folder-style-change-options-colorful-tab-liked .nav-files-container>div>.tree-item.nav-folder {
@@ -29112,6 +29103,7 @@ body.is-mobile.bt-toggle-colorful-folder.folder-style-change-options-colorful-ta
 }
 body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border):not(.is-grabbing) .tree-item.nav-folder.is-collapsed:hover {
   background-color: color-mix(in srgb, var(--tab-color) 30%, var(--background-secondary));
+ 
 }
 
 body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border):not(.is-grabbing) .tree-item.nav-folder.is-collapsed .tree-item-self.is-clickable.nav-folder-title:hover
