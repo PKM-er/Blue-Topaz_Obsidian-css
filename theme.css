@@ -8,8 +8,8 @@ Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/
 
 */
 
-/*蓝色托帕石，适合Obsidian v1.5.0。uid [20241106] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.5.0, uid [20241106] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.5.0。uid [2024121101] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.5.0, uid [2024121101] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /*
 MIT License
@@ -919,16 +919,6 @@ settings:
     title: Color of leaf resize handle
     title.zh: 页面大小调整条颜色
     description: --background-leaf-resize-handle
-    type: variable-themed-color
-    opacity: true
-    format: hex
-    default-light: '#'
-    default-dark: '#'
-  -
-    id: mjx-inline-math-color
-    title: Color of mathematical expressions (inline $x=0$)
-    title.zh: 数学表达式颜色(行内 $x=0$)
-    description: --mjx-inline-math-color
     type: variable-themed-color
     opacity: true
     format: hex
@@ -9595,7 +9585,9 @@ body:not(.bt-bubble-layout).color-scheme-options-simplicity-topaz.background-ima
   --background-secondary-bg-4-bt: var(--simple-tran);
   --tab-outline-color: var(--background-secondary);
 }
-
+body.color-scheme-options-simplicity-topaz.background-image-settings-switch.background-image-settings-markdown-page-transparent:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  background-color:var(--simple-white-2);
+}
 /*
 ---------------------------
 	Title Bar
@@ -14104,17 +14096,19 @@ body.table-style-three .markdown-source-view table tbody>tr {
 .markdown-source-view.mod-cm6.fullwidth .cm-contentContainer > div,
 .markdown-source-view.mod-cm6.fullwidth .cm-contentContainer > div.cm-content {
   max-width: 100%;
-  
 }
- 
-
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)   .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer .inline-title,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)   .markdown-source-view.mod-cm6.is-readable-line-width .metadata-container
+{
+  margin-left: calc((100% - var(--file-line-width)) / 2);
+}
 
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer,
-:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6 .cm-contentContainer,
-:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6 .cm-contentContainer > div,
-:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6 .cm-contentContainer > div.cm-content,
-:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6 .cm-contentContainer > div.cm-content .cm-table-widge
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div.cm-content,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div.cm-content .cm-table-widge
 {
   max-width: 100%;
  
@@ -14127,22 +14121,22 @@ body.table-style-three .markdown-source-view table tbody>tr {
 }
 
 /*	Editing View -- set all divs back to normal width (ensuring specificity rule over some theme), then	expand to full-width for each selected css class */
-:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) div.markdown-source-view.mod-cm6 .cm-contentContainer > div > div,
-:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  div.markdown-source-view.mod-cm6 .cm-contentContainer > div > .cm-line {
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) div.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div > div,
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)  div.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div > .cm-line {
   max-width: var(--file-line-width);
   margin-inline: auto !important;
 } /* important for margin needed because app.css:2842 use it */
 
-body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer > div > div.cm-preview-code-block:not(.admonition-parent),
-body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer > div > div.cm-preview-code-block>.block-language-dataviewjs ,
-body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer > div > div.cm-preview-code-block>.block-language-dataview ,
-body.full-width-table .markdown-source-view.mod-cm6 .cm-contentContainer > div > div:is(.HyperMD-table-row, .cm-table-widget),
-body.full-width-callout .markdown-source-view.mod-cm6 .cm-contentContainer > div > div:is(.cm-callout,.admonition-parent),
-body.full-width-backlinks .markdown-source-view.mod-cm6 .cm-contentContainer > div:is(.embedded-backlinks) > div {
+body.full-width-dvtable .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div > div.cm-preview-code-block:not(.admonition-parent),
+body.full-width-dvtable .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div > div.cm-preview-code-block>.block-language-dataviewjs ,
+body.full-width-dvtable .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div > div.cm-preview-code-block>.block-language-dataview ,
+body.full-width-table .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div > div:is(.HyperMD-table-row, .cm-table-widget),
+body.full-width-callout .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div > div:is(.cm-callout,.admonition-parent),
+body.full-width-backlinks .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div:is(.embedded-backlinks) > div {
   max-width: 100%;
 }
 
-body.full-width-dvtable .markdown-source-view.mod-cm6 .cm-contentContainer > div > div.cm-preview-code-block>div[class^="block-language"]:not([class^="block-language-dataview"])
+body.full-width-dvtable .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div > div.cm-preview-code-block>div[class^="block-language"]:not([class^="block-language-dataview"])
 {
   max-width: var(--file-line-width);
   margin-inline: auto;
@@ -14168,10 +14162,10 @@ body.full-width-backlinks .markdown-preview-view .markdown-preview-sizer.markdow
 /*modified from https://github.com/efemkay */
 
 /*	Editing View -- set Readable Line Length (RLL) to wide (100%) for any css class with "wide" word in it. / "width:100%" added for Blue Topaz / div.cm-content added to override Mado 11 */
-div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer,
-div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer > div,
-div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer > div.cm-content,
-div[class*="wide-"].markdown-source-view.mod-cm6 .cm-contentContainer > div.cm-content .cm-table-widget {
+div[class*="wide-"].markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer,
+div[class*="wide-"].markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div,
+div[class*="wide-"].markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div.cm-content,
+div[class*="wide-"].markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div.cm-content .cm-table-widget {
   max-width: 100%;
   /* width: 100%;  ob1.0*/
 }
@@ -14186,19 +14180,19 @@ div[class*="wide-"].markdown-preview-view .markdown-preview-sizer.markdown-previ
 
 /* === Wide Dataview, Table & Backlink === */
 /*	Editing View -- set all divs back to normal width (ensuring specificity rule over some theme), then expand to full-width for each selected css class (i.e. wide-dataview, wide-table and wide-backlinks) */
-div.markdown-source-view.mod-cm6:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .cm-contentContainer > div > div,
-div.markdown-source-view.mod-cm6:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .cm-contentContainer > div > .cm-line {
+div.markdown-source-view.mod-cm6.is-readable-line-width:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .cm-contentContainer > div > div,
+div.markdown-source-view.mod-cm6.is-readable-line-width:is(.wide-dataview,.wide-table,.wide-backlinks,.wide-callout) .cm-contentContainer > div > .cm-line {
   max-width: var(--file-line-width);
   margin-inline: auto !important;
 } /* important for margin needed because app.css:2842 use it */
-div[class*="-dataview"].markdown-source-view.mod-cm6 .cm-contentContainer > div > div.cm-preview-code-block:not(.admonition-parent),
-div[class*="-table"].markdown-source-view.mod-cm6 .cm-contentContainer > div > div:is(.HyperMD-table-row, .cm-table-widget),
-div[class*="-callout"].markdown-source-view.mod-cm6 .cm-contentContainer > div > div:is(.cm-callout,.admonition-parent),
-div[class*="-backlinks"].markdown-source-view.mod-cm6 .cm-contentContainer > div:is(.embedded-backlinks) > div {
+div[class*="-dataview"].markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div > div.cm-preview-code-block:not(.admonition-parent),
+div[class*="-table"].markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div > div:is(.HyperMD-table-row, .cm-table-widget),
+div[class*="-callout"].markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div > div:is(.cm-callout,.admonition-parent),
+div[class*="-backlinks"].markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div:is(.embedded-backlinks) > div {
   max-width: 100%;
 }
 
-div[class*="-dataview"].markdown-source-view.mod-cm6 .cm-contentContainer > div > div.cm-preview-code-block>div[class^="block-language"]:not(.block-language-dataview) {
+div[class*="-dataview"].markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer > div > div.cm-preview-code-block>div[class^="block-language"]:not(.block-language-dataview) {
   max-width: var(--file-line-width);
   margin-inline: auto;
 }
@@ -15225,12 +15219,12 @@ body:not(.default-icons) :is(h1,h2,h3,h4,h5,h6):hover .heading-collapse-indicato
   opacity: 1;
 }
 
-body:not(.default-icons) .outline .tree-item .collapse-icon {
+body:not(.default-icons) .workspace-leaf-content[data-type=outline]  .tree-item .collapse-icon {
   padding: 0;
   transition: transform 20ms linear 0s;
 }
 
-body:not(.default-icons) .outline .tree-item .collapse-icon::before {
+body:not(.default-icons) .workspace-leaf-content[data-type=outline]  .tree-item .collapse-icon::before {
   content: "↓";
   font-size: 1em;
   font-weight: bold;
@@ -15239,31 +15233,31 @@ body:not(.default-icons) .outline .tree-item .collapse-icon::before {
   transition: transform 10ms linear 0s;
 }
 
-body:not(.default-icons) .outline .tree-item .collapse-icon svg {
+body:not(.default-icons) .workspace-leaf-content[data-type=outline]  .tree-item .collapse-icon svg {
   display: none;
   color: var(--accent-strong);
   height: 7px;
   width: 7px;
 }
 
-body:not(.default-icons) .outline .tree-item.is-collapsed .collapse-icon::before {
+body:not(.default-icons) .workspace-leaf-content[data-type=outline]  .tree-item.is-collapsed .collapse-icon::before {
   transform: rotate(-90deg);
   opacity: 0.5;
 }
 
 /*vertical lines in outline page*/
-.outline .tree-item-children {
+.workspace-leaf-content[data-type=outline]  .tree-item-children {
   margin-left: 14px;
   border-left: 1px solid #94949433;
   border-radius: 0;
   transition: all 400ms ease-in-out;
 }
 
-body.default-icons .outline .tree-item-children {
+body.default-icons .workspace-leaf-content[data-type=outline]  .tree-item-children {
   margin-left: 12.5px;
 }
 
-.outline .tree-item-children:hover {
+.workspace-leaf-content[data-type=outline]  .tree-item-children:hover {
   border-left-color: var(--theme-color-translucent-04);
 }
 
@@ -15273,34 +15267,34 @@ body.default-icons .outline .tree-item-children {
   height: 1.45rem;
 }
 
-body.nowrap-outline .outline .tree-item-inner {
+body.nowrap-outline .workspace-leaf-content[data-type=outline]  .tree-item-inner {
   white-space: nowrap;
 }
 /*****from https://www.yuque.com/fanmofeng/obsidian/ioifq0 *******/
 
-body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .collapse-icon {
+body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .collapse-icon {
   padding-inline-end: var(--size-2-3);
 }
-body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .collapse-icon::before {
+body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .collapse-icon::before {
   content: "" !important;
 }
-body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item {
+body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .tree-item {
   position: relative;
 }
-body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self {
+body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .tree-item-self {
   position: relative;
   margin-bottom: 0;
   white-space: nowrap;
   margin-top: -1px; /* fix item gap */
 }
-body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-inner {
+body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .tree-item-self .tree-item-inner {
   padding-left: 4px;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: calc(var(--nav-item-size) * 1.8);
-  line-height: calc(var(--nav-item-size) * 1.8);
+  height: calc(var(--nav-item-size) * 1.5);
+  line-height: calc(var(--nav-item-size) * 1.5);
 }
-body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-inner::before {
+body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .tree-item-self .tree-item-inner::before {
   content: "";
   width: var(--size-4-1);
   height: var(--size-4-1);
@@ -15311,29 +15305,29 @@ body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-conte
   top: 50%;
   transform: translateY(-50%);
 }
-body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-icon ~ .tree-item-inner {
+body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .tree-item-self .tree-item-icon ~ .tree-item-inner {
   padding-left: 4px;
 }
-body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-icon ~ .tree-item-inner::before {
+body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .tree-item-self .tree-item-icon ~ .tree-item-inner::before {
   content: none;
 }
-body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item.is-collapsed .tree-item-icon::before {
+body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .tree-item.is-collapsed .tree-item-icon::before {
   box-shadow: 0 0 0 4px var(--background-modifier-hover);
 }
-body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item::after {
+body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .tree-item::after {
   content: "";
   width: 1.5px;
   position: absolute;
   background-color: transparent;
-  top: calc(calc(var(--nav-item-size) * 1.8) / 2 * -1);
+  top: calc(calc(var(--nav-item-size) * 1.5) / 2 * -1);
   left: -10px;
-  height: calc(100% - calc(var(--nav-item-size) * 1.8) + var(--size-4-8));
+  height: calc(100% - calc(var(--nav-item-size) * 1.5) + var(--size-4-8));
 }
-body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon {
+body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .tree-item-icon {
   cursor: pointer;
 }
-body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon::before {
-  margin-top: 50%;
+body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .tree-item-icon::before {
+
   width: var(--size-4-2);
   height: var(--size-4-2);
   background-color: hsla(var(--color-accent-hsl), 0.9);
@@ -15343,33 +15337,33 @@ body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-conte
   top: 50%;
   transform: translateY(-50%);
 }
-body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon svg {
+body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .tree-item-icon svg {
   display: block;
 }
-body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon svg path {
+body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .tree-item-icon svg path {
   display: none;
 }
-body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item:hover > .tree-item-children > .tree-item::after {
+body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .tree-item:hover > .tree-item-children > .tree-item::after {
   background-color: hsla(var(--color-accent-hsl), 0.9);
 }
-body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item:hover > .tree-item-self:hover + .tree-item-children .tree-item::after {
+body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .tree-item:hover > .tree-item-self:hover + .tree-item-children .tree-item::after {
   background-color: transparent;
 }
-body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item:hover > .tree-item-children > .tree-item:hover::after, body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item:hover > .tree-item-children > .tree-item:hover ~ .tree-item::after {
+body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .tree-item:hover > .tree-item-children > .tree-item:hover::after, body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .tree-item:hover > .tree-item-children > .tree-item:hover ~ .tree-item::after {
   background-color: transparent;
 }
-body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item:hover > .tree-item-children > .tree-item:hover::before {
+body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .tree-item:hover > .tree-item-children > .tree-item:hover::before {
   content: "";
   position: absolute;
-  top: calc(calc(var(--nav-item-size) * 1.8) / 2 * -1);
+  top: calc(calc(var(--nav-item-size) * 1.5) / 2 * -1);
   left: -10px;
-  bottom: calc(100% - (calc(var(--nav-item-size) * 1.8) + var(--size-4-2)) / 2 - 1px);
+  bottom: calc(100% - (calc(var(--nav-item-size) * 1.5) + var(--size-4-2)) / 2 - 1px);
   width: 16px;
   border-bottom-left-radius: var(--radius-m);
   border-bottom: 1.5px solid hsla(var(--color-accent-hsl), 0.9);
   border-left: 2px solid hsla(var(--color-accent-hsl), 0.9);
 }
-body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline :is(.tree-item-children, .tree-item-self .tree-item-self) {
+body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content :is(.tree-item-children, .tree-item-self .tree-item-self) {
   padding-left: 0;
   margin-left: var(--size-4-5);
   border-left: none;
