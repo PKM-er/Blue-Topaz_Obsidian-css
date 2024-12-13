@@ -25917,7 +25917,11 @@ body.border-callout-style .callout .callout-title {
   background-color: rgba(var(--callout-color), 0.4);
 }
 body.border-callout-style .callout .callout-content {
+  margin-bottom: 0px;
   background-color: rgba(var(--callout-color), 0.1);
+}
+body.border-callout-style .callout .callout-content p{
+  margin: 16px 0px; /*Fix the top margin is omitted, causing reading mode and live-preview is different. by LeCheena*/
 }
 .callout-title {
   background-color: rgba(var(--callout-color), 0.15);
