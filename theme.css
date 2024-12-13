@@ -25595,6 +25595,10 @@ a.tasks-edit {
   cursor: pointer;
 }
 
+a.tasks-edit:after {
+  content: none;
+}
+
 /* ================================== */
 /* ======= Hover editor======= */
 /* ================================== */
