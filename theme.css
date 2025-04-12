@@ -15914,6 +15914,7 @@ body.resizable-mermaid .mermaid {
   fill: var(--background-primary-alt) !important;
 }
 
+/*
 .mermaid .node:not([class*="id"]) rect:not([style*="fill"]):not([style*="stroke"]),
 .mermaid .node:not([class$="id"]) circle:not([style*="fill"]):not([style*="stroke"]),
 .mermaid .node:not([class$="id"]) ellipse:not([style*="fill"]):not([style*="stroke"]),
@@ -15921,6 +15922,7 @@ body.resizable-mermaid .mermaid {
 .mermaid .node:not([class$="id"]) path:not([style*="fill"]):not([style*="stroke"]) {
   fill: var(--background-primary) !important;
 }
+*/
 
 .mermaid .node .label {
   text-align: center !important;
