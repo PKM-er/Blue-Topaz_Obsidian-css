@@ -14970,7 +14970,7 @@ body:not(.image-zoom) .markdown-reading-view .callout-title-inner img {
   pointer-events: none;
 }
 body:not(.image-zoom).theme-dark .markdown-reading-view img:not([class*="emoji"]):active,
-.workspace-leaf-content[data-type="image"] img:active {
+body.theme-dark .workspace-leaf-content[data-type="image"] img:active {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><g fill="none" fill-rule="evenodd"><rect width="80" height="80" fill="%231A1A1A"/><g fill="%23333333"><rect width="2" height="79" x="78"/><rect width="1" height="19" x="19"/><rect width="1" height="19" x="39"/><rect width="1" height="19" x="59"/><rect width="1" height="19" x="19" y="20"/><rect width="1" height="19" x="39" y="20"/><rect width="1" height="19" x="59" y="20"/><rect width="1" height="19" x="19" y="40"/><rect width="1" height="19" x="39" y="40"/><rect width="1" height="19" x="59" y="40"/><rect width="1" height="19" x="19" y="60"/><rect width="1" height="19" x="39" y="60"/><rect width="1" height="19" x="59" y="60"/><rect width="79" height="1" y="19"/><rect width="79" height="1" y="39"/><rect width="79" height="1" y="59"/></g><rect width="80" height="2" y="78" fill="%23333333"/></g></svg>');
 }
 body:not(.image-zoom) .markdown-reading-view img:not([class*="emoji"]):active,
