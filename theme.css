@@ -15909,6 +15909,562 @@ pre.language-note-cloze::before {
 }
 
  
+/*======== optionnal mermaid style below ========*/
+.markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
+  overflow: auto;
+}
+
+body.resizable-mermaid .mermaid {
+  resize: both;
+  overflow: auto;
+  position: relative;
+}
+
+:is(.markdown-preview-section,.markdown-rendered) .mermaid,
+.markdown-source-view.mod-cm6 .cm-scroller .mermaid {
+  letter-spacing: 0;
+}
+
+.markdown-source-view.mod-cm6 .mermaid svg {
+  margin: 0 auto;
+  display: block;
+}
+
+.mermaid .label {
+  font-family: var(--mermaid-font-family) !important;
+}
+
+ 
+ 
+.mermaid .node .label {
+  text-align: center !important;
+}
+
+.mermaid .node.clickable {
+  cursor: pointer !important;
+}
+
+ 
+ 
+.mermaid .edgeLabel {
+  text-align: center !important;
+}
+
+.mermaid .edgeLabel rect {
+  opacity: 0 !important;
+}
+
+ 
+
+/* Sequence Diagram variables */
+.mermaid .actor {
+  stroke: var(--text-accent) !important;
+}
+
+.mermaid .actor-line {
+  stroke: var(--text-muted) !important;
+}
+
+.mermaid .messageLine0 {
+  stroke-dasharray: none !important;
+  stroke: var(--text-muted) !important;
+}
+
+.mermaid .messageLine1 {
+  stroke-dasharray: 2, 2 !important;
+  stroke: var(--text-muted) !important;
+}
+
+.mermaid #arrowhead path,
+.mermaid #crosshead path {
+  fill: var(--text-muted) !important;
+  stroke: var(--text-muted) !important;
+}
+
+
+.mermaid #sequencenumber,
+.mermaid .messageText {
+  fill: var(--text-muted) !important;
+}
+
+.mermaid .labelBox {
+  stroke: var(--text-accent) !important;
+  fill: var(--background-secondary-alt) !important;
+}
+
+.mermaid .labelText,
+.mermaid .labelText>tspan,
+.mermaid .loopText,
+.mermaid .loopText>tspan {
+  fill: var(--text-muted) !important;
+  stroke: none !important;
+}
+
+.mermaid .loopLine {
+  stroke-dasharray: 2, 2 !important;
+  stroke: var(--text-accent) !important;
+  fill: var(--text-accent) !important;
+}
+
+.mermaid .note {
+  fill: var(--mermaid-seq-dia-color) !important;
+}
+
+.mermaid .noteText,
+.mermaid .noteText>tspan {
+  stroke: none !important;
+}
+
+/* Gantt chart variables */
+.mermaid .activation0,
+.mermaid .activation1,
+.mermaid .activation2 {
+  fill: var(--background-secondary) !important;
+  stroke: var(--text-accent) !important;
+}
+
+/** Section styling */
+.mermaid .mermaid-main-font {
+  font-family: var(--mermaid-font-family) !important;
+}
+
+.mermaid .section {
+  stroke: none !important;
+  opacity: 0.3 !important;
+}
+
+ 
+
+.mermaid .section2 {
+  fill: var(--text-accent) !important;
+}
+
+.mermaid .section1,
+.mermaid .section3 {
+  fill: var(--text-muted) !important;
+  opacity: 0.15 !important;
+}
+
+
+
+.mermaid .sectionTitle {
+  text-anchor: start !important;
+  font-size: 15px !important;
+  font-weight: bold;
+  line-height: 14px !important;
+  font-family: var(--mermaid-font-family) !important;
+}
+
+/* Grid and axis */
+.mermaid .grid .tick {
+  stroke: var(--text-muted) !important;
+  opacity: 1 !important;
+  shape-rendering: crispEdges !important;
+}
+
+.mermaid .grid .tick text {
+  font-family: var(--mermaid-font-family) !important;
+  font-size: 13px;
+}
+
+.mermaid .grid path {
+  stroke-width: 0 !important;
+}
+
+/* Today line */
+.today {
+  fill: none !important;
+  stroke: var(--background-modifier-error) !important;
+  stroke-width: 2px !important;
+}
+
+/* Task styling */
+
+/* Default task */
+.task {
+  stroke-width: 0.5px !important;
+}
+
+.taskText:not([font-size]) {
+  font-size: 9px !important;
+}
+
+.taskTextOutsideRight {
+
+  text-anchor: start !important;
+  font-size: 12px !important;
+  font-family: var(--mermaid-font-family) !important;
+}
+
+.taskTextOutsideLeft {
+
+  text-anchor: end !important;
+  font-size: 9px !important;
+}
+
+/* Special case clickable */
+.task.clickable {
+  cursor: pointer !important;
+}
+
+.taskText.clickable {
+  cursor: pointer !important;
+  fill: var(--interactive-accent_hover) !important;
+  font-weight: bold !important;
+}
+
+.taskTextOutsideLeft.clickable {
+  cursor: pointer !important;
+  fill: var(--interactive-accent_hover) !important;
+  font-weight: bold !important;
+}
+
+.taskTextOutsideRight.clickable {
+  cursor: pointer !important;
+  fill: var(--interactive-accent_hover) !important;
+  font-weight: bold !important;
+}
+
+/* Specific task settings for the sections*/
+.taskText0,
+.taskText1,
+.taskText2,
+.taskText3 {
+
+  font-size: 13px;
+}
+
+.task0,
+.task1,
+.task2,
+.task3 {
+  fill: var(--theme-color-translucent-04) !important;
+  stroke: var(--text-muted) !important;
+}
+
+.taskTextOutside0,
+.taskTextOutside2,
+.taskTextOutside1,
+.taskTextOutside3 {
+  fill: var(--text-muted) !important;
+}
+
+/* Active task */
+.active0,
+.active1,
+.active2,
+.active3 {
+  fill: var(--mermaid-active-task-color) !important;
+  stroke: var(--text-muted) !important;
+}
+
+
+
+/* Completed task */
+.done0,
+.done1,
+.done2,
+.done3 {
+  stroke: var(--text-muted) !important;
+  fill: var(--background-secondary) !important;
+}
+
+
+
+/* Tasks on the critical line */
+.crit0,
+.crit1,
+.crit2,
+.crit3 {
+  stroke: var(--red-1) !important;
+  fill: var(--red-1) !important;
+}
+
+.activeCrit0,
+.activeCrit1,
+.activeCrit2,
+.activeCrit3 {
+  stroke: var(--accent-strong) !important;
+  fill: var(--text-accent) !important;
+}
+
+.doneCrit0,
+.doneCrit1,
+.doneCrit2,
+.doneCrit3 {
+  stroke: var(--accent-strong) !important;
+  fill: var(--text-muted) !important;
+  cursor: pointer !important;
+  shape-rendering: crispEdges !important;
+}
+
+.milestone {
+  transform: rotate(45deg) scale(0.8, 0.8) !important;
+}
+
+.milestoneText {
+  font-style: italic !important;
+}
+
+
+
+.titleText {
+  text-anchor: middle !important;
+  font-size: 20px !important;
+  font-family: var(--mermaid-font-family) !important;
+}
+
+g.classGroup text {
+  stroke: none !important;
+  font-size: 8px !important;
+}
+
+g.classGroup text .title {
+  font-weight: bolder !important;
+}
+
+g.clickable {
+  cursor: pointer !important;
+}
+
+g.classGroup rect {
+  fill: var(--background-secondary-alt) !important;
+  stroke: var(--theme-color) !important;
+}
+
+g.classGroup line {
+  stroke: var(--theme-color) !important;
+  stroke-width: 1 !important;
+}
+
+.classLabel .box {
+  stroke: none !important;
+  stroke-width: 0 !important;
+  fill: var(--background-secondary-alt) !important;
+  opacity: 0.2 !important;
+}
+
+.classLabel .label {
+  fill: var(--text-accent) !important;
+  font-size: 10px !important;
+}
+
+.relation {
+  stroke: var(--text-accent) !important;
+  fill: none !important;
+}
+
+.dashed-line {
+  stroke-dasharray: 3 !important;
+}
+
+#compositionStart,
+#compositionEnd,
+#dependencyStart,
+#dependencyEnd,
+#extensionStart,
+#extensionEnd {
+  fill: var(--text-accent) !important;
+  stroke: var(--text-accent) !important;
+}
+
+#aggregationStart,
+#aggregationEnd {
+  fill: var(--background-secondary-alt) !important;
+  stroke: var(--text-accent) !important;
+}
+
+.commit-id,
+.commit-msg,
+.branch-label {
+  fill: var(--text-muted) !important;
+  color: var(--text-muted) !important;
+  font-family: var(--mermaid-font-family) !important;
+}
+
+.pieTitleText {
+  text-anchor: middle !important;
+  font-size: 18px !important;
+  font-family: var(--mermaid-font-family) !important;
+}
+
+.slice {
+  font-family: var(--mermaid-font-family) !important;
+}
+
+g.stateGroup text {
+  fill: var(--text-accent) !important;
+  stroke: none !important;
+  font-size: 10px !important;
+  font-family: var(--mermaid-font-family) !important;
+}
+
+g.stateGroup text {
+  fill: var(--text-accent) !important;
+  stroke: none !important;
+  font-size: 10px !important;
+}
+
+g.stateGroup .state-title {
+  font-weight: bolder !important;
+}
+
+g.stateGroup rect {
+  fill: var(--background-secondary-alt) !important;
+  stroke: var(--background-secondary-alt) !important;
+}
+
+g.stateGroup line,
+.transition {
+  stroke: var(--text-accent) !important;
+}
+
+.stateGroup .composit {
+  fill: var(--background-secondary) !important;
+  border-bottom: 1px !important;
+}
+
+.stateGroup .alt-composit {
+  border-bottom: 1px !important;
+}
+
+.state-note {
+ 
+  fill: var(--text-accent) !important;
+}
+
+.state-note text {
+  fill: black !important;
+  stroke: none !important;
+  font-size: 10px !important;
+}
+
+.stateLabel .box {
+  stroke: none !important;
+  stroke-width: 0 !important;
+  fill: var(--background-secondary-alt) !important;
+  opacity: 0.5 !important;
+}
+
+.stateLabel text {
+  fill: black !important;
+  font-size: 10px !important;
+  font-weight: bold !important;
+  font-family: var(--mermaid-font-family) !important;
+}
+
+.node circle.state-start {
+  stroke: var(--text-normal) !important;
+}
+
+.node circle.state-end {
+
+  stroke: var(--text-normal) !important;
+  stroke-width: 1.5 !important;
+}
+
+#statediagram-barbEnd {
+  fill: var(--text-accent) !important;
+}
+
+ 
+
+.statediagram-cluster rect.outer,
+.statediagram-state .title-state,
+.statediagram-state rect.basic {
+  rx: 5px !important;
+  ry: 5px !important;
+}
+
+.statediagram-state .divider,
+.statediagram-cluster rect,
+.node rect,
+.node path,
+.node ellipse,
+.node circle,
+.node polygon  {
+  stroke: var(--text-accent) !important;
+}
+
+.statediagram-cluster.statediagram-cluster .inner {
+  fill: var(--background-secondary) !important;
+}
+
+.statediagram-cluster.statediagram-cluster-alt .inner {
+  fill: var(--background-secondary-alt) !important;
+}
+
+.statediagram-cluster .inner {
+  rx: 0 !important;
+  ry: 0 !important;
+}
+
+.statediagram-state rect.divider {
+  stroke-dasharray: 10, 10 !important;
+  fill: var(--background-secondary) !important;
+}
+
+.note-edge {
+  stroke-dasharray: 5 !important;
+}
+
+.statediagram-note rect {
+  fill: var(--text-accent) !important;
+  stroke: var(--text-muted) !important;
+  stroke-width: 1px !important;
+  rx: 0 !important;
+  ry: 0 !important;
+}
+
+/* Classes common for multiple diagrams */
+.error-icon {
+  fill: var(--text-error) !important;
+}
+
+.error-text {
+  fill: var(--text-muted) !important;
+  stroke: var(--text-muted) !important;
+}
+
+.edge-pattern-solid {
+  stroke-dasharray: 0 !important;
+}
+
+.edge-pattern-dashed {
+  stroke-dasharray: 3 !important;
+}
+
+.edge-pattern-dotted {
+  stroke-dasharray: 2 !important;
+}
+
+.marker {
+  fill: var(--text-muted) !important;
+}
+
+.marker.cross {
+  stroke: var(--text-muted) !important;
+}
+
+.mermaid div:not(text.tracker-month-label) #arrowhead,
+.mermaid div:not(text.tracker-month-label) #sequencenumber,
+.mermaid div:not(text.tracker-month-label) .cluster text,
+.mermaid div:not(text.tracker-month-label) .label text,
+.mermaid div:not(text.tracker-month-label) text,
+.mermaid div:not(text.tracker-month-label) text.actor {
+  fill: var(--text-muted) !important;
+}
+
+/*emoji🙂*/
+.mermaid g>g>circle,
+.mermaid g>circle {
+  stroke: #000000 !important;
+}
+
+.mermaid line.task-line {
+  stroke: #6e6e6e !important;
+}
+
 
 /* scrollbar*/
 body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
