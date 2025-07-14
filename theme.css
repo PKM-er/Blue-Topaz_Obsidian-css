@@ -11630,8 +11630,9 @@ span.search-result-file-matched-text {
   padding-left: 15px;
 }
 
-span.obsidian-search-match-highlight {
+.cm-s-obsidian span.obsidian-search-match-highlight {
   background-color: var(--text-search-highlight-bg) !important;
+  mix-blend-mode:unset;
 }
 
 .search-result-file-match:after {
