@@ -8,8 +8,8 @@ Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/
 
 */
 
-/*蓝色托帕石，适合Obsidian v1.5.0。uid [2025051401] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.5.0, uid [2025051401] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.5.0。uid [2026011401] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.5.0, uid [2026011401] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /*
 MIT License
@@ -15464,9 +15464,7 @@ body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-conte
   height: auto;
 }
 
-.vertical-tab-content .setting-item {
-  padding: 8px 0;
-}
+ 
 
 .is-phone .setting-item-heading {
   margin-top: 0px;
@@ -28772,7 +28770,10 @@ body.transparent-tab-style.theme-dark .workspace-split.mod-root .workspace-tab-h
 .is-mobile .horizontal-main-container {
   background-color: var(--background-secondary);
 }
-
+.is-mobile .app-container {
+padding-top: env(safe-area-inset-top);
+padding-top: var(--status-bar-height, 40px);
+}
 .is-mobile.theme-light .mobile-toolbar {
   background-color: var(--background-primary-alt);
 }
