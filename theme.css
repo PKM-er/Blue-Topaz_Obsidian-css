@@ -28770,10 +28770,13 @@ body.transparent-tab-style.theme-dark .workspace-split.mod-root .workspace-tab-h
 .is-mobile .horizontal-main-container {
   background-color: var(--background-secondary);
 }
-.is-mobile .app-container {
-padding-top: env(safe-area-inset-top);
-padding-top: var(--status-bar-height, 40px);
+ 
+
+.is-phone .workspace-tabs .view-header
+{
+    margin: var(--safe-area-inset-top) auto 0;
 }
+ 
 .is-mobile.theme-light .mobile-toolbar {
   background-color: var(--background-primary-alt);
 }
@@ -29666,5 +29669,3 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 
 /****end checkbox****/
 
-
- 
