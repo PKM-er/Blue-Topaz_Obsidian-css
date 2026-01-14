@@ -13116,6 +13116,7 @@ code[class*="language-"] ::selection {
   padding-right: 0.5em;
   bottom: -2px;
   border-right: 1px solid var(--scrollbar-thumb-bg);
+  text-indent: 0;
 }
 
 .code-line-number .HyperMD-codeblock.cm-line.cm-active:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::after {
