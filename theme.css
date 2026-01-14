@@ -13250,7 +13250,7 @@ code[class*="language-"] ::selection {
   white-space: pre-wrap;
 }
 
-.markdown-source-view.mod-cm6 .HyperMD-list-line.cm-line {
+.markdown-source-view.mod-cm6 .HyperMD-list-line.cm-line:not(.HyperMD-codeblock) {
   font-family: var(--font-family-list);
 }
 
