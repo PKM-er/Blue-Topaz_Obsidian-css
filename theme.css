@@ -9613,15 +9613,16 @@ body.is-mobile.color-scheme-options-simplicity-topaz .workspace>.workspace-split
   z-index: 1;	
 }
 body.color-scheme-options-simplicity-topaz .view-header .view-actions .view-action,
+body.color-scheme-options-simplicity-topaz .titlebar-button-container.mod-left,
 body.color-scheme-options-simplicity-topaz .titlebar-button-container.mod-right{
-  opacity: 0;
+  opacity: 0.82;
   z-index: 1;
   transition: all 0.6s linear;
 }
 body.color-scheme-options-simplicity-topaz .view-header:hover .view-actions .view-action,
 body.color-scheme-options-simplicity-topaz .titlebar-button-container.mod-left:hover,
 body.color-scheme-options-simplicity-topaz .titlebar-button-container.mod-right:hover {
-  opacity: 0.8;
+  opacity: 1;
   transition: all 0.6s linear;
 }
 
@@ -9985,7 +9986,7 @@ body.color-scheme-options-simplicity-topaz.is-frameless.background-settings-work
 
 body.color-scheme-options-simplicity-topaz .workspace-leaf-content .view-header .view-header-icon {
   margin-left: -10px;
-  opacity: 0;
+  opacity: 0.82;
   width: 18px;
 }
 body.color-scheme-options-simplicity-topaz .workspace-leaf-content .view-header .view-header-icon:hover {
@@ -10017,7 +10018,7 @@ body.background-image-settings-switch.toggle-nonoverlapping-bg .workspace-tab-he
 }
 
 body.color-scheme-options-simplicity-topaz .workspace-leaf-content .view-header .view-header-icon svg {
-  opacity: 0;
+  opacity: 1;
 }
 body.color-scheme-options-simplicity-topaz .workspace-tab-container-before.is-before-active,
 body.color-scheme-options-simplicity-topaz .workspace-tab-container-after.is-after-active,
