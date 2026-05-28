@@ -5963,6 +5963,42 @@ body.all-dark-pdf .print,
   --bt-indentation-line-image: url("");
   --bt-connected-indent-line-color: #926a6a;
   --list-colorful-marker: #ff8686;
+
+  --color-base-00: #222222;
+  --color-base-05: #252525;
+  --color-base-10: #282828;
+  --color-base-20: #2c2c2c;
+  --color-base-25: #323232;
+  --color-base-30: #3a3a3a;
+  --color-base-35: #434343;
+  --color-base-40: #585858;
+  --color-base-50: #6a6a6a;
+  --color-base-60: #9a9a9a;
+  --color-base-70: #b5b5b5;
+  --color-base-100: #dcdcdc;
+
+  /*Bases*/
+  --bases-header-border-width: 1px;
+  --bases-header-height: 40px;
+  --bases-header-padding-start: 8px;
+  --bases-header-padding-end: 8px;
+  --bases-embed-border-width: 1px;
+  --bases-embed-border-color: var(--background-modifier-border);
+  --bases-embed-border-radius: 6px;
+  --bases-table-container-border-width: 1px;
+  --bases-table-container-border-radius: 6px;
+  --bases-table-header-weight: 600;
+  --bases-table-header-color: var(--text-normal);
+  --bases-table-header-background: var(--background-secondary);
+  --bases-table-header-background-hover: var(--background-modifier-hover);
+  --bases-table-border-color: var(--background-modifier-border);
+  --bases-table-column-border-width: 0px;
+  --bases-table-row-border-width: 1px;
+  --bases-table-row-background-hover: var(--background-modifier-hover);
+  --bases-table-row-height: 32px;
+  --bases-table-text-size: var(--font-text-size);
+  --bases-table-cell-background-active: var(--text-accent-hover);
+  --bases-table-cell-shadow-active: 0 0 0 1px var(--interactive-accent);
 }
 
 .theme-light {
@@ -6560,6 +6596,42 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --table-color-calendar-2: rgb(5, 158, 5);
   --table-color-rgb: 5, 158, 5;
   --divider-color: #000000;
+
+  --color-base-00: #fafaf3;
+  --color-base-05: #f5f5f0;
+  --color-base-10: #efefe8;
+  --color-base-20: #e8e8e0;
+  --color-base-25: #dddcd3;
+  --color-base-30: #d5d4ca;
+  --color-base-35: #c9c8bb;
+  --color-base-40: #b8b7a7;
+  --color-base-50: #a0a08f;
+  --color-base-60: #787869;
+  --color-base-70: #55554a;
+  --color-base-100: #2d2d26;
+
+  /*Bases*/
+  --bases-header-border-width: 1px;
+  --bases-header-height: 40px;
+  --bases-header-padding-start: 8px;
+  --bases-header-padding-end: 8px;
+  --bases-embed-border-width: 1px;
+  --bases-embed-border-color: var(--background-modifier-border);
+  --bases-embed-border-radius: 6px;
+  --bases-table-container-border-width: 1px;
+  --bases-table-container-border-radius: 6px;
+  --bases-table-header-weight: 600;
+  --bases-table-header-color: var(--text-normal);
+  --bases-table-header-background: var(--background-secondary);
+  --bases-table-header-background-hover: var(--background-modifier-hover);
+  --bases-table-border-color: var(--background-modifier-border);
+  --bases-table-column-border-width: 0px;
+  --bases-table-row-border-width: 1px;
+  --bases-table-row-background-hover: var(--background-modifier-hover);
+  --bases-table-row-height: 32px;
+  --bases-table-text-size: var(--font-text-size);
+  --bases-table-cell-background-active: var(--text-accent-hover);
+  --bases-table-cell-shadow-active: 0 0 0 1px var(--interactive-accent);
 }
 
 
@@ -8535,6 +8607,27 @@ body.color-scheme-options-autumn-topaz.theme-light {
   /*checkbox*/
   --checkbox-color-0: var(--main-color);
 
+  /*Bases - color-base*/
+  --color-base-00: #fafaf3;
+  --color-base-05: #f4f4ed;
+  --color-base-10: #eeeee6;
+  --color-base-20: #e6e6dd;
+  --color-base-25: #dbdbd2;
+  --color-base-30: #d0d0c6;
+  --color-base-35: #c3c3b8;
+  --color-base-40: #b3b3a7;
+  --color-base-50: #9a9a8e;
+  --color-base-60: #727267;
+  --color-base-70: #515149;
+  --color-base-100: #2b2b26;
+
+  /*Bases - autumn tweaks*/
+  --bases-table-border-color: rgba(228, 202, 143, 0.25);
+  --bases-table-header-color: var(--deep-color);
+  --bases-table-header-background: var(--bg-color2);
+  --bases-table-row-background-hover: var(--color1);
+  --bases-table-stripe-color: color-mix(in srgb, var(--color2) 20%, transparent);
+
   --table-color-calendar-2: rgb(222, 236, 182);
   --table-color-rgb: 222, 236, 182;
 }
@@ -8671,6 +8764,24 @@ body.color-scheme-options-autumn-topaz.theme-dark {
 
   /*checkbox*/
   --checkbox-color-0: var(--main-color);
+
+  /*Bases - color-base*/
+  --color-base-00: #222222;
+  --color-base-05: #252525;
+  --color-base-10: #282828;
+  --color-base-20: #2c2c2c;
+  --color-base-25: #323232;
+  --color-base-30: #3a3a3a;
+  --color-base-35: #434343;
+  --color-base-40: #585858;
+  --color-base-50: #6a6a6a;
+  --color-base-60: #9a9a9a;
+  --color-base-70: #b5b5b5;
+  --color-base-100: #dcdcdc;
+
+  /*Bases - autumn tweaks*/
+  --bases-table-header-background: #333333;
+  --bases-table-row-background-hover: #2a2a2a;
 
   --table-color-calendar-2: rgb(81, 165, 39);
   --table-color-rgb: 81, 165, 39;
@@ -29668,4 +29779,116 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 }
 
 /****end checkbox****/
+/*=== Bases 表格视图 ===*/
 
+.bases-table-container {
+  border-radius: var(--bases-table-container-border-radius);
+  border: var(--bases-table-container-border-width) solid var(--bases-table-border-color);
+}
+
+.bases-table-header {
+  font-weight: var(--bases-table-header-weight);
+  color: var(--bases-table-header-color);
+  background: var(--bases-table-header-background);
+}
+
+.bases-table-header:hover {
+  background: var(--bases-table-header-background-hover);
+}
+
+.bases-tbody .bases-tr:nth-child(even) {
+  background: var(--bases-table-stripe-color, rgba(0,0,0,0.02));
+}
+
+.bases-tr:hover {
+  background: var(--bases-table-row-background-hover);
+}
+
+.bases-table-active-cell {
+  box-shadow: var(--bases-table-cell-shadow-active);
+  background: var(--bases-table-cell-background-active);
+}
+
+/*=== Bases 卡片视图 ===*/
+
+.bases-cards-container {
+  padding: 8px;
+}
+
+.bases-cards-item {
+  background: var(--background-primary);
+  border: 1px solid var(--bases-table-border-color);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  overflow: hidden;
+}
+
+.bases-cards-item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-1px);
+}
+
+.bases-cards-cover {
+  background: linear-gradient(135deg, var(--background-secondary), var(--background-secondary-alt));
+  min-height: 40px;
+}
+
+.bases-cards-property {
+  padding: 2px 10px;
+}
+
+.bases-cards-property.mod-title {
+  border-bottom: 1px solid var(--bases-table-border-color);
+  margin-bottom: 2px;
+}
+
+.bases-cards-property.mod-title .bases-cards-line {
+  font-weight: 600;
+  color: var(--text-accent);
+}
+
+.bases-cards-label {
+  font-size: 0.75em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+
+.bases-cards-line {
+  font-size: 0.875em;
+  color: var(--text-normal);
+  line-height: 1.5;
+}
+
+.bases-group-heading {
+  font-weight: 600;
+  font-size: 0.9em;
+  color: var(--text-normal);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--bases-table-border-color);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bases-group-property {
+  color: var(--text-muted);
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+.bases-group-value {
+  color: var(--text-accent);
+}
+
+/*=== Bases 工具栏 ===*/
+
+.bases-header {
+  border-bottom: var(--bases-header-border-width, 1px) solid var(--bases-table-border-color);
+  min-height: var(--bases-header-height, 40px);
+  padding-inline-start: var(--bases-header-padding-start, 8px);
+  padding-inline-end: var(--bases-header-padding-end, 8px);
+}

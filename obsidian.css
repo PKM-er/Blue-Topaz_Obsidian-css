@@ -7513,6 +7513,26 @@ body.color-scheme-options-autumn-topaz.theme-light {
 
   --activeline-background: var(--bg-color2);
 
+  /*Bases - color-base*/
+  --color-base-00: #fafaf3;
+  --color-base-05: #f4f4ed;
+  --color-base-10: #eeeee6;
+  --color-base-20: #e6e6dd;
+  --color-base-25: #dbdbd2;
+  --color-base-30: #d0d0c6;
+  --color-base-35: #c3c3b8;
+  --color-base-40: #b3b3a7;
+  --color-base-50: #9a9a8e;
+  --color-base-60: #727267;
+  --color-base-70: #515149;
+  --color-base-100: #2b2b26;
+
+  /*Bases - autumn tweaks*/
+  --bases-table-border-color: #e0d5c0;
+  --bases-table-header-color: var(--deep-color);
+  --bases-table-header-background: var(--bg-color2);
+  --bases-table-row-background-hover: var(--color1);
+
   --table-color-calendar-2: rgb(222, 236, 182);
   --table-color-rgb: 222, 236, 182;
 }
@@ -7698,6 +7718,24 @@ body.color-scheme-options-autumn-topaz.theme-dark {
   --checkbox-color-0: var(--main-color);
 
   --activeline-background: var(--bg-color2);
+
+  /*Bases - color-base*/
+  --color-base-00: #222222;
+  --color-base-05: #252525;
+  --color-base-10: #282828;
+  --color-base-20: #2c2c2c;
+  --color-base-25: #323232;
+  --color-base-30: #3a3a3a;
+  --color-base-35: #434343;
+  --color-base-40: #585858;
+  --color-base-50: #6a6a6a;
+  --color-base-60: #9a9a9a;
+  --color-base-70: #b5b5b5;
+  --color-base-100: #dcdcdc;
+
+  /*Bases - autumn tweaks*/
+  --bases-table-header-background: #333333;
+  --bases-table-row-background-hover: #2a2a2a;
 
   --table-color-calendar-2: rgb(81, 165, 39);
   --table-color-rgb: 81, 165, 39;
