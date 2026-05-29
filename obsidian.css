@@ -24844,7 +24844,7 @@ body:not(.default-loading-page).theme-light .progress-bar {
 body:not(.default-loading-page).loading-animation-cat .progress-bar-message::before {
   content: "GIF creator: Jake Fleming";
   display: block;
-  background: url(https://cdn.dribbble.com/userupload/26039139/file/original-fc64b88e1da57b3f1f3e56cac5e12c7d.gif) no-repeat center/cover;
+  background: url(https://cdn.dribbble.com/users/53712/screenshots/9948351/media/2397850c7727f8e70b0ec50b5a83fe76.gif) no-repeat center/cover;
   width: 800px;
   height: 500px;
   margin-top: -20px;
