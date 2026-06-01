@@ -8622,10 +8622,10 @@ body.color-scheme-options-autumn-topaz.theme-light {
   --color-base-100: #2b2b26;
 
   /*Bases - autumn tweaks*/
-  --bases-table-border-color: rgba(228, 202, 143, 0.25);
+  --bases-table-border-color: #bfb9a0;
   --bases-table-header-color: var(--deep-color);
   --bases-table-header-background: var(--bg-color2);
-  --bases-table-row-background-hover: var(--color1);
+  --bases-table-row-background-hover: color-mix(in srgb, var(--color1) 80%, #aaa);
   --bases-table-stripe-color: color-mix(in srgb, var(--color2) 20%, transparent);
 
   --table-color-calendar-2: rgb(222, 236, 182);
@@ -29800,7 +29800,8 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   background: var(--bases-table-stripe-color, rgba(0,0,0,0.02));
 }
 
-.bases-tr:hover {
+.bases-tr:hover,
+.bases-tbody .bases-tr:nth-child(even):hover {
   background: var(--bases-table-row-background-hover);
 }
 
@@ -29860,6 +29861,23 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   font-size: 0.875em;
   color: var(--text-normal);
   line-height: 1.5;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.bases-cards-line:hover {
+  overflow: visible;
+  white-space: normal;
+  word-break: break-word;
+  position: relative;
+  z-index: 10;
+  background: var(--background-primary);
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin: -2px -6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 .bases-group-heading {
