@@ -6510,12 +6510,10 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --color-base-70: #414141;
   --color-base-100: #202020;
 
-  /*Bases - tweaks*/
+  /*Bases tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--deep-color);
+  --bases-table-header-color: var(--text-accent);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 
 }
@@ -6637,31 +6635,13 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --color-base-70: #55554a;
   --color-base-100: #2d2d26;
 
-  /*Bases*/
-  --bases-header-border-width: 1px;
-  --bases-header-height: 40px;
-  --bases-header-padding-start: 8px;
-  --bases-header-padding-end: 8px;
-  --bases-embed-border-width: 1px;
-  --bases-embed-border-color: var(--background-modifier-border);
-  --bases-embed-border-radius: 6px;
-  --bases-table-container-border-width: 1px;
-  --bases-table-container-border-radius: 6px;
-  --bases-table-header-weight: 600;
-  --bases-table-header-color: var(--deep-color);
+  /*Bases - Avocado 暗夜 - tweak*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-header-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.20);
-  --bases-table-border-color: var(--background-modifier-border);
-  --bases-table-column-border-width: 0px;
-  --bases-table-row-border-width: 1px;
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.06);
   --bases-table-group-background: transparent;
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.15);
-  --bases-table-row-height: 32px;
-  --bases-table-text-size: var(--font-text-size);
-  --bases-table-cell-background-active: var(--text-accent-hover);
-  --bases-table-cell-shadow-active: 0 0 0 1px var(--interactive-accent);
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--low-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 
 
   /*Bases - color-base*/
@@ -6678,12 +6658,10 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --color-base-70: #bcbcbc;
   --color-base-100: #dadada;
 
-  /*Bases - tweaks*/
+  /*Bases tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--deep-color);
+  --bases-table-header-color: var(--text-accent);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 
 }
@@ -6804,24 +6782,16 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --table-color-rgb: 69, 69, 69;
 
 
-  /*Bases - color-base*/
-  --color-base-00: #1e1e1e;
-  --color-base-05: #212121;
-  --color-base-10: #272727;
-  --color-base-20: #303030;
-  --color-base-25: #3a3a3a;
-  --color-base-30: #434343;
-  --color-base-35: #525252;
-  --color-base-40: #696969;
-  --color-base-50: #858585;
-  --color-base-60: #a5a5a5;
-  --color-base-70: #bdbdbd;
-  --color-base-100: #dadada;
-
-  /*Bases - tweaks*/
+  /*Bases - Monochrome 暗夜 - tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--low-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+
+  /*Bases tweak*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--deep-color);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
@@ -6964,10 +6934,8 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --color-base-70: #414141;
   --color-base-100: #202020;
 
-  /*Bases - tweaks*/
+  /*Bases tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--deep-color);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
@@ -7151,12 +7119,10 @@ body.color-scheme-options-pink-topaz.theme-light {
   --color-base-70: #414141;
   --color-base-100: #202020;
 
-  /*Bases - tweaks*/
+  /*Bases tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--deep-color);
+  --bases-table-header-color: var(--text-accent);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 
 }
@@ -7310,26 +7276,18 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --table-color-rgb: 215, 121, 153;
 
 
-  /*Bases - color-base*/
-  --color-base-00: #0f0f0f;
-  --color-base-05: #131313;
-  --color-base-10: #191919;
-  --color-base-20: #232323;
-  --color-base-25: #2d2d2d;
-  --color-base-30: #373737;
-  --color-base-35: #474747;
-  --color-base-40: #606060;
-  --color-base-50: #7e7e7e;
-  --color-base-60: #a1a1a1;
-  --color-base-70: #bbbbbb;
-  --color-base-100: #dadada;
-
-  /*Bases - tweaks*/
+  /*Bases - Pink 暗夜 - tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--deep-color);
+  --bases-table-header-color: var(--low-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+
+  /*Bases tweak*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--text-accent);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 
 }
@@ -7430,28 +7388,20 @@ body.color-scheme-options-topaz-nord.theme-dark {
   --divider-color: var(--nord0);
 
 
-  /*Bases - color-base*/
-  --color-base-00: #2e3440;
-  --color-base-05: #313743;
-  --color-base-10: #363c47;
-  --color-base-20: #3f444f;
-  --color-base-25: #474c57;
-  --color-base-30: #50555e;
-  --color-base-35: #5e626b;
-  --color-base-40: #72767d;
-  --color-base-50: #8c8f94;
-  --color-base-60: #a9abae;
-  --color-base-70: #c0c1c2;
-  --color-base-100: #dadada;
-
-  /*Bases - tweaks*/
+  /*Bases - Nord 暗夜 - tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--deep-color);
+  --bases-table-header-color: var(--low-color);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 
+  /*Bases - nord tweak*/
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+
+  --bases-table-header-color: var(--text-accent);
+  --bases-table-header-color: var(--text-accent);
 }
 
 body.color-scheme-options-topaz-nord.theme-dark .titlebar-text {
@@ -7628,14 +7578,11 @@ body.color-scheme-options-topaz-nord.theme-light {
   --color-base-70: #3e3f3f;
   --color-base-100: #202020;
 
-  /*Bases - tweaks*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
+  /*Bases - nord tweak*/
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--deep-color);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 
+  --bases-table-header-color: var(--text-accent);
 }
 
 /*@Lavi & @嘴 的Flamingo主题色（原Pink Topaz）*/
@@ -7787,12 +7734,10 @@ body.color-scheme-options-flamingo.theme-light {
   --color-base-70: #403f3e;
   --color-base-100: #202020;
 
-  /*Bases - tweaks*/
+  /*Bases tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--deep-color);
+  --bases-table-header-color: var(--text-accent);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
@@ -7925,24 +7870,16 @@ body.color-scheme-options-flamingo.theme-dark {
   --scrollbar-active-thumb-bg: #e2bdbd;
 
 
-  /*Bases - color-base*/
-  --color-base-00: #212121;
-  --color-base-05: #242424;
-  --color-base-10: #2a2a2a;
-  --color-base-20: #333333;
-  --color-base-25: #3c3c3c;
-  --color-base-30: #464646;
-  --color-base-35: #545454;
-  --color-base-40: #6b6b6b;
-  --color-base-50: #868686;
-  --color-base-60: #a6a6a6;
-  --color-base-70: #bebebe;
-  --color-base-100: #dadada;
-
-  /*Bases - tweaks*/
+  /*Bases - Flamingo 暗夜 - tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--low-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+
+  /*Bases tweak*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--deep-color);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
@@ -8245,12 +8182,10 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --color-base-70: #40403f;
   --color-base-100: #202020;
 
-  /*Bases - tweaks*/
+  /*Bases tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--deep-color);
+  --bases-table-header-color: var(--low-color);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
@@ -8390,24 +8325,16 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
   --table-color-rgb: 120, 104, 38;
 
 
-  /*Bases - color-base*/
-  --color-base-00: #222222;
-  --color-base-05: #252525;
-  --color-base-10: #2b2b2b;
-  --color-base-20: #343434;
-  --color-base-25: #3d3d3d;
-  --color-base-30: #464646;
-  --color-base-35: #555555;
-  --color-base-40: #6b6b6b;
-  --color-base-50: #878787;
-  --color-base-60: #a6a6a6;
-  --color-base-70: #bebebe;
-  --color-base-100: #dadada;
-
-  /*Bases - tweaks*/
+  /*Bases - Honey milk 暗夜 - tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--low-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+
+  /*Bases tweak*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--deep-color);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
@@ -8601,10 +8528,8 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --color-base-70: #403f3e;
   --color-base-100: #202020;
 
-  /*Bases - tweaks*/
+  /*Bases tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--low-color);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
@@ -8775,24 +8700,16 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
   --table-color-rgb: 70, 45, 6;
 
 
-  /*Bases - color-base*/
-  --color-base-00: #222222;
-  --color-base-05: #252525;
-  --color-base-10: #2b2b2b;
-  --color-base-20: #343434;
-  --color-base-25: #3d3d3d;
-  --color-base-30: #464646;
-  --color-base-35: #555555;
-  --color-base-40: #6b6b6b;
-  --color-base-50: #878787;
-  --color-base-60: #a6a6a6;
-  --color-base-70: #bebebe;
-  --color-base-100: #dadada;
-
-  /*Bases - tweaks*/
+  /*Bases - Chocolate 暗夜 - tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--low-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+
+  /*Bases tweak*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--low-color);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
@@ -8957,12 +8874,10 @@ body.color-scheme-options-autumn-topaz.theme-light {
   --color-base-70: #515149;
   --color-base-100: #2b2b26;
 
-  /*Bases - autumn tweaks*/
+  /*Bases tweak*/
   --bases-table-border-color: #bfb9a0;
   --table-border-color: #c5b896;
-  --bases-table-header-color: var(--deep-color);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
+  --bases-table-header-color: var(--low-color);
   --bases-table-row-background-hover: color-mix(in srgb, var(--color1) 80%, #aaa);
   --bases-table-stripe-color: color-mix(in srgb, var(--color2) 20%, transparent);
 
@@ -9106,22 +9021,15 @@ body.color-scheme-options-autumn-topaz.theme-dark {
   /*checkbox*/
   --checkbox-color-0: var(--main-color);
 
-  /*Bases - color-base*/
-  --color-base-00: #222222;
-  --color-base-05: #252525;
-  --color-base-10: #282828;
-  --color-base-20: #2c2c2c;
-  --color-base-25: #323232;
-  --color-base-30: #3a3a3a;
-  --color-base-35: #434343;
-  --color-base-40: #585858;
-  --color-base-50: #6a6a6a;
-  --color-base-60: #9a9a9a;
-  --color-base-70: #b5b5b5;
-  --color-base-100: #dcdcdc;
-
-  /*Bases - autumn tweaks*/
+  /*Bases - Autumn 暗夜 - tweak*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-group-background: transparent;
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--low-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+
+  /*Bases tweak*/
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--low-color);
 
@@ -9294,12 +9202,10 @@ body.color-scheme-options-lillimon-topaz.theme-light {
   --color-base-70: #40403f;
   --color-base-100: #202020;
 
-  /*Bases - tweaks*/
+  /*Bases tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--deep-color);
+  --bases-table-header-color: var(--text-accent);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
@@ -9426,24 +9332,16 @@ body.color-scheme-options-lillimon-topaz.theme-dark {
   --checkbox-color-0: var(--magic-main-color);
 
 
-  /*Bases - color-base*/
-  --color-base-00: #222222;
-  --color-base-05: #252525;
-  --color-base-10: #2b2b2b;
-  --color-base-20: #343434;
-  --color-base-25: #3d3d3d;
-  --color-base-30: #464646;
-  --color-base-35: #555555;
-  --color-base-40: #6b6b6b;
-  --color-base-50: #878787;
-  --color-base-60: #a6a6a6;
-  --color-base-70: #bebebe;
-  --color-base-100: #dadada;
-
-  /*Bases - tweaks*/
+  /*Bases - Lillimon 暗夜 - tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--low-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+
+  /*Bases tweak*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--deep-color);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
@@ -9658,12 +9556,10 @@ body.color-scheme-options-lilac.theme-light {
   --color-base-70: #414040;
   --color-base-100: #202020;
 
-  /*Bases - tweaks*/
+  /*Bases tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--deep-color);
+  --bases-table-header-color: var(--text-accent);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
@@ -9823,26 +9719,18 @@ body.color-scheme-options-lilac.theme-dark {
   --tab-stacked-shadow: #240a2e;
 
 
-  /*Bases - color-base*/
-  --color-base-00: #462058;
-  --color-base-05: #48235a;
-  --color-base-10: #4d295e;
-  --color-base-20: #543265;
-  --color-base-25: #5c3b6b;
-  --color-base-30: #634572;
-  --color-base-35: #6f547c;
-  --color-base-40: #816a8c;
-  --color-base-50: #97869f;
-  --color-base-60: #b0a5b5;
-  --color-base-70: #c3bec6;
-  --color-base-100: #dadada;
-
-  /*Bases - tweaks*/
+  /*Bases - Lilac 暗夜 - tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--deep-color);
+  --bases-table-header-color: var(--low-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+
+  /*Bases tweak*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--text-accent);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
@@ -10043,12 +9931,10 @@ body.color-scheme-options-simplicity-topaz.theme-light {
   --color-base-70: #40403f;
   --color-base-100: #202020;
 
-  /*Bases - tweaks*/
+  /*Bases tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--deep-color);
+  --bases-table-header-color: var(--text-accent);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
@@ -10133,26 +10019,18 @@ body.color-scheme-options-simplicity-topaz.theme-dark {
 
 
 
-  /*Bases - color-base*/
-  --color-base-00: #1b1b1b;
-  --color-base-05: #1e1e1e;
-  --color-base-10: #242424;
-  --color-base-20: #2e2e2e;
-  --color-base-25: #373737;
-  --color-base-30: #414141;
-  --color-base-35: #505050;
-  --color-base-40: #676767;
-  --color-base-50: #848484;
-  --color-base-60: #a4a4a4;
-  --color-base-70: #bdbdbd;
-  --color-base-100: #dadada;
-
-  /*Bases - tweaks*/
+  /*Bases - Simplicity 暗夜 - tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--deep-color);
+  --bases-table-header-color: var(--low-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+
+  /*Bases tweak*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--text-accent);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
