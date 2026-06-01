@@ -7771,6 +7771,29 @@ body.color-scheme-options-flamingo.theme-light {
   --table-color-rgb: 214, 118, 146;
   --scrollbar-thumb-bg: #f39ba050;
   --scrollbar-active-thumb-bg: #f39ba0;
+
+
+  /*Bases - color-base*/
+  --color-base-00: #faf4eb;
+  --color-base-05: #f5efe6;
+  --color-base-10: #efe9e0;
+  --color-base-20: #e4ded6;
+  --color-base-25: #d9d4cc;
+  --color-base-30: #cec9c2;
+  --color-base-35: #bcb8b2;
+  --color-base-40: #a29f99;
+  --color-base-50: #827f7b;
+  --color-base-60: #5d5b58;
+  --color-base-70: #403f3e;
+  --color-base-100: #202020;
+
+  /*Bases - tweaks*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-group-background: transparent;
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--deep-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
 
@@ -7900,6 +7923,29 @@ body.color-scheme-options-flamingo.theme-dark {
   --table-color-rgb: 215, 86, 125;
   --scrollbar-thumb-bg: #e2bdbd50;
   --scrollbar-active-thumb-bg: #e2bdbd;
+
+
+  /*Bases - color-base*/
+  --color-base-00: #212121;
+  --color-base-05: #242424;
+  --color-base-10: #2a2a2a;
+  --color-base-20: #333333;
+  --color-base-25: #3c3c3c;
+  --color-base-30: #464646;
+  --color-base-35: #545454;
+  --color-base-40: #6b6b6b;
+  --color-base-50: #868686;
+  --color-base-60: #a6a6a6;
+  --color-base-70: #bebebe;
+  --color-base-100: #dadada;
+
+  /*Bases - tweaks*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-group-background: transparent;
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--deep-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
 body.color-scheme-options-flamingo.theme-light #calendar-container {
@@ -8183,6 +8229,29 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
 
   --table-color-calendar-2: rgb(242, 235, 207);
   --table-color-rgb: 242, 235, 207;
+
+
+  /*Bases - color-base*/
+  --color-base-00: #f8f8f5;
+  --color-base-05: #f3f3f0;
+  --color-base-10: #ededea;
+  --color-base-20: #e2e2df;
+  --color-base-25: #d7d7d5;
+  --color-base-30: #ccccca;
+  --color-base-35: #bbbbb9;
+  --color-base-40: #a1a19f;
+  --color-base-50: #81817f;
+  --color-base-60: #5c5c5b;
+  --color-base-70: #40403f;
+  --color-base-100: #202020;
+
+  /*Bases - tweaks*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-group-background: transparent;
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--deep-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
 
@@ -8319,6 +8388,29 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
 
   --table-color-calendar-2: rgb(120, 104, 38);
   --table-color-rgb: 120, 104, 38;
+
+
+  /*Bases - color-base*/
+  --color-base-00: #222222;
+  --color-base-05: #252525;
+  --color-base-10: #2b2b2b;
+  --color-base-20: #343434;
+  --color-base-25: #3d3d3d;
+  --color-base-30: #464646;
+  --color-base-35: #555555;
+  --color-base-40: #6b6b6b;
+  --color-base-50: #878787;
+  --color-base-60: #a6a6a6;
+  --color-base-70: #bebebe;
+  --color-base-100: #dadada;
+
+  /*Bases - tweaks*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-group-background: transparent;
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--deep-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
 body.color-scheme-options-honey-milk-topaz #calendar-container {
@@ -8493,6 +8585,29 @@ body.color-scheme-options-chocolate-topaz.theme-light {
 
   --table-color-calendar-2: rgb(76, 52, 16);
   --table-color-rgb: 76, 52, 16;
+
+
+  /*Bases - color-base*/
+  --color-base-00: #faf4eb;
+  --color-base-05: #f5efe6;
+  --color-base-10: #efe9e0;
+  --color-base-20: #e4ded6;
+  --color-base-25: #d9d4cc;
+  --color-base-30: #cec9c2;
+  --color-base-35: #bcb8b2;
+  --color-base-40: #a29f99;
+  --color-base-50: #827f7b;
+  --color-base-60: #5d5b58;
+  --color-base-70: #403f3e;
+  --color-base-100: #202020;
+
+  /*Bases - tweaks*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-group-background: transparent;
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--deep-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
 body.color-scheme-options-chocolate-topaz.theme-dark {
@@ -8658,6 +8773,29 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
 
   --table-color-calendar-2: rgb(70, 45, 6);
   --table-color-rgb: 70, 45, 6;
+
+
+  /*Bases - color-base*/
+  --color-base-00: #222222;
+  --color-base-05: #252525;
+  --color-base-10: #2b2b2b;
+  --color-base-20: #343434;
+  --color-base-25: #3d3d3d;
+  --color-base-30: #464646;
+  --color-base-35: #555555;
+  --color-base-40: #6b6b6b;
+  --color-base-50: #878787;
+  --color-base-60: #a6a6a6;
+  --color-base-70: #bebebe;
+  --color-base-100: #dadada;
+
+  /*Bases - tweaks*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-group-background: transparent;
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--deep-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
 body.color-scheme-options-chocolate-topaz #calendar-container {
@@ -9137,6 +9275,29 @@ body.color-scheme-options-lillimon-topaz.theme-light {
 
   /*checkbox*/
   --checkbox-color-0: var(--magic-main-color);
+
+
+  /*Bases - color-base*/
+  --color-base-00: #f8f8f5;
+  --color-base-05: #f3f3f0;
+  --color-base-10: #ededea;
+  --color-base-20: #e2e2df;
+  --color-base-25: #d7d7d5;
+  --color-base-30: #ccccca;
+  --color-base-35: #bbbbb9;
+  --color-base-40: #a1a19f;
+  --color-base-50: #81817f;
+  --color-base-60: #5c5c5b;
+  --color-base-70: #40403f;
+  --color-base-100: #202020;
+
+  /*Bases - tweaks*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-group-background: transparent;
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--deep-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
 
@@ -9260,6 +9421,29 @@ body.color-scheme-options-lillimon-topaz.theme-dark {
 
   /*checkbox*/
   --checkbox-color-0: var(--magic-main-color);
+
+
+  /*Bases - color-base*/
+  --color-base-00: #222222;
+  --color-base-05: #252525;
+  --color-base-10: #2b2b2b;
+  --color-base-20: #343434;
+  --color-base-25: #3d3d3d;
+  --color-base-30: #464646;
+  --color-base-35: #555555;
+  --color-base-40: #6b6b6b;
+  --color-base-50: #878787;
+  --color-base-60: #a6a6a6;
+  --color-base-70: #bebebe;
+  --color-base-100: #dadada;
+
+  /*Bases - tweaks*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-group-background: transparent;
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--deep-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
 body.color-scheme-options-lillimon-topaz #calendar-container {
@@ -9455,6 +9639,29 @@ body.color-scheme-options-lilac.theme-light {
 
   --divider-color: #d7c4f2;
   --tab-stacked-shadow: #c69fd5;
+
+
+  /*Bases - color-base*/
+  --color-base-00: #fdf7fb;
+  --color-base-05: #f8f2f6;
+  --color-base-10: #f1ecf0;
+  --color-base-20: #e6e1e5;
+  --color-base-25: #dbd6da;
+  --color-base-30: #d0cccf;
+  --color-base-35: #bfbabd;
+  --color-base-40: #a4a1a3;
+  --color-base-50: #838082;
+  --color-base-60: #5d5c5d;
+  --color-base-70: #414040;
+  --color-base-100: #202020;
+
+  /*Bases - tweaks*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-group-background: transparent;
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--deep-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
 
@@ -9611,6 +9818,29 @@ body.color-scheme-options-lilac.theme-dark {
   --table-color-rgb: 98, 36, 143;
 
   --tab-stacked-shadow: #240a2e;
+
+
+  /*Bases - color-base*/
+  --color-base-00: #462058;
+  --color-base-05: #48235a;
+  --color-base-10: #4d295e;
+  --color-base-20: #543265;
+  --color-base-25: #5c3b6b;
+  --color-base-30: #634572;
+  --color-base-35: #6f547c;
+  --color-base-40: #816a8c;
+  --color-base-50: #97869f;
+  --color-base-60: #b0a5b5;
+  --color-base-70: #c3bec6;
+  --color-base-100: #dadada;
+
+  /*Bases - tweaks*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-group-background: transparent;
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--deep-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
 /*分割工作区的线透明*/
@@ -9794,6 +10024,29 @@ body.color-scheme-options-simplicity-topaz.theme-light {
   --background-transparent-black-or-white-3: var(--bg-color-settings-1) !important;
   --tab-background-active: #ffffff;
   --theme-color-translucent-01: hsla(254,80%,68%,0.1);
+
+
+  /*Bases - color-base*/
+  --color-base-00: #fafaf3;
+  --color-base-05: #f5f5ee;
+  --color-base-10: #efefe8;
+  --color-base-20: #e4e4dd;
+  --color-base-25: #d9d9d3;
+  --color-base-30: #cecec8;
+  --color-base-35: #bcbcb7;
+  --color-base-40: #a2a29e;
+  --color-base-50: #82827e;
+  --color-base-60: #5d5d5b;
+  --color-base-70: #40403f;
+  --color-base-100: #202020;
+
+  /*Bases - tweaks*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-group-background: transparent;
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--deep-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
 
@@ -9875,6 +10128,29 @@ body.color-scheme-options-simplicity-topaz.theme-dark {
   --search-result-background:var(--simple-gray-2);
   --scrollbar-bg: transparent;
 
+
+
+  /*Bases - color-base*/
+  --color-base-00: #1b1b1b;
+  --color-base-05: #1e1e1e;
+  --color-base-10: #242424;
+  --color-base-20: #2e2e2e;
+  --color-base-25: #373737;
+  --color-base-30: #414141;
+  --color-base-35: #505050;
+  --color-base-40: #676767;
+  --color-base-50: #848484;
+  --color-base-60: #a4a4a4;
+  --color-base-70: #bdbdbd;
+  --color-base-100: #dadada;
+
+  /*Bases - tweaks*/
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-group-background: transparent;
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--deep-color);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
 body.color-scheme-options-simplicity-topaz:not(.background-settings-workplace-background-image) {
