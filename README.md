@@ -1,148 +1,33 @@
-<!--
- * @Author: cumany cuman@qq.com
- * @Date: 2023-06-28 13:36:53
- * @LastEditors: cumany cuman@qq.com
- * @LastEditTime: 2024-04-03 08:43:27
- * @Description:
--->
+# Blue Topaz Alternate
 
-> Due to obsidian's policy of not being able to use online or local vault images.The option for related built-in online images has been removed, but custom settings are retained. Please set the URL for displaying background images by yourself.
+继承并改进 [Blue Topaz](https://github.com/PKM-er/Blue-Topaz_Obsidian-css)——最好的 Obsidian 中文主题。
 
-> 注意！由于 obsidian 的政策，不能使用在线或本地库里的图片，相关内置在线图片的选项已经删除，但保留自定义设置，需要显示背景图片请自行设置url。
-
-You will find a Blue Topaz example vault (the TIPS vault) here. The TIPS vault shows some theme-specific and novel usages which may help you polish or customize your notes.
-
-[中文版主题用法库](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/blob/master/TIPS%20vault/TIPS%20for%20Blue%20Topaz_Chinese.zip)
-
-[BT Tips Vault for English](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/blob/master/TIPS%20vault/TIPS%20for%20Blue%20Topaz_English.zip)
-
-And I still recommend you the enhanced edition (https://github.com/cumany/Blue-topaz-examples) created by @cumany, if you are not satisfied with the TIPS vault.
+> 原主题作者：[WhyI](https://github.com/whyt-byte) & [Pkmer](https://pkmer.cn)  
+> 原仓库：[PKM-er/Blue-Topaz_Obsidian-css](https://github.com/PKM-er/Blue-Topaz_Obsidian-css)
 
 ---
 
-If you want to distribute the whole or parts of the above codes, please copy & paste the following sentences in your CSS file(s) and README.md:
+## Changelog
 
-Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/PKM-er/Blue-Topaz_Obsidian-css), and I would like to express my appreciation to WhyI (https://github.com/whyt-byte) and pkmer.cn (https://pkmer.cn).
+### 2026-06-01
 
----
+**Bases 数据库插件适配**
+- 适配 Autumn 配色的色阶变量，Bases 表格和卡片视图与主题色调协调
+- 表格内部列分隔线改为暖黄灰色
+- 添加斑马纹偶数行背景，悬浮变色效果覆盖斑马纹行
+- 行悬浮时背景色加深，视觉反馈更明确
 
-# 示例 Demo vault
+**卡片视图优化**
+- 添加卡片圆角、阴影和悬浮上浮动效
+- 属性标签采用小号大写 muted 文字，排版更精致
+- 分组标题带暖色分割线
+- 超长文本字段自动截断，末尾显示 `…`
+- 鼠标悬浮时换行展开完整文本，带白底浮出阴影
+- 展开内容限高 200px，超出可滚动
 
-感谢[@cumany](https://github.com/cumany) 制作的升级版示例库 https://github.com/cumany/Blue-topaz-examples
+**加载动画**
+- 修复 Cat (GIF) 加载动画图片链接缺失的问题
+- 替换为正确的 CDN 资源地址
 
-如果有问题、建议或者想实现的需求，请加入 Topaz 社区[Topaz QQ 群](https://jq.qq.com/?_wv=1027&k=TWGhXs40)
-[Obsidian 频道](https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=zHpby&from=246610&biz=ka)
-
-目前我们新建了一个开源的知识管理社区欢迎加入，点击链接加入群聊 [PKMer 知识管理交流群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=lFMOfZnt5K07XWn8Y9Hs8skhmf8HaAwh&authKey=jWoLY%2BmDy5kqEEFs4%2FcVgIySwUXuwM6EyJvu4LCqJ9uFUgG2h1k4u3l6qC8i2AcO&noverify=0&group_code=825255377)
-
-微信群：
-![](https://cdn.pkmer.cn/images/wechatqrcode.png!nomark)
-
-# Preview
-
-<video id="video" x-webkit-airplay="true" webkit-playsinline="true" controls>
-   <source src="https://user-images.githubusercontent.com/72023275/198887926-44a4bf85-40fc-479a-8500-d00923de7136.mp4" type="video/mp4">
-</video>
-
-<video id="video" x-webkit-airplay="true" webkit-playsinline="true" controls>
-   <source src="https://user-images.githubusercontent.com/72023275/198887920-575d0735-2433-41ff-8960-3c7bacbdf532.mp4" type="video/mp4">
-</video>
-
-%%
-
-https://user-images.githubusercontent.com/72023275/198887926-44a4bf85-40fc-479a-8500-d00923de7136.mp4
-
-https://user-images.githubusercontent.com/72023275/198887920-575d0735-2433-41ff-8960-3c7bacbdf532.mp4
-
-%%
-
-（视频作者：@代号 7）
-
-![](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/preview_Blue%20Topaz.png)
-
-# Default style (Style Settings installed)
-
-![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/f7317905-2c05-4860-b30d-a580890f2ec0)
-![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/a9895fcd-1d89-4272-9914-33d6e2d42af4)
-
-# Color scheme
-
-![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/166222ab-379f-4e55-8c36-43ad56553162)
-![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/371427dc-a5e3-4db4-81de-f31ea9e532d4)
-
-# Background image
-
-## For workplace
-
-![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/9403f704-d983-4aa6-9196-239304ca8314)
-
-## For note
-
-![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/49084d2b-def8-4168-b169-c21f53cf581c)
-
-## Toggle both
-
-![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/48a94c43-f36c-45a7-8687-4a2adce5248d)
-![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/7bb19b3f-1c9e-418a-b1a1-ad1d5e465f4a)
-
-## Notebook-liked (For note)
-
-![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/9bc7562b-240b-46df-872f-ec0cbf791c54)
-![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/962c11e3-95f6-4059-af36-a3bbe8f33928)
-
-## For command palette
-
-It will provide you with a random image when you toggle the option:
-![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/98af11d6-8e4b-47d8-a54d-73279bfe5e4f)
-
-You can set the same image as your workplace background when you have activated the workplace background.
-![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/db688148-0b4d-4109-8e25-71f91dff5001)
-
-## For file explorer
-
-![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/7013642a-da37-4a5f-a58d-fd165a473913)
-
-# Layout
-
-## Colorful titlebar
-
-![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/efeb47b8-22d6-4e70-a157-82ccd2ea24a8)
-![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/e4be0e17-dc2f-4d46-b5a3-72c95758efee)
-
-# PDF
-
-![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/c74874e7-4ff4-431a-b7ae-58e6255704bc)
-
-![image](https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/3bc69e78-2665-468c-95d0-5f4dd995b720)
-
-# 插件 Plugin
-
-强烈建议安装 Style Settings 插件，用来自定义你的 Blue Topaz
-It is highly recommended to install the style settings plugin to customize your Blue Topaz theme
-![image](https://user-images.githubusercontent.com/72023275/148892207-ffbbb363-1a43-4267-a3f9-d95ee7cc9bd9.png)
-
-# 字体 (fonts)
-
-中文：霞鹜文楷，免费开源，下载地址：https://github.com/lxgw/LxgwWenKai 觉得喜欢的话，也请给这个项目星星。加粗字体请使用霞鹜文楷屏幕版（因为霞鹜文楷的加粗不是很明显）https://github.com/lxgw/LxgwWenKai-Screen
-
-# 更新内容
-
-[这里查看](https://github.com/whyt-byte/Blue-Topaz_Obsidian-css/blob/master/changes.md)
-
-# 捐赠 Support
-
-如果觉得主题很棒，可以支持一下，谢谢！   关注 [pkmer.cn](https://pkmer.cn/)
-
-支付宝
-
-<img src="https://github.com/PKM-er/Blue-Topaz_Obsidian-css/assets/72023275/4a8f9a6d-5156-4071-9a80-898b77b74ba3" width="200">
-
----
-
-Buy me a coffee
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/whyi)
-
-# Acknowledgements
-
-I appreciate the help and support from @boninall @成雙醬 @Cuman @Klaas @lillian-who @shaggyfeng @Thinkbond @, and other cool guys who love Blue Topaz!
+**主题信息**
+- 重命名为 Blue Topaz Alternate，与原版区分
