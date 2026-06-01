@@ -29875,16 +29875,17 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 
 .bases-cards-line:hover {
   overflow: visible;
-  white-space: nowrap;
-  width: max-content;
-  max-width: 80vw;
+  white-space: normal;
+  word-break: break-word;
   position: relative;
   z-index: 20;
   background: var(--background-primary);
   border-radius: 4px;
-  padding: 2px 10px;
-  margin: -2px -6px;
+  padding: 4px 8px;
+  margin: -4px -8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  max-width: 360px;
+  min-width: 100%;
 }
 
 .bases-group-heading {
