@@ -6575,6 +6575,7 @@ body.color-scheme-options-avocado-topaz.theme-dark {
 
   /*table*/
   --table-thead-background-color: #557f5c43;
+	--table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
   --table-hover-raw-color: #557f5c23;
   --table-hover-color: #557f5c23;
   --table-hover-thead-color: #557f5c53;
@@ -6622,47 +6623,12 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --table-color-rgb: 5, 158, 5;
   --divider-color: #000000;
 
-  --color-base-00: #fafaf3;
-  --color-base-05: #f5f5f0;
-  --color-base-10: #efefe8;
-  --color-base-20: #e8e8e0;
-  --color-base-25: #dddcd3;
-  --color-base-30: #d5d4ca;
-  --color-base-35: #c9c8bb;
-  --color-base-40: #b8b7a7;
-  --color-base-50: #a0a08f;
-  --color-base-60: #787869;
-  --color-base-70: #55554a;
-  --color-base-100: #2d2d26;
-
-  /*Bases - Avocado 暗夜 - tweak*/
+  /*Bases - Avocado 深色模式 - tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--low-color);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
-
-
-  /*Bases - color-base*/
-  --color-base-00: #181818;
-  --color-base-05: #1b1b1b;
-  --color-base-10: #212121;
-  --color-base-20: #2b2b2b;
-  --color-base-25: #353535;
-  --color-base-30: #3e3e3e;
-  --color-base-35: #4e4e4e;
-  --color-base-40: #656565;
-  --color-base-50: #828282;
-  --color-base-60: #a3a3a3;
-  --color-base-70: #bcbcbc;
-  --color-base-100: #dadada;
-
-  /*Bases tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--text-accent);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 
 }
 
@@ -6740,7 +6706,8 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --mermaid-active-task-color: #187ef1;
   --mermaid-seq-dia-color: #1371be;
 
-  --table-border-color: #878787;
+  /* table */
+	--table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
   --table-thead-background-color: #b3b3b363;
   --table-hover-raw-color: #4040401c;
   --table-hover-color: #59595947;
@@ -6773,8 +6740,6 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --sliding-panes-header-color: #ebebeb;
   --background-4-sliding-pane: #252525ed;
 
-
-
   --color-view-header-gradient-1: #000000de;
   --color-view-header-gradient-2: #000000c0;
 
@@ -6782,19 +6747,12 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --table-color-rgb: 69, 69, 69;
 
 
-  /*Bases - Monochrome 暗夜 - tweak*/
+  /*Bases - Monochrome 深色模式 - tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--low-color);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
-
-  /*Bases tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--deep-color);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 
 }
 
@@ -7214,7 +7172,7 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --mermaid-seq-dia-color: #1371be;
 
   /*table*/
-
+	--table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
   --table-thead-background-color: #a76c8f45;
   --table-hover-raw-color: #a76c8f25;
   --table-hover-color: #a76c8f2b;
@@ -7276,19 +7234,12 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --table-color-rgb: 215, 121, 153;
 
 
-  /*Bases - Pink 暗夜 - tweak*/
+  /*Bases - Pink 深色模式 - tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--low-color);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
-
-  /*Bases tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--text-accent);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 
 }
 
@@ -7368,13 +7319,17 @@ body.color-scheme-options-topaz-nord.theme-dark {
   --list-ol-number-color: var(--nord9);
   --list-ol-hover: var(--nord7);
 
+	/* table */
+	--table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
   --table-thead-background-color: var(--nord9-2);
   --table-hover-raw-color: var(--nord9-2);
   --table-hover-color: var(--nord9-2);
   --table-hover-thead-color: var(--nord9-1);
 
+	/* checkbox */
   --checkbox-color-0: var(--interactive-accent);
 
+	/* graph */
   --graph-text-color: var(--nord4);
   --graph-tag: var(--nord7);
   --graph-attach: var(--nord15);
@@ -7388,20 +7343,13 @@ body.color-scheme-options-topaz-nord.theme-dark {
   --divider-color: var(--nord0);
 
 
-  /*Bases - Nord 暗夜 - tweak*/
+  /*Bases - Nord 深色模式 - tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--low-color);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
-
-  /*Bases - nord tweak*/
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 
-  --bases-table-header-color: var(--text-accent);
-  --bases-table-header-color: var(--text-accent);
 }
 
 body.color-scheme-options-topaz-nord.theme-dark .titlebar-text {
@@ -7797,12 +7745,16 @@ body.color-scheme-options-flamingo.theme-dark {
 
   --search-result-file-title-color: #f39ba0;
   --background-blockquote-dark: #292929;
+
+	/* list */
   --list-ul-block-color: #f39ba0;
   --list-ul-disc-color: #f93759;
   --list-ul-hover: #ffebec;
   --list-ol-block-color: #f39ba0;
   --list-ol-number-color: #ffccbc;
   --list-ol-hover: #ffebec;
+	
+	/* tag */
   --stag1: #f39ba0;
   --stag2: #ffccbc;
   --stag3: #ffebec;
@@ -7819,6 +7771,7 @@ body.color-scheme-options-flamingo.theme-dark {
   --h5-color: var(--print-h5-color,#ffccbc);
   --h6-color: var(--print-h6-color,#ffccbc);
 
+	/* graph */
   --graph-text-color: #efe9d9;
   --graph-tag: #f39ba0;
   --graph-attach: #ffebec;
@@ -7826,23 +7779,35 @@ body.color-scheme-options-flamingo.theme-dark {
   --graph-line: #ffc3bc;
   --graph-unresolved: #ffccbc;
   --graph-arrow: #ffc3bc;
+
+	/* mermaid */
   --mermaid-active-task-color: #F39BA4;
   --mermaid-seq-dia-color: #ffebec;
+
+	/* table */
   --table-background-color: #212121;
   --table-background-color-odd: transparent;
-  --table-border-color: #ffebec;
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
   --table-thead-background-color: #f39ba0ad;
   --table-hover-raw-color: #292929;
   --table-hover-color: #ffccbc0a;
   --table-hover-thead-color: #f39ba0;
+	--table-color-calendar-2: rgb(215, 86, 125);
+  --table-color-rgb: 215, 86, 125;
+
+	/* calendar */
   --calendar-week-color: #ffccbc;
   --calendar-week-hover: #f39ba0;
   --calendar-week-background-color: transparent;
+
+	/* day planner */
   --day-planner-pie: #ffccbc;
   --day-planner-timeline: #ff9b7c;
   --day-planner-line: #f39ba0;
   --day-planner-dot: #ffebec;
   --day-planner-item-hover: #f39ba0;
+
+	/* event */
   --event-item-color9: #ffc3bc;
   --event-item-color8: #ffbcbc;
   --event-item-color10: #ffccbc;
@@ -7864,25 +7829,16 @@ body.color-scheme-options-flamingo.theme-dark {
   --color-view-header-gradient-1: #21212122;
   --color-view-header-gradient-2: #21212122;
 
-  --table-color-calendar-2: rgb(215, 86, 125);
-  --table-color-rgb: 215, 86, 125;
   --scrollbar-thumb-bg: #e2bdbd50;
   --scrollbar-active-thumb-bg: #e2bdbd;
 
-
-  /*Bases - Flamingo 暗夜 - tweak*/
+  /*Bases - Flamingo 深色模式 - tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--low-color);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
-
-  /*Bases tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--deep-color);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+
 }
 
 body.color-scheme-options-flamingo.theme-light #calendar-container {
@@ -8281,9 +8237,10 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
   --mermaid-active-task-color: var(--low-color);
   --mermaid-seq-dia-color: var(--high-color);
 
+	/* table */
   --table-background-color: var(--bg-color2);
   --table-background-color-odd: var(--bg-color);
-  --table-border-color: #878787;
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
   --table-thead-background-color:  var(--color11);
   --table-hover-raw-color: var(--color10);
   --table-hover-color: var(--color11);;
@@ -8325,19 +8282,13 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
   --table-color-rgb: 120, 104, 38;
 
 
-  /*Bases - Honey milk 暗夜 - tweak*/
+  /*Bases - Honey milk 深色模式 - tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--low-color);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
-
-  /*Bases tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--deep-color);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+
 }
 
 body.color-scheme-options-honey-milk-topaz #calendar-container {
@@ -8657,7 +8608,7 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
   /*table*/
   --table-background-color: var(--bg-color2);
   --table-background-color-odd: var(--bg-color);
-  --table-border-color: #878787;
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
   --table-thead-background-color:  var(--color11);
   --table-hover-raw-color: var(--color10);
   --table-hover-color: var(--color11);;
@@ -8700,19 +8651,13 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
   --table-color-rgb: 70, 45, 6;
 
 
-  /*Bases - Chocolate 暗夜 - tweak*/
+  /*Bases - Chocolate 深色模式 - tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--low-color);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
 
-  /*Bases tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--low-color);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
 body.color-scheme-options-chocolate-topaz #calendar-container {
@@ -8981,7 +8926,7 @@ body.color-scheme-options-autumn-topaz.theme-dark {
   /*table*/
   --table-background-color: var(--bg-color2);
   --table-background-color-odd: var(--bg-color);
-  --table-border-color: #878787;
+	--table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
   --table-thead-background-color:  var(--color11);
   --table-hover-raw-color: var(--color10);
   --table-hover-color: var(--color11);;
@@ -9021,20 +8966,13 @@ body.color-scheme-options-autumn-topaz.theme-dark {
   /*checkbox*/
   --checkbox-color-0: var(--main-color);
 
-  /*Bases - Autumn 暗夜 - tweak*/
+  /*Bases - Autumn 深色模式 - tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--low-color);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
-
-  /*Bases tweak*/
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--low-color);
-
-  --table-color-calendar-2: rgb(81, 165, 39);
-  --table-color-rgb: 81, 165, 39;
+	
 }
 
 body.color-scheme-options-autumn-topaz #calendar-container {
@@ -9293,7 +9231,7 @@ body.color-scheme-options-lillimon-topaz.theme-dark {
   /*table*/
   --table-background-color: var(--bg-color2);
   --table-background-color-odd: var(--bg-color);
-  --table-border-color: #878787;
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
   --table-thead-background-color: var(--color11);
   --table-hover-raw-color: var(--color10);
   --table-hover-color: var(--color11);
@@ -9332,19 +9270,13 @@ body.color-scheme-options-lillimon-topaz.theme-dark {
   --checkbox-color-0: var(--magic-main-color);
 
 
-  /*Bases - Lillimon 暗夜 - tweak*/
+  /*Bases - Lillimon 深色模式 - tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--low-color);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
-
-  /*Bases tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--deep-color);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+
 }
 
 body.color-scheme-options-lillimon-topaz #calendar-container {
@@ -9592,12 +9524,15 @@ body.color-scheme-options-lilac.theme-dark {
 
   --strong-em-highlight-color: #9c8ce6;
 
+	/* text */
   --text-highlight-bg-h: 286;
   --text-highlight-bg-s: 40%;
   --text-highlight-bg-l: 38%;
   --text-highlight-bg-a: 0.541;
   --text-highlight-bg: hsla(var(--text-highlight-bg-h), var(--text-highlight-bg-s), var(--text-highlight-bg-l), var(--text-highlight-bg-a));
   --text-search-highlight-bg: #bb4361;
+	--text-color-code: #d58000;
+
   --strong-em-color-1: #9c8ce6;
   --strong-em-color-2: #23d05c;
 
@@ -9613,10 +9548,10 @@ body.color-scheme-options-lilac.theme-dark {
   --background-blockquote: #9191911c;
   --background-code: #1111118c;
   --background-code-2: #4c4c4cb0;
-  --text-color-code: #d58000;
-
+  
   --internal-link-color: #a360da;
 
+	/* list */
   --list-ul: #f1a8f8;
   --list-ul-block-color: #e142d9a9;
   --list-ul-disc-color: #ae63eb;
@@ -9626,6 +9561,7 @@ body.color-scheme-options-lilac.theme-dark {
   --list-ol-number-color: #b595c4;
   --list-ol-hover: #ba2cd6;
 
+	/* tag */
   --tag-text: #e4e4e4;
   --stag1: #f08383;
   --stag1-bg: #bd1919;
@@ -9660,7 +9596,7 @@ body.color-scheme-options-lilac.theme-dark {
   /*table*/
   --table-background-color: #58266e;
   --table-background-color-odd: #0000001c;
-  --table-border-color: #ac9494;
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
   --table-thead-background-color: #4332ddc2;
   --table-hover-raw-color: #08569a21;
   --table-hover-color: #4125a5a1;
@@ -9719,19 +9655,14 @@ body.color-scheme-options-lilac.theme-dark {
   --tab-stacked-shadow: #240a2e;
 
 
-  /*Bases - Lilac 暗夜 - tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  /*Bases - Lilac 深色模式 - tweak*/
+	--bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--low-color);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
-
-  /*Bases tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--text-accent);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+  
 }
 
 /*分割工作区的线透明*/
@@ -10017,21 +9948,15 @@ body.color-scheme-options-simplicity-topaz.theme-dark {
   --search-result-background:var(--simple-gray-2);
   --scrollbar-bg: transparent;
 
-
-
-  /*Bases - Simplicity 暗夜 - tweak*/
+	--table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+	
+  /*Bases - Simplicity 深色模式 - tweak*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--low-color);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
-
-  /*Bases tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--text-accent);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+
 }
 
 body.color-scheme-options-simplicity-topaz:not(.background-settings-workplace-background-image) {
