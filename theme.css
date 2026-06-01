@@ -29829,7 +29829,11 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 .bases-cards-item:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transform: translateY(-1px);
-  overflow: visible;
+  overflow: visible !important;
+}
+
+.bases-cards-item:hover .bases-cards-property {
+  overflow: visible !important;
 }
 
 .bases-cards-cover {
