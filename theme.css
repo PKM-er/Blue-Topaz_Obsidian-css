@@ -5992,7 +5992,7 @@ body.all-dark-pdf .print,
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-header-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.20);
-  --bases-table-border-color: var(--background-modifier-border);
+  --bases-table-border-color: transparent;
   --bases-table-column-border-width: 0px;
   --bases-table-row-border-width: 1px;
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.06);
@@ -6360,7 +6360,7 @@ body.all-dark-pdf .print,
 	--bases-table-header-background: var(--background-secondary-alt);
   --bases-table-header-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.20);
-  --bases-table-border-color: var(--background-modifier-border);
+  --bases-table-border-color: transparent;
   --bases-table-column-border-width: 0px;
   --bases-table-row-border-width: 1px;
 	--bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
@@ -8688,7 +8688,6 @@ body.color-scheme-options-autumn-topaz.theme-light {
   --color-base-100: #2b2b26;
 
   /*Bases Autumn tweak*/
-  --bases-table-border-color: var(--color-base-01);
   --bases-table-header-color: var(--deep-color);
 	--bases-table-header-background: var(--background-secondary-alt);
   --bases-table-row-background-hover: color-mix(in srgb, var(--color1) 80%, var(--color-base-03));
