@@ -5989,7 +5989,7 @@ body.all-dark-pdf .print,
   --bases-table-container-border-radius: 6px;
   --bases-table-header-weight: 600;
   --bases-table-header-color: var(--text-accent);
-  --bases-table-header-background: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.10);
+  --bases-table-header-background: transparent;
   --bases-table-header-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.20);
   --bases-table-border-color: var(--background-modifier-border);
@@ -6511,7 +6511,7 @@ body.color-scheme-options-avocado-topaz.theme-light {
 
   /*Bases - tweaks*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.12);
+  --bases-table-header-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--text-accent);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
@@ -6647,7 +6647,7 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --bases-table-container-border-radius: 6px;
   --bases-table-header-weight: 600;
   --bases-table-header-color: var(--text-accent);
-  --bases-table-header-background: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.10);
+  --bases-table-header-background: transparent;
   --bases-table-header-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.20);
   --bases-table-border-color: var(--background-modifier-border);
@@ -6677,7 +6677,7 @@ body.color-scheme-options-avocado-topaz.theme-dark {
 
   /*Bases - tweaks*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.12);
+  --bases-table-header-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--text-accent);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
@@ -6816,7 +6816,7 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
 
   /*Bases - tweaks*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.12);
+  --bases-table-header-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--text-accent);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
@@ -6961,7 +6961,7 @@ body.color-scheme-options-monochrome-topaz.theme-light {
 
   /*Bases - tweaks*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.12);
+  --bases-table-header-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--text-accent);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
@@ -7147,7 +7147,7 @@ body.color-scheme-options-pink-topaz.theme-light {
 
   /*Bases - tweaks*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.12);
+  --bases-table-header-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--text-accent);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
@@ -7319,7 +7319,7 @@ body.color-scheme-options-pink-topaz.theme-dark {
 
   /*Bases - tweaks*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.12);
+  --bases-table-header-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--text-accent);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
@@ -7438,7 +7438,7 @@ body.color-scheme-options-topaz-nord.theme-dark {
 
   /*Bases - tweaks*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.12);
+  --bases-table-header-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--text-accent);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
@@ -7621,7 +7621,7 @@ body.color-scheme-options-topaz-nord.theme-light {
 
   /*Bases - tweaks*/
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.12);
+  --bases-table-header-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
   --bases-table-header-color: var(--text-accent);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
