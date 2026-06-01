@@ -5977,7 +5977,7 @@ body.all-dark-pdf .print,
   --color-base-70: #b5b5b5;
   --color-base-100: #dcdcdc;
 
-  /*Bases*/
+  /*Bases Dark*/
   --bases-header-border-width: 1px;
   --bases-header-height: 40px;
   --bases-header-padding-start: 8px;
@@ -5998,7 +5998,6 @@ body.all-dark-pdf .print,
   --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.06);
   --bases-table-group-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.15);
-  --bases-table-row-height: 32px;
   --bases-table-text-size: var(--font-text-size);
   --bases-table-cell-background-active: var(--text-accent-hover);
   --bases-table-cell-shadow-active: 0 0 0 1px var(--interactive-accent);
@@ -6345,6 +6344,31 @@ body.all-dark-pdf .print,
   --bt-indentation-line-image: url("");
   --bt-connected-indent-line-color: #FFA8A8;
   --list-colorful-marker: #fd4949;
+	
+	/*Bases*/
+  --bases-header-border-width: 1px;
+  --bases-header-height: 40px;
+  --bases-header-padding-start: 8px;
+  --bases-header-padding-end: 8px;
+  --bases-embed-border-width: 1px;
+  --bases-embed-border-color: var(--background-modifier-border);
+  --bases-embed-border-radius: 6px;
+  --bases-table-container-border-width: 1px;
+  --bases-table-container-border-radius: 6px;
+  --bases-table-header-weight: 600;
+  --bases-table-header-color: var(--deep-color);
+	--bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-header-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.20);
+  --bases-table-border-color: var(--background-modifier-border);
+  --bases-table-column-border-width: 0px;
+  --bases-table-row-border-width: 1px;
+	--bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-group-background: transparent;
+	--bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+	--bases-table-text-size: var(--font-text-size);
+  --bases-table-cell-background-active: var(--text-accent-hover);
+  --bases-table-cell-shadow-active: 0 0 0 1px var(--interactive-accent);
 }
 
 body.color-scheme-options-avocado-topaz .theme-light,
@@ -6448,11 +6472,13 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --mermaid-seq-dia-color: #76c8ff;
 
   /*table*/
-  --table-border-color: #7d7d7d;
+	--table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
   --table-thead-background-color: #dbe4dac7;
   --table-hover-raw-color: #dbe4da57;
   --table-hover-color: #dbe4da37;
   --table-hover-thead-color: #dbe4da;
+	--table-color-calendar-2: rgb(182, 221, 191);
+  --table-color-rgb: 182, 221, 191;
 
   /*calendar*/
   --calendar-week-color: #48b432;
@@ -6492,29 +6518,7 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --checkbox-color-5: #ad7fbf;
   --checkbox-color-6: #5f5f5f;
 
-  --table-color-calendar-2: rgb(182, 221, 191);
-  --table-color-rgb: 182, 221, 191;
-
-
-  /*Bases - color-base*/
-  --color-base-00: #ffffff;
-  --color-base-05: #fafafa;
-  --color-base-10: #f3f3f3;
-  --color-base-20: #e8e8e8;
-  --color-base-25: #dddddd;
-  --color-base-30: #d2d2d2;
-  --color-base-35: #c0c0c0;
-  --color-base-40: #a5a5a5;
-  --color-base-50: #848484;
-  --color-base-60: #5e5e5e;
-  --color-base-70: #414141;
-  --color-base-100: #202020;
-
-  /*Bases tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--text-accent);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+  /*Bases 继承默认主题*/
 
 }
 
@@ -6623,15 +6627,9 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --table-color-rgb: 5, 158, 5;
   --divider-color: #000000;
 
-  /*Bases - Avocado 深色模式 - tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--low-color);
+  /*Bases tweak inherits default dark theme*/
 
 }
-
 
 body.color-scheme-options-monochrome-topaz.theme-dark {
   --background-primary: var(--background-primary-bg-4-bt,#1e1e1e);
@@ -6747,12 +6745,7 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --table-color-rgb: 69, 69, 69;
 
 
-  /*Bases - Monochrome 深色模式 - tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
-  --bases-table-header-color: var(--low-color);
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  /*Bases 继承默认主题*/
 
 }
 
@@ -6838,7 +6831,7 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --mermaid-seq-dia-color: #76c8ff;
 
   /*table*/
-  --table-border-color: #7d7d7d;
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
   --table-thead-background-color: #bdbdbdc7;
   --table-hover-raw-color: #f0f0f063;
   --table-hover-color: #e3e3e354;
@@ -6877,26 +6870,7 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --table-color-calendar-2: rgb(212, 212, 212);
   --table-color-rgb: 212, 212, 212;
 
-
-  /*Bases - color-base*/
-  --color-base-00: #ffffff;
-  --color-base-05: #fafafa;
-  --color-base-10: #f3f3f3;
-  --color-base-20: #e8e8e8;
-  --color-base-25: #dddddd;
-  --color-base-30: #d2d2d2;
-  --color-base-35: #c0c0c0;
-  --color-base-40: #a5a5a5;
-  --color-base-50: #848484;
-  --color-base-60: #5e5e5e;
-  --color-base-70: #414141;
-  --color-base-100: #202020;
-
-  /*Bases tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--deep-color);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+  /*Bases 继承默认主题*/
 
 }
 
@@ -7007,8 +6981,7 @@ body.color-scheme-options-pink-topaz.theme-light {
   --mermaid-seq-dia-color: #76c8ff;
 
   /*table*/
-
-  --table-border-color: #7d7d7d;
+	--table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
   --table-thead-background-color: #fad1e96f;
   --table-hover-raw-color: #fad1e92f;
   --table-hover-color: #fad1e92f;
@@ -7062,26 +7035,7 @@ body.color-scheme-options-pink-topaz.theme-light {
   --table-color-calendar-2: rgb(245, 214, 224);
   --table-color-rgb: 245, 214, 224;
 
-
-  /*Bases - color-base*/
-  --color-base-00: #ffffff;
-  --color-base-05: #fafafa;
-  --color-base-10: #f3f3f3;
-  --color-base-20: #e8e8e8;
-  --color-base-25: #dddddd;
-  --color-base-30: #d2d2d2;
-  --color-base-35: #c0c0c0;
-  --color-base-40: #a5a5a5;
-  --color-base-50: #848484;
-  --color-base-60: #5e5e5e;
-  --color-base-70: #414141;
-  --color-base-100: #202020;
-
-  /*Bases tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--text-accent);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+  /*Bases 继承默认主题*/
 
 }
 
@@ -7233,13 +7187,7 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --table-color-calendar-2: rgb(215, 121, 153);
   --table-color-rgb: 215, 121, 153;
 
-
-  /*Bases - Pink 深色模式 - tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--low-color);
+	/*Bases 继承默认主题*/
 
 }
 
@@ -7343,12 +7291,7 @@ body.color-scheme-options-topaz-nord.theme-dark {
   --divider-color: var(--nord0);
 
 
-  /*Bases - Nord 深色模式 - tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
-  --bases-table-header-color: var(--low-color);
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  /*Bases 继承默认主题*/
 
 }
 
@@ -7494,6 +7437,8 @@ body.color-scheme-options-topaz-nord.theme-light {
   --list-ol-number-color: var(--nord9);
   --list-ol-hover: var(--nord7);
 
+	/* table */
+	--table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
   --table-thead-background-color: var(--nord9-2);
   --table-hover-raw-color: var(--nord9-2);
   --table-hover-color: var(--nord9-2);
@@ -7511,26 +7456,8 @@ body.color-scheme-options-topaz-nord.theme-light {
 
   --text-search-highlight-bg: var(--nord9-2);
 
+  /*Bases 继承默认主题*/
 
-  /*Bases - color-base*/
-  --color-base-00: #eceff4;
-  --color-base-05: #e7eaef;
-  --color-base-10: #e1e4e9;
-  --color-base-20: #d7dade;
-  --color-base-25: #cdcfd4;
-  --color-base-30: #c3c5c9;
-  --color-base-35: #b2b5b8;
-  --color-base-40: #9a9c9f;
-  --color-base-50: #7b7d7f;
-  --color-base-60: #59595b;
-  --color-base-70: #3e3f3f;
-  --color-base-100: #202020;
-
-  /*Bases - nord tweak*/
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
-
-  --bases-table-header-color: var(--text-accent);
 }
 
 /*@Lavi & @嘴 的Flamingo主题色（原Pink Topaz）*/
@@ -7617,6 +7544,7 @@ body.color-scheme-options-flamingo.theme-light {
   --h5-color: var(--print-h5-color,#f39ba0);
   --h6-color: var(--print-h6-color,#f39ba0);
 
+	/* graph */
   --graph-text-color: #37291a;
   --graph-tag: #ffdece;
   --graph-attach: #f5a7a2;
@@ -7624,18 +7552,28 @@ body.color-scheme-options-flamingo.theme-light {
   --graph-line: #fea2c2;
   --graph-unresolved: #E87659;
   --graph-arrow: #980000;
+
+	/* mermaid */
   --mermaid-active-task-color: #f5a7a2;
   --mermaid-seq-dia-color: #ffdece;
+
+	/* table */
   --table-background-color: #ffdece;
   --table-background-color-odd: #ffdece;
-  --table-border-color: #fd355a;
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
   --table-thead-background-color: #f5a7a2;
   --table-hover-color: #f5a7a2;
   --table-hover-thead-color: #f5a7a2;
   --table-hover-raw-color: #ffdece;
+	--table-color-calendar-2: rgb(214, 118, 146);
+  --table-color-rgb: 214, 118, 146;
+
+	/* calendar */
   --calendar-week-color: #f5a7a2;
   --calendar-week-hover: #ffdece;
   --calendar-week-background-color: #ffdece;
+
+	/* day planner */
   --day-planner-pie: #f5a7a2;
   --day-planner-timeline: #ffdece;
   --day-planner-line: #fd355a;
@@ -7662,31 +7600,11 @@ body.color-scheme-options-flamingo.theme-light {
   --color-view-header-gradient-1: #efe9d933;
   --color-view-header-gradient-2: #efe9d933;
 
-  --table-color-calendar-2: rgb(214, 118, 146);
-  --table-color-rgb: 214, 118, 146;
   --scrollbar-thumb-bg: #f39ba050;
   --scrollbar-active-thumb-bg: #f39ba0;
 
+  /*Bases 继承默认主题*/
 
-  /*Bases - color-base*/
-  --color-base-00: #faf4eb;
-  --color-base-05: #f5efe6;
-  --color-base-10: #efe9e0;
-  --color-base-20: #e4ded6;
-  --color-base-25: #d9d4cc;
-  --color-base-30: #cec9c2;
-  --color-base-35: #bcb8b2;
-  --color-base-40: #a29f99;
-  --color-base-50: #827f7b;
-  --color-base-60: #5d5b58;
-  --color-base-70: #403f3e;
-  --color-base-100: #202020;
-
-  /*Bases tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--text-accent);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
 
@@ -7832,12 +7750,7 @@ body.color-scheme-options-flamingo.theme-dark {
   --scrollbar-thumb-bg: #e2bdbd50;
   --scrollbar-active-thumb-bg: #e2bdbd;
 
-  /*Bases - Flamingo 深色模式 - tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
-  --bases-table-header-color: var(--low-color);
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  /*Bases 继承默认主题*/
 
 }
 
@@ -8068,7 +7981,7 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   /*table*/
   --table-background-color: var(--bg-color2);
   --table-background-color-odd: #ffffffaf;
-  --table-border-color: #7d7d7d;
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
   --table-thead-background-color: var(--color1);
   --table-hover-raw-color: var(--color2);
   --table-hover-color: var(--color1);
@@ -8123,26 +8036,8 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   --table-color-calendar-2: rgb(242, 235, 207);
   --table-color-rgb: 242, 235, 207;
 
+  /*Bases 继承默认主题*/
 
-  /*Bases - color-base*/
-  --color-base-00: #f8f8f5;
-  --color-base-05: #f3f3f0;
-  --color-base-10: #ededea;
-  --color-base-20: #e2e2df;
-  --color-base-25: #d7d7d5;
-  --color-base-30: #ccccca;
-  --color-base-35: #bbbbb9;
-  --color-base-40: #a1a19f;
-  --color-base-50: #81817f;
-  --color-base-60: #5c5c5b;
-  --color-base-70: #40403f;
-  --color-base-100: #202020;
-
-  /*Bases tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--low-color);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
 
@@ -8282,12 +8177,7 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
   --table-color-rgb: 120, 104, 38;
 
 
-  /*Bases - Honey milk 深色模式 - tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
-  --bases-table-header-color: var(--low-color);
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  /*Bases 继承默认主题*/
 
 }
 
@@ -8422,11 +8312,13 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   /*table*/
   --table-background-color: var(--bg-color2);
   --table-background-color-odd: var(--bg-color);
-  --table-border-color: #7d7d7d;
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
   --table-thead-background-color: var(--color1);
   --table-hover-raw-color: var(--color2);
   --table-hover-color: var(--color1);
   --table-hover-thead-color: var(--color2);
+	--table-color-calendar-2: rgb(76, 52, 16);
+  --table-color-rgb: 76, 52, 16;
 
   /*calendar*/
   --calendar-week-color: var(--high-color);
@@ -8461,29 +8353,8 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   /*checkbox*/
   --checkbox-color-0: var(--main-color);
 
-  --table-color-calendar-2: rgb(76, 52, 16);
-  --table-color-rgb: 76, 52, 16;
-
-
-  /*Bases - color-base*/
-  --color-base-00: #faf4eb;
-  --color-base-05: #f5efe6;
-  --color-base-10: #efe9e0;
-  --color-base-20: #e4ded6;
-  --color-base-25: #d9d4cc;
-  --color-base-30: #cec9c2;
-  --color-base-35: #bcb8b2;
-  --color-base-40: #a29f99;
-  --color-base-50: #827f7b;
-  --color-base-60: #5d5b58;
-  --color-base-70: #403f3e;
-  --color-base-100: #202020;
-
-  /*Bases tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--low-color);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+  /*Bases 继承默认主题*/
+  
 }
 
 body.color-scheme-options-chocolate-topaz.theme-dark {
@@ -8651,12 +8522,7 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
   --table-color-rgb: 70, 45, 6;
 
 
-  /*Bases - Chocolate 深色模式 - tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
-  --bases-table-header-color: var(--low-color);
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  /*Bases 继承默认主题*/
 
 }
 
@@ -8766,7 +8632,9 @@ body.color-scheme-options-autumn-topaz.theme-light {
   /*table*/
   --table-background-color: var(--bg-color2);
   --table-background-color-odd: var(--bg-color);
-  --table-border-color: #7d7d7d;
+	--table-border-color: #c5b896;
+	--table-color-calendar-2: rgb(222, 236, 182);
+  --table-color-rgb: 222, 236, 182;
   --table-thead-background-color: var(--color1);
   --table-hover-raw-color: var(--color2);
   --table-hover-color: var(--color1);
@@ -8806,9 +8674,9 @@ body.color-scheme-options-autumn-topaz.theme-light {
   --checkbox-color-0: var(--main-color);
 
   /*Bases - color-base*/
-  --color-base-00: #fafaf3;
-  --color-base-05: #f4f4ed;
-  --color-base-10: #eeeee6;
+  --color-base-01: #bfb9a0;
+  --color-base-02: #c5b896;
+  --color-base-03: #aaa;
   --color-base-20: #e6e6dd;
   --color-base-25: #dbdbd2;
   --color-base-30: #d0d0c6;
@@ -8819,15 +8687,13 @@ body.color-scheme-options-autumn-topaz.theme-light {
   --color-base-70: #515149;
   --color-base-100: #2b2b26;
 
-  /*Bases tweak*/
-  --bases-table-border-color: #bfb9a0;
-  --table-border-color: #c5b896;
-  --bases-table-header-color: var(--low-color);
-  --bases-table-row-background-hover: color-mix(in srgb, var(--color1) 80%, #aaa);
+  /*Bases Autumn tweak*/
+  --bases-table-border-color: var(--color-base-01);
+  --bases-table-header-color: var(--deep-color);
+	--bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-row-background-hover: color-mix(in srgb, var(--color1) 80%, var(--color-base-03));
   --bases-table-stripe-color: color-mix(in srgb, var(--color2) 20%, transparent);
 
-  --table-color-calendar-2: rgb(222, 236, 182);
-  --table-color-rgb: 222, 236, 182;
 }
 
 
@@ -8966,11 +8832,7 @@ body.color-scheme-options-autumn-topaz.theme-dark {
   /*checkbox*/
   --checkbox-color-0: var(--main-color);
 
-  /*Bases - Autumn 深色模式 - tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  /*Bases Autumn 深色模式 tweak*/
   --bases-table-header-color: var(--low-color);
 	
 }
@@ -9086,7 +8948,7 @@ body.color-scheme-options-lillimon-topaz.theme-light {
   /*table*/
   --table-background-color: var(--bg-color2);
   --table-background-color-odd: var(--bg-color);
-  --table-border-color: #7d7d7d;
+  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
   --table-thead-background-color: var(--color1);
   --table-hover-raw-color: var(--color2);
   --table-hover-color: var(--color1);
@@ -9125,26 +8987,8 @@ body.color-scheme-options-lillimon-topaz.theme-light {
   /*checkbox*/
   --checkbox-color-0: var(--magic-main-color);
 
-
-  /*Bases - color-base*/
-  --color-base-00: #f8f8f5;
-  --color-base-05: #f3f3f0;
-  --color-base-10: #ededea;
-  --color-base-20: #e2e2df;
-  --color-base-25: #d7d7d5;
-  --color-base-30: #ccccca;
-  --color-base-35: #bbbbb9;
-  --color-base-40: #a1a19f;
-  --color-base-50: #81817f;
-  --color-base-60: #5c5c5b;
-  --color-base-70: #40403f;
-  --color-base-100: #202020;
-
-  /*Bases tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--text-accent);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+  /*Bases 继承默认主题*/
+  
 }
 
 
@@ -9270,12 +9114,7 @@ body.color-scheme-options-lillimon-topaz.theme-dark {
   --checkbox-color-0: var(--magic-main-color);
 
 
-  /*Bases - Lillimon 深色模式 - tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
-  --bases-table-header-color: var(--low-color);
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  /*Bases 继承默认主题*/
 
 }
 
@@ -9353,6 +9192,7 @@ body.color-scheme-options-lilac.theme-light {
 
   --internal-link-color: #6203a2;
 
+	/* list */
   --list-ul: #ffffff;
   --list-ul-block-color: #7f1bb9;
   --list-ul-disc-color: #d955f3;
@@ -9363,6 +9203,7 @@ body.color-scheme-options-lilac.theme-light {
 
   --green-1: #9c30c7;
 
+	/* tag */
   --tag-text: #d2a3d4;
   --stag1: #fa8787;
   --stag1-bg: #eb2727;
@@ -9370,13 +9211,11 @@ body.color-scheme-options-lilac.theme-light {
   --stag2-bg: #ee9002;
   --stag3: #50ce3a;
   --stag3-bg: #22ac09;
-
   --tag1: #2b85ce;
   --tag2: #29b325;
   --tag3: #20b9ce;
   --tag4: #dfd331;
   --tag5: #bbbbbb;
-
   --tag-dailynote: #0077ff;
   --tag-dailynote-bg: #277CDD;
   --tag-weeklynote: #4b9fff;
@@ -9386,6 +9225,7 @@ body.color-scheme-options-lilac.theme-light {
   --tag-ideas: #ceb900;
   --tag-ideas-bg: #444444d8;
 
+	/* header */
   --h1-color: var(--print-h1-color, #6F6493);
   --h2-color: var(--print-h2-color, #724681);
   --h3-color: var(--print-h3-color, #330349);
@@ -9473,7 +9313,6 @@ body.color-scheme-options-lilac.theme-light {
   --divider-color: #d7c4f2;
   --tab-stacked-shadow: #c69fd5;
 
-
   /*Bases - color-base*/
   --color-base-00: #fdf7fb;
   --color-base-05: #f8f2f6;
@@ -9488,11 +9327,8 @@ body.color-scheme-options-lilac.theme-light {
   --color-base-70: #414040;
   --color-base-100: #202020;
 
-  /*Bases tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--text-accent);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+  /*Bases 继承默认主题*/
+	
 }
 
 
@@ -9654,14 +9490,7 @@ body.color-scheme-options-lilac.theme-dark {
 
   --tab-stacked-shadow: #240a2e;
 
-
-  /*Bases - Lilac 深色模式 - tweak*/
-	--bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
-  --bases-table-header-color: var(--low-color);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  /*Bases 继承默认主题*/
   
 }
 
@@ -9848,25 +9677,8 @@ body.color-scheme-options-simplicity-topaz.theme-light {
   --theme-color-translucent-01: hsla(254,80%,68%,0.1);
 
 
-  /*Bases - color-base*/
-  --color-base-00: #fafaf3;
-  --color-base-05: #f5f5ee;
-  --color-base-10: #efefe8;
-  --color-base-20: #e4e4dd;
-  --color-base-25: #d9d9d3;
-  --color-base-30: #cecec8;
-  --color-base-35: #bcbcb7;
-  --color-base-40: #a2a29e;
-  --color-base-50: #82827e;
-  --color-base-60: #5d5d5b;
-  --color-base-70: #40403f;
-  --color-base-100: #202020;
+  /*Bases 继承默认主题*/
 
-  /*Bases tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--text-accent);
-  --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
 
@@ -9950,12 +9762,7 @@ body.color-scheme-options-simplicity-topaz.theme-dark {
 
 	--table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 	
-  /*Bases - Simplicity 深色模式 - tweak*/
-  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-group-background: transparent;
-  --bases-table-header-color: var(--low-color);
-  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  /*Bases 继承默认主题*/
 
 }
 
