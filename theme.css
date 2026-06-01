@@ -5994,7 +5994,8 @@ body.all-dark-pdf .print,
   --bases-table-border-color: var(--background-modifier-border);
   --bases-table-column-border-width: 0px;
   --bases-table-row-border-width: 1px;
-  --bases-table-row-background-hover: var(--background-modifier-hover);
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.06);
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.15);
   --bases-table-row-height: 32px;
   --bases-table-text-size: var(--font-text-size);
   --bases-table-cell-background-active: var(--text-accent-hover);
@@ -6508,9 +6509,10 @@ body.color-scheme-options-avocado-topaz.theme-light {
   --color-base-100: #202020;
 
   /*Bases - tweaks*/
-  --bases-table-border-color: #ededed;
-  --bases-table-header-background: #f8f8f8;
-  --bases-table-row-background-hover: #f9f9f9;
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--text-accent);
 
 }
 
@@ -6648,7 +6650,8 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --bases-table-border-color: var(--background-modifier-border);
   --bases-table-column-border-width: 0px;
   --bases-table-row-border-width: 1px;
-  --bases-table-row-background-hover: var(--background-modifier-hover);
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.06);
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.15);
   --bases-table-row-height: 32px;
   --bases-table-text-size: var(--font-text-size);
   --bases-table-cell-background-active: var(--text-accent-hover);
@@ -6670,9 +6673,10 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --color-base-100: #dadada;
 
   /*Bases - tweaks*/
-  --bases-table-border-color: #3c3c3c;
-  --bases-table-header-background: #2a2a2a;
-  --bases-table-row-background-hover: #232323;
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--text-accent);
 
 }
 
@@ -6807,9 +6811,10 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --color-base-100: #dadada;
 
   /*Bases - tweaks*/
-  --bases-table-border-color: #414141;
-  --bases-table-header-background: #303030;
-  --bases-table-row-background-hover: #292929;
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--text-accent);
 
 }
 
@@ -6950,9 +6955,10 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --color-base-100: #202020;
 
   /*Bases - tweaks*/
-  --bases-table-border-color: #ededed;
-  --bases-table-header-background: #f8f8f8;
-  --bases-table-row-background-hover: #f9f9f9;
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--text-accent);
 
 }
 
@@ -7134,9 +7140,10 @@ body.color-scheme-options-pink-topaz.theme-light {
   --color-base-100: #202020;
 
   /*Bases - tweaks*/
-  --bases-table-border-color: #ededed;
-  --bases-table-header-background: #f8f8f8;
-  --bases-table-row-background-hover: #f9f9f9;
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--text-accent);
 
 }
 
@@ -7304,9 +7311,10 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --color-base-100: #dadada;
 
   /*Bases - tweaks*/
-  --bases-table-border-color: #353535;
-  --bases-table-header-background: #222222;
-  --bases-table-row-background-hover: #1b1b1b;
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--text-accent);
 
 }
 
@@ -7421,9 +7429,10 @@ body.color-scheme-options-topaz-nord.theme-dark {
   --color-base-100: #dadada;
 
   /*Bases - tweaks*/
-  --bases-table-border-color: #4d515a;
-  --bases-table-header-background: #3e444f;
-  --bases-table-row-background-hover: #383e49;
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--text-accent);
 
 }
 
@@ -7602,9 +7611,10 @@ body.color-scheme-options-topaz-nord.theme-light {
   --color-base-100: #202020;
 
   /*Bases - tweaks*/
-  --bases-table-border-color: #dddfe3;
-  --bases-table-header-background: #e9ebef;
-  --bases-table-row-background-hover: #e8eaef;
+  --bases-table-stripe-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--text-accent);
 
 }
 
@@ -29971,7 +29981,7 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 
 .bases-tr:hover,
 .bases-tbody .bases-tr:nth-child(even):hover {
-  background: var(--bases-table-row-background-hover);
+  background: var(--bases-table-row-background-hover) !important;
 }
 
 .bases-table-active-cell {
