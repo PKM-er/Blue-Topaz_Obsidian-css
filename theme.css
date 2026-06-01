@@ -29877,6 +29877,7 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   overflow: visible;
   white-space: normal;
   word-break: break-word;
+  height: auto;
   position: relative;
   z-index: 20;
   background: var(--background-primary);
@@ -29884,7 +29885,7 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   padding: 4px 8px;
   margin: -4px -8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.18);
-  max-width: 360px;
+  max-width: 100%;
   min-width: 100%;
 }
 
