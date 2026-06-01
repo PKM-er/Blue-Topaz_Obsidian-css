@@ -8606,7 +8606,7 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--deep-color);
+  --bases-table-header-color: var(--low-color);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
@@ -8794,7 +8794,7 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
   --bases-table-header-background: var(--background-secondary-alt);
   --bases-table-group-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --bases-table-header-color: var(--deep-color);
+  --bases-table-header-color: var(--low-color);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 }
 
@@ -9001,6 +9001,9 @@ body.color-scheme-options-autumn-topaz.theme-dark {
   --text-muted: #8a8a8a;  /*muted 文字颜色*/
   --text-faint: #797979;  /*faint 文字颜色*/
   --text-folder-file: #b3b3b3; /*文件夹、文件 文字颜色*/
+  --accent-h: 84;
+  --accent-s: 100%;
+  --accent-l: 40%;
   --accent-strong: #f7f7f7; /*加粗 文字颜色*/
   --accent-em: #a4ca8e; /*斜体 文字颜色*/
 
@@ -9118,9 +9121,9 @@ body.color-scheme-options-autumn-topaz.theme-dark {
   --color-base-100: #dcdcdc;
 
   /*Bases - autumn tweaks*/
-  --bases-table-header-background: #333333;
-  --bases-table-group-background: transparent;
-  --bases-table-row-background-hover: #2a2a2a;
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-color: var(--low-color);
 
   --table-color-calendar-2: rgb(81, 165, 39);
   --table-color-rgb: 81, 165, 39;
