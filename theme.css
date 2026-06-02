@@ -5964,7 +5964,8 @@ body.all-dark-pdf .print,
   --bt-connected-indent-line-color: #926a6a;
   --list-colorful-marker: #ff8686;
 
-  --color-base-00: #222222;
+  /*Bases Dark*/
+	--color-base-00: #222222;
   --color-base-05: #252525;
   --color-base-10: #282828;
   --color-base-20: #2c2c2c;
@@ -5977,7 +5978,6 @@ body.all-dark-pdf .print,
   --color-base-70: #b5b5b5;
   --color-base-100: #dcdcdc;
 
-  /*Bases Dark*/
   --bases-header-border-width: 1px;
   --bases-header-height: 40px;
   --bases-header-padding-start: 8px;
@@ -6627,7 +6627,7 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   --table-color-rgb: 5, 158, 5;
   --divider-color: #000000;
 
-  /*Bases tweak inherits default dark theme*/
+  /*Bases 继承默认主题*/
 
 }
 
@@ -6705,7 +6705,7 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --mermaid-seq-dia-color: #1371be;
 
   /* table */
-	--table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+	--table-border-color: #878787;
   --table-thead-background-color: #b3b3b363;
   --table-hover-raw-color: #4040401c;
   --table-hover-color: #59595947;
@@ -6981,7 +6981,7 @@ body.color-scheme-options-pink-topaz.theme-light {
   --mermaid-seq-dia-color: #76c8ff;
 
   /*table*/
-	--table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
+  --table-border-color: #7d7d7d;
   --table-thead-background-color: #fad1e96f;
   --table-hover-raw-color: #fad1e92f;
   --table-hover-color: #fad1e92f;
@@ -7126,7 +7126,6 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --mermaid-seq-dia-color: #1371be;
 
   /*table*/
-	--table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
   --table-thead-background-color: #a76c8f45;
   --table-hover-raw-color: #a76c8f25;
   --table-hover-color: #a76c8f2b;
@@ -7268,7 +7267,6 @@ body.color-scheme-options-topaz-nord.theme-dark {
   --list-ol-hover: var(--nord7);
 
 	/* table */
-	--table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
   --table-thead-background-color: var(--nord9-2);
   --table-hover-raw-color: var(--nord9-2);
   --table-hover-color: var(--nord9-2);
@@ -7438,7 +7436,6 @@ body.color-scheme-options-topaz-nord.theme-light {
   --list-ol-hover: var(--nord7);
 
 	/* table */
-	--table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
   --table-thead-background-color: var(--nord9-2);
   --table-hover-raw-color: var(--nord9-2);
   --table-hover-color: var(--nord9-2);
@@ -8832,9 +8829,8 @@ body.color-scheme-options-autumn-topaz.theme-dark {
   /*checkbox*/
   --checkbox-color-0: var(--main-color);
 
-  /*Bases Autumn 深色模式 tweak*/
-  --bases-table-header-color: var(--low-color);
-	
+  /*Bases 继承默认主题*/
+
 }
 
 body.color-scheme-options-autumn-topaz #calendar-container {
@@ -9313,20 +9309,6 @@ body.color-scheme-options-lilac.theme-light {
   --divider-color: #d7c4f2;
   --tab-stacked-shadow: #c69fd5;
 
-  /*Bases - color-base*/
-  --color-base-00: #fdf7fb;
-  --color-base-05: #f8f2f6;
-  --color-base-10: #f1ecf0;
-  --color-base-20: #e6e1e5;
-  --color-base-25: #dbd6da;
-  --color-base-30: #d0cccf;
-  --color-base-35: #bfbabd;
-  --color-base-40: #a4a1a3;
-  --color-base-50: #838082;
-  --color-base-60: #5d5c5d;
-  --color-base-70: #414040;
-  --color-base-100: #202020;
-
   /*Bases 继承默认主题*/
 	
 }
@@ -9676,7 +9658,6 @@ body.color-scheme-options-simplicity-topaz.theme-light {
   --tab-background-active: #ffffff;
   --theme-color-translucent-01: hsla(254,80%,68%,0.1);
 
-
   /*Bases 继承默认主题*/
 
 }
@@ -9759,8 +9740,6 @@ body.color-scheme-options-simplicity-topaz.theme-dark {
   --indentation-guide: var(--simple-gray-3);
   --search-result-background:var(--simple-gray-2);
   --scrollbar-bg: transparent;
-
-	--table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.22);
 	
   /*Bases 继承默认主题*/
 
@@ -29869,6 +29848,9 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 }
 
 /****end checkbox****/
+
+/**** Bases start ****/
+
 /*=== Bases 表格视图 ===*/
 
 .bases-table-container {
@@ -30014,3 +29996,5 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   padding-inline-start: var(--bases-header-padding-start, 8px);
   padding-inline-end: var(--bases-header-padding-end, 8px);
 }
+
+/**** Bases end ****/
