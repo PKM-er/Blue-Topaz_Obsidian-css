@@ -8692,6 +8692,7 @@ body.color-scheme-options-autumn-topaz.theme-light {
 	--bases-table-header-background: var(--background-secondary-alt);
   --bases-table-row-background-hover: color-mix(in srgb, var(--color1) 80%, var(--color-base-03));
   --bases-table-stripe-color: color-mix(in srgb, var(--color2) 20%, transparent);
+	--bases-table-group-background: color-mix(in srgb, var(--color2), white 50%);
 
 }
 
@@ -29989,6 +29990,10 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.bases-table > .bases-group-heading:first-of-type {
+  margin-top: 8px;
 }
 
 .bases-group-property {
