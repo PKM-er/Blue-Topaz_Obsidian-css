@@ -27817,3 +27817,118 @@ body.head-tag-style :is(.markdown-preview-view, .markdown-rendered) :is(h1, h2, 
 body:not(.remove-selectionbackground) .markdown-source-view.mod-cm6 .cm-editor .cm-selectionBackground {
   background: transparent;
 }
+
+/**** Bases start ****/
+
+/*=== Bases 表格视图 ===*/
+
+.bases-table-container {
+  border-radius: var(--bases-table-container-border-radius);
+  border: var(--bases-table-container-border-width) solid var(--bases-table-border-color);
+}
+
+.bases-table-header {
+  font-weight: var(--bases-table-header-weight);
+  color: var(--bases-table-header-color);
+  background: var(--bases-table-header-background);
+}
+
+.bases-table-header:hover {
+  background: var(--bases-table-header-background-hover);
+}
+
+.bases-tbody .bases-tr:nth-child(even) {
+  background: var(--bases-table-stripe-color, rgba(0,0,0,0.02));
+}
+
+.bases-tr:hover,
+.bases-tbody .bases-tr:nth-child(even):hover {
+  background: var(--bases-table-row-background-hover) !important;
+}
+
+.bases-table-active-cell {
+  box-shadow: var(--bases-table-cell-shadow-active);
+  background: var(--bases-table-cell-background-active);
+}
+
+/*=== Bases 卡片视图 ===*/
+
+.bases-cards-container {
+  padding: 8px;
+}
+
+.bases-cards-item {
+  background: var(--background-primary);
+  border: 1px solid var(--bases-table-border-color);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  overflow: hidden;
+}
+
+.bases-cards-item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-1px);
+  overflow: visible !important;
+}
+
+.bases-cards-item:hover .bases-cards-property {
+  overflow: visible !important;
+}
+
+.bases-cards-cover {
+  background: linear-gradient(135deg, var(--background-secondary), var(--background-secondary-alt));
+  min-height: 40px;
+}
+
+.bases-cards-property {
+  padding: 2px 10px;
+}
+
+.bases-cards-property.mod-title {
+  border-bottom: 1px solid var(--bases-table-border-color);
+  margin-bottom: 2px;
+}
+
+.bases-cards-property.mod-title .bases-cards-line {
+  font-weight: 600;
+  color: var(--text-accent);
+}
+
+.bases-cards-label {
+  font-size: 0.75em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+
+.bases-cards-line {
+  font-size: 0.875em;
+  color: var(--text-normal);
+  line-height: 1.5;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.bases-cards-line:hover {
+  overflow: visible;
+  white-space: normal;
+  word-break: break-word;
+  height: auto;
+  max-height: 200px;
+  overflow-y: auto;
+  position: relative;
+  z-index: 20;
+  background: var(--background-primary);
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin: -4px -8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  max-width: 100%;
+  min-width: 100%;
+}
+
+/**** Bases end ****/
