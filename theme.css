@@ -5759,7 +5759,7 @@ body.all-dark-pdf .print,
   --h5-color: var(--print-h5-color,hsl(258, 79%, 77%));
   --h6-color: var(--print-h6-color,hsl(290, 85%, 81%));
 
-   --hr-color:var(--color-base-10);
+  --hr-color:var(--color-base-10);
   --graph-text-color: #B5B5B5;
   --graph-tag: #88d842bb;
   --graph-attach: #b2cfe0bb;
@@ -6001,6 +6001,8 @@ body.all-dark-pdf .print,
   --bases-table-text-size: var(--font-text-size);
   --bases-table-cell-background-active: var(--text-accent-hover);
   --bases-table-cell-shadow-active: 0 0 0 1px var(--interactive-accent);
+	--bases-card-shadow: var(--background-modifier-box-shadow);
+	--bases-card-line-hover: var(--background-primary-alt);
 }
 
 .theme-light {
@@ -6369,6 +6371,8 @@ body.all-dark-pdf .print,
 	--bases-table-text-size: var(--font-text-size);
   --bases-table-cell-background-active: var(--text-accent-hover);
   --bases-table-cell-shadow-active: 0 0 0 1px var(--interactive-accent);
+	--bases-card-shadow: var(--background-modifier-box-shadow);
+	--bases-card-line-hover: var(--background-primary-alt);
 }
 
 body.color-scheme-options-avocado-topaz .theme-light,
@@ -8672,17 +8676,17 @@ body.color-scheme-options-autumn-topaz.theme-light {
 
   /*Bases - color-base*/
   --color-base-01: #bfb9a0;
-  --color-base-02: #c5b896;
+  --color-base-02: #f0f0e9;
   --color-base-03: #aaa;
-  --color-base-20: #e6e6dd;
-  --color-base-25: #dbdbd2;
-  --color-base-30: #d0d0c6;
-  --color-base-35: #c3c3b8;
-  --color-base-40: #b3b3a7;
-  --color-base-50: #9a9a8e;
-  --color-base-60: #727267;
-  --color-base-70: #515149;
-  --color-base-100: #2b2b26;
+  --color-base-04: #e6e6dd;
+  --color-base-05: #dbdbd2;
+  --color-base-06: #d0d0c6;
+  --color-base-07: #c3c3b8;
+  --color-base-08: #b3b3a7;
+  --color-base-09: #9a9a8e;
+  --color-base-10: #727267;
+  --color-base-11: #515149;
+  --color-base-12: #2b2b26;
 
   /*Bases Autumn tweak*/
   --bases-table-header-color: var(--deep-color);
@@ -8690,6 +8694,7 @@ body.color-scheme-options-autumn-topaz.theme-light {
   --bases-table-row-background-hover: color-mix(in srgb, var(--color1) 80%, var(--color-base-03));
   --bases-table-stripe-color: color-mix(in srgb, var(--color2) 20%, transparent);
 	--bases-table-group-background: color-mix(in srgb, var(--color2), white 50%);
+	--background-primary-alt: var(--color-base-02);
 
 }
 
@@ -29886,15 +29891,16 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 
 .bases-cards-container {
   padding: 8px;
+	overflow: visible;
 }
 
 .bases-cards-item {
   background: var(--background-primary);
   border: 1px solid var(--bases-table-border-color);
   border-radius: 8px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 6px var(--bases-card-shadow);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
-  overflow: hidden;
+  overflow: visible !important;
 }
 
 .bases-cards-item:hover {
@@ -29917,7 +29923,7 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 }
 
 .bases-cards-property.mod-title {
-  border-bottom: 1px solid var(--bases-table-border-color);
+  border-bottom: 1px solid var(--table-border-color);
   margin-bottom: 2px;
 }
 
@@ -29945,21 +29951,24 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 }
 
 .bases-cards-line:hover {
-  overflow: visible;
-  white-space: normal;
-  word-break: break-word;
-  height: auto;
-  max-height: 200px;
-  overflow-y: auto;
-  position: relative;
-  z-index: 20;
-  background: var(--background-primary);
+  position: absolute;
+  top: 0;
+  left: 2px;
+  width: calc(100% - 4px);
+  height: 100%;
+  background: var(--bases-card-line-hover);
   border-radius: 4px;
-  padding: 4px 8px;
-  margin: -4px -8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
-  max-width: 100%;
-  min-width: 100%;
+  z-index: 20;
+  box-sizing: border-box;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  text-align: left;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 限制最多显示两行，超出省略号 */
+  overflow: hidden;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .bases-group-heading {
