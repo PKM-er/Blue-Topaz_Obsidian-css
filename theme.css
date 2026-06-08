@@ -5990,7 +5990,7 @@ body.all-dark-pdf .print,
   --bases-table-header-weight: 600;
   --bases-table-header-color: var(--deep-color);
   --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-header-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.05);
+  --bases-table-header-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.15);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.20);
   --bases-table-border-color: transparent;
   --bases-table-column-border-width: 0px;
@@ -29864,21 +29864,29 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   border-radius: var(--bases-table-container-border-radius);
   border: var(--bases-table-container-border-width) solid var(--bases-table-border-color);
 }
-
+.theme-dark .bases-thead
+{
+  background-color:rgba(0,0,0,0.2);
+}
 .bases-table-header {
   font-weight: var(--bases-table-header-weight);
   color: var(--bases-table-header-color);
-  background: var(--bases-table-header-background);
+  /* background: var(--bases-table-header-background); */
+  background: var(--bases-table-stripe-color, rgba(0,0,0,0.02));
 }
 
 .bases-table-header:hover {
   background: var(--bases-table-header-background-hover);
+ color:var(--text-faint);
 }
 
 .bases-tbody .bases-tr:nth-child(even) {
   background: var(--bases-table-stripe-color, rgba(0,0,0,0.02));
 }
-
+.bases-tr
+{
+  box-shadow:none;
+}
 .bases-tr:hover,
 .bases-tbody .bases-tr:nth-child(even):hover {
   background: var(--bases-table-row-background-hover) !important;
