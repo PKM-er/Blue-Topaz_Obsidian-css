@@ -5626,7 +5626,7 @@ body.all-dark-pdf .print,
   --background-primary: var(--background-primary-bg-4-bt,#202020);
   --background-primary-alt: var(--background-primary-alt-bg-4-bt,#444444);
   --background-secondary: var(--background-secondary-bg-4-bt,#151515);
-  --background-secondary-alt: var(--background-secondary-alt-bg-4-bt,#000000);
+  --background-secondary-alt: var(--background-secondary-alt-bg-4-bt,#222222);
   --background-modifier-border: #343434;
   --background-modifier-success: #539126;
   --background-modifier-success-rgb: 83, 145, 38;
@@ -5990,7 +5990,7 @@ body.all-dark-pdf .print,
   --bases-table-header-weight: 600;
   --bases-table-header-color: var(--deep-color);
   --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-header-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.05);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.20);
   --bases-table-border-color: transparent;
   --bases-table-column-border-width: 0px;
@@ -6533,9 +6533,9 @@ body.color-scheme-options-avocado-topaz .workspace-leaf.mod-active .view-header-
 
 body.color-scheme-options-avocado-topaz.theme-dark {
   --background-primary: var(--background-primary-bg-4-bt,#181818);
-  --background-primary-alt: var(--background-primary-alt-bg-4-bt,#000000);
+  --background-primary-alt: var(--background-primary-alt-bg-4-bt,#222222);
   --background-secondary: var(--background-secondary-bg-4-bt,#181818);
-  --background-secondary-alt: var(--background-secondary-alt-bg-4-bt,#000000);
+  --background-secondary-alt: var(--background-secondary-alt-bg-4-bt,#222222);
   --accent-h: 140;
   --accent-s: 52%;
   --accent-l: 41%;
@@ -6637,9 +6637,9 @@ body.color-scheme-options-avocado-topaz.theme-dark {
 
 body.color-scheme-options-monochrome-topaz.theme-dark {
   --background-primary: var(--background-primary-bg-4-bt,#1e1e1e);
-  --background-primary-alt: var(--background-primary-alt-bg-4-bt,#000000);
+  --background-primary-alt: var(--background-primary-alt-bg-4-bt,#222222);
   --background-secondary: var(--background-secondary-bg-4-bt,#151515);
-  --background-secondary-alt: var(--background-secondary-alt-bg-4-bt,#000000);
+  --background-secondary-alt: var(--background-secondary-alt-bg-4-bt,#222222);
   --accent-em: #ffffff;
   --accent-h: 0;
   --accent-s: 0%;
@@ -7046,7 +7046,7 @@ body.color-scheme-options-pink-topaz.theme-light {
 
 body.color-scheme-options-pink-topaz.theme-dark {
   --background-primary: var(--background-primary-bg-4-bt,#0f0f0f);
-  --background-primary-alt: var(--background-primary-alt-bg-4-bt,#000000);
+  --background-primary-alt: var(--background-primary-alt-bg-4-bt,#222222);
   --background-secondary: var(--background-secondary-bg-4-bt,#181818);
   --background-secondary-alt: var(--background-secondary-alt-bg-4-bt,#222222);
 
@@ -8716,7 +8716,7 @@ body.color-scheme-options-autumn-topaz.theme-dark {
   --main-color: var(--color6);
   --low-color: var(--color3);
   --high-color: var(--color7);
-  --deep-color:var(--color11);
+  --deep-color:var(--text-muted);
 
   --bg-color:#222222;
   --bg-color2:#444444;
@@ -29219,10 +29219,11 @@ body.background-settings-workplace-background-image .workspace-tab-header-contai
  
   
 body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .nav-files-container {
-  padding: 0 0 0 12px;
+ padding: 0 0 0 12px;
 }
   
-body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .nav-files-container>div>.tree-item.nav-folder > .tree-item-children.nav-folder-children {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,
+.folder-style-change-options-colorful-border) .nav-files-container>div>.tree-item.nav-folder > .tree-item-children.nav-folder-children {
   border-left: none;
 }
   
@@ -29901,7 +29902,7 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 }
 
 .bases-cards-item:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: var(--window-shadow);
   transform: translateY(-1px);
   overflow: visible !important;
 }
@@ -29916,7 +29917,7 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 }
 
 .bases-cards-property {
-  padding: 2px 10px;
+  padding: var(--size-2-1)  var(--size-4-2);
 }
 
 .bases-cards-property.mod-title {
@@ -29940,7 +29941,7 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 .bases-cards-line {
   font-size: 0.875em;
   color: var(--text-normal);
-  line-height: 1.5;
+  /* line-height: 1.5; */
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -29954,7 +29955,7 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   width: calc(100% - 4px);
   height: 100%;
   background: var(--bases-card-line-hover);
-  border-radius: 4px;
+  border-radius: 8px;
   z-index: 20;
   box-sizing: border-box;
 	box-shadow: 0 2px 8px rgba(0,0,0,0.18);
@@ -29966,6 +29967,7 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   word-break: break-word;
   overflow-wrap: break-word;
   white-space: normal;
+  line-height: normal;
 }
 
 .bases-group-heading {
