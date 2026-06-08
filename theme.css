@@ -20737,6 +20737,7 @@ body.quiet-outline-optimize .workspace-leaf-content[data-type=quiet-outline] .n-
 /* ============ */
 /*image position*/
 /* ============ */
+.cm-content .image-embed:is([alt="L" i], [alt^="L|" i]),
 img[alt$="left"]:not([class*="emoji"]),
 img[alt$="Left"]:not([class*="emoji"]),
 img[alt$="LEFT"]:not([class*="emoji"]),
@@ -20757,7 +20758,10 @@ body:not(.image-zoom) .view-content img[alt$="L"]:not([class*="emoji"]) {
   margin-left: 0 !important;
   display: block;
 }
-
+/* RIGHT */
+ 
+ 
+.cm-content .image-embed:is([alt="R" i], [alt^="R|" i]),
 img[alt$="right"]:not([class*="emoji"]),
 img[alt$="Right"]:not([class*="emoji"]),
 img[alt$="RIGHT"]:not([class*="emoji"]),
@@ -20778,7 +20782,7 @@ body:not(.image-zoom) .view-content img[alt$="R"]:not([class*="emoji"]) {
   margin-right: 0 !important;
   display: block;
 }
-
+.cm-content .image-embed:is([alt="C" i], [alt^="C|" i]),
 img[alt$="centre"]:not([class*="emoji"]),
 img[alt$="center"]:not([class*="emoji"]),
 img[alt$="CENTRE"]:not([class*="emoji"]),
