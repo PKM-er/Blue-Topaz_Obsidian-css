@@ -5999,7 +5999,7 @@ body.all-dark-pdf .print,
   --bases-table-group-background: transparent;
   --bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.15);
   --bases-table-text-size: var(--font-text-size);
-  --bases-table-cell-background-active: color-mix(in srgb, var(--text-accent-hover) 25%, transparent);
+  --bases-table-cell-background-active: color-mix(in srgb, var(--text-accent-hover) 18%, transparent);
   --bases-table-cell-shadow-active: 0 0 0 1px var(--interactive-accent);
 	--bases-card-shadow: var(--background-modifier-box-shadow);
 	--bases-card-line-hover: var(--background-primary-alt);
@@ -6369,7 +6369,7 @@ body.all-dark-pdf .print,
   --bases-table-group-background: transparent;
 	--bases-table-row-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
 	--bases-table-text-size: var(--font-text-size);
-  --bases-table-cell-background-active: color-mix(in srgb, var(--text-accent-hover) 25%, transparent);
+  --bases-table-cell-background-active: color-mix(in srgb, var(--text-accent-hover) 18%, transparent);
   --bases-table-cell-shadow-active: 0 0 0 1px var(--interactive-accent);
 	--bases-card-shadow: var(--background-modifier-box-shadow);
 	--bases-card-line-hover: var(--background-primary-alt);
