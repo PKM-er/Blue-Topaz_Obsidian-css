@@ -29219,7 +29219,7 @@ body.background-settings-workplace-background-image .workspace-tab-header-contai
  
   
 body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .nav-files-container {
- padding: 0 0 0 12px;
+ margin-left: 12px;
 }
   
 body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,
