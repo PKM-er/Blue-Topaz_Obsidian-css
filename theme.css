@@ -11284,13 +11284,13 @@ div[class="markdown-source-view cm-s-obsidian mod-cm6"] span.cm-hashtag-begin+.c
   background-color: var(--theme-color-translucent-015);
 }
 
-:is(.markdown-preview-view,.markdown-rendered):not([class*="kanban-plugin"]) {
+/* :is(.markdown-preview-view,.markdown-rendered):not([class*="kanban-plugin"]) {
   position: relative;
   overflow-y: auto;
   overflow-wrap: break-word;
   color: var(--text-normal);
   user-select: text;
-}
+} */
 
 /*edit mode font size*/
 pre.CodeMirror-line {
