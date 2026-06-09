@@ -30025,7 +30025,7 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   white-space: nowrap;
   background: var(--background-primary);
   color: var(--text-muted);
-  font-size: 0.75em;
+  font-size: 100%;
   padding: 2px 6px;
   border-radius: 4px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.12);
@@ -30035,6 +30035,15 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 
 .bases-list-item .bases-list-property:first-child .bases-rendered-value:hover::after {
   content: "标题";
+}
+
+.bases-list-group > .bases-group-heading {
+  font-size: 1.15em;
+  font-weight: 700;
+  background: var(--bases-table-header-background);
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 4px;
 }
 
 /**** Bases end ****/
