@@ -29856,9 +29856,11 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 /*=== Bases 基础设置 ===*/
 
 .bases-group-heading {
-	width: 100%;
+ 	width: 100%;
   font-weight: 600;
-  font-size: 0.9em;
+  font-size: 1.1em;
+  text-align: center;
+  justify-content: center;
   color: var(--text-normal);
   padding: 6px 0;
   border-bottom: 1px solid var(--bases-table-border-color);
@@ -29919,6 +29921,11 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 .bases-cards-container {
   padding: 8px;
 	overflow: visible;
+}
+
+.bases-cards-container .bases-group-heading {
+  border-radius: 6px;
+  margin-bottom: 8px;
 }
 
 .bases-cards-item {
