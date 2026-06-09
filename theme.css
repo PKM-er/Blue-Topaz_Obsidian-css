@@ -29939,6 +29939,10 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   border-radius: 6px;
 }
 
+.bases-cards-container .bases-cards-group {
+  padding-top: 8px;
+}
+
 .bases-cards-item {
   background: var(--background-primary);
   border: 1px solid var(--bases-table-border-color);
@@ -30024,6 +30028,7 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 
 .bases-list-group > .bases-group-heading {
   border-radius: 6px;
+  margin-top: 8px;
 }
 
 .bases-list-item {
