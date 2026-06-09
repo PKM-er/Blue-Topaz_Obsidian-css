@@ -30038,12 +30038,17 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 }
 
 .bases-list-group > .bases-group-heading {
-  font-size: 1.15em;
-  font-weight: 700;
-  background: var(--bases-table-header-background);
-  padding: 8px 12px;
-  border-radius: 4px;
-  margin-bottom: 4px;
+  height: var(--bases-table-row-height, 32px);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: var(--text-normal);
+  padding: 0 12px;
+  border-bottom: 1px solid var(--bases-table-border-color);
+  margin-bottom: 0;
+  background: transparent;
 }
 
 /**** Bases end ****/
