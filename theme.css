@@ -29874,6 +29874,12 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   display: flex;
   align-items: center;
   gap: 6px;
+  transition: font-size 0.15s ease;
+}
+
+.bases-group-heading:hover {
+  font-size: 1.4em;
+  overflow: visible;
 }
 
 .bases-group-property {
