@@ -30031,6 +30031,15 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   margin-top: 8px;
 }
 
+.bases-list-group {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.bases-list-group .bases-list-group-list {
+  height: auto !important;
+}
+
 .bases-list-item {
   font-size: 110%;
 }
