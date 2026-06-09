@@ -29891,6 +29891,15 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 	overflow: visible;
 }
 
+.bases-cards-container > .bases-group-heading:first-of-type {
+  margin-top: 8px;
+}
+
+.bases-cards-container .bases-group-heading {
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
 .bases-cards-item {
   background: var(--background-primary);
   border: 1px solid var(--bases-table-border-color);
