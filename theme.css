@@ -30013,12 +30013,12 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   padding: 0 0.3em;
 }
 
-.bases-list-item .bases-list-property {
+.bases-list-item .bases-rendered-value[data-property-type] {
   position: relative;
 }
 
-.bases-list-item .bases-list-property:hover::after {
-  content: attr(data-property);
+.bases-list-item .bases-rendered-value[data-property-type]:hover::after {
+  content: attr(data-property-type);
   position: absolute;
   bottom: 100%;
   left: 0;
