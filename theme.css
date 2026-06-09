@@ -28568,7 +28568,7 @@ body:is(.bt-bubble-ribbon-hide-left,.bt-bubble-ribbon) .side-dock-actions {
 body:is(.bt-bubble-ribbon-hide-left,.bt-bubble-ribbon) .side-dock-actions, 
 body:is(.bt-bubble-ribbon-hide-left,.bt-bubble-ribbon) .side-dock-settings {
   border: 1px solid var(--tab-outline-color);
-  padding: 5px 0;
+ 
   background-color: var(--background-primary);
 }
 body:is(.bt-bubble-ribbon-hide-left,.bt-bubble-ribbon) .side-dock-settings {
@@ -29856,6 +29856,10 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 
 /****end checkbox****/
 
+body:not(.theme-light.background-settings-workplace-background-image) .workspace-split.mod-left-split .workspace-sidedock-vault-profile 
+{
+   background-color: var(--ribbon-background);
+}
 /**** Bases start ****/
 
 /*=== Bases 表格视图 ===*/
