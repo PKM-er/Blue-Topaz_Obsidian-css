@@ -30003,4 +30003,34 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   padding-inline-end: var(--bases-header-padding-end, 8px);
 }
 
+/*=== Bases 列表视图 ===*/
+
+.bases-list-item {
+  font-size: 110%;
+}
+
+.bases-list-item .bases-list-separator {
+  padding: 0 0.3em;
+}
+
+.bases-list-item .bases-list-property {
+  position: relative;
+}
+
+.bases-list-item .bases-list-property:hover::after {
+  content: attr(data-property);
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  white-space: nowrap;
+  background: var(--background-primary);
+  color: var(--text-muted);
+  font-size: 0.75em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  z-index: 20;
+  pointer-events: none;
+}
+
 /**** Bases end ****/
