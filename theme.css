@@ -30028,16 +30028,10 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 
 .bases-list-group > .bases-group-heading {
   border-radius: 6px;
-  margin-top: 8px;
 }
 
 .bases-list-group {
-  height: auto !important;
-  overflow: visible !important;
-}
-
-.bases-list-group .bases-list-group-list {
-  height: auto !important;
+  box-shadow: 0 8px 0 0 var(--background-primary);
 }
 
 .bases-list-item {
