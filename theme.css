@@ -29926,8 +29926,7 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   text-align: center;
   width: 100%;
   border-radius: 6px;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  padding: 8px 0;
 }
 
 .bases-cards-item {
@@ -30023,8 +30022,7 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 /*=== Bases 列表视图 ===*/
 
 .bases-list-group > .bases-group-heading {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  padding: 8px 0;
 }
 
 .bases-list-item {
