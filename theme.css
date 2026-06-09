@@ -5982,6 +5982,8 @@ body.all-dark-pdf .print,
   --bases-header-height: 40px;
   --bases-header-padding-start: 8px;
   --bases-header-padding-end: 8px;
+	--bases-group-heading-property-size: var(--font-small-size);
+	--bases-group-heading-value-size: var(--font-small-size);
   --bases-embed-border-width: 1px;
   --bases-embed-border-color: var(--background-modifier-border);
   --bases-embed-border-radius: 6px;
@@ -6003,6 +6005,8 @@ body.all-dark-pdf .print,
   --bases-table-cell-shadow-active: 0 0 0 1px var(--interactive-accent);
 	--bases-card-shadow: var(--background-modifier-box-shadow);
 	--bases-card-line-hover: var(--background-primary-alt);
+	--bases-list-separator-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.75);
+	--bases-list-separator-font-weight: bold;
 }
 
 .theme-light {
@@ -6352,6 +6356,8 @@ body.all-dark-pdf .print,
   --bases-header-height: 40px;
   --bases-header-padding-start: 8px;
   --bases-header-padding-end: 8px;
+	--bases-group-heading-property-size: var(--font-small-size);
+	--bases-group-heading-value-size: var(--font-small-size);
   --bases-embed-border-width: 1px;
   --bases-embed-border-color: var(--background-modifier-border);
   --bases-embed-border-radius: 6px;
@@ -6373,6 +6379,8 @@ body.all-dark-pdf .print,
   --bases-table-cell-shadow-active: 0 0 0 1px var(--interactive-accent);
 	--bases-card-shadow: var(--background-modifier-box-shadow);
 	--bases-card-line-hover: var(--background-primary-alt);
+	--bases-list-separator-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.75);
+	--bases-list-separator-font-weight: bold;
 }
 
 body.color-scheme-options-avocado-topaz .theme-light,
@@ -29871,12 +29879,20 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 
 .bases-group-property {
   color: var(--text-muted);
-  font-size: 0.8em;
-  font-weight: 400;
+	--bases-group-heading-value-size: 1.9em;
 }
 
 .bases-group-value {
   color: var(--text-accent);
+}
+
+/*=== Bases 工具栏 ===*/
+
+.bases-header {
+  border-bottom: var(--bases-header-border-width, 1px) solid var(--bases-table-border-color);
+  min-height: var(--bases-header-height, 40px);
+  padding-inline-start: var(--bases-header-padding-start, 8px);
+  padding-inline-end: var(--bases-header-padding-end, 8px);
 }
 
 /*=== Bases 表格视图 ===*/
@@ -29916,17 +29932,12 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 
 /*=== Bases 卡片视图 ===*/
 
-.bases-cards-container {
-  padding: 8px;
-	overflow: visible;
-}
-
 .bases-cards-container .bases-group-heading {
   justify-content: center;
   text-align: center;
   width: 100%;
   border-radius: 6px;
-  padding: 8px 0;
+	margin: -10px 0;
 }
 
 .bases-cards-item {
@@ -30010,19 +30021,12 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   margin-top: 8px;
 }
 
-/*=== Bases 工具栏 ===*/
-
-.bases-header {
-  border-bottom: var(--bases-header-border-width, 1px) solid var(--bases-table-border-color);
-  min-height: var(--bases-header-height, 40px);
-  padding-inline-start: var(--bases-header-padding-start, 8px);
-  padding-inline-end: var(--bases-header-padding-end, 8px);
-}
-
 /*=== Bases 列表视图 ===*/
 
 .bases-list-group > .bases-group-heading {
   padding: 8px 0;
+	border-radius: 6px;
+	gap: 6px;
 }
 
 .bases-list-item {
@@ -30030,7 +30034,9 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 }
 
 .bases-list-item .bases-list-separator {
-  padding: 0 0.3em;
+  padding: 0 0.2em;
+	color: var(--bases-list-separator-color);
+	font-weight: var(--bases-list-separator-font-weight);
 }
 
 .bases-list-item .bases-rendered-value {
