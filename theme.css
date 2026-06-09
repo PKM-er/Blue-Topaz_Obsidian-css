@@ -29924,7 +29924,9 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 .bases-cards-container .bases-group-heading {
   justify-content: center;
   text-align: center;
+  width: 100%;
   border-radius: 6px;
+  margin-top: 8px;
   margin-bottom: 8px;
 }
 
@@ -30022,6 +30024,7 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 
 .bases-list-group > .bases-group-heading {
   margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .bases-list-item {
