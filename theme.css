@@ -29859,8 +29859,6 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
  	width: 100%;
   font-weight: 600;
   font-size: 1.1em;
-  text-align: center;
-  justify-content: center;
   color: var(--text-normal);
   padding: 6px 0;
   border-bottom: 1px solid var(--bases-table-border-color);
@@ -29924,6 +29922,8 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 }
 
 .bases-cards-container .bases-group-heading {
+  justify-content: center;
+  text-align: center;
   border-radius: 6px;
   margin-bottom: 8px;
 }
@@ -30019,6 +30019,10 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 }
 
 /*=== Bases 列表视图 ===*/
+
+.bases-list-group > .bases-group-heading {
+  margin-top: 8px;
+}
 
 .bases-list-item {
   font-size: 110%;
