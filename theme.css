@@ -29853,6 +29853,32 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 
 /**** Bases start ****/
 
+/*=== Bases 基础设置 ===*/
+
+.bases-group-heading {
+	width: 100%;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: var(--text-normal);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--bases-table-border-color);
+	background: var(--bases-table-group-background);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bases-group-property {
+  color: var(--text-muted);
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+.bases-group-value {
+  color: var(--text-accent);
+}
+
 /*=== Bases 表格视图 ===*/
 
 .bases-table-container {
@@ -29884,20 +29910,15 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   background: var(--bases-table-cell-background-active);
 }
 
+.bases-table > .bases-group-heading:first-of-type {
+  margin-top: 8px;
+}
+
 /*=== Bases 卡片视图 ===*/
 
 .bases-cards-container {
   padding: 8px;
 	overflow: visible;
-}
-
-.bases-cards-container > .bases-group-heading:first-of-type {
-  margin-top: 8px;
-}
-
-.bases-cards-container .bases-group-heading {
-  border-radius: 6px;
-  margin-bottom: 8px;
 }
 
 .bases-cards-item {
@@ -29977,30 +29998,8 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   white-space: normal;
 }
 
-.bases-group-heading {
-  font-weight: 600;
-  font-size: 0.9em;
-  color: var(--text-normal);
-  padding: 6px 0;
-  border-bottom: 1px solid var(--bases-table-border-color);
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.bases-table > .bases-group-heading:first-of-type {
+.bases-cards-container > .bases-group-heading:first-of-type {
   margin-top: 8px;
-}
-
-.bases-group-property {
-  color: var(--text-muted);
-  font-size: 0.8em;
-  font-weight: 400;
-}
-
-.bases-group-value {
-  color: var(--text-accent);
 }
 
 /*=== Bases 工具栏 ===*/
@@ -30044,15 +30043,6 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 
 .bases-list-item .bases-list-property:first-child .bases-rendered-value:hover::after {
   content: "标题";
-}
-
-.bases-list-group > .bases-group-heading {
-  width: 100%;
-  height: var(--bases-table-row-height);
-  padding-inline-start: var(--size-4-2);
-  align-items: baseline;
-  line-height: var(--bases-table-row-height);
-  margin-bottom: 0;
 }
 
 /**** Bases end ****/
