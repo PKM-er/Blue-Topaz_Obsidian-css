@@ -30013,11 +30013,11 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   padding: 0 0.3em;
 }
 
-.bases-list-item .bases-rendered-value[data-property-type] {
+.bases-list-item .bases-rendered-value {
   position: relative;
 }
 
-.bases-list-item .bases-rendered-value[data-property-type]:hover::after {
+.bases-list-item .bases-rendered-value:hover::after {
   content: attr(data-property-type);
   position: absolute;
   bottom: 100%;
@@ -30031,6 +30031,10 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   box-shadow: 0 1px 4px rgba(0,0,0,0.12);
   z-index: 20;
   pointer-events: none;
+}
+
+.bases-list-item .bases-list-property:first-child .bases-rendered-value:hover::after {
+  content: "标题";
 }
 
 /**** Bases end ****/
