@@ -8,8 +8,8 @@ Partial style(s) is(are) sourced or adapted from Blue Topaz (https://github.com/
 
 */
 
-/*蓝色托帕石，适合Obsidian v1.5.0。uid [2026011401] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.5.0, uid [2026011401] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.5.0。uid [2026060801] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.5.0, uid [2026060801] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /*
 MIT License
@@ -5626,7 +5626,7 @@ body.all-dark-pdf .print,
   --background-primary: var(--background-primary-bg-4-bt,#202020);
   --background-primary-alt: var(--background-primary-alt-bg-4-bt,#444444);
   --background-secondary: var(--background-secondary-bg-4-bt,#151515);
-  --background-secondary-alt: var(--background-secondary-alt-bg-4-bt,#000000);
+  --background-secondary-alt: var(--background-secondary-alt-bg-4-bt,#222222);
   --background-modifier-border: #343434;
   --background-modifier-success: #539126;
   --background-modifier-success-rgb: 83, 145, 38;
@@ -5990,7 +5990,7 @@ body.all-dark-pdf .print,
   --bases-table-header-weight: 600;
   --bases-table-header-color: var(--deep-color);
   --bases-table-header-background: var(--background-secondary-alt);
-  --bases-table-header-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
+  --bases-table-header-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.15);
   --table-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.20);
   --bases-table-border-color: transparent;
   --bases-table-column-border-width: 0px;
@@ -6532,9 +6532,9 @@ body.color-scheme-options-avocado-topaz .workspace-leaf.mod-active .view-header-
 
 body.color-scheme-options-avocado-topaz.theme-dark {
   --background-primary: var(--background-primary-bg-4-bt,#181818);
-  --background-primary-alt: var(--background-primary-alt-bg-4-bt,#000000);
+  --background-primary-alt: var(--background-primary-alt-bg-4-bt,#222222);
   --background-secondary: var(--background-secondary-bg-4-bt,#181818);
-  --background-secondary-alt: var(--background-secondary-alt-bg-4-bt,#000000);
+  --background-secondary-alt: var(--background-secondary-alt-bg-4-bt,#222222);
   --accent-h: 140;
   --accent-s: 52%;
   --accent-l: 41%;
@@ -6637,9 +6637,9 @@ body.color-scheme-options-avocado-topaz.theme-dark {
 
 body.color-scheme-options-monochrome-topaz.theme-dark {
   --background-primary: var(--background-primary-bg-4-bt,#1e1e1e);
-  --background-primary-alt: var(--background-primary-alt-bg-4-bt,#000000);
+  --background-primary-alt: var(--background-primary-alt-bg-4-bt,#222222);
   --background-secondary: var(--background-secondary-bg-4-bt,#151515);
-  --background-secondary-alt: var(--background-secondary-alt-bg-4-bt,#000000);
+  --background-secondary-alt: var(--background-secondary-alt-bg-4-bt,#222222);
   --accent-em: #ffffff;
   --accent-h: 0;
   --accent-s: 0%;
@@ -7046,7 +7046,7 @@ body.color-scheme-options-pink-topaz.theme-light {
 
 body.color-scheme-options-pink-topaz.theme-dark {
   --background-primary: var(--background-primary-bg-4-bt,#0f0f0f);
-  --background-primary-alt: var(--background-primary-alt-bg-4-bt,#000000);
+  --background-primary-alt: var(--background-primary-alt-bg-4-bt,#222222);
   --background-secondary: var(--background-secondary-bg-4-bt,#181818);
   --background-secondary-alt: var(--background-secondary-alt-bg-4-bt,#222222);
 
@@ -8716,7 +8716,7 @@ body.color-scheme-options-autumn-topaz.theme-dark {
   --main-color: var(--color6);
   --low-color: var(--color3);
   --high-color: var(--color7);
-  --deep-color:var(--color11);
+  --deep-color:var(--text-muted);
 
   --bg-color:#222222;
   --bg-color2:#444444;
@@ -11287,13 +11287,13 @@ div[class="markdown-source-view cm-s-obsidian mod-cm6"] span.cm-hashtag-begin+.c
   background-color: var(--theme-color-translucent-015);
 }
 
-:is(.markdown-preview-view,.markdown-rendered):not([class*="kanban-plugin"]) {
+/* :is(.markdown-preview-view,.markdown-rendered):not([class*="kanban-plugin"]) {
   position: relative;
   overflow-y: auto;
   overflow-wrap: break-word;
   color: var(--text-normal);
   user-select: text;
-}
+} */
 
 /*edit mode font size*/
 pre.CodeMirror-line {
@@ -20740,6 +20740,7 @@ body.quiet-outline-optimize .workspace-leaf-content[data-type=quiet-outline] .n-
 /* ============ */
 /*image position*/
 /* ============ */
+.cm-content .image-embed:is([alt="L" i], [alt^="L|" i]),
 img[alt$="left"]:not([class*="emoji"]),
 img[alt$="Left"]:not([class*="emoji"]),
 img[alt$="LEFT"]:not([class*="emoji"]),
@@ -20760,7 +20761,10 @@ body:not(.image-zoom) .view-content img[alt$="L"]:not([class*="emoji"]) {
   margin-left: 0 !important;
   display: block;
 }
-
+/* RIGHT */
+ 
+ 
+.cm-content .image-embed:is([alt="R" i], [alt^="R|" i]),
 img[alt$="right"]:not([class*="emoji"]),
 img[alt$="Right"]:not([class*="emoji"]),
 img[alt$="RIGHT"]:not([class*="emoji"]),
@@ -20781,7 +20785,7 @@ body:not(.image-zoom) .view-content img[alt$="R"]:not([class*="emoji"]) {
   margin-right: 0 !important;
   display: block;
 }
-
+.cm-content .image-embed:is([alt="C" i], [alt^="C|" i]),
 img[alt$="centre"]:not([class*="emoji"]),
 img[alt$="center"]:not([class*="emoji"]),
 img[alt$="CENTRE"]:not([class*="emoji"]),
@@ -28567,7 +28571,7 @@ body:is(.bt-bubble-ribbon-hide-left,.bt-bubble-ribbon) .side-dock-actions {
 body:is(.bt-bubble-ribbon-hide-left,.bt-bubble-ribbon) .side-dock-actions, 
 body:is(.bt-bubble-ribbon-hide-left,.bt-bubble-ribbon) .side-dock-settings {
   border: 1px solid var(--tab-outline-color);
-  padding: 5px 0;
+ 
   background-color: var(--background-primary);
 }
 body:is(.bt-bubble-ribbon-hide-left,.bt-bubble-ribbon) .side-dock-settings {
@@ -29222,10 +29226,11 @@ body.background-settings-workplace-background-image .workspace-tab-header-contai
  
   
 body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .nav-files-container {
-  padding: 0 0 0 12px;
+ margin-left: 12px;
 }
   
-body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,.folder-style-change-options-colorful-border) .nav-files-container>div>.tree-item.nav-folder > .tree-item-children.nav-folder-children {
+body.bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-tab-liked,
+.folder-style-change-options-colorful-border) .nav-files-container>div>.tree-item.nav-folder > .tree-item-children.nav-folder-children {
   border-left: none;
 }
   
@@ -29854,6 +29859,10 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 
 /****end checkbox****/
 
+body:not(.theme-light.background-settings-workplace-background-image) .workspace-split.mod-left-split .workspace-sidedock-vault-profile 
+{
+   background-color: var(--ribbon-background);
+}
 /**** Bases start ****/
 
 /*=== Bases 表格视图 ===*/
@@ -29862,21 +29871,29 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   border-radius: var(--bases-table-container-border-radius);
   border: var(--bases-table-container-border-width) solid var(--bases-table-border-color);
 }
-
+.theme-dark .bases-thead
+{
+  background-color:rgba(0,0,0,0.2);
+}
 .bases-table-header {
   font-weight: var(--bases-table-header-weight);
   color: var(--bases-table-header-color);
-  background: var(--bases-table-header-background);
+  /* background: var(--bases-table-header-background); */
+  background: var(--bases-table-stripe-color, rgba(0,0,0,0.02));
 }
 
 .bases-table-header:hover {
   background: var(--bases-table-header-background-hover);
+ color:var(--text-faint);
 }
 
 .bases-tbody .bases-tr:nth-child(even) {
   background: var(--bases-table-stripe-color, rgba(0,0,0,0.02));
 }
-
+.bases-tr
+{
+  box-shadow:none;
+}
 .bases-tr:hover,
 .bases-tbody .bases-tr:nth-child(even):hover {
   background: var(--bases-table-row-background-hover) !important;
@@ -29904,7 +29921,7 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 }
 
 .bases-cards-item:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: var(--window-shadow);
   transform: translateY(-1px);
   overflow: visible !important;
 }
@@ -29919,7 +29936,7 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 }
 
 .bases-cards-property {
-  padding: 2px 10px;
+  padding: var(--size-2-1)  var(--size-4-2);
 }
 
 .bases-cards-property.mod-title {
@@ -29943,7 +29960,7 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
 .bases-cards-line {
   font-size: 0.875em;
   color: var(--text-normal);
-  line-height: 1.5;
+  /* line-height: 1.5; */
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -29957,7 +29974,7 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   width: calc(100% - 4px);
   height: 100%;
   background: var(--bases-card-line-hover);
-  border-radius: 4px;
+  border-radius: 8px;
   z-index: 20;
   box-sizing: border-box;
 	box-shadow: 0 2px 8px rgba(0,0,0,0.18);
@@ -29969,6 +29986,7 @@ body.enable-alternative-checkboxes li[data-task=U] > p > input:checked {
   word-break: break-word;
   overflow-wrap: break-word;
   white-space: normal;
+  line-height: normal;
 }
 
 .bases-group-heading {
