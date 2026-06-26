@@ -5982,6 +5982,8 @@ body.all-dark-pdf .print,
   --bases-header-height: 40px;
   --bases-header-padding-start: 8px;
   --bases-header-padding-end: 8px;
+	--bases-group-heading-property-size: var(--font-small-size);
+	--bases-group-heading-value-size: var(--font-small-size);
   --bases-embed-border-width: 1px;
   --bases-embed-border-color: var(--background-modifier-border);
   --bases-embed-border-radius: 6px;
@@ -6003,6 +6005,8 @@ body.all-dark-pdf .print,
   --bases-table-cell-shadow-active: 0 0 0 1px var(--interactive-accent);
 	--bases-card-shadow: var(--background-modifier-box-shadow);
 	--bases-card-line-hover: var(--background-primary-alt);
+	--bases-list-separator-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.75);
+	--bases-list-separator-font-weight: bold;
 }
 
 .theme-light {
@@ -6352,6 +6356,8 @@ body.all-dark-pdf .print,
   --bases-header-height: 40px;
   --bases-header-padding-start: 8px;
   --bases-header-padding-end: 8px;
+	--bases-group-heading-property-size: var(--font-small-size);
+	--bases-group-heading-value-size: var(--font-small-size);
   --bases-embed-border-width: 1px;
   --bases-embed-border-color: var(--background-modifier-border);
   --bases-embed-border-radius: 6px;
@@ -6373,6 +6379,8 @@ body.all-dark-pdf .print,
   --bases-table-cell-shadow-active: 0 0 0 1px var(--interactive-accent);
 	--bases-card-shadow: var(--background-modifier-box-shadow);
 	--bases-card-line-hover: var(--background-primary-alt);
+	--bases-list-separator-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.75);
+	--bases-list-separator-font-weight: bold;
 }
 
 body.color-scheme-options-avocado-topaz .theme-light,
@@ -29865,16 +29873,50 @@ body:not(.theme-light.background-settings-workplace-background-image) .workspace
 }
 /**** Bases start ****/
 
+/*=== Bases 基础设置 ===*/
+
+.bases-group-heading {
+ 	width: 100%;
+  font-weight: 600;
+  font-size: 1.1em;
+  color: var(--text-normal);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--bases-table-border-color);
+	background: var(--bases-table-group-background);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: font-size 0.15s ease;
+}
+
+.bases-group-heading:hover {
+  font-size: 1.4em;
+  overflow: visible;
+}
+
+.bases-group-property {
+  color: var(--text-muted);
+	--bases-group-heading-value-size: 1.9em;
+}
+
+.bases-group-value {
+  color: var(--text-accent);
+}
+
+/*=== Bases 工具栏 ===*/
+
+
 /*=== Bases 表格视图 ===*/
 
 .bases-table-container {
   border-radius: var(--bases-table-container-border-radius);
   border: var(--bases-table-container-border-width) solid var(--bases-table-border-color);
 }
-.theme-dark .bases-thead
-{
-  background-color:rgba(0,0,0,0.2);
+
+.bases-table-container .bases-group-heading{
+	margin-bottom: 8px;
 }
+
 .bases-table-header {
   font-weight: var(--bases-table-header-weight);
   color: var(--bases-table-header-color);
@@ -29904,11 +29946,21 @@ body:not(.theme-light.background-settings-workplace-background-image) .workspace
   background: var(--bases-table-cell-background-active);
 }
 
+.bases-table > .bases-group-heading:first-of-type {
+  margin-top: 8px;
+}
+
 /*=== Bases 卡片视图 ===*/
 
-.bases-cards-container {
-  padding: 8px;
-	overflow: visible;
+.bases-cards-container .bases-group-heading {
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.bases-cards-container .bases-cards-group {
+  padding-top: 8px;
 }
 
 .bases-cards-item {
@@ -29986,42 +30038,60 @@ body:not(.theme-light.background-settings-workplace-background-image) .workspace
   word-break: break-word;
   overflow-wrap: break-word;
   white-space: normal;
-  line-height: normal;
 }
 
-.bases-group-heading {
-  font-weight: 600;
-  font-size: 0.9em;
-  color: var(--text-normal);
-  padding: 6px 0;
-  border-bottom: 1px solid var(--bases-table-border-color);
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.bases-table > .bases-group-heading:first-of-type {
+.bases-cards-container > .bases-group-heading:first-of-type {
   margin-top: 8px;
 }
 
-.bases-group-property {
+/*=== Bases 列表视图 ===*/
+
+.bases-list-container {
+	height: auto !important;
+	overflow: visible;
+}
+
+.bases-list-group {
+  height: auto !important;
+}
+
+.bases-list-group > .bases-group-heading {
+  border-radius: 6px;
+	padding-left: 8px;
+}
+
+.bases-list-item {
+  font-size: 110%;
+}
+
+.bases-list-item .bases-list-separator {
+  padding: 0 0.2em;
+	color: var(--bases-list-separator-color);
+	font-weight: var(--bases-list-separator-font-weight);
+}
+
+.bases-list-item .bases-rendered-value {
+  position: relative;
+}
+
+.bases-list-item .bases-rendered-value:hover::after {
+  content: attr(data-property-type);
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  white-space: nowrap;
+  background: var(--background-primary);
   color: var(--text-muted);
-  font-size: 0.8em;
-  font-weight: 400;
+  font-size: 100%;
+  padding: 2px 6px;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  z-index: 20;
+  pointer-events: none;
 }
 
-.bases-group-value {
-  color: var(--text-accent);
-}
-
-/*=== Bases 工具栏 ===*/
-
-.bases-header {
-  border-bottom: var(--bases-header-border-width, 1px) solid var(--bases-table-border-color);
-  min-height: var(--bases-header-height, 40px);
-  padding-inline-start: var(--bases-header-padding-start, 8px);
-  padding-inline-end: var(--bases-header-padding-end, 8px);
+.bases-list-item .bases-list-property:first-child .bases-rendered-value:hover::after {
+  content: "标题";
 }
 
 /**** Bases end ****/
