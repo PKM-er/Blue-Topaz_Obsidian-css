@@ -30103,6 +30103,7 @@ body:not(.theme-light.background-settings-workplace-background-image) .workspace
 }
 
 /**** Bases end ****/
+
 /*=== Speech Bubble (ported from AnuPpuccin) ===*/
 
 body.bt-speech-bubble [data-task="0"],
@@ -30114,7 +30115,7 @@ body.bt-speech-bubble [data-task="5"],
 body.bt-speech-bubble [data-task="6"],
 body.bt-speech-bubble [data-task="7"],
 body.bt-speech-bubble [data-task="8"],
-.bt-speech-bubble [data-task="9"] {
+body.bt-speech-bubble [data-task="9"] {
   margin-inline-start: -15px;
   padding: 3px 10px !important;
   border-radius: 3px 10px 10px 10px;
@@ -30126,41 +30127,41 @@ body.bt-speech-bubble [data-task="8"],
 
 body.bt-speech-bubble [data-task="0"] p,
 body.bt-speech-bubble [data-task="1"] p,
-.bt-speech-bubble [data-task="2"] p,
-.bt-speech-bubble [data-task="3"] p,
-.bt-speech-bubble [data-task="4"] p,
-.bt-speech-bubble [data-task="5"] p,
-.bt-speech-bubble [data-task="6"] p,
-.bt-speech-bubble [data-task="7"] p,
-.bt-speech-bubble [data-task="8"] p,
-.bt-speech-bubble [data-task="9"] p {
+body.bt-speech-bubble [data-task="2"] p,
+body.bt-speech-bubble [data-task="3"] p,
+body.bt-speech-bubble [data-task="4"] p,
+body.bt-speech-bubble [data-task="5"] p,
+body.bt-speech-bubble [data-task="6"] p,
+body.bt-speech-bubble [data-task="7"] p,
+body.bt-speech-bubble [data-task="8"] p,
+body.bt-speech-bubble [data-task="9"] p {
   margin-top: 0;
   margin-bottom: 0;
 }
 
 body.bt-speech-bubble [data-task="0"] .task-list-item-checkbox,
 body.bt-speech-bubble [data-task="1"] .task-list-item-checkbox,
-.bt-speech-bubble [data-task="2"] .task-list-item-checkbox,
-.bt-speech-bubble [data-task="3"] .task-list-item-checkbox,
-.bt-speech-bubble [data-task="4"] .task-list-item-checkbox,
-.bt-speech-bubble [data-task="5"] .task-list-item-checkbox,
-.bt-speech-bubble [data-task="6"] .task-list-item-checkbox,
-.bt-speech-bubble [data-task="7"] .task-list-item-checkbox,
-.bt-speech-bubble [data-task="8"] .task-list-item-checkbox,
-.bt-speech-bubble [data-task="9"] .task-list-item-checkbox {
+body.bt-speech-bubble [data-task="2"] .task-list-item-checkbox,
+body.bt-speech-bubble [data-task="3"] .task-list-item-checkbox,
+body.bt-speech-bubble [data-task="4"] .task-list-item-checkbox,
+body.bt-speech-bubble [data-task="5"] .task-list-item-checkbox,
+body.bt-speech-bubble [data-task="6"] .task-list-item-checkbox,
+body.bt-speech-bubble [data-task="7"] .task-list-item-checkbox,
+body.bt-speech-bubble [data-task="8"] .task-list-item-checkbox,
+body.bt-speech-bubble [data-task="9"] .task-list-item-checkbox {
   display: none;
 }
 
-.theme-darkbody.bt-speech-bubble [data-task="0"],
-.theme-darkbody.bt-speech-bubble [data-task="1"],
-.theme-darkbody.bt-speech-bubble [data-task="2"],
-.theme-darkbody.bt-speech-bubble [data-task="3"],
-.theme-darkbody.bt-speech-bubble [data-task="4"],
-.theme-darkbody.bt-speech-bubble [data-task="5"],
-.theme-darkbody.bt-speech-bubble [data-task="6"],
-.theme-darkbody.bt-speech-bubble [data-task="7"],
-.theme-darkbody.bt-speech-bubble [data-task="8"],
-.theme-dark.bt-speech-bubble [data-task="9"] {
+body.theme-dark.bt-speech-bubble [data-task="0"],
+body.theme-dark.bt-speech-bubble [data-task="1"],
+body.theme-dark.bt-speech-bubble [data-task="2"],
+body.theme-dark.bt-speech-bubble [data-task="3"],
+body.theme-dark.bt-speech-bubble [data-task="4"],
+body.theme-dark.bt-speech-bubble [data-task="5"],
+body.theme-dark.bt-speech-bubble [data-task="6"],
+body.theme-dark.bt-speech-bubble [data-task="7"],
+body.theme-dark.bt-speech-bubble [data-task="8"],
+body.theme-dark.bt-speech-bubble [data-task="9"] {
   --text-normal: var(--background-primary);
   transition: background-color 0.2s, background 0.2s, border-radius 0.2s;
 }
@@ -30190,3 +30191,5 @@ body.bt-speech-bubble .HyperMD-task-line[data-task="8"],
 body.bt-speech-bubble .HyperMD-task-line[data-task="9"] {
   text-indent: 0px !important;
 }
+
+
