@@ -30105,15 +30105,15 @@ body:not(.theme-light.background-settings-workplace-background-image) .workspace
 /**** Bases end ****/
 /*=== Speech Bubble (ported from AnuPpuccin) ===*/
 
-.bt-speech-bubble [data-task="0"],
-.bt-speech-bubble [data-task="1"],
-.bt-speech-bubble [data-task="2"],
-.bt-speech-bubble [data-task="3"],
-.bt-speech-bubble [data-task="4"],
-.bt-speech-bubble [data-task="5"],
-.bt-speech-bubble [data-task="6"],
-.bt-speech-bubble [data-task="7"],
-.bt-speech-bubble [data-task="8"],
+body.bt-speech-bubble [data-task="0"],
+body.bt-speech-bubble [data-task="1"],
+body.bt-speech-bubble [data-task="2"],
+body.bt-speech-bubble [data-task="3"],
+body.bt-speech-bubble [data-task="4"],
+body.bt-speech-bubble [data-task="5"],
+body.bt-speech-bubble [data-task="6"],
+body.bt-speech-bubble [data-task="7"],
+body.bt-speech-bubble [data-task="8"],
 .bt-speech-bubble [data-task="9"] {
   margin-inline-start: -15px;
   padding: 3px 10px !important;
@@ -30124,8 +30124,8 @@ body:not(.theme-light.background-settings-workplace-background-image) .workspace
   --italic-color: var(--text-normal);
 }
 
-.bt-speech-bubble [data-task="0"] p,
-.bt-speech-bubble [data-task="1"] p,
+body.bt-speech-bubble [data-task="0"] p,
+body.bt-speech-bubble [data-task="1"] p,
 .bt-speech-bubble [data-task="2"] p,
 .bt-speech-bubble [data-task="3"] p,
 .bt-speech-bubble [data-task="4"] p,
@@ -30138,8 +30138,8 @@ body:not(.theme-light.background-settings-workplace-background-image) .workspace
   margin-bottom: 0;
 }
 
-.bt-speech-bubble [data-task="0"] .task-list-item-checkbox,
-.bt-speech-bubble [data-task="1"] .task-list-item-checkbox,
+body.bt-speech-bubble [data-task="0"] .task-list-item-checkbox,
+body.bt-speech-bubble [data-task="1"] .task-list-item-checkbox,
 .bt-speech-bubble [data-task="2"] .task-list-item-checkbox,
 .bt-speech-bubble [data-task="3"] .task-list-item-checkbox,
 .bt-speech-bubble [data-task="4"] .task-list-item-checkbox,
@@ -30151,42 +30151,42 @@ body:not(.theme-light.background-settings-workplace-background-image) .workspace
   display: none;
 }
 
-.theme-dark.bt-speech-bubble [data-task="0"],
-.theme-dark.bt-speech-bubble [data-task="1"],
-.theme-dark.bt-speech-bubble [data-task="2"],
-.theme-dark.bt-speech-bubble [data-task="3"],
-.theme-dark.bt-speech-bubble [data-task="4"],
-.theme-dark.bt-speech-bubble [data-task="5"],
-.theme-dark.bt-speech-bubble [data-task="6"],
-.theme-dark.bt-speech-bubble [data-task="7"],
-.theme-dark.bt-speech-bubble [data-task="8"],
+.theme-darkbody.bt-speech-bubble [data-task="0"],
+.theme-darkbody.bt-speech-bubble [data-task="1"],
+.theme-darkbody.bt-speech-bubble [data-task="2"],
+.theme-darkbody.bt-speech-bubble [data-task="3"],
+.theme-darkbody.bt-speech-bubble [data-task="4"],
+.theme-darkbody.bt-speech-bubble [data-task="5"],
+.theme-darkbody.bt-speech-bubble [data-task="6"],
+.theme-darkbody.bt-speech-bubble [data-task="7"],
+.theme-darkbody.bt-speech-bubble [data-task="8"],
 .theme-dark.bt-speech-bubble [data-task="9"] {
   --text-normal: var(--background-primary);
   transition: background-color 0.2s, background 0.2s, border-radius 0.2s;
 }
 
 /* Speech Bubble Colors */
-.bt-speech-bubble [data-task="0"] { background-color: rgba(224, 108, 117, 0.35); }
-.bt-speech-bubble [data-task="1"] { background-color: rgba(209, 154, 102, 0.35); }
-.bt-speech-bubble [data-task="2"] { background-color: rgba(229, 192, 123, 0.35); }
-.bt-speech-bubble [data-task="3"] { background-color: rgba(152, 195, 121, 0.35); }
-.bt-speech-bubble [data-task="4"] { background-color: rgba(86, 182, 194, 0.35); }
-.bt-speech-bubble [data-task="5"] { background-color: rgba(97, 175, 239, 0.35); }
-.bt-speech-bubble [data-task="6"] { background-color: rgba(82, 139, 255, 0.35); }
-.bt-speech-bubble [data-task="7"] { background-color: rgba(198, 120, 221, 0.35); }
-.bt-speech-bubble [data-task="8"] { background: linear-gradient(to right, rgba(224, 108, 117, 0.35), rgba(229, 192, 123, 0.35)); }
-.bt-speech-bubble [data-task="9"] { background: linear-gradient(to left, rgba(180, 167, 255, 0.35), rgba(198, 120, 221, 0.35)); }
+body.bt-speech-bubble [data-task="0"] { background-color: rgba(224, 108, 117, 0.35) !important; }
+body.bt-speech-bubble [data-task="1"] { background-color: rgba(209, 154, 102, 0.35) !important; }
+body.bt-speech-bubble [data-task="2"] { background-color: rgba(229, 192, 123, 0.35) !important; }
+body.bt-speech-bubble [data-task="3"] { background-color: rgba(152, 195, 121, 0.35) !important; }
+body.bt-speech-bubble [data-task="4"] { background-color: rgba(86, 182, 194, 0.35) !important; }
+body.bt-speech-bubble [data-task="5"] { background-color: rgba(97, 175, 239, 0.35) !important; }
+body.bt-speech-bubble [data-task="6"] { background-color: rgba(82, 139, 255, 0.35) !important; }
+body.bt-speech-bubble [data-task="7"] { background-color: rgba(198, 120, 221, 0.35) !important; }
+body.bt-speech-bubble [data-task="8"] { background: linear-gradient(to right, rgba(224, 108, 117, 0.35), rgba(229, 192, 123, 0.35)) !important; }
+body.bt-speech-bubble [data-task="9"] { background: linear-gradient(to left, rgba(180, 167, 255, 0.35), rgba(198, 120, 221, 0.35)) !important; }
 
 /* Editing mode fix */
-.bt-speech-bubble .HyperMD-task-line[data-task="0"],
-.bt-speech-bubble .HyperMD-task-line[data-task="1"],
-.bt-speech-bubble .HyperMD-task-line[data-task="2"],
-.bt-speech-bubble .HyperMD-task-line[data-task="3"],
-.bt-speech-bubble .HyperMD-task-line[data-task="4"],
-.bt-speech-bubble .HyperMD-task-line[data-task="5"],
-.bt-speech-bubble .HyperMD-task-line[data-task="6"],
-.bt-speech-bubble .HyperMD-task-line[data-task="7"],
-.bt-speech-bubble .HyperMD-task-line[data-task="8"],
-.bt-speech-bubble .HyperMD-task-line[data-task="9"] {
+body.bt-speech-bubble .HyperMD-task-line[data-task="0"],
+body.bt-speech-bubble .HyperMD-task-line[data-task="1"],
+body.bt-speech-bubble .HyperMD-task-line[data-task="2"],
+body.bt-speech-bubble .HyperMD-task-line[data-task="3"],
+body.bt-speech-bubble .HyperMD-task-line[data-task="4"],
+body.bt-speech-bubble .HyperMD-task-line[data-task="5"],
+body.bt-speech-bubble .HyperMD-task-line[data-task="6"],
+body.bt-speech-bubble .HyperMD-task-line[data-task="7"],
+body.bt-speech-bubble .HyperMD-task-line[data-task="8"],
+body.bt-speech-bubble .HyperMD-task-line[data-task="9"] {
   text-indent: 0px !important;
 }
