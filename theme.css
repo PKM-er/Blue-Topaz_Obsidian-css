@@ -6396,6 +6396,7 @@ body.all-dark-pdf .print,
   --sb-mix: 80%;
   --sb-text: var(--text-normal);
   --sb-surface: var(--background-primary);
+  /*blue-topaz-speech-bubble*/
   --sb-h0: 350deg;
   --sb-h1: calc(var(--sb-h0) + 30deg);
   --sb-h2: calc(var(--sb-h0) + 58deg);
@@ -6574,6 +6575,7 @@ body.color-scheme-options-avocado-topaz.theme-light {
   /*Bases 继承默认主题*/
 
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -6685,6 +6687,7 @@ body.color-scheme-options-avocado-topaz.theme-dark {
   /*Bases 继承默认主题*/
 
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -6805,6 +6808,7 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   /*Bases 继承默认主题*/
 
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -6932,6 +6936,7 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   /*Bases 继承默认主题*/
 
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -7099,6 +7104,7 @@ body.color-scheme-options-pink-topaz.theme-light {
   /*Bases 继承默认主题*/
 
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -7252,6 +7258,7 @@ body.color-scheme-options-pink-topaz.theme-dark {
 	/*Bases 继承默认主题*/
 
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -7357,6 +7364,7 @@ body.color-scheme-options-topaz-nord.theme-dark {
   /*Bases 继承默认主题*/
 
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -7523,6 +7531,7 @@ body.color-scheme-options-topaz-nord.theme-light {
   /*Bases 继承默认主题*/
 
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -7672,6 +7681,7 @@ body.color-scheme-options-flamingo.theme-light {
   /*Bases 继承默认主题*/
 
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -7821,6 +7831,7 @@ body.color-scheme-options-flamingo.theme-dark {
   /*Bases 继承默认主题*/
 
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -8109,6 +8120,7 @@ body.color-scheme-options-honey-milk-topaz.theme-light {
   /*Bases 继承默认主题*/
 
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -8252,6 +8264,7 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
   /*Bases 继承默认主题*/
 
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -8430,6 +8443,7 @@ body.color-scheme-options-chocolate-topaz.theme-light {
   /*Bases 继承默认主题*/
   
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -8601,6 +8615,7 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
   /*Bases 继承默认主题*/
 
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -8774,6 +8789,7 @@ body.color-scheme-options-autumn-topaz.theme-light {
 	--background-primary-alt: var(--color-base-02);
 
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -8916,6 +8932,7 @@ body.color-scheme-options-autumn-topaz.theme-dark {
   /*Bases 继承默认主题*/
 
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -9072,6 +9089,7 @@ body.color-scheme-options-lillimon-topaz.theme-light {
   /*Bases 继承默认主题*/
   
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -9201,6 +9219,7 @@ body.color-scheme-options-lillimon-topaz.theme-dark {
   /*Bases 继承默认主题*/
 
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -9402,6 +9421,7 @@ body.color-scheme-options-lilac.theme-light {
   /*Bases 继承默认主题*/
 	
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -9567,6 +9587,7 @@ body.color-scheme-options-lilac.theme-dark {
   /*Bases 继承默认主题*/
   
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -9755,6 +9776,7 @@ body.color-scheme-options-simplicity-topaz.theme-light {
   /*Bases 继承默认主题*/
 
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -9840,6 +9862,7 @@ body.color-scheme-options-simplicity-topaz.theme-dark {
   /*Bases 继承默认主题*/
 
 
+  /*blue-topaz-speech-bubble*/
   --sb-h0: calc(var(--accent-h) * 1deg);
 }
 
@@ -12957,6 +12980,7 @@ div.math.math-block mjx-math{
   --sb-mix: 92%;
   --sb-text: var(--background-primary);
   --sb-surface: var(--background-primary);
+  /*blue-topaz-speech-bubble*/
   --sb-h0: 350deg;
   --sb-h1: calc(var(--sb-h0) + 30deg);
   --sb-h2: calc(var(--sb-h0) + 58deg);
