@@ -30251,7 +30251,7 @@ body:not(.theme-light.background-settings-workplace-background-image) .workspace
 .bt-speech-bubble [data-task="8"],
 .bt-speech-bubble [data-task="9"] {
   margin-inline-start: -15px;
-  padding: 3px 10px !important;
+  padding: 2px 10px !important;
   border-radius: 3px 10px 10px 10px;
   max-width: fit-content;
   color: var(--sb-text, var(--text-normal));
@@ -30286,17 +30286,17 @@ body:not(.theme-light.background-settings-workplace-background-image) .workspace
   display: none;
 }
 
-/* Speech Bubble Colors */
-.bt-speech-bubble [data-task="0"] { background: var(--bt-speech-0) !important; }
-.bt-speech-bubble [data-task="1"] { background: var(--bt-speech-1) !important; }
-.bt-speech-bubble [data-task="2"] { background: var(--bt-speech-2) !important; }
-.bt-speech-bubble [data-task="3"] { background: var(--bt-speech-3) !important; }
-.bt-speech-bubble [data-task="4"] { background: var(--bt-speech-4) !important; }
-.bt-speech-bubble [data-task="5"] { background: var(--bt-speech-5) !important; }
-.bt-speech-bubble [data-task="6"] { background: var(--bt-speech-6) !important; }
-.bt-speech-bubble [data-task="7"] { background: var(--bt-speech-7) !important; }
-.bt-speech-bubble [data-task="8"] { background: var(--bt-speech-8) !important; }
-.bt-speech-bubble [data-task="9"] { background: var(--bt-speech-9) !important; }
+/* Speech Bubble Colors — each bubble gradients to the next hue */
+.bt-speech-bubble [data-task="0"] { background: linear-gradient(90deg, var(--bt-speech-0), var(--bt-speech-1)) !important; }
+.bt-speech-bubble [data-task="1"] { background: linear-gradient(90deg, var(--bt-speech-1), var(--bt-speech-2)) !important; }
+.bt-speech-bubble [data-task="2"] { background: linear-gradient(90deg, var(--bt-speech-2), var(--bt-speech-3)) !important; }
+.bt-speech-bubble [data-task="3"] { background: linear-gradient(90deg, var(--bt-speech-3), var(--bt-speech-4)) !important; }
+.bt-speech-bubble [data-task="4"] { background: linear-gradient(90deg, var(--bt-speech-4), var(--bt-speech-5)) !important; }
+.bt-speech-bubble [data-task="5"] { background: linear-gradient(90deg, var(--bt-speech-5), var(--bt-speech-6)) !important; }
+.bt-speech-bubble [data-task="6"] { background: linear-gradient(90deg, var(--bt-speech-6), var(--bt-speech-7)) !important; }
+.bt-speech-bubble [data-task="7"] { background: linear-gradient(90deg, var(--bt-speech-7), var(--bt-speech-0)) !important; }
+.bt-speech-bubble [data-task="8"] { background: linear-gradient(90deg, var(--bt-speech-0), var(--bt-speech-2)) !important; }
+.bt-speech-bubble [data-task="9"] { background: linear-gradient(90deg, var(--bt-speech-7), var(--bt-speech-0)) !important; }
 
 /* Editing mode fix */
 .bt-speech-bubble .HyperMD-task-line[data-task="0"],
