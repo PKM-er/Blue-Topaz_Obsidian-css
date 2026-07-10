@@ -30295,9 +30295,9 @@ body:not(.theme-light.background-settings-workplace-background-image) .workspace
 .bt-speech-bubble [data-task="4"] { background: linear-gradient(90deg, var(--bt-speech-4), var(--bt-speech-5)) !important; }
 .bt-speech-bubble [data-task="5"] { background: linear-gradient(90deg, var(--bt-speech-5), var(--bt-speech-6)) !important; }
 .bt-speech-bubble [data-task="6"] { background: linear-gradient(90deg, var(--bt-speech-6), var(--bt-speech-7)) !important; }
-.bt-speech-bubble [data-task="7"] { background: linear-gradient(90deg, var(--bt-speech-7), var(--bt-speech-0)) !important; }
-.bt-speech-bubble [data-task="8"] { background: linear-gradient(90deg, var(--bt-speech-0), var(--bt-speech-2)) !important; }
-.bt-speech-bubble [data-task="9"] { background: linear-gradient(90deg, var(--bt-speech-7), var(--bt-speech-0)) !important; }
+.bt-speech-bubble [data-task="7"] { background: linear-gradient(90deg, var(--bt-speech-7), var(--bt-speech-8)) !important; }
+.bt-speech-bubble [data-task="8"] { background: linear-gradient(90deg, var(--bt-speech-8), var(--bt-speech-9)) !important; }
+.bt-speech-bubble [data-task="9"] { background: linear-gradient(90deg, var(--bt-speech-9), var(--bt-speech-0)) !important; }
 
 /* Editing mode fix */
 .bt-speech-bubble .HyperMD-task-line[data-task="0"],
@@ -30312,5 +30312,4 @@ body:not(.theme-light.background-settings-workplace-background-image) .workspace
 .bt-speech-bubble .HyperMD-task-line[data-task="9"] {
   text-indent: 0px !important;
 }
-
 
