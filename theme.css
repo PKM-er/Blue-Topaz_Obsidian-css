@@ -6391,20 +6391,20 @@ body.all-dark-pdf .print,
 	--bases-list-separator-font-weight: bold;
 
   /* Speech Bubble Engine */
-  --sb-c: 0.065;
+  --sb-c: 0.08;
   --sb-l: 86%;
-  --sb-mix: 80%;
+  --sb-mix: 75%;
   --sb-text: var(--text-normal);
   --sb-surface: var(--background-primary);
   /*blue-topaz-speech-bubble*/
   --sb-h0: 350deg;
-  --sb-h1: calc(var(--sb-h0) + 30deg);
-  --sb-h2: calc(var(--sb-h0) + 58deg);
-  --sb-h3: calc(var(--sb-h0) + 128deg);
-  --sb-h4: calc(var(--sb-h0) + 168deg);
-  --sb-h5: calc(var(--sb-h0) + 205deg);
-  --sb-h6: calc(var(--sb-h0) + 238deg);
-  --sb-h7: calc(var(--sb-h0) + 292deg);
+  --sb-h1: calc(var(--sb-h0) + 40deg);
+  --sb-h2: calc(var(--sb-h0) + 75deg);
+  --sb-h3: calc(var(--sb-h0) + 130deg);
+  --sb-h4: calc(var(--sb-h0) + 180deg);
+  --sb-h5: calc(var(--sb-h0) + 220deg);
+  --sb-h6: calc(var(--sb-h0) + 260deg);
+  --sb-h7: calc(var(--sb-h0) + 300deg);
   --sb-t0: oklch(var(--sb-l) var(--sb-c) var(--sb-h0));
   --sb-t1: oklch(var(--sb-l) var(--sb-c) var(--sb-h1));
   --sb-t2: oklch(var(--sb-l) var(--sb-c) var(--sb-h2));
@@ -12975,20 +12975,20 @@ div.math.math-block mjx-math{
   color: var(--text-color-code) !important;
 
   /* Speech Bubble Engine */
-  --sb-c: 0.105;
+  --sb-c: 0.12;
   --sb-l: 74%;
   --sb-mix: 92%;
   --sb-text: var(--background-primary);
   --sb-surface: var(--background-primary);
   /*blue-topaz-speech-bubble*/
   --sb-h0: 350deg;
-  --sb-h1: calc(var(--sb-h0) + 30deg);
-  --sb-h2: calc(var(--sb-h0) + 58deg);
-  --sb-h3: calc(var(--sb-h0) + 128deg);
-  --sb-h4: calc(var(--sb-h0) + 168deg);
-  --sb-h5: calc(var(--sb-h0) + 205deg);
-  --sb-h6: calc(var(--sb-h0) + 238deg);
-  --sb-h7: calc(var(--sb-h0) + 292deg);
+  --sb-h1: calc(var(--sb-h0) + 40deg);
+  --sb-h2: calc(var(--sb-h0) + 75deg);
+  --sb-h3: calc(var(--sb-h0) + 130deg);
+  --sb-h4: calc(var(--sb-h0) + 180deg);
+  --sb-h5: calc(var(--sb-h0) + 220deg);
+  --sb-h6: calc(var(--sb-h0) + 260deg);
+  --sb-h7: calc(var(--sb-h0) + 300deg);
   --sb-t0: oklch(var(--sb-l) var(--sb-c) var(--sb-h0));
   --sb-t1: oklch(var(--sb-l) var(--sb-c) var(--sb-h1));
   --sb-t2: oklch(var(--sb-l) var(--sb-c) var(--sb-h2));
