@@ -30252,6 +30252,7 @@ body:not(.theme-light.background-settings-workplace-background-image) .workspace
 .bt-speech-bubble [data-task="9"] {
   margin-inline-start: -15px;
   padding: 2px 10px !important;
+  margin-block: 2px;
   border-radius: 3px 10px 10px 10px;
   max-width: fit-content;
   color: var(--sb-text, var(--text-normal));
