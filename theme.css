@@ -6405,6 +6405,8 @@ body.all-dark-pdf .print,
   --sb-h5: calc(var(--sb-h0) + 220deg);
   --sb-h6: calc(var(--sb-h0) + 260deg);
   --sb-h7: calc(var(--sb-h0) + 300deg);
+  --sb-h8: calc(var(--sb-h0) + 320deg);
+  --sb-h9: calc(var(--sb-h0) + 340deg);
   --sb-t0: oklch(var(--sb-l) var(--sb-c) var(--sb-h0));
   --sb-t1: oklch(var(--sb-l) var(--sb-c) var(--sb-h1));
   --sb-t2: oklch(var(--sb-l) var(--sb-c) var(--sb-h2));
@@ -6413,6 +6415,8 @@ body.all-dark-pdf .print,
   --sb-t5: oklch(var(--sb-l) var(--sb-c) var(--sb-h5));
   --sb-t6: oklch(var(--sb-l) var(--sb-c) var(--sb-h6));
   --sb-t7: oklch(var(--sb-l) var(--sb-c) var(--sb-h7));
+  --sb-t8: oklch(var(--sb-l) var(--sb-c) var(--sb-h8));
+  --sb-t9: oklch(var(--sb-l) var(--sb-c) var(--sb-h9));
   --bt-speech-0: color-mix(in oklch, var(--sb-t0) var(--sb-mix), var(--sb-surface));
   --bt-speech-1: color-mix(in oklch, var(--sb-t1) var(--sb-mix), var(--sb-surface));
   --bt-speech-2: color-mix(in oklch, var(--sb-t2) var(--sb-mix), var(--sb-surface));
@@ -6421,8 +6425,8 @@ body.all-dark-pdf .print,
   --bt-speech-5: color-mix(in oklch, var(--sb-t5) var(--sb-mix), var(--sb-surface));
   --bt-speech-6: color-mix(in oklch, var(--sb-t6) var(--sb-mix), var(--sb-surface));
   --bt-speech-7: color-mix(in oklch, var(--sb-t7) var(--sb-mix), var(--sb-surface));
-  --bt-speech-8: linear-gradient(90deg, var(--bt-speech-0), var(--bt-speech-2));
-  --bt-speech-9: linear-gradient(270deg, var(--bt-speech-7), var(--bt-speech-6));
+  --bt-speech-8: color-mix(in oklch, var(--sb-t8) var(--sb-mix), var(--sb-surface));
+  --bt-speech-9: color-mix(in oklch, var(--sb-t9) var(--sb-mix), var(--sb-surface));
 }
 
 body.color-scheme-options-avocado-topaz .theme-light,
@@ -12989,6 +12993,8 @@ div.math.math-block mjx-math{
   --sb-h5: calc(var(--sb-h0) + 220deg);
   --sb-h6: calc(var(--sb-h0) + 260deg);
   --sb-h7: calc(var(--sb-h0) + 300deg);
+  --sb-h8: calc(var(--sb-h0) + 320deg);
+  --sb-h9: calc(var(--sb-h0) + 340deg);
   --sb-t0: oklch(var(--sb-l) var(--sb-c) var(--sb-h0));
   --sb-t1: oklch(var(--sb-l) var(--sb-c) var(--sb-h1));
   --sb-t2: oklch(var(--sb-l) var(--sb-c) var(--sb-h2));
@@ -12997,6 +13003,8 @@ div.math.math-block mjx-math{
   --sb-t5: oklch(var(--sb-l) var(--sb-c) var(--sb-h5));
   --sb-t6: oklch(var(--sb-l) var(--sb-c) var(--sb-h6));
   --sb-t7: oklch(var(--sb-l) var(--sb-c) var(--sb-h7));
+  --sb-t8: oklch(var(--sb-l) var(--sb-c) var(--sb-h8));
+  --sb-t9: oklch(var(--sb-l) var(--sb-c) var(--sb-h9));
   --bt-speech-0: color-mix(in oklch, var(--sb-t0) var(--sb-mix), var(--sb-surface));
   --bt-speech-1: color-mix(in oklch, var(--sb-t1) var(--sb-mix), var(--sb-surface));
   --bt-speech-2: color-mix(in oklch, var(--sb-t2) var(--sb-mix), var(--sb-surface));
@@ -13005,8 +13013,8 @@ div.math.math-block mjx-math{
   --bt-speech-5: color-mix(in oklch, var(--sb-t5) var(--sb-mix), var(--sb-surface));
   --bt-speech-6: color-mix(in oklch, var(--sb-t6) var(--sb-mix), var(--sb-surface));
   --bt-speech-7: color-mix(in oklch, var(--sb-t7) var(--sb-mix), var(--sb-surface));
-  --bt-speech-8: linear-gradient(90deg, var(--bt-speech-0), var(--bt-speech-2));
-  --bt-speech-9: linear-gradient(270deg, var(--bt-speech-7), var(--bt-speech-6));
+  --bt-speech-8: color-mix(in oklch, var(--sb-t8) var(--sb-mix), var(--sb-surface));
+  --bt-speech-9: color-mix(in oklch, var(--sb-t9) var(--sb-mix), var(--sb-surface));
 }
 
 /*******codebox settings*******/
@@ -30313,3 +30321,7 @@ body:not(.theme-light.background-settings-workplace-background-image) .workspace
   text-indent: 0px !important;
 }
 
+/* Keep vertical gaps between CodeMirror speech-bubble lines. */
+body.bt-speech-bubble .markdown-source-view.mod-cm6 .cm-content > .HyperMD-task-line[data-task] {
+  margin-block: 2px !important;
+}

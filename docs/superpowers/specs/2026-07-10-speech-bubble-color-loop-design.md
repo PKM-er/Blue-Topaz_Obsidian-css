@@ -6,8 +6,10 @@ Make all numbered speech bubbles form one continuous visual color loop. Each bub
 
 ## Scope
 
-- Change only the ten `background` gradient mappings in the speech-bubble CSS.
-- Preserve the existing per-scheme OKLCH color variables, bubble geometry, spacing, checkbox hiding, and Style Settings toggle.
+- Keep the ten `background` mappings as a strict closed loop.
+- Convert `--bt-speech-8` and `--bt-speech-9` from nested gradients into real OKLCH base colors. Preserve colors 0–7 and derive 8 and 9 at `+320deg` and `+340deg` from the scheme hue.
+- Preserve bubble geometry, checkbox hiding, and the Style Settings toggle.
+- Enforce a 2px vertical margin on CodeMirror speech-bubble lines with enough specificity to override Obsidian's `margin: 0 !important` editor rule.
 - Do not modify the two untracked CSS reference files in the repository root.
 
 ## Gradient mapping
@@ -30,6 +32,7 @@ All gradients remain horizontal (`90deg`) and use the current `!important` prece
 ## Validation
 
 1. Inspect the ten CSS mappings to ensure the complete 0-to-9 ring is present exactly once.
-2. Confirm the only functional CSS change is to the mappings for bubbles 7, 8, and 9.
-3. Copy the updated `theme.css` to `E:\\Obsidian\\all-in-one\\.obsidian\\themes\\Blue Topaz Alternate` and compare the deployed file with the repository version.
-4. Check repository status to ensure the existing untracked reference files remain untouched.
+2. Confirm that `--bt-speech-8` and `--bt-speech-9` resolve to solid colors in both light and dark engines, rather than nested gradients.
+3. Confirm in Obsidian that bubbles 7–9 have non-empty computed backgrounds and adjacent bubble rectangles have a 2px gap.
+4. Copy the updated `theme.css` to `E:\\Obsidian\\all-in-one\\.obsidian\\themes\\Blue Topaz Alternate` and compare the deployed file with the repository version.
+5. Check repository status to ensure the existing untracked reference files remain untouched.

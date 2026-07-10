@@ -4,7 +4,7 @@
 
 **Goal:** Make the ten numbered speech bubbles form the continuous gradient loop `0→1→…→8→9→0`.
 
-**Architecture:** The theme already computes ten per-scheme base colors as CSS custom properties named `--bt-speech-0` through `--bt-speech-9`. Keep that color engine unchanged and alter only the three final `linear-gradient()` mappings so bubbles 7, 8, and 9 lead to the next number in the ring. Deploy the resulting theme file to the active Obsidian vault after static verification.
+**Architecture:** The theme computes per-scheme colors as CSS custom properties named `--bt-speech-0` through `--bt-speech-9`. Colors 8 and 9 must be solid OKLCH base colors—not nested gradients—so every variable can be used safely as a color stop. The editor spacing rule must also outrank Obsidian's important zero-margin rule before the theme is deployed and checked in the live DOM.
 
 **Tech Stack:** Obsidian theme CSS; PowerShell; Git.
 
@@ -12,7 +12,9 @@
 
 - Modify only `theme.css` for the functional change.
 - Keep gradients horizontal at `90deg` and retain the existing `!important` precedence.
-- Preserve the Style Settings toggle, existing color variables, bubble dimensions, and vertical spacing.
+- Preserve the Style Settings toggle, colors 0–7, and bubble dimensions.
+- Define colors 8 and 9 at hue offsets `+320deg` and `+340deg` in both light and dark engines.
+- Maintain a visible 2px vertical gap in both reading and live-preview modes.
 - Do not alter the existing untracked files `speech_bubble.css` or `speech_bubble_clean.css`.
 - Deploy to `E:\\Obsidian\\all-in-one\\.obsidian\\themes\\Blue Topaz Alternate\\theme.css`.
 
@@ -122,3 +124,24 @@ git status --short
 
 Expected: no tracked changes; the pre-existing `?? speech_bubble.css` and `?? speech_bubble_clean.css` remain the only untracked entries.
 
+### Task 3: Correct base-color and editor-spacing regressions
+
+**Files:**
+- Modify: `theme.css`
+- Test: static PowerShell assertions and Obsidian live DOM inspection
+
+- [x] **Step 1: Reproduce the regressions in Obsidian**
+
+Confirmed that bubbles 7–9 computed to `background-image: none` because colors 8 and 9 were nested gradients, and that CodeMirror forced both vertical margins to `0px !important`.
+
+- [x] **Step 2: Add real base colors 8 and 9**
+
+Added `--sb-h8`, `--sb-h9`, `--sb-t8`, and `--sb-t9` to both color engines and changed `--bt-speech-8` and `--bt-speech-9` to `color-mix(...)` values.
+
+- [x] **Step 3: Add a CodeMirror-specific spacing override**
+
+Added a `body.bt-speech-bubble .markdown-source-view.mod-cm6 .cm-content` rule with `margin-block: 2px !important` on numbered task lines.
+
+- [x] **Step 4: Verify in the live Obsidian DOM**
+
+Confirmed non-empty gradients for bubbles 7–9, computed 2px top and bottom margins, and visible gaps after a vault reload.
