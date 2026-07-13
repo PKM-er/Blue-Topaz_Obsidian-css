@@ -3409,6 +3409,14 @@ settings:
     type: class-toggle
     default: false
   -
+    id: bt-speech-bubble
+    title: Enable speech bubble style
+    title.zh: 启用聊天气泡样式
+    description: Turn on to render `- [0]` through `- [9]` as speech bubbles
+    description.zh: 开启后，将 `- [0]` 至 `- [9]` 渲染为聊天气泡
+    type: class-toggle
+    default: false
+  -
     id: icons-style-folder
     title: 2.3.12 Icons
     title.zh: 2.3.12 图标
@@ -6381,6 +6389,7 @@ body.all-dark-pdf .print,
 	--bases-card-line-hover: var(--background-primary-alt);
 	--bases-list-separator-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.75);
 	--bases-list-separator-font-weight: bold;
+
 }
 
 body.color-scheme-options-avocado-topaz .theme-light,
@@ -30095,3 +30104,170 @@ body:not(.theme-light.background-settings-workplace-background-image) .workspace
 }
 
 /**** Bases end ****/
+
+/*=== Speech Bubble (ported from AnuPpuccin) ===*/
+
+body.bt-speech-bubble.theme-light {
+  --sb-c: 0.08;
+  --sb-l: 86%;
+  --sb-mix: 75%;
+  --sb-text: var(--text-normal);
+  --sb-surface: var(--background-primary);
+}
+
+body.bt-speech-bubble.theme-dark {
+  --sb-c: 0.12;
+  --sb-l: 74%;
+  --sb-mix: 92%;
+  --sb-text: var(--background-primary);
+  --sb-surface: var(--background-primary);
+}
+
+body.bt-speech-bubble:is(.theme-light, .theme-dark) {
+  --sb-h0: calc(var(--accent-h, 350) * 1deg);
+  --sb-h1: calc(var(--sb-h0) + 36deg);
+  --sb-h2: calc(var(--sb-h1) + 36deg);
+  --sb-h3: calc(var(--sb-h2) + 36deg);
+  --sb-h4: calc(var(--sb-h3) + 36deg);
+  --sb-h5: calc(var(--sb-h4) + 36deg);
+  --sb-h6: calc(var(--sb-h5) + 36deg);
+  --sb-h7: calc(var(--sb-h6) + 36deg);
+  --sb-h8: calc(var(--sb-h7) + 36deg);
+  --sb-h9: calc(var(--sb-h8) + 36deg);
+  --sb-t0: oklch(var(--sb-l0, var(--sb-l)) var(--sb-c) var(--sb-h0));
+  --sb-t1: oklch(var(--sb-l1, var(--sb-l)) var(--sb-c) var(--sb-h1));
+  --sb-t2: oklch(var(--sb-l2, var(--sb-l)) var(--sb-c) var(--sb-h2));
+  --sb-t3: oklch(var(--sb-l3, var(--sb-l)) var(--sb-c) var(--sb-h3));
+  --sb-t4: oklch(var(--sb-l4, var(--sb-l)) var(--sb-c) var(--sb-h4));
+  --sb-t5: oklch(var(--sb-l5, var(--sb-l)) var(--sb-c) var(--sb-h5));
+  --sb-t6: oklch(var(--sb-l6, var(--sb-l)) var(--sb-c) var(--sb-h6));
+  --sb-t7: oklch(var(--sb-l7, var(--sb-l)) var(--sb-c) var(--sb-h7));
+  --sb-t8: oklch(var(--sb-l8, var(--sb-l)) var(--sb-c) var(--sb-h8));
+  --sb-t9: oklch(var(--sb-l9, var(--sb-l)) var(--sb-c) var(--sb-h9));
+  --bt-speech-0: color-mix(in oklch, var(--sb-t0) var(--sb-mix), var(--sb-surface));
+  --bt-speech-1: color-mix(in oklch, var(--sb-t1) var(--sb-mix), var(--sb-surface));
+  --bt-speech-2: color-mix(in oklch, var(--sb-t2) var(--sb-mix), var(--sb-surface));
+  --bt-speech-3: color-mix(in oklch, var(--sb-t3) var(--sb-mix), var(--sb-surface));
+  --bt-speech-4: color-mix(in oklch, var(--sb-t4) var(--sb-mix), var(--sb-surface));
+  --bt-speech-5: color-mix(in oklch, var(--sb-t5) var(--sb-mix), var(--sb-surface));
+  --bt-speech-6: color-mix(in oklch, var(--sb-t6) var(--sb-mix), var(--sb-surface));
+  --bt-speech-7: color-mix(in oklch, var(--sb-t7) var(--sb-mix), var(--sb-surface));
+  --bt-speech-8: color-mix(in oklch, var(--sb-t8) var(--sb-mix), var(--sb-surface));
+  --bt-speech-9: color-mix(in oklch, var(--sb-t9) var(--sb-mix), var(--sb-surface));
+  --sb-indent: -15px;
+  --sb-padding: 2px 10px;
+  --sb-gap: 2px;
+  --sb-radius: 3px 10px 10px 10px;
+  --sb-angle: 90deg;
+}
+
+body.color-scheme-options-monochrome-topaz.bt-speech-bubble:is(.theme-light, .theme-dark) {
+  --sb-c: 0;
+  --sb-l0: calc(var(--sb-l) - 10%);
+  --sb-l1: calc(var(--sb-l) - 6%);
+  --sb-l2: calc(var(--sb-l) - 2%);
+  --sb-l3: calc(var(--sb-l) + 2%);
+  --sb-l4: calc(var(--sb-l) + 6%);
+  --sb-l5: calc(var(--sb-l) + 10%);
+  --sb-l6: calc(var(--sb-l) + 6%);
+  --sb-l7: calc(var(--sb-l) + 2%);
+  --sb-l8: calc(var(--sb-l) - 2%);
+  --sb-l9: calc(var(--sb-l) - 6%);
+}
+
+body.bt-speech-bubble :is(li.task-list-item, .HyperMD-task-line):is(
+  [data-task="0"],
+  [data-task="1"],
+  [data-task="2"],
+  [data-task="3"],
+  [data-task="4"],
+  [data-task="5"],
+  [data-task="6"],
+  [data-task="7"],
+  [data-task="8"],
+  [data-task="9"]
+) {
+  margin-inline-start: var(--sb-indent);
+  padding: var(--sb-padding) !important;
+  margin-block: var(--sb-gap);
+  border-radius: var(--sb-radius);
+  max-width: fit-content;
+  color: var(--sb-text, var(--text-normal));
+  --bold-color: var(--sb-text, var(--text-normal));
+  --italic-color: var(--sb-text, var(--text-normal));
+}
+
+body.bt-speech-bubble li.task-list-item:is(
+  [data-task="0"],
+  [data-task="1"],
+  [data-task="2"],
+  [data-task="3"],
+  [data-task="4"],
+  [data-task="5"],
+  [data-task="6"],
+  [data-task="7"],
+  [data-task="8"],
+  [data-task="9"]
+) p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body.bt-speech-bubble :is(li.task-list-item, .HyperMD-task-line):is(
+  [data-task="0"],
+  [data-task="1"],
+  [data-task="2"],
+  [data-task="3"],
+  [data-task="4"],
+  [data-task="5"],
+  [data-task="6"],
+  [data-task="7"],
+  [data-task="8"],
+  [data-task="9"]
+) .task-list-item-checkbox {
+  display: none;
+}
+
+/* Speech Bubble Colors — each bubble gradients to the next hue */
+body.bt-speech-bubble :is(li.task-list-item, .HyperMD-task-line)[data-task="0"] { background: linear-gradient(var(--sb-angle), var(--bt-speech-0), var(--bt-speech-1)) !important; }
+body.bt-speech-bubble :is(li.task-list-item, .HyperMD-task-line)[data-task="1"] { background: linear-gradient(var(--sb-angle), var(--bt-speech-1), var(--bt-speech-2)) !important; }
+body.bt-speech-bubble :is(li.task-list-item, .HyperMD-task-line)[data-task="2"] { background: linear-gradient(var(--sb-angle), var(--bt-speech-2), var(--bt-speech-3)) !important; }
+body.bt-speech-bubble :is(li.task-list-item, .HyperMD-task-line)[data-task="3"] { background: linear-gradient(var(--sb-angle), var(--bt-speech-3), var(--bt-speech-4)) !important; }
+body.bt-speech-bubble :is(li.task-list-item, .HyperMD-task-line)[data-task="4"] { background: linear-gradient(var(--sb-angle), var(--bt-speech-4), var(--bt-speech-5)) !important; }
+body.bt-speech-bubble :is(li.task-list-item, .HyperMD-task-line)[data-task="5"] { background: linear-gradient(var(--sb-angle), var(--bt-speech-5), var(--bt-speech-6)) !important; }
+body.bt-speech-bubble :is(li.task-list-item, .HyperMD-task-line)[data-task="6"] { background: linear-gradient(var(--sb-angle), var(--bt-speech-6), var(--bt-speech-7)) !important; }
+body.bt-speech-bubble :is(li.task-list-item, .HyperMD-task-line)[data-task="7"] { background: linear-gradient(var(--sb-angle), var(--bt-speech-7), var(--bt-speech-8)) !important; }
+body.bt-speech-bubble :is(li.task-list-item, .HyperMD-task-line)[data-task="8"] { background: linear-gradient(var(--sb-angle), var(--bt-speech-8), var(--bt-speech-9)) !important; }
+body.bt-speech-bubble :is(li.task-list-item, .HyperMD-task-line)[data-task="9"] { background: linear-gradient(var(--sb-angle), var(--bt-speech-9), var(--bt-speech-0)) !important; }
+
+/* Editing mode fix */
+body.bt-speech-bubble .HyperMD-task-line:is(
+  [data-task="0"],
+  [data-task="1"],
+  [data-task="2"],
+  [data-task="3"],
+  [data-task="4"],
+  [data-task="5"],
+  [data-task="6"],
+  [data-task="7"],
+  [data-task="8"],
+  [data-task="9"]
+) {
+  text-indent: 0px !important;
+}
+
+/* Keep vertical gaps between CodeMirror speech-bubble lines. */
+body.bt-speech-bubble .markdown-source-view.mod-cm6 .cm-content > .HyperMD-task-line:is(
+  [data-task="0"],
+  [data-task="1"],
+  [data-task="2"],
+  [data-task="3"],
+  [data-task="4"],
+  [data-task="5"],
+  [data-task="6"],
+  [data-task="7"],
+  [data-task="8"],
+  [data-task="9"]
+) {
+  margin-block: var(--sb-gap) !important;
+}
