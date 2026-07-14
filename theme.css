@@ -28075,10 +28075,6 @@ body.list-bracket-style-two ol>li:not(.task-list-item) {
   padding-left: 0.4em;
 }
 
-body.list-bracket-style-two .markdown-rendered .list-bullet {
-  left: 0.6em;
-}
-
 body.list-bracket-style-three :is(.markdown-preview-view,.markdown-rendered):not(.kanban) :is(ul,ol):has(:is(ol,ul))>li:has(:is(ol,ul)):not(.task-list-item) {
   border-radius: var(--radius-s);
   word-wrap: break-word;
