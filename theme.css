@@ -21106,7 +21106,7 @@ body:not(.default-icons).is-mobile div.is-collapsed h2 .heading-collapse-indicat
 }
 
 .is-mobile .view-header-title-container,
-.is-mobile .view-header {
+.is-mobile:not(.is-phone) .view-header {
   height: 40px;
 }
 
@@ -27691,7 +27691,7 @@ body:not(.remove-selectionbackground) .markdown-source-view.mod-cm6 .cm-editor .
 
 .workspace-tabs .view-header {
   margin: 0;
-  padding: 0 var(--size-4-2);
+  padding-inline: var(--size-4-2);
 }
 
 .workspace-split.mod-root .workspace-tab-header.is-active {
@@ -28978,11 +28978,6 @@ body.transparent-tab-style.theme-dark .workspace-split.mod-root .workspace-tab-h
 }
  
 
-.is-phone .workspace-tabs .view-header
-{
-    margin: var(--safe-area-inset-top) auto 0;
-}
- 
 .is-mobile.theme-light .mobile-toolbar {
   background-color: var(--background-primary-alt);
 }
@@ -29086,7 +29081,6 @@ body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-custom) .ca
 
 .canvas-node-container h1 {
   font-size: calc(var(--h1-size) );
-  text-align: center;
 }
 
 .canvas-node-placeholder::after {
