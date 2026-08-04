@@ -29094,7 +29094,7 @@ body.canvas-card-focus-mode .canvas:has(.is-focused.mod-canvas-color-custom) .ca
 }
 
 .canvas-node-placeholder::after {
-  background-color: rgba(var(--canvas-color), 0.3);
+  background-color: color-mix(in srgb, var(--canvas-color) 30%, transparent);
 }
 .canvas-icon-placeholder svg {
   opacity: 0.5;
