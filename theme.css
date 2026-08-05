@@ -18010,7 +18010,7 @@ body.style-options-for-admonition-plugin .callout.admonition .admonition-content
 }
 
 .admonition.callout {
-  border-color: rgba(var(--callout-color),0.15);
+  border-color: color-mix(in oklch, var(--callout-color) 15%, transparent);
 }
 .callout:not(.admonition).drop-shadow
 {
@@ -18550,9 +18550,9 @@ body.style-options-for-admonition-plugin .callout.admonition-blank .admonition-c
 body.style-options-for-admonition-plugin :is(.admonition-def,.admonition-thm,.admonition-lem,.admonition-cor,.admonition-pro) {
   margin: 1.5625em 0 !important;
   overflow: visible !important;
-  border: 1px solid rgb(var(--callout-color)) !important;
+  border: 1px solid var(--callout-color) !important;
   border-radius: 0.3em !important;
-  background-color: rgba(var(--callout-color),0.05) !important;
+  background-color: color-mix(in oklch, var(--callout-color) 5%, transparent) !important;
   box-shadow: 0 0 0 !important;
 }
 
@@ -18561,7 +18561,7 @@ body.style-options-for-admonition-plugin :is(.admonition-def,.admonition-thm,.ad
   top: -0.9em;
   left: 1.5em;
   padding: 1px 8px !important;
-  background-color: rgb(var(--callout-color)) !important;
+  background-color: var(--callout-color) !important;
   border-radius: 0.2em;
 }
 
@@ -18570,7 +18570,7 @@ body.style-options-for-admonition-plugin :is(.admonition-def,.admonition-thm,.ad
   top: unset;
   left: 1.5em;
   padding: 1px 8px !important;
-  background-color: rgb(var(--callout-color)) !important;
+  background-color: var(--callout-color) !important;
   border-radius: 0.2em;
   position: relative;
   width: fit-content;
@@ -18585,7 +18585,7 @@ body.style-options-for-admonition-plugin :is(.admonition-def,.admonition-thm,.ad
 body.style-options-for-admonition-plugin :is(.admonition-def,.admonition-thm,.admonition-lem,.admonition-cor,.admonition-pro) *.admonition-title-icon {
   /* display: none !important; */
   color: white;
-  background-color: rgb(var(--callout-color));
+  background-color: var(--callout-color);
   margin: 0.2em;
 }
 
@@ -18625,7 +18625,7 @@ body.style-options-for-admonition-plugin .admonition-hibox {
   height: auto;
   overflow: hidden;
   border-radius: var(--radius-s) !important;
-  background: radial-gradient(circle at 0px 0px, rgba(var(--callout-color), 0.2) 0, rgba(var(--callout-color), 0.2) var(--hibox), transparent var(--hibox), transparent 0);
+  background: radial-gradient(circle at 0px 0px, color-mix(in oklch, var(--callout-color) 20%, transparent) 0, color-mix(in oklch, var(--callout-color) 20%, transparent) var(--hibox), transparent var(--hibox), transparent 0);
   transition: --hibox 0.6s linear;
   border-left: none !important;
 }
@@ -26082,40 +26082,40 @@ body.pdf-style-custom-bg .pdf-viewer .textLayer {
 /* ======= Callout======= */
 /* ================================== */
 body.admonition-bg-color-same .callout {
-  background-color: rgba(var(--callout-color), 0.1);
+  background-color: color-mix(in oklch, var(--callout-color) 10%, transparent);
   border-width: var(--callout-border-width);
 }
 body.shade-callout-style .callout {
   border:none;
-  box-shadow: inset 0 0 0 2px rgba(var(--callout-color), 0.25), 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: inset 0 0 0 2px color-mix(in oklch, var(--callout-color) 25%, transparent), 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1) !important;
 }
 body.shade-callout-style .callout .callout-title {
   padding: 6px;
-  background-color: rgba(var(--callout-color), 0.4);
+  background-color: color-mix(in oklch, var(--callout-color) 40%, transparent);
 }
 
 body.border-callout-style .callout {
   --callout-radius: 2px;
-  border-left: solid 4px rgb(var(--callout-color));
+  border-left: solid 4px var(--callout-color);
 }
 
 body.border-callout-style .callout .callout-title {
   padding: 6px;
-  background-color: rgba(var(--callout-color), 0.4);
+  background-color: color-mix(in oklch, var(--callout-color) 40%, transparent);
 }
 body.border-callout-style .callout .callout-content {
   margin-bottom: 0px;
-  background-color: rgba(var(--callout-color), 0.1);
+  background-color: color-mix(in oklch, var(--callout-color) 10%, transparent);
 }
 body.border-callout-style .callout .callout-content p{
   margin: 16px 0px; /*Fix the top margin is omitted, causing reading mode and live-preview is different. by LeCheena*/
 }
 .callout-title {
-  background-color: rgba(var(--callout-color), 0.15);
+  background-color: color-mix(in oklch, var(--callout-color) 15%, transparent);
 }
 .callout {
   padding: 0;
-  border-left: 4px solid rgba(var(--callout-color),0.15);
+  border-left: 4px solid color-mix(in oklch, var(--callout-color) 15%, transparent);
   background-color:var(--admonition-bg-color);
 }
 
@@ -26126,7 +26126,7 @@ body.border-callout-style .callout .callout-content p{
   display: unset;
 }
 body.admonition-bg-color-same .callout-title {
-  color: rgb(var(--callout-color));
+  color: var(--callout-color);
   background-color:unset;
 }
 .callout-title {
@@ -26134,7 +26134,7 @@ body.admonition-bg-color-same .callout-title {
   color: unset;
 }
 .admonition-title .admonition-title-icon {
-  color: rgb(var(--callout-color));
+  color: var(--callout-color);
 }
 
 .callout .callout-title-inner>img:not([class*="emoji"]) {
@@ -27002,7 +27002,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 }
 
 .callout.callout[data-callout*=infobox] {
-  --callout-color: var(--interactive-accent-rgb);
+  --callout-color: var(--interactive-accent);
   background: transparent;
   border: 0;
   box-shadow: none !important;
@@ -27051,7 +27051,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 
 /******callout bookinfo*****/
 .callout.callout[data-callout*="bookinfo"] {
-  --callout-color: 64, 201, 75;
+  --callout-color: rgb(64, 201, 75);
   --callout-icon: '<svg t="1648743111717" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2202" ><path d="M559.936 144.064l0 745.344 42.112-51.84c6.4-7.872 18.112-9.216 26.176-3.008 1.152 0.896 2.112 1.856 3.008 3.008l0.064-0.128 38.016 46.656L669.312 115.392 559.936 144.064 559.936 144.064zM160.512 558.976C153.536 561.664 145.664 558.208 142.976 551.232 140.288 544.256 143.68 536.384 150.72 533.632c42.496-16.832 88.384-24.768 135.168-24.768 48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 557.696 431.104 561.6 424 559.168 378.368 544.128 331.52 536.064 285.888 536.064 242.24 536.064 199.872 543.424 160.512 558.976L160.512 558.976zM160.512 472.064C153.536 474.752 145.664 471.36 142.976 464.32 140.288 457.344 143.68 449.408 150.72 446.72c42.496-16.896 88.384-24.832 135.168-24.832 48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 470.784 431.104 474.688 424 472.32 378.368 457.216 331.52 449.152 285.888 449.152 242.24 449.152 199.872 456.448 160.512 472.064L160.512 472.064zM160.512 393.152C153.536 395.904 145.664 392.384 142.976 385.408 140.288 378.432 143.68 370.56 150.72 367.808c42.496-16.896 88.384-24.832 135.168-24.832 48.512 0 98.24 8.576 146.624 24.576 7.104 2.304 11.008 10.048 8.64 17.216C438.784 391.872 431.104 395.776 424 393.344 378.368 378.304 331.52 370.176 285.888 370.176 242.24 370.176 199.872 377.536 160.512 393.152L160.512 393.152zM160.512 310.08c-6.976 2.752-14.848-0.704-17.536-7.68C140.288 295.36 143.68 287.488 150.72 284.736c42.496-16.832 88.384-24.768 135.168-24.768 48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 308.864 431.104 312.704 424 310.336 378.368 295.296 331.52 287.232 285.888 287.232 242.24 287.232 199.872 294.528 160.512 310.08L160.512 310.08zM160.512 234.816c-6.976 2.688-14.848-0.704-17.536-7.68C140.288 220.16 143.68 212.224 150.72 209.472 193.216 192.64 239.104 184.704 285.888 184.704c48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 233.536 431.104 237.44 424 235.072 378.368 220.032 331.52 211.968 285.888 211.968 242.24 211.968 199.872 219.328 160.512 234.816L160.512 234.816zM983.36 202.56C1005.888 203.776 1024 222.08 1024 244.288l0 570.048c0 22.976-19.392 41.792-43.008 41.792l-274.24 0 0 80.128-0.064 0c0 5.248-2.432 10.624-7.04 14.144-8.128 6.336-19.84 4.992-26.24-2.88l-56.768-69.376-59.776 73.472C553.536 956.608 547.712 960 541.248 960c-10.368 0-18.752-8.256-18.752-18.24l0-85.632L43.008 856.128C19.392 856.128 0 837.312 0 814.336L0 244.288C0 223.36 16.064 205.824 36.8 202.944L36.8 147.008c0-11.904 7.232-22.208 17.728-26.752C135.552 80.448 214.976 62.848 293.12 64c73.984 1.152 146.112 19.072 216.704 50.88C586.944 78.848 662.656 62.912 737.28 64c78.336 1.216 154.624 21.248 229.12 56.64 10.752 5.12 17.024 15.552 17.024 26.368l0 0L983.424 202.56 983.36 202.56zM706.752 676.288c10.112-0.512 20.352-0.704 30.528-0.576 63.232 1.088 125.12 15.36 185.792 40.96l0-551.04c-61.504-27.008-123.776-42.176-186.816-43.2-9.792-0.128-19.648 0.064-29.504 0.64L706.752 676.288 706.752 676.288zM292.16 122.496C228.736 121.536 163.776 134.976 97.088 165.312l0 550.656c66.304-28.544 131.584-41.344 196.032-40.256 63.296 1.088 125.248 15.36 185.92 40.96l0-551.04C417.408 138.624 355.2 123.456 292.16 122.496z" p-id="2203" ></path></svg>';
   overflow: unset;
   border: 0;
@@ -27092,7 +27092,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 }
 /******callout timeline*****/
 .callout.callout[data-callout="timeline"] {
-  --callout-color: 31, 172, 139;
+  --callout-color: rgb(31, 172, 139);
   --callout-icon: '<svg t="1649346326592" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2210"><path d="M384 170.666667m42.666667 0l512 0q42.666667 0 42.666666 42.666666l0 0q0 42.666667-42.666666 42.666667l-512 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666666Z" p-id="2211"></path><path d="M384 469.333333m42.666667 0l512 0q42.666667 0 42.666666 42.666667l0 0q0 42.666667-42.666666 42.666667l-512 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666667Z" p-id="2212"></path><path d="M384 768m42.666667 0l512 0q42.666667 0 42.666666 42.666667l0 0q0 42.666667-42.666666 42.666666l-512 0q-42.666667 0-42.666667-42.666666l0 0q0-42.666667 42.666667-42.666667Z" p-id="2213"></path><path d="M239.835143 127.973411m15.084945 15.084944l60.339779 60.339779q15.084945 15.084945 0 30.169889l-60.339779 60.339779q-15.084945 15.084945-30.169889 0l-60.339779-60.339779q-15.084945-15.084945 0-30.169889l60.339779-60.339779q15.084945-15.084945 30.169889 0Z" p-id="2214"></path><path d="M239.831988 426.647696m15.084944 15.084945l60.339779 60.339778q15.084945 15.084945 0 30.16989l-60.339779 60.339778q-15.084945 15.084945-30.169889 0l-60.339779-60.339778q-15.084945-15.084945 0-30.16989l60.339779-60.339778q15.084945-15.084945 30.169889 0Z" p-id="2215"></path><path d="M239.828832 725.321982m15.084944 15.084944l60.339779 60.339779q15.084945 15.084945 0 30.169889l-60.339779 60.339779q-15.084945 15.084945-30.169889 0l-60.339779-60.339779q-15.084945-15.084945 0-30.169889l60.339779-60.339779q15.084945-15.084945 30.169889 0Z" p-id="2216"></path><path d="M213.333333 853.333333H85.333333a42.666667 42.666667 0 0 1-42.666666-42.666666V213.333333a42.666667 42.666667 0 0 1 42.666666-42.666666h128v85.333333H138.666667a10.709333 10.709333 0 0 0-10.666667 10.666667v192a10.709333 10.709333 0 0 0 10.666667 10.666666H213.333333v85.333334H138.666667a10.709333 10.709333 0 0 0-10.666667 10.666666v192a10.709333 10.709333 0 0 0 10.666667 10.666667H213.333333v85.333333z" p-id="2217"></path></svg>';
   border-left: none;
   background-color: transparent;
@@ -30371,6 +30371,10 @@ body.notebook-navigator-support {
   --nn-theme-file-name-color: var(--text-normal);
   --nn-theme-file-preview-color: var(--text-muted);
   --nn-theme-file-task-icon-color: var(--interactive-accent);
+  --nn-theme-file-task-color: var(--interactive-accent);
+  --nn-theme-file-task-font-weight: 400;
+  --nn-theme-file-task-complete-color: var(--color-green);
+  --nn-theme-file-task-complete-font-weight: 500;
   --nn-theme-file-feature-border-radius: var(--radius-s);
   --nn-theme-file-date-color: var(--text-faint);
   --nn-theme-file-word-count-color: var(--text-faint);
