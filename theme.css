@@ -123,8 +123,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: magic-low-color
     title: Low contrast color
@@ -133,8 +133,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: magic-deep-color
     title: Deep color
@@ -143,8 +143,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: background-settings
     title: 1.2 Background images
@@ -173,8 +173,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: background-settings-workplace-theme-light
     title: Light mode
@@ -415,40 +415,40 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: grid-notebook-line-color-1
     title: Grid notebook line color
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: grid-notebook-line-color-2
     title: Grid notebook line color for 'Grid 2'
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: dotted-notebook-dot-color
     title: Dotted notebook dot color
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: stripe-notebook-stripe-color
     title: Stripe notebook stripe color
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: background-settings-command-palette
     title: 1.2.3 Images of command palette
@@ -672,8 +672,8 @@ settings:
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: scrollbar-active-thumb-bg
     title: Scrollbar thumb background (Active)
@@ -681,8 +681,8 @@ settings:
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: view-button-front
     title: The view status button is placed in front of the header
@@ -777,8 +777,8 @@ settings:
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: background-color-settings
     title: 2.1.1 Background colors
@@ -793,8 +793,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: background-primary-alt-bg-4-bt
     title: Background primary (alt)
@@ -802,8 +802,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: background-secondary-bg-4-bt
     title: Background secondary
@@ -811,8 +811,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: background-secondary-alt-bg-4-bt
     title: Background secondary (alt)
@@ -820,16 +820,16 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: background-modifier-border
     title: Background modifier border
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: accent-color-settings
     title: 2.1.2 Theme colors
@@ -845,8 +845,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: other-color-settings
     title: 2.1.3 Other colors
@@ -862,8 +862,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: accent-em
     title: Italic type color
@@ -872,8 +872,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: strong-em-color-1
     title: Bold italic color 1
@@ -882,8 +882,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: strong-em-color-2
     title: Bold italic color 2
@@ -892,8 +892,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: mjx-inline-math-color
     title: Color of mathematical expressions (inline $x=0$)
@@ -902,8 +902,8 @@ settings:
     description: --mjx-inline-math-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: mjx-math-color
     title: Color of mathematical expressions ($$x=0$$)
@@ -912,8 +912,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: background-leaf-resize-handle
     title: Color of leaf resize handle
@@ -922,8 +922,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: search-result-file-matched-bg
     title: File search result highlight color
@@ -932,8 +932,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: text-search-highlight-bg
     title: Text search result highlight color
@@ -942,8 +942,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: text-selection
     title: Text selection background
@@ -952,8 +952,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: remove-selectionbackground
     title: Toggle selection background (Non-text part)
@@ -968,8 +968,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: status-bar-text-color
     title: Status bar text color
@@ -978,8 +978,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: icon-color-focused
     title: Focused icon color
@@ -988,24 +988,24 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: divider-color
     title: Divider color
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: tab-outline-color
     title: Tab outline color
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: graph-view-color-settings
     title: 2.1.4 Graph-view colors
@@ -1020,8 +1020,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: graph-text-color
     title: Graph-view text color
@@ -1029,8 +1029,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: graph-line
     title: Graph-view line color
@@ -1038,8 +1038,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: graph-line-fill-highlight
     title: Graph-view line highlight color (Hovering)
@@ -1047,8 +1047,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: graph-arrow
     title: Graph-view arrow color
@@ -1056,8 +1056,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: graph-circle-outline
     title: Graph-view circle outline color
@@ -1065,8 +1065,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: graph-circle
     title: Graph-view normal circle color
@@ -1074,8 +1074,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: graph-tag
     title: Graph-view circle color (Tag)
@@ -1083,8 +1083,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: graph-unresolved
     title: Graph-view circle color (Unresolved)
@@ -1092,8 +1092,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: graph-attach
     title: Graph-view circle color (Attachment)
@@ -1101,8 +1101,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: graph-control-bg
     title: Graph-view settings background color
@@ -1110,8 +1110,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: graph-circle-fill-highlight
     title: Graph-view circle highlight color (Hovering)
@@ -1119,8 +1119,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: font-settings
     title: 2.2 Typography
@@ -1295,8 +1295,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'  
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: h1-size
     title: Header 1 size
@@ -1337,8 +1337,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: h1-toggle-short-underline
     title: Toggle h1 underline (Shorter)
@@ -1357,8 +1357,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: h1-weight
     title: h1 font weight
@@ -1399,8 +1399,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: h2-size
     title: Header 2 size
@@ -1441,8 +1441,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: h2-toggle-short-underline
     title: Toggle h2 underline (Shorter)
@@ -1462,8 +1462,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: h2-weight
     title: h2 font weight
@@ -1506,8 +1506,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: h3-size
     title: Header 3 size
@@ -1546,8 +1546,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: h3-toggle-short-underline
     title: Toggle h3 underline (Shorter)
@@ -1567,8 +1567,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: h3-weight
     title: h3 font weight
@@ -1611,8 +1611,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: h4-size
     title: Header 4 size
@@ -1651,8 +1651,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: h4-toggle-short-underline
     title: Toggle h4 underline (Shorter)
@@ -1672,8 +1672,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: h4-weight
     title: h4 font weight
@@ -1715,8 +1715,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: h5-size
     title: Header 5 size
@@ -1755,8 +1755,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: h5-toggle-short-underline
     title: Toggle h5 underline (Shorter)
@@ -1776,8 +1776,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: h5-weight
     title: h5 font weight
@@ -1814,8 +1814,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: h6-size
     title: Header 6 size
@@ -1854,8 +1854,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: h6-toggle-short-underline
     title: Toggle h6 underline (Shorter)
@@ -1875,8 +1875,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: h6-weight
     title: h6 font weight
@@ -2029,8 +2029,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: inline-title-size
     title: Inline title size
@@ -2075,8 +2075,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: inline-title-toggle-short-underline
     title: Toggle underline (Shorter)
@@ -2096,8 +2096,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: inline-title-bg-url
     title: Inline title background image (url)
@@ -2135,8 +2135,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: muted-activeline-bg
     title: Mute active line
@@ -2196,32 +2196,32 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: hr-color-icon-2
     title: Line color 2
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: hr-color-icon-3
     title: Line color 3
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: hr-color-icon-4
     title: Line color 4
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: fancy-hr-icon
     title: Centre icon
@@ -2250,32 +2250,32 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: hr-color-2
     title: hr-color-2
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: hr-color-3
     title: hr-color-3
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: hr-color-4
     title: hr-color-4
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: fancy-hr-folder-with-number
     title: 2.3.1.3 w/ numbers
@@ -2289,48 +2289,48 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: hr-color-numbers-line-2
     title: Line color 2
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: hr-color-numbers-line-3
     title: Line color 3
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: hr-color-numbers-line-4
     title: Line color 4
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: hr-color-numbers-color
     title: Number color
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: hr-color-numbers-bg-color
     title: Number background color
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: hollow-number
     title: Toggle hollow numbers
@@ -2345,8 +2345,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: hr-numbers-text-stroke
     title: Stroke color
@@ -2355,8 +2355,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: list-style-change-options-folder
     title: 2.3.2 List
@@ -2441,8 +2441,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: options-for-custom
     title: 2.3.2.1.2 Options for 'Custom'
@@ -2468,8 +2468,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: list-ul-marker-2
     title: List symbol (2nd level)
@@ -2489,8 +2489,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: list-ul-marker-3
     title: List symbol (3rd level)
@@ -2510,8 +2510,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: list-ul-marker-4
     title: List symbol (4th level)
@@ -2531,8 +2531,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: list-style-change-options-folder
     title: 2.3.2.2 Ordered list
@@ -2570,8 +2570,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: list-ol-marker-1
     title: List symbol (1st level)
@@ -2726,16 +2726,16 @@ settings:
     type: variable-themed-color
     format: hex
     opacity: true
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: bt-indentation-gradient-color-2
     title: Indentation gradient color 2
     type: variable-themed-color
     format: hex
     opacity: true
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: bt-colorful-indentation-width
     title: Width of colorful indentation lines (Reading)
@@ -2810,8 +2810,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: folder-icons
     title: Activate Folder Icons
@@ -2917,8 +2917,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: blockquote-style-change-options-folder
     title: 2.3.4 Blockquote
@@ -2992,8 +2992,8 @@ settings:
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: print-em-color
     title: Italic type color
@@ -3001,8 +3001,8 @@ settings:
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: pdf-view-style
     title: PDF View
@@ -3063,8 +3063,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: embed-folder
     title: 2.3.6 Embeds
@@ -3219,8 +3219,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: cloze-decoration
     title: Underline decoration style
@@ -3234,8 +3234,8 @@ settings:
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: cloze-decoration-2
     title: Underline decoration style for Cloze style TWO
@@ -3249,8 +3249,8 @@ settings:
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: cloze-decoration-3
     title: Underline decoration style for Cloze style THREE (*~~your words~~*)
@@ -3264,8 +3264,8 @@ settings:
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: link-style
     title: 2.3.9 Links
@@ -3304,8 +3304,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: remove-external-link-icon
     title: Toggle icon after external link
@@ -3319,8 +3319,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: default-unresolved-link
     title: Toggle default unresolved link color
@@ -3334,8 +3334,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: link-click
     title: Cancel click the link to trigger auto-jump
@@ -3358,8 +3358,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: checkbox-style-folder
     title: 2.3.11 Checkbox
@@ -3394,8 +3394,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: checkbox-size
     title: Checkbox Size
@@ -3576,8 +3576,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: loading-text-typing-style
     title: Typing style
@@ -3732,40 +3732,40 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: tag2
     title: Tag-2
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: tag3
     title: Tag-3
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: tag4
     title: Tag-4
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: tag5
     title: Tag-5
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: tag-text
     title: Tag text
@@ -3829,8 +3829,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: titlebar-close-button
     title: Titlebar close button
@@ -4062,8 +4062,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: tab-stack-folder
     title: 2.3.24 Tab stack
@@ -4098,8 +4098,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: highlight-style
     title: Highlight styles
@@ -4239,8 +4239,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: font-weight-highlight-1
     title: Font weight of highlight text Plus 1 (*==xx==*)
@@ -4265,8 +4265,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: font-weight-highlight-2
     title: Font weight of highlight text Plus 2 (**==xx==**)
@@ -4291,8 +4291,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: font-weight-highlight-3
     title: Font weight of highlight text Plus 3 (***==xx==***)
@@ -4316,8 +4316,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: popover-width-factor
     title: Popover width
@@ -5338,8 +5338,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: text-color-code
     title: Inline code color
@@ -5347,8 +5347,8 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: '#'
-    default-dark: '#'
+    default-light: '#00000000'
+    default-dark: '#00000000'
   -
     id: font-weight-inline-code
     title: Font weight of inline code
