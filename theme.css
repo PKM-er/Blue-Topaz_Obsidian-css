@@ -27002,7 +27002,7 @@ body.colorful-p-kanban .callout.callout[data-callout*="kanban"] .task-list-item-
 }
 
 .callout.callout[data-callout*=infobox] {
-  --callout-color: var(--interactive-accent-rgb);
+  --callout-color: rgb(var(--interactive-accent-rgb));
   background: transparent;
   border: 0;
   box-shadow: none !important;
