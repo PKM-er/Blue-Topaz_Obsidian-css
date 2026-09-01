@@ -96,6 +96,9 @@ settings:
         label: Autumn (@LillianWho)
         value: color-scheme-options-autumn-topaz
       -
+        label: 草稿纸 Draft Paper (@AiurArtanis)
+        value: color-scheme-options-draft-paper
+      -
         label: 魔方 Rubik's Cube (@LillianWho)
         value: color-scheme-options-lillimon-topaz
       -
@@ -8891,6 +8894,602 @@ body.color-scheme-options-autumn-topaz #calendar-container {
   padding: 0px 5px 0px 8px;
   margin: -21px -8px 0px -8px;
   line-height: 0.6;
+}
+
+/* 草稿纸配色 by @AiurArtanis
+   Design DNA: warm paper, deep ink, a restrained heading spectrum, and one
+   cool teal anchor. Dark mode keeps the same hue family and only changes
+   surface/text lightness. */
+body.color-scheme-options-draft-paper {
+  --draft-paper-source-paper: #faf7f1;
+  --draft-paper-source-white: #ffffff;
+  --draft-paper-source-ink: #3d3730;
+  --draft-paper-source-muted: #857d70;
+  --draft-paper-source-navy: #1d345c;
+  --draft-paper-source-purple: #52377a;
+  --draft-paper-source-teal: #0e6e63;
+  --draft-paper-source-rose: #ce5567;
+  --draft-paper-source-amber: #9c6b1e;
+  --draft-paper-source-caramel: #c2410c;
+  --draft-paper-source-sage: #4a704f;
+  --draft-paper-source-dark-paper: #262322;
+  --draft-paper-source-dark-teal: #6db3a3;
+}
+
+body.color-scheme-options-draft-paper .theme-light,
+body.color-scheme-options-draft-paper.theme-light {
+  /* Paper and ink */
+  --draft-paper-paper: var(--draft-paper-source-paper);
+  --draft-paper-paper-raised: var(--draft-paper-source-white);
+  --draft-paper-paper-soft: #f4efe7;
+  --draft-paper-paper-inset: #ece4d9;
+  --draft-paper-ink: var(--draft-paper-source-ink);
+  --draft-paper-muted: #796f63;
+  --draft-paper-faint: var(--draft-paper-source-muted);
+  --draft-paper-border: #ddd4c7;
+
+  /* The source heading spectrum */
+  --draft-paper-heading-1: var(--draft-paper-source-navy);
+  --draft-paper-heading-2: var(--draft-paper-source-purple);
+  --draft-paper-heading-3: var(--draft-paper-source-teal);
+  --draft-paper-heading-4: var(--draft-paper-source-rose);
+  --draft-paper-heading-5: var(--draft-paper-source-amber);
+  --draft-paper-heading-6: var(--draft-paper-muted);
+  --draft-paper-accent: var(--draft-paper-source-teal);
+  --draft-paper-accent-hover: #095c54;
+  --draft-paper-strong: var(--draft-paper-source-caramel);
+  --draft-paper-em: var(--draft-paper-source-sage);
+
+  /* Core surfaces */
+  --background-primary: var(--background-primary-bg-4-bt, var(--draft-paper-paper));
+  --background-primary-alt: var(--background-primary-alt-bg-4-bt, var(--draft-paper-paper-soft));
+  --background-secondary: var(--background-secondary-bg-4-bt, #f2ede5);
+  --background-secondary-alt: var(--background-secondary-alt-bg-4-bt, var(--draft-paper-paper-inset));
+  --background-tertiary: #e7ded2;
+  --background-popover: var(--draft-paper-paper-raised);
+  --background-mobile-drawer-1: var(--draft-paper-paper-soft);
+  --background-mobile-drawer-2: rgb(244 239 231 / 0.92);
+  --background-modifier-border: var(--draft-paper-border);
+  --background-modifier-border-hr: #cfc4b5;
+  --background-modifier-border-asymm: var(--draft-paper-border);
+  --background-modifier-form-field: var(--draft-paper-paper-raised);
+  --background-modifier-form-field-highlighted: var(--draft-paper-paper-raised);
+  --background-modifier-hover: color-mix(in srgb, var(--draft-paper-accent) 8%, transparent);
+  --background-modifier-active-hover: color-mix(in srgb, var(--draft-paper-accent) 14%, transparent);
+  --background-modifier-box-shadow: color-mix(in srgb, var(--draft-paper-ink) 10%, transparent);
+  --background-search-result: var(--draft-paper-paper-soft);
+  --background-transparent-black-or-white-1: rgb(255 255 255 / 0.72);
+  --background-transparent-black-or-white-2: rgb(250 247 241 / 0.86);
+  --background-transparent-black-or-white-3: rgb(236 228 217 / 0.72);
+  --background-transparent-black-or-white-3-1: rgb(250 247 241 / 0.86);
+  --background-transparent-black-or-white-4: rgb(133 125 112 / 0.18);
+  --background-transparent-black-or-white-5: rgb(244 239 231 / 0.78);
+  --background-black-or-white-1: var(--draft-paper-paper-inset);
+  --panel-border-color: var(--draft-paper-border);
+  --divider-color: var(--draft-paper-border);
+  --tab-outline-color: var(--draft-paper-border);
+  --interactive-normal: var(--draft-paper-paper-soft);
+  --interactive-hover: var(--draft-paper-paper-inset);
+
+  /* Text and interaction */
+  --text-normal: var(--draft-paper-ink);
+  --text-muted: var(--draft-paper-muted);
+  --text-muted-rgb: 121, 111, 99;
+  --text-faint: var(--draft-paper-faint);
+  --text-folder-file: #5f574e;
+  --folder-title: var(--draft-paper-ink);
+  --search-text: var(--draft-paper-ink);
+  --text-on-accent: #fffdf8;
+  --accent-h: 173;
+  --accent-s: 77%;
+  --accent-l: 24%;
+  --interactive-accent: var(--draft-paper-accent);
+  --interactive-accent-rgb: 14, 110, 99;
+  --interactive-accent-hover: var(--draft-paper-accent-hover);
+  --text-accent: var(--draft-paper-accent);
+  --text-accent-hover: var(--draft-paper-accent-hover);
+  --theme-color: var(--draft-paper-accent);
+  --accent-strong: var(--draft-paper-strong);
+  --accent-em: var(--draft-paper-em);
+  --text-error: #b74155;
+  --text-error-hover: #9f3447;
+  --text-selection: color-mix(in srgb, var(--draft-paper-accent) 20%, transparent);
+  --text-highlight-bg: color-mix(in srgb, var(--draft-paper-heading-5) 24%, transparent);
+  --mark-highlight-strong-em: color-mix(in srgb, var(--draft-paper-strong) 20%, transparent);
+  --strong-em-highlight-color: var(--draft-paper-heading-1);
+  --text-search-highlight-bg: color-mix(in srgb, var(--draft-paper-heading-4) 24%, transparent);
+  --search-result-file-title-color: var(--draft-paper-heading-1);
+  --search-result-file-matched-bg: color-mix(in srgb, var(--draft-paper-heading-5) 20%, transparent);
+  --page-border-bottom: var(--draft-paper-border);
+  --background-asymm-split-left: var(--draft-paper-paper-inset);
+  --scrollbar-thumb-bg: rgb(121 111 99 / 0.24);
+  --scrollbar-active-thumb-bg: color-mix(in srgb, var(--draft-paper-accent) 38%, transparent);
+
+  /* Reading and editing */
+  --h1-color: var(--print-h1-color, var(--draft-paper-heading-1));
+  --h2-color: var(--print-h2-color, var(--draft-paper-heading-2));
+  --h3-color: var(--print-h3-color, var(--draft-paper-heading-3));
+  --h4-color: var(--print-h4-color, var(--draft-paper-heading-4));
+  --h5-color: var(--print-h5-color, var(--draft-paper-heading-5));
+  --h6-color: var(--print-h6-color, var(--draft-paper-heading-6));
+  --background-blockquote: color-mix(in srgb, var(--draft-paper-accent) 6%, transparent);
+  --background-code: color-mix(in srgb, var(--draft-paper-ink) 5.5%, transparent);
+  --background-code-2: color-mix(in srgb, var(--draft-paper-heading-2) 9%, transparent);
+  --text-color-code: var(--draft-paper-strong);
+  --code-normal: var(--draft-paper-ink);
+  --hr-color: var(--draft-paper-border);
+  --embed-color: color-mix(in srgb, var(--draft-paper-accent) 4.5%, transparent);
+  --list-ul-block-color: color-mix(in srgb, var(--draft-paper-em) 52%, transparent);
+  --list-ul-disc-color: var(--draft-paper-accent);
+  --green-1: var(--draft-paper-em);
+  --list-ul-hover: color-mix(in srgb, var(--draft-paper-em) 20%, transparent);
+  --list-ol-block-color: color-mix(in srgb, var(--draft-paper-heading-1) 44%, transparent);
+  --list-ol-number-color: var(--draft-paper-heading-1);
+  --list-ol-hover: color-mix(in srgb, var(--draft-paper-heading-1) 16%, transparent);
+  --list-marker-color-collapsed: var(--draft-paper-accent);
+  --activeline-background: color-mix(in srgb, var(--draft-paper-accent) 4.5%, transparent);
+
+  /* Tags and status colors use readable variants of the source hues. */
+  --tag-text: #fffdf8;
+  --tag1: var(--draft-paper-heading-1);
+  --tag2: var(--draft-paper-heading-2);
+  --tag3: var(--draft-paper-heading-3);
+  --tag4: #ad4052;
+  --tag5: #8b5d14;
+  --tag-dailynote: #fffdf8;
+  --tag-dailynote-bg: var(--draft-paper-heading-1);
+  --tag-weeklynote: #fffdf8;
+  --tag-weeklynote-bg: var(--draft-paper-heading-3);
+  --tag-questions: #fffdf8;
+  --tag-questions-bg: var(--draft-paper-heading-2);
+  --tag-ideas: var(--draft-paper-ink);
+  --tag-ideas-bg: #e8cf96;
+
+  /* Graph, Mermaid, tables, Calendar, and planner */
+  --graph-text-color: var(--draft-paper-muted);
+  --graph-tag: var(--draft-paper-heading-2);
+  --graph-attach: var(--draft-paper-heading-5);
+  --graph-circle: var(--draft-paper-accent);
+  --graph-line: rgb(121 111 99 / 0.52);
+  --graph-unresolved: var(--draft-paper-heading-4);
+  --graph-arrow: var(--draft-paper-strong);
+  --graph-control-bg: rgb(255 255 255 / 0.86);
+  --graph-circle-outline: var(--draft-paper-paper-raised);
+  --graph-canvas-bg: var(--background-primary);
+  --graph-circle-fill-highlight: var(--draft-paper-accent);
+  --graph-line-fill-highlight: rgb(14 110 99);
+  --unresolved-link: #ad4052;
+  --link-unresolved-decoration-color: #ad4052;
+  --internal-link-color: var(--draft-paper-accent);
+  --external-link-color: var(--draft-paper-heading-1);
+  --mermaid-active-task-color: var(--draft-paper-accent);
+  --mermaid-seq-dia-color: var(--draft-paper-heading-2);
+  --table-background-color: color-mix(in srgb, var(--draft-paper-accent) 4.5%, transparent);
+  --table-background-color-odd: rgb(255 255 255 / 0.46);
+  --table-border-color: var(--draft-paper-border);
+  --table-thead-background-color: color-mix(in srgb, var(--draft-paper-heading-1) 9%, transparent);
+  --table-hover-raw-color: color-mix(in srgb, var(--draft-paper-accent) 11%, transparent);
+  --table-hover-color: color-mix(in srgb, var(--draft-paper-accent) 8%, transparent);
+  --table-hover-thead-color: color-mix(in srgb, var(--draft-paper-heading-1) 15%, transparent);
+  --table-header-color: var(--draft-paper-heading-1);
+  --calendar-week-color: var(--draft-paper-heading-2);
+  --calendar-week-hover: color-mix(in srgb, var(--draft-paper-heading-2) 16%, transparent);
+  --calendar-week-background-color: color-mix(in srgb, var(--draft-paper-heading-2) 7%, transparent);
+  --calendar-today-background-color: color-mix(in srgb, var(--draft-paper-strong) 14%, transparent);
+  --calendar-hover-color: color-mix(in srgb, var(--draft-paper-accent) 10%, transparent);
+  --calendar-active-color: color-mix(in srgb, var(--draft-paper-accent) 18%, transparent);
+  --day-planner-pie: var(--draft-paper-heading-5);
+  --day-planner-timeline: var(--draft-paper-heading-4);
+  --day-planner-line: var(--draft-paper-heading-3);
+  --day-planner-dot: var(--draft-paper-strong);
+  --day-planner-item-hover: color-mix(in srgb, var(--draft-paper-accent) 10%, transparent);
+  --event-item-color1: color-mix(in srgb, var(--draft-paper-heading-1) 18%, transparent);
+  --event-item-color2: color-mix(in srgb, var(--draft-paper-heading-2) 18%, transparent);
+  --event-item-color3: color-mix(in srgb, var(--draft-paper-accent) 18%, transparent);
+  --event-item-color4: color-mix(in srgb, var(--draft-paper-em) 18%, transparent);
+  --event-item-color5: color-mix(in srgb, var(--draft-paper-heading-5) 20%, transparent);
+  --event-item-color6: color-mix(in srgb, var(--draft-paper-strong) 18%, transparent);
+  --event-item-color7: color-mix(in srgb, var(--draft-paper-heading-4) 18%, transparent);
+  --event-item-color8: color-mix(in srgb, var(--draft-paper-heading-1) 14%, transparent);
+  --event-item-color9: color-mix(in srgb, var(--draft-paper-heading-2) 14%, transparent);
+  --event-item-color10: color-mix(in srgb, var(--draft-paper-accent) 14%, transparent);
+
+  /* Optional colorful components stay inside the same source spectrum. */
+  --kanban-color-1: color-mix(in srgb, var(--draft-paper-heading-1) 18%, transparent);
+  --kanban-color-2: color-mix(in srgb, var(--draft-paper-heading-2) 18%, transparent);
+  --kanban-color-3: color-mix(in srgb, var(--draft-paper-accent) 18%, transparent);
+  --kanban-color-4: color-mix(in srgb, var(--draft-paper-em) 18%, transparent);
+  --kanban-color-5: color-mix(in srgb, var(--draft-paper-heading-5) 18%, transparent);
+  --kanban-color-6: color-mix(in srgb, var(--draft-paper-strong) 16%, transparent);
+  --kanban-color-7: color-mix(in srgb, var(--draft-paper-heading-4) 16%, transparent);
+  --p-kanban-bg-color: color-mix(in srgb, var(--draft-paper-ink) 4.5%, transparent);
+  --p-kanban-border-color: var(--draft-paper-border);
+  --p-kanban-card-color-1: color-mix(in srgb, var(--draft-paper-heading-1) 10%, transparent);
+  --p-kanban-card-color-2: color-mix(in srgb, var(--draft-paper-heading-2) 10%, transparent);
+  --p-kanban-color-1: color-mix(in srgb, var(--draft-paper-heading-1) 18%, transparent);
+  --p-kanban-color-2: color-mix(in srgb, var(--draft-paper-heading-2) 18%, transparent);
+  --p-kanban-color-3: color-mix(in srgb, var(--draft-paper-accent) 18%, transparent);
+  --p-kanban-color-4: color-mix(in srgb, var(--draft-paper-em) 18%, transparent);
+  --p-kanban-color-5: color-mix(in srgb, var(--draft-paper-heading-5) 18%, transparent);
+  --p-kanban-color-6: color-mix(in srgb, var(--draft-paper-strong) 16%, transparent);
+  --p-kanban-color-7: color-mix(in srgb, var(--draft-paper-heading-4) 16%, transparent);
+  --p-kanban-color-8: color-mix(in srgb, var(--draft-paper-heading-2) 15%, transparent);
+  --p-kanban-color-simple: rgb(121 111 99 / 0.12);
+  --p-kanban-color-shadow: color-mix(in srgb, var(--draft-paper-ink) 12%, transparent);
+  --text-gray: var(--draft-paper-muted);
+  --text-brown: var(--draft-paper-ink);
+  --text-orange: var(--draft-paper-strong);
+  --text-yellow: var(--draft-paper-heading-5);
+  --text-yellow-2: #8b5d14;
+  --text-green: var(--draft-paper-em);
+  --text-blue: var(--draft-paper-heading-1);
+  --text-purple: var(--draft-paper-heading-2);
+  --text-pink: var(--draft-paper-heading-4);
+  --text-red: #ad4052;
+  --background-gray: rgb(121 111 99 / 0.14);
+  --background-brown: color-mix(in srgb, var(--draft-paper-ink) 12%, transparent);
+  --background-orange: color-mix(in srgb, var(--draft-paper-strong) 12%, transparent);
+  --background-yellow: color-mix(in srgb, var(--draft-paper-heading-5) 14%, transparent);
+  --background-green: color-mix(in srgb, var(--draft-paper-em) 13%, transparent);
+  --background-blue: color-mix(in srgb, var(--draft-paper-heading-1) 12%, transparent);
+  --background-purple: color-mix(in srgb, var(--draft-paper-heading-2) 12%, transparent);
+  --background-pink: color-mix(in srgb, var(--draft-paper-heading-4) 12%, transparent);
+  --background-red: rgb(173 64 82 / 0.13);
+  --note-important: #ad4052;
+  --note-cloze: var(--draft-paper-paper-raised);
+  --stickies-color-1: #d9e2cf;
+  --stickies-color-2: #ded3e7;
+  --tape-color: rgb(121 111 99 / 0.24);
+
+  /* Callouts, checklists, view chrome, and plugin surfaces */
+  --admonition-bg-color: rgb(255 255 255 / 0.34);
+  --checklist-bg: color-mix(in srgb, var(--draft-paper-ink) 5.5%, transparent);
+  --checklist-bg-hover: color-mix(in srgb, var(--draft-paper-accent) 8%, transparent);
+  --color-view-header-gradient-1: color-mix(in srgb, var(--draft-paper-accent) 12%, transparent);
+  --color-view-header-gradient-2: rgb(250 247 241 / 0.96);
+  --checkbox-color-0: var(--draft-paper-accent);
+  --checkbox-color-1: var(--draft-paper-heading-5);
+  --checkbox-color-2: var(--draft-paper-em);
+  --checkbox-color-3: var(--draft-paper-heading-4);
+  --checkbox-color-4: var(--draft-paper-heading-1);
+  --checkbox-color-5: var(--draft-paper-heading-2);
+  --checkbox-color-6: var(--draft-paper-muted);
+  --text-checked-checkbox: var(--draft-paper-faint);
+  --background-secondary-translucent: rgb(244 239 231 / 0.72);
+  --background-secondary-translucent-1: rgb(244 239 231 / 0.56);
+  --background-leaf-resize-handle: var(--draft-paper-border);
+  --prompt-box-shadow: color-mix(in srgb, var(--draft-paper-ink) 14%, transparent);
+  --window-shadow: 0 1px 3px color-mix(in srgb, var(--draft-paper-ink) 8%, transparent);
+  --window-shadow2: 0 6px 22px color-mix(in srgb, var(--draft-paper-ink) 14%, transparent);
+  --background-titlebar-inner: color-mix(in srgb, var(--draft-paper-accent) 8%, transparent);
+  --bt-connected-indent-line-color: color-mix(in srgb, var(--draft-paper-accent) 42%, transparent);
+  --list-colorful-marker: var(--draft-paper-heading-4);
+  --bg-color-settings-0: rgb(121 111 99 / 0.16);
+  --bg-color-settings-0-1: rgb(255 255 255 / 0.52);
+  --bg-color-settings-1: rgb(250 247 241 / 0.44);
+  --bg-color-settings-2: rgb(255 255 255 / 0.42);
+  --bg-color-settings-3: rgb(255 255 255 / 0.86);
+  --bg-color-settings-4: rgb(244 239 231 / 0.90);
+  --bg-color-settings-5: rgb(221 212 199 / 0.42);
+  --bg-color-settings-6: rgb(250 247 241 / 0.72);
+
+  /* Bases follows the paper surface ramp. */
+  --color-base-00: #fffdf8;
+  --color-base-05: #fcf9f3;
+  --color-base-10: #faf7f1;
+  --color-base-20: #f4efe7;
+  --color-base-25: #eee7dd;
+  --color-base-30: #e6ddd1;
+  --color-base-35: #d9cec0;
+  --color-base-40: #c8bbac;
+  --color-base-50: #9d8f80;
+  --color-base-60: #796f63;
+  --color-base-70: #5f574e;
+  --color-base-100: #3d3730;
+  --bases-table-header-color: var(--draft-paper-heading-1);
+  --bases-table-header-background: color-mix(in srgb, var(--draft-paper-heading-1) 8%, transparent);
+  --bases-table-header-background-hover: color-mix(in srgb, var(--draft-paper-heading-1) 13%, transparent);
+  --bases-table-stripe-color: color-mix(in srgb, var(--draft-paper-accent) 3.5%, transparent);
+  --bases-table-group-background: color-mix(in srgb, var(--draft-paper-heading-5) 5.5%, transparent);
+  --bases-table-row-background-hover: color-mix(in srgb, var(--draft-paper-accent) 9%, transparent);
+  --bases-list-separator-color: color-mix(in srgb, var(--draft-paper-accent) 58%, transparent);
+  --bases-table-cell-background-active: color-mix(in srgb, var(--draft-paper-accent) 12%, transparent);
+  --bases-table-cell-shadow-active: 0 0 0 1px var(--draft-paper-accent);
+}
+
+body.color-scheme-options-draft-paper.theme-dark {
+  /* The same paper/ink system with lifted source hues. */
+  --draft-paper-paper: var(--draft-paper-source-dark-paper);
+  --draft-paper-paper-raised: #302c29;
+  --draft-paper-paper-soft: #211f1e;
+  --draft-paper-paper-inset: #342f2c;
+  --draft-paper-ink: #e8e2d8;
+  --draft-paper-muted: #aaa196;
+  --draft-paper-faint: #887f76;
+  --draft-paper-border: #48413d;
+  --draft-paper-heading-1: #9eb6d8;
+  --draft-paper-heading-2: #b5a2cf;
+  --draft-paper-heading-3: var(--draft-paper-source-dark-teal);
+  --draft-paper-heading-4: #dc8895;
+  --draft-paper-heading-5: #c8a35d;
+  --draft-paper-heading-6: #b8afa4;
+  --draft-paper-accent: var(--draft-paper-source-dark-teal);
+  --draft-paper-accent-hover: #82c4b4;
+  --draft-paper-strong: #e29361;
+  --draft-paper-em: #8fbb91;
+
+  /* Core surfaces */
+  --background-primary: var(--background-primary-bg-4-bt, var(--draft-paper-paper));
+  --background-primary-alt: var(--background-primary-alt-bg-4-bt, #2d2927);
+  --background-secondary: var(--background-secondary-bg-4-bt, var(--draft-paper-paper-soft));
+  --background-secondary-alt: var(--background-secondary-alt-bg-4-bt, var(--draft-paper-paper-inset));
+  --background-tertiary: #3b3532;
+  --background-popover: var(--draft-paper-paper-raised);
+  --background-mobile-drawer-1: var(--draft-paper-paper-soft);
+  --background-mobile-drawer-2: rgb(33 31 30 / 0.94);
+  --background-modifier-border: var(--draft-paper-border);
+  --background-modifier-border-hr: #514944;
+  --background-modifier-border-asymm: var(--draft-paper-border);
+  --background-modifier-form-field: var(--draft-paper-paper-raised);
+  --background-modifier-form-field-highlighted: #39332f;
+  --background-modifier-hover: color-mix(in srgb, var(--draft-paper-accent) 10%, transparent);
+  --background-modifier-active-hover: color-mix(in srgb, var(--draft-paper-accent) 17%, transparent);
+  --background-modifier-box-shadow: rgb(0 0 0 / 0.28);
+  --background-search-result: var(--draft-paper-paper-soft);
+  --background-transparent-black-or-white-1: rgb(48 44 41 / 0.82);
+  --background-transparent-black-or-white-2: rgb(38 35 34 / 0.88);
+  --background-transparent-black-or-white-3: rgb(52 47 44 / 0.76);
+  --background-transparent-black-or-white-3-1: rgb(38 35 34 / 0.88);
+  --background-transparent-black-or-white-4: color-mix(in srgb, var(--draft-paper-muted) 14%, transparent);
+  --background-transparent-black-or-white-5: rgb(33 31 30 / 0.78);
+  --background-black-or-white-1: var(--draft-paper-paper-inset);
+  --panel-border-color: var(--draft-paper-border);
+  --divider-color: #1b1918;
+  --tab-outline-color: var(--draft-paper-paper-soft);
+  --interactive-normal: var(--draft-paper-paper-raised);
+  --interactive-hover: var(--draft-paper-paper-inset);
+
+  /* Text and interaction */
+  --text-normal: var(--draft-paper-ink);
+  --text-muted: var(--draft-paper-muted);
+  --text-muted-rgb: 170, 161, 150;
+  --text-faint: var(--draft-paper-faint);
+  --text-folder-file: #c9c0b5;
+  --folder-title: var(--draft-paper-ink);
+  --search-text: var(--draft-paper-ink);
+  --text-on-accent: #211f1e;
+  --accent-h: 166;
+  --accent-s: 32%;
+  --accent-l: 56%;
+  --interactive-accent: var(--draft-paper-accent);
+  --interactive-accent-rgb: 109, 179, 163;
+  --interactive-accent-hover: var(--draft-paper-accent-hover);
+  --text-accent: var(--draft-paper-accent);
+  --text-accent-hover: var(--draft-paper-accent-hover);
+  --theme-color: var(--draft-paper-accent);
+  --accent-strong: var(--draft-paper-strong);
+  --accent-em: var(--draft-paper-em);
+  --text-error: var(--draft-paper-heading-4);
+  --text-error-hover: #eba0ab;
+  --text-selection: color-mix(in srgb, var(--draft-paper-accent) 24%, transparent);
+  --text-highlight-bg: color-mix(in srgb, var(--draft-paper-heading-5) 25%, transparent);
+  --mark-highlight-strong-em: color-mix(in srgb, var(--draft-paper-strong) 20%, transparent);
+  --strong-em-highlight-color: var(--draft-paper-heading-1);
+  --text-search-highlight-bg: color-mix(in srgb, var(--draft-paper-heading-4) 28%, transparent);
+  --search-result-file-title-color: var(--draft-paper-heading-1);
+  --search-result-file-matched-bg: color-mix(in srgb, var(--draft-paper-heading-5) 20%, transparent);
+  --page-border-bottom: var(--draft-paper-border);
+  --background-asymm-split-left: var(--draft-paper-paper-inset);
+  --scrollbar-thumb-bg: color-mix(in srgb, var(--draft-paper-muted) 22%, transparent);
+  --scrollbar-active-thumb-bg: color-mix(in srgb, var(--draft-paper-accent) 42%, transparent);
+
+  /* Reading and editing */
+  --h1-color: var(--print-h1-color, var(--draft-paper-heading-1));
+  --h2-color: var(--print-h2-color, var(--draft-paper-heading-2));
+  --h3-color: var(--print-h3-color, var(--draft-paper-heading-3));
+  --h4-color: var(--print-h4-color, var(--draft-paper-heading-4));
+  --h5-color: var(--print-h5-color, var(--draft-paper-heading-5));
+  --h6-color: var(--print-h6-color, var(--draft-paper-heading-6));
+  --background-blockquote: color-mix(in srgb, var(--draft-paper-accent) 7%, transparent);
+  --background-code: rgb(0 0 0 / 0.22);
+  --background-code-2: color-mix(in srgb, var(--draft-paper-heading-2) 10%, transparent);
+  --text-color-code: var(--draft-paper-strong);
+  --code-normal: var(--draft-paper-ink);
+  --hr-color: var(--draft-paper-border);
+  --embed-color: color-mix(in srgb, var(--draft-paper-accent) 5.5%, transparent);
+  --list-ul-block-color: color-mix(in srgb, var(--draft-paper-em) 48%, transparent);
+  --list-ul-disc-color: var(--draft-paper-accent);
+  --green-1: var(--draft-paper-em);
+  --list-ul-hover: color-mix(in srgb, var(--draft-paper-em) 18%, transparent);
+  --list-ol-block-color: color-mix(in srgb, var(--draft-paper-heading-1) 42%, transparent);
+  --list-ol-number-color: var(--draft-paper-heading-1);
+  --list-ol-hover: color-mix(in srgb, var(--draft-paper-heading-1) 16%, transparent);
+  --list-marker-color-collapsed: var(--draft-paper-accent);
+  --activeline-background: color-mix(in srgb, var(--draft-paper-accent) 5.5%, transparent);
+
+  /* Tags and status colors */
+  --tag-text: #211f1e;
+  --tag1: #7895bd;
+  --tag2: #9d85bd;
+  --tag3: var(--draft-paper-heading-3);
+  --tag4: #cf7987;
+  --tag5: #bd9349;
+  --tag-dailynote: #211f1e;
+  --tag-dailynote-bg: #9eb6d8;
+  --tag-weeklynote: #211f1e;
+  --tag-weeklynote-bg: var(--draft-paper-heading-3);
+  --tag-questions: #211f1e;
+  --tag-questions-bg: var(--draft-paper-heading-2);
+  --tag-ideas: #211f1e;
+  --tag-ideas-bg: var(--draft-paper-heading-5);
+
+  /* Graph, Mermaid, tables, Calendar, and planner */
+  --graph-text-color: var(--draft-paper-muted);
+  --graph-tag: var(--draft-paper-heading-2);
+  --graph-attach: var(--draft-paper-heading-5);
+  --graph-circle: var(--draft-paper-accent);
+  --graph-line: color-mix(in srgb, var(--draft-paper-muted) 44%, transparent);
+  --graph-unresolved: var(--draft-paper-heading-4);
+  --graph-arrow: var(--draft-paper-strong);
+  --graph-control-bg: rgb(33 31 30 / 0.88);
+  --graph-circle-outline: var(--draft-paper-paper-soft);
+  --graph-canvas-bg: var(--background-primary);
+  --graph-circle-fill-highlight: var(--draft-paper-accent);
+  --graph-line-fill-highlight: rgb(109 179 163);
+  --unresolved-link: var(--draft-paper-heading-4);
+  --link-unresolved-decoration-color: var(--draft-paper-heading-4);
+  --internal-link-color: var(--draft-paper-accent);
+  --external-link-color: var(--draft-paper-heading-1);
+  --mermaid-active-task-color: var(--draft-paper-accent);
+  --mermaid-seq-dia-color: var(--draft-paper-heading-2);
+  --table-background-color: color-mix(in srgb, var(--draft-paper-accent) 5%, transparent);
+  --table-background-color-odd: rgb(0 0 0 / 0.10);
+  --table-border-color: var(--draft-paper-border);
+  --table-thead-background-color: color-mix(in srgb, var(--draft-paper-heading-1) 10%, transparent);
+  --table-hover-raw-color: color-mix(in srgb, var(--draft-paper-accent) 13%, transparent);
+  --table-hover-color: color-mix(in srgb, var(--draft-paper-accent) 10%, transparent);
+  --table-hover-thead-color: color-mix(in srgb, var(--draft-paper-heading-1) 16%, transparent);
+  --table-header-color: var(--draft-paper-heading-1);
+  --calendar-week-color: var(--draft-paper-heading-2);
+  --calendar-week-hover: color-mix(in srgb, var(--draft-paper-heading-2) 18%, transparent);
+  --calendar-week-background-color: color-mix(in srgb, var(--draft-paper-heading-2) 8%, transparent);
+  --calendar-today-background-color: color-mix(in srgb, var(--draft-paper-strong) 16%, transparent);
+  --calendar-hover-color: color-mix(in srgb, var(--draft-paper-accent) 11%, transparent);
+  --calendar-active-color: color-mix(in srgb, var(--draft-paper-accent) 20%, transparent);
+  --day-planner-pie: var(--draft-paper-heading-5);
+  --day-planner-timeline: var(--draft-paper-heading-4);
+  --day-planner-line: var(--draft-paper-heading-3);
+  --day-planner-dot: var(--draft-paper-strong);
+  --day-planner-item-hover: color-mix(in srgb, var(--draft-paper-accent) 12%, transparent);
+  --event-item-color1: color-mix(in srgb, var(--draft-paper-heading-1) 18%, transparent);
+  --event-item-color2: color-mix(in srgb, var(--draft-paper-heading-2) 18%, transparent);
+  --event-item-color3: color-mix(in srgb, var(--draft-paper-accent) 18%, transparent);
+  --event-item-color4: color-mix(in srgb, var(--draft-paper-em) 18%, transparent);
+  --event-item-color5: color-mix(in srgb, var(--draft-paper-heading-5) 18%, transparent);
+  --event-item-color6: color-mix(in srgb, var(--draft-paper-strong) 18%, transparent);
+  --event-item-color7: color-mix(in srgb, var(--draft-paper-heading-4) 18%, transparent);
+  --event-item-color8: color-mix(in srgb, var(--draft-paper-heading-1) 14%, transparent);
+  --event-item-color9: color-mix(in srgb, var(--draft-paper-heading-2) 14%, transparent);
+  --event-item-color10: color-mix(in srgb, var(--draft-paper-accent) 14%, transparent);
+
+  /* Optional colorful components */
+  --kanban-color-1: color-mix(in srgb, var(--draft-paper-heading-1) 18%, transparent);
+  --kanban-color-2: color-mix(in srgb, var(--draft-paper-heading-2) 18%, transparent);
+  --kanban-color-3: color-mix(in srgb, var(--draft-paper-accent) 18%, transparent);
+  --kanban-color-4: color-mix(in srgb, var(--draft-paper-em) 18%, transparent);
+  --kanban-color-5: color-mix(in srgb, var(--draft-paper-heading-5) 18%, transparent);
+  --kanban-color-6: color-mix(in srgb, var(--draft-paper-strong) 16%, transparent);
+  --kanban-color-7: color-mix(in srgb, var(--draft-paper-heading-4) 16%, transparent);
+  --p-kanban-bg-color: rgb(0 0 0 / 0.12);
+  --p-kanban-border-color: var(--draft-paper-border);
+  --p-kanban-card-color-1: color-mix(in srgb, var(--draft-paper-heading-1) 10%, transparent);
+  --p-kanban-card-color-2: color-mix(in srgb, var(--draft-paper-heading-2) 10%, transparent);
+  --p-kanban-color-1: color-mix(in srgb, var(--draft-paper-heading-1) 18%, transparent);
+  --p-kanban-color-2: color-mix(in srgb, var(--draft-paper-heading-2) 18%, transparent);
+  --p-kanban-color-3: color-mix(in srgb, var(--draft-paper-accent) 18%, transparent);
+  --p-kanban-color-4: color-mix(in srgb, var(--draft-paper-em) 18%, transparent);
+  --p-kanban-color-5: color-mix(in srgb, var(--draft-paper-heading-5) 18%, transparent);
+  --p-kanban-color-6: color-mix(in srgb, var(--draft-paper-strong) 16%, transparent);
+  --p-kanban-color-7: color-mix(in srgb, var(--draft-paper-heading-4) 16%, transparent);
+  --p-kanban-color-8: color-mix(in srgb, var(--draft-paper-heading-2) 15%, transparent);
+  --p-kanban-color-simple: color-mix(in srgb, var(--draft-paper-muted) 12%, transparent);
+  --p-kanban-color-shadow: rgb(0 0 0 / 0.22);
+  --text-gray: var(--draft-paper-muted);
+  --text-brown: var(--draft-paper-ink);
+  --text-orange: var(--draft-paper-strong);
+  --text-yellow: var(--draft-paper-heading-5);
+  --text-yellow-2: #d5b878;
+  --text-green: var(--draft-paper-em);
+  --text-blue: var(--draft-paper-heading-1);
+  --text-purple: var(--draft-paper-heading-2);
+  --text-pink: var(--draft-paper-heading-4);
+  --text-red: #e39aa5;
+  --background-gray: color-mix(in srgb, var(--draft-paper-muted) 13%, transparent);
+  --background-brown: color-mix(in srgb, var(--draft-paper-ink) 8%, transparent);
+  --background-orange: color-mix(in srgb, var(--draft-paper-strong) 13%, transparent);
+  --background-yellow: color-mix(in srgb, var(--draft-paper-heading-5) 14%, transparent);
+  --background-green: color-mix(in srgb, var(--draft-paper-em) 13%, transparent);
+  --background-blue: color-mix(in srgb, var(--draft-paper-heading-1) 12%, transparent);
+  --background-purple: color-mix(in srgb, var(--draft-paper-heading-2) 12%, transparent);
+  --background-pink: color-mix(in srgb, var(--draft-paper-heading-4) 12%, transparent);
+  --background-red: rgb(227 154 165 / 0.13);
+  --note-important: var(--draft-paper-heading-4);
+  --note-cloze: var(--draft-paper-paper-raised);
+  --stickies-color-1: #3c5141;
+  --stickies-color-2: #4e405b;
+  --tape-color: color-mix(in srgb, var(--draft-paper-muted) 22%, transparent);
+
+  /* Callouts, checklists, view chrome, and plugin surfaces */
+  --admonition-bg-color: rgb(48 44 41 / 0.36);
+  --checklist-bg: rgb(0 0 0 / 0.12);
+  --checklist-bg-hover: color-mix(in srgb, var(--draft-paper-accent) 10%, transparent);
+  --color-view-header-gradient-1: color-mix(in srgb, var(--draft-paper-accent) 13%, transparent);
+  --color-view-header-gradient-2: rgb(38 35 34 / 0.96);
+  --checkbox-color-0: var(--draft-paper-accent);
+  --checkbox-color-1: var(--draft-paper-heading-5);
+  --checkbox-color-2: var(--draft-paper-em);
+  --checkbox-color-3: var(--draft-paper-heading-4);
+  --checkbox-color-4: var(--draft-paper-heading-1);
+  --checkbox-color-5: var(--draft-paper-heading-2);
+  --checkbox-color-6: var(--draft-paper-muted);
+  --text-checked-checkbox: var(--draft-paper-faint);
+  --background-secondary-translucent: rgb(33 31 30 / 0.74);
+  --background-secondary-translucent-1: rgb(33 31 30 / 0.58);
+  --background-leaf-resize-handle: var(--draft-paper-border);
+  --prompt-box-shadow: rgb(0 0 0 / 0.32);
+  --window-shadow: 0 1px 3px rgb(0 0 0 / 0.20);
+  --window-shadow2: 0 8px 24px rgb(0 0 0 / 0.30);
+  --background-titlebar-inner: color-mix(in srgb, var(--draft-paper-accent) 8%, transparent);
+  --bt-connected-indent-line-color: color-mix(in srgb, var(--draft-paper-accent) 40%, transparent);
+  --list-colorful-marker: var(--draft-paper-heading-4);
+  --bg-color-settings-0: color-mix(in srgb, var(--draft-paper-muted) 12%, transparent);
+  --bg-color-settings-0-1: rgb(48 44 41 / 0.50);
+  --bg-color-settings-1: rgb(38 35 34 / 0.42);
+  --bg-color-settings-2: rgb(48 44 41 / 0.42);
+  --bg-color-settings-3: rgb(48 44 41 / 0.86);
+  --bg-color-settings-4: rgb(33 31 30 / 0.90);
+  --bg-color-settings-5: rgb(72 65 61 / 0.42);
+  --bg-color-settings-6: rgb(38 35 34 / 0.72);
+
+  /* Bases follows the dark paper ramp. */
+  --color-base-00: #1d1b1a;
+  --color-base-05: #211f1e;
+  --color-base-10: #262322;
+  --color-base-20: #2d2927;
+  --color-base-25: #342f2c;
+  --color-base-30: #3b3532;
+  --color-base-35: #48413d;
+  --color-base-40: #5d554f;
+  --color-base-50: #7b7169;
+  --color-base-60: #aaa196;
+  --color-base-70: #c9c0b5;
+  --color-base-100: #e8e2d8;
+  --bases-table-header-color: var(--draft-paper-heading-1);
+  --bases-table-header-background: color-mix(in srgb, var(--draft-paper-heading-1) 10%, transparent);
+  --bases-table-header-background-hover: color-mix(in srgb, var(--draft-paper-heading-1) 16%, transparent);
+  --bases-table-stripe-color: color-mix(in srgb, var(--draft-paper-accent) 4%, transparent);
+  --bases-table-group-background: color-mix(in srgb, var(--draft-paper-heading-5) 6%, transparent);
+  --bases-table-row-background-hover: color-mix(in srgb, var(--draft-paper-accent) 10%, transparent);
+  --bases-list-separator-color: color-mix(in srgb, var(--draft-paper-accent) 62%, transparent);
+  --bases-table-cell-background-active: color-mix(in srgb, var(--draft-paper-accent) 14%, transparent);
+  --bases-table-cell-shadow-active: 0 0 0 1px var(--draft-paper-accent);
+}
+
+body.color-scheme-options-draft-paper #calendar-container {
+  --color-background-heading: transparent;
+  --color-background-weeknum: transparent;
+  --color-background-day: transparent;
+  --color-background-weekend: transparent;
+  --color-tr: var(--background-primary);
+  --color-tr-odd: var(--background-primary-alt);
+  --color-dot: var(--text-accent);
+  --color-arrow: currentColor;
+  --color-button: var(--text-muted);
+  --color-text-weeknum: var(--calendar-week-color);
+  --color-text-title: var(--text-normal);
+  --color-text-heading: var(--text-normal);
+  --color-text-day: var(--text-normal);
+  --color-text-today: var(--text-accent);
 }
 
 body.color-scheme-options-lillimon-topaz .theme-light,
