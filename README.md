@@ -77,7 +77,8 @@ Obsidian 1.14.4 的 **原生六色高亮**会跟随主题。高亮中的粗体�
 
 1. 打开你的 Obsidian 笔记库，在 `.obsidian/themes/` 下新建文件夹 `Blue Topaz Alternate`。
 2. 下载预发布版本的 [theme.css](https://github.com/AiurArtanis/Obsidian-Blue-Topaz-Alternate/releases/download/v1.6.0-preview/theme.css) 和同一标签下的 [manifest.json](https://raw.githubusercontent.com/AiurArtanis/Obsidian-Blue-Topaz-Alternate/v1.6.0-preview/manifest.json)，放进这个文件夹。
-3. 在「设置 → 外观」选择 **Blue Topaz Alternate**。安装并启用社区插件 **Style Settings** 后，就可以调整配色、布局和功能开关。
+3. 安装已发布的 **v1.6.0-preview** 时，打开 `manifest.json`，把 `"name": "Blue Topaz"` 改为 `"name": "Blue Topaz Alternate"`，其余字段保留。这个固定预览版的名称尚未与目录对齐；两者一致，主题才会出现在选择列表中。修正版 manifest 已统一名称，无需再改。
+4. 在「设置 → 外观」选择 **Blue Topaz Alternate**。安装并启用社区插件 **Style Settings** 后，就可以调整配色、布局和功能开关。
 
 ```text
 .obsidian/themes/Blue Topaz Alternate/
@@ -86,6 +87,8 @@ Obsidian 1.14.4 的 **原生六色高亮**会跟随主题。高亮中的粗体�
 ```
 
 Notebook Navigator 等插件需要在 Obsidian 中单独安装。更新主题时，先保留自己的自定义样式，再替换两个主题文件并重新加载。
+
+原来在 Blue Topaz 中调好的 Style Settings 配色和开关会继续沿用，设置页仍显示 **Blue Topaz**。如果同时安装原版与 Alternate，两款主题会共用这一组偏好。
 
 ## 另有两个独立分支
 
