@@ -29134,9 +29134,11 @@ body.bt-file-explorer-scroll-smooth .workspace-leaf-content[data-type="file-expl
 
 body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-files-container {
   --bt-sticky-depth: 0;
-  /* Follow the core nav row box: font size x tight line-height + block padding.
-     Users changing --nav-item-size / font size keep sticky slots aligned. */
-  --bt-sticky-row-height: calc(var(--nav-item-size, var(--font-ui-small)) * var(--line-height-tight, 1.3) + var(--size-4-1, 4px) * 2);
+  /* One folder row slot. Resolved on each folder title (unregistered custom
+     property), so 1lh is that row's own line box and 0.95rem is the folder
+     icon, which scales with the Appearance font size. --nav-item-size stays
+     13px when the font size changes, so it cannot be used here. */
+  --bt-sticky-row-height: calc(max(1lh, 0.95rem + 4px) + var(--size-4-1, 4px) * 2);
 }
 
 body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root) {
@@ -29173,14 +29175,22 @@ body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .work
   isolation: isolate;
 }
 
-body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root):not(.is-collapsed) > .nav-folder-title {
-  position: var(--bt-sticky-position);
-  top: var(--bt-sticky-top);
-  z-index: 1;
+/* Every folder row (stuck, released or collapsed) uses the same slot, so a
+   stuck row is exactly as tall as an ordinary folder row and nested offsets
+   (depth x slot) line up at any font size. */
+body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root) > .nav-folder-title {
+  box-sizing: border-box;
   block-size: var(--bt-sticky-row-height);
   min-block-size: var(--bt-sticky-row-height);
   margin-block: 0;
   padding-block: 0;
+  align-items: center;
+}
+
+body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root):not(.is-collapsed) > .nav-folder-title {
+  position: var(--bt-sticky-position);
+  top: var(--bt-sticky-top);
+  z-index: 1;
   box-shadow: var(--bt-sticky-shadow);
 }
 
