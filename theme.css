@@ -4071,18 +4071,18 @@ settings:
     type: heading
     level: 3
     collapsed: true
-	-
-		id: tab-stacked-pane-width
-		title: Tag stacked pane with
-		type: variable-number
-		default: 700
-		format: px
-	-
-		id: tab-stacked-header-width
-		title: Spine width
-		type: variable-number
-		default: 40
-		format: px
+  -
+    id: tab-stacked-pane-width
+    title: Tag stacked pane with
+    type: variable-number
+    default: 700
+    format: px
+  -
+    id: tab-stacked-header-width
+    title: Spine width
+    type: variable-number
+    default: 40
+    format: px
   -
     id: highlight-bg-color-folder
     title: 2.3.25 Highlights (==xx==)
@@ -13885,7 +13885,9 @@ span.cm-strong,
 span.cm-strong,
 :not(font)>strong,
 .cm-s-obsidian .cm-highlight.cm-strong {
-  color: var(--bt-native-highlight-color, var(--accent-strong)) !important;
+  /* No !important: an explicit <strong style="color:…"> must win over the
+     theme's accent_strong. Markdown bold still inherits this color. */
+  color: var(--bt-native-highlight-color, var(--accent-strong));
   font-family: var(--font-family-strong) !important;
 }
 
@@ -14349,7 +14351,9 @@ body.table-style-three .markdown-source-view table tbody>tr {
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)   .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer .inline-title,
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)   .markdown-source-view.mod-cm6.is-readable-line-width .metadata-container
 {
-  margin-left: calc((100% - var(--file-line-width)) / 2);
+  /* Clamp at 0: in a narrow pane the centred full-width offset is negative and
+     used to push the note title underneath the left sidebar. */
+  margin-left: max(0px, calc((100% - var(--file-line-width)) / 2));
 }
 
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
