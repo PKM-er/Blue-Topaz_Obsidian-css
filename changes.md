@@ -1,5 +1,15 @@
 # 更新日志
 
+### 20261020
+
+1. 适配 Obsidian 1.14.4 原生六色高亮：高亮内的粗体、斜体和行内代码保留各自样式，连续标注的背景不再断开；旧的 `==高亮==` 预设保留为兜底
+2. 修复 Callout 背景丢失（#722 #723）：默认样式的背景不再依赖 Style Settings 的类名，传统 / 边框 / 阴影三种样式仍保持透明底；Callout 相关混色统一为 `oklch`，与核心一致
+3. 适配原生提示框（tooltip）、通知（notice）与 Bases 原生看板，补齐 Notebook Navigator 任务进度配色
+4. 新增「草稿纸 Draft Paper」配色（@AiurArtanis）：明暗两套同源色阶，并补齐表格、日历、Graph、滑动标签页等语义变量
+5. 修复 Style Settings 设置块中两处制表符缩进导致的整体解析失败（#687）
+6. 修复 `<strong style="color:…">` 被主题的 `!important` 覆盖、无法改色的问题（#694）
+7. 修复窄栏宽 + full-width 选项时，笔记文件名被左侧栏遮挡的问题（#691）
+
 ### 20231115
 
 1. 继续修复Connected indent lines在伪看板中不启用
