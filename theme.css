@@ -96,14 +96,14 @@ settings:
         label: Autumn (@LillianWho)
         value: color-scheme-options-autumn-topaz
       -
-        label: 草稿纸 Draft Paper (@AiurArtanis)
-        value: color-scheme-options-draft-paper
-      -
         label: 魔方 Rubik's Cube (@LillianWho)
         value: color-scheme-options-lillimon-topaz
       -
         label: Simplicity (@Cuman)
         value: color-scheme-options-simplicity-topaz
+      -
+        label: 草稿纸 Draft Paper (@AiurArtanis)
+        value: color-scheme-options-draft-paper
   -
     id: disable-auto-hide-header
     title:  Disable auto hide header
@@ -8916,7 +8916,6 @@ body.color-scheme-options-draft-paper {
   --draft-paper-source-dark-teal: #6db3a3;
 }
 
-body.color-scheme-options-draft-paper .theme-light,
 body.color-scheme-options-draft-paper.theme-light {
   /* Paper and ink */
   --draft-paper-paper: var(--draft-paper-source-paper);
@@ -8984,7 +8983,7 @@ body.color-scheme-options-draft-paper.theme-light {
   --accent-s: 77%;
   --accent-l: 24%;
   --interactive-accent: var(--draft-paper-accent);
-  --interactive-accent-rgb: 14, 110, 99;
+  --interactive-accent-rgb: rgb(14, 110, 99);
   --interactive-accent-hover: var(--draft-paper-accent-hover);
   --text-accent: var(--draft-paper-accent);
   --text-accent-hover: var(--draft-paper-accent-hover);
@@ -9173,6 +9172,30 @@ body.color-scheme-options-draft-paper.theme-light {
   --bg-color-settings-5: rgb(221 212 199 / 0.42);
   --bg-color-settings-6: rgb(250 247 241 / 0.72);
 
+  /* Blue Topaz scheme aliases. Other schemes set these too; without them the
+     default Blue Topaz hues leak into list markers, tables, calendar events
+     and the sliding-pane chrome. */
+  --color1: #f1e9dc;
+  --color2: #e6dbc8;
+  --color3: #d5c3a6;
+  --color4: #9c6b1e;
+  --color5: var(--draft-paper-accent);
+  --color6: var(--draft-paper-em);
+  --color7: var(--draft-paper-heading-2);
+  --color8: var(--draft-paper-heading-4);
+  --color9: var(--draft-paper-heading-1);
+  --color10: var(--draft-paper-ink);
+  --color11: #2a2520;
+  --main-color: var(--draft-paper-accent);
+  --low-color: var(--color3);
+  --high-color: var(--color8);
+  --deep-color: var(--draft-paper-ink);
+  --bg-color: var(--draft-paper-paper);
+  --bg-color2: #f6f1e8;
+  --table-color-rgb: 14, 110, 99;
+  --sliding-panes-header-color: #3d3730e6;
+  --background-4-sliding-pane: #f4efe7ef;
+
   /* Bases follows the paper surface ramp. */
   --color-base-00: #fffdf8;
   --color-base-05: #fcf9f3;
@@ -9185,6 +9208,8 @@ body.color-scheme-options-draft-paper.theme-light {
   --color-base-50: #9d8f80;
   --color-base-60: #796f63;
   --color-base-70: #5f574e;
+  --color-base-80: #514a43;
+  --color-base-90: #474038;
   --color-base-100: #3d3730;
   --bases-table-header-color: var(--draft-paper-heading-1);
   --bases-table-header-background: color-mix(in srgb, var(--draft-paper-heading-1) 8%, transparent);
@@ -9262,7 +9287,7 @@ body.color-scheme-options-draft-paper.theme-dark {
   --accent-s: 32%;
   --accent-l: 56%;
   --interactive-accent: var(--draft-paper-accent);
-  --interactive-accent-rgb: 109, 179, 163;
+  --interactive-accent-rgb: rgb(109, 179, 163);
   --interactive-accent-hover: var(--draft-paper-accent-hover);
   --text-accent: var(--draft-paper-accent);
   --text-accent-hover: var(--draft-paper-accent-hover);
@@ -9451,6 +9476,28 @@ body.color-scheme-options-draft-paper.theme-dark {
   --bg-color-settings-5: rgb(72 65 61 / 0.42);
   --bg-color-settings-6: rgb(38 35 34 / 0.72);
 
+  /* Blue Topaz scheme aliases, mirrored for the dark ramp. */
+  --color1: #302b28;
+  --color2: #38332f;
+  --color3: #514a44;
+  --color4: #c8a35d;
+  --color5: var(--draft-paper-accent);
+  --color6: var(--draft-paper-em);
+  --color7: var(--draft-paper-heading-2);
+  --color8: var(--draft-paper-heading-4);
+  --color9: var(--draft-paper-heading-1);
+  --color10: var(--draft-paper-ink);
+  --color11: #f3eee6;
+  --main-color: var(--draft-paper-accent);
+  --low-color: var(--color3);
+  --high-color: var(--color8);
+  --deep-color: var(--draft-paper-muted);
+  --bg-color: var(--draft-paper-paper);
+  --bg-color2: #302b28;
+  --table-color-rgb: 109, 179, 163;
+  --sliding-panes-header-color: #e8e2d8e6;
+  --background-4-sliding-pane: #262322ef;
+
   /* Bases follows the dark paper ramp. */
   --color-base-00: #1d1b1a;
   --color-base-05: #211f1e;
@@ -9463,6 +9510,8 @@ body.color-scheme-options-draft-paper.theme-dark {
   --color-base-50: #7b7169;
   --color-base-60: #aaa196;
   --color-base-70: #c9c0b5;
+  --color-base-80: #d8d0c6;
+  --color-base-90: #e1dad1;
   --color-base-100: #e8e2d8;
   --bases-table-header-color: var(--draft-paper-heading-1);
   --bases-table-header-background: color-mix(in srgb, var(--draft-paper-heading-1) 10%, transparent);
