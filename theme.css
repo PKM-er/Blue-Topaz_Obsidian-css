@@ -29173,12 +29173,13 @@ body.bt-file-explorer-sticky-nested .workspace-leaf-content[data-type="file-expl
 
 body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root) > .nav-folder-children {
   --bt-sticky-depth: calc(var(--bt-sticky-parent-depth) + var(--bt-sticky-slot));
-  /* Ancestor headers paint above descendants as a branch leaves the viewport. */
-  isolation: isolate;
-  /* overflow-y: clip does not create a scroll container, so sticky still tracks
-     the file-explorer scroller; child titles being pushed out are clipped at
-     the parent's children edge instead of showing a half title bar below the
-     stuck stack. */
+  /* Do NOT set isolation:isolate here: it creates a stacking context per
+     children box, so z-index on nested sticky titles cannot lose to a
+     shallower ancestor title. Push-out titles would then paint over the
+     stuck stack (e.g. L7 over L2). Shallower stickies rely on
+     z-index: calc(16 - depth) in one shared stacking context instead.
+     overflow:clip still clips paint outside the children box without
+     creating a scroll container (sticky keeps tracking the explorer). */
   /* Both axes must be clip: a visible/clip mix computes to auto and
      would create a scroll container that breaks outer sticky. */
   overflow: clip;
@@ -29200,9 +29201,22 @@ body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .work
   --bt-sticky-background: rgb(from var(--background-secondary) r g b / 1);
 }
 
-/* Do not cover the theme's hover, keyboard-focus or drag-target feedback. */
-body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root):not(.is-collapsed):not(.has-focus) > .nav-folder-title:not(:hover):not(.is-being-dragged-over) {
+/* Opaque sticky surface always — including hover / focus / drag-over.
+   Theme hover/focus use translucent mixes (e.g. black 6.7%); if they replace
+   this base, a departing deeper title shows through the stuck row (L7∩L2).
+   Keep feedback by color-mixing the tint onto the opaque sticky base. */
+body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root):not(.is-collapsed) > .nav-folder-title {
   background-color: var(--bt-sticky-background, var(--background-secondary));
+}
+
+body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested):not(.is-grabbing) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root):not(.is-collapsed) > .tree-item-self.is-clickable.nav-folder-title:hover {
+  /* Mix against opaque black (not --nav-item-background-active, which is itself translucent). Force alpha 1. */
+  background-color: rgb(from color-mix(in srgb, var(--bt-sticky-background, var(--background-secondary)) 93%, black 7%) r g b / 1);
+}
+
+body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root):not(.is-collapsed).has-focus > .nav-folder-title,
+body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root):not(.is-collapsed) > .nav-folder-title.is-being-dragged-over {
+  background-color: rgb(from color-mix(in srgb, var(--bt-sticky-background, var(--background-secondary)) 85%, var(--theme-color, black) 15%) r g b / 1);
 }
 
 /* Filled folder modes already expose their palette via --tab-color. Make its
