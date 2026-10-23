@@ -2759,6 +2759,25 @@ settings:
     level: 3
     collapsed: true
   -
+    id: bt-file-explorer-sticky-scroll-mode
+    title: Folder ancestry sticky scroll
+    title.zh: 目录层级吸顶
+    description: Keep up to six expanded folder levels visible in the core File Explorer. Folder titles stay single-line.
+    description.zh: 原生文件浏览器滚动时，吸顶最多保留 6 层展开目录；标题保持单行。
+    type: class-select
+    allowEmpty: false
+    default: bt-file-explorer-scroll-smooth
+    options:
+      -
+        label: 平滑滚动
+        value: bt-file-explorer-scroll-smooth
+      -
+        label: 吸顶当前文件夹
+        value: bt-file-explorer-sticky-current
+      -
+        label: 嵌套吸顶
+        value: bt-file-explorer-sticky-nested
+  -
     id: file-bg-shape-option
     title: File background shape
     title.zh: 文件背景形状
@@ -29099,6 +29118,159 @@ select:focus,
 
 .nav-folder .nav-folder-children[style="height: 0px;"] {
   height: auto !important;
+}
+
+/* Core File Explorer scroll modes. Ordinary smooth scrolling is the default;
+   sticky modes share row styling and count only retained ancestry slots. */
+body.bt-file-explorer-scroll-smooth .workspace-leaf-content[data-type="file-explorer"] .nav-files-container {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.bt-file-explorer-scroll-smooth .workspace-leaf-content[data-type="file-explorer"] .nav-files-container {
+    scroll-behavior: auto;
+  }
+}
+
+body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-files-container {
+  --bt-sticky-depth: 0;
+  /* One folder row slot for nested top offsets. Resolved on each folder title
+     (unregistered custom property): 1lh is that row's line box, 0.95rem is the
+     folder icon (scales with Appearance font size). --nav-item-size stays 13px
+     when the font size changes, so it cannot size the slot. Used only for
+     sticky `top`; row boxes keep the theme's native height so sticky modes do
+     not reflow taller/shorter than smooth scrolling. */
+  --bt-sticky-row-height: calc(max(1lh, 0.95rem + 4px) + var(--size-4-1, 4px) * 2 + 0.55px);
+}
+
+body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root) {
+  --bt-sticky-parent-depth: var(--bt-sticky-depth);
+  --bt-sticky-slot: 1;
+  --bt-sticky-position: sticky;
+  --bt-sticky-top: calc(var(--bt-sticky-depth) * var(--bt-sticky-row-height));
+  --bt-sticky-shadow: 0 1px 0 var(--background-modifier-border);
+}
+
+/* Structural CSS limits, not a scroll-time active-path calculation. Current
+   mode releases any ancestor with an expanded child; nested mode releases
+   ancestors with six expanded descendants. Collapsed branches do not count. */
+body.bt-file-explorer-sticky-current .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root):not(.is-collapsed):has(
+  > .nav-folder-children > .nav-folder:not(.is-collapsed)
+),
+body.bt-file-explorer-sticky-nested .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root):not(.is-collapsed):has(
+  > .nav-folder-children > .nav-folder:not(.is-collapsed)
+  > .nav-folder-children > .nav-folder:not(.is-collapsed)
+  > .nav-folder-children > .nav-folder:not(.is-collapsed)
+  > .nav-folder-children > .nav-folder:not(.is-collapsed)
+  > .nav-folder-children > .nav-folder:not(.is-collapsed)
+  > .nav-folder-children > .nav-folder:not(.is-collapsed)
+) {
+  --bt-sticky-slot: 0;
+  --bt-sticky-position: relative;
+  --bt-sticky-top: auto;
+  --bt-sticky-shadow: none;
+}
+
+body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root) > .nav-folder-children {
+  --bt-sticky-depth: calc(var(--bt-sticky-parent-depth) + var(--bt-sticky-slot));
+  /* Do NOT set isolation:isolate here: it creates a stacking context per
+     children box, so z-index on nested sticky titles cannot lose to a
+     shallower ancestor title. Push-out titles would then paint over the
+     stuck stack (e.g. L7 over L2). Shallower stickies rely on
+     z-index: calc(16 - depth) in one shared stacking context instead.
+     overflow:clip still clips paint outside the children box without
+     creating a scroll container (sticky keeps tracking the explorer). */
+  /* Both axes must be clip: a visible/clip mix computes to auto and
+     would create a scroll container that breaks outer sticky. */
+  overflow: clip;
+}
+
+/* Expanded titles keep sticky positioning. Folder rows keep native
+   padding/height (same as smooth mode). Shallower stickies paint above deeper
+   ones while a branch is pushed out. */
+body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root):not(.is-collapsed) > .nav-folder-title {
+  position: var(--bt-sticky-position);
+  top: var(--bt-sticky-top);
+  z-index: calc(16 - var(--bt-sticky-depth, 0));
+  box-shadow: var(--bt-sticky-shadow);
+}
+
+/* --background-secondary may carry alpha when a background image is enabled.
+   Sticky rows always get an opaque surface so scrolled names never show through. */
+body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title {
+  --bt-sticky-background: rgb(from var(--background-secondary) r g b / 1);
+}
+
+/* Opaque sticky surface always — including hover / focus / drag-over.
+   Theme hover/focus use translucent mixes (e.g. black 6.7%); if they replace
+   this base, a departing deeper title shows through the stuck row (L7∩L2).
+   Keep feedback by color-mixing the tint onto the opaque sticky base. */
+body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root):not(.is-collapsed) > .nav-folder-title {
+  background-color: var(--bt-sticky-background, var(--background-secondary));
+}
+
+body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested):not(.is-grabbing) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root):not(.is-collapsed) > .tree-item-self.is-clickable.nav-folder-title:hover {
+  /* Mix against opaque black (not --nav-item-background-active, which is itself translucent). Force alpha 1. */
+  background-color: rgb(from color-mix(in srgb, var(--bt-sticky-background, var(--background-secondary)) 93%, black 7%) r g b / 1);
+}
+
+body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root):not(.is-collapsed).has-focus > .nav-folder-title,
+body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root):not(.is-collapsed) > .nav-folder-title.is-being-dragged-over {
+  background-color: rgb(from color-mix(in srgb, var(--bt-sticky-background, var(--background-secondary)) 85%, var(--theme-color, black) 15%) r g b / 1);
+}
+
+/* Filled folder modes already expose their palette via --tab-color. Make its
+   sticky surface opaque so scrolling filenames cannot show through it. */
+body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested).bt-toggle-colorful-folder:is(.folder-style-change-options-colorful, .folder-style-change-options-colorful-order) .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title {
+  --bt-sticky-background: rgb(from var(--tab-color, var(--background-secondary)) r g b / 1);
+}
+
+/* A constant stack slot needs a single-line label. Keep file-name wrapping and
+   the folder rename input untouched; the full folder name remains in data-path. */
+body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root):not(.is-collapsed) > .nav-folder-title > .nav-folder-title-content:not(.is-being-renamed) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Only replace guides while a row is actually stuck, not merely expanded.
+   Older cores without scroll-state queries retain their original guides. */
+@supports (container-type: scroll-state) {
+  body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root):not(.is-collapsed) > .nav-folder-title {
+    container-type: scroll-state;
+    container-name: bt-sticky-folder;
+    --bt-sticky-guide-inset: 0px;
+  }
+
+  body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-files-container > div > .nav-folder > .nav-folder-title {
+    --bt-sticky-guide-inset: calc(-1 * var(--nav-indentation-guide-width, 1px));
+  }
+
+  /* Colored root boxes have an extra border/padding inset; align their guide
+     with the nested rows rather than adding a second parallel line. */
+  body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested).bt-toggle-colorful-folder:is(.folder-style-change-options-colorful-border, .folder-style-change-options-colorful-tab-liked) .workspace-leaf-content[data-type="file-explorer"] .nav-files-container > div > .nav-folder > .nav-folder-title {
+    --bt-sticky-guide-inset: calc(-1 * var(--size-2-1));
+  }
+
+  @container bt-sticky-folder scroll-state(stuck: top) {
+    /* A moving label would also move its guide. Pinned labels stay still;
+       normal scrolling folder/file labels retain their configured animation. */
+    body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested).file-name-animation .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title > .nav-folder-title-content {
+      animation: none;
+      transform: none;
+    }
+    /* The title's ::after belongs to the existing folder-note-dot option. */
+    body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title > .nav-folder-title-content::after {
+      content: "";
+      position: absolute;
+      inset-inline-start: var(--bt-sticky-guide-inset);
+      inset-block: 0;
+      inline-size: var(--nav-indentation-guide-width, 1px);
+      background-color: var(--bt-sticky-background, var(--background-secondary));
+      border-inline-start: var(--nav-indentation-guide-width, 1px) dashed var(--tab-color, var(--nav-indentation-guide-color, var(--background-modifier-border)));
+      pointer-events: none;
+    }
+  }
 }
 
 textarea:active,
