@@ -29134,11 +29134,13 @@ body.bt-file-explorer-scroll-smooth .workspace-leaf-content[data-type="file-expl
 
 body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-files-container {
   --bt-sticky-depth: 0;
-  /* One folder row slot. Resolved on each folder title (unregistered custom
-     property), so 1lh is that row's own line box and 0.95rem is the folder
-     icon, which scales with the Appearance font size. --nav-item-size stays
-     13px when the font size changes, so it cannot be used here. */
-  --bt-sticky-row-height: calc(max(1lh, 0.95rem + 4px) + var(--size-4-1, 4px) * 2);
+  /* One folder row slot for nested top offsets. Resolved on each folder title
+     (unregistered custom property): 1lh is that row's line box, 0.95rem is the
+     folder icon (scales with Appearance font size). --nav-item-size stays 13px
+     when the font size changes, so it cannot size the slot. Used only for
+     sticky `top`; row boxes keep the theme's native height so sticky modes do
+     not reflow taller/shorter than smooth scrolling. */
+  --bt-sticky-row-height: calc(max(1lh, 0.95rem + 4px) + var(--size-4-1, 4px) * 2 + 0.55px);
 }
 
 body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root) {
@@ -29173,24 +29175,22 @@ body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .work
   --bt-sticky-depth: calc(var(--bt-sticky-parent-depth) + var(--bt-sticky-slot));
   /* Ancestor headers paint above descendants as a branch leaves the viewport. */
   isolation: isolate;
+  /* overflow-y: clip does not create a scroll container, so sticky still tracks
+     the file-explorer scroller; child titles being pushed out are clipped at
+     the parent's children edge instead of showing a half title bar below the
+     stuck stack. */
+  /* Both axes must be clip: a visible/clip mix computes to auto and
+     would create a scroll container that breaks outer sticky. */
+  overflow: clip;
 }
 
-/* Every folder row (stuck, released or collapsed) uses the same slot, so a
-   stuck row is exactly as tall as an ordinary folder row and nested offsets
-   (depth x slot) line up at any font size. */
-body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root) > .nav-folder-title {
-  box-sizing: border-box;
-  block-size: var(--bt-sticky-row-height);
-  min-block-size: var(--bt-sticky-row-height);
-  margin-block: 0;
-  padding-block: 0;
-  align-items: center;
-}
-
+/* Expanded titles keep sticky positioning. Folder rows keep native
+   padding/height (same as smooth mode). Shallower stickies paint above deeper
+   ones while a branch is pushed out. */
 body:is(.bt-file-explorer-sticky-current, .bt-file-explorer-sticky-nested) .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root):not(.is-collapsed) > .nav-folder-title {
   position: var(--bt-sticky-position);
   top: var(--bt-sticky-top);
-  z-index: 1;
+  z-index: calc(16 - var(--bt-sticky-depth, 0));
   box-shadow: var(--bt-sticky-shadow);
 }
 
