@@ -13819,7 +13819,7 @@ body.code-theme-sublime {
 }
 
 .cm-s-obsidian span.cm-variable-3 {
-  color: var(---code-variable-3);
+  color: var(--code-variable-3);
 }
 .token.class,
 .token.class-name {
