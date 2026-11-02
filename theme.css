@@ -15003,6 +15003,12 @@ body.table-style-three .markdown-source-view table tbody>tr {
      used to push the note title underneath the left sidebar. */
   margin-left: max(0px, calc((100% - var(--file-line-width)) / 2));
 }
+:is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks)   .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer .inline-title
+{
+  /* #733: mirror the offset on the right so the auto-width title box stays
+     inside the readable column and centred text stays on the column centre. */
+  margin-right: max(0px, calc((100% - var(--file-line-width)) / 2));
+}
 
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
 :is(body.full-width-table,body.full-width-dvtable,body.full-width-callout,body.full-width-backlinks) .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer,
