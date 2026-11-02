@@ -15842,22 +15842,26 @@ span.cm-formatting.cm-formatting-header {
   opacity: 0.45;
 }
 
-body.image-border img{
+/* Obsidian 1.14 renders the colored-highlight emoji marker as
+   span.cm-highlight-color-widget > img.highlight-swatch in live preview;
+   it is an inline UI swatch, not a document image, so every image rule
+   below excludes it to keep ==🟡…== working. */
+body.image-border img:not(.highlight-swatch){
   border: 1px solid rgba(var(--mono-rgb-100),0.1);
   filter: drop-shadow(0px 0px 3px rgba(var(--mono-rgb-100),0.2));
 }
 /* images : reduce displayed size of embedded files, zoom on hover */
-body:not(.obsidian-default-image) :is(.markdown-preview-view, .markdown-rendered) .workspace-leaf-content[data-type="markdown"] img:not([class*="emoji"]) {
+body:not(.obsidian-default-image) :is(.markdown-preview-view, .markdown-rendered) .workspace-leaf-content[data-type="markdown"] img:not([class*="emoji"]):not(.highlight-swatch) {
   max-width: var(--image-max-width);
   margin-left: auto;
   margin-right: auto;
 }
 
-body:not(.obsidian-default-image) .print :is(.markdown-preview-view, .markdown-rendered) img:not([class*="emoji"]) {
+body:not(.obsidian-default-image) .print :is(.markdown-preview-view, .markdown-rendered) img:not([class*="emoji"]):not(.highlight-swatch) {
   display: block;
 }
 
-body:not(.obsidian-default-image) .workspace-leaf-content[data-type="markdown"] .view-content :not(.canvas-node-content)>img:not([class*="emoji"]) {
+body:not(.obsidian-default-image) .workspace-leaf-content[data-type="markdown"] .view-content :not(.canvas-node-content)>img:not([class*="emoji"]):not(.highlight-swatch) {
   cursor: zoom-in;
   display: block;
   margin-left: auto ;
@@ -15890,7 +15894,7 @@ body:not(.image-zoom) .markdown-reading-view img:not([class*="emoji"]):active,
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iMCAwIDgwIDgwIj4KICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjRjJGNEY2Ii8+CiAgICA8ZyBmaWxsPSIjRkZGIj4KICAgICAgPHJlY3Qgd2lkdGg9IjIiIGhlaWdodD0iNzkiIHg9Ijc4Ii8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iMzkiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjU5Ii8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iMjAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSIyMCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjIwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iNDAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSI0MCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjQwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iNjAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSI2MCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjYwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSI3OSIgaGVpZ2h0PSIxIiB5PSIxOSIvPgogICAgICA8cmVjdCB3aWR0aD0iNzkiIGhlaWdodD0iMSIgeT0iMzkiLz4KICAgICAgPHJlY3Qgd2lkdGg9Ijc5IiBoZWlnaHQ9IjEiIHk9IjU5Ii8+CiAgICA8L2c+CiAgICA8cmVjdCB3aWR0aD0iODAiIGhlaWdodD0iMiIgeT0iNzgiIGZpbGw9IiNGRkYiLz4KICA8L2c+Cjwvc3ZnPgo=");
 }
 
-body:not(.obsidian-default-image)  .workspace-leaf-content[data-type="markdown"]  .internal-embed.image-embed.is-loaded img:not([class*="emoji"]) {
+body:not(.obsidian-default-image)  .workspace-leaf-content[data-type="markdown"]  .internal-embed.image-embed.is-loaded img:not([class*="emoji"]):not(.highlight-swatch) {
   max-width: var(--image-max-width);
  
   display: block;
@@ -15903,7 +15907,7 @@ body:not(.obsidian-default-image)  .workspace-leaf-content[data-type="markdown"]
   display: inline ;
 }
 
-body:not(.obsidian-default-image) .markdown-source-view.mod-cm6 img:not([class*="emoji"]) {
+body:not(.obsidian-default-image) .markdown-source-view.mod-cm6 img:not([class*="emoji"]):not(.highlight-swatch) {
   display: block;
   margin: auto !important;
   cursor: help;
