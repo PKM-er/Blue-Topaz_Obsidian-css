@@ -11265,7 +11265,7 @@ body:not(.remove-cloze-style) .markdown-source-view.is-live-preview .cm-highligh
 body:not(.remove-cloze-style) .markdown-source-view.is-live-preview .cm-highlight.cm-strikethrough:hover {
   background-color: transparent !important;
   color: var(--text-normal) !important;
-  transition: all 400ms ease-in-out;
+  transition: color 400ms ease-in-out, background-color 400ms ease-in-out;
 }
 
 
@@ -12210,7 +12210,7 @@ body:not(.remove-cloze-style) .cm-s-obsidian .cm-formatting.cm-formatting-highli
 .markdown-source-view.cloze .cm-formatting.cm-formatting-highlight.cm-highlight~.cm-formatting.cm-formatting-strikethrough~span.cm-highlight.cm-strikethrough:not(.cm-em):hover {
   background-color: var(--bt-native-highlight-background, var(--text-highlight-bg));
   color: var(--text-normal);
-  transition: all 400ms ease-in-out;
+  transition: color 400ms ease-in-out, background-color 400ms ease-in-out;
 }
 
 body:not(.remove-cloze-style) :is(.markdown-preview-view,
@@ -12219,7 +12219,7 @@ body:not(.remove-cloze-style) :is(.markdown-preview-view,
 .markdown-rendered).cloze mark > del:hover {
   background-color: transparent;
   color: var(--accent-strong);
-  transition: all 400ms ease-in-out;
+  transition: color 400ms ease-in-out, background-color 400ms ease-in-out;
 }
 
 body:not(.remove-cloze-style) :is(.markdown-preview-view,
@@ -12246,7 +12246,7 @@ body:not(.remove-cloze-style) :is(.markdown-preview-view,
 .markdown-rendered).cloze em > mark > del:active {
   color: var(--accent-strong);
   background-color: transparent;
-  transition: all 400ms ease-in-out;
+  transition: color 400ms ease-in-out, background-color 400ms ease-in-out;
 }
 
 body:not(.remove-cloze-style) .cm-s-obsidian .cm-em.cm-formatting.cm-formatting-em.cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-highlight.cm-highlight~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-em.cm-highlight.cm-strikethrough:not([class*="formatting"]),
@@ -12283,7 +12283,7 @@ body:not(.remove-cloze-style) :is(.markdown-preview-view,
 .markdown-rendered).cloze em > del:hover {
   background-color: transparent;
   color: var(--text-normal);
-  transition: all 400ms ease-in-out;
+  transition: color 400ms ease-in-out, background-color 400ms ease-in-out;
 }
 
 body:not(.remove-cloze-style) .markdown-source-view.is-live-preview .cm-em.cm-strikethrough,
@@ -12298,7 +12298,7 @@ body:not(.remove-cloze-style) .markdown-source-view.is-live-preview .cm-em.cm-st
 .markdown-source-view.is-live-preview.cloze .cm-em.cm-strikethrough:hover {
   background-color: transparent !important;
   color: var(--text-normal) !important;
-  transition: all 400ms ease-in-out;
+  transition: color 400ms ease-in-out, background-color 400ms ease-in-out;
 }
 
 body:not(.remove-cloze-style) .cm-em.cm-formatting.cm-formatting-em~.cm-em.cm-formatting.cm-formatting-strikethrough.cm-strikethrough,
@@ -15465,13 +15465,13 @@ a.internal-link,
   color: var(--text-accent);
   border-radius: var(--radius-xs);
   text-decoration: none !important;
-  transition: all 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out, text-shadow 0.4s ease-in-out;
   text-shadow: var(--window-shadow-hover);
  
 }
 
-body.colorful-link-animation :is(.markdown-preview-view,.markdown-rendered) a:hover {
-  animation: 2s colorful-link infinite;
+.cm-url:hover {
+  transition: color 600ms;
 }
 
 @keyframes colorful-link {
@@ -15582,7 +15582,7 @@ body.embed-hd .markdown-embed :is(.markdown-preview-view,.markdown-rendered) :is
 
 body.embed-hover.theme-light :is(.markdown-preview-view,.markdown-rendered) .internal-embed .markdown-embed:hover {
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .25);
-  transition: all .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
   transform: translate3d(0px, -3px, 0px);
 }
 body.embed-hover.theme-light .markdown-source-view .internal-embed .markdown-embed:hover {
@@ -16184,7 +16184,7 @@ body:not(.default-icons) .workspace-leaf-content[data-type=outline]  .tree-item.
   margin-left: 14px;
   border-left: 1px solid #94949433;
   border-radius: 0;
-  transition: all 400ms ease-in-out;
+  transition: border-color 400ms ease-in-out;
 }
 
 body.default-icons .workspace-leaf-content[data-type=outline]  .tree-item-children {
@@ -16307,7 +16307,7 @@ body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-conte
 .tag-container .tree-item-children {
   border-left: 1px solid #94949433;
   border-radius: 0 3px 3px 0;
-  transition: all 300ms ease-in-out;
+  transition: border-color 300ms ease-in-out;
 }
 
 .tag-container .tree-item-children > div[style="width: 1px; height: 0.1px; margin-bottom: 0px;"] {
@@ -23414,7 +23414,7 @@ opacity: var(--bg-markdown-page-opacity-cp,1);
   padding-left: 0;
   border-left: 1px solid var(--background-modifier-border);
   border-radius: 0;
-  transition: all 400ms ease-in;
+  transition: border-color 400ms ease-in;
 }
 
 .nav-view-outer .tree-item .tree-item .tree-item-children:hover {
@@ -23471,7 +23471,7 @@ body:not(.default-icons) .nav-view-outer .tree-item.is-collapsed .tree-item-icon
   padding-left: 0;
   border-left: 1px solid var(--background-modifier-border);
   border-radius: 0;
-  transition: all 400ms ease-in;
+  transition: border-color 400ms ease-in;
 }
 
 .outline-view-outer .tree-item.tree-item-children:hover {
@@ -28479,7 +28479,7 @@ body:not(.default-list-marker) .markdown-rendered .list-bullet::after {
   margin-left: 0.13em;
   /* margin-top: calc(0.466em * var(--line-height-list) - 0.286em); */
   line-height: 0.55;
-  transition: all 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, font-size 0.15s ease, opacity 0.15s ease, transform 0.15s ease;
 }
 
 body:not(.default-list-marker) .list-bullet::after {
@@ -28496,7 +28496,7 @@ body:not(.default-list-marker) .list-bullet::after {
   justify-content: center;
   flex-direction: column;
   height: 43%;
-  transition: all 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, font-size 0.15s ease, opacity 0.15s ease, transform 0.15s ease;
 }
 
 body.custom-unordered-list .markdown-rendered .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
