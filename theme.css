@@ -8481,7 +8481,7 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
   --tag4: var(--color8);
   --tag5: var(--color7);
 
-  --tag-dailynote: var(--mian-color);
+  --tag-dailynote: var(--main-color);
   --tag-dailynote-bg: var(--color5);
   --tag-weeklynote: var(--color3);
   --tag-weeklynote-bg: var(--color6);
@@ -8796,7 +8796,7 @@ body.color-scheme-options-autumn-topaz.theme-dark {
   --tag3: var(--color9);
   --tag4: var(--color8);
   --tag5: var(--color7);
-  --tag-dailynote: var(--mian-color);
+  --tag-dailynote: var(--main-color);
   --tag-dailynote-bg: var(--color5);
   --tag-weeklynote: var(--color3);
   --tag-weeklynote-bg: var(--color6);
@@ -9729,7 +9729,7 @@ body.color-scheme-options-lillimon-topaz.theme-dark {
   --tag4: var(--color8);
   --tag5: var(--color7);
 
-  --tag-dailynote: var(--mian-color);
+  --tag-dailynote: var(--main-color);
   --tag-dailynote-bg: var(--color5);
   --tag-weeklynote: var(--color3);
   --tag-weeklynote-bg: var(--color6);
@@ -10406,7 +10406,7 @@ body.color-scheme-options-simplicity-topaz.theme-dark {
   --background-fifth: var(--simple-white-5);
   --background-sixth:	var(--simple-white-5);
 
-  --text-color-code:var(--simple-orang-1);
+  --text-color-code:var(--simple-orange);
   --text-normal: var(--simple-black-1);
   --text-error:	var(--simple-red-1);
 
@@ -13755,7 +13755,7 @@ body.code-theme-Gruvbox-dark {
 
 body.theme-light.code-theme-dracula {
   --background-code: #e6e6e671;
-  --code-normal: var(--tex-normal);
+  --code-normal: var(--text-normal);
   --code-string: var(--orange) ;
   --code-string-2: var(--orange-1) ;
   --code-variable: var(--blue-green);
@@ -17016,19 +17016,19 @@ body.resizable-mermaid .mermaid {
 
 .taskText.clickable {
   cursor: pointer !important;
-  fill: var(--interactive-accent_hover) !important;
+  fill: var(--interactive-accent-hover) !important;
   font-weight: bold !important;
 }
 
 .taskTextOutsideLeft.clickable {
   cursor: pointer !important;
-  fill: var(--interactive-accent_hover) !important;
+  fill: var(--interactive-accent-hover) !important;
   font-weight: bold !important;
 }
 
 .taskTextOutsideRight.clickable {
   cursor: pointer !important;
-  fill: var(--interactive-accent_hover) !important;
+  fill: var(--interactive-accent-hover) !important;
   font-weight: bold !important;
 }
 
@@ -22815,7 +22815,7 @@ body.background-settings-workplace-background-image .nav-folder.mod-root>.nav-fo
 
 body.background-settings-workplace-background-image {
   --tab-text-color-focused: var(--text-normal);
-  --titlebar-text-color-focused: var(--text-noraml);
+  --titlebar-text-color-focused: var(--text-normal);
   --canvas-background: transparent;
 }
 
@@ -29668,7 +29668,7 @@ body.safari-tab-style .mod-root .workspace-tabs:not(.mod-stacked).mod-active .wo
 body.safari-tab-style .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
 body.safari-tab-style .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-close-button,
 body.safari-tab-style .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
-  color: var(--text-noraml);
+  color: var(--text-normal);
   font-weight:bold;
 }
 
@@ -29831,7 +29831,7 @@ body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
 
 body.bt-bubble-layout {
   --divider-color: transparent;
-  --divider-color-hover: var(--backgrouund-modifier-border);
+  --divider-color-hover: var(--background-modifier-border);
 }
 
 body:not(.bt-bubble-layout) .setting-item[data-id="bt-bubble-settings"],
