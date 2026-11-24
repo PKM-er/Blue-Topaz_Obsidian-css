@@ -1181,7 +1181,7 @@ settings:
     title: Bold text
     title.zh: 加粗文字字体
     type: variable-text
-    default: "Bookerly,'Inter', 'Segoe UI', 'LXGW WenKai Screen', 'LXGW WenKai Screen R', '霞鹜文楷 GB', 'LXGW WenKai', 'Segoe UI Emoji', var(--font-interface)"
+    default: "var(--font-text-override), Bookerly,'Inter', 'Segoe UI', 'LXGW WenKai Screen', 'LXGW WenKai Screen R', '霞鹜文楷 GB', 'LXGW WenKai', 'Segoe UI Emoji', var(--font-interface)"
   -
     id: font-weight-strong
     title: Bold text font weight
@@ -5426,7 +5426,7 @@ body {
   --font-family-special-tag: "Lucida Handwriting", "Segoe UI Emoji";
   --mermaid-font-family: Segoe UI, "Microsoft YaHei", "Segoe UI Emoji", "trebuchet ms", verdana, Arial, cursive;
   --font-family-better-footnote: Arlrdbd, "Source Han Sans", "Segoe UI Emoji";
-  --font-family-strong: Bookerly, 'Inter', "Segoe UI", "LXGW WenKai Screen", "LXGW WenKai Screen R", "霞鹜文楷 GB", "LXGW WenKai", "Segoe UI Emoji", var(--font-interface);
+  --font-family-strong: var(--font-text-override), Bookerly, 'Inter', "Segoe UI", "LXGW WenKai Screen", "LXGW WenKai Screen R", "霞鹜文楷 GB", "LXGW WenKai", "Segoe UI Emoji", var(--font-interface);
   --font-family-em: ;
   --font-loading-text: var(--font-monospace-theme);
 
